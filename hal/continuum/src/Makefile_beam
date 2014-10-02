@@ -1,0 +1,12 @@
+CC = gcc
+BIN = chartuBeam
+LIBSMAPOPT=../../smapopt/libsmapopt.a
+
+all: $(BIN)
+
+chartuBeam: chartuBeam.o $(COMMONLIB)/rm.o
+	$(CC) -g -o $@  chartuBeam.o $(COMMONLIB)/rm.o -I$(COMMONINC) -mthreads \
+	$(LIBSMAPOPT)
+
+chartuBeam.o: chartuBeam.c ../includeFiles/chartu.h
+	$(CC) -g chartuBeam.c -c -I$(COMMONINC)

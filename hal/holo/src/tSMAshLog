@@ -1,0 +1,2000 @@
+Wed Sep 20 14:50:49 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 14:51:03 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 14:51:04 2006 (tksridha): eloff -a 6,8 -s 1264.595825 
+Wed Sep 20 14:51:05 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 14:51:12 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 14:51:13 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 14:51:27 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 14:51:28 2006 (tksridha): eloff -a 6,8 -s 1231.317017 
+Wed Sep 20 14:51:30 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 14:51:36 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 14:51:37 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 14:51:51 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 14:51:53 2006 (tksridha): eloff -a 6,8 -s 1198.038208 
+Wed Sep 20 14:51:54 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 14:52:00 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 14:52:02 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 14:52:16 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 14:52:17 2006 (tksridha): eloff -a 6,8 -s 1164.759399 
+Wed Sep 20 14:52:18 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 14:52:25 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 14:52:26 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 14:52:40 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 14:52:41 2006 (tksridha): eloff -a 6,8 -s 1131.480591 
+Wed Sep 20 14:52:42 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 14:52:49 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 14:52:50 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 14:53:04 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 14:53:05 2006 (tksridha): eloff -a 6,8 -s 1098.201782 
+Wed Sep 20 14:53:07 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 14:53:13 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 14:53:14 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 14:53:28 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 14:53:30 2006 (tksridha): eloff -a 6,8 -s 1064.922974 
+Wed Sep 20 14:53:31 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 14:53:37 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 14:53:39 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 14:53:53 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 14:53:54 2006 (tksridha): eloff -a 6,8 -s 1031.644165 
+Wed Sep 20 14:53:55 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 14:54:02 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 14:54:03 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 14:54:17 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 14:54:18 2006 (tksridha): eloff -a 6,8 -s 998.365356 
+Wed Sep 20 14:54:19 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 14:54:26 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 14:54:27 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 14:54:41 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 14:54:42 2006 (tksridha): eloff -a 6,8 -s 965.086548 
+Wed Sep 20 14:54:44 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 14:54:50 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 14:54:51 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 14:55:05 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 14:55:07 2006 (tksridha): eloff -a 6,8 -s 931.807739 
+Wed Sep 20 14:55:08 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 14:55:14 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 14:55:16 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 14:55:30 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 14:55:31 2006 (tksridha): eloff -a 6,8 -s 898.528931 
+Wed Sep 20 14:55:32 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 14:55:39 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 14:55:40 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 14:55:54 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 14:55:55 2006 (tksridha): eloff -a 6,8 -s 865.250122 
+Wed Sep 20 14:55:56 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 14:56:03 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 14:56:04 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 14:56:18 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 14:56:19 2006 (tksridha): eloff -a 6,8 -s 831.971313 
+Wed Sep 20 14:56:20 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 14:56:27 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 14:56:28 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 14:56:42 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 14:56:43 2006 (tksridha): eloff -a 6,8 -s 798.692505 
+Wed Sep 20 14:56:45 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 14:56:51 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 14:56:52 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 14:57:06 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 14:57:08 2006 (tksridha): eloff -a 6,8 -s 765.413696 
+Wed Sep 20 14:57:09 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 14:57:15 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 14:57:16 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 14:57:31 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 14:57:32 2006 (tksridha): eloff -a 6,8 -s 732.134888 
+Wed Sep 20 14:57:33 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 14:57:39 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 14:57:41 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 14:57:55 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 14:57:56 2006 (tksridha): eloff -a 6,8 -s 698.856079 
+Wed Sep 20 14:57:57 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 14:58:04 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 14:58:05 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 14:58:19 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 14:58:20 2006 (tksridha): eloff -a 6,8 -s 665.577271 
+Wed Sep 20 14:58:21 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 14:58:28 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 14:58:29 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 14:58:43 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 14:58:45 2006 (tksridha): eloff -a 6,8 -s 632.298462 
+Wed Sep 20 14:58:46 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 14:58:52 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 14:58:53 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 14:59:08 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 14:59:09 2006 (tksridha): eloff -a 6,8 -s 599.019653 
+Wed Sep 20 14:59:10 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 14:59:17 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 14:59:18 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 14:59:32 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 14:59:33 2006 (tksridha): eloff -a 6,8 -s 565.740845 
+Wed Sep 20 14:59:34 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 14:59:41 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 14:59:42 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 14:59:56 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 14:59:57 2006 (tksridha): eloff -a 6,8 -s 532.462036 
+Wed Sep 20 14:59:58 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:00:05 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:00:06 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:00:18 2006 (ramiro): lookup -s saturn 
+Wed Sep 20 15:00:20 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:00:22 2006 (tksridha): eloff -a 6,8 -s 499.183197 
+Wed Sep 20 15:00:23 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:00:29 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:00:31 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:00:45 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:00:46 2006 (tksridha): eloff -a 6,8 -s 465.904358 
+Wed Sep 20 15:00:47 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:00:54 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:00:55 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:01:09 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:01:10 2006 (tksridha): eloff -a 6,8 -s 432.625519 
+Wed Sep 20 15:01:11 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:01:18 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:01:19 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:01:33 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:01:34 2006 (tksridha): eloff -a 6,8 -s 399.346680 
+Wed Sep 20 15:01:36 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:01:42 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:01:43 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:01:57 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:01:59 2006 (tksridha): eloff -a 6,8 -s 366.067841 
+Wed Sep 20 15:02:00 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:02:06 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:02:08 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:02:22 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:02:23 2006 (tksridha): eloff -a 6,8 -s 332.789001 
+Wed Sep 20 15:02:24 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:02:31 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:02:32 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:02:46 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:02:47 2006 (tksridha): eloff -a 6,8 -s 299.510162 
+Wed Sep 20 15:02:48 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:02:55 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:02:56 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:03:10 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:03:11 2006 (tksridha): eloff -a 6,8 -s 266.231323 
+Wed Sep 20 15:03:13 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:03:19 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:03:20 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:03:34 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:03:36 2006 (tksridha): eloff -a 6,8 -s 232.952484 
+Wed Sep 20 15:03:37 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:03:43 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:03:45 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:03:59 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:04:00 2006 (tksridha): eloff -a 6,8 -s 199.673645 
+Wed Sep 20 15:04:01 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:04:08 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:04:09 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:04:23 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:04:24 2006 (tksridha): eloff -a 6,8 -s 166.394806 
+Wed Sep 20 15:04:25 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:04:32 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:04:33 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:04:47 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:04:48 2006 (tksridha): eloff -a 6,8 -s 133.115967 
+Wed Sep 20 15:04:50 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:04:56 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:04:57 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:05:11 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:05:13 2006 (tksridha): eloff -a 6,8 -s 99.837135 
+Wed Sep 20 15:05:14 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:05:20 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:05:22 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:05:36 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:05:37 2006 (tksridha): eloff -a 6,8 -s 66.558304 
+Wed Sep 20 15:05:38 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:05:45 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:05:46 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:06:00 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:06:01 2006 (tksridha): eloff -a 6,8 -s 33.279472 
+Wed Sep 20 15:06:02 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:06:09 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:06:10 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:06:24 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:06:25 2006 (tksridha): eloff -a 6,8 -s 0.000641 
+Wed Sep 20 15:06:26 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:06:33 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:06:34 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:06:48 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:06:50 2006 (tksridha): eloff -a 6,8 -s -33.278191 
+Wed Sep 20 15:06:51 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:06:57 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:06:59 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:07:13 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:07:14 2006 (tksridha): eloff -a 6,8 -s -66.557022 
+Wed Sep 20 15:07:15 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:07:22 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:07:23 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:07:37 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:07:38 2006 (tksridha): eloff -a 6,8 -s -99.835854 
+Wed Sep 20 15:07:39 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:07:46 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:07:47 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:08:01 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:08:02 2006 (tksridha): eloff -a 6,8 -s -133.114685 
+Wed Sep 20 15:08:03 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:08:10 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:08:11 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:08:25 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:08:26 2006 (tksridha): eloff -a 6,8 -s -166.393524 
+Wed Sep 20 15:08:28 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:08:34 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:08:35 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:08:49 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:08:51 2006 (tksridha): eloff -a 6,8 -s -199.672363 
+Wed Sep 20 15:08:52 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:08:58 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:09:00 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:09:14 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:09:15 2006 (tksridha): eloff -a 6,8 -s -232.951202 
+Wed Sep 20 15:09:16 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:09:23 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:09:24 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:09:38 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:09:39 2006 (tksridha): eloff -a 6,8 -s -266.230042 
+Wed Sep 20 15:09:40 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:09:47 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:09:48 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:10:02 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:10:03 2006 (tksridha): eloff -a 6,8 -s -299.508881 
+Wed Sep 20 15:10:05 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:10:11 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:10:12 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:10:26 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:10:28 2006 (tksridha): eloff -a 6,8 -s -332.787720 
+Wed Sep 20 15:10:29 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:10:35 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:10:37 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:10:51 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:10:52 2006 (tksridha): eloff -a 6,8 -s -366.066559 
+Wed Sep 20 15:10:53 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:11:00 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:11:01 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:11:15 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:11:16 2006 (tksridha): eloff -a 6,8 -s -399.345398 
+Wed Sep 20 15:11:17 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:11:24 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:11:25 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:11:39 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:11:40 2006 (tksridha): eloff -a 6,8 -s -432.624237 
+Wed Sep 20 15:11:42 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:11:48 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:11:49 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:12:03 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:12:05 2006 (tksridha): eloff -a 6,8 -s -465.903076 
+Wed Sep 20 15:12:06 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:12:12 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:12:14 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:12:28 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:12:29 2006 (tksridha): eloff -a 6,8 -s -499.181915 
+Wed Sep 20 15:12:30 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:12:37 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:12:38 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:12:52 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:12:53 2006 (tksridha): eloff -a 6,8 -s -532.460754 
+Wed Sep 20 15:12:54 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:13:01 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:13:02 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:13:16 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:13:17 2006 (tksridha): eloff -a 6,8 -s -565.739563 
+Wed Sep 20 15:13:19 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:13:25 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:13:26 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:13:40 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:13:42 2006 (tksridha): eloff -a 6,8 -s -599.018372 
+Wed Sep 20 15:13:43 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:13:49 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:13:51 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:14:05 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:14:06 2006 (tksridha): eloff -a 6,8 -s -632.297180 
+Wed Sep 20 15:14:07 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:14:14 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:14:15 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:14:29 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:14:30 2006 (tksridha): eloff -a 6,8 -s -665.575989 
+Wed Sep 20 15:14:31 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:14:38 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:14:39 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:14:53 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:14:54 2006 (tksridha): eloff -a 6,8 -s -698.854797 
+Wed Sep 20 15:14:56 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:15:02 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:15:03 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:15:17 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:15:19 2006 (tksridha): eloff -a 6,8 -s -732.133606 
+Wed Sep 20 15:15:20 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:15:26 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:15:28 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:15:42 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:15:43 2006 (tksridha): eloff -a 6,8 -s -765.412415 
+Wed Sep 20 15:15:44 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:15:51 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:15:52 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:16:06 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:16:07 2006 (tksridha): eloff -a 6,8 -s -798.691223 
+Wed Sep 20 15:16:08 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:16:15 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:16:16 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:16:30 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:16:31 2006 (tksridha): eloff -a 6,8 -s -831.970032 
+Wed Sep 20 15:16:33 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:16:39 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:16:40 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:16:54 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:16:56 2006 (tksridha): eloff -a 6,8 -s -865.248840 
+Wed Sep 20 15:16:57 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:17:03 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:17:05 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:17:19 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:17:20 2006 (tksridha): eloff -a 6,8 -s -898.527649 
+Wed Sep 20 15:17:21 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:17:28 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:17:29 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:17:43 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:17:44 2006 (tksridha): eloff -a 6,8 -s -931.806458 
+Wed Sep 20 15:17:45 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:17:52 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:17:53 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:18:07 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:18:08 2006 (tksridha): eloff -a 6,8 -s -965.085266 
+Wed Sep 20 15:18:09 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:18:16 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:18:17 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:18:31 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:18:32 2006 (tksridha): eloff -a 6,8 -s -998.364075 
+Wed Sep 20 15:18:34 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:18:40 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:18:41 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:18:55 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:18:57 2006 (tksridha): eloff -a 6,8 -s -1031.642944 
+Wed Sep 20 15:18:58 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:19:05 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:19:06 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:19:19 2006 (ramiro): monitor 
+Wed Sep 20 15:19:20 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:19:21 2006 (tksridha): eloff -a 6,8 -s -1064.921753 
+Wed Sep 20 15:19:22 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:19:29 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:19:30 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:19:44 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:19:45 2006 (tksridha): eloff -a 6,8 -s -1098.200562 
+Wed Sep 20 15:19:46 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:19:53 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:19:54 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:20:08 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:20:09 2006 (tksridha): eloff -a 6,8 -s -1131.479370 
+Wed Sep 20 15:20:11 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:20:17 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:20:18 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:20:32 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:20:34 2006 (tksridha): eloff -a 6,8 -s -1164.758179 
+Wed Sep 20 15:20:35 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:20:41 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:20:43 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:20:50 2006 (ramiro): lookup -s saturn 
+Wed Sep 20 15:20:57 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:20:58 2006 (tksridha): eloff -a 6,8 -s -1198.036987 
+Wed Sep 20 15:20:59 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:21:06 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:21:07 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:21:21 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:21:22 2006 (tksridha): eloff -a 6,8 -s -1231.315796 
+Wed Sep 20 15:21:23 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:21:30 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:21:31 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:21:45 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:21:46 2006 (tksridha): eloff -a 6,8 -s -1264.594604 
+Wed Sep 20 15:21:48 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:21:54 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:21:55 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:22:09 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:22:11 2006 (tksridha): eloff -a 6,8 -s -1297.873413 
+Wed Sep 20 15:22:12 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:22:18 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:22:20 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:22:34 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:22:35 2006 (tksridha): eloff -a 6,8 -s -1331.152222 
+Wed Sep 20 15:22:36 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:22:43 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:22:44 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:22:58 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:22:59 2006 (tksridha): eloff -a 6,8 -s -1364.431030 
+Wed Sep 20 15:23:00 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:23:07 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:23:08 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:23:22 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:23:23 2006 (tksridha): eloff -a 6,8 -s -1397.709839 
+Wed Sep 20 15:23:25 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:23:31 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:23:32 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:23:46 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:23:48 2006 (tksridha): eloff -a 6,8 -s -1430.988647 
+Wed Sep 20 15:23:49 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:23:55 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:23:57 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:24:11 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:24:12 2006 (tksridha): eloff -a 6,8 -s -1464.267456 
+Wed Sep 20 15:24:13 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:24:20 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:24:21 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:24:35 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:24:36 2006 (tksridha): eloff -a 6,8 -s -1497.546265 
+Wed Sep 20 15:24:37 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:24:44 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:24:45 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:24:59 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:25:00 2006 (tksridha): eloff -a 6,8 -s -1530.825073 
+Wed Sep 20 15:25:02 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:25:08 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:25:09 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:25:23 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:25:25 2006 (tksridha): eloff -a 6,8 -s -1564.103882 
+Wed Sep 20 15:25:26 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:25:32 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:25:34 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:25:48 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:25:49 2006 (tksridha): eloff -a 6,8 -s -1597.382690 
+Wed Sep 20 15:25:50 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:25:57 2006 (tksridha): azoff -a 6,8 -s 0 
+Wed Sep 20 15:26:07 2006 (tksridha): eloff -a 6,8 -s 0 
+Wed Sep 20 15:26:52 2006 (ramiro): resume -a 4,5 
+Wed Sep 20 15:27:45 2006 (tksridha): positionChopper -a 8 -c -z 68275 
+Wed Sep 20 15:27:55 2006 (tksridha): positionChopper -a 6 -c -z 84975 
+Wed Sep 20 15:28:19 2006 (tksridha): holonDual -a 6 -d 8 -r 2 -f 232.4 -m 96 -s 400 
+Wed Sep 20 15:28:21 2006 (tksridha): azoff -a 6 -s 0 
+Wed Sep 20 15:28:21 2006 (tksridha): eloff -a 6 -s 0 
+Wed Sep 20 15:28:21 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:28:22 2006 (tksridha): azel -a 6 -z 48.360001 -e 18.735001 
+Wed Sep 20 15:28:23 2006 (tksridha): offsetUnit -a 6 -s -400 
+Wed Sep 20 15:28:24 2006 (tksridha): resume -a 6 
+Wed Sep 20 15:28:24 2006 (tksridha): azoff -a 8 -s 0 
+Wed Sep 20 15:28:25 2006 (tksridha): eloff -a 8 -s 0 
+Wed Sep 20 15:28:25 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:28:25 2006 (tksridha): azel -a 8 -z 61.391998 -e 19.889999 
+Wed Sep 20 15:28:26 2006 (tksridha): offsetUnit -a 8 -s -400 
+Wed Sep 20 15:28:28 2006 (tksridha): resume -a 8 
+Wed Sep 20 15:28:57 2006 (ramiro): /application/bin/cpoint -s saturn -c -u l -q 
+Wed Sep 20 15:29:09 2006 (ramiro): getAntList 
+Wed Sep 20 15:29:11 2006 (ramiro): startChopping -a 
+Wed Sep 20 15:29:12 2006 (ramiro): offsetUnit -s 2 
+Wed Sep 20 15:29:13 2006 (ramiro): radio 
+Wed Sep 20 15:29:15 2006 (ramiro): observe -s saturn 
+Wed Sep 20 15:29:15 2006 (ramiro): antennaWait -e 4 
+Wed Sep 20 15:29:20 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:29:21 2006 (tksridha): eloff -a 6,8 -s 1597.383911 
+Wed Sep 20 15:29:26 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:29:27 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:29:42 2006 (ramiro): eloff -a 2 -s 0.000000e+00 
+Wed Sep 20 15:29:43 2006 (ramiro): azoff -a 2 -s -110 
+Wed Sep 20 15:29:43 2006 (ramiro): eloff -a 6 -s 1597.383911 
+Wed Sep 20 15:29:44 2006 (ramiro): azoff -a 6 -s 2750.662598 
+Wed Sep 20 15:29:45 2006 (ramiro): eloff -a 8 -s 1597.383911 
+Wed Sep 20 15:29:46 2006 (ramiro): azoff -a 8 -s 2752.662598 
+Wed Sep 20 15:29:46 2006 (ramiro): antennaWait -e 4 
+Wed Sep 20 15:29:50 2006 (tksridha): stopScan 
+Wed Sep 20 15:29:54 2006 (ramiro): tsys 
+Wed Sep 20 15:29:55 2006 (tksridha): stopScan 
+Wed Sep 20 15:29:59 2006 (tksridha): monitor 
+Wed Sep 20 15:30:30 2006 (tksridha): holonDual -a 6 -d 8 -r 2 -f 232.4 -m 96 -s 400 
+Wed Sep 20 15:30:31 2006 (tksridha): azoff -a 6 -s 0 
+Wed Sep 20 15:30:31 2006 (tksridha): eloff -a 6 -s 0 
+Wed Sep 20 15:30:31 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:30:32 2006 (tksridha): azel -a 6 -z 48.360001 -e 18.735001 
+Wed Sep 20 15:30:33 2006 (tksridha): offsetUnit -a 6 -s -400 
+Wed Sep 20 15:30:34 2006 (tksridha): resume -a 6 
+Wed Sep 20 15:30:34 2006 (tksridha): azoff -a 8 -s 0 
+Wed Sep 20 15:30:35 2006 (tksridha): eloff -a 8 -s 0 
+Wed Sep 20 15:30:35 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:30:35 2006 (tksridha): azel -a 8 -z 61.391998 -e 19.889999 
+Wed Sep 20 15:30:36 2006 (tksridha): offsetUnit -a 8 -s -400 
+Wed Sep 20 15:30:38 2006 (tksridha): resume -a 8 
+Wed Sep 20 15:30:45 2006 (ramiro): /application/bin/cpoint -a 4,5 -s saturn -c -u l -q 
+Wed Sep 20 15:30:46 2006 (ramiro): startChopping -a 4,5 
+Wed Sep 20 15:30:46 2006 (ramiro): offsetUnit -a 4,5 -s 2 
+Wed Sep 20 15:30:49 2006 (ramiro): observe -a 4,5 -s saturn 
+Wed Sep 20 15:30:51 2006 (ramiro): radio -a 4,5 
+Wed Sep 20 15:30:53 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 15:30:54 2006 (tksridha): azoff -s 0 
+Wed Sep 20 15:30:58 2006 (tksridha): eloff -s 0 
+Wed Sep 20 15:31:05 2006 (tksridha): holonDual -a 6 -d 8 -r 2 -f 232.4 -m 96 -s 400 
+Wed Sep 20 15:31:06 2006 (tksridha): azoff -a 6 -s 0 
+Wed Sep 20 15:31:06 2006 (tksridha): eloff -a 6 -s 0 
+Wed Sep 20 15:31:06 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:31:07 2006 (tksridha): azel -a 6 -z 48.360001 -e 18.735001 
+Wed Sep 20 15:31:08 2006 (tksridha): offsetUnit -a 6 -s -400 
+Wed Sep 20 15:31:09 2006 (tksridha): resume -a 6 
+Wed Sep 20 15:31:09 2006 (tksridha): azoff -a 8 -s 0 
+Wed Sep 20 15:31:10 2006 (tksridha): eloff -a 8 -s 0 
+Wed Sep 20 15:31:10 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:31:10 2006 (tksridha): azel -a 8 -z 61.391998 -e 19.889999 
+Wed Sep 20 15:31:11 2006 (tksridha): offsetUnit -a 8 -s -400 
+Wed Sep 20 15:31:13 2006 (tksridha): resume -a 8 
+Wed Sep 20 15:31:15 2006 (ramiro): eloff -a 4 -s 0.000000e+00 
+Wed Sep 20 15:31:16 2006 (ramiro): azoff -a 4 -s -104.03 
+Wed Sep 20 15:31:16 2006 (ramiro): eloff -a 5 -s 0.250000 
+Wed Sep 20 15:31:17 2006 (ramiro): azoff -a 5 -s -103.47 
+Wed Sep 20 15:31:17 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 15:31:24 2006 (ramiro): tsys -a 4,5 
+Wed Sep 20 15:31:34 2006 (ramiro): azscan -a 4,5 
+Wed Sep 20 15:31:34 2006 (ramiro): /application/bin/recordContinuum -a 4,5 -c 1 -s azscan -p 7,8 -u 1158766294 
+Wed Sep 20 15:32:57 2006 (tksridha): stopChopping -a 2,6,8 
+Wed Sep 20 15:33:27 2006 (tksridha): holonDual -a 6 -d 8 -r 2 -f 232.4 -m 96 -s 400 
+Wed Sep 20 15:33:28 2006 (tksridha): azoff -a 6 -s 0 
+Wed Sep 20 15:33:29 2006 (tksridha): eloff -a 6 -s 0 
+Wed Sep 20 15:33:29 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:33:29 2006 (tksridha): azel -a 6 -z 48.360001 -e 18.735001 
+Wed Sep 20 15:33:30 2006 (ramiro): stopScan -a 4,5 
+Wed Sep 20 15:33:30 2006 (tksridha): offsetUnit -a 6 -s -400 
+Wed Sep 20 15:33:31 2006 (ramiro): eloff -a 4 -s 0.000000e+00 
+Wed Sep 20 15:33:32 2006 (tksridha): resume -a 6 
+Wed Sep 20 15:33:32 2006 (tksridha): azoff -a 8 -s 0 
+Wed Sep 20 15:33:32 2006 (tksridha): eloff -a 8 -s 0 
+Wed Sep 20 15:33:32 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:33:33 2006 (ramiro): azoff -a 4 -s 5.970000 
+Wed Sep 20 15:33:33 2006 (tksridha): azel -a 8 -z 61.391998 -e 19.889999 
+Wed Sep 20 15:33:34 2006 (tksridha): offsetUnit -a 8 -s -400 
+Wed Sep 20 15:33:35 2006 (tksridha): resume -a 8 
+Wed Sep 20 15:33:41 2006 (ramiro): eloff -a 5 -s 0.250000 
+Wed Sep 20 15:33:42 2006 (ramiro): azoff -a 5 -s 6.530000 
+Wed Sep 20 15:33:53 2006 (ramiro): offsetUnit -a 4,5 -s 2 
+Wed Sep 20 15:33:56 2006 (ramiro): observe -a 4,5 -s saturn 
+Wed Sep 20 15:33:58 2006 (ramiro): radio -a 4,5 
+Wed Sep 20 15:34:00 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 15:34:04 2006 (ramiro): azoff -a 4 -s -39.03 
+Wed Sep 20 15:34:05 2006 (ramiro): eloff -a 4 -s -110 
+Wed Sep 20 15:34:05 2006 (ramiro): azoff -a 5 -s -38.47 
+Wed Sep 20 15:34:06 2006 (ramiro): eloff -a 5 -s -109.75 
+Wed Sep 20 15:34:07 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 15:34:13 2006 (ramiro): tsys -a 4,5 
+Wed Sep 20 15:34:24 2006 (ramiro): elscan -a 4,5 
+Wed Sep 20 15:34:26 2006 (ramiro): /application/bin/recordContinuum -a 4,5 -c 1 -s elscan -p 7,8 -u 1158766465 
+Wed Sep 20 15:34:48 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:34:49 2006 (tksridha): eloff -a 6,8 -s 1597.383911 
+Wed Sep 20 15:34:54 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:34:56 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:35:09 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:35:11 2006 (tksridha): eloff -a 6,8 -s 1564.105103 
+Wed Sep 20 15:35:12 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:35:18 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:35:20 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:35:34 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:35:35 2006 (tksridha): eloff -a 6,8 -s 1530.826294 
+Wed Sep 20 15:35:36 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:35:43 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:35:44 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:35:58 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:35:59 2006 (tksridha): eloff -a 6,8 -s 1497.547485 
+Wed Sep 20 15:36:00 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:36:07 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:36:08 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:36:20 2006 (ramiro): stopScan -a 4,5 
+Wed Sep 20 15:36:21 2006 (ramiro): eloff -a 4 -s 0.000000e+00 
+Wed Sep 20 15:36:22 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:36:22 2006 (ramiro): azoff -a 4 -s 5.970000 
+Wed Sep 20 15:36:23 2006 (tksridha): eloff -a 6,8 -s 1464.268677 
+Wed Sep 20 15:36:24 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:36:31 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:36:32 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:36:46 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:36:48 2006 (tksridha): eloff -a 6,8 -s 1430.989868 
+Wed Sep 20 15:36:49 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:36:55 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:36:57 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:37:01 2006 (ramiro): eloff -a 5 -s 0.250000 
+Wed Sep 20 15:37:02 2006 (ramiro): azoff -a 5 -s 6.530000 
+Wed Sep 20 15:37:11 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:37:12 2006 (tksridha): eloff -a 6,8 -s 1397.711060 
+Wed Sep 20 15:37:13 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:37:20 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:37:21 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:37:35 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:37:36 2006 (tksridha): eloff -a 6,8 -s 1364.432251 
+Wed Sep 20 15:37:37 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:37:44 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:37:45 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:37:59 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:38:00 2006 (tksridha): eloff -a 6,8 -s 1331.153442 
+Wed Sep 20 15:38:02 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:38:08 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:38:09 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:38:11 2006 (ramiro): stopChopping -a 4,5 
+Wed Sep 20 15:38:11 2006 (ramiro): readAndWriteLastCpoint -a 4,5 l 
+Wed Sep 20 15:38:23 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:38:24 2006 (tksridha): eloff -a 6,8 -s 1297.874634 
+Wed Sep 20 15:38:26 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:38:32 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:38:33 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:38:47 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:38:49 2006 (tksridha): eloff -a 6,8 -s 1264.595825 
+Wed Sep 20 15:38:50 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:38:57 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:38:58 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:39:12 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:39:13 2006 (tksridha): eloff -a 6,8 -s 1231.317017 
+Wed Sep 20 15:39:14 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:39:21 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:39:22 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:39:36 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:39:37 2006 (tksridha): eloff -a 6,8 -s 1198.038208 
+Wed Sep 20 15:39:38 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:39:45 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:39:46 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:40:00 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:40:01 2006 (tksridha): eloff -a 6,8 -s 1164.759399 
+Wed Sep 20 15:40:03 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:40:09 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:40:10 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:40:24 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:40:26 2006 (tksridha): eloff -a 6,8 -s 1131.480591 
+Wed Sep 20 15:40:27 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:40:33 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:40:35 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:40:49 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:40:50 2006 (tksridha): eloff -a 6,8 -s 1098.201782 
+Wed Sep 20 15:40:51 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:40:58 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:40:59 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:41:13 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:41:14 2006 (tksridha): eloff -a 6,8 -s 1064.922974 
+Wed Sep 20 15:41:15 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:41:22 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:41:23 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:41:37 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:41:38 2006 (tksridha): eloff -a 6,8 -s 1031.644165 
+Wed Sep 20 15:41:40 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:41:41 2006 (ramiro): /application/bin/cpoint -a 4,5 -s saturn -c -u l -q 
+Wed Sep 20 15:41:44 2006 (ramiro): startChopping -a 4,5 
+Wed Sep 20 15:41:44 2006 (ramiro): offsetUnit -a 4,5 -s 2 
+Wed Sep 20 15:41:46 2006 (ramiro): observe -a 4,5 -s saturn 
+Wed Sep 20 15:41:46 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:41:47 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:41:49 2006 (ramiro): radio -a 4,5 
+Wed Sep 20 15:41:51 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 15:41:54 2006 (ramiro): eloff -a 4 -s 0.000000e+00 
+Wed Sep 20 15:41:55 2006 (ramiro): azoff -a 4 -s -104.03 
+Wed Sep 20 15:41:56 2006 (ramiro): eloff -a 5 -s 0.250000 
+Wed Sep 20 15:41:57 2006 (ramiro): azoff -a 5 -s -103.47 
+Wed Sep 20 15:41:57 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 15:42:01 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:42:03 2006 (tksridha): eloff -a 6,8 -s 998.365356 
+Wed Sep 20 15:42:04 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:42:04 2006 (ramiro): tsys -a 4,5 
+Wed Sep 20 15:42:10 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:42:12 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:42:14 2006 (ramiro): azscan -a 4,5 
+Wed Sep 20 15:42:15 2006 (ramiro): /application/bin/recordContinuum -a 4,5 -c 1 -s azscan -p 7,8 -u 1158766934 
+Wed Sep 20 15:42:26 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:42:27 2006 (tksridha): eloff -a 6,8 -s 965.086548 
+Wed Sep 20 15:42:28 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:42:35 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:42:36 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:42:50 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:42:51 2006 (tksridha): eloff -a 6,8 -s 931.807739 
+Wed Sep 20 15:42:52 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:42:59 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:43:00 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:43:14 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:43:15 2006 (tksridha): eloff -a 6,8 -s 898.528931 
+Wed Sep 20 15:43:17 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:43:23 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:43:24 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:43:38 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:43:40 2006 (tksridha): eloff -a 6,8 -s 865.250122 
+Wed Sep 20 15:43:41 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:43:47 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:43:49 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:44:03 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:44:04 2006 (tksridha): eloff -a 6,8 -s 831.971313 
+Wed Sep 20 15:44:05 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:44:12 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:44:13 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:44:27 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:44:28 2006 (tksridha): eloff -a 6,8 -s 798.692505 
+Wed Sep 20 15:44:29 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:44:36 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:44:37 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:44:41 2006 (ramiro): stopScan -a 4,5 
+Wed Sep 20 15:44:42 2006 (ramiro): eloff -a 4 -s 0.000000e+00 
+Wed Sep 20 15:44:43 2006 (ramiro): azoff -a 4 -s 5.970000 
+Wed Sep 20 15:44:51 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:44:51 2006 (ramiro): eloff -a 5 -s 0.250000 
+Wed Sep 20 15:44:52 2006 (tksridha): eloff -a 6,8 -s 765.413696 
+Wed Sep 20 15:44:52 2006 (ramiro): azoff -a 5 -s 6.530000 
+Wed Sep 20 15:44:54 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:45:00 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:45:01 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:45:06 2006 (ramiro): offsetUnit -a 4,5 -s 2 
+Wed Sep 20 15:45:08 2006 (ramiro): observe -a 4,5 -s saturn 
+Wed Sep 20 15:45:10 2006 (ramiro): radio -a 4,5 
+Wed Sep 20 15:45:12 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 15:45:15 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:45:16 2006 (ramiro): azoff -a 4 -s -39.03 
+Wed Sep 20 15:45:17 2006 (tksridha): eloff -a 6,8 -s 732.134888 
+Wed Sep 20 15:45:17 2006 (ramiro): eloff -a 4 -s -110 
+Wed Sep 20 15:45:18 2006 (ramiro): azoff -a 5 -s -38.47 
+Wed Sep 20 15:45:18 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:45:19 2006 (ramiro): eloff -a 5 -s -109.75 
+Wed Sep 20 15:45:19 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 15:45:24 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:45:25 2006 (ramiro): tsys -a 4,5 
+Wed Sep 20 15:45:26 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:45:35 2006 (ramiro): elscan -a 4,5 
+Wed Sep 20 15:45:36 2006 (ramiro): /application/bin/recordContinuum -a 4,5 -c 1 -s elscan -p 7,8 -u 1158767135 
+Wed Sep 20 15:45:40 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:45:41 2006 (tksridha): eloff -a 6,8 -s 698.856079 
+Wed Sep 20 15:45:42 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:45:49 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:45:50 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:46:04 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:46:05 2006 (tksridha): eloff -a 6,8 -s 665.577271 
+Wed Sep 20 15:46:06 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:46:13 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:46:14 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:46:28 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:46:29 2006 (tksridha): eloff -a 6,8 -s 632.298462 
+Wed Sep 20 15:46:31 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:46:37 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:46:38 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:46:52 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:46:54 2006 (tksridha): eloff -a 6,8 -s 599.019653 
+Wed Sep 20 15:46:55 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:47:01 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:47:03 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:47:17 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:47:18 2006 (tksridha): eloff -a 6,8 -s 565.740845 
+Wed Sep 20 15:47:19 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:47:26 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:47:27 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:47:41 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:47:42 2006 (tksridha): eloff -a 6,8 -s 532.462036 
+Wed Sep 20 15:47:43 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:47:50 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:47:51 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:48:02 2006 (ramiro): stopScan -a 4,5 
+Wed Sep 20 15:48:03 2006 (ramiro): eloff -a 4 -s 0.000000e+00 
+Wed Sep 20 15:48:04 2006 (ramiro): azoff -a 4 -s 5.970000 
+Wed Sep 20 15:48:05 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:48:06 2006 (tksridha): eloff -a 6,8 -s 499.183197 
+Wed Sep 20 15:48:07 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:48:14 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:48:15 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:48:29 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:48:31 2006 (tksridha): eloff -a 6,8 -s 465.904358 
+Wed Sep 20 15:48:32 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:48:38 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:48:40 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:48:54 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:48:55 2006 (tksridha): eloff -a 6,8 -s 432.625519 
+Wed Sep 20 15:48:56 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:49:03 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:49:04 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:49:18 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:49:19 2006 (tksridha): eloff -a 6,8 -s 399.346680 
+Wed Sep 20 15:49:20 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:49:27 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:49:27 2006 (ramiro): eloff -a 5 -s 0.250000 
+Wed Sep 20 15:49:28 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:49:28 2006 (ramiro): azoff -a 5 -s 6.530000 
+Wed Sep 20 15:49:39 2006 (ramiro): stopChopping -a 4,5 
+Wed Sep 20 15:49:40 2006 (ramiro): readAndWriteLastCpoint -a 4,5 l 
+Wed Sep 20 15:49:42 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:49:43 2006 (tksridha): eloff -a 6,8 -s 366.067841 
+Wed Sep 20 15:49:44 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:49:51 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:49:51 2006 (ramiro): openM3 -a 4,5 
+Wed Sep 20 15:49:52 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:50:06 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:50:07 2006 (tksridha): eloff -a 6,8 -s 332.789001 
+Wed Sep 20 15:50:09 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:50:15 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:50:16 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:50:30 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:50:32 2006 (tksridha): eloff -a 6,8 -s 299.510162 
+Wed Sep 20 15:50:33 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:50:39 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:50:41 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:50:55 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:50:56 2006 (tksridha): eloff -a 6,8 -s 266.231323 
+Wed Sep 20 15:50:57 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:51:04 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:51:05 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:51:19 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:51:20 2006 (tksridha): eloff -a 6,8 -s 232.952484 
+Wed Sep 20 15:51:21 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:51:28 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:51:29 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:51:35 2006 (ramiro): /application/bin/cpoint -a 4,5 -s saturn -c -u l -q 
+Wed Sep 20 15:51:37 2006 (ramiro): startChopping -a 4,5 
+Wed Sep 20 15:51:37 2006 (ramiro): offsetUnit -a 4,5 -s 2 
+Wed Sep 20 15:51:39 2006 (ramiro): observe -a 4,5 -s saturn 
+Wed Sep 20 15:51:42 2006 (ramiro): radio -a 4,5 
+Wed Sep 20 15:51:43 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:51:44 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 15:51:44 2006 (tksridha): eloff -a 6,8 -s 199.673645 
+Wed Sep 20 15:51:46 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:51:48 2006 (ramiro): eloff -a 4 -s 0.000000e+00 
+Wed Sep 20 15:51:50 2006 (ramiro): azoff -a 4 -s -104.03 
+Wed Sep 20 15:51:50 2006 (ramiro): eloff -a 5 -s 0.250000 
+Wed Sep 20 15:51:51 2006 (ramiro): azoff -a 5 -s -103.47 
+Wed Sep 20 15:51:52 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 15:51:52 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:51:53 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:51:58 2006 (ramiro): tsys -a 4,5 
+Wed Sep 20 15:52:07 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:52:08 2006 (ramiro): azscan -a 4,5 
+Wed Sep 20 15:52:08 2006 (ramiro): /application/bin/recordContinuum -a 4,5 -c 1 -s azscan -p 7,8 -u 1158767528 
+Wed Sep 20 15:52:09 2006 (tksridha): eloff -a 6,8 -s 166.394806 
+Wed Sep 20 15:52:10 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:52:16 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:52:18 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:52:32 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:52:33 2006 (tksridha): eloff -a 6,8 -s 133.115967 
+Wed Sep 20 15:52:34 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:52:41 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:52:42 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:52:56 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:52:57 2006 (tksridha): eloff -a 6,8 -s 99.837135 
+Wed Sep 20 15:52:58 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:53:05 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:53:06 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:53:20 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:53:21 2006 (tksridha): eloff -a 6,8 -s 66.558304 
+Wed Sep 20 15:53:23 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:53:29 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:53:30 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:53:44 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:53:46 2006 (tksridha): eloff -a 6,8 -s 33.279472 
+Wed Sep 20 15:53:47 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:53:53 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:53:55 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:54:09 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:54:10 2006 (tksridha): eloff -a 6,8 -s 0.000641 
+Wed Sep 20 15:54:11 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:54:18 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:54:19 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:54:33 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:54:34 2006 (tksridha): eloff -a 6,8 -s -33.278191 
+Wed Sep 20 15:54:35 2006 (ramiro): stopScan -a 4,5 
+Wed Sep 20 15:54:35 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:54:36 2006 (ramiro): eloff -a 4 -s 0.000000e+00 
+Wed Sep 20 15:54:38 2006 (ramiro): azoff -a 4 -s 5.970000 
+Wed Sep 20 15:54:42 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:54:43 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:54:46 2006 (ramiro): eloff -a 5 -s 0.250000 
+Wed Sep 20 15:54:47 2006 (ramiro): azoff -a 5 -s 6.530000 
+Wed Sep 20 15:54:57 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:54:58 2006 (tksridha): eloff -a 6,8 -s -66.557022 
+Wed Sep 20 15:54:59 2006 (ramiro): offsetUnit -a 4,5 -s 2 
+Wed Sep 20 15:55:00 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:55:02 2006 (ramiro): observe -a 4,5 -s saturn 
+Wed Sep 20 15:55:05 2006 (ramiro): radio -a 4,5 
+Wed Sep 20 15:55:06 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:55:07 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 15:55:07 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:55:10 2006 (ramiro): azoff -a 4 -s -39.03 
+Wed Sep 20 15:55:12 2006 (ramiro): eloff -a 4 -s -110 
+Wed Sep 20 15:55:12 2006 (ramiro): azoff -a 5 -s -38.47 
+Wed Sep 20 15:55:13 2006 (ramiro): eloff -a 5 -s -109.75 
+Wed Sep 20 15:55:14 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 15:55:19 2006 (ramiro): tsys -a 4,5 
+Wed Sep 20 15:55:21 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:55:23 2006 (tksridha): eloff -a 6,8 -s -99.835854 
+Wed Sep 20 15:55:24 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:55:29 2006 (ramiro): elscan -a 4,5 
+Wed Sep 20 15:55:29 2006 (ramiro): /application/bin/recordContinuum -a 4,5 -c 1 -s elscan -p 7,8 -u 1158767729 
+Wed Sep 20 15:55:30 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:55:32 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:55:46 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:55:47 2006 (tksridha): eloff -a 6,8 -s -133.114685 
+Wed Sep 20 15:55:48 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:55:55 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:55:56 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:56:10 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:56:11 2006 (tksridha): eloff -a 6,8 -s -166.393524 
+Wed Sep 20 15:56:12 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:56:19 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:56:20 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:56:34 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:56:35 2006 (tksridha): eloff -a 6,8 -s -199.672363 
+Wed Sep 20 15:56:37 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:56:43 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:56:44 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:56:58 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:57:00 2006 (tksridha): eloff -a 6,8 -s -232.951202 
+Wed Sep 20 15:57:01 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:57:07 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:57:09 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:57:23 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:57:24 2006 (tksridha): eloff -a 6,8 -s -266.230042 
+Wed Sep 20 15:57:25 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:57:32 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:57:33 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:57:47 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:57:48 2006 (tksridha): eloff -a 6,8 -s -299.508881 
+Wed Sep 20 15:57:49 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:57:56 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:57:56 2006 (ramiro): stopScan -a 4,5 
+Wed Sep 20 15:57:57 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:57:57 2006 (ramiro): eloff -a 4 -s 0.000000e+00 
+Wed Sep 20 15:57:58 2006 (ramiro): azoff -a 4 -s 5.970000 
+Wed Sep 20 15:58:11 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:58:12 2006 (tksridha): eloff -a 6,8 -s -332.787720 
+Wed Sep 20 15:58:14 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:58:20 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:58:21 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:58:35 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:58:37 2006 (tksridha): eloff -a 6,8 -s -366.066559 
+Wed Sep 20 15:58:38 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:58:44 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:58:46 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:59:00 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:59:01 2006 (tksridha): eloff -a 6,8 -s -399.345398 
+Wed Sep 20 15:59:02 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:59:09 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:59:10 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:59:24 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:59:25 2006 (tksridha): eloff -a 6,8 -s -432.624237 
+Wed Sep 20 15:59:26 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:59:26 2006 (ramiro): eloff -a 5 -s 0.250000 
+Wed Sep 20 15:59:29 2006 (ramiro): azoff -a 5 -s 6.530000 
+Wed Sep 20 15:59:33 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:59:34 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 15:59:47 2006 (ramiro): azoff -a 5 -s 5.19 
+Wed Sep 20 15:59:48 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 15:59:48 2006 (ramiro): eloff -a 5 -s 4.10 
+Wed Sep 20 15:59:49 2006 (tksridha): eloff -a 6,8 -s -465.903076 
+Wed Sep 20 15:59:49 2006 (ramiro): stopChopping -a 4,5 
+Wed Sep 20 15:59:50 2006 (ramiro): readAndWriteLastCpoint -a 4,5 l 
+Wed Sep 20 15:59:51 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 15:59:57 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 15:59:58 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:00:12 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:00:14 2006 (tksridha): eloff -a 6,8 -s -499.181915 
+Wed Sep 20 16:00:15 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:00:21 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:00:22 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:00:37 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:00:38 2006 (tksridha): eloff -a 6,8 -s -532.460754 
+Wed Sep 20 16:00:39 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:00:46 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:00:47 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:01:01 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:01:02 2006 (tksridha): eloff -a 6,8 -s -565.739563 
+Wed Sep 20 16:01:03 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:01:11 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:01:12 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:01:25 2006 (ramiro): /application/bin/cpoint -a 4,5 -s saturn -c -u l -q 
+Wed Sep 20 16:01:26 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:01:28 2006 (tksridha): eloff -a 6,8 -s -599.018372 
+Wed Sep 20 16:01:28 2006 (ramiro): startChopping -a 4,5 
+Wed Sep 20 16:01:28 2006 (ramiro): offsetUnit -a 4,5 -s 2 
+Wed Sep 20 16:01:29 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:01:31 2006 (ramiro): observe -a 4,5 -s saturn 
+Wed Sep 20 16:01:34 2006 (ramiro): radio -a 4,5 
+Wed Sep 20 16:01:35 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:01:36 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 16:01:37 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:01:39 2006 (ramiro): eloff -a 4 -s 0.000000e+00 
+Wed Sep 20 16:01:40 2006 (ramiro): azoff -a 4 -s -104.03 
+Wed Sep 20 16:01:41 2006 (ramiro): eloff -a 5 -s 4.100000 
+Wed Sep 20 16:01:42 2006 (ramiro): azoff -a 5 -s -104.81 
+Wed Sep 20 16:01:42 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 16:01:49 2006 (ramiro): tsys -a 4,5 
+Wed Sep 20 16:01:50 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:01:51 2006 (tksridha): eloff -a 6,8 -s -632.297180 
+Wed Sep 20 16:01:53 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:01:59 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:02:00 2006 (ramiro): azscan -a 4,5 
+Wed Sep 20 16:02:00 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:02:01 2006 (ramiro): /application/bin/recordContinuum -a 4,5 -c 1 -s azscan -p 7,8 -u 1158768120 
+Wed Sep 20 16:02:14 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:02:16 2006 (tksridha): eloff -a 6,8 -s -665.575989 
+Wed Sep 20 16:02:17 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:02:24 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:02:25 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:02:39 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:02:40 2006 (tksridha): eloff -a 6,8 -s -698.854797 
+Wed Sep 20 16:02:41 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:02:48 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:02:49 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:03:03 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:03:04 2006 (tksridha): eloff -a 6,8 -s -732.133606 
+Wed Sep 20 16:03:05 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:03:12 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:03:13 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:03:27 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:03:28 2006 (tksridha): eloff -a 6,8 -s -765.412415 
+Wed Sep 20 16:03:30 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:03:36 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:03:37 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:03:41 2006 (tksridha): positionChopper -a 6 -c -z 84975 
+Wed Sep 20 16:03:51 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:03:53 2006 (tksridha): eloff -a 6,8 -s -798.691223 
+Wed Sep 20 16:03:54 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:03:56 2006 (ramiro): stopScan -a 4,5 
+Wed Sep 20 16:03:58 2006 (ramiro): eloff -a 4 -s 0.000000e+00 
+Wed Sep 20 16:03:59 2006 (ramiro): azoff -a 4 -s 5.970000 
+Wed Sep 20 16:04:00 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:04:01 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:04:08 2006 (ramiro): eloff -a 5 -s 4.100000 
+Wed Sep 20 16:04:09 2006 (ramiro): azoff -a 5 -s 5.190000 
+Wed Sep 20 16:04:16 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:04:17 2006 (tksridha): eloff -a 6,8 -s -831.970032 
+Wed Sep 20 16:04:18 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:04:22 2006 (ramiro): offsetUnit -a 4,5 -s 2 
+Wed Sep 20 16:04:24 2006 (ramiro): observe -a 4,5 -s saturn 
+Wed Sep 20 16:04:25 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:04:26 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:04:26 2006 (ramiro): radio -a 4,5 
+Wed Sep 20 16:04:29 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 16:04:32 2006 (ramiro): azoff -a 4 -s -39.03 
+Wed Sep 20 16:04:33 2006 (ramiro): eloff -a 4 -s -110 
+Wed Sep 20 16:04:34 2006 (ramiro): azoff -a 5 -s -39.81 
+Wed Sep 20 16:04:35 2006 (ramiro): eloff -a 5 -s -105.9 
+Wed Sep 20 16:04:35 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 16:04:40 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:04:41 2006 (tksridha): eloff -a 6,8 -s -865.248840 
+Wed Sep 20 16:04:41 2006 (ramiro): tsys -a 4,5 
+Wed Sep 20 16:04:42 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:04:49 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:04:50 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:04:52 2006 (ramiro): elscan -a 4,5 
+Wed Sep 20 16:04:52 2006 (ramiro): /application/bin/recordContinuum -a 4,5 -c 1 -s elscan -p 7,8 -u 1158768292 
+Wed Sep 20 16:05:04 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:05:05 2006 (tksridha): eloff -a 6,8 -s -898.527649 
+Wed Sep 20 16:05:07 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:05:13 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:05:14 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:05:28 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:05:30 2006 (tksridha): eloff -a 6,8 -s -931.806458 
+Wed Sep 20 16:05:31 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:05:37 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:05:39 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:05:53 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:05:54 2006 (tksridha): eloff -a 6,8 -s -965.085266 
+Wed Sep 20 16:05:55 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:06:02 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:06:03 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:06:17 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:06:18 2006 (tksridha): eloff -a 6,8 -s -998.364075 
+Wed Sep 20 16:06:19 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:06:26 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:06:27 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:06:41 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:06:42 2006 (tksridha): eloff -a 6,8 -s -1031.642944 
+Wed Sep 20 16:06:44 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:06:49 2006 (ramiro): stopScan -a 4,5 
+Wed Sep 20 16:06:50 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:06:50 2006 (ramiro): eloff -a 4 -s 0.000000e+00 
+Wed Sep 20 16:06:51 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:06:52 2006 (ramiro): azoff -a 4 -s 5.970000 
+Wed Sep 20 16:07:05 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:07:07 2006 (tksridha): eloff -a 6,8 -s -1064.921753 
+Wed Sep 20 16:07:07 2006 (ramiro): azoff -a 4 -s 5.95 
+Wed Sep 20 16:07:08 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:07:08 2006 (ramiro): eloff -a 4 -s 3.86 
+Wed Sep 20 16:07:10 2006 (ramiro): eloff -a 5 -s 4.100000 
+Wed Sep 20 16:07:12 2006 (ramiro): azoff -a 5 -s 5.190000 
+Wed Sep 20 16:07:14 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:07:15 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:07:26 2006 (ramiro): azoff -a 5 -s 6.27 
+Wed Sep 20 16:07:27 2006 (ramiro): eloff -a 5 -s 2.82 
+Wed Sep 20 16:07:29 2006 (ramiro): stopChopping -a 4,5 
+Wed Sep 20 16:07:29 2006 (ramiro): readAndWriteLastCpoint -a 4,5 l 
+Wed Sep 20 16:07:30 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:07:31 2006 (tksridha): eloff -a 6,8 -s -1098.200562 
+Wed Sep 20 16:07:32 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:07:39 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:07:40 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:07:41 2006 (ramiro): /application/bin/cpoint -a 4,5 -s saturn -c -u l -q 
+Wed Sep 20 16:07:43 2006 (ramiro): startChopping -a 4,5 
+Wed Sep 20 16:07:43 2006 (ramiro): offsetUnit -a 4,5 -s 2 
+Wed Sep 20 16:07:45 2006 (ramiro): observe -a 4,5 -s saturn 
+Wed Sep 20 16:07:47 2006 (ramiro): radio -a 4,5 
+Wed Sep 20 16:07:49 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 16:07:53 2006 (ramiro): eloff -a 4 -s 3.860000 
+Wed Sep 20 16:07:54 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:07:54 2006 (ramiro): azoff -a 4 -s -104.05 
+Wed Sep 20 16:07:55 2006 (ramiro): eloff -a 5 -s 2.820000 
+Wed Sep 20 16:07:55 2006 (tksridha): eloff -a 6,8 -s -1131.479370 
+Wed Sep 20 16:07:56 2006 (ramiro): azoff -a 5 -s -103.73 
+Wed Sep 20 16:07:56 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 16:07:56 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:08:02 2006 (ramiro): tsys -a 4,5 
+Wed Sep 20 16:08:03 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:08:04 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:08:12 2006 (ramiro): azscan -a 4,5 
+Wed Sep 20 16:08:12 2006 (ramiro): /application/bin/recordContinuum -a 4,5 -c 1 -s azscan -p 7,8 -u 1158768492 
+Wed Sep 20 16:08:18 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:08:19 2006 (tksridha): eloff -a 6,8 -s -1164.758179 
+Wed Sep 20 16:08:21 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:08:27 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:08:28 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:08:42 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:08:44 2006 (tksridha): eloff -a 6,8 -s -1198.036987 
+Wed Sep 20 16:08:45 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:08:51 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:08:53 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:09:07 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:09:08 2006 (tksridha): eloff -a 6,8 -s -1231.315796 
+Wed Sep 20 16:09:09 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:09:16 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:09:17 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:09:31 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:09:32 2006 (tksridha): eloff -a 6,8 -s -1264.594604 
+Wed Sep 20 16:09:33 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:09:40 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:09:41 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:09:55 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:09:56 2006 (tksridha): eloff -a 6,8 -s -1297.873413 
+Wed Sep 20 16:09:58 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:10:04 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:10:05 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:10:19 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:10:21 2006 (tksridha): eloff -a 6,8 -s -1331.152222 
+Wed Sep 20 16:10:22 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:10:28 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:10:30 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:10:37 2006 (ramiro): stopScan -a 4,5 
+Wed Sep 20 16:10:38 2006 (ramiro): eloff -a 4 -s 3.860000 
+Wed Sep 20 16:10:39 2006 (ramiro): azoff -a 4 -s 5.950000 
+Wed Sep 20 16:10:43 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:10:45 2006 (tksridha): eloff -a 6,8 -s -1364.431030 
+Wed Sep 20 16:10:46 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:10:49 2006 (ramiro): eloff -a 5 -s 2.820000 
+Wed Sep 20 16:10:51 2006 (ramiro): azoff -a 5 -s 6.270000 
+Wed Sep 20 16:10:52 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:10:53 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:11:02 2006 (ramiro): offsetUnit -a 4,5 -s 2 
+Wed Sep 20 16:11:04 2006 (ramiro): observe -a 4,5 -s saturn 
+Wed Sep 20 16:11:06 2006 (ramiro): radio -a 4,5 
+Wed Sep 20 16:11:08 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:11:09 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 16:11:09 2006 (tksridha): eloff -a 6,8 -s -1397.709839 
+Wed Sep 20 16:11:10 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:11:13 2006 (ramiro): azoff -a 4 -s -39.05 
+Wed Sep 20 16:11:14 2006 (ramiro): eloff -a 4 -s -106.14 
+Wed Sep 20 16:11:15 2006 (ramiro): azoff -a 5 -s -38.73 
+Wed Sep 20 16:11:16 2006 (ramiro): eloff -a 5 -s -107.18 
+Wed Sep 20 16:11:16 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 16:11:17 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:11:18 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:11:22 2006 (ramiro): tsys -a 4,5 
+Wed Sep 20 16:11:32 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:11:33 2006 (ramiro): elscan -a 4,5 
+Wed Sep 20 16:11:33 2006 (ramiro): /application/bin/recordContinuum -a 4,5 -c 1 -s elscan -p 7,8 -u 1158768693 
+Wed Sep 20 16:11:33 2006 (tksridha): eloff -a 6,8 -s -1430.988647 
+Wed Sep 20 16:11:35 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:11:41 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:11:42 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:11:56 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:11:58 2006 (tksridha): eloff -a 6,8 -s -1464.267456 
+Wed Sep 20 16:11:59 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:12:05 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:12:06 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:12:21 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:12:22 2006 (tksridha): eloff -a 6,8 -s -1497.546265 
+Wed Sep 20 16:12:23 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:12:30 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:12:31 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:12:45 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:12:46 2006 (tksridha): eloff -a 6,8 -s -1530.825073 
+Wed Sep 20 16:12:47 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:12:54 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:12:55 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:13:09 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:13:10 2006 (tksridha): eloff -a 6,8 -s -1564.103882 
+Wed Sep 20 16:13:11 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:13:18 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:13:19 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:13:28 2006 (ramiro): stopScan -a 4,5 
+Wed Sep 20 16:13:29 2006 (ramiro): eloff -a 4 -s 3.860000 
+Wed Sep 20 16:13:30 2006 (ramiro): azoff -a 4 -s 5.950000 
+Wed Sep 20 16:13:33 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:13:34 2006 (tksridha): eloff -a 6,8 -s -1597.382690 
+Wed Sep 20 16:13:35 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:13:42 2006 (tksridha): azoff -a 6,8 -s 0 
+Wed Sep 20 16:13:52 2006 (tksridha): eloff -a 6,8 -s 0 
+Wed Sep 20 16:14:42 2006 (tksridha): positionChopper -a 6 -c -z 78975 
+Wed Sep 20 16:15:35 2006 (tksridha): positionChopper -a 8 -c -z 67300 
+Wed Sep 20 16:15:41 2006 (ramiro): azoff -a 4 -s 8.00 
+Wed Sep 20 16:15:42 2006 (ramiro): eloff -a 4 -s 6.39 
+Wed Sep 20 16:15:43 2006 (ramiro): eloff -a 5 -s 2.820000 
+Wed Sep 20 16:15:45 2006 (ramiro): azoff -a 5 -s 6.270000 
+Wed Sep 20 16:15:57 2006 (tksridha): holonDual -a 6 -d 8 -r 2 -f 232.4 -m 96 -s 400 
+Wed Sep 20 16:15:58 2006 (tksridha): azoff -a 6 -s 0 
+Wed Sep 20 16:15:58 2006 (tksridha): eloff -a 6 -s 0 
+Wed Sep 20 16:15:59 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:15:59 2006 (tksridha): azel -a 6 -z 48.360001 -e 18.735001 
+Wed Sep 20 16:16:00 2006 (tksridha): offsetUnit -a 6 -s -400 
+Wed Sep 20 16:16:01 2006 (tksridha): resume -a 6 
+Wed Sep 20 16:16:02 2006 (tksridha): azoff -a 8 -s 0 
+Wed Sep 20 16:16:02 2006 (tksridha): eloff -a 8 -s 0 
+Wed Sep 20 16:16:02 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:16:02 2006 (tksridha): azel -a 8 -z 61.391998 -e 19.889999 
+Wed Sep 20 16:16:04 2006 (tksridha): offsetUnit -a 8 -s -400 
+Wed Sep 20 16:16:05 2006 (tksridha): resume -a 8 
+Wed Sep 20 16:17:08 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:17:09 2006 (tksridha): eloff -a 6,8 -s 1597.383911 
+Wed Sep 20 16:17:10 2006 (ramiro): azoff -a 5 -s 6.64 
+Wed Sep 20 16:17:11 2006 (ramiro): eloff -a 5 -s 3.48 
+Wed Sep 20 16:17:12 2006 (ramiro): stopChopping -a 4,5 
+Wed Sep 20 16:17:12 2006 (ramiro): readAndWriteLastCpoint -a 4,5 l 
+Wed Sep 20 16:17:15 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:17:16 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:17:29 2006 (ramiro): /application/bin/cpoint -a 4,5 -s saturn -c -u l -q 
+Wed Sep 20 16:17:30 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:17:31 2006 (tksridha): eloff -a 6,8 -s 1564.105103 
+Wed Sep 20 16:17:31 2006 (ramiro): startChopping -a 4,5 
+Wed Sep 20 16:17:31 2006 (ramiro): offsetUnit -a 4,5 -s 2 
+Wed Sep 20 16:17:32 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:17:35 2006 (ramiro): observe -a 4,5 -s saturn 
+Wed Sep 20 16:17:37 2006 (ramiro): radio -a 4,5 
+Wed Sep 20 16:17:39 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:17:39 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 16:17:40 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:17:43 2006 (ramiro): eloff -a 4 -s 6.390000 
+Wed Sep 20 16:17:44 2006 (ramiro): azoff -a 4 -s -102 
+Wed Sep 20 16:17:44 2006 (ramiro): eloff -a 5 -s 3.480000 
+Wed Sep 20 16:17:45 2006 (ramiro): azoff -a 5 -s -103.36 
+Wed Sep 20 16:17:46 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 16:17:52 2006 (ramiro): tsys -a 4,5 
+Wed Sep 20 16:17:54 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:17:55 2006 (tksridha): eloff -a 6,8 -s 1530.826294 
+Wed Sep 20 16:17:56 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:18:02 2006 (ramiro): azscan -a 4,5 
+Wed Sep 20 16:18:02 2006 (ramiro): /application/bin/recordContinuum -a 4,5 -c 1 -s azscan -p 7,8 -u 1158769082 
+Wed Sep 20 16:18:03 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:18:04 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:18:18 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:18:19 2006 (tksridha): eloff -a 6,8 -s 1497.547485 
+Wed Sep 20 16:18:21 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:18:27 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:18:28 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:18:42 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:18:44 2006 (tksridha): eloff -a 6,8 -s 1464.268677 
+Wed Sep 20 16:18:45 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:18:51 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:18:53 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:19:07 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:19:08 2006 (tksridha): eloff -a 6,8 -s 1430.989868 
+Wed Sep 20 16:19:09 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:19:16 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:19:17 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:19:31 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:19:32 2006 (tksridha): eloff -a 6,8 -s 1397.711060 
+Wed Sep 20 16:19:33 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:19:40 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:19:41 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:19:55 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:19:56 2006 (tksridha): eloff -a 6,8 -s 1364.432251 
+Wed Sep 20 16:19:58 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:20:04 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:20:05 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:20:19 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:20:21 2006 (tksridha): eloff -a 6,8 -s 1331.153442 
+Wed Sep 20 16:20:22 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:20:26 2006 (ramiro): stopScan -a 4,5 
+Wed Sep 20 16:20:27 2006 (ramiro): eloff -a 4 -s 6.390000 
+Wed Sep 20 16:20:28 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:20:28 2006 (ramiro): azoff -a 4 -s 8.000000 
+Wed Sep 20 16:20:30 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:20:37 2006 (ramiro): eloff -a 5 -s 3.480000 
+Wed Sep 20 16:20:38 2006 (ramiro): azoff -a 5 -s 6.640000 
+Wed Sep 20 16:20:44 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:20:45 2006 (tksridha): eloff -a 6,8 -s 1297.874634 
+Wed Sep 20 16:20:46 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:20:51 2006 (ramiro): offsetUnit -a 4,5 -s 2 
+Wed Sep 20 16:20:53 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:20:53 2006 (ramiro): observe -a 4,5 -s saturn 
+Wed Sep 20 16:20:54 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:20:55 2006 (ramiro): radio -a 4,5 
+Wed Sep 20 16:20:58 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 16:21:01 2006 (ramiro): azoff -a 4 -s -37 
+Wed Sep 20 16:21:02 2006 (ramiro): eloff -a 4 -s -103.61 
+Wed Sep 20 16:21:03 2006 (ramiro): azoff -a 5 -s -38.36 
+Wed Sep 20 16:21:04 2006 (ramiro): eloff -a 5 -s -106.52 
+Wed Sep 20 16:21:04 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 16:21:08 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:21:09 2006 (tksridha): eloff -a 6,8 -s 1264.595825 
+Wed Sep 20 16:21:10 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:21:10 2006 (ramiro): tsys -a 4,5 
+Wed Sep 20 16:21:17 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:21:18 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:21:21 2006 (ramiro): elscan -a 4,5 
+Wed Sep 20 16:21:21 2006 (ramiro): /application/bin/recordContinuum -a 4,5 -c 1 -s elscan -p 7,8 -u 1158769281 
+Wed Sep 20 16:21:32 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:21:33 2006 (tksridha): eloff -a 6,8 -s 1231.317017 
+Wed Sep 20 16:21:34 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:21:41 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:21:42 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:21:56 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:21:57 2006 (tksridha): eloff -a 6,8 -s 1198.038208 
+Wed Sep 20 16:21:59 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:22:05 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:22:06 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:22:20 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:22:22 2006 (tksridha): eloff -a 6,8 -s 1164.759399 
+Wed Sep 20 16:22:23 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:22:29 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:22:31 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:22:45 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:22:46 2006 (tksridha): eloff -a 6,8 -s 1131.480591 
+Wed Sep 20 16:22:47 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:22:54 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:22:55 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:23:09 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:23:10 2006 (tksridha): eloff -a 6,8 -s 1098.201782 
+Wed Sep 20 16:23:11 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:23:18 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:23:20 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:23:33 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:23:34 2006 (tksridha): eloff -a 6,8 -s 1064.922974 
+Wed Sep 20 16:23:36 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:23:42 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:23:43 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:23:45 2006 (ramiro): stopScan -a 4,5 
+Wed Sep 20 16:23:46 2006 (ramiro): eloff -a 4 -s 6.390000 
+Wed Sep 20 16:23:47 2006 (ramiro): azoff -a 4 -s 8.000000 
+Wed Sep 20 16:23:57 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:23:59 2006 (tksridha): eloff -a 6,8 -s 1031.644165 
+Wed Sep 20 16:24:00 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:24:06 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:24:08 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:24:22 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:24:23 2006 (tksridha): eloff -a 6,8 -s 998.365356 
+Wed Sep 20 16:24:24 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:24:31 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:24:32 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:24:46 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:24:47 2006 (tksridha): eloff -a 6,8 -s 965.086548 
+Wed Sep 20 16:24:48 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:24:54 2006 (ramiro): azoff -a 4 -s 7.59 
+Wed Sep 20 16:24:55 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:24:55 2006 (ramiro): eloff -a 4 -s 5.82 
+Wed Sep 20 16:24:56 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:24:56 2006 (ramiro): eloff -a 5 -s 3.480000 
+Wed Sep 20 16:24:57 2006 (ramiro): azoff -a 5 -s 6.640000 
+Wed Sep 20 16:25:10 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:25:11 2006 (tksridha): eloff -a 6,8 -s 931.807739 
+Wed Sep 20 16:25:13 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:25:19 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:25:20 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:25:34 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:25:36 2006 (tksridha): eloff -a 6,8 -s 898.528931 
+Wed Sep 20 16:25:37 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:25:43 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:25:45 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:25:55 2006 (ramiro): azoff -a 5 -s 6.34 
+Wed Sep 20 16:25:56 2006 (ramiro): eloff -a 5 -s -92.89 
+Wed Sep 20 16:25:57 2006 (ramiro): stopChopping -a 4,5 
+Wed Sep 20 16:25:57 2006 (ramiro): readAndWriteLastCpoint -a 4,5 l 
+Wed Sep 20 16:25:59 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:26:00 2006 (tksridha): eloff -a 6,8 -s 865.250122 
+Wed Sep 20 16:26:01 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:26:08 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:26:09 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:26:23 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:26:24 2006 (tksridha): eloff -a 6,8 -s 831.971313 
+Wed Sep 20 16:26:25 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:26:32 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:26:33 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:26:47 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:26:48 2006 (tksridha): eloff -a 6,8 -s 798.692505 
+Wed Sep 20 16:26:50 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:26:56 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:26:57 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:27:11 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:27:13 2006 (tksridha): eloff -a 6,8 -s 765.413696 
+Wed Sep 20 16:27:14 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:27:20 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:27:22 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:27:36 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:27:37 2006 (tksridha): eloff -a 6,8 -s 732.134888 
+Wed Sep 20 16:27:38 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:27:45 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:27:46 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:27:51 2006 (ramiro): eloff -a 5 -s 0 
+Wed Sep 20 16:28:00 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:28:01 2006 (tksridha): eloff -a 6,8 -s 698.856079 
+Wed Sep 20 16:28:02 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:28:05 2006 (ramiro): /application/bin/cpoint -a 4,5 -s saturn -c -u l -q 
+Wed Sep 20 16:28:07 2006 (ramiro): startChopping -a 4,5 
+Wed Sep 20 16:28:07 2006 (ramiro): offsetUnit -a 4,5 -s 2 
+Wed Sep 20 16:28:09 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:28:09 2006 (ramiro): observe -a 4,5 -s saturn 
+Wed Sep 20 16:28:10 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:28:11 2006 (ramiro): radio -a 4,5 
+Wed Sep 20 16:28:14 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 16:28:17 2006 (ramiro): eloff -a 4 -s 5.820000 
+Wed Sep 20 16:28:18 2006 (ramiro): azoff -a 4 -s -102.41 
+Wed Sep 20 16:28:19 2006 (ramiro): eloff -a 5 -s 0.000000e+00 
+Wed Sep 20 16:28:20 2006 (ramiro): azoff -a 5 -s -103.66 
+Wed Sep 20 16:28:20 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 16:28:24 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:28:25 2006 (tksridha): eloff -a 6,8 -s 665.577271 
+Wed Sep 20 16:28:26 2006 (ramiro): tsys -a 4,5 
+Wed Sep 20 16:28:27 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:28:33 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:28:34 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:28:36 2006 (ramiro): azscan -a 4,5 
+Wed Sep 20 16:28:37 2006 (ramiro): /application/bin/recordContinuum -a 4,5 -c 1 -s azscan -p 7,8 -u 1158769716 
+Wed Sep 20 16:28:48 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:28:50 2006 (tksridha): eloff -a 6,8 -s 632.298462 
+Wed Sep 20 16:28:51 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:28:57 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:28:59 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:29:13 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:29:14 2006 (tksridha): eloff -a 6,8 -s 599.019653 
+Wed Sep 20 16:29:15 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:29:22 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:29:23 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:29:37 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:29:38 2006 (tksridha): eloff -a 6,8 -s 565.740845 
+Wed Sep 20 16:29:39 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:29:46 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:29:47 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:30:01 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:30:02 2006 (tksridha): eloff -a 6,8 -s 532.462036 
+Wed Sep 20 16:30:04 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:30:10 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:30:11 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:30:25 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:30:27 2006 (tksridha): eloff -a 6,8 -s 499.183197 
+Wed Sep 20 16:30:28 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:30:34 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:30:36 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:30:50 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:30:51 2006 (tksridha): eloff -a 6,8 -s 465.904358 
+Wed Sep 20 16:30:52 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:30:59 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:31:00 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:31:02 2006 (ramiro): stopScan -a 4,5 
+Wed Sep 20 16:31:03 2006 (ramiro): eloff -a 4 -s 5.820000 
+Wed Sep 20 16:31:04 2006 (ramiro): azoff -a 4 -s 7.590000 
+Wed Sep 20 16:31:12 2006 (ramiro): eloff -a 5 -s 0.000000e+00 
+Wed Sep 20 16:31:13 2006 (ramiro): azoff -a 5 -s 6.340000 
+Wed Sep 20 16:31:14 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:31:15 2006 (tksridha): eloff -a 6,8 -s 432.625519 
+Wed Sep 20 16:31:16 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:31:23 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:31:24 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:31:26 2006 (ramiro): offsetUnit -a 4,5 -s 2 
+Wed Sep 20 16:31:28 2006 (ramiro): observe -a 4,5 -s saturn 
+Wed Sep 20 16:31:30 2006 (ramiro): radio -a 4,5 
+Wed Sep 20 16:31:33 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 16:31:36 2006 (ramiro): azoff -a 4 -s -37.41 
+Wed Sep 20 16:31:37 2006 (ramiro): eloff -a 4 -s -104.18 
+Wed Sep 20 16:31:38 2006 (ramiro): azoff -a 5 -s -38.66 
+Wed Sep 20 16:31:38 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:31:39 2006 (ramiro): eloff -a 5 -s -110 
+Wed Sep 20 16:31:39 2006 (tksridha): eloff -a 6,8 -s 399.346680 
+Wed Sep 20 16:31:40 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 16:31:41 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:31:45 2006 (ramiro): tsys -a 4,5 
+Wed Sep 20 16:31:47 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:31:48 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:31:55 2006 (ramiro): elscan -a 4,5 
+Wed Sep 20 16:31:56 2006 (ramiro): /application/bin/recordContinuum -a 4,5 -c 1 -s elscan -p 7,8 -u 1158769914 
+Wed Sep 20 16:32:02 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:32:04 2006 (tksridha): eloff -a 6,8 -s 366.067841 
+Wed Sep 20 16:32:05 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:32:11 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:32:13 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:32:26 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:32:28 2006 (tksridha): eloff -a 6,8 -s 332.789001 
+Wed Sep 20 16:32:29 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:32:35 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:32:37 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:32:51 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:32:52 2006 (tksridha): eloff -a 6,8 -s 299.510162 
+Wed Sep 20 16:32:53 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:33:00 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:33:01 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:33:15 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:33:16 2006 (tksridha): eloff -a 6,8 -s 266.231323 
+Wed Sep 20 16:33:17 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:33:24 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:33:25 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:33:39 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:33:40 2006 (tksridha): eloff -a 6,8 -s 232.952484 
+Wed Sep 20 16:33:42 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:33:48 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:33:49 2006 (ramiro): stopScan -a 4,5 
+Wed Sep 20 16:33:49 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:33:50 2006 (ramiro): eloff -a 4 -s 5.820000 
+Wed Sep 20 16:33:51 2006 (ramiro): azoff -a 4 -s 7.590000 
+Wed Sep 20 16:34:03 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:34:05 2006 (tksridha): eloff -a 6,8 -s 199.673645 
+Wed Sep 20 16:34:06 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:34:12 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:34:14 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:34:28 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:34:29 2006 (ramiro): azoff -a 4 -s 9.45 
+Wed Sep 20 16:34:29 2006 (tksridha): eloff -a 6,8 -s 166.394806 
+Wed Sep 20 16:34:30 2006 (ramiro): eloff -a 4 -s 5.30 
+Wed Sep 20 16:34:30 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:34:31 2006 (ramiro): eloff -a 5 -s 0.000000e+00 
+Wed Sep 20 16:34:33 2006 (ramiro): azoff -a 5 -s 6.340000 
+Wed Sep 20 16:34:37 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:34:38 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:34:46 2006 (ramiro): azoff -a 5 -s 7.40 
+Wed Sep 20 16:34:47 2006 (ramiro): eloff -a 5 -s 2.72 
+Wed Sep 20 16:34:48 2006 (ramiro): stopChopping -a 4,5 
+Wed Sep 20 16:34:48 2006 (ramiro): readAndWriteLastCpoint -a 4,5 l 
+Wed Sep 20 16:34:52 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:34:53 2006 (tksridha): eloff -a 6,8 -s 133.115967 
+Wed Sep 20 16:34:54 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:35:01 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:35:02 2006 (ramiro): /application/bin/cpoint -a 4,5 -s saturn -c -u l -q 
+Wed Sep 20 16:35:03 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:35:04 2006 (ramiro): startChopping -a 4,5 
+Wed Sep 20 16:35:04 2006 (ramiro): offsetUnit -a 4,5 -s 2 
+Wed Sep 20 16:35:07 2006 (ramiro): observe -a 4,5 -s saturn 
+Wed Sep 20 16:35:09 2006 (ramiro): radio -a 4,5 
+Wed Sep 20 16:35:11 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 16:35:15 2006 (ramiro): eloff -a 4 -s 5.300000 
+Wed Sep 20 16:35:16 2006 (ramiro): azoff -a 4 -s -100.55 
+Wed Sep 20 16:35:16 2006 (ramiro): eloff -a 5 -s 2.720000 
+Wed Sep 20 16:35:17 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:35:17 2006 (ramiro): azoff -a 5 -s -102.6 
+Wed Sep 20 16:35:18 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 16:35:18 2006 (tksridha): eloff -a 6,8 -s 99.837135 
+Wed Sep 20 16:35:20 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:35:25 2006 (ramiro): tsys -a 4,5 
+Wed Sep 20 16:35:26 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:35:27 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:35:35 2006 (ramiro): azscan -a 4,5 
+Wed Sep 20 16:35:36 2006 (ramiro): /application/bin/recordContinuum -a 4,5 -c 1 -s azscan -p 7,8 -u 1158770135 
+Wed Sep 20 16:35:41 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:35:43 2006 (tksridha): eloff -a 6,8 -s 66.558304 
+Wed Sep 20 16:35:44 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:35:50 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:35:52 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:36:06 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:36:07 2006 (tksridha): eloff -a 6,8 -s 33.279472 
+Wed Sep 20 16:36:08 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:36:15 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:36:16 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:36:30 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:36:31 2006 (tksridha): eloff -a 6,8 -s 0.000641 
+Wed Sep 20 16:36:32 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:36:39 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:36:40 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:36:54 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:36:55 2006 (tksridha): eloff -a 6,8 -s -33.278191 
+Wed Sep 20 16:36:57 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:37:03 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:37:04 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:37:18 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:37:20 2006 (tksridha): eloff -a 6,8 -s -66.557022 
+Wed Sep 20 16:37:21 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:37:27 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:37:29 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:37:30 2006 (ramiro): stopScan -a 4,5 
+Wed Sep 20 16:37:31 2006 (ramiro): eloff -a 4 -s 5.300000 
+Wed Sep 20 16:37:32 2006 (ramiro): azoff -a 4 -s 9.450000 
+Wed Sep 20 16:37:40 2006 (ramiro): eloff -a 5 -s 2.720000 
+Wed Sep 20 16:37:42 2006 (ramiro): azoff -a 5 -s 7.400000 
+Wed Sep 20 16:37:43 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:37:44 2006 (tksridha): eloff -a 6,8 -s -99.835854 
+Wed Sep 20 16:37:45 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:37:51 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:37:53 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:37:54 2006 (ramiro): offsetUnit -a 4,5 -s 2 
+Wed Sep 20 16:37:57 2006 (ramiro): observe -a 4,5 -s saturn 
+Wed Sep 20 16:37:59 2006 (ramiro): radio -a 4,5 
+Wed Sep 20 16:38:01 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 16:38:05 2006 (ramiro): azoff -a 4 -s -35.55 
+Wed Sep 20 16:38:06 2006 (ramiro): eloff -a 4 -s -104.7 
+Wed Sep 20 16:38:06 2006 (ramiro): azoff -a 5 -s -37.6 
+Wed Sep 20 16:38:07 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:38:08 2006 (ramiro): eloff -a 5 -s -107.28 
+Wed Sep 20 16:38:08 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 16:38:08 2006 (tksridha): eloff -a 6,8 -s -133.114685 
+Wed Sep 20 16:38:09 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:38:15 2006 (ramiro): tsys -a 4,5 
+Wed Sep 20 16:38:16 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:38:17 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:38:25 2006 (ramiro): elscan -a 4,5 
+Wed Sep 20 16:38:25 2006 (ramiro): /application/bin/recordContinuum -a 4,5 -c 1 -s elscan -p 7,8 -u 1158770304 
+Wed Sep 20 16:38:31 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:38:32 2006 (tksridha): eloff -a 6,8 -s -166.393524 
+Wed Sep 20 16:38:34 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:38:40 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:38:41 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:38:55 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:38:57 2006 (tksridha): eloff -a 6,8 -s -199.672363 
+Wed Sep 20 16:38:58 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:39:04 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:39:06 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:39:20 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:39:21 2006 (tksridha): eloff -a 6,8 -s -232.951202 
+Wed Sep 20 16:39:23 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:39:29 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:39:30 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:39:45 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:39:46 2006 (tksridha): eloff -a 6,8 -s -266.230042 
+Wed Sep 20 16:39:47 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:39:54 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:39:55 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:40:09 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:40:10 2006 (tksridha): eloff -a 6,8 -s -299.508881 
+Wed Sep 20 16:40:12 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:40:18 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:40:19 2006 (ramiro): stopScan -a 4,5 
+Wed Sep 20 16:40:19 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:40:20 2006 (ramiro): eloff -a 4 -s 5.300000 
+Wed Sep 20 16:40:21 2006 (ramiro): azoff -a 4 -s 9.450000 
+Wed Sep 20 16:40:33 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:40:35 2006 (tksridha): eloff -a 6,8 -s -332.787720 
+Wed Sep 20 16:40:36 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:40:36 2006 (ramiro): azoff -a 4 -s 8.83 
+Wed Sep 20 16:40:38 2006 (ramiro): eloff -a 4 -s 4.39 
+Wed Sep 20 16:40:40 2006 (ramiro): eloff -a 5 -s 2.720000 
+Wed Sep 20 16:40:41 2006 (ramiro): azoff -a 5 -s 7.400000 
+Wed Sep 20 16:40:42 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:40:44 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:40:56 2006 (ramiro): azoff -a 5 -s 7.91 
+Wed Sep 20 16:40:57 2006 (ramiro): eloff -a 5 -s 2.03 
+Wed Sep 20 16:40:58 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:40:58 2006 (ramiro): stopChopping -a 4,5 
+Wed Sep 20 16:40:58 2006 (ramiro): readAndWriteLastCpoint -a 4,5 l 
+Wed Sep 20 16:40:59 2006 (tksridha): eloff -a 6,8 -s -366.066559 
+Wed Sep 20 16:41:00 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:41:07 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:41:08 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:41:15 2006 (ramiro): /application/bin/cpoint -a 4,5 -s saturn -c -u l -q 
+Wed Sep 20 16:41:17 2006 (ramiro): startChopping -a 4,5 
+Wed Sep 20 16:41:17 2006 (ramiro): offsetUnit -a 4,5 -s 2 
+Wed Sep 20 16:41:19 2006 (ramiro): observe -a 4,5 -s saturn 
+Wed Sep 20 16:41:21 2006 (ramiro): radio -a 4,5 
+Wed Sep 20 16:41:22 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:41:23 2006 (tksridha): eloff -a 6,8 -s -399.345398 
+Wed Sep 20 16:41:24 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 16:41:24 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:41:28 2006 (ramiro): eloff -a 4 -s 4.390000 
+Wed Sep 20 16:41:29 2006 (ramiro): azoff -a 4 -s -101.17 
+Wed Sep 20 16:41:30 2006 (ramiro): eloff -a 5 -s 2.030000 
+Wed Sep 20 16:41:31 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:41:31 2006 (ramiro): azoff -a 5 -s -102.09 
+Wed Sep 20 16:41:31 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 16:41:32 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:41:38 2006 (ramiro): tsys -a 4,5 
+Wed Sep 20 16:41:46 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:41:47 2006 (tksridha): eloff -a 6,8 -s -432.624237 
+Wed Sep 20 16:41:48 2006 (ramiro): azscan -a 4,5 
+Wed Sep 20 16:41:48 2006 (ramiro): /application/bin/recordContinuum -a 4,5 -c 1 -s azscan -p 7,8 -u 1158770507 
+Wed Sep 20 16:41:49 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:41:55 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:41:57 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:42:10 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:42:12 2006 (tksridha): eloff -a 6,8 -s -465.903076 
+Wed Sep 20 16:42:13 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:42:19 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:42:21 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:42:35 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:42:36 2006 (tksridha): eloff -a 6,8 -s -499.181915 
+Wed Sep 20 16:42:37 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:42:44 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:42:45 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:42:59 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:43:00 2006 (tksridha): eloff -a 6,8 -s -532.460754 
+Wed Sep 20 16:43:01 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:43:08 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:43:09 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:43:23 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:43:24 2006 (tksridha): eloff -a 6,8 -s -565.739563 
+Wed Sep 20 16:43:26 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:43:32 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:43:33 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:43:47 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:43:48 2006 (tksridha): eloff -a 6,8 -s -599.018372 
+Wed Sep 20 16:43:50 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:43:56 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:43:57 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:44:11 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:44:13 2006 (tksridha): eloff -a 6,8 -s -632.297180 
+Wed Sep 20 16:44:13 2006 (ramiro): stopScan -a 4,5 
+Wed Sep 20 16:44:14 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:44:14 2006 (ramiro): eloff -a 4 -s 4.390000 
+Wed Sep 20 16:44:16 2006 (ramiro): azoff -a 4 -s 8.830000 
+Wed Sep 20 16:44:20 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:44:22 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:44:25 2006 (ramiro): eloff -a 5 -s 2.030000 
+Wed Sep 20 16:44:26 2006 (ramiro): azoff -a 5 -s 7.910000 
+Wed Sep 20 16:44:36 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:44:37 2006 (tksridha): eloff -a 6,8 -s -665.575989 
+Wed Sep 20 16:44:38 2006 (ramiro): offsetUnit -a 4,5 -s 2 
+Wed Sep 20 16:44:38 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:44:41 2006 (ramiro): observe -a 4,5 -s saturn 
+Wed Sep 20 16:44:43 2006 (ramiro): radio -a 4,5 
+Wed Sep 20 16:44:45 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:44:45 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 16:44:46 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:44:49 2006 (ramiro): azoff -a 4 -s -36.17 
+Wed Sep 20 16:44:50 2006 (ramiro): eloff -a 4 -s -105.61 
+Wed Sep 20 16:44:51 2006 (ramiro): azoff -a 5 -s -37.09 
+Wed Sep 20 16:44:52 2006 (ramiro): eloff -a 5 -s -107.97 
+Wed Sep 20 16:44:52 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 16:44:58 2006 (ramiro): tsys -a 4,5 
+Wed Sep 20 16:45:00 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:45:01 2006 (tksridha): eloff -a 6,8 -s -698.854797 
+Wed Sep 20 16:45:02 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:45:08 2006 (ramiro): elscan -a 4,5 
+Wed Sep 20 16:45:09 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:45:09 2006 (ramiro): /application/bin/recordContinuum -a 4,5 -c 1 -s elscan -p 7,8 -u 1158770708 
+Wed Sep 20 16:45:10 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:45:24 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:45:25 2006 (tksridha): eloff -a 6,8 -s -732.133606 
+Wed Sep 20 16:45:27 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:45:34 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:45:35 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:45:49 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:45:51 2006 (tksridha): eloff -a 6,8 -s -765.412415 
+Wed Sep 20 16:45:52 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:45:58 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:46:00 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:46:14 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:46:15 2006 (tksridha): eloff -a 6,8 -s -798.691223 
+Wed Sep 20 16:46:16 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:46:23 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:46:24 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:46:38 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:46:39 2006 (tksridha): eloff -a 6,8 -s -831.970032 
+Wed Sep 20 16:46:40 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:46:47 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:46:48 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:47:02 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:47:03 2006 (ramiro): stopScan -a 4,5 
+Wed Sep 20 16:47:03 2006 (tksridha): eloff -a 6,8 -s -865.248840 
+Wed Sep 20 16:47:04 2006 (ramiro): eloff -a 4 -s 4.390000 
+Wed Sep 20 16:47:05 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:47:05 2006 (ramiro): azoff -a 4 -s 8.830000 
+Wed Sep 20 16:47:11 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:47:12 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:47:18 2006 (ramiro): azoff -a 4 -s 9.33 
+Wed Sep 20 16:47:19 2006 (ramiro): eloff -a 4 -s 3.58 
+Wed Sep 20 16:47:20 2006 (ramiro): eloff -a 5 -s 2.030000 
+Wed Sep 20 16:47:21 2006 (ramiro): azoff -a 5 -s 7.910000 
+Wed Sep 20 16:47:26 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:47:28 2006 (tksridha): eloff -a 6,8 -s -898.527649 
+Wed Sep 20 16:47:29 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:47:35 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:47:37 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:47:51 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:47:52 2006 (tksridha): eloff -a 6,8 -s -931.806458 
+Wed Sep 20 16:47:53 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:48:00 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:48:01 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:48:15 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:48:16 2006 (tksridha): eloff -a 6,8 -s -965.085266 
+Wed Sep 20 16:48:17 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:48:21 2006 (ramiro): stopChopping -a 4,5 
+Wed Sep 20 16:48:21 2006 (ramiro): readAndWriteLastCpoint -a 4,5 l 
+Wed Sep 20 16:48:24 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:48:25 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:48:27 2006 (ramiro): /application/bin/cpoint -a 4,5 -s saturn -c -u l -q 
+Wed Sep 20 16:48:28 2006 (ramiro): startChopping -a 4,5 
+Wed Sep 20 16:48:29 2006 (ramiro): offsetUnit -a 4,5 -s 2 
+Wed Sep 20 16:48:31 2006 (ramiro): observe -a 4,5 -s saturn 
+Wed Sep 20 16:48:33 2006 (ramiro): radio -a 4,5 
+Wed Sep 20 16:48:35 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 16:48:39 2006 (ramiro): eloff -a 4 -s 3.580000 
+Wed Sep 20 16:48:39 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:48:40 2006 (ramiro): azoff -a 4 -s -100.67 
+Wed Sep 20 16:48:40 2006 (tksridha): eloff -a 6,8 -s -998.364075 
+Wed Sep 20 16:48:41 2006 (ramiro): eloff -a 5 -s 2.030000 
+Wed Sep 20 16:48:42 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:48:42 2006 (ramiro): azoff -a 5 -s -102.09 
+Wed Sep 20 16:48:42 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 16:48:48 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:48:49 2006 (ramiro): tsys -a 4,5 
+Wed Sep 20 16:48:49 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:48:59 2006 (ramiro): azscan -a 4,5 
+Wed Sep 20 16:48:59 2006 (ramiro): /application/bin/recordContinuum -a 4,5 -c 1 -s azscan -p 7,8 -u 1158770939 
+Wed Sep 20 16:49:03 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:49:05 2006 (tksridha): eloff -a 6,8 -s -1031.642944 
+Wed Sep 20 16:49:06 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:49:12 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:49:14 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:49:28 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:49:29 2006 (tksridha): eloff -a 6,8 -s -1064.921753 
+Wed Sep 20 16:49:30 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:49:37 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:49:38 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:49:52 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:49:53 2006 (tksridha): eloff -a 6,8 -s -1098.200562 
+Wed Sep 20 16:49:54 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:50:01 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:50:02 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:50:16 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:50:17 2006 (tksridha): eloff -a 6,8 -s -1131.479370 
+Wed Sep 20 16:50:19 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:50:25 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:50:26 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:50:40 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:50:42 2006 (tksridha): eloff -a 6,8 -s -1164.758179 
+Wed Sep 20 16:50:43 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:50:49 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:50:51 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:51:05 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:51:06 2006 (tksridha): eloff -a 6,8 -s -1198.036987 
+Wed Sep 20 16:51:07 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:51:14 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:51:15 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:51:24 2006 (ramiro): stopScan -a 4,5 
+Wed Sep 20 16:51:25 2006 (ramiro): eloff -a 4 -s 3.580000 
+Wed Sep 20 16:51:26 2006 (ramiro): azoff -a 4 -s 9.330000 
+Wed Sep 20 16:51:29 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:51:30 2006 (tksridha): eloff -a 6,8 -s -1231.315796 
+Wed Sep 20 16:51:31 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:51:36 2006 (ramiro): eloff -a 5 -s 2.030000 
+Wed Sep 20 16:51:37 2006 (ramiro): azoff -a 5 -s 7.910000 
+Wed Sep 20 16:51:38 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:51:39 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:51:48 2006 (ramiro): offsetUnit -a 4,5 -s 2 
+Wed Sep 20 16:51:50 2006 (ramiro): observe -a 4,5 -s saturn 
+Wed Sep 20 16:51:52 2006 (ramiro): radio -a 4,5 
+Wed Sep 20 16:51:53 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:51:54 2006 (tksridha): eloff -a 6,8 -s -1264.594604 
+Wed Sep 20 16:51:55 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 16:51:56 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:51:59 2006 (ramiro): azoff -a 4 -s -35.67 
+Wed Sep 20 16:52:00 2006 (ramiro): eloff -a 4 -s -106.42 
+Wed Sep 20 16:52:00 2006 (ramiro): azoff -a 5 -s -37.09 
+Wed Sep 20 16:52:01 2006 (ramiro): eloff -a 5 -s -107.97 
+Wed Sep 20 16:52:01 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 16:52:02 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:52:03 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:52:07 2006 (ramiro): tsys -a 4,5 
+Wed Sep 20 16:52:17 2006 (ramiro): elscan -a 4,5 
+Wed Sep 20 16:52:17 2006 (ramiro): /application/bin/recordContinuum -a 4,5 -c 1 -s elscan -p 7,8 -u 1158771137 
+Wed Sep 20 16:52:17 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:52:19 2006 (tksridha): eloff -a 6,8 -s -1297.873413 
+Wed Sep 20 16:52:20 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:52:26 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:52:28 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:52:42 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:52:43 2006 (tksridha): eloff -a 6,8 -s -1331.152222 
+Wed Sep 20 16:52:44 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:52:51 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:52:52 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:53:06 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:53:07 2006 (tksridha): eloff -a 6,8 -s -1364.431030 
+Wed Sep 20 16:53:08 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:53:15 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:53:16 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:53:30 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:53:31 2006 (tksridha): eloff -a 6,8 -s -1397.709839 
+Wed Sep 20 16:53:33 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:53:39 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:53:40 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:53:54 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:53:55 2006 (tksridha): eloff -a 6,8 -s -1430.988647 
+Wed Sep 20 16:53:57 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:54:03 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:54:04 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:54:19 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:54:20 2006 (tksridha): eloff -a 6,8 -s -1464.267456 
+Wed Sep 20 16:54:21 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:54:28 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:54:29 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:54:43 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:54:43 2006 (ramiro): stopScan -a 4,5 
+Wed Sep 20 16:54:44 2006 (tksridha): eloff -a 6,8 -s -1497.546265 
+Wed Sep 20 16:54:44 2006 (ramiro): eloff -a 4 -s 3.580000 
+Wed Sep 20 16:54:45 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:54:45 2006 (ramiro): azoff -a 4 -s 9.330000 
+Wed Sep 20 16:54:52 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:54:53 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:55:07 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:55:08 2006 (ramiro): azoff -a 4 -s 9.98 
+Wed Sep 20 16:55:08 2006 (tksridha): eloff -a 6,8 -s -1530.825073 
+Wed Sep 20 16:55:09 2006 (ramiro): eloff -a 4 -s 3.39 
+Wed Sep 20 16:55:09 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:55:10 2006 (ramiro): eloff -a 5 -s 2.030000 
+Wed Sep 20 16:55:12 2006 (ramiro): azoff -a 5 -s 7.910000 
+Wed Sep 20 16:55:16 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:55:17 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:55:31 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:55:32 2006 (ramiro): azoff -a 5 -s 9.64 
+Wed Sep 20 16:55:33 2006 (tksridha): eloff -a 6,8 -s -1564.103882 
+Wed Sep 20 16:55:33 2006 (ramiro): eloff -a 5 -s -8.33 
+Wed Sep 20 16:55:34 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:55:34 2006 (ramiro): stopChopping -a 4,5 
+Wed Sep 20 16:55:34 2006 (ramiro): readAndWriteLastCpoint -a 4,5 l 
+Wed Sep 20 16:55:40 2006 (tksridha): azel -a 2 -z 55.681000 -e 18.334999 
+Wed Sep 20 16:55:42 2006 (tksridha): azscan -a 6,8 
+Wed Sep 20 16:55:55 2006 (tksridha): stopScan -a 6,8 
+Wed Sep 20 16:55:57 2006 (tksridha): eloff -a 6,8 -s -1597.382690 
+Wed Sep 20 16:55:58 2006 (tksridha): azoff -a 6,8 -s 2830.662598 
+Wed Sep 20 16:56:01 2006 (ramiro): /application/bin/cpoint -a 4,5 -s saturn -c -u l -q 
+Wed Sep 20 16:56:03 2006 (ramiro): startChopping -a 4,5 
+Wed Sep 20 16:56:03 2006 (ramiro): offsetUnit -a 4,5 -s 2 
+Wed Sep 20 16:56:04 2006 (tksridha): azoff -a 6,8 -s 0 
+Wed Sep 20 16:56:05 2006 (ramiro): observe -a 4,5 -s saturn 
+Wed Sep 20 16:56:07 2006 (ramiro): radio -a 4,5 
+Wed Sep 20 16:56:10 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 16:56:13 2006 (ramiro): eloff -a 4 -s 3.390000 
+Wed Sep 20 16:56:14 2006 (ramiro): azoff -a 4 -s -100.02 
+Wed Sep 20 16:56:15 2006 (tksridha): eloff -a 6,8 -s 0 
+Wed Sep 20 16:56:15 2006 (ramiro): eloff -a 5 -s -8.330000e+00 
+Wed Sep 20 16:56:16 2006 (ramiro): azoff -a 5 -s -100.36 
+Wed Sep 20 16:56:16 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 16:56:23 2006 (ramiro): tsys -a 4,5 
+Wed Sep 20 16:56:33 2006 (ramiro): azscan -a 4,5 
+Wed Sep 20 16:56:33 2006 (ramiro): /application/bin/recordContinuum -a 4,5 -c 1 -s azscan -p 7,8 -u 1158771392 
+Wed Sep 20 16:58:30 2006 (ramiro): stopScan -a 4,5 
+Wed Sep 20 16:58:32 2006 (ramiro): eloff -a 4 -s 3.390000 
+Wed Sep 20 16:58:34 2006 (ramiro): azoff -a 4 -s 9.980000 
+Wed Sep 20 17:00:47 2006 (ramiro): eloff -a 5 -s -8.330000e+00 
+Wed Sep 20 17:00:49 2006 (ramiro): azoff -a 5 -s 9.640000 
+Wed Sep 20 17:01:30 2006 (ramiro): offsetUnit -a 4,5 -s 2 
+Wed Sep 20 17:01:33 2006 (ramiro): observe -a 4,5 -s saturn 
+Wed Sep 20 17:01:35 2006 (ramiro): radio -a 4,5 
+Wed Sep 20 17:01:35 2006 (tksridha): stow 
+Wed Sep 20 17:01:37 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 17:01:41 2006 (ramiro): azoff -a 4 -s -35.02 
+Wed Sep 20 17:01:42 2006 (ramiro): eloff -a 4 -s -106.61 
+Wed Sep 20 17:01:42 2006 (ramiro): azoff -a 5 -s -35.36 
+Wed Sep 20 17:01:43 2006 (ramiro): eloff -a 5 -s -118.33 
+Wed Sep 20 17:01:43 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 17:01:50 2006 (ramiro): tsys -a 4,5 
+Wed Sep 20 17:02:00 2006 (ramiro): elscan -a 4,5 
+Wed Sep 20 17:02:00 2006 (ramiro): /application/bin/recordContinuum -a 4,5 -c 1 -s elscan -p 7,8 -u 1158771720 
+Wed Sep 20 17:03:55 2006 (ramiro): stopScan -a 4,5 
+Wed Sep 20 17:03:56 2006 (ramiro): eloff -a 4 -s 3.390000 
+Wed Sep 20 17:03:57 2006 (ramiro): azoff -a 4 -s 9.980000 
+Wed Sep 20 17:04:22 2006 (ramiro): azoff -a 4 -s 9.65 
+Wed Sep 20 17:04:24 2006 (ramiro): eloff -a 4 -s 4.16 
+Wed Sep 20 17:04:25 2006 (ramiro): eloff -a 5 -s -8.330000e+00 
+Wed Sep 20 17:04:26 2006 (ramiro): azoff -a 5 -s 9.640000 
+Wed Sep 20 17:04:38 2006 (ramiro): azoff -a 5 -s 9.90 
+Wed Sep 20 17:04:39 2006 (ramiro): eloff -a 5 -s 2.03 
+Wed Sep 20 17:04:40 2006 (ramiro): stopChopping -a 4,5 
+Wed Sep 20 17:04:40 2006 (ramiro): readAndWriteLastCpoint -a 4,5 l 
+Wed Sep 20 17:04:46 2006 (ramiro): /application/bin/cpoint -a 4,5 -s saturn -c -u l -q 
+Wed Sep 20 17:04:48 2006 (ramiro): startChopping -a 4,5 
+Wed Sep 20 17:04:48 2006 (ramiro): offsetUnit -a 4,5 -s 2 
+Wed Sep 20 17:04:50 2006 (ramiro): observe -a 4,5 -s saturn 
+Wed Sep 20 17:04:53 2006 (ramiro): radio -a 4,5 
+Wed Sep 20 17:04:55 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 17:04:58 2006 (ramiro): eloff -a 4 -s 4.160000 
+Wed Sep 20 17:04:59 2006 (ramiro): azoff -a 4 -s -100.35 
+Wed Sep 20 17:05:00 2006 (ramiro): eloff -a 5 -s 2.030000 
+Wed Sep 20 17:05:01 2006 (ramiro): azoff -a 5 -s -100.1 
+Wed Sep 20 17:05:01 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 17:05:08 2006 (ramiro): tsys -a 4,5 
+Wed Sep 20 17:05:18 2006 (ramiro): azscan -a 4,5 
+Wed Sep 20 17:05:18 2006 (ramiro): /application/bin/recordContinuum -a 4,5 -c 1 -s azscan -p 7,8 -u 1158771917 
+Wed Sep 20 17:07:14 2006 (ramiro): stopScan -a 4,5 
+Wed Sep 20 17:07:15 2006 (ramiro): eloff -a 4 -s 4.160000 
+Wed Sep 20 17:07:16 2006 (ramiro): azoff -a 4 -s 9.650000 
+Wed Sep 20 17:07:25 2006 (ramiro): eloff -a 5 -s 2.030000 
+Wed Sep 20 17:07:26 2006 (ramiro): azoff -a 5 -s 9.900000 
+Wed Sep 20 17:07:32 2006 (tksridha): enableDrivesTimeout 
+Wed Sep 20 17:07:38 2006 (ramiro): offsetUnit -a 4,5 -s 2 
+Wed Sep 20 17:07:39 2006 (tksridha): farChopper 
+Wed Sep 20 17:07:40 2006 (ramiro): observe -a 4,5 -s saturn 
+Wed Sep 20 17:07:43 2006 (ramiro): radio -a 4,5 
+Wed Sep 20 17:07:45 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 17:07:49 2006 (ramiro): azoff -a 4 -s -35.35 
+Wed Sep 20 17:07:50 2006 (ramiro): eloff -a 4 -s -105.84 
+Wed Sep 20 17:07:50 2006 (ramiro): azoff -a 5 -s -35.1 
+Wed Sep 20 17:07:52 2006 (ramiro): eloff -a 5 -s -107.97 
+Wed Sep 20 17:07:52 2006 (ramiro): antennaWait -a 4,5 -e 4 
+Wed Sep 20 17:07:58 2006 (ramiro): tsys -a 4,5 
+Wed Sep 20 17:08:08 2006 (ramiro): elscan -a 4,5 
+Wed Sep 20 17:08:09 2006 (ramiro): /application/bin/recordContinuum -a 4,5 -c 1 -s elscan -p 7,8 -u 1158772088 
+Wed Sep 20 17:10:02 2006 (ramiro): stopScan -a 4,5 
+Wed Sep 20 17:10:03 2006 (ramiro): eloff -a 4 -s 4.160000 
+Wed Sep 20 17:10:04 2006 (ramiro): azoff -a 4 -s 9.650000 
+Wed Sep 20 17:10:59 2006 (tksridha): focusCurveOn 
+Wed Sep 20 17:12:29 2006 (ramiro): eloff -a 5 -s 2.030000 
+Wed Sep 20 17:12:30 2006 (ramiro): azoff -a 5 -s 9.900000 
+Wed Sep 20 17:13:54 2006 (ramiro): azoff -a 5 -s 11.37 
+Wed Sep 20 17:13:55 2006 (ramiro): eloff -a 5 -s 1.87 
+Wed Sep 20 17:13:56 2006 (ramiro): stopChopping -a 4,5 
+Wed Sep 20 17:13:57 2006 (ramiro): readAndWriteLastCpoint -a 4,5 l 
+Wed Sep 20 17:14:15 2006 (tksridha): endProject.

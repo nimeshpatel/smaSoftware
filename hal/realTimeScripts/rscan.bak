@@ -1,0 +1,437 @@
+#!/usr/local/bin/perl
+# 2 Nov 2002 NAP
+# to replace rscan by avoiding all RPC programs
+# 14 Nov 2002 NAP
+# to make it work for all antennas specified via project
+# 20 Dec 2002 Satoki
+# to make it work for specified direction (az or el) only
+
+# 25-27 March 2003 Nimesh
+# replaced the writeData subroutine by a call to a C program
+# to provide that function more efficiently. Details are in
+# the C code: $HALAPP/continuum/src/recordContinuum.c
+#
+# 18 Jan 2004 Todd
+# Modified the -a argument to read a string, and then parse it later
+# for multiple antennas (useful for subarrays of multiplie antennas,
+# e.g. 6 antennas doing science, and 2 doing dualrxpoint)
+#
+# 19 Jan 2004 Todd
+# Added an array for the min and maxoffsets to be used in the offset check 
+# loop.  This will speed things up substantially when using more than one 
+# antenna.  Fixed tabination in the whole file.
+# 
+# 10 March 2004 Todd
+# removed various sleeps. Added antennaWait. Removed -a switch from some 
+# commands like observe, azoff etc., and removed them from a for-loop
+# if the -a switch is not given.
+
+
+
+use IPC::Open2;
+
+#Initialization
+$azminoffset=-110.;
+$azmaxoffset=110.;
+$elminoffset=-110.;
+$elmaxoffset=110.;
+$beamthrow=45.;
+$offsetUnit=2.0;
+$pid=$$;
+print "process id = $pid\n";
+#interrupt
+$SIG{INT}=\&Pause;
+use Getopt::Long;
+$Getopt::Long::autoabbrev=1;
+
+sub Usage(){
+    printf "Usage: rscan -a 1,4 -t 2 -s source_name -v <port1,port2 optional> -d <az or el :optional> -<p or c> -o 10 <optional> -b -150 -e 150 -i -150 -f -150\n or \n rscan --antenna 1,4 --times 2 --source source_name --direction <az for AZ scan or el for EL scan> <--position or --chop> -offsetunit 10<optional> -b <beginAzOff:%d> -e <endAzOff:%d> -i <initialElOff:%d> -f <finalElOff:%d>\n\n",$azminoff,$azmaxoff,$elminoff,$elmaxoff;}
+
+#main start
+
+foreach $i ( @ARGV ) {
+  if ($i eq "-h" || $i eq "--help") {
+      &Usage; die "If -a is not given, all antennas in the project shall be used\n";
+  }
+}
+
+GetOptions('antenna=s'=>\$antString,'times=i'=>\$times,'source=s'=>\$source,'direction=s'=>\$direction,'position','chop','offsetunit=i'=>\$offsetUnit,'beginazoff=i'=>\$beginazoff,'endazoff=i'=>\$endazoff,'initialeloff=i'=>\$Begineloff,'finaleloff=i'=>\$Endeloff,'volts=s'=>\$ports);
+if ($beginazoff ne "") { 
+    $azminoffset = $beginazoff;
+}
+if ($endazoff ne "") { 
+    $azmaxoffset = $endazoff;
+}
+if ($Begineloff ne "") { 
+    $elminoffset = $Begineloff;
+}
+if ($Endeloff ne "") { 
+    $elmaxoffset = $Endeloff;
+}
+if ($ports eq "") {
+    print "Using default ports: 3,5\n";
+   $ports = "3,5";
+}
+if(!$source){&Usage;die "Please specify source name.\n";}
+if($times<1){&Usage;die "times should be integer > 0.\n";}
+#	if($offsetUnit<1){&Usage;die "offsetUnit should be integer > 0.\n";}
+
+@antennalist = ();
+
+$offsetCheckIterations = 5;
+
+# if no antenna is specified, get the antennas from project command.
+$sawMinusA = 0;
+# parse for multiple antennas specified with -a 1,2,3
+#        print "antString = $antString\n";
+@antennalist = split(',',$antString);
+$numberAntennas = $#antennalist+1;
+printf "number of antennas = %d\n", $numberAntennas;
+if ($numberAntennas == 0) {
+    print "Did not see -a, will search the project\n";
+    for ($i=1; $i<=8; $i++) {
+	$antenna_status=`value -a $i -v antenna_status`;
+	if ($antenna_status==1) { 
+	    push(@antennalist,$i); 
+	}       
+    }
+}
+
+print "list = @antennalist \n";
+#$sourceLabel = $source;
+#$sourceLabel =~ s/ /_/g;
+
+#determine scan type
+if ($opt_position){
+    $chopflg = 0;
+}
+elsif ($opt_chop){
+    $chopflg = 1;
+}
+else {
+    {&Usage;die "Please specify scan type\n";}
+}	
+
+
+
+sub writeData() 
+{
+    $antString="";
+    $firstant=0;
+    foreach $antenna (@antennalist) {
+	if($firstant==0){$antString=$antenna;}
+	else {$antString.=",$antenna";}
+	$firstant++;
+    } # forloop for all antennas
+
+    $command="/application/bin/recordContinuum -a $antString -c $chopflg -s $scantype -p $ports";  
+    $rcpid=open2(*RH,*WH,"$command");
+    print "$command pid=$rcpid\n";
+}
+
+sub Pause()
+{
+    print "rscan interrupted ";
+    sleep 1;
+    foreach $antenna (@antennalist) {
+	`stopScan -a $antenna`;
+	sleep 1;
+	`azoff -a $antenna -s $azoff_0[$antenna]`;
+	sleep 1;
+	`eloff -a $antenna -s $eloff_0[$antenna]`;
+    } # for all antennas
+    print "interrupted; end\n";
+    kill USR1 => $rcpid;
+
+    exit(0);
+}
+
+print "$times $source ";
+while ($times > 0) {
+    if ($direction ne "") {
+	if ($direction eq "az") {
+	    print "process id = $pid ";
+	    print "forward AZ total power scan $times th\n";
+	    $offsetUnit=abs($offsetUnit);
+	    tpScan("az",$azminoffset,$azmaxoffset);
+	}
+	if ($direction eq "el") {
+	    print "process id = $pid ";
+	    print "forward EL total power scan $times th\n";
+	    $offsetUnit=abs($offsetUnit);
+	    tpScan("el",$elminoffset,$elmaxoffset);
+	}
+    }
+    if ($direction eq "") {
+	if($times%2==0) {
+	    print "process id = $pid ";
+	    print "forward total power scan $times th\n";
+	    $offsetUnit=abs($offsetUnit);
+	    tpScan("az",$azminoffset,$azmaxoffset);
+	    sleep 1;
+	    tpScan("el",$elminoffset,$elmaxoffset);
+	}
+	if($times%2==1) {
+	    print "process id = $pid ";
+	    print "reverse total power scan $times th\n";
+	    $offsetUnit=-abs($offsetUnit);
+	    tpScanr("az",$azminoffset,$azmaxoffset);
+	    sleep 1;
+	    tpScanr("el",$elminoffset,$elmaxoffset);
+	}
+    }
+#	print "$times\n";
+    $times--;
+}
+print "";
+# `playSound -f /homes/smauser/sounds/StarTrek/Boatswain_Whistle.WAV`;
+sleep 1;
+
+#main end
+
+
+# subroutine total power scan forward
+sub tpScan
+{
+#Initializations
+    my $azel=shift @_;
+    my $relativeminoffset=shift @_;
+    my $relativemaxoffset=shift @_;
+    
+#debug 
+    print "antennas in the project...\n";
+    foreach $antenna (@antennalist) {
+	print "$antenna ";
+    }
+    print "\n";
+    
+    foreach $antenna (@antennalist) {
+# need to reset these values each time since you are doing a "+=" later on
+	$minoffset = $relativeminoffset;
+	$maxoffset = $relativemaxoffset;
+	$azoff_0[$antenna]=`prio 50 value -a $antenna -v azoff`;
+	chomp($azoff_0[$antenna]);
+	$eloff_0[$antenna]=`prio 50 value -a $antenna -v eloff`;
+	chomp($eloff_0[$antenna]);
+#debug
+	print "azoff_0[$antenna]=$azoff_0[$antenna], eloff_0[$antenna]=$eloff_0[$antenna]\n";
+	
+#set up for azscan
+	if($azel eq "az")
+	{
+	    $offset="azoff";
+	    $scantype="azscan";
+	    $minoffset+=$azoff_0[$antenna]; 
+	    $maxoffset+=$azoff_0[$antenna];
+	    `eloff -a $antenna -s $eloff_0[$antenna]`;
+	    sleep 1;
+	}
+ 
+#set up for elscan
+	if($azel eq "el")
+	{
+	    $offset="eloff";
+	    $scantype="elscan";
+	    $minoffset+=$eloff_0[$antenna]; 
+	    $maxoffset+=$eloff_0[$antenna]; 
+	    if($chopflg==0) {
+		`azoff -a $antenna -s $azoff_0[$antenna]`;
+		sleep 1;
+	    }
+	    if($chopflg==1) {
+		$poslobe=$azoff_0[$antenna]+$beamthrow;
+		`azoff -a $antenna -s $poslobe`;
+		sleep 1;
+	    }
+	}
+
+	print "giving the $offset command to antenna $antenna\n";
+	`$offset -a $antenna -s $minoffset`;
+	sleep 1;
+        $totalMinOffset[$antenna] = $minoffset;
+        $totalMaxOffset[$antenna] = $maxoffset;
+
+} # for all antennas
+
+if ($numberAntennas == 0) {
+    print "giving the command to all antennas: offsetUnit -s $offsetUnit\n";
+    `offsetUnit -s $offsetUnit`;
+    sleep 1;
+    print "giving the observe command to all antennas\n";
+    `observe -s $source`;
+    `antennaWait`
+} else {
+    foreach $antenna (@antennalist) {
+	print "giving the command to antenna $antenna: offsetUnit -a $antenna -s $offsetUnit\n";
+	`offsetUnit -a $antenna -s $offsetUnit`;
+	sleep 1;
+	print "giving the observe command to antenna $antenna\n";
+	`observe -a $antenna -s $source`;
+    }
+    `antennaWait -a $antString`;
+}
+
+#start scan
+    
+    if ($numberAntennas == 0) {
+	`$scantype`;
+    } else {
+	foreach $antenna (@antennalist) {
+	    `$scantype -a $antenna`;
+	} # for all antennas
+    }
+
+#take data until all antennas have completed the scan
+
+    writeData();
+
+    $scansCompleted=0;
+    print "Waiting for scan to be completed\n";
+    foreach $antenna (@antennalist) {
+	$offset_check = `prio 50 value -a $antenna -v $offset`;
+	while ($offset_check<$maxoffset)
+	{
+	    $offset_check = `prio 50 value -a $antenna -v $offset`;
+	    #print "$offset_check\n";
+	    #writeData();
+	    sleep 1;  # do not delete this sleep
+	}
+	print "Antenna $antenna scan is completed\n";
+    }
+    $scansCompleted=1;
+    if($scansCompleted==1){kill USR1 => $rcpid;}
+    print "Scans completed\n";
+    if ($numberAntennas == 0) {
+	print "Running stopScan on all antennas\n";
+	`stopScan`;
+	sleep 1;
+    } else {
+	foreach $antenna (@antennalist) {
+	    print "Running stopScan on antenna $antenna\n";
+	    `stopScan -a $antenna`;
+	    sleep 1;
+	}
+    }
+    foreach $antenna (@antennalist) {
+	`eloff -a $antenna -s $eloff_0[$antenna]`;
+	sleep 1;
+	`azoff -a $antenna -s $azoff_0[$antenna]`;
+	sleep 1;
+    }
+}
+
+
+# subroutine total power scan reverse
+sub tpScanr
+{
+#Initializations
+    my $azel=shift @_;
+    my $minoffset=shift @_;
+    my $maxoffset=shift @_;
+    
+    foreach $antenna (@antennalist) {
+	$azoff_0[$antenna]=`prio 50 value -a $antenna  -v azoff`;
+	chomp($azoff_0[$antenna]);
+	$eloff_0[$antenna]=`prio 50 value -a $antenna  -v eloff`;
+	chomp($eloff_0[$antenna]);
+#debug
+	print "azoff_0[$antenna]=$azoff_0[$antenna], eloff_0[$antenna]=$eloff_0[$antenna]\n";
+
+#set up for azscan
+	if($azel eq "az")
+	{
+	    $offset="azoff";
+	    $scantype="azscan";
+	    $minoffset+=$azoff_0[$antenna]; 
+	    $maxoffset+=$azoff_0[$antenna];
+	    `eloff -a $antenna  -s $eloff_0[$antenna]`;
+	    sleep 1;
+	}
+
+#set up for elscan
+	if($azel eq "el")
+	{
+	    $offset="eloff";
+	    $scantype="elscan";
+	    $minoffset+=$eloff_0[$antenna]; 
+	    $maxoffset+=$eloff_0[$antenna]; 
+	    if($chopflg==0) {
+		`azoff -a $antenna -s $azoff_0[$antenna]`;
+		sleep 1;
+	    }
+	    if($chopflg==1) {
+		$poslobe=$azoff_0[$antenna]+$beamthrow;
+		`azoff -a $antenna -s $poslobe`;
+		sleep 1;
+	    }
+	}
+
+	print "giving the $offset command to antenna $antenna\n";
+	`$offset -a $antenna -s $maxoffset`;
+	sleep 1;
+        $totalMinOffset[$antenna] = $minoffset;
+        $totalMaxOffset[$antenna] = $maxoffset;
+
+} # for all antennas;
+
+if ($numberAntennas == 0) {
+    print "giving the command to all antennas: offsetUnit -s $offsetUnit\n";
+    `offsetUnit -s $offsetUnit`;
+    sleep 1;
+    print "giving the observe command to all antennas\n";
+    `observe -s $source`;
+    `antennaWait`
+} else {
+    foreach $antenna (@antennalist) {
+	print "giving the command to antenna $antenna: offsetUnit -a $antenna -s $offsetUnit\n";
+	`offsetUnit -a $antenna -s $offsetUnit`;
+	sleep 1;
+	print "giving the observe command to antenna $antenna\n";
+	`observe -a $antenna -s $source`;
+    }
+    `antennaWait -a $antString`;
+}
+
+#start scan
+
+    if ($numberAntennas == 0) {
+	`$scantype`;
+    } else {
+	foreach $antenna (@antennalist) {
+	    `$scantype -a $antenna`;
+	}
+    }
+    writeData();
+    $scansCompleted=0;
+    print "Waiting for scan to be completed\n";
+    foreach $antenna (@antennalist) {
+	$offset_check = `prio 50 value -a $antenna -v $offset`;
+	while ($offset_check>$minoffset)
+	{
+	    $offset_check = `prio 50 value -a $antenna -v $offset`;
+	    #print "$offset_check\n";
+	    sleep 1; # do not delete this sleep
+	}
+	print "Antenna $antenna scan is completed\n";
+    } # for all antennas
+    $scansCompleted=1;
+    if($scansCompleted==1){kill USR1 => $rcpid;}
+    
+    if ($numberAntennas == 0) {
+	print "Running stopScan on all antennas\n";
+	`stopScan`;
+	sleep 1;
+    } else {
+	foreach $antenna (@antennalist) {
+	    print "Running stopScan on antenna $antenna\n";
+	    `stopScan -a $antenna`;
+	    sleep 1;
+	}
+    }
+    foreach $antenna (@antennalist) {
+	`eloff -a $antenna -s $eloff_0[$antenna]`;
+	sleep 1;
+	`azoff -a $antenna -s $azoff_0[$antenna]`;
+	sleep 1;
+    }
+}

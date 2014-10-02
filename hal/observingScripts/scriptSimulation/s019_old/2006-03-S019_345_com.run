@@ -1,0 +1,1347 @@
+initializing.....
+Not running on hal9000, entering simulation mode.
+Script: ../2006-03-S019/2006-03-S019_345_com.pl.
+	09/07/2006 08:00:00 --> 09/07/2006 08:00:00  ---- radio
+	09/07/2006 08:00:00 --> 09/07/2006 08:00:00  ---- integrate -t 30
+	09/07/2006 08:00:00 --> 09/07/2006 08:00:00  ---- project -r -p 'Michael Reid' -d '2006-03-S019' -i 2590
+----- initialization done, starting script -----
+
+#################################
+# FLUX and BANDPASS Calibration #
+#################################
+
+LST [hr]=  20.75
+lookup time: 9 7 2006 8:0
+uranus is at 47.1 degrees elevation
+
+---- Observing uranus. ----
+
+LST [hr]=  20.75
+lookup time: 9 7 2006 8:0
+uranus is at 47.1 degrees elevation
+	09/07/2006 08:00:00 --> 09/07/2006 08:00:10  ---- observe -s uranus -t flux
+	09/07/2006 08:00:10 --> 09/07/2006 08:00:21  ---- tsys
+	09/07/2006 08:00:21 --> 09/07/2006 08:05:21  ---- integrate -s 10 -w
+Finished 10/90 on uranus.
+LST [hr]=  20.84
+lookup time: 9 7 2006 8:5
+uranus is at 48.0 degrees elevation
+	09/07/2006 08:05:21 --> 09/07/2006 08:05:31  ---- observe -s uranus -t flux
+	09/07/2006 08:05:31 --> 09/07/2006 08:10:31  ---- integrate -s 10 -w
+Finished 20/90 on uranus.
+LST [hr]=  20.93
+lookup time: 9 7 2006 8:10
+uranus is at 49.0 degrees elevation
+	09/07/2006 08:10:31 --> 09/07/2006 08:10:41  ---- observe -s uranus -t flux
+	09/07/2006 08:10:41 --> 09/07/2006 08:15:41  ---- integrate -s 10 -w
+Finished 30/90 on uranus.
+LST [hr]=  21.01
+lookup time: 9 7 2006 8:15
+uranus is at 49.9 degrees elevation
+	09/07/2006 08:15:41 --> 09/07/2006 08:15:51  ---- observe -s uranus -t flux
+	09/07/2006 08:15:51 --> 09/07/2006 08:20:51  ---- integrate -s 10 -w
+Finished 40/90 on uranus.
+LST [hr]=  21.10
+lookup time: 9 7 2006 8:20
+uranus is at 50.8 degrees elevation
+	09/07/2006 08:20:51 --> 09/07/2006 08:21:01  ---- observe -s uranus -t flux
+	09/07/2006 08:21:01 --> 09/07/2006 08:26:01  ---- integrate -s 10 -w
+Finished 50/90 on uranus.
+LST [hr]=  21.19
+lookup time: 9 7 2006 8:26
+uranus is at 51.8 degrees elevation
+	09/07/2006 08:26:01 --> 09/07/2006 08:26:11  ---- observe -s uranus -t flux
+	09/07/2006 08:26:11 --> 09/07/2006 08:31:11  ---- integrate -s 10 -w
+Finished 60/90 on uranus.
+LST [hr]=  21.27
+lookup time: 9 7 2006 8:31
+uranus is at 52.7 degrees elevation
+	09/07/2006 08:31:11 --> 09/07/2006 08:31:21  ---- observe -s uranus -t flux
+	09/07/2006 08:31:21 --> 09/07/2006 08:36:21  ---- integrate -s 10 -w
+Finished 70/90 on uranus.
+LST [hr]=  21.36
+lookup time: 9 7 2006 8:36
+uranus is at 53.5 degrees elevation
+	09/07/2006 08:36:21 --> 09/07/2006 08:36:31  ---- observe -s uranus -t flux
+	09/07/2006 08:36:31 --> 09/07/2006 08:41:31  ---- integrate -s 10 -w
+Finished 80/90 on uranus.
+LST [hr]=  21.45
+lookup time: 9 7 2006 8:41
+uranus is at 54.3 degrees elevation
+	09/07/2006 08:41:31 --> 09/07/2006 08:41:41  ---- observe -s uranus -t flux
+	09/07/2006 08:41:41 --> 09/07/2006 08:46:41  ---- integrate -s 10 -w
+Finished 90/90 on uranus.
+LST [hr]=  21.53
+lookup time: 9 7 2006 8:46
+3c454.3 is at 69.5 degrees elevation
+
+----  Observing 3c454.3. ----
+
+LST [hr]=  21.53
+lookup time: 9 7 2006 8:46
+3c454.3 is at 69.5 degrees elevation
+	09/07/2006 08:46:41 --> 09/07/2006 08:46:51  ---- observe -s 3c454.3 -t bandpass
+	09/07/2006 08:46:51 --> 09/07/2006 08:47:02  ---- tsys
+	09/07/2006 08:47:02 --> 09/07/2006 08:52:02  ---- integrate -s 10 -w
+Finished 10/60 on 3c454.3.
+LST [hr]=  21.62
+lookup time: 9 7 2006 8:52
+3c454.3 is at 70.9 degrees elevation
+	09/07/2006 08:52:02 --> 09/07/2006 08:52:12  ---- observe -s 3c454.3 -t bandpass
+	09/07/2006 08:52:12 --> 09/07/2006 08:57:12  ---- integrate -s 10 -w
+Finished 20/60 on 3c454.3.
+LST [hr]=  21.71
+lookup time: 9 7 2006 8:57
+3c454.3 is at 72.0 degrees elevation
+	09/07/2006 08:57:12 --> 09/07/2006 08:57:22  ---- observe -s 3c454.3 -t bandpass
+	09/07/2006 08:57:22 --> 09/07/2006 09:02:22  ---- integrate -s 10 -w
+Finished 30/60 on 3c454.3.
+LST [hr]=  21.79
+lookup time: 9 7 2006 9:2
+3c454.3 is at 73.2 degrees elevation
+	09/07/2006 09:02:22 --> 09/07/2006 09:02:32  ---- observe -s 3c454.3 -t bandpass
+	09/07/2006 09:02:32 --> 09/07/2006 09:07:32  ---- integrate -s 10 -w
+Finished 40/60 on 3c454.3.
+LST [hr]=  21.88
+lookup time: 9 7 2006 9:7
+3c454.3 is at 74.4 degrees elevation
+	09/07/2006 09:07:32 --> 09/07/2006 09:07:42  ---- observe -s 3c454.3 -t bandpass
+	09/07/2006 09:07:42 --> 09/07/2006 09:12:42  ---- integrate -s 10 -w
+Finished 50/60 on 3c454.3.
+LST [hr]=  21.97
+lookup time: 9 7 2006 9:12
+3c454.3 is at 75.5 degrees elevation
+	09/07/2006 09:12:42 --> 09/07/2006 09:12:52  ---- observe -s 3c454.3 -t bandpass
+	09/07/2006 09:12:52 --> 09/07/2006 09:17:52  ---- integrate -s 10 -w
+Finished 60/60 on 3c454.3.
+LST [hr]=  22.05
+lookup time: 9 7 2006 9:17
+3c454.3 is at 76.7 degrees elevation
+
+----  Observing 3c454.3. ----
+
+LST [hr]=  22.05
+lookup time: 9 7 2006 9:17
+3c454.3 is at 76.7 degrees elevation
+	09/07/2006 09:17:52 --> 09/07/2006 09:18:02  ---- observe -s 3c454.3 -t bandpass
+	09/07/2006 09:18:02 --> 09/07/2006 09:18:13  ---- tsys
+	09/07/2006 09:18:13 --> 09/07/2006 09:23:13  ---- integrate -s 10 -w
+Finished 10/60 on 3c454.3.
+LST [hr]=  22.14
+lookup time: 9 7 2006 9:23
+3c454.3 is at 78.0 degrees elevation
+	09/07/2006 09:23:13 --> 09/07/2006 09:23:23  ---- observe -s 3c454.3 -t bandpass
+	09/07/2006 09:23:23 --> 09/07/2006 09:28:23  ---- integrate -s 10 -w
+Finished 20/60 on 3c454.3.
+LST [hr]=  22.23
+lookup time: 9 7 2006 9:28
+3c454.3 is at 79.2 degrees elevation
+	09/07/2006 09:28:23 --> 09/07/2006 09:28:33  ---- observe -s 3c454.3 -t bandpass
+	09/07/2006 09:28:33 --> 09/07/2006 09:33:33  ---- integrate -s 10 -w
+Finished 30/60 on 3c454.3.
+LST [hr]=  22.32
+lookup time: 9 7 2006 9:33
+3c454.3 is at 80.3 degrees elevation
+	09/07/2006 09:33:33 --> 09/07/2006 09:33:43  ---- observe -s 3c454.3 -t bandpass
+	09/07/2006 09:33:43 --> 09/07/2006 09:38:43  ---- integrate -s 10 -w
+Finished 40/60 on 3c454.3.
+LST [hr]=  22.40
+lookup time: 9 7 2006 9:38
+3c454.3 is at 81.4 degrees elevation
+	09/07/2006 09:38:43 --> 09/07/2006 09:38:53  ---- observe -s 3c454.3 -t bandpass
+	09/07/2006 09:38:53 --> 09/07/2006 09:43:53  ---- integrate -s 10 -w
+Finished 50/60 on 3c454.3.
+LST [hr]=  22.49
+lookup time: 9 7 2006 9:43
+3c454.3 is at 82.4 degrees elevation
+	09/07/2006 09:43:53 --> 09/07/2006 09:44:03  ---- observe -s 3c454.3 -t bandpass
+	09/07/2006 09:44:03 --> 09/07/2006 09:49:03  ---- integrate -s 10 -w
+Finished 60/60 on 3c454.3.
+
+###########################
+# Initial Elevation Check #
+###########################
+
+LST [hr]=  22.57
+new source ic348sw_6 is at 20.2 degrees elevation
+LST [hr]=  22.57
+new source ic348sw_7 is at 20.2 degrees elevation
+LST [hr]=  22.57
+new source ic348sw_1 is at 20.2 degrees elevation
+LST [hr]=  22.57
+new source ic348sw_2 is at 20.2 degrees elevation
+LST [hr]=  22.57
+new source ic348sw_3 is at 20.2 degrees elevation
+LST [hr]=  22.57
+new source ic348sw_4 is at 20.3 degrees elevation
+LST [hr]=  22.57
+new source ic348sw_5 is at 20.3 degrees elevation
+---- Target source is available. ----
+LST [hr]=  22.57
+lookup time: 9 7 2006 9:49
+3c111 is at 14.7 degrees elevation
+LST [hr]=  22.57
+lookup time: 9 7 2006 9:49
+3c84 is at 26.3 degrees elevation
+---- At least one calibrator is available. ----
+
+#############
+# Main Loop #
+#############
+
+LST [hr]=  22.57
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+LST [hr]=  22.57
+lookup time: 9 7 2006 9:49
+3c111 is at 14.7 degrees elevation
+---- Source elevation limit. ----
+---- Searching for an available calibrator.. ----
+LST [hr]=  22.57
+lookup time: 9 7 2006 9:49
+3c111 is at 14.7 degrees elevation
+LST [hr]=  22.57
+lookup time: 9 7 2006 9:49
+3c84 is at 26.3 degrees elevation
+	09/07/2006 09:49:03 --> 09/07/2006 09:49:13  ---- observe -s 3c84
+	09/07/2006 09:49:13 --> 09/07/2006 09:49:24  ---- tsys
+	09/07/2006 09:49:24 --> 09/07/2006 09:54:24  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  22.66
+lookup time: 9 7 2006 9:54
+3c111 is at 15.6 degrees elevation
+LST [hr]=  22.66
+lookup time: 9 7 2006 9:54
+3c84 is at 27.2 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 1) ----
+
+LST [hr]=  22.66
+new source ic348sw_1 is at 21.3 degrees elevation
+	09/07/2006 09:54:24 --> 09/07/2006 09:54:34  ---- observe -s ic348sw_1 -r 3:43:57.1 -d +32:03:04.8 -e 2000 -v 9
+	09/07/2006 09:54:34 --> 09/07/2006 09:54:45  ---- tsys
+	09/07/2006 09:54:45 --> 09/07/2006 09:59:45  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 1) ----
+
+LST [hr]=  22.75
+new source ic348sw_2 is at 22.3 degrees elevation
+	09/07/2006 09:59:45 --> 09/07/2006 09:59:55  ---- observe -s ic348sw_2 -r 3:43:56.6 -d +32:03:21.8 -e 2000 -v 9
+	09/07/2006 09:59:55 --> 09/07/2006 10:00:06  ---- tsys
+	09/07/2006 10:00:06 --> 09/07/2006 10:05:06  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 1) ----
+
+LST [hr]=  22.84
+new source ic348sw_6 is at 23.6 degrees elevation
+	09/07/2006 10:05:06 --> 09/07/2006 10:05:16  ---- observe -s ic348sw_6 -r 3:43:58.1 -d +32:02:30.8 -e 2000 -v 9
+	09/07/2006 10:05:16 --> 09/07/2006 10:05:27  ---- tsys
+	09/07/2006 10:05:27 --> 09/07/2006 10:10:27  ---- integrate -s 10 -w
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+LST [hr]=  22.93
+lookup time: 9 7 2006 10:10
+3c111 is at 18.7 degrees elevation
+	09/07/2006 10:10:27 --> 09/07/2006 10:10:37  ---- observe -s 3c111
+	09/07/2006 10:10:37 --> 09/07/2006 10:10:48  ---- tsys
+	09/07/2006 10:10:48 --> 09/07/2006 10:15:48  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  23.02
+lookup time: 9 7 2006 10:15
+3c111 is at 19.7 degrees elevation
+LST [hr]=  23.02
+lookup time: 9 7 2006 10:15
+3c84 is at 31.2 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 1) ----
+
+LST [hr]=  23.02
+new source ic348sw_3 is at 25.7 degrees elevation
+	09/07/2006 10:15:48 --> 09/07/2006 10:15:58  ---- observe -s ic348sw_3 -r 3:43:56.1 -d +32:03:38.8 -e 2000 -v 9
+	09/07/2006 10:15:58 --> 09/07/2006 10:16:09  ---- tsys
+	09/07/2006 10:16:09 --> 09/07/2006 10:21:09  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 1) ----
+
+LST [hr]=  23.11
+new source ic348sw_4 is at 27.0 degrees elevation
+	09/07/2006 10:21:09 --> 09/07/2006 10:21:19  ---- observe -s ic348sw_4 -r 3:43:55.6 -d +32:03:56.8 -e 2000 -v 9
+	09/07/2006 10:21:19 --> 09/07/2006 10:21:30  ---- tsys
+	09/07/2006 10:21:30 --> 09/07/2006 10:26:30  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 1) ----
+
+LST [hr]=  23.20
+new source ic348sw_5 is at 28.0 degrees elevation
+	09/07/2006 10:26:30 --> 09/07/2006 10:26:40  ---- observe -s ic348sw_5 -r 3:43:55.6 -d +32:04:14.0 -e 2000 -v 9
+	09/07/2006 10:26:40 --> 09/07/2006 10:26:51  ---- tsys
+	09/07/2006 10:26:51 --> 09/07/2006 10:31:51  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 1) ----
+
+LST [hr]=  23.29
+new source ic348sw_7 is at 29.1 degrees elevation
+	09/07/2006 10:31:51 --> 09/07/2006 10:32:01  ---- observe -s ic348sw_7 -r 3:43:57.6 -d +32:02:47.8 -e 2000 -v 9
+	09/07/2006 10:32:01 --> 09/07/2006 10:32:12  ---- tsys
+	09/07/2006 10:32:12 --> 09/07/2006 10:37:12  ---- integrate -s 10 -w
+LST [hr]=  23.38
+Loop No.= 2
+
+---- Observing Gain Calibrator (Loop = 2) ----
+
+LST [hr]=  23.38
+lookup time: 9 7 2006 10:37
+3c111 is at 24.0 degrees elevation
+	09/07/2006 10:37:12 --> 09/07/2006 10:37:22  ---- observe -s 3c111
+	09/07/2006 10:37:22 --> 09/07/2006 10:37:33  ---- tsys
+	09/07/2006 10:37:33 --> 09/07/2006 10:42:33  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  23.47
+lookup time: 9 7 2006 10:42
+3c111 is at 24.9 degrees elevation
+LST [hr]=  23.47
+lookup time: 9 7 2006 10:42
+3c84 is at 36.2 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 2) ----
+
+LST [hr]=  23.47
+new source ic348sw_1 is at 31.4 degrees elevation
+	09/07/2006 10:42:33 --> 09/07/2006 10:42:43  ---- observe -s ic348sw_1 -r 3:43:57.1 -d +32:03:04.8 -e 2000 -v 9
+	09/07/2006 10:42:43 --> 09/07/2006 10:42:54  ---- tsys
+	09/07/2006 10:42:54 --> 09/07/2006 10:47:54  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 2) ----
+
+LST [hr]=  23.56
+new source ic348sw_2 is at 32.4 degrees elevation
+	09/07/2006 10:47:54 --> 09/07/2006 10:48:04  ---- observe -s ic348sw_2 -r 3:43:56.6 -d +32:03:21.8 -e 2000 -v 9
+	09/07/2006 10:48:04 --> 09/07/2006 10:48:15  ---- tsys
+	09/07/2006 10:48:15 --> 09/07/2006 10:53:15  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 2) ----
+
+LST [hr]=  23.65
+new source ic348sw_6 is at 33.7 degrees elevation
+	09/07/2006 10:53:15 --> 09/07/2006 10:53:25  ---- observe -s ic348sw_6 -r 3:43:58.1 -d +32:02:30.8 -e 2000 -v 9
+	09/07/2006 10:53:25 --> 09/07/2006 10:53:36  ---- tsys
+	09/07/2006 10:53:36 --> 09/07/2006 10:58:36  ---- integrate -s 10 -w
+
+---- Observing Gain Calibrator (Loop = 2) ----
+
+LST [hr]=  23.74
+lookup time: 9 7 2006 10:58
+3c111 is at 28.1 degrees elevation
+	09/07/2006 10:58:36 --> 09/07/2006 10:58:46  ---- observe -s 3c111
+	09/07/2006 10:58:46 --> 09/07/2006 10:58:57  ---- tsys
+	09/07/2006 10:58:57 --> 09/07/2006 11:03:57  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  23.83
+lookup time: 9 7 2006 11:3
+3c111 is at 29.1 degrees elevation
+LST [hr]=  23.83
+lookup time: 9 7 2006 11:3
+3c84 is at 40.1 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 2) ----
+
+LST [hr]=  23.83
+new source ic348sw_3 is at 35.8 degrees elevation
+	09/07/2006 11:03:57 --> 09/07/2006 11:04:07  ---- observe -s ic348sw_3 -r 3:43:56.1 -d +32:03:38.8 -e 2000 -v 9
+	09/07/2006 11:04:07 --> 09/07/2006 11:04:18  ---- tsys
+	09/07/2006 11:04:18 --> 09/07/2006 11:09:18  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 2) ----
+
+LST [hr]=  23.92
+new source ic348sw_4 is at 37.1 degrees elevation
+	09/07/2006 11:09:18 --> 09/07/2006 11:09:28  ---- observe -s ic348sw_4 -r 3:43:55.6 -d +32:03:56.8 -e 2000 -v 9
+	09/07/2006 11:09:28 --> 09/07/2006 11:09:39  ---- tsys
+	09/07/2006 11:09:39 --> 09/07/2006 11:14:39  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 2) ----
+
+LST [hr]=   0.00
+new source ic348sw_5 is at 38.2 degrees elevation
+	09/07/2006 11:14:39 --> 09/07/2006 11:14:49  ---- observe -s ic348sw_5 -r 3:43:55.6 -d +32:04:14.0 -e 2000 -v 9
+	09/07/2006 11:14:49 --> 09/07/2006 11:15:00  ---- tsys
+	09/07/2006 11:15:00 --> 09/07/2006 11:20:00  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 2) ----
+
+LST [hr]=   0.09
+new source ic348sw_7 is at 39.4 degrees elevation
+	09/07/2006 11:20:00 --> 09/07/2006 11:20:10  ---- observe -s ic348sw_7 -r 3:43:57.6 -d +32:02:47.8 -e 2000 -v 9
+	09/07/2006 11:20:10 --> 09/07/2006 11:20:21  ---- tsys
+	09/07/2006 11:20:21 --> 09/07/2006 11:25:21  ---- integrate -s 10 -w
+LST [hr]=   0.18
+LST [hr]=   0.18
+Loop No.= 3
+
+---- Observing Gain Calibrator (Loop = 3) ----
+
+LST [hr]=   0.18
+lookup time: 9 7 2006 11:25
+3c111 is at 33.4 degrees elevation
+	09/07/2006 11:25:21 --> 09/07/2006 11:25:31  ---- observe -s 3c111
+	09/07/2006 11:25:31 --> 09/07/2006 11:25:42  ---- tsys
+	09/07/2006 11:25:42 --> 09/07/2006 11:30:42  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=   0.27
+lookup time: 9 7 2006 11:30
+3c111 is at 34.4 degrees elevation
+LST [hr]=   0.27
+lookup time: 9 7 2006 11:30
+3c84 is at 45.1 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 3) ----
+
+LST [hr]=   0.27
+new source ic348sw_1 is at 41.6 degrees elevation
+	09/07/2006 11:30:42 --> 09/07/2006 11:30:52  ---- observe -s ic348sw_1 -r 3:43:57.1 -d +32:03:04.8 -e 2000 -v 9
+	09/07/2006 11:30:52 --> 09/07/2006 11:31:03  ---- tsys
+	09/07/2006 11:31:03 --> 09/07/2006 11:36:03  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 3) ----
+
+LST [hr]=   0.36
+new source ic348sw_2 is at 42.8 degrees elevation
+	09/07/2006 11:36:03 --> 09/07/2006 11:36:13  ---- observe -s ic348sw_2 -r 3:43:56.6 -d +32:03:21.8 -e 2000 -v 9
+	09/07/2006 11:36:13 --> 09/07/2006 11:36:24  ---- tsys
+	09/07/2006 11:36:24 --> 09/07/2006 11:41:24  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 3) ----
+
+LST [hr]=   0.45
+new source ic348sw_6 is at 43.9 degrees elevation
+	09/07/2006 11:41:24 --> 09/07/2006 11:41:34  ---- observe -s ic348sw_6 -r 3:43:58.1 -d +32:02:30.8 -e 2000 -v 9
+	09/07/2006 11:41:34 --> 09/07/2006 11:41:45  ---- tsys
+	09/07/2006 11:41:45 --> 09/07/2006 11:46:45  ---- integrate -s 10 -w
+
+---- Observing Gain Calibrator (Loop = 3) ----
+
+LST [hr]=   0.54
+lookup time: 9 7 2006 11:46
+3c111 is at 37.6 degrees elevation
+	09/07/2006 11:46:45 --> 09/07/2006 11:46:55  ---- observe -s 3c111
+	09/07/2006 11:46:55 --> 09/07/2006 11:47:06  ---- tsys
+	09/07/2006 11:47:06 --> 09/07/2006 11:52:06  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=   0.63
+lookup time: 9 7 2006 11:52
+3c111 is at 38.7 degrees elevation
+LST [hr]=   0.63
+lookup time: 9 7 2006 11:52
+3c84 is at 49.1 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 3) ----
+
+LST [hr]=   0.63
+new source ic348sw_3 is at 46.2 degrees elevation
+	09/07/2006 11:52:06 --> 09/07/2006 11:52:16  ---- observe -s ic348sw_3 -r 3:43:56.1 -d +32:03:38.8 -e 2000 -v 9
+	09/07/2006 11:52:16 --> 09/07/2006 11:52:27  ---- tsys
+	09/07/2006 11:52:27 --> 09/07/2006 11:57:27  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 3) ----
+
+LST [hr]=   0.72
+new source ic348sw_4 is at 47.3 degrees elevation
+	09/07/2006 11:57:27 --> 09/07/2006 11:57:37  ---- observe -s ic348sw_4 -r 3:43:55.6 -d +32:03:56.8 -e 2000 -v 9
+	09/07/2006 11:57:37 --> 09/07/2006 11:57:48  ---- tsys
+	09/07/2006 11:57:48 --> 09/07/2006 12:02:48  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 3) ----
+
+LST [hr]=   0.81
+new source ic348sw_5 is at 48.4 degrees elevation
+	09/07/2006 12:02:48 --> 09/07/2006 12:02:58  ---- observe -s ic348sw_5 -r 3:43:55.6 -d +32:04:14.0 -e 2000 -v 9
+	09/07/2006 12:02:58 --> 09/07/2006 12:03:09  ---- tsys
+	09/07/2006 12:03:09 --> 09/07/2006 12:08:09  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 3) ----
+
+LST [hr]=   0.90
+new source ic348sw_7 is at 49.6 degrees elevation
+	09/07/2006 12:08:09 --> 09/07/2006 12:08:19  ---- observe -s ic348sw_7 -r 3:43:57.6 -d +32:02:47.8 -e 2000 -v 9
+	09/07/2006 12:08:19 --> 09/07/2006 12:08:30  ---- tsys
+	09/07/2006 12:08:30 --> 09/07/2006 12:13:30  ---- integrate -s 10 -w
+LST [hr]=   0.99
+LST [hr]=   0.99
+Loop No.= 4
+
+---- Observing Gain Calibrator (Loop = 4) ----
+
+LST [hr]=   0.99
+lookup time: 9 7 2006 12:13
+3c111 is at 42.9 degrees elevation
+	09/07/2006 12:13:30 --> 09/07/2006 12:13:40  ---- observe -s 3c111
+	09/07/2006 12:13:40 --> 09/07/2006 12:13:51  ---- tsys
+	09/07/2006 12:13:51 --> 09/07/2006 12:18:51  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=   1.08
+lookup time: 9 7 2006 12:18
+3c111 is at 43.8 degrees elevation
+LST [hr]=   1.08
+lookup time: 9 7 2006 12:18
+3c84 is at 53.6 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 4) ----
+
+LST [hr]=   1.08
+new source ic348sw_1 is at 51.7 degrees elevation
+	09/07/2006 12:18:51 --> 09/07/2006 12:19:01  ---- observe -s ic348sw_1 -r 3:43:57.1 -d +32:03:04.8 -e 2000 -v 9
+	09/07/2006 12:19:01 --> 09/07/2006 12:19:12  ---- tsys
+	09/07/2006 12:19:12 --> 09/07/2006 12:24:12  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 4) ----
+
+LST [hr]=   1.17
+new source ic348sw_2 is at 53.0 degrees elevation
+	09/07/2006 12:24:12 --> 09/07/2006 12:24:22  ---- observe -s ic348sw_2 -r 3:43:56.6 -d +32:03:21.8 -e 2000 -v 9
+	09/07/2006 12:24:22 --> 09/07/2006 12:24:33  ---- tsys
+	09/07/2006 12:24:33 --> 09/07/2006 12:29:33  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 4) ----
+
+LST [hr]=   1.26
+new source ic348sw_6 is at 54.0 degrees elevation
+	09/07/2006 12:29:33 --> 09/07/2006 12:29:43  ---- observe -s ic348sw_6 -r 3:43:58.1 -d +32:02:30.8 -e 2000 -v 9
+	09/07/2006 12:29:43 --> 09/07/2006 12:29:54  ---- tsys
+	09/07/2006 12:29:54 --> 09/07/2006 12:34:54  ---- integrate -s 10 -w
+
+---- Observing Gain Calibrator (Loop = 4) ----
+
+LST [hr]=   1.35
+lookup time: 9 7 2006 12:34
+3c111 is at 47.0 degrees elevation
+	09/07/2006 12:34:54 --> 09/07/2006 12:35:04  ---- observe -s 3c111
+	09/07/2006 12:35:04 --> 09/07/2006 12:35:15  ---- tsys
+	09/07/2006 12:35:15 --> 09/07/2006 12:40:15  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=   1.44
+lookup time: 9 7 2006 12:40
+3c111 is at 48.1 degrees elevation
+LST [hr]=   1.44
+lookup time: 9 7 2006 12:40
+3c84 is at 57.2 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 4) ----
+
+LST [hr]=   1.44
+new source ic348sw_3 is at 56.3 degrees elevation
+	09/07/2006 12:40:15 --> 09/07/2006 12:40:25  ---- observe -s ic348sw_3 -r 3:43:56.1 -d +32:03:38.8 -e 2000 -v 9
+	09/07/2006 12:40:25 --> 09/07/2006 12:40:36  ---- tsys
+	09/07/2006 12:40:36 --> 09/07/2006 12:45:36  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 4) ----
+
+LST [hr]=   1.52
+new source ic348sw_4 is at 57.4 degrees elevation
+	09/07/2006 12:45:36 --> 09/07/2006 12:45:46  ---- observe -s ic348sw_4 -r 3:43:55.6 -d +32:03:56.8 -e 2000 -v 9
+	09/07/2006 12:45:46 --> 09/07/2006 12:45:57  ---- tsys
+	09/07/2006 12:45:57 --> 09/07/2006 12:50:57  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 4) ----
+
+LST [hr]=   1.61
+new source ic348sw_5 is at 58.4 degrees elevation
+	09/07/2006 12:50:57 --> 09/07/2006 12:51:07  ---- observe -s ic348sw_5 -r 3:43:55.6 -d +32:04:14.0 -e 2000 -v 9
+	09/07/2006 12:51:07 --> 09/07/2006 12:51:18  ---- tsys
+	09/07/2006 12:51:18 --> 09/07/2006 12:56:18  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 4) ----
+
+LST [hr]=   1.70
+new source ic348sw_7 is at 59.6 degrees elevation
+	09/07/2006 12:56:18 --> 09/07/2006 12:56:28  ---- observe -s ic348sw_7 -r 3:43:57.6 -d +32:02:47.8 -e 2000 -v 9
+	09/07/2006 12:56:28 --> 09/07/2006 12:56:39  ---- tsys
+	09/07/2006 12:56:39 --> 09/07/2006 13:01:39  ---- integrate -s 10 -w
+LST [hr]=   1.79
+LST [hr]=   1.79
+Loop No.= 5
+
+---- Observing Gain Calibrator (Loop = 5) ----
+
+LST [hr]=   1.79
+lookup time: 9 7 2006 13:1
+3c111 is at 52.1 degrees elevation
+	09/07/2006 13:01:39 --> 09/07/2006 13:01:49  ---- observe -s 3c111
+	09/07/2006 13:01:49 --> 09/07/2006 13:02:00  ---- tsys
+	09/07/2006 13:02:00 --> 09/07/2006 13:07:00  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=   1.88
+lookup time: 9 7 2006 13:7
+3c111 is at 53.2 degrees elevation
+LST [hr]=   1.88
+lookup time: 9 7 2006 13:7
+3c84 is at 61.2 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 5) ----
+
+LST [hr]=   1.88
+new source ic348sw_1 is at 61.8 degrees elevation
+	09/07/2006 13:07:00 --> 09/07/2006 13:07:10  ---- observe -s ic348sw_1 -r 3:43:57.1 -d +32:03:04.8 -e 2000 -v 9
+	09/07/2006 13:07:10 --> 09/07/2006 13:07:21  ---- tsys
+	09/07/2006 13:07:21 --> 09/07/2006 13:12:21  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 5) ----
+
+LST [hr]=   1.97
+new source ic348sw_2 is at 62.8 degrees elevation
+	09/07/2006 13:12:21 --> 09/07/2006 13:12:31  ---- observe -s ic348sw_2 -r 3:43:56.6 -d +32:03:21.8 -e 2000 -v 9
+	09/07/2006 13:12:31 --> 09/07/2006 13:12:42  ---- tsys
+	09/07/2006 13:12:42 --> 09/07/2006 13:17:42  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 5) ----
+
+LST [hr]=   2.06
+new source ic348sw_6 is at 63.8 degrees elevation
+	09/07/2006 13:17:42 --> 09/07/2006 13:17:52  ---- observe -s ic348sw_6 -r 3:43:58.1 -d +32:02:30.8 -e 2000 -v 9
+	09/07/2006 13:17:52 --> 09/07/2006 13:18:03  ---- tsys
+	09/07/2006 13:18:03 --> 09/07/2006 13:23:03  ---- integrate -s 10 -w
+
+---- Observing Gain Calibrator (Loop = 5) ----
+
+LST [hr]=   2.15
+lookup time: 9 7 2006 13:23
+3c111 is at 56.2 degrees elevation
+	09/07/2006 13:23:03 --> 09/07/2006 13:23:13  ---- observe -s 3c111
+	09/07/2006 13:23:13 --> 09/07/2006 13:23:24  ---- tsys
+	09/07/2006 13:23:24 --> 09/07/2006 13:28:24  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=   2.24
+lookup time: 9 7 2006 13:28
+3c111 is at 57.1 degrees elevation
+LST [hr]=   2.24
+lookup time: 9 7 2006 13:28
+3c84 is at 63.9 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 5) ----
+
+LST [hr]=   2.24
+new source ic348sw_3 is at 66.0 degrees elevation
+	09/07/2006 13:28:24 --> 09/07/2006 13:28:34  ---- observe -s ic348sw_3 -r 3:43:56.1 -d +32:03:38.8 -e 2000 -v 9
+	09/07/2006 13:28:34 --> 09/07/2006 13:28:45  ---- tsys
+	09/07/2006 13:28:45 --> 09/07/2006 13:33:45  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 5) ----
+
+LST [hr]=   2.33
+new source ic348sw_4 is at 66.9 degrees elevation
+	09/07/2006 13:33:45 --> 09/07/2006 13:33:55  ---- observe -s ic348sw_4 -r 3:43:55.6 -d +32:03:56.8 -e 2000 -v 9
+	09/07/2006 13:33:55 --> 09/07/2006 13:34:06  ---- tsys
+	09/07/2006 13:34:06 --> 09/07/2006 13:39:06  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 5) ----
+
+LST [hr]=   2.42
+new source ic348sw_5 is at 68.1 degrees elevation
+	09/07/2006 13:39:06 --> 09/07/2006 13:39:16  ---- observe -s ic348sw_5 -r 3:43:55.6 -d +32:04:14.0 -e 2000 -v 9
+	09/07/2006 13:39:16 --> 09/07/2006 13:39:27  ---- tsys
+	09/07/2006 13:39:27 --> 09/07/2006 13:44:27  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 5) ----
+
+LST [hr]=   2.51
+new source ic348sw_7 is at 69.0 degrees elevation
+	09/07/2006 13:44:27 --> 09/07/2006 13:44:37  ---- observe -s ic348sw_7 -r 3:43:57.6 -d +32:02:47.8 -e 2000 -v 9
+	09/07/2006 13:44:37 --> 09/07/2006 13:44:48  ---- tsys
+	09/07/2006 13:44:48 --> 09/07/2006 13:49:48  ---- integrate -s 10 -w
+LST [hr]=   2.60
+LST [hr]=   2.60
+Loop No.= 6
+
+---- Observing Gain Calibrator (Loop = 6) ----
+
+LST [hr]=   2.60
+lookup time: 9 7 2006 13:49
+3c111 is at 60.7 degrees elevation
+	09/07/2006 13:49:48 --> 09/07/2006 13:49:58  ---- observe -s 3c111
+	09/07/2006 13:49:58 --> 09/07/2006 13:50:09  ---- tsys
+	09/07/2006 13:50:09 --> 09/07/2006 13:55:09  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=   2.69
+lookup time: 9 7 2006 13:55
+3c111 is at 61.7 degrees elevation
+LST [hr]=   2.69
+lookup time: 9 7 2006 13:55
+3c84 is at 66.6 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 6) ----
+
+LST [hr]=   2.69
+new source ic348sw_1 is at 70.9 degrees elevation
+	09/07/2006 13:55:09 --> 09/07/2006 13:55:19  ---- observe -s ic348sw_1 -r 3:43:57.1 -d +32:03:04.8 -e 2000 -v 9
+	09/07/2006 13:55:19 --> 09/07/2006 13:55:30  ---- tsys
+	09/07/2006 13:55:30 --> 09/07/2006 14:00:30  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 6) ----
+
+LST [hr]=   2.78
+new source ic348sw_2 is at 71.8 degrees elevation
+	09/07/2006 14:00:30 --> 09/07/2006 14:00:40  ---- observe -s ic348sw_2 -r 3:43:56.6 -d +32:03:21.8 -e 2000 -v 9
+	09/07/2006 14:00:40 --> 09/07/2006 14:00:51  ---- tsys
+	09/07/2006 14:00:51 --> 09/07/2006 14:05:51  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 6) ----
+
+LST [hr]=   2.87
+new source ic348sw_6 is at 72.6 degrees elevation
+	09/07/2006 14:05:51 --> 09/07/2006 14:06:01  ---- observe -s ic348sw_6 -r 3:43:58.1 -d +32:02:30.8 -e 2000 -v 9
+	09/07/2006 14:06:01 --> 09/07/2006 14:06:12  ---- tsys
+	09/07/2006 14:06:12 --> 09/07/2006 14:11:12  ---- integrate -s 10 -w
+
+---- Observing Gain Calibrator (Loop = 6) ----
+
+LST [hr]=   2.96
+lookup time: 9 7 2006 14:11
+3c111 is at 64.3 degrees elevation
+	09/07/2006 14:11:12 --> 09/07/2006 14:11:22  ---- observe -s 3c111
+	09/07/2006 14:11:22 --> 09/07/2006 14:11:33  ---- tsys
+	09/07/2006 14:11:33 --> 09/07/2006 14:16:33  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=   3.04
+lookup time: 9 7 2006 14:16
+3c111 is at 65.1 degrees elevation
+LST [hr]=   3.04
+lookup time: 9 7 2006 14:16
+3c84 is at 67.9 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 6) ----
+
+LST [hr]=   3.04
+new source ic348sw_3 is at 74.2 degrees elevation
+	09/07/2006 14:16:33 --> 09/07/2006 14:16:43  ---- observe -s ic348sw_3 -r 3:43:56.1 -d +32:03:38.8 -e 2000 -v 9
+	09/07/2006 14:16:43 --> 09/07/2006 14:16:54  ---- tsys
+	09/07/2006 14:16:54 --> 09/07/2006 14:21:54  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 6) ----
+
+LST [hr]=   3.13
+new source ic348sw_4 is at 74.9 degrees elevation
+	09/07/2006 14:21:54 --> 09/07/2006 14:22:04  ---- observe -s ic348sw_4 -r 3:43:55.6 -d +32:03:56.8 -e 2000 -v 9
+	09/07/2006 14:22:04 --> 09/07/2006 14:22:15  ---- tsys
+	09/07/2006 14:22:15 --> 09/07/2006 14:27:15  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 6) ----
+
+LST [hr]=   3.22
+new source ic348sw_5 is at 75.7 degrees elevation
+	09/07/2006 14:27:15 --> 09/07/2006 14:27:25  ---- observe -s ic348sw_5 -r 3:43:55.6 -d +32:04:14.0 -e 2000 -v 9
+	09/07/2006 14:27:25 --> 09/07/2006 14:27:36  ---- tsys
+	09/07/2006 14:27:36 --> 09/07/2006 14:32:36  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 6) ----
+
+LST [hr]=   3.31
+new source ic348sw_7 is at 76.2 degrees elevation
+	09/07/2006 14:32:36 --> 09/07/2006 14:32:46  ---- observe -s ic348sw_7 -r 3:43:57.6 -d +32:02:47.8 -e 2000 -v 9
+	09/07/2006 14:32:46 --> 09/07/2006 14:32:57  ---- tsys
+	09/07/2006 14:32:57 --> 09/07/2006 14:37:57  ---- integrate -s 10 -w
+LST [hr]=   3.40
+LST [hr]=   3.40
+Loop No.= 7
+
+---- Observing Gain Calibrator (Loop = 7) ----
+
+LST [hr]=   3.40
+lookup time: 9 7 2006 14:37
+3c111 is at 67.9 degrees elevation
+	09/07/2006 14:37:57 --> 09/07/2006 14:38:07  ---- observe -s 3c111
+	09/07/2006 14:38:07 --> 09/07/2006 14:38:18  ---- tsys
+	09/07/2006 14:38:18 --> 09/07/2006 14:43:18  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=   3.49
+lookup time: 9 7 2006 14:43
+3c111 is at 68.6 degrees elevation
+LST [hr]=   3.49
+lookup time: 9 7 2006 14:43
+3c84 is at 68.2 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 7) ----
+
+LST [hr]=   3.49
+new source ic348sw_1 is at 77.2 degrees elevation
+	09/07/2006 14:43:18 --> 09/07/2006 14:43:28  ---- observe -s ic348sw_1 -r 3:43:57.1 -d +32:03:04.8 -e 2000 -v 9
+	09/07/2006 14:43:28 --> 09/07/2006 14:43:39  ---- tsys
+	09/07/2006 14:43:39 --> 09/07/2006 14:48:39  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 7) ----
+
+LST [hr]=   3.58
+new source ic348sw_2 is at 77.4 degrees elevation
+	09/07/2006 14:48:39 --> 09/07/2006 14:48:49  ---- observe -s ic348sw_2 -r 3:43:56.6 -d +32:03:21.8 -e 2000 -v 9
+	09/07/2006 14:48:49 --> 09/07/2006 14:49:00  ---- tsys
+	09/07/2006 14:49:00 --> 09/07/2006 14:54:00  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 7) ----
+
+LST [hr]=   3.67
+new source ic348sw_6 is at 77.7 degrees elevation
+	09/07/2006 14:54:00 --> 09/07/2006 14:54:10  ---- observe -s ic348sw_6 -r 3:43:58.1 -d +32:02:30.8 -e 2000 -v 9
+	09/07/2006 14:54:10 --> 09/07/2006 14:54:21  ---- tsys
+	09/07/2006 14:54:21 --> 09/07/2006 14:59:21  ---- integrate -s 10 -w
+
+---- Observing Gain Calibrator (Loop = 7) ----
+
+LST [hr]=   3.76
+lookup time: 9 7 2006 14:59
+3c111 is at 70.2 degrees elevation
+	09/07/2006 14:59:21 --> 09/07/2006 14:59:31  ---- observe -s 3c111
+	09/07/2006 14:59:31 --> 09/07/2006 14:59:42  ---- tsys
+	09/07/2006 14:59:42 --> 09/07/2006 15:04:42  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=   3.85
+lookup time: 9 7 2006 15:4
+3c111 is at 70.6 degrees elevation
+LST [hr]=   3.85
+lookup time: 9 7 2006 15:4
+3c84 is at 67.5 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 7) ----
+
+LST [hr]=   3.85
+new source ic348sw_3 is at 77.7 degrees elevation
+	09/07/2006 15:04:42 --> 09/07/2006 15:04:52  ---- observe -s ic348sw_3 -r 3:43:56.1 -d +32:03:38.8 -e 2000 -v 9
+	09/07/2006 15:04:52 --> 09/07/2006 15:05:03  ---- tsys
+	09/07/2006 15:05:03 --> 09/07/2006 15:10:03  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 7) ----
+
+LST [hr]=   3.94
+new source ic348sw_4 is at 77.5 degrees elevation
+	09/07/2006 15:10:03 --> 09/07/2006 15:10:13  ---- observe -s ic348sw_4 -r 3:43:55.6 -d +32:03:56.8 -e 2000 -v 9
+	09/07/2006 15:10:13 --> 09/07/2006 15:10:24  ---- tsys
+	09/07/2006 15:10:24 --> 09/07/2006 15:15:24  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 7) ----
+
+LST [hr]=   4.03
+new source ic348sw_5 is at 77.3 degrees elevation
+	09/07/2006 15:15:24 --> 09/07/2006 15:15:34  ---- observe -s ic348sw_5 -r 3:43:55.6 -d +32:04:14.0 -e 2000 -v 9
+	09/07/2006 15:15:34 --> 09/07/2006 15:15:45  ---- tsys
+	09/07/2006 15:15:45 --> 09/07/2006 15:20:45  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 7) ----
+
+LST [hr]=   4.12
+new source ic348sw_7 is at 77.0 degrees elevation
+	09/07/2006 15:20:45 --> 09/07/2006 15:20:55  ---- observe -s ic348sw_7 -r 3:43:57.6 -d +32:02:47.8 -e 2000 -v 9
+	09/07/2006 15:20:55 --> 09/07/2006 15:21:06  ---- tsys
+	09/07/2006 15:21:06 --> 09/07/2006 15:26:06  ---- integrate -s 10 -w
+LST [hr]=   4.21
+LST [hr]=   4.21
+Loop No.= 8
+
+---- Observing Gain Calibrator (Loop = 8) ----
+
+LST [hr]=   4.21
+lookup time: 9 7 2006 15:26
+3c111 is at 71.7 degrees elevation
+	09/07/2006 15:26:06 --> 09/07/2006 15:26:16  ---- observe -s 3c111
+	09/07/2006 15:26:16 --> 09/07/2006 15:26:27  ---- tsys
+	09/07/2006 15:26:27 --> 09/07/2006 15:31:27  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=   4.30
+lookup time: 9 7 2006 15:31
+3c111 is at 71.8 degrees elevation
+LST [hr]=   4.30
+lookup time: 9 7 2006 15:31
+3c84 is at 65.3 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 8) ----
+
+LST [hr]=   4.30
+new source ic348sw_1 is at 75.9 degrees elevation
+	09/07/2006 15:31:27 --> 09/07/2006 15:31:37  ---- observe -s ic348sw_1 -r 3:43:57.1 -d +32:03:04.8 -e 2000 -v 9
+	09/07/2006 15:31:37 --> 09/07/2006 15:31:48  ---- tsys
+	09/07/2006 15:31:48 --> 09/07/2006 15:36:48  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 8) ----
+
+LST [hr]=   4.39
+new source ic348sw_2 is at 75.3 degrees elevation
+	09/07/2006 15:36:48 --> 09/07/2006 15:36:58  ---- observe -s ic348sw_2 -r 3:43:56.6 -d +32:03:21.8 -e 2000 -v 9
+	09/07/2006 15:36:58 --> 09/07/2006 15:37:09  ---- tsys
+	09/07/2006 15:37:09 --> 09/07/2006 15:42:09  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 8) ----
+
+LST [hr]=   4.48
+new source ic348sw_6 is at 74.6 degrees elevation
+	09/07/2006 15:42:09 --> 09/07/2006 15:42:19  ---- observe -s ic348sw_6 -r 3:43:58.1 -d +32:02:30.8 -e 2000 -v 9
+	09/07/2006 15:42:19 --> 09/07/2006 15:42:30  ---- tsys
+	09/07/2006 15:42:30 --> 09/07/2006 15:47:30  ---- integrate -s 10 -w
+
+---- Observing Gain Calibrator (Loop = 8) ----
+
+LST [hr]=   4.56
+lookup time: 9 7 2006 15:47
+3c111 is at 71.6 degrees elevation
+	09/07/2006 15:47:30 --> 09/07/2006 15:47:40  ---- observe -s 3c111
+	09/07/2006 15:47:40 --> 09/07/2006 15:47:51  ---- tsys
+	09/07/2006 15:47:51 --> 09/07/2006 15:52:51  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=   4.65
+lookup time: 9 7 2006 15:52
+3c111 is at 71.4 degrees elevation
+LST [hr]=   4.65
+lookup time: 9 7 2006 15:52
+3c84 is at 62.9 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 8) ----
+
+LST [hr]=   4.65
+new source ic348sw_3 is at 73.1 degrees elevation
+	09/07/2006 15:52:51 --> 09/07/2006 15:53:01  ---- observe -s ic348sw_3 -r 3:43:56.1 -d +32:03:38.8 -e 2000 -v 9
+	09/07/2006 15:53:01 --> 09/07/2006 15:53:12  ---- tsys
+	09/07/2006 15:53:12 --> 09/07/2006 15:58:12  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 8) ----
+
+LST [hr]=   4.74
+new source ic348sw_4 is at 72.1 degrees elevation
+	09/07/2006 15:58:12 --> 09/07/2006 15:58:22  ---- observe -s ic348sw_4 -r 3:43:55.6 -d +32:03:56.8 -e 2000 -v 9
+	09/07/2006 15:58:22 --> 09/07/2006 15:58:33  ---- tsys
+	09/07/2006 15:58:33 --> 09/07/2006 16:03:33  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 8) ----
+
+LST [hr]=   4.83
+new source ic348sw_5 is at 71.3 degrees elevation
+	09/07/2006 16:03:33 --> 09/07/2006 16:03:43  ---- observe -s ic348sw_5 -r 3:43:55.6 -d +32:04:14.0 -e 2000 -v 9
+	09/07/2006 16:03:43 --> 09/07/2006 16:03:54  ---- tsys
+	09/07/2006 16:03:54 --> 09/07/2006 16:08:54  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 8) ----
+
+LST [hr]=   4.92
+new source ic348sw_7 is at 70.4 degrees elevation
+	09/07/2006 16:08:54 --> 09/07/2006 16:09:04  ---- observe -s ic348sw_7 -r 3:43:57.6 -d +32:02:47.8 -e 2000 -v 9
+	09/07/2006 16:09:04 --> 09/07/2006 16:09:15  ---- tsys
+	09/07/2006 16:09:15 --> 09/07/2006 16:14:15  ---- integrate -s 10 -w
+LST [hr]=   5.01
+LST [hr]=   5.01
+Loop No.= 9
+
+---- Observing Gain Calibrator (Loop = 9) ----
+
+LST [hr]=   5.01
+lookup time: 9 7 2006 16:14
+3c111 is at 69.8 degrees elevation
+	09/07/2006 16:14:15 --> 09/07/2006 16:14:25  ---- observe -s 3c111
+	09/07/2006 16:14:25 --> 09/07/2006 16:14:36  ---- tsys
+	09/07/2006 16:14:36 --> 09/07/2006 16:19:36  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=   5.10
+lookup time: 9 7 2006 16:19
+3c111 is at 69.4 degrees elevation
+LST [hr]=   5.10
+lookup time: 9 7 2006 16:19
+3c84 is at 59.2 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 9) ----
+
+LST [hr]=   5.10
+new source ic348sw_1 is at 68.5 degrees elevation
+	09/07/2006 16:19:36 --> 09/07/2006 16:19:46  ---- observe -s ic348sw_1 -r 3:43:57.1 -d +32:03:04.8 -e 2000 -v 9
+	09/07/2006 16:19:46 --> 09/07/2006 16:19:57  ---- tsys
+	09/07/2006 16:19:57 --> 09/07/2006 16:24:57  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 9) ----
+
+LST [hr]=   5.19
+new source ic348sw_2 is at 67.5 degrees elevation
+	09/07/2006 16:24:57 --> 09/07/2006 16:25:07  ---- observe -s ic348sw_2 -r 3:43:56.6 -d +32:03:21.8 -e 2000 -v 9
+	09/07/2006 16:25:07 --> 09/07/2006 16:25:18  ---- tsys
+	09/07/2006 16:25:18 --> 09/07/2006 16:30:18  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 9) ----
+
+LST [hr]=   5.28
+new source ic348sw_6 is at 66.4 degrees elevation
+	09/07/2006 16:30:18 --> 09/07/2006 16:30:28  ---- observe -s ic348sw_6 -r 3:43:58.1 -d +32:02:30.8 -e 2000 -v 9
+	09/07/2006 16:30:28 --> 09/07/2006 16:30:39  ---- tsys
+	09/07/2006 16:30:39 --> 09/07/2006 16:35:39  ---- integrate -s 10 -w
+
+---- Observing Gain Calibrator (Loop = 9) ----
+
+LST [hr]=   5.37
+lookup time: 9 7 2006 16:35
+3c111 is at 67.5 degrees elevation
+	09/07/2006 16:35:39 --> 09/07/2006 16:35:49  ---- observe -s 3c111
+	09/07/2006 16:35:49 --> 09/07/2006 16:36:00  ---- tsys
+	09/07/2006 16:36:00 --> 09/07/2006 16:41:00  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=   5.46
+lookup time: 9 7 2006 16:41
+3c111 is at 66.7 degrees elevation
+LST [hr]=   5.46
+lookup time: 9 7 2006 16:41
+3c84 is at 55.7 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 9) ----
+
+LST [hr]=   5.46
+new source ic348sw_3 is at 64.3 degrees elevation
+	09/07/2006 16:41:00 --> 09/07/2006 16:41:10  ---- observe -s ic348sw_3 -r 3:43:56.1 -d +32:03:38.8 -e 2000 -v 9
+	09/07/2006 16:41:10 --> 09/07/2006 16:41:21  ---- tsys
+	09/07/2006 16:41:21 --> 09/07/2006 16:46:21  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 9) ----
+
+LST [hr]=   5.55
+new source ic348sw_4 is at 63.3 degrees elevation
+	09/07/2006 16:46:21 --> 09/07/2006 16:46:31  ---- observe -s ic348sw_4 -r 3:43:55.6 -d +32:03:56.8 -e 2000 -v 9
+	09/07/2006 16:46:31 --> 09/07/2006 16:46:42  ---- tsys
+	09/07/2006 16:46:42 --> 09/07/2006 16:51:42  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 9) ----
+
+LST [hr]=   5.64
+new source ic348sw_5 is at 62.3 degrees elevation
+	09/07/2006 16:51:42 --> 09/07/2006 16:51:52  ---- observe -s ic348sw_5 -r 3:43:55.6 -d +32:04:14.0 -e 2000 -v 9
+	09/07/2006 16:51:52 --> 09/07/2006 16:52:03  ---- tsys
+	09/07/2006 16:52:03 --> 09/07/2006 16:57:03  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 9) ----
+
+LST [hr]=   5.73
+new source ic348sw_7 is at 61.1 degrees elevation
+	09/07/2006 16:57:03 --> 09/07/2006 16:57:13  ---- observe -s ic348sw_7 -r 3:43:57.6 -d +32:02:47.8 -e 2000 -v 9
+	09/07/2006 16:57:13 --> 09/07/2006 16:57:24  ---- tsys
+	09/07/2006 16:57:24 --> 09/07/2006 17:02:24  ---- integrate -s 10 -w
+LST [hr]=   5.82
+LST [hr]=   5.82
+Loop No.= 10
+
+---- Observing Gain Calibrator (Loop = 10) ----
+
+LST [hr]=   5.82
+lookup time: 9 7 2006 17:2
+3c111 is at 63.7 degrees elevation
+	09/07/2006 17:02:24 --> 09/07/2006 17:02:34  ---- observe -s 3c111
+	09/07/2006 17:02:34 --> 09/07/2006 17:02:45  ---- tsys
+	09/07/2006 17:02:45 --> 09/07/2006 17:07:45  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=   5.91
+lookup time: 9 7 2006 17:7
+3c111 is at 62.9 degrees elevation
+LST [hr]=   5.91
+lookup time: 9 7 2006 17:7
+3c84 is at 51.3 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 10) ----
+
+LST [hr]=   5.91
+new source ic348sw_1 is at 59.0 degrees elevation
+	09/07/2006 17:07:45 --> 09/07/2006 17:07:55  ---- observe -s ic348sw_1 -r 3:43:57.1 -d +32:03:04.8 -e 2000 -v 9
+	09/07/2006 17:07:55 --> 09/07/2006 17:08:06  ---- tsys
+	09/07/2006 17:08:06 --> 09/07/2006 17:13:06  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 10) ----
+
+LST [hr]=   6.00
+new source ic348sw_2 is at 57.8 degrees elevation
+	09/07/2006 17:13:06 --> 09/07/2006 17:13:16  ---- observe -s ic348sw_2 -r 3:43:56.6 -d +32:03:21.8 -e 2000 -v 9
+	09/07/2006 17:13:16 --> 09/07/2006 17:13:27  ---- tsys
+	09/07/2006 17:13:27 --> 09/07/2006 17:18:27  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 10) ----
+
+LST [hr]=   6.08
+new source ic348sw_6 is at 56.8 degrees elevation
+	09/07/2006 17:18:27 --> 09/07/2006 17:18:37  ---- observe -s ic348sw_6 -r 3:43:58.1 -d +32:02:30.8 -e 2000 -v 9
+	09/07/2006 17:18:37 --> 09/07/2006 17:18:48  ---- tsys
+	09/07/2006 17:18:48 --> 09/07/2006 17:23:48  ---- integrate -s 10 -w
+
+---- Observing Gain Calibrator (Loop = 10) ----
+
+LST [hr]=   6.17
+lookup time: 9 7 2006 17:23
+3c111 is at 60.2 degrees elevation
+	09/07/2006 17:23:48 --> 09/07/2006 17:23:58  ---- observe -s 3c111
+	09/07/2006 17:23:58 --> 09/07/2006 17:24:09  ---- tsys
+	09/07/2006 17:24:09 --> 09/07/2006 17:29:09  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=   6.26
+lookup time: 9 7 2006 17:29
+3c111 is at 59.2 degrees elevation
+LST [hr]=   6.26
+lookup time: 9 7 2006 17:29
+3c84 is at 47.5 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 10) ----
+
+LST [hr]=   6.26
+new source ic348sw_3 is at 54.5 degrees elevation
+	09/07/2006 17:29:09 --> 09/07/2006 17:29:19  ---- observe -s ic348sw_3 -r 3:43:56.1 -d +32:03:38.8 -e 2000 -v 9
+	09/07/2006 17:29:19 --> 09/07/2006 17:29:30  ---- tsys
+	09/07/2006 17:29:30 --> 09/07/2006 17:34:30  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 10) ----
+
+LST [hr]=   6.35
+new source ic348sw_4 is at 53.4 degrees elevation
+	09/07/2006 17:34:30 --> 09/07/2006 17:34:40  ---- observe -s ic348sw_4 -r 3:43:55.6 -d +32:03:56.8 -e 2000 -v 9
+	09/07/2006 17:34:40 --> 09/07/2006 17:34:51  ---- tsys
+	09/07/2006 17:34:51 --> 09/07/2006 17:39:51  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 10) ----
+
+LST [hr]=   6.44
+new source ic348sw_5 is at 52.4 degrees elevation
+	09/07/2006 17:39:51 --> 09/07/2006 17:40:01  ---- observe -s ic348sw_5 -r 3:43:55.6 -d +32:04:14.0 -e 2000 -v 9
+	09/07/2006 17:40:01 --> 09/07/2006 17:40:12  ---- tsys
+	09/07/2006 17:40:12 --> 09/07/2006 17:45:12  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 10) ----
+
+LST [hr]=   6.53
+new source ic348sw_7 is at 51.1 degrees elevation
+	09/07/2006 17:45:12 --> 09/07/2006 17:45:22  ---- observe -s ic348sw_7 -r 3:43:57.6 -d +32:02:47.8 -e 2000 -v 9
+	09/07/2006 17:45:22 --> 09/07/2006 17:45:33  ---- tsys
+	09/07/2006 17:45:33 --> 09/07/2006 17:50:33  ---- integrate -s 10 -w
+LST [hr]=   6.62
+LST [hr]=   6.62
+Loop No.= 11
+
+---- Observing Gain Calibrator (Loop = 11) ----
+
+LST [hr]=   6.62
+lookup time: 9 7 2006 17:50
+3c111 is at 55.4 degrees elevation
+	09/07/2006 17:50:33 --> 09/07/2006 17:50:43  ---- observe -s 3c111
+	09/07/2006 17:50:43 --> 09/07/2006 17:50:54  ---- tsys
+	09/07/2006 17:50:54 --> 09/07/2006 17:55:54  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=   6.71
+lookup time: 9 7 2006 17:55
+3c111 is at 54.5 degrees elevation
+LST [hr]=   6.71
+lookup time: 9 7 2006 17:55
+3c84 is at 42.7 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 11) ----
+
+LST [hr]=   6.71
+new source ic348sw_1 is at 49.0 degrees elevation
+	09/07/2006 17:55:54 --> 09/07/2006 17:56:04  ---- observe -s ic348sw_1 -r 3:43:57.1 -d +32:03:04.8 -e 2000 -v 9
+	09/07/2006 17:56:04 --> 09/07/2006 17:56:15  ---- tsys
+	09/07/2006 17:56:15 --> 09/07/2006 18:01:15  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 11) ----
+
+LST [hr]=   6.80
+new source ic348sw_2 is at 47.8 degrees elevation
+	09/07/2006 18:01:15 --> 09/07/2006 18:01:25  ---- observe -s ic348sw_2 -r 3:43:56.6 -d +32:03:21.8 -e 2000 -v 9
+	09/07/2006 18:01:25 --> 09/07/2006 18:01:36  ---- tsys
+	09/07/2006 18:01:36 --> 09/07/2006 18:06:36  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 11) ----
+
+LST [hr]=   6.89
+new source ic348sw_6 is at 46.7 degrees elevation
+	09/07/2006 18:06:36 --> 09/07/2006 18:06:46  ---- observe -s ic348sw_6 -r 3:43:58.1 -d +32:02:30.8 -e 2000 -v 9
+	09/07/2006 18:06:46 --> 09/07/2006 18:06:57  ---- tsys
+	09/07/2006 18:06:57 --> 09/07/2006 18:11:57  ---- integrate -s 10 -w
+
+---- Observing Gain Calibrator (Loop = 11) ----
+
+LST [hr]=   6.98
+lookup time: 9 7 2006 18:11
+3c111 is at 51.5 degrees elevation
+	09/07/2006 18:11:57 --> 09/07/2006 18:12:07  ---- observe -s 3c111
+	09/07/2006 18:12:07 --> 09/07/2006 18:12:18  ---- tsys
+	09/07/2006 18:12:18 --> 09/07/2006 18:17:18  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=   7.07
+lookup time: 9 7 2006 18:17
+3c111 is at 50.4 degrees elevation
+LST [hr]=   7.07
+lookup time: 9 7 2006 18:17
+3c84 is at 38.7 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 11) ----
+
+LST [hr]=   7.07
+new source ic348sw_3 is at 44.4 degrees elevation
+	09/07/2006 18:17:18 --> 09/07/2006 18:17:28  ---- observe -s ic348sw_3 -r 3:43:56.1 -d +32:03:38.8 -e 2000 -v 9
+	09/07/2006 18:17:28 --> 09/07/2006 18:17:39  ---- tsys
+	09/07/2006 18:17:39 --> 09/07/2006 18:22:39  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 11) ----
+
+LST [hr]=   7.16
+new source ic348sw_4 is at 43.3 degrees elevation
+	09/07/2006 18:22:39 --> 09/07/2006 18:22:49  ---- observe -s ic348sw_4 -r 3:43:55.6 -d +32:03:56.8 -e 2000 -v 9
+	09/07/2006 18:22:49 --> 09/07/2006 18:23:00  ---- tsys
+	09/07/2006 18:23:00 --> 09/07/2006 18:28:00  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 11) ----
+
+LST [hr]=   7.25
+new source ic348sw_5 is at 42.0 degrees elevation
+	09/07/2006 18:28:00 --> 09/07/2006 18:28:10  ---- observe -s ic348sw_5 -r 3:43:55.6 -d +32:04:14.0 -e 2000 -v 9
+	09/07/2006 18:28:10 --> 09/07/2006 18:28:21  ---- tsys
+	09/07/2006 18:28:21 --> 09/07/2006 18:33:21  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 11) ----
+
+LST [hr]=   7.34
+new source ic348sw_7 is at 41.0 degrees elevation
+	09/07/2006 18:33:21 --> 09/07/2006 18:33:31  ---- observe -s ic348sw_7 -r 3:43:57.6 -d +32:02:47.8 -e 2000 -v 9
+	09/07/2006 18:33:31 --> 09/07/2006 18:33:42  ---- tsys
+	09/07/2006 18:33:42 --> 09/07/2006 18:38:42  ---- integrate -s 10 -w
+LST [hr]=   7.43
+LST [hr]=   7.43
+Loop No.= 12
+
+---- Observing Gain Calibrator (Loop = 12) ----
+
+LST [hr]=   7.43
+lookup time: 9 7 2006 18:38
+3c111 is at 46.3 degrees elevation
+	09/07/2006 18:38:42 --> 09/07/2006 18:38:52  ---- observe -s 3c111
+	09/07/2006 18:38:52 --> 09/07/2006 18:39:03  ---- tsys
+	09/07/2006 18:39:03 --> 09/07/2006 18:44:03  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=   7.52
+lookup time: 9 7 2006 18:44
+3c111 is at 45.2 degrees elevation
+LST [hr]=   7.52
+lookup time: 9 7 2006 18:44
+3c84 is at 33.6 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 12) ----
+
+LST [hr]=   7.52
+new source ic348sw_1 is at 38.6 degrees elevation
+	09/07/2006 18:44:03 --> 09/07/2006 18:44:13  ---- observe -s ic348sw_1 -r 3:43:57.1 -d +32:03:04.8 -e 2000 -v 9
+	09/07/2006 18:44:13 --> 09/07/2006 18:44:24  ---- tsys
+	09/07/2006 18:44:24 --> 09/07/2006 18:49:24  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 12) ----
+
+LST [hr]=   7.60
+new source ic348sw_2 is at 37.6 degrees elevation
+	09/07/2006 18:49:24 --> 09/07/2006 18:49:34  ---- observe -s ic348sw_2 -r 3:43:56.6 -d +32:03:21.8 -e 2000 -v 9
+	09/07/2006 18:49:34 --> 09/07/2006 18:49:45  ---- tsys
+	09/07/2006 18:49:45 --> 09/07/2006 18:54:45  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 12) ----
+
+LST [hr]=   7.69
+new source ic348sw_6 is at 36.5 degrees elevation
+	09/07/2006 18:54:45 --> 09/07/2006 18:54:55  ---- observe -s ic348sw_6 -r 3:43:58.1 -d +32:02:30.8 -e 2000 -v 9
+	09/07/2006 18:54:55 --> 09/07/2006 18:55:06  ---- tsys
+	09/07/2006 18:55:06 --> 09/07/2006 19:00:06  ---- integrate -s 10 -w
+
+---- Observing Gain Calibrator (Loop = 12) ----
+
+LST [hr]=   7.78
+lookup time: 9 7 2006 19:0
+3c111 is at 42.1 degrees elevation
+	09/07/2006 19:00:06 --> 09/07/2006 19:00:16  ---- observe -s 3c111
+	09/07/2006 19:00:16 --> 09/07/2006 19:00:27  ---- tsys
+	09/07/2006 19:00:27 --> 09/07/2006 19:05:27  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=   7.87
+lookup time: 9 7 2006 19:5
+3c111 is at 41.1 degrees elevation
+LST [hr]=   7.87
+lookup time: 9 7 2006 19:5
+3c84 is at 29.7 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 12) ----
+
+LST [hr]=   7.87
+new source ic348sw_3 is at 34.2 degrees elevation
+	09/07/2006 19:05:27 --> 09/07/2006 19:05:37  ---- observe -s ic348sw_3 -r 3:43:56.1 -d +32:03:38.8 -e 2000 -v 9
+	09/07/2006 19:05:37 --> 09/07/2006 19:05:48  ---- tsys
+	09/07/2006 19:05:48 --> 09/07/2006 19:10:48  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 12) ----
+
+LST [hr]=   7.96
+new source ic348sw_4 is at 33.1 degrees elevation
+	09/07/2006 19:10:48 --> 09/07/2006 19:10:58  ---- observe -s ic348sw_4 -r 3:43:55.6 -d +32:03:56.8 -e 2000 -v 9
+	09/07/2006 19:10:58 --> 09/07/2006 19:11:09  ---- tsys
+	09/07/2006 19:11:09 --> 09/07/2006 19:16:09  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 12) ----
+
+LST [hr]=   8.05
+new source ic348sw_5 is at 31.8 degrees elevation
+	09/07/2006 19:16:09 --> 09/07/2006 19:16:19  ---- observe -s ic348sw_5 -r 3:43:55.6 -d +32:04:14.0 -e 2000 -v 9
+	09/07/2006 19:16:19 --> 09/07/2006 19:16:30  ---- tsys
+	09/07/2006 19:16:30 --> 09/07/2006 19:21:30  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 12) ----
+
+LST [hr]=   8.14
+new source ic348sw_7 is at 30.8 degrees elevation
+	09/07/2006 19:21:30 --> 09/07/2006 19:21:40  ---- observe -s ic348sw_7 -r 3:43:57.6 -d +32:02:47.8 -e 2000 -v 9
+	09/07/2006 19:21:40 --> 09/07/2006 19:21:51  ---- tsys
+	09/07/2006 19:21:51 --> 09/07/2006 19:26:51  ---- integrate -s 10 -w
+LST [hr]=   8.23
+LST [hr]=   8.23
+
+##########################
+# Final Gain Calibration #
+##########################
+
+LST [hr]=   8.23
+lookup time: 9 7 2006 19:26
+3c111 is at 36.9 degrees elevation
+	09/07/2006 19:26:51 --> 09/07/2006 19:27:01  ---- observe -s 3c111
+	09/07/2006 19:27:01 --> 09/07/2006 19:27:12  ---- tsys
+	09/07/2006 19:27:12 --> 09/07/2006 19:32:12  ---- integrate -s 10 -w
+LST [hr]=   8.32
+lookup time: 9 7 2006 19:32
+3c84 is at 24.6 degrees elevation
+	09/07/2006 19:32:12 --> 09/07/2006 19:32:22  ---- observe -s 3c84
+	09/07/2006 19:32:22 --> 09/07/2006 19:32:33  ---- tsys
+	09/07/2006 19:32:33 --> 09/07/2006 19:37:33  ---- integrate -s 10 -w
+
+#################################
+# Flux and Bandpass Calibration #
+#################################
+
+LST [hr]=   8.41
+lookup time: 9 7 2006 19:37
+uranus is at -50.5 degrees elevation
+LST [hr]=   8.41
+lookup time: 9 7 2006 19:37
+3c454.3 is at -38.1 degrees elevation
+LST [hr]=   8.41
+lookup time: 9 7 2006 19:37
+3c454.3 is at -38.1 degrees elevation
+----- Congratulations!  This is the end of the script.  -----

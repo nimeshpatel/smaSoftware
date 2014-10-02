@@ -1,0 +1,34 @@
+#!/bin/tcsh -vf
+#/application/bin/observe -s 3c279
+#sleep 3
+#tsys
+#/application/bin/integrate -s 10 -w
+#/application/bin/observe -s ceres
+#sleep 3
+#tsys
+#/application/bin/integrate -s 20 -w
+#observe -s mars
+#sleep 3
+#tsys
+#integrate -s 10 -w
+#observe -s vesta
+#sleep 3
+#tsys
+#integrate -w -s 20
+#observe -s titan
+#sleep 3
+#tsys
+#integrate -w -s 20
+#observe -s 1305-105
+#sleep 3
+#tsys
+#integrate -w -s 20
+observe -s 1512-090
+sleep 3
+tsys
+integrate -w -s 20
+observe -s mwc349a
+sleep 3
+tsys
+integrate -w -s 20
+

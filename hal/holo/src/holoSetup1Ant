@@ -1,0 +1,51 @@
+#!/usr/local/bin/perl
+# usage: holoSetup a1  
+# TK 26 Feb 2014; single antenna version of holoSetup. 
+if( $#ARGV < 0 ) {die "Usage: holoSetup a1 entry\n"; }
+$a1=shift;
+$entry=shift;
+print "Setting up for holography with \n antenna $a1  for basic test purposes\n";
+$crate_1 = "crate4";
+if ($a1 >= 7) {$crate_1="crate10";} 
+print "MAKE NECESSARY ANNOUNCEMENTS FOR ANTENNA MOVES \n";
+print "hit return to continue AFTER ANNOUNCEMENT/SAFETY CHECK \n";
+$answer=<STDIN>;
+goto $entry;
+START:
+`disableDrivesTimeout -a $a1`;
+`focusCurveOn -a $a1`;
+sleep(60);
+`farChopper -a $a1`;
+sleep(30);
+print "Finding bore-sight and near field chopper positions\n";
+`padidtest $a1 $a1 $a1`;
+sleep(10);
+`resume`;
+print "Moving to bore-sight and near-field chopper positions\n";
+`boreChopper $a1`;
+# exit;
+CHOOSERX:
+print "Select 230 Rx\n";
+`tune -a $a1 -c "activate -g -l 0 -h 5 -b lowRx4to6 -u highRx4to6"`;
+`restartCorrelator -R l -s15:512 -R h -s15:512`;
+print "clean up newdds; restart dDSServer....\n";
+`ssh newdds "\\rm /etc/initialized"`;
+`killdaemon newdds dDSServer restart`;
+print "Issue dopplerTrack ....\n";
+`dopplerTrack -r 232.4171705 -s15 -l -h16 -n`;
+print "setMRG for beacon ....\n";
+`setMRG -f 7.418158700`;
+`lockYIG -a $a1`;
+`openM3 -a $a1`;
+#exit;
+TUNE:
+print "tune the LOs ....\n";
+`tune -a $a1 -c 'tune 237.6'`;
+print "\n setting up holo switch 1 ....\n";
+$answer	= `ssh corcon ~jtest/holo_switch/bin/set_holo_switch 1 $a1 $a1`;
+print "\n setting up holo switch 2 ....\n";
+$answer	= `ssh corcon ~jtest/holo_switch/bin/set_holo_switch 2 $a1 $a1`;
+print "\n checking holo switch ....\n";
+$answer	= `ssh corcon ~jtest/holo_switch/bin/read_holo_switch`;
+print "$answer";
+exit;

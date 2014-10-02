@@ -1,0 +1,10 @@
+#!/bin/csh -f
+while ( 1 ) 
+  date -u +%Y" "%j" "%H" "%M" "%S > /global/obscon.asiaa.users
+  set list=`who | grep 140.109.177.32 | awk '{printf "%s ",substr($2,4,4)}'`
+  foreach word ( $list )
+    finger | grep $word >> /global/obscon.asiaa.users
+  end
+  sleep 60
+end
+#

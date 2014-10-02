@@ -1,0 +1,13 @@
+#!/bin/tcsh -vf
+#
+# activate -l 0 -h 6 -g
+# dopplerTrack -tco2-1 -u -s12
+# setFeedOffset -f 230
+# restartCorrelator -s 32
+# 
+# point until you have consistent results
+#
+observe -s 3c279
+sleep 2
+tsys
+integrate -t 60 -s 5 -w

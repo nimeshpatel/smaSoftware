@@ -1,0 +1,284 @@
+#!/usr/bin/perl
+#usage: dip Ant# 
+# original version M.Saito, unknown date
+# flush included after system; it doesn't work otherwise! TK 07Feb2001
+# checking to see if antenna reached elevation : TK 07Feb2001
+# command argument in standard format: MS 17Feb2001
+# Modified all occurences of el command to remove the -w switch
+# which is no longer valid- NAP 24 Mar 01
+# 
+# You can now run dips on all antennas at once - TRH 25 Mar 2001
+# Modified to include antenna-7 - NAP 14 Jul 2001
+# Modified to show Process ID Masao 18 aug 2001
+# Print "#" in front of header lines in data file 09 May 2003, TKS.
+# openM3 to start! 10 May 2003, TKS.
+# Use CONT1_DET1 instead of TOTAL_POWER_VOLTS  15-Oct-2003 TRH
+# Also record high freq data from CONT2_DET1   15-Oct-2003 TRH
+# Add the actual fitting arithmetic to this script  09-Apr-2004 TRH (not yet tested)
+# Fixed a bug in filename, while opening the output file. 30-Jun-2004 NAP
+# Added a write to the SMAshLog so that we can see it on the 'l' page. 13-Jul-2004 TRH
+# get cold and coldhigh from reflective memory and write them out. NAP, TK 16 Nov 04
+
+sub Usage() {
+  print "This script will command the antennas to do a skydip, then compute and print\n";
+  print "the opacity in both receiver bands. The observing frequency is read from DSM\n";
+  print "if not specified on the command line.\n";
+  print "Usage: dip [-a 4] [-f 237.4] -c<optional> [-e <firstElev>]\n dip [--antenna 4] [--frequency 237.4] --syncdet --coldload<optional>\n  if -a is not given, all antennas in the project command will be dipped simultaneously\n";
+  print "  The -f flag is optional. If given, the argument should be the LO frequency\n";
+  print "More than one antenna can be specified,  for example, -a 3..5,8\n";
+  print "-s  will read data from syncdet2_channels_v2\n";
+  print "The coldload argument is now hardwired to be always present.\n";
+}
+ 
+foreach $i ( @ARGV ) {
+    $args = $args . $i . " ";
+}
+
+use  POSIX;
+use Getopt::Long;
+use FileHandle;
+$pid=POSIX::getpid();
+$Getopt::Long::autoabbrev=1;
+$antennaPick = 0;
+$obsFrequency = `readDSM -l -m m5 -v DSM_AS_IFLO_REST_FR_D`;
+$obsFrequency *= 0.000000001;
+$firstElev = 80.0;
+$sideband = `readDSM -l -m m5 -v DSM_AS_IFLO_SIDEBAND_S`;
+#  by Taco's standard, having the line in USB corresponds to sideband==-1
+$obsFrequency += $sideband*5;
+GetOptions('antenna=s'=>\$antennaPick,'frequency=f'=>\$obsFrequency,'coldload','help','elevation=f'=>\$firstElev,'syncdet');
+@antennalist = ();
+$opt_coldload = 1;
+
+if ($firstElev > 80 || $firstElev < 45) {
+    Usage();
+    print "First elev must be between 45 and 80\n";
+    exit(0);
+} 
+
+if ($obsFrequency<200 or $obsFrequency>900) {
+  Usage();
+  print "Frequency must be 200 - 800 GHz.\n";
+  exit(0);
+}
+
+if($opt_help) {
+  Usage();
+  exit(0);
+}
+
+
+print "antennaPick = $antennaPick\n";
+if ($antennaPick != 0) {
+  $checklist = `/application/bin/getAntList -a $antennaPick -l`;
+  @antennalisttemp = split(' ',$checklist);
+  $numants = @antennalisttemp;
+  for ($antindex=0; $antindex<$numants; $antindex++) {
+    if (($antennalisttemp[$antindex]<1) || ($antennalisttemp[$antindex]>8)) {
+      Usage();
+      die "Check the command-line arguments.\n";
+    }
+    push @antennalist, $antennalisttemp[$antindex];
+    printf "Will use antenna %d\n",$antennalisttemp[$antindex];
+  }
+} else {
+# no antenna was specified, get the list from the project command
+    print "Will use all antennas in the project:\n";
+    $antcount = 0;
+    for ($i=1; $i<=8; $i++) {
+	$antenna_status=`value -a $i -v antenna_status`;
+	if ($antenna_status==1) { 
+	    push(@antennalist,$i); 
+	    print "Will use antenna $i\n";
+	    $antcount++;
+	}       
+    }
+    print "@antennalist\n";
+    $command = "commaAntennaList -a \"@antennalist\"";
+    print $command."\n";
+    $antennaPick = `commaAntennaList "@antennalist"`;
+    chomp($antennaPick);
+}
+
+print "Will use antennas: $antennaPick\n"; 
+
+open(logfile,">>/rootfs/logs/SMAshLog");
+$line = `date -u +"%a %b %d %X %Y"`;
+chop($line);
+$user = $ENV{"USER"};
+printf logfile "%s ($user): $0 %s\n", $line, $args;
+close(logfile);
+
+$obsFrequencyHigh = 658.0;
+
+@fileHandles = ();
+
+$command="openM3 -a $antennaPick";
+print $command."\n";
+system($command);
+sleep 3;
+$command="el -d $firstElev -a $antennaPick"; 
+print $command."\n";
+system($command);
+sleep 3;
+$command="resume -a $antennaPick";
+print $command."\n";
+system($command);
+sleep 3;
+
+foreach $antennaNumber (@antennalist) {
+# open up data files and send each telescope to starting elevation
+  print "Start dip scan Ant $antennaNumber\n";
+  ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst)=localtime(time);
+  $date_name = sprintf "%02d%02d%02d_%02d%02d",$year-100,$mon+1,$mday,$hour,$min;
+  $filename[$antennaNumber] = "/data/engineering/dip_scan/$date_name.dip$antennaNumber";
+  print "opening file: $filename[$antennaNumber]\n";
+  $fh = new FileHandle $filename[$antennaNumber], O_WRONLY|O_CREAT or die("cannot open the output file $filename[$antennaNumber]\n");
+  push @fileHandles, $fh;
+}
+sleep(5);
+
+# put in the hot load
+foreach $antennaNumber (@antennalist) {
+  $command="tune -a $antennaNumber -c hotload in";
+  system($command);
+  flush;
+}
+sleep(5);
+
+
+# record the hot voltage and remove the hot load
+$index = 0;
+foreach $antennaNumber (@antennalist) {
+# record hotload voltage, etc. in the file header
+  if($opt_syncdet) {
+    $powers = `value -a $antennaNumber -v syncdet2_channels_v2`;
+    @list = split(' ',$powers);
+    $hot = $list[0];
+    $hothigh = $list[1];
+  } else {
+    $hot = `value -a $antennaNumber -v cont1_det1`;
+    $hothigh = `value -a $antennaNumber -v cont2_det1`;
+  }
+  chomp($hot);
+  $command="tune -a $antennaNumber -c hotload out";
+  system($command);
+  flush;
+  $hot_tmp = 273.15+`value -a $antennaNumber -v ambientload_temperature`;
+  $ambient_tmp = 273.15+`value -a $antennaNumber -v weather_temp`;
+  if ($opt_coldload) {
+    print { $fileHandles[$index] } "# tcold 77.0\n";
+    $cold = `value -a $antennaNumber -v coldload_lowfreq_volts`;
+    chomp($cold);
+    $coldtime = `value -a $antennaNumber -v coldload_lowfreq_volts_timestamp`;
+    chomp($coldtime);
+    $coldhigh = `value -a $antennaNumber -v coldload_highfreq_volts`;
+    chomp($coldhigh);
+    $coldhightime = `value -a $antennaNumber -v coldload_highfreq_volts_timestamp`;
+    chomp($coldhightime);
+    print "low-freq rx: cold load = $cold at timestamp = $coldtime";
+  }
+  print { $fileHandles[$index] } "# thot $hot_tmp\n";
+  print { $fileHandles[$index] } "# hot $hot $hothigh\n";
+  print { $fileHandles[$index] } "# bias 0.0\n";
+  print { $fileHandles[$index] } "# tamb $ambient_tmp\n";
+  print { $fileHandles[$index] } "# freq $obsFrequency $obsFrequencyHigh\n";
+  if ($opt_coldload) {
+    print { $fileHandles[$index] } "# cold $cold $coldhigh\n";
+    print { $fileHandles[$index] } "# timestamp $coldtime $coldhightime\n";
+  }
+  print { $fileHandles[$index] } "# antennaNumber $antennaNumber\n";
+  print { $fileHandles[$index] } "# date $date_name\n";
+  $index++;
+}
+sleep(5);
+
+#die "debug\n";
+foreach $a (@antennalist) {
+  $command="resume -a $a";
+  print $command."\n";
+  system($command);
+  flush;
+  flush;
+  $xnpts[$a] = 0;      $sumx[$a] = 0;      $sumy[$a] = 0;
+  $sumy2[$a]= 0;      $sumx2[$a] = 0;      $sumxy[$a] = 0;
+}
+
+gotoel($firstElev);
+gotoel(41.81);
+gotoel(30.0);
+gotoel(23.58);
+gotoel(19.47);
+gotoel(16.60);
+
+#gotoel(14.48);
+#gotoel(12.84);
+#gotoel(11.54);
+#gotoel(10.48);
+
+print "closing file handles\n";
+for ($i=0; $i<=$#antennalist; $i++) {
+  close($fileHandles[$i]);
+}
+foreach $antennaNumber (@antennalist) {
+  print "Data left in file = $filename[$antennaNumber]\n";
+  `chmod 666 $filename[$antennaNumber]`;
+}
+print "done!\n";
+print "To see the results, go to the monitor 'w' page.\n";
+
+sub gotoel {
+  my $el_command=shift(@_);
+  print "process ID = $pid ";
+  print "$el_command\n";
+# send all antennas to the specified elevation
+  $command="el -a $antennaPick -d $el_command";
+  print $command."\n";
+  `el -a $antennaPick -d $el_command`;
+  sleep(2);
+  `antennaWait -a $antennaPick -e $antennawaitarcsec`;
+  read_power($el_command);
+}
+
+sub read_power {#read total power
+    my $elcmd = shift(@_);
+    $index = 0;
+    $pi = 3.14159265358979;
+    foreach $a (@antennalist) {
+      for($i=0;$i<10;$i++){
+	  if($opt_syncdet) {
+	      $powers = `value -a $a -v syncdet2_channels_v2`;
+	      @list = split(' ',$powers);
+	      $hot = $list[0];
+	      $hothigh = $list[1];
+	  } else {
+	      $tot = `value -a $a -v cont1_det1`;
+	      $tot2 = `value -a $a -v cont2_det1`;
+	  }
+	$el = `value -a $a -v actual_el_deg`;
+        $airmass = 1.0/cos($el*$pi/180.0);
+        $xnpts[$a] += 1;
+	$sumx[$a] += $airmass;
+	$sumx2[$a] += $airmass*$airmass;
+	$sumy[$a] += $tot;
+	$sumy2[$a] += $tot*$tot;
+	$sumxy[$a] += $tot*$airmass;
+	$sumyhf[$a] += $tot2;
+	$sumy2hf[$a] += $tot2*$tot2;
+	$sumxyhf[$a] += $tot2*$airmass;
+	printf "%6.3f %6.3f %6.3f %6.3f\n",$el, $tot, $tot2, $airmass;
+	printf { $fileHandles[$index] } "%6.3f %6.3f %6.3f %6.3f\n",$el, $tot, $tot2, $airmass;
+	sleep 1;
+      }
+      if ($elcmd == 16.60) {
+	  $slope = ( $xnpts[$a]*$sumxy[$a] - $sumx[$a]*$sumy[$a] ) / ( $xnpts[$a]*$sumx2[$a] - $sumx[$a]*$sumx[$a] );
+	  $intercept = ( $sumy[$a]*$sumx2[$a] - $sumx[$a]*$sumxy[$a] ) / ( $xnpts[$a]*$sumx2[$a] - $sumx[$a]*$sumx[$a] );
+	  $slope2 = ( $xnpts[$a]*$sumxyhf[$a] - $sumx[$a]*$sumyhf[$a] ) / ( $xnpts[$a]*$sumx2[$a] - $sumx[$a]*$sumx[$a] );
+	  $intercept2 = ( $sumyhf[$a]*$sumx2[$a] - $sumx[$a]*$sumxyhf[$a] ) / ( $xnpts[$a]*$sumx2[$a] - $sumx[$a]*$sumx[$a] );
+#	  printf "antenna %d: tau (low-freq) = %.3f    (high-freq) = %.3f\n", $a, 
+#	    $slope, $slope2;
+      }
+      $index++;
+    }
+}
+

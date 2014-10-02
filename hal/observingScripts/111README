@@ -1,0 +1,13 @@
+I have tried to clean up the /application/bin directory as
+much as possible. I have made directories to save old and
+test version of programs which are not currently in use.
+
+For example, I store old flux scripts in flux.scripts.
+
+If you had something here and it is no longer here,
+it is most likely in a sub-directory. I did not delete
+anything, just reorganized. Anything I couldn't classify
+went into testing_scripts/.
+
+Aloha
+Glen

@@ -1,0 +1,1445 @@
+project -r -i 2182 -f 06nov30_wvrobs_withdip_1.29sec_scans.pl
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Not running on hal9000, entering simulation mode.
+Checking antenna status ... 
+Found antenna 1 in the array!
+Found antenna 2 in the array!
+Found antenna 3 in the array!
+Found antenna 4 in the array!
+Found antenna 5 in the array!
+Found antenna 6 in the array!
+Found antenna 7 in the array!
+Found antenna 8 in the array!
+Antennas 1 2 3 4 5 6 7 8 are going to be used.
+Copy command:
+06nov30_wvrobs_withdip_1.29sec_scans.pl
+
+cp 06nov30_wvrobs_withdip_1.29sec_scans.pl /06nov30_wvrobs_withdip_1.29sec_scans.pl_20070112_012535
+radio
+integrate -t 1.29 -n -p
+project -r -p 'Ross Williamson' -d 'wvrobs' -i 2182
+----- initialization done, starting script -----
+
+#####################################################################
+# corrPlotter scan mode does not update, use MIR mode (phs vs time) #
+#                 all scans are being recorded                      #
+#####################################################################
+
+integrate -n -p
+az -d 10
+el -d 85
+integrate -s 16 -w
+az -d 10
+el -d 80
+integrate -s 16 -w
+az -d 10
+el -d 70
+integrate -s 16 -w
+az -d 10
+el -d 60
+integrate -s 16 -w
+az -d 10
+el -d 50
+integrate -s 16 -w
+az -d 10
+el -d 40
+integrate -s 16 -w
+az -d 10
+el -d 30
+integrate -s 16 -w
+az -d 10
+el -d 20
+integrate -s 16 -w
+az -d 10
+el -d 30
+integrate -s 16 -w
+az -d 10
+el -d 40
+integrate -s 16 -w
+az -d 10
+el -d 50
+integrate -s 16 -w
+az -d 10
+el -d 60
+integrate -s 16 -w
+az -d 10
+el -d 70
+integrate -s 16 -w
+az -d 10
+el -d 80
+integrate -s 16 -w
+az -d 10
+el -d 85
+integrate -s 16 -w
+az -d 10
+el -d 85
+integrate -s 16 -w
+az -d 10
+el -d 80
+integrate -s 16 -w
+az -d 10
+el -d 70
+integrate -s 16 -w
+az -d 10
+el -d 60
+integrate -s 16 -w
+az -d 10
+el -d 50
+integrate -s 16 -w
+az -d 10
+el -d 40
+integrate -s 16 -w
+az -d 10
+el -d 30
+integrate -s 16 -w
+az -d 10
+el -d 20
+integrate -s 16 -w
+az -d 10
+el -d 30
+integrate -s 16 -w
+az -d 10
+el -d 40
+integrate -s 16 -w
+az -d 10
+el -d 50
+integrate -s 16 -w
+az -d 10
+el -d 60
+integrate -s 16 -w
+az -d 10
+el -d 70
+integrate -s 16 -w
+az -d 10
+el -d 80
+integrate -s 16 -w
+az -d 10
+el -d 85
+integrate -s 16 -w
+
+###########################
+# Initial Elevation Check #
+###########################
+
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is available. ----
+LST [hr]=  22.53
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.53
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.54
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.54
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.54
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.54
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.54
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.55
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.55
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.55
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.55
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.55
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.55
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.56
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.56
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.56
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.56
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.56
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.57
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.57
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.57
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.57
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.57
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.58
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.58
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.58
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.58
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.58
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.59
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.59
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.59
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.59
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.59
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.60
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.60
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.60
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.60
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.60
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.61
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.61
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.61
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.61
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.61
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.62
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.62
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.62
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.62
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.62
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.63
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.63
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.63
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.63
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.63
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.64
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.64
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.64
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.64
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.64
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.64
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.65
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.65
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.65
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.65
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.65
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.66
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.66
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.66
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.66
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.66
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.67
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.67
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.67
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.67
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.67
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.68
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.68
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.68
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+integrate -s 1200 -w
+tsys
+observe -s 3c273
+tsys
+integrate -s 1200 -w
+3c279 is at 30.0 degrees elevation
+3c273 is at 30.0 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+LST [hr]=  22.68
+The process ID of this 06nov30_wvrobs_withdip_1.29sec_scans.pl script is 2182
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+3c279 is at 30.0 degrees elevation
+observe -s 3c279
+tsys
+Please remember to stow the antennas safely if you are leaving.

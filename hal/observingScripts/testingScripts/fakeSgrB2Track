@@ -1,0 +1,11 @@
+#!/bin/tcsh -vf
+while (1)
+/application/bin/observe -s 1921-293
+sleep 5
+tsys
+/application/bin/integrate -s 10 -w
+/application/bin/observe -s SgrB2 -r 17:47:19.789 -d -28:22:18.290 -v 62
+sleep 5
+/application/bin/integrate -s 40 -w
+end
+

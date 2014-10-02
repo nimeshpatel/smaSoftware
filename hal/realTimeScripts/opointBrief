@@ -1,0 +1,159 @@
+#!/bin/tcsh -vf
+set list = ""  # list of antennas
+set alist = "" # list of antennas prepended with -a, or blank if using project
+set args = $#argv
+set ctr = 1
+set loop = 0
+set checklist = `getAntList -l`
+foreach i ( $argv )
+  set loop = `expr $loop + 1`
+  if (`expr $loop == $ctr`) then
+    if (`expr $i == '-h'` || `expr $i == '--help'`) then
+      goto usage
+    endif
+    if (`expr $i == '-a'` || `expr $i == '--antenna'`) then
+      if (`expr $ctr != $args`) then
+        set ctr = `expr $ctr + 1`
+        set list = $argv[$ctr]
+        set alist = "-a $list"
+        set checklist = `getAntList $alist -l`
+        echo will use antenna argument = $alist
+      else
+        echo You must supply a list of antennas after -a
+        goto usage
+      endif
+    endif
+  endif
+  set ctr = `expr $ctr + 1`
+  endif
+end
+
+echo `date -u +"%a %b %d %X %Y"` '('$USER'):' $0 $argv >> /rootfs/logs/SMAshLog
+
+resume $alist
+sleep 3
+optical $alist
+sleep 3
+
+# first acquire dark images
+echo slewing to Polaris
+observe $alist -s polaris
+antennaWait $alist
+snapshot $alist -s 50
+sleep 3
+
+echo acquiring dark images
+observe $alist -s blank -r 14:30:00 -d +89:15:00
+antennaWait $alist
+snapshot $alist -s 50
+wait
+foreach antenna ( $checklist )
+  cp /data/engineering/opoint/ant$antenna/latest.snapshot /data/engineering/opoint/ant$antenna/blank50.fits
+end
+snapshot $alist -s 100
+wait
+foreach antenna ( $checklist )
+  cp /data/engineering/opoint/ant$antenna/latest.snapshot /data/engineering/opoint/ant$antenna/blank100.fits
+end
+snapshot $alist -s 200
+wait
+foreach antenna ( $checklist )
+  cp /data/engineering/opoint/ant$antenna/latest.snapshot /data/engineering/opoint/ant$antenna/blank200.fits
+end
+snapshot $alist -s 400
+wait
+foreach antenna ( $checklist )
+  cp /data/engineering/opoint/ant$antenna/latest.snapshot /data/engineering/opoint/ant$antenna/blank400.fits
+end
+snapshot $alist -s 600
+wait
+foreach antenna ( $checklist )
+  cp /data/engineering/opoint/ant$antenna/latest.snapshot /data/engineering/opoint/ant$antenna/blank600.fits
+end
+
+wait
+azelstar $alist -z 270 -d up -b -w 5 -n 1
+wait
+azelstar $alist -z 280 -d down -b -w 5 -n 1
+wait
+azelstar $alist -z 290 -d up -b -w 5 -n 1
+wait
+azelstar $alist -z 300 -d down -b -w 5 -n 1
+wait
+azelstar $alist -z 310 -d up -b -w 5 -n 1
+wait
+azelstar $alist -z 320 -d down -b -w 5 -n 1
+wait
+azelstar $alist -z 330 -d up -b -w 5 -n 1
+wait
+azelstar $alist -z 340 -d down -b -w 5 -n 1
+wait
+azelstar $alist -z 350 -d up -b -w 5 -n 1
+wait
+azelstar $alist -z 0 -d down -b -w 5 -n 1
+wait
+azelstar $alist -z 10 -d up -b -w 5 -n 1
+wait
+azelstar $alist -z 20 -d down -b -w 5 -n 1
+wait
+azelstar $alist -z 30 -d up -b -w 5 -n 1
+wait
+azelstar $alist -z 40 -d down -b -w 5 -n 1
+wait
+azelstar $alist -z 50 -d up -b -w 5 -n 1
+wait
+azelstar $alist -z 60 -d down -b -w 5 -n 1
+wait
+azelstar $alist -z 70 -d up -b -w 5 -n 1
+wait
+azelstar $alist -z 80 -d down -b -w 5 -n 1
+wait
+azelstar $alist -z 90 -d up -b -w 5 -n 1
+wait
+azelstar $alist -z 100 -d down -b -w 5 -n 1
+wait
+azelstar $alist -z 110 -d up -b -w 5 -n 1
+wait
+azelstar $alist -z 120 -d down -b -w 5 -n 1
+wait
+azelstar $alist -z 130 -d up -b -w 5 -n 1
+wait
+azelstar $alist -z 140 -d down -b -w 5 -n 1
+wait
+azelstar $alist -z 150 -d up -b -w 5 -n 1
+wait
+azelstar $alist -z 160 -d down -b -w 5 -n 1
+wait
+azelstar $alist -z 170 -d up -b -w 5 -n 1
+wait
+azelstar $alist -z 180 -d down -b -w 5 -n 1
+wait
+azelstar $alist -z 190 -d up -b -w 5 -n 1
+wait
+azelstar $alist -z 200 -d down -b -w 5 -n 1
+wait
+azelstar $alist -z 210 -d up -b -w 5 -n 1
+wait
+azelstar $alist -z 220 -d down -b -w 5 -n 1
+wait
+azelstar $alist -z 230 -d up -b -w 5 -n 1
+wait
+azelstar $alist -z 240 -d down -b -w 5 -n 1
+wait
+azelstar $alist -z 250 -d up -b -w 5 -n 1
+wait
+azelstar $alist -z 260 -d down -b -w 5 -n 1
+wait
+azelstar $alist -z 270 -d up -b -w 5 -n 1
+wait
+radio $alist
+wait
+
+echo Completed all images. Stowing.
+stow $alist
+
+exit 0
+
+usage:
+  echo "Usage: $0 [-a <antennaList: comma-delimited>]"
+  exit 0

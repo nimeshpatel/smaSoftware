@@ -1,0 +1,18 @@
+CC = gcc
+BIN = chartuCommand chartu
+LIBSMAPOPT=../../smapopt/libsmapopt.a
+
+all: $(BIN)
+
+chartuCommand: chartuCommand.o 
+	$(CC) -o $@ chartuCommand.o -I$(COMMONINC) $(LIBSMAPOPT)
+
+chartuCommand.o: chartuCommand.c ../includeFiles/chart.h
+	$(CC) -g chartuCommand.c -c -I$(COMMONINC)
+
+chartu: chartu.o $(COMMONLIB)/rm.o
+	$(CC) -g -o $@  chartu.o $(COMMONLIB)/rm.o -I$(COMMONINC) -mthreads \
+	$(LIBSMAPOPT)
+
+chartu.o: chartu.c ../includeFiles/chartu.h
+	$(CC) -g chartu.c -c -I$(COMMONINC)

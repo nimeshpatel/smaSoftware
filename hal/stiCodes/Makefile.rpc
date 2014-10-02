@@ -1,0 +1,27 @@
+all: tune tune_server
+
+tune: tune.c tune.o tune_clnt.o tune_xdr.o
+	gcc -o tune tune.o tune_clnt.o tune_xdr.o -lnsl
+
+tune.o: tune.c tune.h
+	gcc -c tune.c
+tune.h: tune.x
+	rpcgen tune.x
+tune_clnt.o: tune_clnt.c tune.h tune.x
+	gcc -c tune_clnt.c
+tune_clnt.c: tune.x 
+	rpcgen tune.x
+tune_xdr.o: tune.h tune_xdr.c tune.x
+	gcc -c tune_xdr.c
+tune_xdr.c: tune.h tune.x
+	rpcgen tune.x
+
+tune_server: tune_svc_proc.c tune_svc_proc.o tune_svc.o tune_xdr.o
+	gcc -o tune_server tune_svc_proc.o tune_svc.o tune_xdr.o -lnsl
+
+tune_svc_proc.o: tune_svc_proc.c tune.h tune.x
+	gcc -c tune_svc_proc.c
+tune_svc.o: tune.x
+	gcc -c tune_svc.c
+tune_svc.c:
+	rpcgen tune.x

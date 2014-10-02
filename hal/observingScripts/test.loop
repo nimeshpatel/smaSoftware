@@ -1,0 +1,14 @@
+#!/bin/tcsh -vf
+#
+while (1)
+  observe -s uranus  
+  sleep 35
+  observe -s 3c84
+  sleep 35
+  observe -s 0224+069
+  sleep 35
+  observe -s 0102+584
+  sleep 35
+#
+end
+

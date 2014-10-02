@@ -1,0 +1,21 @@
+#!/usr/bin/perl
+# takes a comma-delimited antenna list and removes the specified antenna
+# used by "dualrxpoint"
+@args = split(',',$ARGV[0]);
+$listbegun = 0;
+for ($i=0; $i<=$#args; $i++) {
+    if ($args[$i] =~ /-h/) {
+	print "Usage: $0 <comma-delimited list> <antennaToRemove>\n";
+	print "  it will output a new comma-delimited list, which is useful in scripts\n"; 
+	exit;
+    }
+    if ($args[$i] != $ARGV[1]) {
+	if ($listbegun) {
+	    print ",";
+	}
+	print "$args[$i]";
+	$listbegun = 1;
+    }
+}
+print "\n";
+#

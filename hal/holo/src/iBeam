@@ -1,0 +1,180 @@
+#!/usr/bin/perl -w
+#
+# iBeam.pl - taking beam pattern for interferometer mode
+#	    and record(append) scan information to a log file.
+#
+# by Masao,   Last modified on 2001 Mar 02
+# by Masao,   Last modified on 2001 Oct 13 remove FITS-IDI part
+#
+# some part was sneakly stolen from Kazushi's ks6pt
+#
+################################################################################
+use Getopt::Long;
+$Getopt::Long::autoabbrev=1;
+use  POSIX;
+$pid=POSIX::getpid();
+print "pid = $pid\n";
+
+# a flag to get status reports for debugging purposes
+$testflag = 0; #do nothing if 1
+$fileflag = 1; #write log if 1
+$azoff_0=0;
+$eloff_0=0;
+
+# Interrupt handler
+$SIG{'TERM'} = 'finish';
+$SIG{'INT'}  = 'finish';
+
+	GetOptions('reference=i'=>\$refantenna,'antenna=i'=>\$antennaNumber,
+	'source=s'=>\$source,'map_size=i'=>\$map_size,'frequency=f'=>\$obsFrequency,
+	'int_time=i'=>\$int_time,'grid_size=i'=>\$grid);
+	
+# check parameters
+	if($refantenna<2 or $refantenna>7){
+		&Usage;die "Reference Antenna number should be 2-7.\n";
+	}
+	if($antennaNumber<2 or $antennaNumber>7){
+		&Usage;die "Antenna number should be 2-7.\n";
+	}
+	if(!$source){
+		Usage();die "Please specify source name.\n";
+	}
+
+	if($map_size==8){}
+	elsif($map_size==12){}
+	elsif($map_size==16){}
+	elsif($map_size==32){}
+	else{
+		Usage();die "map size should be 8, 12, 16 or 32.\n";
+	}
+	if($obsFrequency<200 or $obsFrequency>400){
+		Usage();die "Frequency must be 200 -400 GHz.\n";
+	}
+	if($int_time<5){
+		Usage();die "integration time should be > 5.\n";
+	}
+
+	unless($grid){$grid=int(25.*230./$obsFrequency);} #Nyquist Sampling
+
+# Open log file
+	($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst)=localtime(time);
+	$date_name=sprintf "%02d%02d%02d_%02d%02d",$year-100,$mon+1,$mday,$hour,$min;
+	$filename=">>/common/data/holo/ant$antennaNumber/$date_name.ibeam$antennaNumber";
+	print "filename: $filename\n";
+	open (OUT, $filename)||die("cannot open the output file\n") if $fileflag;
+
+# append obs info to log file
+$log = "#source = $source \n"
+      ."#refantenna = $refantenna\n"
+      ."#antenna = $antennaNumber\n"
+      ."#freq = $obsFrequency\n"
+      ."#integ  = $int_time sec \n"
+      ."#map_size = $map_size\n"
+      ."#grid = $grid\n";
+
+	print $log;
+	print OUT $log if $fileflag;
+
+# ---------------------------------------------------------------------------- #
+# Get to the source 
+#	&docommand("observe -a $antennaNumber -s $source", $testflag);
+#	&docommand("observe -a $refantenna -s $source", $testflag);
+	$az=`value -a $antennaNumber -v actual_az_deg`;
+	msleep(1.0);
+	$el=`value -a $antennaNumber -v actual_el_deg`;
+
+# append obs info to log file
+$log = "#az = $az"
+	."#el = $el\n";
+
+	print $log;
+	print OUT $log if $fileflag;
+	
+	msleep(5.0);
+	$azoff_0=`value -a $antennaNumber -v azoff`;
+	msleep(5.0);
+	$eloff_0=`value -a $antennaNumber -v eloff`;
+
+# Start scan
+	print "..Started\n";
+	&docommand("integrate -f -n",$testflag);
+	&docommand("integrate -f -p",$testflag);
+	&docommand("integrate -t$int_time",$testflag);
+
+	for($n_el=0;$n_el<$map_size;$n_el++){
+		$elofftot=$eloff_0+($n_el-$map_size/2+1)*$grid;
+		&docommand("eloff -a $antennaNumber -s $elofftot", $testflag);
+		$azofftot=$azoff_0+(1-$map_size/2)*$grid;
+ 		&docommand("azoff -a $antennaNumber -s $azofftot", $testflag);
+		sleep 2;
+		print "Azscan started\n";
+		for($n_az=0;$n_az<$map_size;$n_az++){
+			$azofftot=$azoff_0+($n_az-$map_size/2+1)*$grid;
+	 		&docommand("azoff -a $antennaNumber -s $azofftot", $testflag);
+	                $azerr=`value -a $antennaNumber -v az_tracking_error`;
+			msleep(5.0);
+       		        while(abs($azerr)>2){
+	                	sleep 1;
+	                	$azerr=`value -a $antennaNumber -v az_tracking_error`;
+       		        	if(abs($azerr)<2){
+					print "azerr=$azerr\n";
+					last;
+				}
+                	}
+			printf("pid=%d azoff=%d eloff=%d\n",$pid,$azofftot,$elofftot);
+			&docommand("integrate -i",$testflag);
+			&docommand("integrate -s1 -t$int_time -w",$testflag);
+			&docommand("integrate -n -i",$testflag);
+			sleep 1;
+		}
+	}
+
+#back to the start position
+	sleep 1;
+	&docommand("integrate -t 30 -f -i -p",$testflag);
+	&docommand("azoff -a $antennaNumber -s $azoff_0", $testflag);
+	&docommand("eloff -a $antennaNumber -s $eloff_0", $testflag);
+
+
+print "Done. Bye.\n";
+		
+# ---------------------------------------------------------------------------- #
+# ---------------------------    Subroutines    ------------------------------ #
+
+# --- print usage of this script, and then exit.---
+sub Usage {
+    print "Usage: iBeam -r reference -a antenna -s source -m map_size -f frequency -i int -g grid<optional>\n";
+    print "	  reference = reference antenna\n";
+    print "	  antenna = target antenna\n";
+    print "	  source   = source name\n";
+    print "	  map_size = (8,12,16,32)\n";
+    print "	  frequency = observing frequency\n";
+    print "	  int   = integration time (second)\n";
+    print "	  grid = grid size (arcsecond) <optional>\n";
+    print "ex.:  iBeam -r 3 -a 4 -s mars -m 8 -f 237.4 -i 5\n";
+}
+
+# --- interrupt handler for CTRL-C ---
+sub finish {
+   print "interruptted and quit the program.\n";
+   exit(1);
+}
+
+# --- perform a shell task with delay, with optional printing. ---
+sub docommand {
+   my $flag = pop(@_);
+   
+   if ($flag) {		     # if $testflag is true then print command
+      print "@_\n";
+   }
+   select undef, undef, undef, 0.5;	     # short pause
+   system("@_") unless $flag;		# execute command if testflag=0
+   select undef, undef, undef, 0.5;	     # short pause
+}
+
+# --- short pause ---
+sub msleep{
+	my $tlength = shift(@_);
+	select undef, undef, undef, $tlength/10;
+}
+# ---------------------------------------------------------------------------- #

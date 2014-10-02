@@ -1,0 +1,134 @@
+#!/usr/local/bin/perl
+# beacon
+# This script commands the antenna(s) to point at the holography beacon.
+# It first looks up which pad it is on. It also reads the chopper.conf files
+# to get the farfield focus for each antenna. - TRH  April 2006
+# Not yet tested.
+
+@antennalist = ();
+
+sub Usage() {
+  print "Usage1:  beacon -a <antennaNumber>  (moves a single antenna)\n";
+  print "Usage2:  beacon                     (moves all antennas in the project)\n";
+  print "pads with known coordinates: 1, 4, 5, 7, 8, 9, 11, 14, 17, 23\n";
+}
+use Getopt::Long;
+GetOptions('antenna=i'=>\$antennaNumber,'help');
+$lowfreq = 1;  
+$numants = 0;
+#find the antennas specified in the project command.
+if ($antennaNumber!=0) {
+  if (($antennaNumber<1)||($antennaNumber>8)) {
+    &Usage;
+    die "Antenna number should be 1..8.\n";
+  }
+  push(@antennalist,$antennaNumber);
+  $numants = 1;
+} else {
+# no antenna was specified, so do them all
+  for ($i=1;$i<=8;$i++) {
+    $antenna_status=`value -a $i -v antenna_status`;
+    if ($antenna_status==1) { 
+      push(@antennalist,$i);
+      $numants++;
+    }
+  }
+}
+
+if ($opt_help) {
+  &Usage;
+  exit(0);
+}
+
+if ($numants == 0) {
+  print "You must specify an antenna, either with -a, or with an active project\n";
+  exit(0);
+}
+
+open(logfile,">>/rootfs/logs/SMAshLog");
+$line = `date -u +"%a %b %d %X %Y"`;
+chop($line);
+$user = $ENV{"USER"};
+printf logfile "%s ($user): $0 %s\n", $line, $args;
+close(logfile);
+
+# values in millimeters
+$padZoffsetmm[1] = 36.7;
+$padZoffsetmm[4]  = 33.1;
+$padZoffsetmm[5]  = 34.3;
+$padZoffsetmm[7]  = 32.5;
+$padZoffsetmm[8]  = 31.8;
+$padZoffsetmm[9]  = 29.2;
+$padZoffsetmm[11] = 36.0;
+$padZoffsetmm[14] = 25.8;
+$padZoffsetmm[17] = 25.8; # value not measured yet by TK
+$padZoffsetmm[23] = 31.5;
+
+push(@padlist,1);
+push(@padlist,4);
+push(@padlist,5);
+push(@padlist,7);
+push(@padlist,8);
+push(@padlist,9);
+push(@padlist,11);
+push(@padlist,14);
+push(@padlist,17);
+push(@padlist,23);
+
+foreach $padNumber (@padlist) {
+    $padZoffset[$padNumber] = $padZoffsetmm[$padNumber]*2000;
+}
+
+foreach $antennaNumber (@antennalist) {
+# look up the farfield focus value
+  $string = `grep "FAR z" /otherPowerPCs/acc/$antennaNumber/configFiles/chopper.conf`;
+#  print "string=$string\n";
+  ($junk,$junk2,$farfield) = split(" ",$string);
+  if ($farfield > -100 && $farfield < 100) {
+      printf "Converting value in chopper.conf file from mm to counts\n";
+# must convert from mm to counts
+      $farfield = $farfield*2000;
+  }
+  print "farfield focus = $farfield\n";
+  $pad_id = `value -v pad_id -a $antennaNumber`;
+  $counts = $padZoffset[$pad_id] + $farfield;
+  if ($pad_id==1) {
+      $az = 48.360; $el = 18.735;
+  } elsif ($pad_id==4) {
+      $az = 53.195; $el = 17.183;
+  } elsif ($pad_id==5) {
+      $az = 55.681; $el =  18.335;
+  } elsif ($pad_id==7) {
+      $az = 48.775; $el = 16.695;
+  } elsif ($pad_id==8) {
+      $az = 54.190; $el = 14.975;
+  } elsif ($pad_id==9) { 
+      $az = 60.020; $el = 16.006;
+  } elsif ($pad_id==11) { 
+      $az = 61.392; $el = 19.890;
+  } elsif ($pad_id==14) { 
+# az/el values from log entry 10895 using antenna 3, counts not updated
+      $az = 68.940; $el = 12.460;
+  } elsif ($pad_id==17) { 
+      $az = 49.75; $el = 11.747;
+  } elsif ($pad_id==23) { 
+#     data from antenna 5 on 12-Oct-2005  x=360, y=-2617
+      $az = 65.355; $el = 17.820;
+  } else {
+      printf "Could not find a valid pad ID for antenna %d\n",$antennaNumber;
+      exit(0);
+  }
+  printf "pad %d: Z offset (mm) = %.3f\n", $pad_id, $padZoffsetmm[$pad_id];
+  printf "pad %d: Z offset (counts) = %d\n", $pad_id, $padZoffset[$pad_id];
+  printf "Stopping chopper\n";
+  `stopChopping -a $antennaNumber`;
+  sleep 2;
+  printf "Sending chopper %d to counts = %d\n",$antennaNumber,$counts;
+  `positionChopper -c -z $counts -a $antennaNumber`;
+  sleep 2;
+
+  printf "Sending antenna %d to azimuth = %.4f, elev = %.4f\n",$antennaNumber,$az,$el;
+  print "Hit return to continue or Ctrl-C to abort at this point.\n";
+  $answer=<STDIN>;
+  `azel -a $antennaNumber -z $az -e $el`;
+}

@@ -1,0 +1,15 @@
+#!/usr/bin/perl
+
+$directory = "/data/engineering/stability";
+($sec, $min, $hr, $day, $mon, $year) = gmtime;
+$year += 1900;
+$mon++;
+$timeStamp=sprintf("%4d%02d%02d_%02d%02d", $year,$mon,$day,$hr,$min);
+$filename = "fridges_$timeStamp";
+open TMP, ">$directory/$filename";
+printf TMP "#STARTTIME %02d/%02d/%04d %02d:%02d:%02d\n",
+    $day, $mon, $year, $hr, $min, $sec;
+close TMP;
+
+# Starting a 1 day collection of Fridge tmeperatures
+system("shmValue -a1..8 -t -s4 -n21600  \"RM_DEWAR_TEMPS_V16_F[2]\" >> $directory/$filename");

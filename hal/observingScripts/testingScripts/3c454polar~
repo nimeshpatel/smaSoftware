@@ -1,0 +1,15 @@
+#!/bin/tcsh -vf
+/application/bin/observe -s 3c454.3
+while (1)
+    observe -s 3c454.3_RLLLLLL -r 22:53:57.7480 -d 16:08:53.5630
+    tsys
+    rotateWaveplate -L
+    rotateWaveplate -a 2 -R
+    /application/bin/integrate -s 10 -w
+    observe -s 3c454.3_LLLLLLL -r 22:53:57.7480 -d 16:08:53.5630
+    rotateWaveplate -L
+    /application/bin/integrate -s 20 -w
+    rotateWaveplate -R
+    observe -s 3c454.3_RRRRRRR -r 22:53:57.7480 -d 16:08:53.5630
+    /application/bin/integrate -s 30 -w
+end

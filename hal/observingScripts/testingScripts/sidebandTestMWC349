@@ -1,0 +1,15 @@
+#!/bin/tcsh -vf
+while (1)
+  /application/bin/observe -s 2025+337
+  sleep 5
+  tsys
+  /application/bin/integrate -s 10 -w
+  /application/bin/observe -s MWC349 -r 20:32:45.44 -d 40:39:36.8
+  sleep 5
+  /application/bin/integrate -s 60 -w
+  /application/bin/observe -s 2025+337
+  sleep 5
+  tsys
+  /application/bin/integrate -s 10 -w -b
+end
+

@@ -1,0 +1,12 @@
+#!/bin/tcsh -vf
+while (1)
+/application/bin/observe -s rcas
+sleep 5
+tsys
+/application/bin/integrate -s 20 -w
+/application/bin/observe -s cephahw2d -r 22:56:18.00 -d +62:01:48.00 -e 2000
+sleep 5
+tsys
+/application/bin/integrate -s 20 -w
+end
+

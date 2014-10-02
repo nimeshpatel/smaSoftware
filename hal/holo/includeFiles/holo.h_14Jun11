@@ -1,0 +1,416 @@
+/* define bore sight for tests */
+/* all distances are to the dish surface;
+probably accurate to 1m  measured by sighting from
+subaru catwalk with the laser range finder 30 Aug 00
+added high frequency beacon position by Masao 02 Feb 02 
+
+added ant 1 TK 08 Jan 02 */
+
+
+
+#define AZ_BORE0 10.0 
+#define EL_BORE0 45.0
+
+
+/* define bore sight position ant 1 on pad 1
+distance: 201.5m 
+co-ordinates were copied from ant 2 on pad 1 
+#define AZ_BORE1 48.140
+#define EL_BORE1 18.7424
+*/
+/* updated ant1 on pad 8 -TK */
+/* distance 263m */
+
+/* #define AZ_BORE1 54.187 
+#define EL_BORE1 14.961 */
+
+/*
+#define AZ_BORE1 54.231
+#define EL_BORE1 15.0
+*/
+/* changed to following, on 28 mar 2003,
+due to optimized chopper counts
+for antenna-1 on pad 8*/
+#define AZ_BORE1 54.19 
+/* #define EL_BORE1 14.955 */
+/* El change: 19 Oct 04; pad 8 chopperY=-2800 */
+#define EL_BORE1 14.975 
+
+#define AZ_BORE1H 48.140
+#define EL_BORE1H 18.7424
+/* 19 Dec 07 Ant 1 on pad 12; coord from Ant 5 */
+/* #define AZ_BORE1 48.250
+#define EL_BORE1 14.625 */
+/* 21 Mar 08 Ant 1 on pad 23; coord from Ant 5 */
+/* #define AZ_BORE1 65.355 
+#define EL_BORE1 17.82  */
+/* 08 May 2008; Ant 1 on pad 4; coord from Ant 3 */
+/* #define AZ_BORE1 53.195
+#define EL_BORE1 17.198 */
+/* Pad 1; 24 Sep 08; copied from Ant 6 */
+/* #define AZ_BORE1 48.36
+#define EL_BORE1 18.735
+#define AZ_BORE1 54.19 
+#define EL_BORE1 14.969 */
+
+/* pad 9; z_far: 28.36mm, from Ant 8.
+30 Apr 2009 */
+/* #define AZ_BORE1 60.032 
+#define EL_BORE1 15.982 */
+
+/* pad 23; 13 May 10 from ANt 3 */
+/* #define AZ_BORE1 65.358 */
+/* #define EL_BORE1 17.815 */
+
+/* 08 May 2008; Ant 1 on pad 4; coord from Ant 3 */
+/* #define AZ_BORE1 53.195
+#define EL_BORE1 17.198 */
+/* pad 12; 27 Apr 11; copied from Ant 7 */
+#define AZ_BORE1 49.255 
+#define EL_BORE1 14.629 
+
+/* define bore sight position ant 2 on pad 1
+distance: 201.5m 
+#define AZ_BORE2 48.140
+#define EL_BORE2 18.7424
+*/
+#define AZ_BORE2H 48.140
+#define EL_BORE2H 18.7424 
+/* define bore sight position ant 2 on pad 4
+13 Jul 03    */
+
+/* #define AZ_BORE2 53.195
+#define EL_BORE2 17.183   */
+
+/* Ant 2 on pad 5 */
+/* 08 Dec 05; copied over from Ant 3 on pad 5 */
+
+/* #define AZ_BORE2 55.681   */
+/* #define EL_BORE2 18.335   */
+
+/* Ant 2 on pad 7, copied from Ant 4, Nov 2004*/
+/* 11 Jul 2007 */
+/* #define AZ_BORE2 48.775
+#define EL_BORE2 16.695 */
+/* pad 23; 03 Feb 09 from ANt 3 */
+/* #define AZ_BORE2 65.358 */
+/* #define EL_BORE2 17.815 */
+/* 15 Apr 10, pad 7; copied from above */
+/* #define AZ_BORE2 48.775 
+#define EL_BORE2 16.695  */
+/* 06 Jul 10, pad 17; copied from previous antennas */
+/* #define AZ_BORE2 49.75
+#define EL_BORE2 11.75 */
+/* pad 6; from Ant 3; 03 Feb 09; measured */
+/* #define AZ_BORE2 53.288
+#define EL_BORE2 18.775 */
+/* measured  az and el for pad 14 09 Feb 06 (Ant 3)*/
+/* #define AZ_BORE2 68.94
+#define EL_BORE2 12.458 */
+/* pad 9; copied from Ant 1 */
+#define AZ_BORE2 60.032
+#define EL_BORE2 15.982 
+
+
+
+/* define bore sight position ant 3 on pad 5
+distance = 205m; bore-sight measured on Sep 27, 04 after
+correcting a 2000 counts error in x */
+/* #define AZ_BORE3 55.681   x= 3176, z= 88000, T=0 */
+/* #define EL_BORE3 18.335   y= -2542*/
+/* distance = 205m; bore-sight measured on Sep 22, 04 */
+/* #define AZ_BORE3 55.725  x= 5192, z=, T= */
+/* #define EL_BORE3 18.33  y= */
+/* define bore sight position ant 3 on pad 4
+distance: 218.5 */
+/* #define AZ_BORE3 53.0008  1.3mm position */
+/* #define EL_BORE3 17.2119 */
+#define AZ_BORE3H 53.01944 /* 1.3mm position */
+#define EL_BORE3H 17.1878
+/* Ant 3 on pad 4; copied from Ant 2 value */
+/* #define AZ_BORE3 53.195 */
+/* #define EL_BORE3 17.183    */
+/* measured  az and el for pad 14 09 Feb 06*/
+/* #define AZ_BORE3 68.94
+#define EL_BORE3 12.458 */
+/* 01 Nov 06; pad 17; co-ordinate from Ant 4, 30 Dec 2004 */
+/* #define AZ_BORE3  49.75 */
+/* #define EL_BORE3  11.747 */
+/* 16 Jan 2007; Ant 3, pad 4; copied from Apr-May '06 */
+/* #define AZ_BORE3 53.195 */
+/* #define EL_BORE3 17.183 */
+/* Measured on 17 Jan 07; pad 4 */
+/* #define AZ_BORE3 53.195
+#define EL_BORE3 17.198 */
+/* 16 Oct 08 Ant 3 on pad 23; bore-sight measured on 09 Oct. */
+#define AZ_BORE3 65.358 
+#define EL_BORE3 17.815 
+
+/* pad 6; 03 Feb 09; measured */
+/* #define AZ_BORE3 53.288
+#define EL_BORE3 18.775 */
+
+/* pad 12; 08 May 09; measured on 08 May 09 */
+/* #define AZ_BORE3 49.26 
+#define EL_BORE3 14.622 */
+/* pad 12; 14 May 09; measured on 14 May 09 at 332 GHz. */
+/* NOTE: ASYMMETRIC BEAM */
+/* #define AZ_BORE3 49.253
+#define EL_BORE3 14.628 */
+/* 21 Apr 2010; pad 9 - copied from Ant 8 */
+/* #define AZ_BORE3 60.032 */
+/* #define EL_BORE3 15.982 */
+/* 10 Feb 2011; pad 11; measured */
+/* #define AZ_BORE3 61.402 
+#define EL_BORE3 19.892 */
+
+/* define bore sight position ant 4 on pad 9
+distance: 235.0 */
+/* #define AZ_BORE4 59.865167    x=505 */
+/* #define EL_BORE4 16.0025   y=-900 */
+#define AZ_BORE4H 60.1228   /* x=505 */
+#define EL_BORE4H 15.9447  /* y=-900 */
+/* updated 10 sep 2002 TK */
+/* #define AZ_BORE4 53.2    x=505 */
+/* #define EL_BORE4 17.2   y=-900 */
+/* #define AZ_BORE4H 60.1228    x=505 */
+/* #define EL_BORE4H 15.9447  y=-900 */
+/* ant4 on pad 4 TK, 21 Nov 2002 */
+/* #define AZ_BORE4 53.197    x=505, T=32788, Z=70000*/
+/* #define EL_BORE4 17.19    y=-900 */
+/* 23 Nov 04; Pad 7; newly determined boresight */
+/* #define AZ_BORE4 48.775      x=380, T=-3773, Z=70000*/
+/* #define EL_BORE4 16.695     y=-925 */
+/* 30 Dec 04; Pad 17; measured by mapping */
+/* distance 365 m : estimate*/
+/* #define AZ_BORE4 49.75     x=380, T=?, Z=46500 measured*/
+/* #define EL_BORE4 11.747    y=-958 */
+/* 16 Jan 2007; Ant 4, pad 5; from Ant 2, Dec 05 */
+/* Measured on 19 Jan 2007 */
+/* Use for 07 Oct 2008 */
+#define AZ_BORE4 55.673
+#define EL_BORE4 18.332
+/* Measure 23 Apr 09 */
+/* #define AZ_BORE4 55.67
+#define EL_BORE4 18.335 */
+/* pad 12 below; 24 Jul 07; from Ant 8 */
+/* #define AZ_BORE4 49.25
+#define EL_BORE4 14.618 */
+/* 22 Sep 2010; pad 9 - copied from Ant 3/8 */
+/* #define AZ_BORE4 60.032 
+#define EL_BORE4 15.982  */
+/* pad 8; 08Dec2010; copied over from Ant 7 */
+/* #define AZ_BORE4 54.19 
+#define EL_BORE4 14.968 */
+
+/* define bore sight position ant 5 on pad 5
+distance: 205.0 */
+/* #define AZ_BORE5 55.4700  x=600 */
+/* #define EL_BORE5 18.3585  y=-2600 */
+#define AZ_BORE5H 55.7881  /* x=600 */
+#define EL_BORE5H 18.3000  /*  y=-2600 */
+/* updated on 21 Nov 02, TK */
+/* #define AZ_BORE5 55.683   x=201, z=70000, T=32780 */
+/* #define EL_BORE5 18.335   y=-2200 */
+/* Measured value for pad 23 */
+/* 12 Oct 2005; x 360, y -2617, z 70000 */
+/* #define AZ_BORE5 65.355 
+#define EL_BORE5 17.82 */
+/* pad 12 copied from Ant 8: */
+/* #define AZ_BORE5 49.25 */
+/* #define EL_BORE5 14.625 */
+
+/* pad 8 below */
+/* #define AZ_BORE5 54.190 
+#define EL_BORE5 14.975 */
+/* pad 4 below; copied from Ant 7; 28 Oct 09 */
+#define AZ_BORE5 53.197 
+#define EL_BORE5 17.196 
+/* pad 23; copied from Ant 2 */
+/* #define AZ_BORE5 65.358 
+#define EL_BORE5 17.815 */
+
+/* define bore sight position ant 7 on pad 11
+distance: 205.0 */
+/* #define AZ_BORE7 61.2380 
+#define EL_BORE7 19.8830 */
+/* #define AZ_BORE7 61.2160  x=4500 y=-2800 z=94000 t=32768 */
+#define EL_BORE7H 19.9110 
+#define AZ_BORE7H 61.2160   /* x=4500 y=-2800 z=94000 t=32768 */
+/* #define EL_BORE7 19.9110 */
+/* 23 march 05; new measurement below */
+/* #define AZ_BORE7 61.392  x=2500 y=-2926 z=94000 t=-1*/
+/* #define EL_BORE7 19.89 */
+/* 23 May 07; Ant 7 on pad 17; co-ordinate from Ant 4, 30 Dec 2004 */
+/* #define AZ_BORE7  49.75 */
+/* #define EL_BORE7  11.747 */
+/* pad 9 copied from Ant 8, april 2006*/
+/* #define AZ_BORE7 60.033
+#define EL_BORE7 15.982 
+#define AZ_BORE7 60.035 
+#define EL_BORE7 15.98 */
+/* Pad 12; 24 Sep 08; copied from antennas 4/5 */
+/* #define AZ_BORE7 49.25 
+#define EL_BORE7 14.625 */
+/* Pad 12; 25 Nov 08; based on compilation of past measurements */
+#define AZ_BORE7 49.25 
+#define EL_BORE7 14.622 
+
+/* pad 3; 03 Feb 09 measured */
+/* large beam asymmetry; may mean the bore-sight position needs change */
+/* #define AZ_BORE7 50.925
+#define EL_BORE7 16.833 */
+
+/* pad 4; 23 Apr 09; from conf file */
+/* #define AZ_BORE7 53.197 */
+/* #define EL_BORE7 17.196 */
+/* pad 12; 13 May 10; copied from Ant 3 measured on 08 May 09 */
+/* #define AZ_BORE7 49.255 
+#define EL_BORE7 14.629 */
+/* pad 8; 28 Oct 09; copied from Ant1 */
+#define AZ_BORE7 54.19  
+#define EL_BORE7 14.969 
+ 
+/* define bore sight position ant 8 on pad 9
+distance: ?  
+31 Oct 2003 TK */
+/* #define AZ_BORE8 60.04 */
+/* #define EL_BORE8 16.02 */
+/* 18 Feb 2004; new coords after chopper opt. pad 9) */
+/* #define AZ_BORE8 60.032 */
+/* #define EL_BORE8 15.983 */
+/* 10 Jun 04; antenna went to hangar, had some Rx work done anad back on Pad 9 */
+/* New bore sight position was determined, below: */
+/* #define AZ_BORE8 60.038
+#define EL_BORE8 16.006 */
+/* The grid may not have been at the correct place; new position below:
+30 June 2004 */
+/* #define AZ_BORE8 60.02
+#define EL_BORE8 16.006 */
+/* position from 20 Apr 2006 is below pad 9*/
+/* #define AZ_BORE8 60.033
+#define EL_BORE8 15.982 */
+/* Pad 11; 19 Sep 2006; copied from Ant 7 on pad 11 */
+/* #define AZ_BORE8 61.392
+#define EL_BORE8 19.890  */
+/*pad 12  - 12 Jun2 07; measureed; TK */
+/* #define AZ_BORE8 49.25
+#define EL_BORE8 14.625 */
+/* pad 9; 16 Oct 08; bore-sight measured on 16 Oct.*/
+/* #define AZ_BORE8 60.032
+#define EL_BORE8 15.982 */
+/* pad 4; copied from Ant 5. 10 Dec 2009 */
+/* #define AZ_BORE8 53.197 
+#define EL_BORE8 17.196 */
+/* pad 8; 15 Apr 2010; copied over from Ant 7 */
+/* #define AZ_BORE8 54.19 
+#define EL_BORE8 14.968 */
+/* pad 5; measured 15 Oct 10 */
+#define AZ_BORE8 55.673
+#define EL_BORE8 18.332
+
+/* following may not be right */
+#define AZ_BORE8H 60.06 
+#define EL_BORE8H 16.0
+
+/* 30 Jul 2002 After the beacon movement the following are new positions */
+/* define bore sight position ant 6 on pad 1
+distance: 201.5m */
+/* the beacon positions upodated on 11 Sep 2002 */
+/* the numbers are fomr 230 GH may not be right for 690 TK & Nimesh*/
+/* pad 1 */
+/* following numbers becasue of chopperX mis home */ 
+/* no longer valid; pad 1*/
+/* #define AZ_BORE6 48.41   x=2500 */
+/* #define AZ_BORE6H 48.41    x=2500 */
+/* #define EL_BORE6 18.74    y=-3000 */
+/* #define EL_BORE6H 18.74   y=-3000 */
+/* Above set from 28 jan 2004; pad 1 */
+/* #define AZ_BORE6 48.375    x=2500 */
+/* #define AZ_BORE6H 48.375     x=2500 */
+/* #define EL_BORE6 18.74     y=-3000 */
+/* #define EL_BORE6H 18.74     y=-3000 */
+/* Following: 02 June 04 see memo -TK */
+#define AZ_BORE6 48.36   /* x=78 */
+#define AZ_BORE6H 48.36    /*  */
+#define EL_BORE6 18.735    /* y=-2852 */
+#define EL_BORE6H 18.735    /* y=79000 */
+/* the beacon positionb upodated on 10 Sep 2002 */
+/*#define AZ_BORE6 48.33  x=1000 */
+/*#define AZ_BORE6H 48.33   x=1000 */
+/*#define EL_BORE6 18.71   y=-2750 */
+/*#define EL_BORE6H 18.71   y=-2750 */
+/* #define AZ_BORE6 48.4  x=3000 */
+/* #define AZ_BORE6H 48.4   x=3000 */
+/* #define EL_BORE6 18.73   y=-3400 */
+/* #define EL_BORE6H 18.73   y=-3400 */
+/* following numbers from 345 G Rx chopper optimisation (1-d) at */
+/* 230 GHz  z=79000 */
+/* #define AZ_BORE6 48.373  x=10000 */
+/* #define AZ_BORE6H 48.373   x=10000 */
+/* #define EL_BORE6 18.639   y=3000 */
+/* #define EL_BORE6H 18.639   y=3000 */
+/* pad 1; 25 Nov 08; based on compilation of past measurements */
+#define AZ_BORE6 48.358 
+#define EL_BORE6 18.735
+
+#define AZ_BOREP00 0.0
+#define AZ_BOREP01 0.0
+#define AZ_BOREP02 0.0
+#define AZ_BOREP03 0.0
+#define AZ_BOREP04 0.0
+#define AZ_BOREP05 0.0
+#define AZ_BOREP06 0.0
+#define AZ_BOREP07 0.0
+#define AZ_BOREP08 0.0
+#define AZ_BOREP09 0.0
+#define AZ_BOREP10 0.0
+#define AZ_BOREP11 0.0
+#define AZ_BOREP12 0.0
+#define AZ_BOREP13 0.0
+#define AZ_BOREP14 0.0
+#define AZ_BOREP15 0.0
+#define AZ_BOREP16 0.0
+#define AZ_BOREP17 0.0
+#define AZ_BOREP18 0.0
+#define AZ_BOREP19 0.0
+#define AZ_BOREP20 0.0
+#define AZ_BOREP21 0.0
+#define AZ_BOREP22 0.0
+#define AZ_BOREP23 0.0
+#define AZ_BOREP24 0.0
+#define AZ_BOREP25 0.0
+#define AZ_BOREP26 0.0
+#define AZ_BOREP27 0.0
+#define AZ_BOREP28 0.0
+#define AZ_BOREP29 0.0
+#define EL_BOREP00 0.0
+#define EL_BOREP01 0.0
+#define EL_BOREP02 0.0
+#define EL_BOREP03 0.0
+#define EL_BOREP04 0.0
+#define EL_BOREP05 0.0
+#define EL_BOREP06 0.0
+#define EL_BOREP07 0.0
+#define EL_BOREP08 0.0
+#define EL_BOREP09 0.0
+#define EL_BOREP10 0.0
+#define EL_BOREP11 0.0
+#define EL_BOREP12 0.0
+#define EL_BOREP13 0.0
+#define EL_BOREP14 0.0
+#define EL_BOREP15 0.0
+#define EL_BOREP16 0.0
+#define EL_BOREP17 0.0
+#define EL_BOREP18 0.0
+#define EL_BOREP19 0.0
+#define EL_BOREP20 0.0
+#define EL_BOREP21 0.0
+#define EL_BOREP22 0.0
+#define EL_BOREP23 0.0
+#define EL_BOREP24 0.0
+#define EL_BOREP25 0.0
+#define EL_BOREP26 0.0
+#define EL_BOREP27 0.0
+#define EL_BOREP28 0.0
+#define EL_BOREP29 0.0

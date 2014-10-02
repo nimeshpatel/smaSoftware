@@ -1,0 +1,106 @@
+#!/usr/local/bin/perl
+# usage: holoSetup a1 a2 a3 
+# TK Sep 2008
+if( $#ARGV < 0 ) {die "Usage: holoSetup a1 a2 a3(ref) entry\n"; }
+$a1=shift;
+$a2=shift;
+$a3=shift;
+$entry=shift;
+goto $entry;
+VVM1:
+print "\n checking VVM lock .... \n \n";
+open(VVM,"| vectorvoltmeter2 -a 9 -b 10 > holoSetupTmp");
+print(VVM "ib 9 STAT:OPER:COND?\n");
+print(VVM "ibr 9\n");
+print(VVM "ib 10 STAT:OPER:COND?\n");
+print(VVM "ibr 10\n");
+close(VVM);
+$lock1=4 & (split(' ',`tail -2 holoSetupTmp | head -1`))[6];
+$lock2=4 & (split(' ',`tail -6 holoSetupTmp | head -1`))[6];
+$lock2=0;
+print "lock1 = $lock1; lock 2 = $lock2\n";
+if ($lock1 == 0) {print "VVM1 in lock \n"} else {print "VVM1 not in lock\n"};
+if ($lock2 == 0) {print "VVM2 in lock \n"} else {print "VVM2 not in lock\n"};
+if ($lock1 != 0 | $lock2 != 0) {print "VVM not in lock; exiting ...\n"; goto EXIT; };
+exit;
+
+VVM2:
+#open(VVM,"| vectorvoltmeter2 -a 9 -b 10 > /dev/null");
+open(VVM, "| vectorvoltmeter2 -a 9 -b 10 > holoSetupTmp");
+print(VVM "vv1\n");
+$|;
+sleep(2);
+print(VVM "key preset\n");
+$|;
+sleep(2);
+print(VVM "dan on\n");
+$|;
+sleep(2);
+print(VVM "key b\n");
+$|;
+sleep(2);
+print(VVM "ib 9 FREQ:BAND 12\n");
+$|;
+sleep(2);
+print(VVM "vv2\n");
+$|;
+sleep(2);
+print(VVM "key preset\n");
+$|;
+sleep(2);
+print(VVM "dan on\n");
+$|;
+sleep(2);
+print(VVM "key b\n");
+$|;
+sleep(2);
+print(VVM "ib 10 FREQ:BAND 12\n");
+$|;
+sleep(2);
+print(VVM "vv1\n");
+$|;
+sleep(2);
+close(VVM);
+sleep(5);
+print "setting VVM1 gain\n";
+$old=1;
+$new=40000;
+$ratio=3.2;
+open(VVM, "| vectorvoltmeter2 -a 9 -b 10");
+print(VVM "vv1\n");
+$|;
+sleep(2);
+print(VVM "dan\n");
+$|;
+sleep(2);
+close(VVM);
+while ($ratio <= 3.5 ) {
+open(VVM, "| vectorvoltmeter2 -a 9 -b 10 > holoSetupTmp");
+$old=(split(' ', ((`vvm_both_tt "/dev/null/" 1 1 1 1`)[1])))[7];
+print "$old\n";
+print "key up\n";
+print(VVM "vv1\n");
+$|;
+sleep(2);
+print(VVM "key up\n");
+$|;
+close(VVM);
+sleep(2);
+$new=(split(' ', ((`vvm_both_tt "/dev/null/" 1 1 1 1`)[1])))[7];
+print "$new\n";
+$ratio=$new/$old;
+print "$old, $new, $ratio\n";
+}
+print "found highest gain step; going two steps lower\n";
+open(VVM, "| vectorvoltmeter2 -a 9 -b 10 > holoSetupTmp");
+print(VVM "vv1\n");
+sleep(2);
+print(VVM "key down\n");
+$|;
+sleep(2);
+$new=(split(' ', ((`vvm_both_tt "/dev/null/" 1 1 1 1`)[1])))[9];
+print "counts: $new\n";
+exit;
+
+EXIT:
+exit;

@@ -1,0 +1,20 @@
+Species:Chemical Name:Freq-GHz:Freq Err:Meas Freq-GHz:Meas Freq Err:Resolved QNs:CDMS/JPL Intensity:Lovas/AST Intensity:E_L (cm^-1):Linelist
+CNv=0:Cyanide Radical:226.28743:2.79E-5:::N=2-1,J=3/2-3/2,F=1/2-1/2:-4.12150::3.78660:JPL
+CNv=0:Cyanide Radical:226.29892:3.04E-5:::N=2-1,J=3/2-3/2,F=1/2-3/2:-4.21890::3.78630:JPL
+CNv=0:Cyanide Radical:226.30308:3.06E-5:::N=2-1,J=3/2-3/2,F=3/2-1/2:-4.21290::3.78660:JPL
+CNv=0:Cyanide Radical:::226.31454:5.0E-5:N=2-1,J=3/2-3/2,F=3/2-3/2:-3.83720::3.78630:JPL
+CNv=0:Cyanide Radical:226.33254:2.06E-5:::N=2-1,J=3/2-3/2,F=3/2-5/2:-4.17470::3.78570:JPL
+CNv=0:Cyanide Radical:226.34193:2.07E-5:::N=2-1,J=3/2-3/2,F=5/2-3/2:-4.15790::3.78630:JPL
+CNv=0:Cyanide Radical:::226.35987:5.0E-5:N=2-1,J=3/2-3/2,F=5/2-5/2:-3.45080::3.78570:JPL
+CNv=0:Cyanide Radical:226.61656:2.96E-5:::N=2-1,J=3/2-1/2,F=1/2-3/2:-4.10430::3.77570:JPL
+CNv=0:Cyanide Radical:::226.63219:5.0E-5:N=2-1,J=3/2-1/2,F=3/2-3/2:-3.20440::3.77570:JPL
+CNv=0:Cyanide Radical:::226.65958:5.0E-5:N=2-1,J=3/2-1/2,F=5/2-3/2:-2.68150::3.77570:JPL
+CNv=0:Cyanide Radical:::226.66370:5.0E-5:N=2-1,J=3/2-1/2,F=1/2-1/2:-3.20720::3.77410:JPL
+CNv=0:Cyanide Radical:::226.67938:5.0E-5:N=2-1,J=3/2-1/2,F=3/2-1/2:-3.11220::3.77410:JPL
+CNv=0:Cyanide Radical:::226.87417:5.0E-5:N=2-1,J=5/2-3/2,F=5/2-3/2:-2.67490::3.78630:JPL
+CNv=0:Cyanide Radical:::226.87474:5.0E-5:N=2-1,J=5/2-3/2,F=7/2-5/2:-2.47510::3.78570:JPL
+CNv=0:Cyanide Radical:::226.87590:5.0E-5:N=2-1,J=5/2-3/2,F=3/2-1/2:-2.90040::3.78660:JPL
+CNv=0:Cyanide Radical:::226.88735:5.0E-5:N=2-1,J=5/2-3/2,F=3/2-3/2:-3.39790::3.78630:JPL
+CNv=0:Cyanide Radical:::226.89212:5.0E-5:N=2-1,J=5/2-3/2,F=5/2-5/2:-3.40040::3.78570:JPL
+CNv=0:Cyanide Radical:226.90538:2.42E-5:::N=2-1,J=5/2-3/2,F=3/2-5/2:-4.78240::3.78570:JPL
+CNv=0:Cyanide Radical:227.19184:2.65E-5:::N=2-1,J=5/2-1/2,F=5/2-3/2:-7.50360::3.77570:JPL

@@ -1,0 +1,121 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <time.h>
+#include <termio.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include "cpgplot.h"
+#include "nr.h"
+
+int main(int argc, char *argv[])
+{
+	FILE *fp,*fpo;
+	float *x,*y,*sig,*azy,*ely,*azpmd,*elpmd,**covar,**alpha,*a;
+	float az,el,azoff,eloff,output,az_err,el_err,az_mod,el_mod;
+	float chop_angle,chop_x,chop_y,chop_z;
+	int i,j,k,l,numplot,num_of_data,num_gauss, MA, NPT,*ia,flag,ant_num;
+	char f_line[200],source[40],*t, *s, *host;
+	char fname[30],file_name[80],data_name[120],a1[30],a2[30],a3[30];
+	long pretime=2.0e9,curtime=-1;
+	time_t new_time;
+	struct stat sbuf;
+	struct tm ts;
+
+	if(argc < 2){
+	printf("usage: rpoint #ant\n");
+	exit(1);
+	}
+
+	new_time=time(NULL);
+	ant_num=atoi(argv[1]);
+	sprintf(fname,"ant%1d",ant_num);
+	sprintf(data_name,"/export/home/lynx/applications/hal/data/ant%1d/tmp.dat",ant_num);
+	ts = *localtime(&new_time);
+	sprintf(file_name, "/home/smauser/pointing/radiocont/%02d%02d%02d.%s",ts.tm_mon+1,ts.tm_mday,ts.tm_year-100,fname);
+	printf("filename %s\n",file_name);
+
+while(1){ /* infinity loop */
+	while(curtime <= pretime){
+		if(curtime>0) pretime=curtime;
+		stat(data_name,&sbuf);
+		curtime=sbuf.st_mtime;
+		printf("ant%1d pre=%ld cur=%ld\n",ant_num,pretime,curtime);
+		sleep(1);
+	}
+	pretime=curtime;
+
+	if ((fpo=fopen(file_name,"a"))==NULL)
+	{
+		printf("cannot open stored file\n");
+		exit(1);
+	}
+
+	if ((fp=fopen(data_name,"r"))==NULL)
+	{
+		printf("cannot open data file\n");
+		exit(1);
+	}
+
+	num_of_data=0;
+	fseek(fp,0L,0);
+	fgets(f_line,180,fp);
+	fscanf(fp,"%s %s %d %s %d %s %d %f %f %f %f\n",&source,&a1,&flag,&a2,&l,&a3,&i,&chop_angle,&chop_x,&chop_y,&chop_z);
+	fprintf(fpo,"%s %s %d %s %d %s %d tilt %5.3f x %5.3f y %5.3f z %5.3f ",source,a1,flag,a2,l,a3,i,chop_angle,chop_x,chop_y,chop_z);
+	fprintf(fpo,"%s",f_line);
+
+	if(flag&&l) num_gauss=2;
+	else num_gauss=1;
+	while(feof(fp)==0){
+		fgets(f_line,180,fp);
+		num_of_data++;
+	}
+
+	MA=5*num_gauss;
+	NPT=num_of_data-1;
+printf("number of data = %d num of fitting components = %d\n", NPT,num_gauss);
+
+/* vector business */
+	x=vector(1,NPT);
+	y=vector(1,NPT);
+	azy=vector(1,NPT);
+	ely=vector(1,NPT);
+	azpmd=vector(1,NPT);
+	elpmd=vector(1,NPT);
+	sig=vector(1,NPT);
+ 
+	fseek(fp,0L,0);
+	fgets(f_line,180,fp);
+	fgets(f_line,180,fp);
+
+/* read data */
+	for (i=1;i<=NPT;i++)
+	{
+		fscanf(fp,"%f %f %f %f %f %f %f %f %f\n",&az,&el,&azoff,&eloff,&output,&az_err,&el_err,&az_mod,&el_mod);
+if(i<0)	printf("%f %f %f %f %f %f %f %f %f\n",az,el,azoff,eloff,output,az_err,el_err,az_mod,el_mod);
+		fprintf(fpo,"%f %f %f %f %f %f %f %f %f\n",az,el,azoff,eloff,output,az_err,el_err,az_mod,el_mod);
+		fflush(fpo);
+
+		if(flag==1) x[i]=azoff-az_err; else x[i]=eloff-el_err;
+		y[i]=output;
+		azy[i]=az;
+		ely[i]=el;
+		azpmd[i]=az_mod;
+		elpmd[i]=el_mod;
+		sig[i]=1.0;
+	}
+	t=ctime(&new_time);s=source;
+	if(num_gauss==1) nrpoint(x,y,azy,ely,azpmd,elpmd,sig,NPT,MA,t,s,flag,host,ant_num);
+	else nrpoint2(x,y,azy,ely,azpmd,elpmd,sig,NPT,MA,t,s,flag,host,ant_num);
+
+	free_vector(sig,1,NPT);
+	free_vector(y,1,NPT);
+	free_vector(x,1,NPT);
+	free_vector(azy,1,NPT);
+	free_vector(ely,1,NPT);
+	free_vector(azpmd,1,NPT);
+	free_vector(elpmd,1,NPT);
+	fclose(fpo);
+printf("done\n");
+}
+}

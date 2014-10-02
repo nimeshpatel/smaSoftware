@@ -1,0 +1,60 @@
+#include <stdio.h>
+#include <string.h>
+#include "dsm.h"
+
+void usage(char *name) {
+  printf("Usage: %s -h -v <dsmVariableName> -n <newvalue>\n");
+  exit(-1);
+}
+
+int main(int argc, char  *argv[]) {
+  int stat,i,j;
+  char var[DSM_NAME_LENGTH];
+  char *value;
+  int newvaluegiven = 0;
+
+  bzero(var,sizeof(var));
+  for (i=1; i<argc; i++) {
+    if (present(argv[i],"-h")) {
+      usage(argv[0]);
+    }
+    if (present(argv[i],"-v")) {
+      if (++i < argc) {
+	for (j=0; j<strlen(argv[i]); j++) {
+	  var[j] = toupper(argv[i][j]);
+	}
+	var[j] = 0;
+	continue;
+      } else {
+	usage(argv[0]);
+      }
+    }
+    if (present(argv[i],"-n")) {
+      if (++i < argc) {
+	for (j=0; j<strlen(argv[i]); j++) {
+	  var[j] = toupper(argv[i][j]);
+	}
+	var[j] = 0;
+	newvaluegiven = 1;
+	continue;
+      } else {
+	usage(argv[0]);
+      }
+    }
+  }
+  if (strlen(var) == 0) {
+    printf("You must supply a DSM variable name via -v\n");
+    usage(argv[0]);
+  }
+  if (newvaluegiven == 0) {
+    printf("You must supply a new value via -n\n");
+    usage(argv[0]);
+  }
+  stat = dsm_write("hal9000",var,value);
+  if (stat == 0) {
+    printf("Write succeeded\n");
+  } else {
+    dsm_error_message(dsm_status,"dsm_write");
+  }
+  return(stat);
+}

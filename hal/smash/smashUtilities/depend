@@ -1,0 +1,3 @@
+getAntList.o: getAntList.c /usr/PowerPC/common/include/smapopt.h \
+ /usr/PowerPC/common/include/rm.h \
+ /usr/PowerPC/common/include/commonLib.h

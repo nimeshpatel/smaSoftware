@@ -1,0 +1,12 @@
+#!/bin/tcsh -vf
+while (1)
+/application/bin/observe -s 0423-013
+sleep 5
+tsys
+/application/bin/integrate -s 7 -w
+/application/bin/observe -s offsettia -r 04:07:29.587 -d 07:42:17.500
+sleep 5
+tsys
+/application/bin/integrate -s 40 -w
+end
+

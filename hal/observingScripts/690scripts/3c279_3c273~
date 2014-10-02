@@ -1,0 +1,11 @@
+#!/bin/tcsh -vf
+while (1)
+observe -s 3c454.3
+sleep 2
+tsys
+integrate -t 30 -s 10 -w
+observe -s rcas
+sleep 2
+tsys
+integrate -t 30 -s 10 -w
+end

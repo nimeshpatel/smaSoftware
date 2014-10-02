@@ -1,0 +1,13 @@
+#!/bin/tcsh -vf
+#newFile
+#beaconMode
+#setIFLevels -D -1
+#integrate -t 2.58 -n -p
+#integrate -P
+while (1)
+  tune -c hotload in
+  sleep 60
+  tune -c hotload out
+  sleep 540
+end
+

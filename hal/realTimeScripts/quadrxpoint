@@ -1,0 +1,536 @@
+#!/bin/tcsh -f
+#
+# Last update: by Todd  (copied from dualrxpoint in preparation for 4th rx)
+#
+# Takes scans in the following order: 230/690, 345/690, 345/400, 230/400.
+#
+# Takes chopped scans of a source on all antennas in the project command
+# (or only those specified by -a   comma-delimited).
+# The LO chains do not need to be locked, and no attempt is made to relock
+# them when changing bands.  (The tune command is now multi-threaded if no
+# -a is given.)  If you specify -o, then optical images will also be taken
+# once each cycle (but this feature has not been tested).
+#
+#  If you want to use this script on the limb of the moon, then be sure
+#  to set the azoff and eloff for each antenna to one of the two azimuth
+#  limbs of the Moon before running this script.
+
+set source = "none"
+set opticalsource = "none"
+set exposure = 20
+set dotune = 0
+set ctr = 1
+set cycles = 1
+set vbias230 = 0  # zero means to use tune command, otherwise vbias0 
+set vbias345 = 0
+set list = ""  # list of antennas
+set alist = "" # list of antennas prepended with -a, or blank if using project
+set args = $#argv
+set optical = 0
+set antennas = 0
+set antennawaitarcsec = 4.0
+set offsetunitflag = "-o 1"
+
+# this sends it by RM instead of RPC, in order to turn all the grids at once
+set tune6method = "-r" 
+
+set contchans = "7,8"
+set contchan = ("" "" "" "" "" "" "" "")
+echo args = $args
+echo argv = $argv
+echo argv0 = $argv[0]
+echo argv1 = $argv[1]
+set loop = 0
+# 'loop' always holds the iteration of the foreach loop
+# 'ctr' always holds the index of the argument last parsed
+foreach i ( $argv )
+ set loop = `expr $loop + 1`
+ if (`expr $loop == $ctr`) then
+  set i = $argv[$ctr]
+  if (`expr $i == '-h'`) then
+    goto usage
+  endif
+  if (`expr $i == '--help'`) then
+    goto usage
+  endif
+  if (`expr $i == '-v'`) then
+      set ctr = `expr $ctr + 1`
+      set contchans = $argv[$ctr]
+  endif
+  if (`expr $i == '-v1'`) then
+      set ctr = `expr $ctr + 1`
+      set contchan[1] = $argv[$ctr]
+  endif
+  if (`expr $i == '-v2'`) then
+      set ctr = `expr $ctr + 1`
+      set contchan[2] = $argv[$ctr]
+  endif
+  if (`expr $i == '-v3'`) then
+      set ctr = `expr $ctr + 1`
+      set contchan[3] = $argv[$ctr]
+  endif
+  if (`expr $i == '-v4'`) then
+      set ctr = `expr $ctr + 1`
+      set contchan[4] = $argv[$ctr]
+  endif
+  if (`expr $i == '-v5'`) then
+      set ctr = `expr $ctr + 1`
+      set contchan[5] = $argv[$ctr]
+  endif
+  if (`expr $i == '-v6'`) then
+      set ctr = `expr $ctr + 1`
+      set contchan[6] = $argv[$ctr]
+  endif
+  if (`expr $i == '-v7'`) then
+      set ctr = `expr $ctr + 1`
+      set contchan[7] = $argv[$ctr]
+  endif
+  if (`expr $i == '-v8'`) then
+      set ctr = `expr $ctr + 1`
+      set contchan[8] = $argv[$ctr]
+  endif
+  if (`expr $i == '-w'`) then
+      set ctr = `expr $ctr + 1`
+      set antennawaitarcsec = $argv[$ctr]
+  endif
+  if (`expr $i == '-a'` || `expr $i == '--antenna'`) then
+    if (`expr $ctr != $args`) then
+      set ctr = `expr $ctr + 1`
+      set list = $argv[$ctr]
+      set alist = "-a $list"
+      echo will use antenna argument = $alist
+    else
+      echo You must supply a list of antennas after -a
+      goto usage
+    endif
+  endif
+  if (`expr $i == '-b'`) then
+    if (`expr $ctr != $args`) then
+      set ctr = `expr $ctr + 1`
+      set vbias230 = $argv[$ctr]
+    else
+      echo You must supply a 230GHz voltage bias after -b
+      goto usage
+    endif
+  endif
+  if (`expr $i == '-B'`) then
+    if (`expr $ctr != $args`) then
+      set ctr = `expr $ctr + 1`
+      set vbias345 = $argv[$ctr]
+    else
+      echo You must supply a 345GHz voltage bias after -B
+      goto usage
+    endif
+  endif
+  if (`expr $i == '-s'`) then
+    if (`expr $ctr != $args`) then
+      set ctr = `expr $ctr + 1`
+      set source = $argv[$ctr]
+    else
+      echo You must supply a source name after -s
+      goto usage
+    endif
+  endif
+  if (`expr $i == '-o'`) then
+    set optical = 1
+    if (`expr $ctr != $args`) then
+      set ctr = `expr $ctr + 1`
+      set opticalsource = $argv[$ctr]
+    else
+      echo You must supply a source name after -o
+      goto usage
+    endif
+  endif
+  if (`expr $i == '-t'`) then
+    set dotune = 1
+  endif
+  if (`expr $i == '-c'`) then
+    if (`expr $ctr != $args`) then
+      set ctr = `expr $ctr + 1`
+      set cycles = $argv[$ctr]
+      if (`expr $cycles == 0`) then
+        set cycles = -1
+      endif
+    else
+      echo i = $i    ctr = $ctr   args = $args
+      echo You must supply a number of cycles after -c
+      goto usage
+    endif
+  endif
+  if (`expr $i == '-r'`) then
+    if (`expr $ctr != $args`) then
+      set ctr = `expr $ctr + 1`
+      set offsetunitflag = "-o $argv[$ctr]"
+    else
+      echo You must supply a scan rate after -r in arcseconds per second
+      goto usage
+    endif
+  endif
+  set ctr = `expr $ctr + 1`
+ endif
+end
+
+if (`expr $source == 'none'`) then
+  echo You must provide a source name with -s
+  goto usage
+endif
+
+echo `date -u +"%a %b %d %X %Y"` '('$USER'):' $0 $argv >> /rootfs/logs/SMAshLog
+
+echo Source = $source
+
+if (`expr $cycles == -1`) then
+  echo Will run the loop forever.
+else
+  echo Will run $cycles cycles of the loop.
+endif
+
+# check to see if the chopper is chopping, otherwise exit
+# must protect the list with double quotes to force the numbers to be
+# interpreted as a string
+
+if (`expr "$list" == ""`) then
+  set checklist = `getAntList`
+  echo Will use all antennas in the current project = $checklist
+  set alist = ""
+  set project = 1
+else
+  echo Will use antennas: $list
+#  set checklist = `parseAntennaList $list`
+  set checklist = `getAntList $alist`
+  set project = 0
+endif
+set commalist = `commaAntennaList "$checklist"`
+echo commalist = $commalist
+#
+set tlist = "$alist"
+echo tlist = $tlist
+# remove antennas with special total power ports from the main list
+set list2 = ""
+set alist2 = ""
+foreach i ( $checklist )
+  if (`expr "$contchan[$i]" != ""`) then
+     if (`expr $project == 1`) then
+       set project = 0
+       set list = `getAntList`
+       set commalist = `commaAntennaList "$list"`
+       echo initial commalist = $commalist
+     endif
+     set commalist = `removeAntennaFromList $commalist $i`;
+     set list2 = "$list2 $i"
+     set alist = "-a $commalist"
+     set contchan2 = $contchan[$i]
+  endif
+end
+if (`expr "$list2" != ""`) then
+    set commalist2 = `commaAntennaList "$list2"`
+    set alist2 = "-a $commalist2"
+    echo Will use antennas: $alist in the first rscan with -v $contchans
+    echo Will use antennas: $alist2 in the second rscan with -v $contchan2
+else
+    echo Will use antennas: $alist with -v $contchans
+endif
+
+# for debugging purpose
+#exit 0
+
+foreach i ( $checklist )
+  echo Observing the source $source with antenna $i
+#  echo standby -a $i
+#       standby -a $i
+#       sleep 1
+  echo observe -s $source -a $i
+       observe -s $source -a $i
+       sleep 1
+  echo resume -a $i
+       resume -a $i
+       sleep 1
+  echo openM3 -a $i
+       openM3 -a $i
+       sleep 1
+  echo setFeedOffset -f 230 -a $i
+       setFeedOffset -f 230 -a $i
+       sleep 1
+end
+
+# sometimes not all choppers turn on
+foreach j ( 1 2 )
+ set checked = 0
+ foreach i ( $checklist )
+    echo Checking chopper status on antenna $i
+    set chopstatus = `value -a $i -v chopping_flag`
+    if (`expr $chopstatus == 0`) then
+      echo Sorry but the secondary on antenna $i is not chopping. 
+#      exit 3
+      echo I will start it.
+      `startChopping -a $i`
+    endif
+    set checked = `expr $checked + 1`
+    echo checked = $checked
+    sleep 1
+ end
+end
+if (`expr $checked == 0`) then
+  if (`expr $project == 1`) then
+    echo Sorry, but there are no antennas in the current project.
+    exit 2
+  endif
+endif
+echo I checked all $checked secondaries and they are indeed chopping. Good!
+
+# the following command is for testing the code above this point, please
+# comment it out if you are actually trying to run the script
+# exit 0
+
+# clear out any pending commands!
+tune $tlist $tune6method -R -c v
+
+# turn on all the Gunns (2=230, 3=345, 4=400, 6=690) so that mixing can occur
+# turn off all the PLLs (2=230, 3=345, 4=400, 6=690) so that Gunn bias is fixed
+#if (`expr $dotune == 1`) then
+  echo tune $tlist $tune6method -c \'hotload out\'
+       tune $tlist $tune6method -c 'hotload out'
+  echo tune $tlist $tune6method -c \"gunn -a 2 on\"
+       tune $tlist $tune6method -c "gunn -a 2 on"
+  echo tune $tlist $tune6method -c \"gunn -a 3 on\"
+       tune $tlist $tune6method -c "gunn -a 3 on"
+  echo tune $tlist $tune6method -c \"gunn -a 4 on\"
+       tune $tlist $tune6method -c "gunn -a 4 on"
+  echo tune $tlist $tune6method -c \"gunn -a 6 on\"
+       tune $tlist $tune6method -c "gunn -a 6 on"
+  echo tune $tlist $tune6method -c \"pll -a 2 off\"
+       tune $tlist $tune6method -c "pll -a 2 off"
+  echo tune $tlist $tune6method -c \"pll -a 3 off\"
+       tune $tlist $tune6method -c "pll -a 3 off"
+  echo tune $tlist $tune6method -c \"pll -a 4 off\"
+       tune $tlist $tune6method -c "pll -a 4 off"
+  echo tune $tlist $tune6method -c \"pll -a 6 off\"
+       tune $tlist $tune6method -c "pll -a 6 off"
+#endif
+
+set cycle = 0
+if (`expr "$source" == "moon"`) then
+  set scanrange = "-b -170 -e 170 -i -450 -f 450"
+else
+  set scanrange = ""
+endif
+echo writeDSM $alist -v DUALRXPOINT_TOTAL_SCANS_V8_L -n $cycles
+    `writeDSM $alist -v DUALRXPOINT_TOTAL_SCANS_V8_L -n $cycles`
+while (`expr $cycle != $cycles`) 
+  echo "********** Beginning cycle $cycle of $cycles total cycles **********\n"
+  echo writeDSM $alist -v DUALRXPOINT_SCAN_NUMBER_V8_L -n $cycle
+       `writeDSM $alist -v DUALRXPOINT_SCAN_NUMBER_V8_L -n $cycle`
+  echo "Activating 230/690 Rx and turning the grid and mirror (if necessary)"
+  echo tune $tlist $tune6method -c \'activate -l 0 -h 6 -g -c -p\'
+       tune $tlist $tune6method -c "activate -l 0 -h 6 -g -c -p"
+  if (`expr $vbias230 == 0`) then
+    echo tune $tlist $tune6method -c \'tune 230 --mixeronly\'
+         tune $tlist $tune6method -c "tune 230 --mixeronly"
+    if (`expr $cycle == 0`) then
+      if (`expr $dotune == 1`) then
+	  echo tune $tlist $tune6method -c \'opt curr -t\'
+               tune $tlist $tune6method -c "opt curr -t"
+      endif
+    endif
+  else
+    echo tune $tlist $tune6method -c \'tune 230 --mixeronly\'
+         tune $tlist $tune6method -c "tune 230 --mixeronly"
+    echo tune -a 8 $tune6method -c \'vbias0 $vbias230\'
+         tune -a 8 $tune6method -c "vbias0 $vbias230"
+  endif
+  echo "Scanning across $source with range = $scanrange"
+  if (`expr $project == 1`) then
+    echo rscan -s $source -t 1 -c -v $contchans $scanrange $offsetunitflag -w $antennawaitarcsec
+         rscan -s $source -t 1 -c -v $contchans $scanrange $offsetunitflag -w $antennawaitarcsec
+  else
+    echo rscan $alist -s $source -t 1 -c -v $contchans $scanrange $offsetunitflag -w $antennawaitarcsec
+         rscan $alist -s $source -t 1 -c -v $contchans $scanrange $offsetunitflag -w $antennawaitarcsec
+    if (`expr "$contchan2" != ""`) then
+      echo rscan $alist2 -s $source -t 1 -c -v $contchan2 $scanrange $offsetunitflag -w $antennawaitarcsec
+           rscan $alist2 -s $source -t 1 -c -v $contchan2 $scanrange $offsetunitflag -w $antennawaitarcsec
+    endif
+  endif
+  wait
+  echo ""
+  echo "Activating 345/690 Rx and turning the grid"
+  echo tune $tlist $tune6method -c \'activate -l 2 -h 6 -g -p\'
+       tune $tlist $tune6method -c "activate -l 2 -h 6 -g -p"
+  if (`expr $vbias345 == 0`) then
+    echo tune $tlist $tune6method -c \'tune 340 --mixeronly\'
+         tune $tlist $tune6method -c "tune 340 --mixeronly"
+    if (`expr $cycle == 0`) then
+      if (`expr $dotune == 1`) then
+	  echo tune $tlist $tune6method -c \'opt curr -t\'
+               tune $tlist $tune6method -c "opt curr -t"
+      endif
+    endif
+  else
+    echo tune $tlist $tune6method -c \'tune 340 --mixeronly\'
+         tune $tlist $tune6method -c "tune 340 --mixeronly"
+    echo tune -a 8 $tune6method -c \'vbias0 $vbias345\'
+         tune -a 8 $tune6method -c "vbias0 $vbias345"
+  endif
+  echo "Scanning across $source with range = $scanrange"
+  if (`expr $project == 1`) then
+    echo rscan -s $source -t 1 -c -v $contchans $scanrange $offsetunitflag -w $antennawaitarcsec
+         rscan -s $source -t 1 -c -v $contchans $scanrange $offsetunitflag -w $antennawaitarcsec
+  else
+    echo rscan $alist -s $source -t 1 -c -v $contchans $scanrange $offsetunitflag -w $antennawaitarcsec
+         rscan $alist -s $source -t 1 -c -v $contchans $scanrange $offsetunitflag -w $antennawaitarcsec
+  endif
+  wait
+
+  echo ""
+  echo "Activating 345/400 Rx and turning the mirror"
+  echo tune $tlist $tune6method -c \'activate -l 2 -h 4 -c -p\'
+       tune $tlist $tune6method -c "activate -l 2 -h 4 -c -p"
+  if (`expr $vbias345 == 0`) then
+    echo tune $tlist $tune6method -c \'tune1 340 --mixeronly\'
+         tune $tlist $tune6method -c "tune1 340 --mixeronly"
+    if (`expr $cycle == 0`) then
+      if (`expr $dotune == 1`) then
+	  echo tune $tlist $tune6method -c \'opt curr1 -t\'
+               tune $tlist $tune6method -c "opt curr1 -t"
+      endif
+    endif
+  else
+    echo tune $tlist $tune6method -c \'tune1 340 --mixeronly\'
+         tune $tlist $tune6method -c "tune1 340 --mixeronly"
+    echo tune -a 8 $tune6method -c \'vbias1 $vbias345\'
+         tune -a 8 $tune6method -c "vbias1 $vbias345"
+  endif
+  echo "Scanning across $source with range = $scanrange"
+  if (`expr $project == 1`) then
+    echo rscan -s $source -t 1 -c -v $contchans $scanrange $offsetunitflag -w $antennawaitarcsec
+         rscan -s $source -t 1 -c -v $contchans $scanrange $offsetunitflag -w $antennawaitarcsec
+  else
+    echo rscan $alist -s $source -t 1 -c -v $contchans $scanrange $offsetunitflag -w $antennawaitarcsec
+         rscan $alist -s $source -t 1 -c -v $contchans $scanrange $offsetunitflag -w $antennawaitarcsec
+  endif
+  wait
+
+
+  echo ""
+  echo "Activating 230/400 Rx and turning the grid"
+  echo tune $tlist $tune6method -c \'activate -l 0 -h 4 -g -p\'
+       tune $tlist $tune6method -c "activate -l 0 -h 4 -g -p"
+  if (`expr $vbias230 == 0`) then
+    echo tune $tlist $tune6method -c \'tune 230 --mixeronly\'
+         tune $tlist $tune6method -c "tune 230 --mixeronly"
+    if (`expr $cycle == 0`) then
+      if (`expr $dotune == 1`) then
+	  echo tune $tlist $tune6method -c \'opt curr -t\'
+               tune $tlist $tune6method -c "opt curr -t"
+      endif
+    endif
+  else
+    echo tune $tlist $tune6method -c \'tune 230 --mixeronly\'
+         tune $tlist $tune6method -c "tune 230 --mixeronly"
+    echo tune -a 8 $tune6method -c \'vbias0 $vbias230\'
+         tune -a 8 $tune6method -c "vbias0 $vbias230"
+  endif
+  echo "Scanning across $source with range = $scanrange"
+  if (`expr $project == 1`) then
+    echo rscan -s $source -t 1 -c -v $contchans $scanrange $offsetunitflag -w $antennawaitarcsec
+         rscan -s $source -t 1 -c -v $contchans $scanrange $offsetunitflag -w $antennawaitarcsec
+  else
+    echo rscan $alist -s $source -t 1 -c -v $contchans $scanrange $offsetunitflag -w $antennawaitarcsec
+         rscan $alist -s $source -t 1 -c -v $contchans $scanrange $offsetunitflag -w $antennawaitarcsec
+  endif
+  wait
+
+  if (`expr $optical == 1`) then
+    if (`expr "$list" == ""`) then
+      echo optical
+           optical
+           sleep 1
+      echo observe $opticalsource
+           observe $opticalsource
+           sleep 10
+      echo snapshot -s $exposure
+           snapshot -s $exposure
+           sleep 1
+      echo radio
+           radio
+           sleep 1
+      echo observe $source
+           observe $source
+           sleep 10
+    else
+#     we are not simply using the antennas in the project command
+      foreach a ( $checklist )
+        echo optical -a $a
+             optical -a $a
+        sleep 1
+        echo observe $opticalsource -a $a
+             observe $opticalsource
+        sleep 1
+      end
+      sleep 10
+      foreach a ( $checklist )
+        if (`expr $a == 7` || `expr $a == 8`) then
+#          integrationTime -a $a -s $exposure
+          snapshotCommand -a $a
+        else
+          snapshot -a $a -s $exposure
+        endif
+        sleep 1
+      end
+      foreach a ( $checklist )
+        echo radio -a $a
+             radio -a $a
+        sleep 1
+        echo observe $source -a $a
+             observe $source -a $a
+        sleep 1
+      end
+      sleep 10
+    endif
+  endif 
+  set nextcycle = `expr $cycle + 1`
+  if (`expr $nextcycle != $cycles`) then
+    echo "Sleeping 5 seconds before next cycle"
+#    echo ""
+    sleep 5
+  endif
+  set cycle = $nextcycle
+  echo "Finished cycle $cycle of $cycles"
+end
+echo writeDSM $alist -v DUALRXPOINT_SCAN_NUMBER_V8_L -n $cycles
+    `writeDSM $alist -v DUALRXPOINT_SCAN_NUMBER_V8_L -n $cycles`
+#echo ""
+#echo ""
+echo "Script completed"
+exit 0
+
+usage:
+  echo "quadrxpoint -s <sourceName> [-a <antennaList: comma-delimited>] [-c <cyclesToRun>]"
+  echo " [-o <opticalSourceName>] -t [-v x,y] [-r <scanRate(arcsec/sec)>]"
+  echo " [-w <antennaWaitArcsec>] [-b <vbias0for230rxAcc8>] [-B <vbias0for345rxAcc8>]"
+  echo "  If -a is not given, then all telescopes in the project are used."
+  echo "  The option '--antenna <antennaList>' can also be used instead of -a."
+  echo "  In either case, you must have a space between -a and the list, and"
+  echo "     the list must be comma-delimited with no spaces."
+  echo "  The default number of cycles is 1.  A value <=0 means forever."
+  echo "  If -b/-B are not given, 'tune --mixeronly' shall be used upon rx change." 
+  echo "  The -o option will cause an optical image to be taken each cycle as well."
+  echo "  The -t option will optimize the mixer current at the start of the script."
+#  echo "  Default continuum channels are 3,5 (the IF/LO total power sensor)"
+#  echo "  To change the high-freq receivers on antenna 3 to use the ADC4 BNC on the"
+#  echo "  patch panel (i.e. syncdet channel 1), then use:   -v3 3,1"
+#  echo "  To change all antennas to this channel, then use: -v 3,1"
+#  echo "  Only two different -v arguments can be used, however the following is okay:"
+#  echo "       -v 3,5 -v3 3,1 -v4 3,1"
+  echo "  Use -v to specify the port number for total power data."
+  echo "  If you want to use different ports on different antennas, then please"
+  echo "  spawn additional copies of dualrxpoint with the appropriate arguments."
+  echo "  Port numbers can have following values:";
+  echo "       1: total_power_volts (floor system to patch panel ADC4)";
+  echo "       2: total_power_volts2 (floor system to patch panel ADC5)";
+  echo "       3: cont1_det1 (low-freq rx, prior to IF/LO attenuator)";
+  echo "       4: cont1_det2 (high-freq rx, after the IF/LO attenuator)";
+  echo "       5: cont2_det1 (low-freq rx, prior to IF/LO attenuator)";
+  echo "       6: cont2_det2 (high-freq rx, after the IF/LO attenuator)";
+  echo "       7: syncdet2_low_freq_rx (prior to IF/LO attenuator)";
+  echo "       8: syncdet2_high_freq_rx (prior to the IF/LO attenuator)";
+  exit 0

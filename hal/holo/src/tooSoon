@@ -1,0 +1,19 @@
+#!/usr/local/bin/perl
+# usage: tooSoon a1 a2 a3 
+# TK Sep 2008
+if( $#ARGV < 0 ) {die "Usage: tooSoon a1 a2 a3(ref) \n"; }
+$a1=shift;
+$a2=shift;
+$a3=shift;
+print "Move to beacon and position chopper\"
+`focusCurveOn`;
+sleep(60);
+`farChopper`;
+sleep(60);
+print "Finding bore-sight and near field chopper positions\n";
+`padidtest $a1 $a2 $a3`;
+sleep(30);
+`resume`;
+print "Moving to bore-sight and near-field chopper positions\n";
+`boreChopper $a1 $a2 $a3`;
+exit;

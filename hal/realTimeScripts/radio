@@ -1,0 +1,33 @@
+#!/usr/bin/perl
+# perl script SMAsh command for specifying radio mode for refraction
+
+sub Usage() {
+  print "Usage: radio [-a 4..5,7]\n";
+  print "Omit the antenna flag to give the command to all antennas in the project.\n";
+}
+ 
+use Getopt::Long;
+use FileHandle;
+$Getopt::Long::autoabbrev=1;
+GetOptions('antenna=s'=>\$antennaString);
+$spaceDelimited = `parseAntennaList $antennaString`;
+@antennalist = sort(split(' ',$spaceDelimited));
+$numberAntennas = $#antennalist+1;
+printf "number of antennas = %d\n", $numberAntennas;
+if ($numberAntennas == 0) {
+# no antenna was specified, so do them all in the project
+    for ($i=1;$i<=8;$i++) {
+	$antenna_status=`value -a $i -v antenna_status`;
+	if ($antenna_status==1) { 
+	    push(@antennalist,$i); 
+	}       
+    }
+}
+
+@fileHandles = ();
+foreach $antennaNumber (@antennalist) {
+    print "Setting antenna $antennaNumber to radio mode\n";
+    $response=`trackCommand -a $antennaNumber -c 5`;
+    if ($response ne "") {print "$response\n";}
+    sleep(1);
+}

@@ -1,0 +1,38 @@
+data chopperBits4.out
+read { x 1 b 2 }
+pl 2
+pl b
+help hist
+help histogram
+data chopperBits1.out
+read { x 1 b 2 }
+pl b
+data chopperBits4.out
+read { x 1 b 2 }
+pl b
+data chopperBits5.out
+read { x 1 b 2 }
+pl b
+data chopperBits6.out
+read { x 1 b 2 }
+pl b
+data chopperBits7.out
+read { x 1 b 2 }
+pl b
+data chopperBits4.out
+read { x 1 b 2 }
+pl b
+data chopperBits7.out
+read { x 1 b 2 }
+ovl b
+quit
+data cb2.proc
+data cb4.proc
+read { x 1 dt 2 b 3 }
+pl dt
+pl b
+quit
+data chopperBits1.1.out
+read { x 1 b 2 }
+pl b
+quit

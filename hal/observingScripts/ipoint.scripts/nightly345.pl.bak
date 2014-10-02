@@ -1,0 +1,56 @@
+#!/usr/bin/perl -w
+# Experiment Title: Nightly pointing at 345 GHz on the brightest QSO in
+#                   the sky (3C454, if available) and a nearby star.
+#                   Otherwise, only do Polaris.
+#
+# PI: SMA Pointing Team
+# Author: Todd Hunter, Nimesh Patel, Taco
+# Contact person: Nimesh Patel
+# Office phone: 617 496 7649 Evening phone: 617 577 1597
+#
+# load the sma library of functions used in this observing script.
+do 'sma.pl';
+
+printPID();
+
+# check participating antennas.
+checkANT();
+command("optical");  
+command("observe -s polaris");
+command("antennaWait");
+command("c90cmd -c 'snapshot -e 200'");
+command("radio");
+$targel=checkEl("3c454.3");
+if ($targel>30.) {
+    command("observe -s 3c454.3");
+    command("point -i 60 -r 1 -L -l -t -f /data/engineering/pointing/nightly");
+    command("optical");
+    command("observe -s hip112997");
+    command("antennaWait");
+    command("c90cmd -c 'snapshot -e 200'");
+    command("radio");
+} else {
+  $targel=checkEl("3c111");
+  if ($targel>30.) {
+    command("observe -s 3c111");
+    command("point -i 60 -r 1 -L -l -t -f /data/engineering/pointing/nightly");
+    command("optical");
+#  hip19811 is near 3c111
+    command("observe -s hip19811");
+    command("antennaWait");
+    command("c90cmd -c 'snapshot -e 200'");
+    command("radio");
+  } else {
+    $targel=checkEl("3c273");
+    if ($targel>30.) {
+      command("observe -s 3c273");
+      command("point -i 60 -r 1 -L -l -t -f /data/engineering/pointing/nightly");
+      command("optical");
+      command("observe -s hip64238");
+      command("antennaWait");
+      command("c90cmd -c 'snapshot -e 200'");
+      command("radio");
+    }
+  }
+}
+command("dip");

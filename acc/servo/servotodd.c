@@ -1,0 +1,2540 @@
+/* Servo controls the System Control Board of the SMA antenna drive system.
+ * The Scb has a velocity loop for each axis and Servo Contains the position
+ * loops.  Servo gets position and velocity commands in azimuth and elevation
+ * from the Track program through the Track-Servo shared memory.
+ * Servo shapes the position commands so that the drives are always able
+ * to follow its commands and stay in their linear control ranges.
+ *
+ * CVS Log and RCS Identification of this version:
+ * $Log: servo.c,v $
+ * Revision 1.60  2003/04/30 21:24:10  rwilson
+ * Retru az fault on startup
+ *
+ * Revision 1.59  2003/03/18 00:29:14  rwilson
+ * Fix '[[' in error messages
+ *
+ * Revision 1.58  2003/03/05 20:16:59  rwilson
+ * suppress ttime messages, move s_anti96com.h
+ *
+ * Revision 1.57  2003/02/24 17:26:27  rwilson
+ * timeout 2 ticks, retry if drive faile to start
+ *
+ * Revision 1.56  2003/02/06 16:41:09  rwilson
+ * Fix up types in encoder rm vars
+ *
+ * Revision 1.55  2003/02/06 15:51:31  rwilson
+ * fix error messages
+ *
+ * Revision 1.54  2003/02/06 15:38:18  rwilson
+ * added new encoder rm vars
+ *
+ * Revision 1.53  2003/02/05 23:23:54  rwilson
+ * Accept irregular TrueTime returns
+ *
+ * Revision 1.52  2003/01/31 16:46:06  rwilson
+ * small changes
+ *
+ * Revision 1.51  2002/12/04 18:30:45  rwilson
+ * Rocker report, drive down message
+ *
+ * Revision 1.50  2002/11/12 20:07:45  rwilson
+ * add encoder check
+ *
+ * Revision 1.49  2002/10/28 15:57:58  rwilson
+ * fixed tach velocities
+ *
+ * Revision 1.48  2002/09/26 20:56:15  rwilson
+ * bounds on vel and pos, more RM vars
+ *
+ * Revision 1.47  2002/09/06 13:45:50  rwilson
+ * fixed two fault descriptions
+ *
+ * Revision 1.46  2002/09/04 15:09:28  rwilson
+ * New rm vars, cleaner start if Palm in control
+ *
+ * Revision 1.45  2002/08/21 19:12:24  rwilson
+ * New m3 states, drive state strings
+ *
+ * Revision 1.44  2002/08/21 15:09:57  rwilson
+ * Don't move M3 during lockout
+ *
+ * Revision 1.43  2002/08/21 14:56:38  rwilson
+ * Start up during LOCKOUT
+ *
+ * Revision 1.42  2002/08/20 23:07:08  rwilson
+ * added SRAM, EPROM, and Palm Code Date to RM
+ *
+ * Revision 1.41  2002/08/19 18:01:56  rwilson
+ * reflmem vars for rmdrivemon
+ *
+ * Revision 1.39  2002/08/07 22:14:35  rwilson
+ * Byte sized rm variables
+ *
+ * Revision 1.38  2002/07/17 13:30:58  rwilson
+ * remove READANTENNATYPE andTTERROR_FILE
+ *
+ * Revision 1.37  2002/07/11 19:37:06  rwilson
+ * Only one shutdown message
+ *
+ * Revision 1.36  2002/06/08 15:20:40  rwilson
+ * New fault report, lc servo in stderr
+ *
+ * Revision 1.35  2002/05/08 20:58:26  rwilson
+ * Changed names for M3CMD enum
+ *
+ * Revision 1.34  2002/04/30 16:11:50  rwilson
+ * put padID and padAzOffset in tsshm
+ *
+ * Revision 1.33  2002/04/19 21:41:52  rwilson
+ * horn on move, hires enc to palm
+ *
+ * Revision 1.32  2002/04/10 13:46:21  rwilson
+ * Better TrueTime recovery
+ *
+ * Revision 1.31  2002/01/16 22:05:43  rwilson
+ * Error message changes and avoid timeouts
+ *
+ * Revision 1.30  2001/10/05 19:57:01  rwilson
+ * check for scb resets
+ *
+ * Revision 1.29  2001/10/04 19:21:45  rwilson
+ * tach velocities from scb are 1/2
+ *
+ * Revision 1.28  2001/10/02 17:45:43  rwilson
+ * error msgs to run as daemon
+ *
+ * Revision 1.27  2001/09/24 20:48:22  rwilson
+ * various debugging with ErrPrintf
+ *
+ * Revision 1.26  2001/09/01 15:34:26  rwilson
+ * servo shuts down gracefully with QUIT & HUP
+ *
+ * Revision 1.25  2001/09/01 15:09:54  rwilson
+ * report M3 status in tsshm and rm
+ *
+ * Revision 1.24  2001/08/15 19:27:04  rwilson
+ * tracking errors to RM
+ *
+ * Revision 1.23  2001/07/12 19:19:28  rwilson
+ * Fix errors in reading az mount offset and reporting status
+ *
+ * Revision 1.22  2001/06/29 18:57:12  rwilson
+ * Pad Offset, slow option for ant 7
+ *
+ * Revision 1.21  2001/06/28 16:24:01  rwilson
+ * Use EnDat or ACC encoders
+ *
+ * Revision 1.20  2001/05/31 15:18:50  rwilson
+ * Tach divisors on scb again foe #7
+ *
+ * Revision 1.19  2001/05/31 00:30:02  rwilson
+ * Fix up of initialization of turns tracking
+ *
+ * Revision 1.18  2001/05/11 15:56:36  rwilson
+ * Todd's fixup of init of oldEncAz
+ *
+ * Revision 1.17  2001/05/01 13:41:48  rwilson
+ * This version uses vme_sg_simple and iPEncoder
+ *
+ * Revision 1.16  2000/10/30 21:43:37  rwilson
+ * new startup messages, processPresent check
+ *
+ * Revision 1.15  2000/10/18 14:25:38  rwilson
+ * remove testing of tach vs lim enc
+ *
+ * Revision 1.14  2000/10/18 14:23:28  rwilson
+ * tach divisors, ErrPrint, only update RM
+ *
+ * Revision 1.13  2000/10/02 17:52:50  rwilson
+ * Palm time setting working
+ *
+ * Revision 1.12  2000/09/28 14:00:34  rwilson
+ * More warnings about shutdown
+ *
+ * Revision 1.11  2000/09/27 19:47:22  rwilson
+ * SetRMFaults,alarm,separate OpenShm
+ *
+ * Revision 1.10  2000/09/24 18:38:06  rwilson
+ * Faultword to stderr, others
+ *
+ * Revision 1.9  2000/09/06 18:47:55  rwilson
+ * Check coarse vs fine on startup
+ *
+ * Revision 1.8  2000/09/01 00:50:06  rwilson
+ * more error messages
+ *
+ * Revision 1.7  2000/07/27 18:27:40  rwilson
+ * get rid of '/' at end of shm_open line
+ *
+ * Revision 1.6  2000/07/27 18:25:31  rwilson
+ * 666 -> 0666
+ *
+ * Revision 1.5  2000/07/27 18:15:57  rwilson
+ * Correct long move if MIN_HTIME != 500, lim enc scaling
+ *
+ * Revision 1.4  2000/06/13 21:12:12  rwilson
+ * Minor changes
+ *
+ */
+static char rcsid[] = "$Id: servo.c,v 1.60 2003/04/30 21:24:10 rwilson Exp $";
+#if 0
+#define USE(var) static void *use_##var = (&use_##var, (void *)&var)
+USE(rcsid);
+#endif
+
+#include <math.h>
+#include <sys/types.h>
+#include <sys/utsname.h>
+#include <resource.h>
+#include <errno.h>
+/* If this is put ahead of math.h and sys/types.h, it hides some definitions */
+#define _POSIX_SOURCE 1
+#include <stdarg.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+/* This is a non-POSIX function, so it is not seen in unistd.h */
+extern unsigned int usleep    _AP((time_t));
+#include <string.h>
+void bzero(void *s, int n);	/* This should be in string.h, but isn't */
+#include <sys/ioctl.h>
+#include <sys/file.h>
+#include <fcntl.h>
+#include <sys/mman.h>
+#include <time.h>
+#include <signal.h>
+#include <setjmp.h>
+#include <sys/stat.h>
+#include "tsshm.h"
+#include "servo.h"
+#include "vme_sg_simple.h"
+#include "iPEncoder.h"
+#include "s_cmd2.h"	/* list of commands resident in the EPROM and EEPROM */
+#include "s_constants.h"
+#include "s_anti96com.h" /* serial line communication protocol */
+#if !SIMULATING
+#include "rmsubs.h"
+#endif /* !SIMULATING */
+#include "smadaemon.h"
+#include "palmpilot.h"
+#include "checkencoders.h"
+
+#define DO_TIMESTAMP 0
+#define ERR_VERBOSE 0
+#define AZ_VERBOSE 0
+#define EL_VERBOSE 0
+#define dprintf if(verbose) ErrPrintf
+#define ddprintf if(verbose > 1) ErrPrintf
+
+#define SERVO_DOES_TACH_DIVISORS 0
+#define AZ_CLOSED_LOOP 1
+#define EL_CLOSED_LOOP 1
+#define RECORD 0
+#define COLLECT_VEL_SERVO_DATA 0
+
+#define REFLMEMCYCLE 0
+#define M3_CHECK_CYCLE 10
+#define FAULTWORDCYCLE 20
+#define INFREQUENTCYCLE 60
+#define ENCODERTOPALMCYCLE 70
+#define READMOTORCYCLE 80
+#define ROCKER_CHECK_CYCLE 90
+#define ENCODER_CHECK_CYCLE 95
+int auxCycle;	/* Sub cycle number for doing infrequent tasks */
+
+/* #define ENCODER_DIFF_TOLERANCE 5*MAS */
+#define ADCFACTOR (1.013*5.0/1024.)  /* 10-bit 80C196 ADC */
+
+static int shutdownSignal = 0;		/* signal main program to shutdown */
+static int gotQuit = 0;			/* Return with QUITRTN */
+static int cnt = 0;
+static int beepCnt = 0;
+static int verbose = 0;
+
+enum DRVSTATE azState, nextAzState, elState, nextElState;
+#if AZ_VERBOSE || EL_VERBOSE
+static enum DRVSTATE oldAzState, oldElState;
+#endif /* AZ_VERBOSE || EL_VERBOSE */
+
+#define LINUX 0
+#define LYNXOS 1
+#define ANTENNA 0
+#if LINUX
+  #define PORT "/dev/cua0"
+#elif LYNXOS
+  #if ANTENNA == 1
+    #define PORT "/dev/IPOP422-1"
+  #else  
+    #define PORT "/dev/IPOP422-0"
+  #endif
+#endif
+  
+
+/* Define a structure to hold all of the information associated with a phase
+ * of a move.  When given this structure, movePos can calculate curPos and
+ * curVel for this move.
+ */
+typedef struct {
+	int curPos, curVel; /* Current vals from move. (MAS and MAS/sec) */
+	int nextVel;	    /* Velocity at end of this cycle */
+	int cTime;	    /* Center time of the move (ms) */
+	int hTime;	    /* Half of the move time */
+	int p0; 	    /* Pos & vel at cntr time extrapolated from */
+	int v0; 	    /* previous track (MAS and MAS/sec) */
+	double t0;	    /* Scaling for erf and gaussian time args */
+	int delPos, delVel; /* Coeff of pos and vel components of move */
+} MOVE;
+MOVE azm, elm;
+
+/* Replacement for defined constants */
+double AZ_VMAX,EL_VMAX;
+double trAzVmax, trElVmax;		/* Max allowable command velocities */
+int trAzVelBad, trElVelBad;
+
+double avgDt = 0;
+struct vme_sg_simple_time ttime;
+int azTurn = 0;
+int encAz, encEl;		/* Values read from the encoders (mas) */
+int oldEncAz;			/* Prev az reading.  Used to update turns */
+double elGearRatio;
+double lastTimeStep;		/* Time (sec) from the prev clock rtn to now */
+
+#if 0
+int encfd;			/* fd for ACC or Heidenhain encoders */
+#endif
+enum ENCTYPE encType;
+int azEncoderOffset, elEncoderOffset;
+int azEncoderReversed, elEncoderReversed;
+
+
+/* Things for use with the scb */
+char warning[TTYLEN];
+char serialPort[40];
+int ttfd;			/* File descriptor for the TrueTime device */
+int reportTrueTimeTimeout = 1;
+int packet_debug = 0;
+int scbStatus;
+int azLimitEncoder, elLimitEncoder;
+int driveState;
+int azTachDivisor, elTachDivisor;
+float azIntegralGain, azProportionalGain, azDerivativeGain, azTorqueBias;
+float elIntegralGain, elProportionalGain, elDerivativeGain;
+int rawTachs;
+double azVel2Scb, elVel2Scb;	/* Convert mas/sec to scb tach, taking into
+				 * account the tach divisors. */
+int padAzOffset = 0;		/* Az offset (MAS) of the pad */
+int padID = 0;
+int azMotorDisable = 0;
+int useFakePadID = 0;
+int fakePadID = 0;
+int nonLockoutSetupDone = 0;
+int checkCollisionLimitSwitch = 0;
+int prevNumResets;
+int ttTimeoutCount = 0;
+#define HORN_MOVE (5*MAS)	/* minimum move distance to sound horn */
+#define HORN_DEAD_TIME 300	/* Min time (.01 sec) between moves for horn */
+int needsHorn, hornCnt;		/* Sound horn before large moves */
+int azRockerBits;
+
+TrackServoSHM *tsshm;			/* Local pointer to shared memory */
+/* Values received in shared memory from Track and copied here for use */
+enum DRVCMD trAzCmd, trElCmd;		/* Requested drive state */
+int trAz, trAzVel, trEl, trElVel;	/* Pos and Vel in mas and mas/sec */
+int trMsecCmd;				/* Time of last command in msec */
+
+/* Structure to save previous state */
+struct PREVSTATE {
+	double taz, tel, tazVel, telVel;
+	int tmsecCmd, tmsecAccept, tday, tmsec;
+	int curAz, trAz, trAzVel, azChanged;
+	int curEl, trEl, trElVel, elChanged;
+} p;
+
+int curTrAz, curTrEl;		/* Current extrapolated posn from Track */
+int shpAz, shpEl;		/* Position derived from the command shaper **/
+int azChanged, elChanged;
+int azCnt, elCnt;		/* counts 10ms intervals as drives start */
+int azTry, elTry;		/* counts startup tries */
+#if	AZ_VERBOSE > 1 || EL_VERBOSE > 1
+int azPrintNext = 0, elPrintNext = 0;
+#endif	/* VERBOSE */
+
+/* The following are returned by AzCycle and ElCycle */
+int cmdAzVel,cmdElVel;	/* Vel cmds for vel loop (mas/sec) */
+int cmdAzAccel, cmdElAccel;	/* Accel cmds for vel loop (mas/sec^2) */
+/* Vel cmds scaled for the scb (+-~32k).  Use int to avoid overflow */
+int scbAzVel,scbElVel;
+
+/* Reflective memory stuff */
+float azTrErrorArcSec, elTrErrorArcSec;
+float trErrorBoxtime = 1.0;
+int azRockerCWLimit, azRockerCCWLimit;
+int scbEPROMVersion, scbSRAMVersion;
+char palmDateCode[10];
+
+/* servo.c */
+static void AzCycle(double dt);
+static void ElCycle(double dt);
+static void movePos(MOVE *mp, int time);
+static double GearRatio(int el);
+#if !SIMULATING
+static void OpenScb(void);
+void NonLockoutSetup(void);
+static void CloseScb(char *s);
+static void InitEncoders(void);
+static void ReadLimEncoders(int *azEnc, int *elEnc);
+static void SetScbState(void);
+#endif /* !SIMULATING */
+static void SigIntHndlr(int);
+static void SigQuitHndlr(int signo);
+static void GetPosTime();
+static void GetNextTickTime(void);
+#if 0
+static void PrintTime(struct vme_sg_simple_time *tp);
+#endif
+#if !SIMULATING
+static void PrintEncoders(void);
+static void printStatusFault(void);
+static void ReadFault(int *faultword, int *storedfaultword);
+static void parseFaults(unsigned long word);
+static void parseStatusByte(unsigned int statusByte);
+float Thermistor(unsigned short counts);
+void CheckResets(void);
+void SetPalmCodeDate(void);
+#endif /* !SIMULATING */
+
+#if DO_TIMESTAMP
+void TimeStampStderr(void);
+#else
+#define TimeStampStderr()
+#endif
+void ErrPrintf(char *s, ...);
+
+#if EL_VERBOSE > 2 || AZ_VERBOSE > 2
+static void DumpMove(MOVE *mp, char *axis, int time);
+#endif /* VERBOSE */
+
+#if COLLECT_VEL_SERVO_DATA
+static void GetServoData(void);
+#endif /* COLLECT_VEL_SERVO_DATA */
+void servoUsage(char *);
+
+void servoUsage(char *programName) {
+	fprintf(stderr,
+	    "Usage: %s [-h] [-e] [-v [-v]] [-t] [-p <serialPort: "
+		"default=%s>]\n",
+	    programName,PORT);
+	exit(QUIT_RTN);
+}
+
+double AZ_VMAX,EL_VMAX;
+
+int main(int argc, char *argv[]) {
+	double dt;			/* Present time - cmd ref time (sec) */
+	int i;
+	enum DRVSTATE oldTsshmAzState, oldTsshmElState;
+#if !SIMULATING
+	enum M3CMD oldM3Cmd;
+#endif /* !SIMULATING */
+	struct utsname unamebuf;
+
+	DAEMONSET
+	if(signal(SIGINT, SigIntHndlr) == SIG_ERR) {
+	    ErrPrintf("Error setting INT signal disposition\n");
+	    exit(SYSERR_RTN);
+	}
+	if(signal(SIGQUIT, SigQuitHndlr) == SIG_ERR) {
+	    ErrPrintf("Error setting QUIT signal disposition\n");
+	    exit(SYSERR_RTN);
+	}
+	if(signal(SIGHUP, SigQuitHndlr) == SIG_ERR) {
+	    ErrPrintf("Error setting HUP signal disposition\n");
+	    exit(SYSERR_RTN);
+	}
+
+        strcpy(serialPort,PORT);
+        for (i=1; i<argc; i++) {
+          if (strstr(argv[i],"-h") != NULL) {
+            servoUsage(argv[0]);
+	  }
+          if (strstr(argv[i],"-p") != NULL) {
+            if (++i < argc) {
+              sscanf(argv[i],"%s",serialPort);
+              ErrPrintf("SILENT Will use RS422 serial port = %s\n",serialPort);
+	    } else {
+              servoUsage(argv[0]);
+	    }
+	  } else if (strstr(argv[i],"-t") != NULL) {
+	      reportTrueTimeTimeout = 0;
+	  } else if (strstr(argv[i],"-v") != NULL) {
+	      verbose++;
+	  } else if (strncmp(argv[i],"-e", 2) == NULL) {
+		InitCheckEncoders(-100, -100);
+	  } else {
+              servoUsage(argv[0]);
+	  }
+	}
+
+	/* Set some constants */
+	uname(&unamebuf);
+	if(!strcmp(unamebuf.nodename,"acc7")) {
+	    AZ_VMAX = AZ_VMAX_ANTENNA7;
+	    EL_VMAX = EL_VMAX_ANTENNA7;
+	}
+	else {
+	    AZ_VMAX = AZ_VMAX_DEFAULT;
+	    EL_VMAX = EL_VMAX_DEFAULT;
+	}
+	trAzVmax = AZ_VMAX * 0.76;
+	trElVmax = EL_VMAX * 0.76;
+
+	
+	setpriority(PRIO_PROCESS, (0), (SERVOPRIO));
+	umask(0111);
+	tsshm = OpenShm(TSSHMNAME, TSSHMSZ);
+	/* Set samp buffer full so by default servo will not collect data */
+	tsshm->sampIn = tsshm->sampOut = 0;
+	if(tsshm->azCmd != OFF_CMD || tsshm->elCmd != OFF_CMD) {
+	    ErrPrintf("Warning: Track was not commanding drives off\n");
+	    tsshm->azCmd = tsshm->elCmd = OFF_CMD;
+	}
+	tsshm->sendEncToPalm = 0;
+
+#if SIMULATING
+	scbStatus = 0;
+	encAz = 0;
+	encEl = 45*MAS;
+	elState = azState = 0;
+	ttfd = open("/dev/vme_sg0", O_RDWR, 0);
+	tsshm->fault = NO_FAULT;
+#else /* SIMULATING */
+	OpenScb();
+	dprintf("SetScbState ... ");
+	SetScbState();
+	dprintf("completed\nInitEncoders... ");
+	InitEncoders();
+	dprintf("completed\nOpening RM ... ");
+	/* initializing ref. mem. */
+	OpenRM();
+	RM_WRITE_ALL;			/* Init all regular RM variables */
+	SetRMFaults(-1);		/* initialize the whole set of faults */
+	usleep(1000000);
+	SetPalmCodeDate();
+	dprintf("completed\n");
+#endif /* SIMULATING */
+
+#if COLLECT_VEL_SERVO_DATA
+	ComStartPkt(CLEARSERVODATA);
+	if(SendPktGetRtn(ACK)) {
+	    CloseScb("Error clearing servo data");
+	    exit(SYSERR_RTN);
+	}
+#endif /* COLLECT_VEL_SERVO_DATA */
+
+	/* Set a few things in a safe state. */
+	azState = SERVOOFF;
+	elState = SERVOOFF;
+	tsshm->azState = tsshm->elState = SERVOOFF;
+	oldTsshmAzState = oldTsshmElState = SERVOOFF;
+	cmdAzVel = cmdElVel = 0;
+
+#if	AZ_VERBOSE > 1 || EL_VERBOSE > 1
+	azPrintNext = 0;
+	elPrintNext = 0;
+#endif /* VERBOSE */
+	dprintf("SILENT Entering servo's main loop\n");
+	GetNextTickTime();
+	/* Here the infinite loop begins */
+	while(shutdownSignal == 0) {
+
+	    /* Get time and read encoder */
+	    GetPosTime();
+	    tsshm->encAz = encAz;
+	    tsshm->encEl = encEl;
+
+	    dt = (tsshm->msec - trMsecCmd)/1000.;
+	    if(dt < -3600)
+		dt += 24*3600;
+	    curTrAz = trAz + trAzVel*dt;
+	    curTrEl = trEl + trElVel*dt;
+	    tsshm->azTrError = curTrAz - encAz;
+	    tsshm->elTrError = curTrEl - encEl;
+	    /* Is there a new command from Track? */
+	    if(tsshm->msecCmd != tsshm->msecAccept) {
+		int newAz, newEl;
+
+		dt = (tsshm->msec - tsshm->msecCmd)/1000.;
+		if(dt < -3600)
+		    dt += 24*3600;
+		newAz = tsshm->az + tsshm->azVel * dt;
+		newEl = tsshm->el + tsshm->elVel * dt;
+#if 0
+		if(abs(newAz - curTrAz) > POS_TOLERANCE ||
+			(tsshm->azVel - trAzVel) > VEL_TOLERANCE) {
+		    azChanged = 1;
+#if AZ_VERBOSE
+		    printf("az ch %.4f to %.4f\n", curTrAz/(double)MAS,
+			    newAz/(double)MAS);
+#endif /* AZ_VERBOSE */
+		} else {
+		    azChanged = 0;
+		}
+#endif
+#if 0
+		if(abs(newEl - curTrEl) > POS_TOLERANCE ||
+			(tsshm->elVel - trElVel) > VEL_TOLERANCE) {
+		    elChanged = 1;
+#if EL_VERBOSE
+		    printf("el ch %.2f to %.2f\n", curTrEl/(double)MAS, 
+                           newEl/(double)MAS);
+#endif /* EL_VERBOSE */
+		} else {
+		    elChanged = 0;
+		}
+#endif
+		trAz = tsshm->az;
+		if(fabs(tsshm->azVel) > trAzVmax) {
+		    if(trAzVelBad == 0 ) {
+			trAzVelBad = 1;
+		    } else {
+			trAzVel = 0;
+		    }
+		} else {
+		    trAzVel = tsshm->azVel;
+		    trAzVelBad = 0;
+		}
+		trEl = tsshm->el;
+		if(fabs(tsshm->elVel) > trElVmax) {
+		    if(trElVelBad == 0 ) {
+			trElVelBad = 1;
+		    } else {
+			trElVel = 0;
+		    }
+		} else {
+		    trElVel = tsshm->elVel;
+		    trElVelBad = 0;
+		}
+		trMsecCmd = tsshm->msecCmd;
+		tsshm->msecAccept = tsshm->msecCmd;
+	    }
+#if AZ_VERBOSE || EL_VERBOSE
+	    if(azState != oldAzState || elState != oldElState) {
+		printf("at %.3f   azState = %d, elState = %d\n",
+			tsshm->msec/1000., azState, elState);
+		oldAzState = azState;
+		oldElState = elState;
+	    }
+#endif /* AZ_VERBOSE || EL_VERBOSE */
+	    i = 0;
+	    if(tsshm->azCmd != trAzCmd) {
+		if(tsshm->azCmd == OFF_CMD && azState != SERVOOFF) {
+		    azState = STOPPING;
+		    i = 1;
+		} else if(tsshm->azCmd == ON_CMD && azState == SERVOOFF) {
+		    if(tsshm->fault == LOCKOUT) {
+			i = 4;
+		    } else {
+			azCnt = 0;
+			azTry = 0;
+			azState = STARTING;
+			if(! nonLockoutSetupDone)
+			    NonLockoutSetup();
+		    }
+		}
+		trAzCmd = tsshm->azCmd;
+	    }
+	    if(tsshm->elCmd != trElCmd) {
+		if(tsshm->elCmd == OFF_CMD && elState != SERVOOFF) {
+		    elState = STOPPING;
+		    i+= 2;
+		}
+		if(tsshm->elCmd == ON_CMD && elState == SERVOOFF) {
+		    if(tsshm->fault == LOCKOUT) {
+			i = 4;
+		    } else {
+			elCnt = 0;
+			elTry = 0;
+			elState = STARTING;
+			if(! nonLockoutSetupDone)
+			    NonLockoutSetup();
+		    }
+		}
+		trElCmd = tsshm->elCmd;
+	    }
+	    if(i) {
+		beepCnt = 2;
+		if(i == 4) {
+		    ErrPrintf("Tracking not allowed: %s\n", "Palm in control");
+		} else {
+		    ErrPrintf("servo received OFF_CMD from Track\n");
+		}
+
+	    }
+
+	    if(fabs(dt) > 3.0 && (tsshm->azState != SERVOOFF ||
+		    tsshm->elState != SERVOOFF)) {
+		ErrPrintf("Track timeout or clock jump, dt %.2f sec.,"
+			"avg. dt %.2f sec.\n"
+			"Turning off az and el, curTrAz %.4f, curTrEl %.4f\n",
+			dt, avgDt, /* tsshm->msec, tsshm->msecCmd, */
+			curTrAz / (double)MAS, curTrEl / (double)MAS);
+		TimeStampStderr();
+		if(azState != SERVOOFF && azState != STOPPING) {
+		    azState = STOPPING;
+		    beepCnt = 2;
+		}
+		if(elState != SERVOOFF && elState != STOPPING) {
+		    elState = STOPPING;
+		    beepCnt = 2;
+		}
+	    }
+	    avgDt += (dt - avgDt)/10;
+
+#if !SIMULATING
+	    if(azState < STOPPING && elState < STOPPING) {
+		SetScbState();
+	    }
+#endif /* !SIMULATING */
+	    AzCycle(dt);
+	    tsshm->cmdAz = shpAz;
+	    ElCycle(dt);
+	    tsshm->cmdEl = shpEl;
+	    cnt++;
+
+	  if(azState >= STOPPING || elState >= STOPPING) {
+#if SIMULATING
+#else /* SIMULATING */
+	    ComStartPkt(AZELVELOCITY);
+	    ComPutS(scbElVel);
+	    /* Scale the acceleration feed forward to the same units as
+	     * the velocity command, but divide by 3 to prevent
+	     * overflow in a single byte.
+	    ( */
+	    ComPutC((int)(cmdElAccel * elGearRatio * elVel2Scb *
+		    (0.333333333 * 100./558.)));
+	    ComPutS((short)scbAzVel);
+	    ComPutC((int)(cmdAzAccel * azVel2Scb *
+		    (0.333333333 * 100./558.)));
+	    if(SendPktGetRtn(AZELVELOCITY)) {
+		azState = SERVOOFF;
+		elState = SERVOOFF;
+		tsshm->azState = tsshm->elState = SERVOOFF;
+		SetScbState();
+		if(tsshm->fault == LOCKOUT) {
+		    ErrPrintf("Shutting down: Palm took control of scb\n");
+#if 0
+		} else {
+		    ErrPrintf("Scb error: data ready handler not enabled\n");
+#endif
+		}
+		beepCnt = 2;
+	    } else {
+		scbStatus = ComGetC();
+	    }
+#endif /* SIMULATING */
+	    tsshm->scbStatus = scbStatus;
+	    /* Loop performance data */
+	    if(! SFULL) {
+		SaI.msec = tsshm->msec;
+		SaI.scbStatus = scbStatus;
+		SaI.encAz = encAz;
+		SaI.encEl = encEl;
+#if SIMULATING
+		SaI.tachElVel = 0;
+		SaI.elTorq = 0;
+		SaI.tachAzVel = 0;
+		SaI.azTorq = 0;
+#else /* SIMULATING */
+		SaI.tachElVel = tsshm->tachElVel =  (((int)ComGetS()) << 1) /
+			(elGearRatio * elVel2Scb);
+		SaI.elTorq = ComGetS();
+		SaI.tachAzVel = tsshm->tachAzVel =  (((int)ComGetS()) << 1) /
+			azVel2Scb;
+		SaI.azTorq = ComGetS();
+#endif /* SIMULATING */
+		tsshm->sampIn = NEXT_SAMP(tsshm->sampIn);
+	    } else {
+		tsshm->tachElVel =  (((int)ComGetS()) << 1) /
+			(elGearRatio * elVel2Scb);
+		(void)ComGetS();
+		tsshm->tachAzVel =  (((int)ComGetS()) << 1) / azVel2Scb;
+	    }
+#if !SIMULATING
+	    if(azState >= TRACKING && !(scbStatus & STATUS_AZIMUTH_SERVO)) {
+		azState = STOPPING;
+		beepCnt = 2;
+		ErrPrintf( "[[SCB az drive stopped, trAz = %.4f trAzVel = %.3f,"
+			" cmdAzVel = %.3f\n", trAz / (double)MAS,
+			trAzVel / (double)MAS, cmdAzVel / (double)MAS);
+		PrintEncoders();
+		printStatusFault();
+	    }
+	    if(elState >= TRACKING && !(scbStatus & STATUS_ELEVATION_SERVO)) {
+		elState = STOPPING;
+		beepCnt = 2;
+		ErrPrintf( "[[SCB el drive stopped, trEl = %.4f trElVel = %.3f,"
+			" cmdElVel = %.3f\n", trEl / (double)MAS,
+			trElVel / (double)MAS, cmdElVel / (double)MAS);
+		if(azState != STOPPING) {
+		    PrintEncoders();
+		}
+		printStatusFault();
+	    }
+#endif /* !SIMULATING */
+	  }
+
+	    if(tsshm->azState != oldTsshmAzState || tsshm->elState !=
+			oldTsshmElState) {
+		if(tsshm->elState >= TRACKING && tsshm->azState >= TRACKING) {
+		    /* Both drives are up, so report the old FaultWord
+		     * and clear it. */
+#if !SIMULATING
+		    ComStartPkt(CLRFAULTWORD);
+		    SendPktGetRtn(CLRFAULTWORD);
+		    tsshm->scbFaultWord = ComGetL();
+		    CheckResets();
+#endif /* !SIMULATING */
+		    dprintf("Both drives came up\n");
+		}
+	        if(tsshm->azState != oldTsshmAzState && tsshm->azState ==
+			SERVOOFF) {
+		    dprintf("Az drive is off\n");
+		    beepCnt = 2;
+		}
+		if(tsshm->elState != oldTsshmElState && tsshm->elState ==
+			SERVOOFF) {
+		    dprintf("El drive is off\n");
+		    beepCnt = 2;
+		}
+		oldTsshmElState = tsshm->elState;
+		oldTsshmAzState = tsshm->azState;
+	    }
+	    CheckEncoders();
+
+#if RECORD
+	    SaveData();
+#if COLLECT_VEL_SERVO_DATA
+	    GetServoData();
+#endif /* COLLECT_VEL_SERVO_DATA */
+#endif /* RECORD */
+
+#if !SIMULATING
+	    /* Make checks of the scb less frequently than once/cycle */
+	    auxCycle = (tsshm->msec / 10) % 100;
+	    switch(auxCycle) {
+	    case ROCKER_CHECK_CYCLE :
+		ComStartPkt(READDIGIN);
+		SendPktGetRtn(READDIGIN);
+		azRockerBits = ((unsigned char)ComGetC()) >> AZIMUTH_ROCKER1;
+		break;
+	    case ENCODER_CHECK_CYCLE:
+		ReadLimEncoders(&azLimitEncoder, &elLimitEncoder);
+
+		if(abs(encAz - azLimitEncoder) > (0.9*AZ_ENCODER_DIFF_TOLERANCE)
+			&& azState != SERVOOFF) {
+		    ErrPrintf( "Az encoders differ fine = %.4f, Lim = %.2f\n",
+			    encAz*(1.0/MAS), azLimitEncoder*(1.0/MAS));
+		    azState = STOPPING;
+		    beepCnt = 2;
+		}
+		if(abs(encEl - elLimitEncoder) > (0.9*EL_ENCODER_DIFF_TOLERANCE)
+			&& elState != SERVOOFF) {
+		    ErrPrintf( "El encoders differ fine = %.4f, Lim = %.2f\n",
+			    encEl*(1.0/MAS), elLimitEncoder*(1.0/MAS));
+		    elState = STOPPING;
+		    beepCnt = 2;
+		}
+		break;
+	    case M3_CHECK_CYCLE:
+		if((tsshm->m3Cmd != oldM3Cmd) && (tsshm->fault != LOCKOUT)) {
+		    ComStartPkt(SETM3);
+		    ComPutC((tsshm->m3Cmd == CLOSE_M3_CMD)? CLOSE_M3: OPEN_M3);
+		    SendPktGetRtn(ACK);
+		    oldM3Cmd = tsshm->m3Cmd;
+		    tsshm->m3State = MOVING_ST;
+		    
+		} else {
+		    ComStartPkt(READM3);
+		    SendPktGetRtn(READM3);
+		    i = (ComGetC() << 1);
+		    i |= ComGetC();
+		    (void)ComGetC();		/* pass over m3control */
+		    switch(i) {
+		    case 0:
+			if(ComGetS() == 0) {	/* Timeout is zero */
+			    tsshm->m3State = STUCK_ST;
+			}
+			break;
+		    case 3:
+			if(ComGetS() == 0) {	/* Timeout is zero */
+			    tsshm->m3State = (tsshm->m3Cmd == CLOSE_M3_CMD)?
+				CLOSED_QUESTION: OPEN_QUESTION;
+			}
+			break;
+		    default:
+			tsshm->m3State = i;
+		    }
+		}
+		break;
+	    case FAULTWORDCYCLE:
+		if(tsshm->fault != LOCKOUT) {
+		    ComStartPkt(CLRFAULTWORD);
+		    SendPktGetRtn(CLRFAULTWORD);
+		} else {
+		    ComStartPkt(FAULTWORD);
+		    SendPktGetRtn(FAULTWORD);
+		}
+		tsshm->scbFaultWord = ComGetL();
+		break;
+	    case FAULTWORDCYCLE + 2:
+		UPDATE_MONITOR_AND_STATE;
+		break;
+	    case READMOTORCYCLE:
+		ComStartPkt(READMOTORS);
+		SendPktGetRtn(READMOTORS);
+		tsshm->elMotTemp = Thermistor(ComGetS() & 0x03ff);
+		tsshm->elMotCurrent = (ADCFACTOR*20)*(0x03ff&ComGetS());
+		tsshm->azMot1Temp = Thermistor(ComGetS() & 0x03ff);
+		tsshm->azMot1Current = (ADCFACTOR*20)*(0x03ff&ComGetS());
+		tsshm->azMot2Temp = Thermistor(ComGetS() & 0x03ff);
+		tsshm->azMot2Current = (ADCFACTOR*20)*(0x03ff&ComGetS());
+		break;
+	    case REFLMEMCYCLE:
+		UPDATE_TIME_POSITION;
+		RMTimestamp();
+		break;
+	    case REFLMEMCYCLE + 2:
+		/* Update faults if needed */
+		UpdateRMFaults();
+		break;
+	    case REFLMEMCYCLE + 4:
+		driveState = tsshm->azState && tsshm->elState;
+		tsshm->irigLock = (ttime.input_reference_error << 1) |
+			(ttime.phase_locked ^ 1);
+		UPDATE_MONITOR_AND_STATE;
+		break;
+	    case INFREQUENTCYCLE:
+		if(tsshm->msec < 61000 && tsshm->msec > 60000) {
+		    struct timespec tp;
+		    ComStartPkt(SET_PALM_TIME);
+		    clock_gettime(CLOCK_REALTIME,&tp);
+		    ComPutL(tp.tv_sec);
+		    SendPktGetRtn(ACK);
+		}
+		if(beepCnt > 0) {
+		    ErrPrintf("Warning: drive shutdown\a\n");
+#if 1
+		    /* Only one shutdown message to un-clutter stderr file */
+		    CheckResets();
+		    beepCnt = 0;
+#else
+		    if(--beepCnt == 0) {
+			CheckResets();
+			TimeStampStderr();
+		    }
+#endif
+		}
+		break;
+	    case ENCODERTOPALMCYCLE:
+		if(tsshm->sendEncToPalm != NOTHING_TO_PALM) {
+		    ComStartPkt(TOPALM);
+		    if(tsshm->sendEncToPalm == AZ_TO_PALM) {
+			ComPutC(AZ_HIGHRES_ENCODER);
+			ComPutL(encAz / ENC_TO_MAS);
+		    } else {
+			ComPutC(EL_HIGHRES_ENCODER);
+			ComPutL(encEl / ENC_TO_MAS);
+		    }
+		    SendPktGetRtn(ACK);
+		}
+		break;
+	    default:
+		if(needsHorn) {
+		    ComStartPkt(SOUNDHORN);
+		    ComPutS(2*ONE_SEC);
+		    ComPutC(BEEPING_HORN);
+		    SendPktGetRtn(ACK);
+		    needsHorn = 0;
+		    hornCnt = HORN_DEAD_TIME;
+		} else if(hornCnt > 0) {
+		    if(azState > TRACKING || elState > TRACKING) {
+			hornCnt = HORN_DEAD_TIME;
+		    } else {
+			hornCnt--;
+		    }
+		}
+	    }
+#if 1
+	    /* Compute average pointing errors */
+	    if((auxCycle % 10) == 9) {
+		static double ssq = 0;
+
+		/* Instantaneous az error (commanded - actual) */
+		azTrErrorArcSec = (double)tsshm->azTrError *
+			cos(RAD_PER_MAS * curTrEl) * 0.001;
+		ssq += azTrErrorArcSec * azTrErrorArcSec;
+		elTrErrorArcSec = (double)tsshm->elTrError * 0.001;
+		ssq += elTrErrorArcSec * elTrErrorArcSec;
+		if(auxCycle == 99) {
+		    tsshm->avgTrErrorArcSec = sqrt(ssq / 10.);
+		    ssq = 0.;
+		}
+	    }
+#endif
+#endif /* !SIMULATING */
+	}
+
+#if !SIMULATING
+	CloseScb("Received a signal");
+	TimeStampStderr();
+#endif /* SIMULATING */
+
+#if RECORD
+	WriteData();
+#if COLLECT_VEL_SERVO_DATA
+	WriteServoData();
+#endif /* COLLECT_VEL_SERVO_DATA */
+#endif /* RECORD */
+
+	return((gotQuit)? QUIT_RTN: NORMAL_RTN);
+}
+
+static void AzCycle(double dt) {
+	/* At each cycle set to anticipated next position and velocity.
+	 * Used as the the current position & vel in setting up moves. */
+	static int nxtAz, nxtAzVel;
+	int curAz, curAzVel;
+	double azStopPosn;
+	int azCorrected;
+
+START_AZ:
+	curAz = trAz + trAzVel*dt;
+	curAzVel = trAzVel;
+	if(abs(curAzVel) < AZ_VCRIT) {
+	    azStopPosn =  curAz + curAzVel * (AZ_MIN_HTIME/1000.);
+	} else {
+	    azStopPosn =  curAz + curAzVel * ((double)abs(curAzVel)) *
+		    ((AZ_MIN_HTIME/1000.) / AZ_VCRIT);
+	}
+	if(azStopPosn > tsshm->cwLimit) {
+	    curAz = tsshm->cwLimit;
+	    curAzVel = 0;
+	} else if(azStopPosn < tsshm->ccwLimit) {
+	    curAz = tsshm->ccwLimit;
+	    curAzVel = 0;
+	}
+
+	p.taz = tsshm->az;
+	p.tazVel = tsshm->azVel;
+	p.tmsecCmd = tsshm->msecCmd;
+	p.tmsecAccept = tsshm->msecAccept;
+	p.tday = tsshm->day;
+	p.tmsec = tsshm->msec;
+	p.curAz = curAz;
+	p.trAz = trAz;
+	p.trAzVel = trAzVel;
+	p.azChanged = azChanged;
+
+	cmdAzAccel = 0; 	/* true unless in a move */
+	azCorrected = 0;
+RESTART_AZ:
+	switch(azState) {
+	case SERVOOFF:
+#if	    AZ_VERBOSE > 1
+	    azPrintNext = 0;
+#endif	    /* AZ_VERBOSE */
+	    /* There should be code here to turn the Glentecks off
+	     * and then if rm.posType changes, respond by turning
+	     * the Glenteks on and changing to TRACKING mode.  For now
+	     * just write out data and die.
+	     */
+	    cmdAzVel = 0;
+	    break;
+	case STARTING:
+	    if(azCnt == 0) {
+#if SIMULATING
+		scbStatus |= STATUS_AZIMUTH_SERVO;
+#else /* SIMULATING */
+		ComStartPkt(AZSERVOON);
+		ComPutC(ENABLE);
+		SendPktGetRtn(ACK);
+#endif /* SIMULATING */
+		azCnt++;
+		break;
+	    }
+	    if(azCnt++ < 10) {
+		break;			/* wait a bit to retry */
+	    }
+	    if(scbStatus & STATUS_AZIMUTH_SERVO) {
+		nxtAz = encAz;
+		nxtAzVel = 0;
+		tsshm->azState = azState = TRACKING;
+		goto START_AZ;
+	    }
+	    if((scbStatus & (STATUS_AZIMUTH_HARDFAULT |
+		    STATUS_AZIMUTH_SOFTFAULT | STATUS_DATA_READY_HANDLER)) ||
+		    azCnt > 1000) {
+		if(azCnt > 1000) {
+		    if(azTry == 0) {
+			azTry = 1;
+			azCnt = 0;
+			ErrPrintf(
+				"Az not started after 10 sec: trying again\n");
+			azState = STARTING;
+			goto START_AZ;
+		    } else {
+			ErrPrintf("Az not started after two 10 sec. tries\n");
+		    }
+		}
+		if(azTry == 0) {
+		    azTry = 1;
+		    azCnt = -10;
+		    ErrPrintf( "[[Az fault on startup.  Will retry.\n");
+		    printStatusFault();
+		    azState = STARTING;
+		    goto START_AZ;
+		}
+
+		ErrPrintf("[[Shutting down Az\n");
+#if !SIMULATING
+		printStatusFault();
+#endif /* !SIMULATING */
+		azState = STOPPING;
+		beepCnt = 2;
+		goto START_AZ;
+	    }
+	    cmdAzVel = 0;
+	    break;
+	case STOPPING:
+	    if(cmdAzVel > 0) {
+		cmdAzVel -= (AZ_VMAX/100);
+		if(cmdAzVel < 0)
+		    cmdAzVel = 0;
+	    } else {
+		cmdAzVel += (AZ_VMAX/100);
+		if(cmdAzVel > 0)
+		    cmdAzVel = 0;
+	    }
+	    if(cmdAzVel == 0) {
+#if SIMULATING
+		scbStatus &= ~STATUS_AZIMUTH_SERVO;
+#else /* SIMULATING */
+	        ComStartPkt(AZSERVOON);
+	        ComPutC(DISABLE);
+	        SendPktGetRtn(ACK);
+#endif /* SIMULATING */
+		azState = SERVOOFF;
+		tsshm->azState = SERVOOFF;
+	    }
+	    break;
+	case TRACKING:
+#if	    AZ_VERBOSE > 1
+	    if(azPrintNext) {
+		printf("#nxtAz = %10.5f, azm.curVel = %9.5f\n"
+		    "#curAz = %10.5f,	 curAzVel = %9.5f\n",
+		    nxtAz/(double)MAS, azm.curVel/(double)MAS,
+		    curAz/(double)MAS, curAzVel/(double)MAS);
+		azPrintNext = 0;
+	    }
+#endif	    /* AZ_VERBOSE */
+	    /* Check to see if source position has changed enough that
+	     * a move sequence should be initiated.  The tolerance will
+	     * need to be determined experimentally and should probably
+	     * be a function of elevation angle.  For now use 5"Arc which
+	     * will allow moves to transition to tracking up to 89 deg
+	     * elevation in spite of nonlinear motion in Az at high el.
+	     */
+	    if(abs(nxtAz - curAz) > POS_TOLERANCE ||
+			abs(curAzVel - nxtAzVel) > VEL_TOLERANCE) {
+		double eqn;
+		int delP;
+
+		azChanged = 0;
+		azm.delVel = curAzVel - nxtAzVel;
+		delP = curAz - nxtAz;
+		if(abs(delP) > HORN_MOVE)
+		    needsHorn = 1;
+
+		if(AZ_AMAX < AZ_VMAX * M_SQRT2/EXP_HALF*M*500/AZ_MIN_HTIME) {
+
+		    /* If we get here, single step moves in Az are limited
+		     * by the max acceleration available and are optimim up to
+		     * MIN_HTIME*4 msec of move time.  The following code
+		     * calculates the minimum t0 (and thus move time) for
+		     * this move given AMAX.
+		     */
+		    if((delP ^ azm.delVel) > 0) { /*delP*azm.delVel overflows*/
+			eqn = ((0.120985*M + 0.170883)/AZ_AMAX);
+		    } else {
+			eqn = ((-0.120985*M + 0.170883)/AZ_AMAX);
+		    }
+		    eqn *= abs(azm.delVel);
+		    azm.t0 = eqn + sqrt((0.48393/AZ_AMAX)*abs(delP) + eqn*eqn);
+
+		} else {
+		    azm.t0 = 0;
+		}
+
+		if(AZ_AMAX*2 >= AZ_VMAX * M_SQRT2/EXP_HALF*M*500/AZ_MIN_HTIME) {
+		    double tmpt0;
+		    /* If we get here, the max velocity may be the limiting
+						     * factor in the move. */
+		    if(delP < 0) {
+			tmpt0 = -delP/((2./M_2_SQRTPI)*(AZ_VMAX +
+			    (curAzVel + nxtAzVel)/2) + M*azm.delVel/2.);
+		    } else {
+			tmpt0 = delP/((2./M_2_SQRTPI)*(AZ_VMAX -
+			    (curAzVel + nxtAzVel)/2) - M*azm.delVel/2.);
+		    }
+		    if(tmpt0 > azm.t0)
+			azm.t0 = tmpt0;
+		}
+		azm.t0 *= 1000.;
+
+		/* Now see if a short move is appropriate. */
+		if(azm.t0 <= (4.0*AZ_MIN_HTIME/M)) {
+		    if(azm.t0 < (2.0*AZ_MIN_HTIME/M)) {
+			azm.t0 = 2.0*AZ_MIN_HTIME/M;
+		    }
+		    /* Round hTime to nearest 10 ms */
+		    azm.hTime = 0.5 + azm.t0*(M/20.0);
+		    azm.hTime *= 10;
+
+		    azm.cTime = tsshm->msec + azm.hTime;
+		    azm.v0 = nxtAzVel;
+		    /* Current position projected to cTime at curVel */
+		    azm.p0 = nxtAz + ((double)azm.v0 * azm.hTime) / 1000;
+		    azm.delPos = delP + ((double)azm.delVel*azm.hTime) *
+			0.001;
+		    nextAzState = TRACKING;
+		    azState = SLEWING;
+#if		AZ_VERBOSE > 2
+		    printf("#Az Start short move\n");
+		    DumpMove( &azm, "Az", tsshm->msec);
+#endif		/* AZ_VERBOSE */
+		} else {
+		    int vmax, vsum, vsel, dP;
+
+/* If we got here, the move is too long for a short move and we must now
+ * set up a Long move with acceleration to Vmax, a possible Const Vel
+ * section, and deceleration to the new track's velocity.  AZ_AMAX, AZ_MAX_VEL,
+ * and MIN_HTIME are potential limits.	The move parameters will be chosen
+ * with equal accel and decel time.  Since the initial and final velocities
+ * may be different, vsel is selected as the one requiring the larger
+ * velocity change and used in setting up move parameters so that AZ_AMAX will
+ * not be exceeded in either case.  The time lost to this simplification
+ * is negligable except above el = 88 deg.
+ */
+		    if(AZ_AMAX < AZ_VMAX * M_2_SQRTPI*M*250/AZ_MIN_HTIME) {
+			vsum = nxtAzVel - 3*curAzVel;
+			/* In solving the quadratic eqn we need the absolute
+		         * value of the motion and velocities */
+			if(delP < 0) {
+			    vsum = - vsum;
+			    vsel = (curAzVel>nxtAzVel)? -curAzVel: -nxtAzVel;
+			    dP = - delP;
+			} else {
+			    vsel = (curAzVel < nxtAzVel)? curAzVel: nxtAzVel;
+			    dP = delP;
+			}
+			eqn = (2*vsel + vsum)/4;
+			vmax = (2*vsel - vsum)/4 + (int)sqrt(AZ_ACC_CONST*dP +
+			    eqn*eqn);
+
+			if(vmax > AZ_VMAX) {
+			    vmax = AZ_VMAX;
+			    nextAzState = LONGMOVECV_SETUP;
+			} else {
+			    nextAzState = LONGMOVEDECEL;
+			}
+			/* Round hTime to the nearest 10 ms */
+			azm.hTime = 0.5 + (500/(AZ_ACC_CONST*10))*
+			    (vmax - vsel);
+			azm.hTime *= 10;
+			if(azm.hTime < AZ_MIN_HTIME) {
+#if		    AZ_MIN_HTIME == 500
+			    vmax = dP - vsum/2;
+#else
+			    vmax =(int)((500./AZ_MIN_HTIME)*dP) - vsum/2;
+#endif
+			    azm.hTime = AZ_MIN_HTIME;
+			}
+		    } else {
+
+			/* With this combination of parameters we do the
+		         * much simpler velocity limited move. */
+			vmax = abs((int)(delP*(1000./(AZ_MIN_HTIME*2)) +
+			    azm.delVel));
+			azm.hTime = AZ_MIN_HTIME;
+			if(vmax > AZ_VMAX) {
+			    vmax = AZ_VMAX;
+			    nextAzState = LONGMOVECV_SETUP;
+			} else {
+			    nextAzState = LONGMOVEDECEL;
+			}
+		    }
+		    azm.cTime = tsshm->msec + azm.hTime;
+		    azm.v0 = nxtAzVel;
+		    /* Current position projected to cTime at curVel */
+		    azm.p0 = nxtAz + ((double)azm.v0 * azm.hTime) / 1000;
+		    azm.t0 = azm.hTime * (2.0/M);
+		    if(delP < 0)
+			vmax = -vmax;
+		    azm.delVel = vmax - nxtAzVel;
+		    azm.delPos = 0;
+		    azState = SLEWING;
+#if		AZ_VERBOSE > 2
+		    printf("#Az Start long move accel\n");
+		    DumpMove( &azm, "Az", tsshm->msec);
+#endif		/* AZ_VERBOSE */
+		}
+#if 1
+		goto RESTART_AZ;
+#else
+		if(azCorrected) {
+		    goto RESTART_AZ;
+		}
+		/* Now find out if we will hit a limit before this move
+		 * is finished */
+		movePos(&azm, azm.cTime + azm.hTime);
+		if(abs(azm.curVel) < AZ_VCRIT) {
+		    azStopPosn =  azm.curPos + azm.curVel *
+			    (AZ_MIN_HTIME/1000.);
+		} else {
+		    azStopPosn =  azm.curPos + azm.curVel *
+			    ((double)abs(azm.curVel)) *
+			    ((AZ_MIN_HTIME/1000.) / AZ_VCRIT);
+		}
+		fprintf(stderr, "AZ STOP POSN %.4f\n", azStopPosn / MAS);
+		if(azStopPosn > tsshm->cwLimit) {
+		    curAz = tsshm->cwLimit;
+		    curAzVel = 0;
+		    azCorrected = 1;
+		    azState = TRACKING;
+		} else if(azStopPosn < tsshm->ccwLimit) {
+		    curAz = tsshm->ccwLimit;
+		    curAzVel = 0;
+		    azCorrected = 1;
+		    azState = TRACKING;
+		}
+		goto RESTART_AZ;
+#endif
+	    }
+	    /* This is the core of the linear az position loop.  Velocity
+	     * feed forward is not really needed, but used for consistency.
+	     * Accel feed forward is not needed or used.
+	     */
+	    nxtAz = curAz + curAzVel / 100;
+	    nxtAzVel = curAzVel;
+	    cmdAzVel =
+#if AZ_CLOSED_LOOP
+		(curAz - encAz) * AZ_GAIN +
+#endif
+
+		curAzVel;
+	    break;
+	case SLEWING:
+	    /* The task here is to follow the planned move and change to
+	     * the nextAzState at its end.
+	     */
+	    movePos(&azm, tsshm->msec);
+	    shpAz = azm.curPos;
+	    nxtAzVel = (azm.curVel + azm.nextVel)/2;
+	    /* Velocity feed forward is needed here since the position
+	     * loop may not have enough bandwidth to follow the accel
+	     * path, but the vel loop will.
+	     */
+	    cmdAzVel =
+#if	    AZ_CLOSED_LOOP
+		(shpAz - encAz) * AZ_GAIN + 
+#endif
+		nxtAzVel;
+	    cmdAzAccel = azm.nextVel - azm.curVel;
+
+	    if(tsshm->msec >= azm.cTime + azm.hTime) {
+		nxtAz = shpAz;
+		azState = nextAzState;
+#if		AZ_VERBOSE > 1
+		azPrintNext = 1;
+#endif		/* AZ_VERBOSE */
+		goto START_AZ;
+	    }
+	    break;
+	case LONGMOVEDECEL:
+	    azm.delVel = curAzVel - nxtAzVel;
+	    azm.cTime = tsshm->msec + azm.hTime;
+	    azm.v0 = nxtAzVel;
+	    /* Current position projected to cTime at curVel */
+	    azm.p0 = nxtAz + ((double)azm.v0 * azm.hTime) / 1000;
+	    azm.t0 = azm.hTime * (2.0/M);
+	    azm.delPos = curAz - nxtAz + ((double)azm.delVel*azm.hTime) *
+		0.001;
+	    /* At this point we would expect that if we simply decelerated
+	     * to the final velocity we would be very close to the target
+	     * position and velocity.  Thus unless a new track has been
+	     * given, delPos should be small.  We prefer to use the hTime
+	     * calculated at acceleration time, so if delPos isn't small,
+	     * the safest thing to do is just stop and then let TRACKING
+	     * start a new move.
+	     */
+	    if(abs(azm.delPos) > 0.1 * MAS) {
+#if		AZ_VERBOSE 
+		printf("#Az Long Move Decel: Position error %10.5f\n",
+		    azm.delPos/(double)MAS);
+#endif		/* AZ_VERBOSE */
+		azm.delPos = 0;
+	    }
+	    azState = SLEWING;
+	    nextAzState = TRACKING;
+#if	    AZ_VERBOSE > 2
+	    printf("#Az Start long move decel\n");
+	    DumpMove( &azm, "Az", tsshm->msec);
+#endif	    /* AZ_VERBOSE */
+	    goto START_AZ;
+	    break;
+	case LONGMOVECV_SETUP:
+	    azState = LONGMOVECV;
+	    nextAzState = LONGMOVEDECEL;
+#if	    AZ_VERBOSE > 2
+	    printf("#Az Start CV\n");
+	    DumpMove( &azm, "Az", tsshm->msec);
+#endif	    /* AZ_VERBOSE */
+	    goto AZCVENTRY;	/* Skip position update the first time */
+	case LONGMOVECV:
+	    azm.curPos += azm.curVel * lastTimeStep;
+AZCVENTRY:
+
+	    /* Picking the time to start deceleration is the trick. */
+	    if((nxtAzVel > curAzVel &&
+		azm.curPos + 0.001*(nxtAzVel-curAzVel)*azm.hTime >= curAz) ||
+		(nxtAzVel <= curAzVel &&
+		azm.curPos + 0.001*(nxtAzVel-curAzVel)*azm.hTime <= curAz)) {
+
+		nxtAz = azm.curPos;
+		azState = nextAzState;
+		nextAzState = TRACKING;
+		goto START_AZ;
+	    }
+	    shpAz = azm.curPos;
+	    nxtAzVel = (azm.curVel + azm.nextVel)/2;
+	    /* velocity feed forward is used here because the commanded
+	     * velocity is high and there would be a position lag
+	     * otherwise causing a transient when switching to decel.
+	     */
+	    cmdAzVel =
+#if AZ_CLOSED_LOOP
+		(shpAz - encAz) * AZ_GAIN + 
+#endif
+		nxtAzVel;
+	    break;
+	}
+	/* shpAz should always have a value.  When just tracking it should be
+	 * the same as the current request */
+	if(azState <= TRACKING) {
+	    shpAz = curAz;
+	}
+	/* Loop performance data */
+	if(! SFULL) {
+	    SaI.curAz = curAz;
+	    SaI.shpAz = shpAz;
+	    SaI.cmdAzVel = cmdAzVel;
+	    SaI.azState = azState;
+	}
+	/* Do this conversion in floating point for now. */
+	/* Need to deal with az accel */
+	scbAzVel = cmdAzVel * azVel2Scb;
+	if(scbAzVel > MAX_AZ_SCB_VEL) {
+	    scbAzVel = MAX_AZ_SCB_VEL;
+	    cmdAzAccel = 0;
+	}
+	if(scbAzVel < -MAX_AZ_SCB_VEL) {
+	    scbAzVel = -MAX_AZ_SCB_VEL;
+	    cmdAzAccel = 0;
+	}
+}
+
+static void ElCycle(double dt) {
+	/* At each cycle set to anticipated next position and velocity.
+	 * Used as the the current position & vel in setting up moves. */
+	static int nxtEl, nxtElVel;
+	int curEl, curElVel;
+	double elStopPosn;
+
+START_EL:
+	curEl = trEl + trElVel*dt;
+	curElVel = trElVel;
+	if(abs(curElVel) < EL_VCRIT) {
+	    elStopPosn =  curEl + curElVel * (EL_MIN_HTIME/1000.);
+	} else {
+	    elStopPosn =  curEl + curElVel * ((double)abs(curElVel)) *
+		    ((EL_MIN_HTIME/1000.) / EL_VCRIT);
+	}
+	if(elStopPosn > tsshm->upperLimit) {
+	    curEl = tsshm->upperLimit;
+	    curElVel = 0;
+	} else if(elStopPosn < tsshm->lowerLimit) {
+	    curEl = tsshm->lowerLimit;
+	    curElVel = 0;
+	}
+
+	p.tel = tsshm->el;
+	p.telVel = tsshm->elVel;
+	p.curEl = curEl;
+	p.trEl = trEl;
+	p.trElVel = trElVel;
+	p.elChanged = elChanged;
+
+	cmdElAccel = 0; 	/* true unless in a move */
+	switch(elState) {
+	case SERVOOFF:
+#if	    EL_VERBOSE > 1
+	    elPrintNext = 0;
+#endif	    /* EL_VERBOSE */
+	    cmdElVel = 0;
+	    break;
+	case STARTING:
+	    if(elCnt == 0) {
+#if SIMULATING
+		scbStatus |= STATUS_ELEVATION_SERVO;
+#else /* SIMULATING */
+		ComStartPkt(ELSERVOON);
+		ComPutC(ENABLE);
+		SendPktGetRtn(ACK);
+#endif /* SIMULATING */
+		elCnt++;
+		break;
+	    }
+	    elCnt++;
+	    if(scbStatus & STATUS_ELEVATION_SERVO) {
+		nxtEl = encEl;
+		nxtElVel = 0;
+		tsshm->elState = elState = TRACKING;
+		goto START_EL;
+	    }
+	    if((scbStatus & (STATUS_ELEVATION_HARDFAULT |
+		    STATUS_ELEVATION_SOFTFAULT | STATUS_DATA_READY_HANDLER)) ||
+		    elCnt > 1000) {
+		if(elCnt > 1000) {
+		    if(elTry == 0) {
+			elTry = 1;
+			elCnt = 0;
+			elState = STARTING;
+			goto START_EL;
+		    } else {
+			ErrPrintf("El not started after two 10 sec. tries\n");
+		    }
+		}
+		ErrPrintf("[[Shutting down El\n");
+#if !SIMULATING
+		printStatusFault();
+#endif /* !SIMULATING */
+		elState = STOPPING;
+		goto START_EL;
+	    }
+	    cmdElVel = 0;
+	    break;
+	case STOPPING:
+	    if(cmdElVel > 0) {
+		cmdElVel -= (EL_VMAX/100);
+		if(cmdElVel < 0)
+		    cmdElVel = 0;
+	    } else {
+		cmdElVel += (EL_VMAX/100);
+		if(cmdElVel > 0)
+		    cmdElVel = 0;
+	    }
+	    if(cmdElVel == 0) {
+#if SIMULATING
+		scbStatus &= ~STATUS_ELEVATION_SERVO;
+#else /* SIMULATING */
+	        ComStartPkt(ELSERVOON);
+	        ComPutC(DISABLE);
+	        SendPktGetRtn(ACK);
+#endif /* SIMULATING */
+		elState = SERVOOFF;
+		tsshm->elState = SERVOOFF;
+	    }
+	    break;
+	case TRACKING:
+#if	    EL_VERBOSE > 1
+	    if(elPrintNext) {
+		printf("#elm.curEl = %10.5f, elm.curVel = %9.5f\n"
+		    "#	  curEl = %10.5f,   trElVel = %9.5f\n",
+		    nxtEl/(double)MAS, elm.curVel/(double)MAS,
+		    curEl/(double)MAS, trElVel/(double)MAS);
+		elPrintNext = 0;
+	    }
+#endif	    /* EL_VERBOSE */
+	    /* Check to see if source position has changed enough that
+	     * a move sequence should be initiated.  The tolerance will
+	     * need to be determined experimentally.
+	     */
+	    if(abs(nxtEl - curEl) > POS_TOLERANCE ||
+		abs(curElVel - nxtElVel) > VEL_TOLERANCE) {
+		double eqn;
+		int delP;
+
+		elChanged = 0;
+		elm.delVel = curElVel - nxtElVel;
+		delP = curEl - nxtEl;
+		if(abs(delP) > HORN_MOVE)
+		    needsHorn = 1;
+
+		if(EL_AMAX < EL_VMAX * M_SQRT2/EXP_HALF*M*500/EL_MIN_HTIME) {
+
+		    /* The Elevation drive is capable of very high
+		     * accelerations.  If we get here, single step moves in
+		     * El are limited by the max acceleration limit (EL_AMAX)
+		     * and are optimim up to MIN_HTIME*4 msec of move time.
+		     * The following code calculates the minimum t0 (and
+		     * thus move time) for this move given AMAX.
+		     */
+		    if((delP ^ elm.delVel) > 0) { /*delP*elm.delVel overflows*/
+			eqn = ((0.120985*M + 0.170883)/EL_AMAX);
+		    } else {
+			eqn = ((-0.120985*M + 0.170883)/EL_AMAX);
+		    }
+		    eqn *= abs(elm.delVel);
+		    elm.t0 = eqn + sqrt((0.48393/EL_AMAX)*abs(delP) + eqn*eqn);
+		} else {
+		    elm.t0 = 0;
+		}
+		if(EL_AMAX*2 > EL_VMAX * M_SQRT2/EXP_HALF*M*500/EL_MIN_HTIME) {
+		    double tmpt0;
+		    /* If we get here, the max velocity may be the limiting
+						     * factor in the move. */
+		    if(delP < 0) {
+			tmpt0 = -delP/((2./M_2_SQRTPI)*(EL_VMAX +
+			    (curElVel + nxtElVel)/2) + M*elm.delVel/2.);
+		    } else {
+			tmpt0 = delP/((2./M_2_SQRTPI)*(EL_VMAX -
+			    (curElVel + nxtElVel)/2) - M*elm.delVel/2.);
+		    }
+		    if(tmpt0 > elm.t0)
+			elm.t0 = tmpt0;
+		}
+		elm.t0 *= 1000.;
+		if(elm.t0 <= (4.0*EL_MIN_HTIME/M)) {
+		    if(elm.t0 < (2.0*EL_MIN_HTIME/M)) {
+			elm.t0 = 2.0*EL_MIN_HTIME/M;
+		    }
+		    /* Round hTime to nearest 10 ms */
+		    elm.hTime = 0.5 + elm.t0*(M/20.0);
+		    elm.hTime *= 10;
+
+		    elm.cTime = tsshm->msec + elm.hTime;
+		    elm.v0 = nxtElVel;
+		    /* Current position projected to cTime at curVel */
+		    elm.p0 = nxtEl + ((double)elm.v0 * elm.hTime) / 1000;
+		    elm.delPos = delP + ((double)elm.delVel*elm.hTime) *
+			0.001;
+		    nextElState = TRACKING;
+		    elState = SLEWING;
+#if		EL_VERBOSE > 2
+		    printf("#El Start short move\n");
+		    DumpMove( &elm, "El", tsshm->msec);
+#endif		/* EL_VERBOSE */
+		    goto START_EL;
+		} else {
+		    int vmax, vsum, vsel, dP;
+
+/* If we got here, the move is too long for a short move and we must now
+ * set up a Long move with acceleration to Vmax, a possible Const Vel
+ * section, and deceleration to the new track's velocity.  EL_AMAX, EL_VMAX,
+ * and MIN_HTIME are potential limits.	The move parameters will be chosen
+ * with equal accel and decel time.  Since the initial and final velocities
+ * may be different, vsel is selected as the one requiring the larger
+ * velocity change and used in setting up move parameters so that EL_AMAX will
+ * not be exceeded in either case.  The time lost to this simplification
+ * is negligable except above el = 88 deg.
+ */
+		    if(EL_AMAX < EL_VMAX * M_2_SQRTPI*M*250/EL_MIN_HTIME) {
+			vsum = nxtElVel - 3*curElVel;
+			/* In solving the quadratic eqn we need the absolute
+			 * value of the motion and velocities */
+			if(delP < 0) {
+			    vsum = - vsum;
+			    vsel = (curElVel>nxtElVel)? -curElVel: -nxtElVel;
+			    dP = - delP;
+			} else {
+			    vsel = (curElVel < nxtElVel)? curElVel: nxtElVel;
+			    dP = delP;
+			}
+			eqn = (2*vsel + vsum)/4;
+			vmax = (2*vsel - vsum)/4 + (int)sqrt(EL_ACC_CONST*dP +
+			    eqn*eqn);
+
+			if(vmax > EL_VMAX) {
+			    vmax = EL_VMAX;
+			    nextElState = LONGMOVECV_SETUP;
+			} else {
+			    nextElState = LONGMOVEDECEL;
+			}
+			/* Round hTime to the nearest 10 ms */
+			elm.hTime = 0.5 + (500/(EL_ACC_CONST*10))*
+			    (vmax - vsel);
+			elm.hTime *= 10;
+			if(elm.hTime < EL_MIN_HTIME) {
+#if		    EL_MIN_HTIME == 500
+			    vmax = dP - vsum/2;
+#else
+			    vmax =(int)((500./EL_MIN_HTIME)*dP) - vsum/2;
+#endif
+			    elm.hTime = EL_MIN_HTIME;
+			}
+		    } else {
+
+			/* With this combination of parameters we do the
+			 * much simpler velocity limited move.
+			 */
+			vmax = abs((int)(delP*(1000./(EL_MIN_HTIME*2)) +
+			    elm.delVel));
+			elm.hTime = EL_MIN_HTIME;
+			if(vmax > EL_VMAX) {
+			    vmax = EL_VMAX;
+			    nextElState = LONGMOVECV_SETUP;
+			} else {
+			    nextElState = LONGMOVEDECEL;
+			}
+		    }
+		    elm.cTime = tsshm->msec + elm.hTime;
+		    elm.v0 = nxtElVel;
+		    /* Current position projected to cTime at curVel */
+		    elm.p0 = nxtEl + ((double)elm.v0 * elm.hTime) / 1000;
+		    elm.t0 = elm.hTime * (2.0/M);
+		    if(delP < 0)
+			vmax = -vmax;
+		    elm.delVel = vmax - nxtElVel;
+		    elm.delPos = 0;
+		    elState = SLEWING;
+#if		EL_VERBOSE > 2
+		    printf("#El Start long move accel\n");
+		    DumpMove( &elm, "El", tsshm->msec);
+#endif		/* EL_VERBOSE */
+		    goto START_EL;
+		}
+	    }
+	    nxtEl = curEl + curElVel / 100;
+	    /* this is the core of the linear el position loop */
+	    nxtElVel = curElVel;
+	    cmdElVel =
+#if		EL_CLOSED_LOOP
+		(curEl - encEl) * EL_GAIN +
+#endif
+		curElVel;
+
+	    break;
+	case SLEWING:
+	    movePos(&elm, tsshm->msec);
+	    shpEl = elm.curPos;
+	    nxtElVel = elm.curVel;
+	    cmdElVel =
+#if	    EL_CLOSED_LOOP
+		(shpEl - encEl) * EL_GAIN + 
+#endif
+		nxtElVel;
+	    cmdElAccel = elm.nextVel - elm.curVel;
+
+	    if(tsshm->msec >= elm.cTime + elm.hTime) {
+		nxtEl = shpEl;
+		elState = nextElState;
+#if		EL_VERBOSE > 1
+		elPrintNext = 1;
+#endif		/* EL_VERBOSE */
+		goto START_EL;
+	    }
+	    break;
+	case LONGMOVEDECEL:
+	    elm.delVel = curElVel - nxtElVel;
+	    elm.cTime = tsshm->msec + elm.hTime;
+	    elm.v0 = nxtElVel;
+	    /* Current position projected to cTime at curVel */
+	    elm.p0 = nxtEl + ((double)elm.v0 * elm.hTime) / 1000;
+	    elm.t0 = elm.hTime * (2.0/M);
+	    elm.delPos = curEl - nxtEl + ((double)elm.delVel*elm.hTime) *
+		0.001;
+	    /* At this point we would expect that if we simply decelerated
+	     * to the final velocity we would be very close to the target
+	     * position and velocity.  Thus unless a new track has been
+	     * given, delPos should be small.  We prefer to use the hTime
+	     * calculated at acceleration time, so if delPos isn't small,
+	     * the safest thing to do is just stop and then let TRACKING
+	     * start a new move.
+	     */
+	    if(abs(elm.delPos) > 0.1 * MAS) {
+#if		EL_VERBOSE
+		printf("#El Long Move Decel: Position error %10.5f\n",
+		    elm.delPos/(double)MAS);
+#endif		/* EL_VERBOSE */
+		elm.delPos = 0;
+	    }
+	    elState = SLEWING;
+	    nextElState = TRACKING;
+#if	    EL_VERBOSE > 2
+	    printf("#El Start long move decel\n");
+	    DumpMove( &elm, "El", tsshm->msec);
+#endif	    /* EL_VERBOSE */
+	    goto START_EL;
+	    break;
+	case LONGMOVECV_SETUP:
+	    elState = LONGMOVECV;
+	    nextElState = LONGMOVEDECEL;
+#if	    EL_VERBOSE > 2
+	    printf("#El Start CV\n");
+	    DumpMove( &elm, "El", tsshm->msec);
+#endif	    /* EL_VERBOSE */
+	    goto ELCVENTRY;	/* Skip position update the first time */
+	case LONGMOVECV:
+	    elm.curPos += elm.curVel * lastTimeStep;
+ELCVENTRY:
+
+	    if((nxtElVel > curElVel &&
+		elm.curPos + 0.001*(nxtElVel-curElVel)*elm.hTime >=
+		curEl) ||
+		(nxtElVel <= curElVel &&
+		elm.curPos + 0.001*(nxtElVel-curElVel)*elm.hTime <=
+		curEl)) {
+
+		nxtEl = elm.curPos;
+		elState = nextElState;
+		nextElState = TRACKING;
+		goto START_EL;
+	    }
+	    shpEl = elm.curPos;
+	    nxtElVel = elm.curVel;
+	    cmdElVel =
+#if EL_CLOSED_LOOP
+		(shpEl - encEl) * EL_GAIN + 
+#endif
+		nxtElVel;
+	    break;
+	}
+	/* shmEl should always have a value */
+	if(elState <= TRACKING) {
+	    shpEl = curEl;
+	}
+	/* Loop performance data */
+	if(! SFULL) {
+	    SaI.curEl = curEl;
+	    SaI.shpEl = shpEl;
+	    SaI.cmdElVel = cmdElVel;
+	    SaI.elState = elState;
+	}
+
+	/* Gear ratio need not be calculated often, except during moves */
+	elGearRatio = GearRatio(encEl);
+	scbElVel = cmdElVel * elGearRatio * elVel2Scb;
+	if(scbElVel > MAX_EL_SCB_VEL) {
+	    scbElVel = MAX_EL_SCB_VEL;
+	    cmdElAccel = 0;
+	} else if(scbElVel < -MAX_EL_SCB_VEL) {
+	    scbElVel = -MAX_EL_SCB_VEL;
+	    cmdElAccel = 0;
+	}
+}	/* End of ElCycle */
+
+
+/* Calculate curPos and curVel in the move structure for the present time */
+static void movePos(MOVE *mp, int time) {
+	double t, tot0;		/* Time, normalized time wrt cntr of move */
+	double e;		/* storage for 0.5 + 0.5 * erf(t/t0) */
+	double g;		/* Storage for exp(-(t/t0)^2) */
+
+	t = time - mp->cTime;
+	tot0 = t/mp->t0;
+	e = 0.5 + 0.5*erf(tot0);
+	g = exp(-tot0*tot0);
+	mp->curPos = mp->p0 + mp->v0*t/1000. + mp->delPos*e +
+	    0.001*mp->delVel*(t*e + (0.25*M_2_SQRTPI)*mp->t0*g);
+	mp->curVel = mp->v0 + (500*M_2_SQRTPI)*mp->delPos*g/mp->t0 +
+	    mp->delVel*e;
+
+	/* Compute velocity for the next period (10ms later).  This
+	 * is used for more accurate velocity feed forward and for
+	 * deriving the acceleration to smooth the velocity loop
+	 * and reduce motor noise. */
+	tot0 += 10/mp->t0; 
+	e = 0.5 + 0.5*erf(tot0);
+	g = exp(-tot0*tot0);
+	mp->nextVel = mp->v0 + (500*M_2_SQRTPI)*mp->delPos*g/mp->t0 +
+	    mp->delVel*e;
+}
+
+/* This normalized gear ratio calc returns 1.000 at its peak */
+static double GearRatio(int el) {
+	/* d(motor-axis)/d(el.axis) = */
+	/* Paul says the 632.386 should be 629.9, but Nimesh's Gear Ratio
+	 * function fits with 632.386 */
+	return((1366.2*2/632.386) * sin(el*RAD_PER_MAS + 1.7/R) /
+	    sqrt(29.585-28.551*cos(el*RAD_PER_MAS + 1.7/R)));
+}
+
+#if AZ_VERBOSE > 2 || EL_VERBOSE > 2
+static void DumpMove(MOVE *mp, char *axis, int time) {
+	printf("#%s move struct at utc = %d:\n"
+	    "#\thTime = %4d cTime = %4d t0 = %8.3f\n",
+	    axis, time, mp->hTime, mp->cTime, mp->t0);
+	printf("#\tp0 = %10.5f v0 = %10.5f "
+	    "delPos = %10.5f delVel = %10.5f\n",
+	    mp->p0/(double)MAS, mp->v0/(double)MAS,
+	    mp->delPos/(double)MAS, mp->delVel/(double)MAS);
+}
+#endif /* VERBOSE */
+
+#if !SIMULATING
+static void OpenScb(void) {
+
+	/* Set up for communication to the scb and initialize it */
+	ComSetup(serialPort);
+	dprintf("Setting up the scb ... ");
+#if 0
+	ComStartPkt(SETINT);
+	ComPutC(1);
+	if(SendPktGetRtn(ACK) != 0) {
+	    ErrPrintf("servo quitting: Bad communication with the SCB\n");
+	    exit(SYSERR_RTN);
+	}
+#endif
+	/* Ask the SCB to get the Palm date code */
+	ComStartPkt(QUERYPALMVERSION);
+	ComPutC(0);
+	SendPktGetRtn(ACK);
+	ComStartPkt(QUERYVERSION);
+	SendPktGetRtn(QUERYVERSION);
+	scbEPROMVersion = (int)ComGetS();
+	ComStartPkt(E1);
+	ComPutC(0);
+	SendPktGetRtn(E1);
+	scbSRAMVersion = (int)ComGetS();
+	ComStartPkt(FAULTWORD);
+	SendPktGetRtn(FAULTWORD);
+	tsshm->scbFaultWord = ComGetL();
+	SetScbState();
+	/* Turn both servos off to start in a known state */
+	if(tsshm->fault != LOCKOUT) {
+	    ComStartPkt(ELSERVOON);
+	    ComPutC(DISABLE);
+	    SendPktGetRtn(ACK);
+	    ComStartPkt(AZSERVOON);
+	    ComPutC(DISABLE);
+	    SendPktGetRtn(ACK);
+	    NonLockoutSetup();
+	    ComStartPkt(CLRFAULTWORD);
+	    SendPktGetRtn(CLRFAULTWORD);
+	    tsshm->scbFaultWord = ComGetL();
+	}
+	tsshm->elState = SERVOOFF;
+	tsshm->azState = SERVOOFF;
+	ComStartPkt(GETLIMITS);
+	SendPktGetRtn(GETLIMITS);
+#define TESTING 0
+#if TESTING
+	tsshm->lowerLimit = 30 * MAS;
+	tsshm->upperLimit = 70 * MAS;
+	tsshm->ccwLimit = -30 * MAS;
+	tsshm->cwLimit =  90 * MAS;
+#else
+	tsshm->lowerLimit = ComGetL() * EL_LIM_ENC_TO_MAS +
+		EL_ENCODER_DIFF_TOLERANCE;
+	tsshm->upperLimit = ComGetL() * EL_LIM_ENC_TO_MAS -
+		EL_ENCODER_DIFF_TOLERANCE;
+	tsshm->ccwLimit = ComGetL() * AZ_LIM_ENC_TO_MAS +
+		AZ_ENCODER_DIFF_TOLERANCE;
+	tsshm->cwLimit = ComGetL() * AZ_LIM_ENC_TO_MAS -
+		AZ_ENCODER_DIFF_TOLERANCE;
+#endif
+	ComStartPkt(READTACHDIVISORS);
+	SendPktGetRtn(READTACHDIVISORS);
+	azTachDivisor = ComGetS();
+	elTachDivisor = ComGetS();
+	rawTachs = ComGetC();
+
+	/* Get the pad azimuth offset */
+	ComStartPkt(READPADID);
+	if(SendPktGetRtn(READPADID) == 0) {
+	    padID = ComGetC();
+	    useFakePadID = ComGetC();
+	    fakePadID = ComGetC();
+	    padAzOffset = ComGetL() * 1000;	/* change to MAS */
+	    checkCollisionLimitSwitch = ComGetC();
+	    dprintf("Pad az offset %.4f Deg.  Collision check %s ...",
+		padAzOffset/(double)MAS, (checkCollisionLimitSwitch)? "on":
+		"off");
+	} else {
+	    ErrPrintf("Pad az offset unknown, set to zero\n");
+	}
+	tsshm->padID = (useFakePadID)? fakePadID: padID;
+	tsshm->padAzOffset = padAzOffset;
+	ComStartPkt(READROCKERS);
+	SendPktGetRtn(READROCKERS);
+	azRockerCCWLimit = ComGetL() * AZ_LIM_ENC_TO_MAS;
+	azRockerCWLimit = ComGetL() * AZ_LIM_ENC_TO_MAS;
+
+	ComStartPkt(GETELGAINS);
+	ComPutS(PRESENT_GAINS);
+	if(SendPktGetRtn(GETELGAINS) == 0) {
+	    elIntegralGain = (64. * ONE_SEC)/ComGetS();
+	    elProportionalGain = (double)ComGetS()/16.;
+	    elDerivativeGain = (double)ComGetS()/16.;
+	} else {
+	    ErrPrintf("SILENT El Gains unknown, set to zero\n");
+	}
+	ComStartPkt(GETAZGAINS);
+	ComPutS(PRESENT_GAINS);
+	if(SendPktGetRtn(GETAZGAINS) == 0) {
+	    azIntegralGain = (64. * ONE_SEC)/ComGetS();
+	    azProportionalGain = (double)ComGetS()/16.;
+	    azDerivativeGain = (double)ComGetS()/16.;
+	    azTorqueBias = (double)ComGetS()/16.;
+	    (void) ComGetS();	/* Type of Gains */
+	    azMotorDisable = ComGetC();
+	} else {
+	    ErrPrintf("SILENT Az Gains & motor disable unknown, set to zero\n");
+	}
+	dprintf("done\n");
+}
+
+void NonLockoutSetup(void) {
+
+#if SERVO_DOES_TACH_DIVISORS
+	ComStartPkt(TACHDIVISORS);
+	ComPutC(ENABLE_TACH_DIVISORS);
+	ComPutC(USE_RAW_TACHS);
+	SendPktGetRtn(TACHDIVISORS);
+	azVel2Scb = (AZ_SCB_VEL_PER_VEL/1024)*ComGetS(); /* azTachDivisor */
+	elVel2Scb = (EL_SCB_VEL_PER_VEL/1024)*ComGetS(); /* elTachDivisor */
+#else /* SERVO_DOES_TACH_DIVISORS */
+	ComStartPkt(TACHDIVISORS);
+	ComPutC(ENABLE_TACH_DIVISORS);
+	ComPutC(USE_TACH_DIVISORS);
+	SendPktGetRtn(TACHDIVISORS);
+	azVel2Scb = AZ_SCB_VEL_PER_VEL;
+	elVel2Scb = EL_SCB_VEL_PER_VEL;
+#endif /* SERVO_DOES_TACH_DIVISORS */
+	nonLockoutSetupDone = 1;
+	ComStartPkt(SOFTWARE);
+	SendPktGetRtn(SOFTWARE);
+	prevNumResets = ComGetS();
+}
+
+static void CloseScb(char *s) {
+	if(tsshm->fault != LOCKOUT) {
+	    ComStartPkt(ELSERVOON);
+	    ComPutC(DISABLE);
+	    SendPktGetRtn(ACK);
+	    ComStartPkt(AZSERVOON);
+	    ComPutC(DISABLE);
+	    SendPktGetRtn(ACK);
+#if 0
+	    /* Turn off the Glentek power and everything else.  This should be
+	     * done in the Sys state machine on the scb. */
+	    ComStartPkt(SETDIGOUTS);
+	    ComPutL(0);
+	    SendPktGetRtn(ACK);
+#endif
+	}
+
+	ComClose();
+	ErrPrintf("%s: servo quitting\n", s);
+}
+#endif /* !SIMULATING */
+
+/* Subroutine to handle SIGINT (^C) interrupts and shut down gracefully */
+static void SigIntHndlr(int signo) {
+	shutdownSignal = 1;
+}
+
+/* Subroutine to handle SIGQUIT & SIGHUP interrupts and shut down gracefully */
+static void SigQuitHndlr(int signo) {
+	shutdownSignal = 1;
+	gotQuit = 1;
+}
+
+#if !SIMULATING
+static void InitEncoders(void) {
+	endatioc_t arg;
+	int i;
+
+	ttfd = open("/dev/vme_sg_simple", O_RDWR, 0);
+	if(ttfd <= 0) {
+	    ErrPrintf("Error opening TrueTime - /dev/vme_sg_simple\n");
+	    exit(SYSERR_RTN);
+	}
+	/* Make sure that the TrueTime is putting out pulses to strobe
+	 * the ACC encoders */
+	i = 3;
+	ioctl(ttfd, VME_SG_SIMPLE_SET_PULSE_RATE, &i);
+
+#if 0
+	if((encfd = open("/dev/endat0", O_RDONLY, 0)) > 0) {
+	    encType = HEIDENHAIN;
+	    ddprintf("Opened Heidenhain encoders\n");
+	    /* Now reset the interface cdard and the encoders */
+	    arg.enc1 = 1;
+	    arg.enc2 = 1;
+	    ioctl(encfd, EIOCRESETCARD, &arg);
+	    ioctl(encfd, EIOCRESETENC, &arg);
+	} else if((encfd = open("/dev/encoder0", O_RDONLY, 0)) > 0) {
+	    encType = ACC;
+	} else {
+	    ErrPrintf("servo quitting: no encoders found\n");
+	    exit(SYSERR_RTN);
+	}
+	if(ioctl(encfd, EIOCGETOFFS, &arg) == 0) {
+	    azEncoderOffset = arg.offs.azOffset;
+	    azEncoderReversed = arg.offs.revAz;
+	    elEncoderOffset = arg.offs.elOffset;
+	    elEncoderReversed = arg.offs.revEl;
+	} else {
+	}
+#endif
+	/* Start by reading the limit and fine encoders' raw values. 
+	 * The limit encoders have 4096 counts/turn.  The Az Gear Ratio
+	 * is 422/25.  The old El gear ratio is 16.75 and the new ratio
+	 * will be 188/50.  Az should be in the range (-180, 360) in degrees.
+	 * El should be in (5, 93).
+	 */
+	ReadLimEncoders(&azLimitEncoder, &elLimitEncoder);
+	if(azLimitEncoder > MAS*360 || azLimitEncoder < -MAS*180) {
+	    ErrPrintf("Az limit encoder out of range - reads %.2f\n",
+		azLimitEncoder*(1.0/MAS));
+/*	    exit(SYSERR_RTN); */
+	}
+	if(elLimitEncoder > MAS*93 || elLimitEncoder < MAS*4){
+	    ErrPrintf("El limit encoder out of range - reads %.2f\n",
+		elLimitEncoder*(1.0/MAS));
+/*	    exit(SYSERR_RTN); */
+	}
+
+	/* Guess the proper value of azTurn from the limit encoder.
+	 * If we are within 1/2 turn, GetPosTime will put it right.
+	 */
+	azTurn = (azLimitEncoder < 0)? -MAS*360: 0;
+	oldEncAz = azLimitEncoder;
+	ttime.timeout_ticks = 2;  	/* This margin should be safe */
+	GetPosTime();			/* This will set the time */
+
+	/* Check for encoder errors.  Check that both encoders are
+	 * within the expected range and that both are within 5 deg of the
+	 * corresponding limit encoders.
+	 */
+	if(encAz > 370*MAS || encAz < -190*MAS)
+	    ErrPrintf("servo: Az encoder out of range: %10.4f\n",
+	    encAz/(double)MAS);
+	if(encEl < 5*MAS || encEl > 93*MAS)
+	    ErrPrintf("servo: El encoder out of range: %10.4f\n",
+	    encEl/(double)MAS);
+
+#if 0
+	if(abs(encEl - elLimitEncoder) > ENCODER_DIFF_TOLERANCE) {
+	    ErrPrintf("servo: El fine and limit encoders differ:\n"
+		"Fine = %10.4f, Limit = %8.2f\n", encEl/(double)MAS,
+		elLimitEncoder/(double)MAS);
+	}
+#endif
+
+
+#if AZ_VERBOSE || EL_VERBOSE
+	ErrPrintf("Limit encoders read Az %.3f El %.3f deg.\n",
+	    azLimitEncoder/(double)MAS , elLimitEncoder / (double)MAS);
+	ErrPrintf("Fine encoders read Az %.4f El %.4f deg.\n",
+	    encAz/(double)MAS , encEl / (double)MAS);
+#endif /* AZ_VERBOSE || EL_VERBOSE */
+}
+
+/* Read the limit encoders and return the az and el in MAS */
+static void ReadLimEncoders(int *azEnc, int *elEnc) {
+	ComStartPkt(READENCODERS);
+	if(SendPktGetRtn(READENCODERS) && SendPktGetRtn(READENCODERS)) {
+	    CloseScb("Error reading Limit Encoders");
+	    exit(SYSERR_RTN);
+	}
+	tsshm->limEl = *elEnc = ComGetL() * EL_LIM_ENC_TO_MAS;
+	tsshm->limAz = *azEnc = ComGetL() * AZ_LIM_ENC_TO_MAS;
+}
+
+#endif /* !SIMULATING */
+
+#if COLLECT_VEL_SERVO_DATA
+static void GetServoData(void) {
+	ComStartPkt(GETSERVODATA);
+	if(SendPktGetRtn(GETSERVODATA)) {
+	    CloseScb("Error getting servo data");
+	    exit(SYSERR_RTN);
+	}
+	for(; sDNext < sDSize - 2; sDNext += 3) {
+	    servoData[sDNext] = nextSample;
+	    servoData[sDNext + 1] = ComGetS();
+	    servoData[sDNext + 2] = ComGetS();
+	    if(hitEndOfPkt)
+		break;
+	}
+}
+#endif /* COLLECT_VEL_SERVO_DATA */
+
+#if !SIMULATING
+static void SetScbState(void) {
+	
+	ComStartPkt(STATUSBYTE);
+	if(SendPktGetRtn(STATUSBYTE)) {
+	    ErrPrintf("Problem reading status from the scb\n");
+	    return;
+	}
+	tsshm->scbStatus = scbStatus = ComGetC();
+	if(ComGetC()) {
+	    tsshm->fault = LOCKOUT;
+	    return;
+	} else if((tsshm->scbFaultWord & 0xb873ff7f) != 0 ||
+		(scbStatus & STATUS_DATA_READY_HANDLER) != 0) {
+	    tsshm->fault = FAULT;
+	} else if(azMotorDisable != 0) {
+	    tsshm->fault = ONE_MOTOR_FAULT;
+	} else {
+	    tsshm->fault = NO_FAULT;
+	}
+}
+#endif /* !SIMULATING */
+
+/* Get time, read encoder and convert values */
+static void GetPosTime() {
+	struct enc_result enc;
+	int stat;
+	static int oldusec = -1;
+	int usecDiff;
+	int ttTimeout;
+
+	GetNextTickTime();
+
+	usecDiff = ttime.usec - oldusec;
+	if(usecDiff < 0)
+	    usecDiff += 1000000;
+	/* if we would skip a tick, don't wait for the TrueTime */
+	ttTimeout = 0;
+	if(usecDiff < 15000) {
+	  if(ioctl(ttfd, VME_SG_SIMPLE_WAIT_UNTIL, &ttime) < 0) {
+	    switch(errno) {
+	    case EAGAIN:
+		ErrPrintf(
+		    "servo could not wait on TrueTime because it was busy\n");
+		/* Recover by reading the time below and skip the wait */
+		break;
+	    case EINTR:
+		/* We received an interrupt and will stop anyway, so don't
+		 * worry. */
+		ErrPrintf(
+		    "SILENT TrueTime returned an interrupt,"
+		    " shutdown %d, quit %d\n",
+		    shutdownSignal, gotQuit);
+		break;
+	    case ETIMEDOUT:
+		ttTimeoutCount++;
+		if(reportTrueTimeTimeout) {
+		    ttTimeout = 1;
+		}
+		break;
+	    default:
+		ErrPrintf( "The TrueTime wait returned error %d  ", errno);
+		break;
+	    }
+	  }
+	}
+	/* get the current time in any case */
+	if((stat = read(ttfd, &ttime, sizeof(ttime))) < 0) {
+	    ErrPrintf("Error %d reading TrueTime\n", stat);
+	}
+	lastTimeStep = (ttime.usec - oldusec) / 1e6;	/* Time step (sec) */
+	if(lastTimeStep < 0) {
+	    lastTimeStep += 1;
+	}
+	oldusec = ttime.usec;
+	if(ttTimeout) {
+	    ErrPrintf("TrueTime timeout: Time step is %.6f\n", lastTimeStep);
+	}
+
+	/* Convert the time now */
+	tsshm->msec = ((ttime.hour * 60 + ttime.min) * 60 + ttime.sec) * 1000 +
+		ttime.usec / 1000;
+	tsshm->day = ttime.yday;
+
+	/* Time is done, so read the encoders, etc.. */
+#if 0
+	read(encfd, &enc, sizeof(enc));
+#endif
+	if(encType == HEIDENHAIN) {
+	    static short int oldAzStatus = 1;
+	    static short int oldElStatus = 1;
+
+	    if(enc.statusAz != oldAzStatus) {
+		ErrPrintf("Az encoder status 0x%02x\n", enc.statusAz);
+		oldAzStatus = enc.statusAz;
+	    }
+	    if(enc.statusEl != oldElStatus) {
+		ErrPrintf("El encoder status 0x%02x\n", enc.statusEl);
+		oldElStatus = enc.statusEl;
+	    }
+	}
+
+#if SIMULATING
+	encEl += cmdElVel *0.01;
+	encAz += cmdAzVel *0.01;
+#else /* SIMULATING */
+	encEl = ENC_TO_MAS * enc.el;
+	encAz = ENC_TO_MAS * enc.az;
+	encAz += padAzOffset + azTurn;
+	if(encAz - oldEncAz > MAS * 180) {
+	    encAz -= MAS*360;
+	    azTurn -= MAS*360;
+	} else if(encAz - oldEncAz < -MAS * 180) {
+	    encAz += MAS*360;
+	    azTurn += MAS*360;
+	}
+        oldEncAz = encAz;
+#endif /* SIMULATING */
+}
+
+/* Set the ttime structure to the next even 10 msec time.  GetNextTickTime
+ * first reads the current time and then rounds up
+ */
+static void GetNextTickTime(void) {
+	int stat;
+
+	if(( stat = read(ttfd, &ttime, sizeof(ttime))) < 0) {
+	    ErrPrintf("Error %d reading TrueTime\n", stat);
+	}
+	/* Round the usec up to the next even 10msec.  Require 50usec spare */
+	ttime.usec += 10050;
+	ttime.usec /= 10000;
+	ttime.usec *= 10000;
+	if(ttime.usec >= 1000000) {
+	  ttime.usec -= 1000000;
+	  if(++ttime.sec >= 60) {
+	    ttime.sec = 0;
+	    if(++ttime.min >= 60) {
+	      ttime.min = 0;
+	      if(++ttime.hour >= 24) {
+		ttime.hour = 0;
+		if(++ttime.yday >= ((ttime.year % 4) == 0)? 366: 365) {
+		  ttime.yday = 0;
+		  ttime.year++;
+		}
+	      }
+	    }
+	  }
+	}
+}
+
+#if 0
+static void PrintTime(struct vme_sg_simple_time *tp) {
+	printf("%.4d day %3d %2d:%02d:%02d.%06d\n", tp->year, tp->yday,
+		tp->hour, tp->min, tp->sec, tp->usec);
+}
+#endif
+
+#if !SIMULATING
+static void PrintEncoders(void) {
+	ErrPrintf("Fine encoder (az, el) = (%.4f, %.4f) "
+		"limit = (%.2f, %.2f)\n", encAz / (double) MAS,
+		encEl / (double)MAS, azLimitEncoder / (double)MAS,
+		elLimitEncoder / (double)MAS);
+}
+
+/* This subroutine must be preceeded by an ErrPrintf with "[[" which is
+ * not closed. */
+static void printStatusFault(void) {
+	static int lastPrintTime = -1;
+	int faultWord, storedFaultWord;
+
+	if(lastPrintTime == tsshm->msec) {
+	    ErrPrintf("]]\n");
+	    return;
+	} else {
+	    lastPrintTime = tsshm->msec;
+	}
+
+	ReadFault(&faultWord, &storedFaultWord);
+/*	ErrPrintf("SILENT[["); */
+	parseStatusByte(scbStatus);
+	ErrPrintf("  storedFaultWord = 0x%08x\n", storedFaultWord);
+	parseFaults(storedFaultWord);
+	ErrPrintf("---------\n");
+	ErrPrintf(" currentFaultWord = 0x%08x\n",faultWord);
+	parseFaults(faultWord);
+	ErrPrintf("]]\n");
+
+	if(tsshm->fault != LOCKOUT) {
+            ComStartPkt(CLRFAULTWORD);
+	    SendPktGetRtn(CLRFAULTWORD);
+	}
+}
+
+static void ReadFault(int *faultWord, int *storedFaultWord) {
+	ComStartPkt(FAULTWORD);
+	if (SendPktGetRtn(FAULTWORD) != 0) return;
+	*faultWord = ComGetL();
+	*storedFaultWord = ComGetL();
+	return;
+}
+
+static void parseFaults(unsigned long word) {
+     unsigned long i;
+
+     for (i=0;i<32;i++) {
+       if (word & (1<<i)) {
+         switch(i) {
+            case ELEVATION_UPPER_PRELIM_FAULT: 
+              ErrPrintf("Elevation upper prelimit\n"); break;
+            case ELEVATION_LOWER_PRELIM_FAULT:
+              ErrPrintf("Elevation lower prelimit\n"); break;
+            case ELEVATION_UPPER_LIMIT_FAULT:
+              ErrPrintf("Elevation upper limit switch\n"); break;
+            case ELEVATION_LOWER_LIMIT_FAULT:
+              ErrPrintf("Elevation lower limit switch\n"); break;
+            case ELEVATION_ENCODER_FAULT:
+              ErrPrintf("Elevation low-res encoder beyond %s limit\n",
+	      (elLimitEncoder > 45*MAS)? "upper": "lower"); break;
+            case ELEVATION_TEMPERATURE_FAULT:
+              ErrPrintf("Elevation motor overtemperature fault\n"); break;
+            case ELEVATION_CURRENT_FAULT:
+              ErrPrintf("Elevation motor overcurrent fault\n"); break;
+            case ELEVATION_GLENTEK_FAULT:
+              ErrPrintf("Elevation Glentek fault\n"); break;
+            case AZIMUTH_CLOCKWISE_PRELIM_FAULT:
+              ErrPrintf("Azimuth clockwise prelimit\n"); break;
+            case AZIMUTH_COUNTERCLOCKWISE_PRELIM_FAULT:
+              ErrPrintf("Azimuth counterclockwise prelimit\n"); break;
+            case AZIMUTH_CLOCKWISE_LIMIT_FAULT:
+              ErrPrintf("Azimuth clockwise limit switch\n"); break;
+            case AZIMUTH_COUNTERCLOCKWISE_LIMIT_FAULT:
+              ErrPrintf("Azimuth counterclockwise limit switch\n"); break;
+            case AZIMUTH_ENCODER_FAULT:
+              ErrPrintf("Azimuth low-res encoder beyond %s limit\n",
+	      (azLimitEncoder > 0)? "CW": "CCW"); break;
+            case AZIMUTH1_TEMPERATURE_FAULT:
+              ErrPrintf("Azimuth motor #1 overtemperature\n"); break;
+            case AZIMUTH2_TEMPERATURE_FAULT:
+              ErrPrintf("Azimuth motor #2 overtemperature\n"); break;
+            case AZIMUTH1_CURRENT_FAULT:
+              ErrPrintf("Azimuth motor #1 overcurrent\n"); break;
+            case AZIMUTH2_CURRENT_FAULT:
+              ErrPrintf("Azimuth motor #2 overcurrent\n"); break;
+            case AZIMUTH1_GLENTEK_FAULT:
+              ErrPrintf("Azimuth motor #1 Glentek fault\n"); break;
+            case AZIMUTH2_GLENTEK_FAULT:
+              ErrPrintf("Azimuth motor #2 Glentek fault\n"); break;
+            case AZIMUTH_OVERFLOW_FAULT:
+              ErrPrintf("Azimuth overflow fault\n"); break;
+            case EMERGENCY_STOP_FAULT:
+              ErrPrintf("Emergency stop pressed\n"); break;
+            case QUADADC_RESET_FAULT:
+              ErrPrintf("Quad ADC reset fault\n"); break;
+            case COOLANT_FLOW_FAULT:
+              ErrPrintf("Coolant flow fault\n"); break;
+            case HANDPADDLE_BYTE_FRAMING_FAULT:
+              ErrPrintf("Hand paddle byte framing fault\n"); break;
+            case PALMPILOT_SYNTAX_FAULT:
+              ErrPrintf("Hand paddle syntax error fault\n"); break;
+            case PALMPILOT_NO_RESPONSE_FAULT:
+              ErrPrintf("Hand paddle no response fault\n"); break;
+            case ANTENNA_COMPUTER_TIMEOUT_FAULT:
+              ErrPrintf("Antenna computer velocity packet timeout fault\n");
+              break;
+            case ELEVATION_COLLISION_LIMIT_FAULT:
+              ErrPrintf("Elevation below Collision limit and limit enabled\n");
+              break;
+            case AIR_PRESSURE_SWITCH_FAULT:
+              ErrPrintf("Air pressure failed on azimuth mechanical brake\n");
+              break;
+            case AZIMUTH_ROCKER_FAULT:
+              ErrPrintf("Azimuth rocker deployment fault\n");
+              break;
+            case ENC_TACH_DIFF_FAULT:
+              ErrPrintf("Integral of tach not tracking lim encoder\n");
+              break;
+	 }
+       }
+     }
+}
+
+static void parseStatusByte(unsigned int statusByte) {
+
+#define PARSEBIT(mask,message) if(statusByte&mask)ErrPrintf("%s 1\n",message);else ErrPrintf("%s 0\n",message);
+      
+      ErrPrintf("status byte = 0x%0x\n",statusByte);
+      PARSEBIT(STATUS_DATA_READY_HANDLER, "    Data ready idle");
+      PARSEBIT(STATUS_ELEVATION_SOFTFAULT,"Elevation softfault");
+      PARSEBIT(STATUS_AZIMUTH_SOFTFAULT,  "  Azimuth softfault");
+      PARSEBIT(STATUS_ELEVATION_HARDFAULT,"Elevation hardfault");
+      PARSEBIT(STATUS_AZIMUTH_HARDFAULT,  "  Azimuth hardfault");
+      PARSEBIT(STATUS_ELEVATION_SERVO,    "    Elevation servo");
+      PARSEBIT(STATUS_AZIMUTH_SERVO,      "      Azimuth servo");
+      if (statusByte & STATUS_ALL_NOMINAL) {      
+        ErrPrintf(" ---->  All nominal, ready for servo operation  <----\n");
+      } else {
+        ErrPrintf(" ---->  not ready for servo operation  <----\n");
+      }
+}
+
+float Thermistor(unsigned short counts) {
+        double Voltage, Resistance;
+        Voltage = ADCFACTOR*counts;
+        Resistance = 10000*(5.-Voltage)/Voltage;
+        return(pow(10,-0.085968*log10(Resistance)+2.819627)-273.14);
+}
+
+/* Check the number of resets on the SCB and if not equal to the previous value
+ * write an error message. */
+void CheckResets(void) {
+	int numResets;
+
+	ComStartPkt(SOFTWARE);
+	SendPktGetRtn(SOFTWARE);
+	numResets = ComGetS();
+	if(numResets != prevNumResets) {
+	    ErrPrintf("The SCB was reset %d times\n", numResets -
+		prevNumResets);
+	    prevNumResets = numResets;
+	}
+}
+
+/* This assumes that the request for the scb to get the date was done in
+ * OpenScb() */
+void SetPalmCodeDate(void){
+	int i;
+	unsigned char date[10];
+
+	ComStartPkt(QUERYPALMVERSION);
+	ComPutC(1);
+	if(SendPktGetRtn(QUERYPALMVERSION) == 0) {
+	    for(i = 0; i < 9; i++) {
+		date[i] = ComGetC();
+		if((i == 5 && date[i - 1] > 'A') || (i == 4 && date[i] < 'A')) {
+		    date[i + 1] = date[i];
+		    date[i] = '2';
+		    i++;
+		}
+	    }
+	    date[9] = '\0';
+	    RMSafeWrite("RM_SCB_PALM_CODE_DATE_C10", date);
+	}
+}
+
+#endif /* !SIMULATING */
+
+
+#if DO_TIMESTAMP
+void TimeStampStderr(void) {
+	ErrPrintf("day %d %02d:%02d:%02d\n",
+		ttime.yday, ttime.hour, ttime.min, ttime.sec);
+}
+#endif
+
+/*VARARGS*/
+void ErrPrintf(char *s, ...) {
+        char buf[256];
+        va_list ap;
+
+        va_start(ap, s);
+        vsprintf(buf, s, ap);
+        va_end(ap);
+        fputs(buf, stderr);
+}

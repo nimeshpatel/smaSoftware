@@ -1,0 +1,83 @@
+#!/usr/bin/perl -w
+{ BEGIN {$^W =0}
+#
+################## Script Header Info #####################
+#
+# Experiment Code: 2011B-S047
+# Experiment Title: Unveiling the Origin of the Radio Recombination Maser Emission toward the eta Carinae Massive Star
+# PI: Izaskun Jimenez-Serra
+# Contact Person: Izaskun Jimenez-Serra  
+# Email  : ijimenez-serra@cfa.harvard.edu  
+# Office : +1 617-496-7805  
+# Home   : +1 8572042617   
+# Array  : extended   
+#
+#
+#
+############## SPECIAL INSTRUCTIONS ################
+#
+# Please, do a cpoint on Saturn at 09:30 UTC (23:30 HST) 15-FEB-2012, 
+# just before our track; at this time, Saturn will be rising and at 
+# around the elevation of about 10 degrees- which is the transiting
+# elevation of our main source. 
+#
+################## Priming ################################
+#
+# observe -s etaCar -r 10:45:03.60 -d -59:41:04.3 -e 2000 -v -50
+# dopplerTrack -r 230.538 -u -s20
+# restartCorrelator -R l -s128   
+# setFeedOffset -f 230
+#
+################## Pointing ###############################
+#
+# Pointing: Please see SPECIAL INSTRUCTIONS above.
+# Syntax Example: point -i 60 -r 3 -L -l -t -Q
+#
+################## Source, Calibrator and Limits ##########
+#
+$inttime="15"; 
+$targ0="test_targ -r 05:10:02.37 -d 18:00:41.6 -e 2000 -v 0"; $ntarg0="20"; 
+$targ1="step1 -r 05:10:02.37 -d 19:00:41.6 -e 2000 -v 0"; $ntarg1="1"; 
+$targ2="step2 -r 05:10:02.37 -d 20:00:41.6 -e 2000 -v 0"; $ntarg2="1"; 
+$cal0=0339-017"; $ncal0="10";
+$flux0="titan"; $nflux0="30";
+$flux1="mwc349a"; $nflux1="30";
+$bpass0="3c84"; $nbpass0="120";
+$MINEL_TARG = 9.0; $MAXEL_TARG = 83;
+$MINEL_GAIN = 9.0; $MAXEL_GAIN = 83;
+$MINEL_FLUX = 17; $MAXEL_FLUX = 81;
+$MINEL_BPASS= 17; $MAXEL_BPASS= 87;
+$MINEL_CHECK = 9.0; 
+#
+################## Script Initialization ##################
+#
+do 'sma.pl';
+do 'sma_add.pl';
+checkANT();
+command("radio");
+command("integrate -t $inttime");
+$myPID=$$;
+command("project -r -p 'Izaskun Jimenez-Serra' -d '2011B-S047'");
+print "----- initialization done, starting script -----\n";
+#
+################## Science Script #########################
+#
+print "----- initial flux and bandpass calibration -----\n";
+if(!$restart){
+#  &DoPass(bpass0,nbpass0);
+#  &DoFlux(flux0,nflux0);
+#  &DoFlux(flux1,nflux1);
+}
+
+print "----- main science target observe loop -----\n";
+  &ObsLoop(targ2,targ1,targ0,cal0);
+
+print "----- final flux and bandpass calibration -----\n";
+  &DoFlux(flux0,nflux0);
+  &DoFlux(flux1,nflux1);
+  &DoPass(bpass0,nbpass0);
+
+print "----- Congratulations!  This is the end of the script.  -----\n";}
+#
+################## File End ###############################
+

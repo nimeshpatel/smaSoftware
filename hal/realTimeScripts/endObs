@@ -1,0 +1,154 @@
+#!/usr/bin/perl -I/application/lib -w
+# End of observing script to:
+#  1) Record the Allan Variance, rms and 5 min of data sampled at 1 sec
+#     looking at the warm load and the SIS voltage bias as tuned
+#  2) Record the same items with the mixer biased normal
+#  3) Measure I/V curves
+#
+# Author: Bob
+# Contact person: Bob
+# Date 11 May 2006
+# "new" version started Jun. 11 2008
+#
+# load the sma library of functions used in this observing script.
+#
+# Make tune 6 quiet if $q == "-q"
+$q = "-q";
+$stowEl = 45;
+
+do 'sma.pl';
+
+$directory = "/data/engineering/stability";
+
+# This is SFLAG_OPERATOR in $COMMONINC/scanFlags.h.  If the operator flagged
+# this antenna out of the project this bit is set.
+$flag_mask = 0x00040000;
+
+# check participating antennas.
+checkANT();
+die "No antennas in project" unless defined @sma;
+
+# Set up a list of active antennas and leave out the CSO and JCMT
+@flags = split /\s+/, `shmValue -mhal9000:hal9000 "DSM_ONLINE_ANTENNAS_V11_B[1..8]"`;
+foreach $a (@sma) {
+  last if $a > 8;
+  if($flags[$a-1] == 0) {
+    print "flag for ant $a = $flags[$a-1] and it will not be used\n";
+    next;
+  }
+  push @antennaList, $a;
+  if($alist) {
+    $alist .= "," . $a;
+  } else {
+    $alist = $a;
+  }
+}
+die "No unflagged antennas in project" unless defined $alist;
+#Use only the date part of the standard time stamp which checkANT() provides
+$timeStamp = substr($timeStamp, 0, 13);
+
+# Turn off normal data collection
+command("integrate -n -i -p");
+
+# move to the stow position but leave the M3 door open
+#command("azel -a $alist -z10 -e$stowEl");
+#stow and close M3 door
+command("stow");
+
+command("polarPattern -p -2");
+command("tune -a $alist -c waveplate out");
+
+#If this is weekEndObs, then deactivate the receivers and quit.
+if($0 =~ /weekEndObs$/) {
+#  command("closeM3");
+  command("tune $q -c \"activate -l 1 -h 5\"");
+  exit(0);
+}
+
+# Otherwise, while we are waiting get two header values
+open RXPARAMS, "shmValue -a$sma[0] RM_ACTIVE_LOW_RECEIVER_C10 -mhal9000:hal9000 \"DSM_AS_IFLO_REST_FR_V2_D[0]\" |";
+while(<RXPARAMS>) {
+  ($rx, $freq) = split;
+  $freq /= 1e9;
+#  print "receiver $rx at $freq\n";
+}
+close RXPARAMS;
+
+#command("antennaWait");
+#command("newdip -a $alist");
+
+# move to the stow position but leave the M3 door open
+#command("azel -z10 -e$stowEl");
+#command("sleep 5");
+
+# Now start a fresh Allan variance with the warm load in
+command("tune $q -c hotload in");
+command("sleep 10");
+# Meanwhile collect samples of the continuum det outputs
+#command("shmValue -a1..8 -h -t -n600 \"RM_DEWAR_TEMPS_V16_F[2] RM_SIS_MIXER0_BFIELD_F RM_SIS_MIXER0_CURRENT_CALIB_F\" > $directory/a1_8_$timeStamp&");
+
+($sec, $min, $hr) = gmtime;
+if($simulateMode) {
+  open TMP, ">&STDOUT";
+} else {
+  open TMP, ">$directory/warmLoad_$timeStamp";
+}
+printf TMP "#RECEIVER %s\n#FREQUENCY %.1f\n#STARTTIME %02d:%02d:%02d\n",
+	$rx, $freq, $hr, $min, $sec;
+close TMP;
+
+print "Starting a quiet 5 minute integration at $hr:$min:$sec.\n";
+command("shmValue -a1..8 -t -n300 \"RM_CONT_DET_MUWATT_V2_F[0]\" \"RM_DEWAR_TEMPS_V16_F[2]\" >> $directory/warmLoad_$timeStamp");
+
+print "About to record AV values.\n";
+foreach $ant (@antennaList) {
+    print "Ant $ant";
+    command("shmValue -a$ant 'RM_SYNCDET2_ALLAN_VARIANCE_V2_V10_F%tu RM_SYNCDET2_STATS_V6_F[0,3] RM_ACTIVE_LOW_RECEIVER_C10 RM_ACTIVE_HIGH_RECEIVER_C10' >> $directory/AV_warmLoad.$ant");
+}
+
+$do_high_bias = 0;
+if($do_high_bias) {
+# Save the mixer bias voltage
+command("tune $q -c \"activate -w\"");
+print "\n\n" .
+      "The operating mixer bias has been saved and the bias will now be set\n" .
+      "high for the next measurement.  If the script is interrupted, please\n" .
+      "issue the command to restore the operating bias:\n" .
+      "\ttune $q -c \"activate -r\"\n\n";
+  command("tune $q -c vbias0 10");
+  command("tune $q -c vbias1 10");
+}
+#Put the warm load back out and start the final Allan Variance
+#command("tune $q -c hotload out");
+command("sleep 10");
+if($do_high_bias) {
+  ($sec, $min, $hr) = gmtime;
+  if($simulateMode) {
+    open TMP, ">&STDOUT";
+  } else {
+    open TMP, ">$directory/highBias_$timeStamp";
+  }
+  printf TMP "#RECEIVER %s\n#FREQUENCY %.1f\n#STARTTIME %02d:%02d:%02d\n",
+  	$rx, $freq, $hr, $min, $sec;
+  close TMP;
+  
+  print "Starting a quiet 5 minute integration at $hr:$min:$sec.\n";
+  command("shmValue -a1..8 -t -n300 \"RM_CONT_DET_MUWATT_V2_F[0] RM_DEWAR_TEMPS_V16_F[2]\" >> $directory/highBias_$timeStamp");
+  foreach $ant (@antennaList) {
+      command("shmValue -a$ant 'RM_SYNCDET2_ALLAN_VARIANCE_V2_V10_F%tu RM_SYNCDET2_STATS_V6_F[0,3] RM_ACTIVE_LOW_RECEIVER_C10 RM_ACTIVE_HIGH_RECEIVER_C10' >> $directory/AV_highBias.$ant");
+  }
+  # Restore the mixer bias voltage
+  command("tune $q -c \"activate -r\"");
+}
+command("tune $q -c iv0");
+#command("closeM3");
+
+# Now reduce power disipation on the fridge by deactivating the receivers
+if($0 !~ /endObs.rxon$/) {
+  command("tune $q -c \"activate -l 1 -h 5\"");
+}
+$endTime = time();
+command("echo $endTime >> $directory/timeList");
+command("touch /otherInstances/observing/obscon/smainit_req/plotstab.restart");
+
+exit;

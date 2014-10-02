@@ -1,0 +1,2000 @@
+Sat Mar  4 11:58:57 2006 (mkrips): observe -s hip52452 
+Sat Mar  4 11:58:57 2006 (mkrips): antennaWait -a 1,2,3,4,5,6,7 -s hip52452 -e 2 
+Sat Mar 04 11:59:01 2006 (mkrips): /application/bin/azelstar snapshot -a 1 -s 400 
+Sat Mar  4 11:59:01 2006 (mkrips): c90cmd -a 1 -c snapshot -e 400  
+Sat Mar 04 11:59:07 2006 (mkrips): /application/bin/azelstar snapshot -a 2 -s 400 
+Sat Mar  4 11:59:08 2006 (mkrips): c90cmd -a 2 -c snapshot -e 400  
+Sat Mar 04 11:59:13 2006 (mkrips): /application/bin/azelstar snapshot -a 3 -s 400 
+Sat Mar  4 11:59:14 2006 (mkrips): c90cmd -a 3 -c snapshot -e 400  
+Sat Mar 04 11:59:20 2006 (mkrips): /application/bin/azelstar snapshot -a 4 -s 400 
+Sat Mar  4 11:59:20 2006 (mkrips): c90cmd -a 4 -c snapshot -e 400  
+Sat Mar 04 11:59:28 2006 (mkrips): /application/bin/azelstar snapshot -a 5 -s 400 
+Sat Mar  4 11:59:29 2006 (mkrips): c90cmd -a 5 -c snapshot -e 400  
+Sat Mar 04 11:59:36 2006 (mkrips): /application/bin/azelstar snapshot -a 6 -s 400 
+Sat Mar  4 11:59:36 2006 (mkrips): c90cmd -a 6 -c snapshot -e 400  
+Sat Mar 04 11:59:42 2006 (mkrips): /application/bin/azelstar snapshot -a 7 -s 400 
+Sat Mar  4 11:59:42 2006 (mkrips): c90cmd -a 7 -c snapshot -e 400  
+Sat Mar 04 11:59:46 2006 (mkrips): /application/bin/azelstar -z 250 -d up -b -w 5 -n 1 
+Sat Mar  4 11:59:49 2006 (mkrips): optical 
+Sat Mar  4 11:59:49 2006 (mkrips): observe -s hip50027 
+Sat Mar  4 11:59:49 2006 (mkrips): antennaWait -a 1,2,3,4,5,6,7 -s hip50027 -e 2 
+Sat Mar 04 11:59:59 2006 (mkrips): /application/bin/azelstar snapshot -a 1 -s 400 
+Sat Mar  4 12:00:00 2006 (mkrips): c90cmd -a 1 -c snapshot -e 400  
+Sat Mar 04 12:00:06 2006 (mkrips): /application/bin/azelstar snapshot -a 2 -s 400 
+Sat Mar  4 12:00:06 2006 (mkrips): c90cmd -a 2 -c snapshot -e 400  
+Sat Mar 04 12:00:12 2006 (mkrips): /application/bin/azelstar snapshot -a 3 -s 400 
+Sat Mar  4 12:00:12 2006 (mkrips): c90cmd -a 3 -c snapshot -e 400  
+Sat Mar 04 12:00:18 2006 (mkrips): /application/bin/azelstar snapshot -a 4 -s 400 
+Sat Mar  4 12:00:19 2006 (mkrips): c90cmd -a 4 -c snapshot -e 400  
+Sat Mar 04 12:00:25 2006 (mkrips): /application/bin/azelstar snapshot -a 5 -s 400 
+Sat Mar  4 12:00:25 2006 (mkrips): c90cmd -a 5 -c snapshot -e 400  
+Sat Mar 04 12:00:31 2006 (mkrips): /application/bin/azelstar snapshot -a 6 -s 400 
+Sat Mar  4 12:00:32 2006 (mkrips): c90cmd -a 6 -c snapshot -e 400  
+Sat Mar 04 12:00:37 2006 (mkrips): /application/bin/azelstar snapshot -a 7 -s 400 
+Sat Mar  4 12:00:38 2006 (mkrips): c90cmd -a 7 -c snapshot -e 400  
+Sat Mar  4 12:00:42 2006 (mkrips): optical 
+Sat Mar  4 12:00:42 2006 (mkrips): observe -s hip55016 
+Sat Mar  4 12:00:43 2006 (mkrips): antennaWait -a 1,2,3,4,5,6,7 -s hip55016 -e 2 
+Sat Mar 04 12:00:56 2006 (mkrips): /application/bin/azelstar snapshot -a 1 -s 400 
+Sat Mar  4 12:00:57 2006 (mkrips): c90cmd -a 1 -c snapshot -e 400  
+Sat Mar 04 12:01:03 2006 (mkrips): /application/bin/azelstar snapshot -a 2 -s 400 
+Sat Mar  4 12:01:03 2006 (mkrips): c90cmd -a 2 -c snapshot -e 400  
+Sat Mar 04 12:01:09 2006 (mkrips): /application/bin/azelstar snapshot -a 3 -s 400 
+Sat Mar  4 12:01:09 2006 (mkrips): c90cmd -a 3 -c snapshot -e 400  
+Sat Mar 04 12:01:16 2006 (mkrips): /application/bin/azelstar snapshot -a 4 -s 400 
+Sat Mar  4 12:01:16 2006 (mkrips): c90cmd -a 4 -c snapshot -e 400  
+Sat Mar 04 12:01:22 2006 (mkrips): /application/bin/azelstar snapshot -a 5 -s 400 
+Sat Mar  4 12:01:23 2006 (mkrips): c90cmd -a 5 -c snapshot -e 400  
+Sat Mar 04 12:01:29 2006 (mkrips): /application/bin/azelstar snapshot -a 6 -s 400 
+Sat Mar  4 12:01:29 2006 (mkrips): c90cmd -a 6 -c snapshot -e 400  
+Sat Mar 04 12:01:35 2006 (mkrips): /application/bin/azelstar snapshot -a 7 -s 400 
+Sat Mar  4 12:01:35 2006 (mkrips): c90cmd -a 7 -c snapshot -e 400  
+Sat Mar  4 12:01:40 2006 (mkrips): optical 
+Sat Mar  4 12:01:40 2006 (mkrips): observe -s hip55016 
+Sat Mar  4 12:01:40 2006 (mkrips): antennaWait -a 1,2,3,4,5,6,7 -s hip55016 -e 2 
+Sat Mar 04 12:01:44 2006 (mkrips): /application/bin/azelstar snapshot -a 1 -s 400 
+Sat Mar  4 12:01:44 2006 (mkrips): c90cmd -a 1 -c snapshot -e 400  
+Sat Mar 04 12:01:50 2006 (mkrips): /application/bin/azelstar snapshot -a 2 -s 400 
+Sat Mar  4 12:01:51 2006 (mkrips): c90cmd -a 2 -c snapshot -e 400  
+Sat Mar 04 12:01:56 2006 (mkrips): /application/bin/azelstar snapshot -a 3 -s 400 
+Sat Mar  4 12:01:57 2006 (mkrips): c90cmd -a 3 -c snapshot -e 400  
+Sat Mar 04 12:02:03 2006 (mkrips): /application/bin/azelstar snapshot -a 4 -s 400 
+Sat Mar  4 12:02:03 2006 (mkrips): c90cmd -a 4 -c snapshot -e 400  
+Sat Mar 04 12:02:09 2006 (mkrips): /application/bin/azelstar snapshot -a 5 -s 400 
+Sat Mar  4 12:02:09 2006 (mkrips): c90cmd -a 5 -c snapshot -e 400  
+Sat Mar 04 12:02:15 2006 (mkrips): /application/bin/azelstar snapshot -a 6 -s 400 
+Sat Mar  4 12:02:16 2006 (mkrips): c90cmd -a 6 -c snapshot -e 400  
+Sat Mar 04 12:02:22 2006 (mkrips): /application/bin/azelstar snapshot -a 7 -s 400 
+Sat Mar  4 12:02:23 2006 (mkrips): c90cmd -a 7 -c snapshot -e 400  
+Sat Mar 04 12:02:28 2006 (mkrips): /application/bin/azelstar -z 260 -d down -b -w 5 -n 1 
+Sat Mar  4 12:02:30 2006 (mkrips): optical 
+Sat Mar  4 12:02:30 2006 (mkrips): observe -s hip56080 
+Sat Mar  4 12:02:30 2006 (mkrips): antennaWait -a 1,2,3,4,5,6,7 -s hip56080 -e 2 
+Sat Mar 04 12:02:40 2006 (mkrips): /application/bin/azelstar snapshot -a 1 -s 400 
+Sat Mar  4 12:02:40 2006 (mkrips): c90cmd -a 1 -c snapshot -e 400  
+Sat Mar 04 12:02:46 2006 (mkrips): /application/bin/azelstar snapshot -a 2 -s 400 
+Sat Mar  4 12:02:47 2006 (mkrips): c90cmd -a 2 -c snapshot -e 400  
+Sat Mar 04 12:02:52 2006 (mkrips): /application/bin/azelstar snapshot -a 3 -s 400 
+Sat Mar  4 12:02:53 2006 (mkrips): c90cmd -a 3 -c snapshot -e 400  
+Sat Mar 04 12:02:59 2006 (mkrips): /application/bin/azelstar snapshot -a 4 -s 400 
+Sat Mar  4 12:02:59 2006 (mkrips): c90cmd -a 4 -c snapshot -e 400  
+Sat Mar 04 12:03:07 2006 (mkrips): /application/bin/azelstar snapshot -a 5 -s 400 
+Sat Mar  4 12:03:08 2006 (mkrips): c90cmd -a 5 -c snapshot -e 400  
+Sat Mar 04 12:03:14 2006 (mkrips): /application/bin/azelstar snapshot -a 6 -s 400 
+Sat Mar  4 12:03:14 2006 (mkrips): c90cmd -a 6 -c snapshot -e 400  
+Sat Mar 04 12:03:20 2006 (mkrips): /application/bin/azelstar snapshot -a 7 -s 400 
+Sat Mar  4 12:03:20 2006 (mkrips): c90cmd -a 7 -c snapshot -e 400  
+Sat Mar  4 12:03:25 2006 (mkrips): optical 
+Sat Mar  4 12:03:25 2006 (mkrips): observe -s hip48734 
+Sat Mar  4 12:03:26 2006 (mkrips): antennaWait -a 1,2,3,4,5,6,7 -s hip48734 -e 2 
+Sat Mar 04 12:03:43 2006 (mkrips): /application/bin/azelstar snapshot -a 1 -s 400 
+Sat Mar  4 12:03:44 2006 (mkrips): c90cmd -a 1 -c snapshot -e 400  
+Sat Mar 04 12:03:49 2006 (mkrips): /application/bin/azelstar snapshot -a 2 -s 400 
+Sat Mar  4 12:03:50 2006 (mkrips): c90cmd -a 2 -c snapshot -e 400  
+Sat Mar 04 12:03:56 2006 (mkrips): /application/bin/azelstar snapshot -a 3 -s 400 
+Sat Mar  4 12:03:56 2006 (mkrips): c90cmd -a 3 -c snapshot -e 400  
+Sat Mar 04 12:04:02 2006 (mkrips): /application/bin/azelstar snapshot -a 4 -s 400 
+Sat Mar  4 12:04:03 2006 (mkrips): c90cmd -a 4 -c snapshot -e 400  
+Sat Mar 04 12:04:10 2006 (mkrips): /application/bin/azelstar snapshot -a 5 -s 400 
+Sat Mar  4 12:04:11 2006 (mkrips): c90cmd -a 5 -c snapshot -e 400  
+Sat Mar 04 12:04:17 2006 (mkrips): /application/bin/azelstar snapshot -a 6 -s 400 
+Sat Mar  4 12:04:17 2006 (mkrips): c90cmd -a 6 -c snapshot -e 400  
+Sat Mar 04 12:04:23 2006 (mkrips): /application/bin/azelstar snapshot -a 7 -s 400 
+Sat Mar  4 12:04:24 2006 (mkrips): c90cmd -a 7 -c snapshot -e 400  
+Sat Mar  4 12:04:29 2006 (mkrips): optical 
+Sat Mar  4 12:04:29 2006 (mkrips): observe -s hip39079 
+Sat Mar  4 12:04:30 2006 (mkrips): antennaWait -a 1,2,3,4,5,6,7 -s hip39079 -e 2 
+Sat Mar 04 12:04:51 2006 (mkrips): /application/bin/azelstar snapshot -a 1 -s 200 
+Sat Mar  4 12:04:52 2006 (mkrips): c90cmd -a 1 -c snapshot -e 200  
+Sat Mar 04 12:04:58 2006 (mkrips): /application/bin/azelstar snapshot -a 2 -s 200 
+Sat Mar  4 12:04:58 2006 (mkrips): c90cmd -a 2 -c snapshot -e 200  
+Sat Mar 04 12:05:04 2006 (mkrips): /application/bin/azelstar snapshot -a 3 -s 200 
+Sat Mar  4 12:05:04 2006 (mkrips): c90cmd -a 3 -c snapshot -e 200  
+Sat Mar 04 12:05:10 2006 (mkrips): /application/bin/azelstar snapshot -a 4 -s 200 
+Sat Mar  4 12:05:11 2006 (mkrips): c90cmd -a 4 -c snapshot -e 200  
+Sat Mar 04 12:05:17 2006 (mkrips): /application/bin/azelstar snapshot -a 5 -s 200 
+Sat Mar  4 12:05:17 2006 (mkrips): c90cmd -a 5 -c snapshot -e 200  
+Sat Mar 04 12:05:23 2006 (mkrips): /application/bin/azelstar snapshot -a 6 -s 200 
+Sat Mar  4 12:05:24 2006 (mkrips): c90cmd -a 6 -c snapshot -e 200  
+Sat Mar 04 12:05:30 2006 (mkrips): /application/bin/azelstar snapshot -a 7 -s 200 
+Sat Mar  4 12:05:30 2006 (mkrips): c90cmd -a 7 -c snapshot -e 200  
+Sat Mar 04 12:05:34 2006 (mkrips): /application/bin/azelstar -z 270 -d up -b -w 5 -n 1 
+Sat Mar  4 12:05:36 2006 (mkrips): optical 
+Sat Mar  4 12:05:36 2006 (mkrips): observe -s hip38868 
+Sat Mar  4 12:05:37 2006 (mkrips): antennaWait -a 1,2,3,4,5,6,7 -s hip38868 -e 2 
+Sat Mar 04 12:05:46 2006 (mkrips): /application/bin/azelstar snapshot -a 1 -s 400 
+Sat Mar  4 12:05:47 2006 (mkrips): c90cmd -a 1 -c snapshot -e 400  
+Sat Mar 04 12:05:54 2006 (mkrips): /application/bin/azelstar snapshot -a 2 -s 400 
+Sat Mar  4 12:05:54 2006 (mkrips): c90cmd -a 2 -c snapshot -e 400  
+Sat Mar 04 12:06:01 2006 (mkrips): /application/bin/azelstar snapshot -a 3 -s 400 
+Sat Mar  4 12:06:01 2006 (mkrips): c90cmd -a 3 -c snapshot -e 400  
+Sat Mar 04 12:06:07 2006 (mkrips): /application/bin/azelstar snapshot -a 4 -s 400 
+Sat Mar  4 12:06:08 2006 (mkrips): c90cmd -a 4 -c snapshot -e 400  
+Sat Mar 04 12:06:15 2006 (mkrips): /application/bin/azelstar snapshot -a 5 -s 400 
+Sat Mar  4 12:06:16 2006 (mkrips): c90cmd -a 5 -c snapshot -e 400  
+Sat Mar 04 12:06:22 2006 (mkrips): /application/bin/azelstar snapshot -a 6 -s 400 
+Sat Mar  4 12:06:22 2006 (mkrips): c90cmd -a 6 -c snapshot -e 400  
+Sat Mar 04 12:06:28 2006 (mkrips): /application/bin/azelstar snapshot -a 7 -s 400 
+Sat Mar  4 12:06:29 2006 (mkrips): c90cmd -a 7 -c snapshot -e 400  
+Sat Mar  4 12:06:33 2006 (mkrips): optical 
+Sat Mar  4 12:06:33 2006 (mkrips): observe -s hip40526 
+Sat Mar  4 12:06:34 2006 (mkrips): antennaWait -a 1,2,3,4,5,6,7 -s hip40526 -e 2 
+Sat Mar 04 12:06:43 2006 (mkrips): /application/bin/azelstar snapshot -a 1 -s 100 
+Sat Mar  4 12:06:44 2006 (mkrips): c90cmd -a 1 -c snapshot -e 100  
+Sat Mar 04 12:06:49 2006 (mkrips): /application/bin/azelstar snapshot -a 2 -s 100 
+Sat Mar  4 12:06:50 2006 (mkrips): c90cmd -a 2 -c snapshot -e 100  
+Sat Mar 04 12:06:56 2006 (mkrips): /application/bin/azelstar snapshot -a 3 -s 100 
+Sat Mar  4 12:06:56 2006 (mkrips): c90cmd -a 3 -c snapshot -e 100  
+Sat Mar 04 12:07:02 2006 (mkrips): /application/bin/azelstar snapshot -a 4 -s 100 
+Sat Mar  4 12:07:03 2006 (mkrips): c90cmd -a 4 -c snapshot -e 100  
+Sat Mar 04 12:07:11 2006 (mkrips): /application/bin/azelstar snapshot -a 5 -s 100 
+Sat Mar  4 12:07:11 2006 (mkrips): c90cmd -a 5 -c snapshot -e 100  
+Sat Mar 04 12:07:19 2006 (mkrips): /application/bin/azelstar snapshot -a 6 -s 100 
+Sat Mar  4 12:07:19 2006 (mkrips): c90cmd -a 6 -c snapshot -e 100  
+Sat Mar 04 12:07:25 2006 (mkrips): /application/bin/azelstar snapshot -a 7 -s 100 
+Sat Mar  4 12:07:26 2006 (mkrips): c90cmd -a 7 -c snapshot -e 100  
+Sat Mar  4 12:07:32 2006 (mkrips): optical 
+Sat Mar  4 12:07:32 2006 (mkrips): observe -s hip40526 
+Sat Mar  4 12:07:32 2006 (mkrips): antennaWait -a 1,2,3,4,5,6,7 -s hip40526 -e 2 
+Sat Mar 04 12:07:36 2006 (mkrips): /application/bin/azelstar snapshot -a 1 -s 100 
+Sat Mar  4 12:07:37 2006 (mkrips): c90cmd -a 1 -c snapshot -e 100  
+Sat Mar 04 12:07:42 2006 (mkrips): /application/bin/azelstar snapshot -a 2 -s 100 
+Sat Mar  4 12:07:43 2006 (mkrips): c90cmd -a 2 -c snapshot -e 100  
+Sat Mar 04 12:07:49 2006 (mkrips): /application/bin/azelstar snapshot -a 3 -s 100 
+Sat Mar  4 12:07:49 2006 (mkrips): c90cmd -a 3 -c snapshot -e 100  
+Sat Mar 04 12:07:55 2006 (mkrips): /application/bin/azelstar snapshot -a 4 -s 100 
+Sat Mar  4 12:07:56 2006 (mkrips): c90cmd -a 4 -c snapshot -e 100  
+Sat Mar 04 12:08:03 2006 (mkrips): /application/bin/azelstar snapshot -a 5 -s 100 
+Sat Mar  4 12:08:04 2006 (mkrips): c90cmd -a 5 -c snapshot -e 100  
+Sat Mar 04 12:08:12 2006 (mkrips): /application/bin/azelstar snapshot -a 6 -s 100 
+Sat Mar  4 12:08:12 2006 (mkrips): c90cmd -a 6 -c snapshot -e 100  
+Sat Mar 04 12:08:18 2006 (mkrips): /application/bin/azelstar snapshot -a 7 -s 100 
+Sat Mar  4 12:08:19 2006 (mkrips): c90cmd -a 7 -c snapshot -e 100  
+Sat Mar  4 12:08:23 2006 (mkrips): optical 
+Sat Mar  4 12:08:23 2006 (mkrips): observe -s hip43851 
+Sat Mar  4 12:08:24 2006 (mkrips): antennaWait -a 1,2,3,4,5,6,7 -s hip43851 -e 2 
+Sat Mar 04 12:08:33 2006 (mkrips): /application/bin/azelstar snapshot -a 1 -s 400 
+Sat Mar  4 12:08:34 2006 (mkrips): c90cmd -a 1 -c snapshot -e 400  
+Sat Mar 04 12:08:40 2006 (mkrips): /application/bin/azelstar snapshot -a 2 -s 400 
+Sat Mar  4 12:08:40 2006 (mkrips): c90cmd -a 2 -c snapshot -e 400  
+Sat Mar 04 12:08:46 2006 (mkrips): /application/bin/azelstar snapshot -a 3 -s 400 
+Sat Mar  4 12:08:46 2006 (mkrips): c90cmd -a 3 -c snapshot -e 400  
+Sat Mar 04 12:08:52 2006 (mkrips): /application/bin/azelstar snapshot -a 4 -s 400 
+Sat Mar  4 12:08:53 2006 (mkrips): c90cmd -a 4 -c snapshot -e 400  
+Sat Mar 04 12:09:01 2006 (mkrips): /application/bin/azelstar snapshot -a 5 -s 400 
+Sat Mar  4 12:09:01 2006 (mkrips): c90cmd -a 5 -c snapshot -e 400  
+Sat Mar 04 12:09:08 2006 (mkrips): /application/bin/azelstar snapshot -a 6 -s 400 
+Sat Mar  4 12:09:09 2006 (mkrips): c90cmd -a 6 -c snapshot -e 400  
+Sat Mar 04 12:09:14 2006 (mkrips): /application/bin/azelstar snapshot -a 7 -s 400 
+Sat Mar  4 12:09:15 2006 (mkrips): c90cmd -a 7 -c snapshot -e 400  
+Sat Mar  4 12:09:19 2006 (mkrips): optical 
+Sat Mar  4 12:09:19 2006 (mkrips): observe -s hip43851 
+Sat Mar  4 12:09:20 2006 (mkrips): antennaWait -a 1,2,3,4,5,6,7 -s hip43851 -e 2 
+Sat Mar 04 12:09:23 2006 (mkrips): /application/bin/azelstar snapshot -a 1 -s 400 
+Sat Mar  4 12:09:24 2006 (mkrips): c90cmd -a 1 -c snapshot -e 400  
+Sat Mar 04 12:09:29 2006 (mkrips): /application/bin/azelstar snapshot -a 2 -s 400 
+Sat Mar  4 12:09:30 2006 (mkrips): c90cmd -a 2 -c snapshot -e 400  
+Sat Mar 04 12:09:37 2006 (mkrips): /application/bin/azelstar snapshot -a 3 -s 400 
+Sat Mar  4 12:09:37 2006 (mkrips): c90cmd -a 3 -c snapshot -e 400  
+Sat Mar 04 12:09:43 2006 (mkrips): /application/bin/azelstar snapshot -a 4 -s 400 
+Sat Mar  4 12:09:43 2006 (mkrips): c90cmd -a 4 -c snapshot -e 400  
+Sat Mar 04 12:09:51 2006 (mkrips): /application/bin/azelstar snapshot -a 5 -s 400 
+Sat Mar  4 12:09:51 2006 (mkrips): c90cmd -a 5 -c snapshot -e 400  
+Sat Mar 04 12:09:58 2006 (mkrips): /application/bin/azelstar snapshot -a 6 -s 400 
+Sat Mar  4 12:09:58 2006 (mkrips): c90cmd -a 6 -c snapshot -e 400  
+Sat Mar 04 12:10:04 2006 (mkrips): /application/bin/azelstar snapshot -a 7 -s 400 
+Sat Mar  4 12:10:04 2006 (mkrips): c90cmd -a 7 -c snapshot -e 400  
+Sat Mar  4 12:10:08 2006 (mkrips): radio 
+Sat Mar  4 12:21:01 2006 (brownd): monitor 
+Sat Mar  4 13:03:25 2006 (mkrips): deice 1 
+Sat Mar  4 13:05:12 2006 (mkrips): stow 
+Sat Mar  4 13:05:23 2006 (mkrips): stow --help 
+Sat Mar  4 13:05:57 2006 (mkrips): stow el 20 
+Sat Mar  4 13:07:18 2006 (mkrips): stow azel 10 20 
+Sat Mar  4 13:07:35 2006 (mkrips): standby 
+Sat Mar  4 13:07:51 2006 (mkrips): resume 
+Sat Mar  4 13:08:30 2006 (mkrips): stow 1020 
+Sat Mar  4 13:10:10 2006 (mareid): el -s 20 
+Sat Mar  4 13:10:16 2006 (mareid): el -d 20 
+Sat Mar  4 13:10:27 2006 (mareid): stow --help 
+Sat Mar  4 13:10:43 2006 (mkrips): el -d 20 -a 8 
+Sat Mar  4 13:10:51 2006 (mkrips): az -d 10 -a 8 
+Sat Mar  4 13:11:01 2006 (mareid): standby 
+Sat Mar  4 13:11:01 2006 (mkrips): stow -a 8 
+Sat Mar  4 13:11:17 2006 (mkrips): el -d 20 -a 8 
+Sat Mar  4 13:11:35 2006 (mkrips): standby -a 8 
+Sat Mar  4 13:27:52 2006 (root): monitor 
+Sat Mar  4 13:45:48 2006 (mkrips): deice 0 
+Sat Mar  4 13:46:20 2006 (mkrips): project -r -s 1 -a 8 
+Sat Mar  4 13:46:32 2006 (mkrips): radio -a 8 
+Sat Mar  4 13:48:54 2006 (mkrips): observe -s jupiter 
+Sat Mar  4 13:49:17 2006 (mkrips): initChopper -a 6 
+Sat Mar  4 13:53:44 2006 (mkrips): openM3 
+Sat Mar  4 13:53:48 2006 (mkrips): resume 
+Sat Mar 04 13:55:31 2006 (mkrips): /application/bin/cpoint -s jupiter -u l -p -q 
+Sat Mar  4 13:55:32 2006 (mkrips): getAntList 
+Sat Mar  4 13:55:33 2006 (mkrips): offsetUnit -s 2 
+Sat Mar  4 13:55:34 2006 (mkrips): observe -s jupiter 
+Sat Mar  4 13:55:35 2006 (mkrips): antennaWait -e 4 
+Sat Mar  4 13:55:39 2006 (mkrips): eloff -a 1 -s 2.000000 
+Sat Mar  4 13:55:40 2006 (mkrips): azoff -a 1 -s -137 
+Sat Mar  4 13:55:40 2006 (mkrips): eloff -a 2 -s 6.000000 
+Sat Mar  4 13:55:41 2006 (mkrips): azoff -a 2 -s -132 
+Sat Mar  4 13:55:42 2006 (mkrips): eloff -a 3 -s 5.000000 
+Sat Mar  4 13:55:43 2006 (mkrips): azoff -a 3 -s -80 
+Sat Mar  4 13:55:43 2006 (mkrips): eloff -a 4 -s -3.200000e+01 
+Sat Mar  4 13:55:45 2006 (mkrips): azoff -a 4 -s -92 
+Sat Mar  4 13:55:45 2006 (mkrips): eloff -a 5 -s 0.000000e+00 
+Sat Mar  4 13:55:46 2006 (mkrips): azoff -a 5 -s -110 
+Sat Mar  4 13:55:47 2006 (mkrips): eloff -a 6 -s 0.000000e+00 
+Sat Mar  4 13:55:48 2006 (mkrips): azoff -a 6 -s -114 
+Sat Mar  4 13:55:48 2006 (mkrips): eloff -a 7 -s -4.000000e+00 
+Sat Mar  4 13:55:49 2006 (mkrips): azoff -a 7 -s -154 
+Sat Mar  4 13:55:49 2006 (mkrips): eloff -a 8 -s 28.090000 
+Sat Mar  4 13:55:51 2006 (mkrips): azoff -a 8 -s -102.23 
+Sat Mar  4 13:55:51 2006 (mkrips): antennaWait -e 4 
+Sat Mar  4 13:55:57 2006 (mkrips): tsys 
+Sat Mar  4 13:56:08 2006 (mkrips): azscan 
+Sat Mar  4 13:56:08 2006 (mkrips): /application/bin/recordContinuum -a 1,2,3,4,5,6,7,8 -c 0 -s azscan -p 7,8 -u 1141480567 
+Sat Mar  4 13:58:29 2006 (mkrips): stopScan 
+Sat Mar  4 13:58:30 2006 (mkrips): eloff -a 1 -s 2.000000 
+Sat Mar  4 13:58:31 2006 (mkrips): azoff -a 1 -s -2.700000e+01 
+Sat Mar  4 13:58:42 2006 (mkrips): eloff -a 2 -s 6.000000 
+Sat Mar  4 13:58:43 2006 (mkrips): azoff -a 2 -s -2.200000e+01 
+Sat Mar  4 13:58:54 2006 (mkrips): eloff -a 3 -s 5.000000 
+Sat Mar  4 13:58:55 2006 (mkrips): azoff -a 3 -s 30.000000 
+Sat Mar  4 13:59:05 2006 (mkrips): eloff -a 4 -s -3.200000e+01 
+Sat Mar  4 13:59:07 2006 (mkrips): azoff -a 4 -s 18.000000 
+Sat Mar  4 13:59:16 2006 (mkrips): eloff -a 5 -s 0.000000e+00 
+Sat Mar  4 13:59:17 2006 (mkrips): azoff -a 5 -s 0.000000e+00 
+Sat Mar  4 13:59:29 2006 (mkrips): eloff -a 6 -s 0.000000e+00 
+Sat Mar  4 13:59:30 2006 (mkrips): azoff -a 6 -s -4.000000e+00 
+Sat Mar  4 13:59:40 2006 (mkrips): eloff -a 7 -s -4.000000e+00 
+Sat Mar  4 13:59:42 2006 (mkrips): azoff -a 7 -s -4.400000e+01 
+Sat Mar  4 13:59:51 2006 (mkrips): eloff -a 8 -s 28.090000 
+Sat Mar  4 13:59:52 2006 (mkrips): azoff -a 8 -s 7.770000 
+Sat Mar  4 14:00:14 2006 (mkrips): offsetUnit -s 2 
+Sat Mar  4 14:00:15 2006 (mkrips): observe -s jupiter 
+Sat Mar  4 14:00:16 2006 (mkrips): antennaWait -e 4 
+Sat Mar  4 14:00:19 2006 (mkrips): azoff -a 1 -s -2.700000e+01 
+Sat Mar  4 14:00:20 2006 (mkrips): eloff -a 1 -s -108 
+Sat Mar  4 14:00:21 2006 (mkrips): azoff -a 2 -s -2.200000e+01 
+Sat Mar  4 14:00:22 2006 (mkrips): eloff -a 2 -s -104 
+Sat Mar  4 14:00:22 2006 (mkrips): azoff -a 3 -s 30.000000 
+Sat Mar  4 14:00:24 2006 (mkrips): eloff -a 3 -s -105 
+Sat Mar  4 14:00:24 2006 (mkrips): azoff -a 4 -s 18.000000 
+Sat Mar  4 14:00:25 2006 (mkrips): eloff -a 4 -s -142 
+Sat Mar  4 14:00:26 2006 (mkrips): azoff -a 5 -s 0.000000e+00 
+Sat Mar  4 14:00:27 2006 (mkrips): eloff -a 5 -s -110 
+Sat Mar  4 14:00:28 2006 (mkrips): azoff -a 6 -s -4.000000e+00 
+Sat Mar  4 14:00:29 2006 (mkrips): eloff -a 6 -s -110 
+Sat Mar  4 14:00:30 2006 (mkrips): azoff -a 7 -s -4.400000e+01 
+Sat Mar  4 14:00:31 2006 (mkrips): eloff -a 7 -s -114 
+Sat Mar  4 14:00:31 2006 (mkrips): azoff -a 8 -s 7.770000 
+Sat Mar  4 14:00:33 2006 (mkrips): eloff -a 8 -s -81.91 
+Sat Mar  4 14:00:33 2006 (mkrips): antennaWait -e 4 
+Sat Mar  4 14:00:36 2006 (mkrips): tsys 
+Sat Mar  4 14:00:47 2006 (mkrips): elscan 
+Sat Mar  4 14:00:47 2006 (mkrips): /application/bin/recordContinuum -a 1,2,3,4,5,6,7,8 -c 0 -s elscan -p 7,8 -u 1141480847 
+Sat Mar  4 14:03:14 2006 (mkrips): stopScan 
+Sat Mar  4 14:03:16 2006 (mkrips): eloff -a 1 -s 2.000000 
+Sat Mar  4 14:03:17 2006 (mkrips): azoff -a 1 -s -2.700000e+01 
+Sat Mar  4 14:10:07 2006 (mkrips): eloff -a 2 -s 6.000000 
+Sat Mar  4 14:10:08 2006 (mkrips): azoff -a 2 -s -2.200000e+01 
+Sat Mar  4 14:10:21 2006 (mkrips): eloff -a 3 -s 5.000000 
+Sat Mar  4 14:10:22 2006 (mkrips): azoff -a 3 -s 30.000000 
+Sat Mar  4 14:10:37 2006 (mkrips): eloff -a 4 -s -3.200000e+01 
+Sat Mar  4 14:10:39 2006 (mkrips): azoff -a 4 -s 18.000000 
+Sat Mar  4 14:10:50 2006 (mkrips): eloff -a 5 -s 0.000000e+00 
+Sat Mar  4 14:10:51 2006 (mkrips): azoff -a 5 -s 0.000000e+00 
+Sat Mar  4 14:11:09 2006 (mkrips): eloff -a 6 -s 0.000000e+00 
+Sat Mar  4 14:11:10 2006 (mkrips): azoff -a 6 -s -4.000000e+00 
+Sat Mar  4 14:11:21 2006 (mkrips): eloff -a 7 -s -4.000000e+00 
+Sat Mar  4 14:11:22 2006 (mkrips): azoff -a 7 -s -4.400000e+01 
+Sat Mar  4 14:11:31 2006 (mkrips): eloff -a 8 -s 28.090000 
+Sat Mar  4 14:11:33 2006 (mkrips): azoff -a 8 -s 7.770000 
+Sat Mar  4 14:12:54 2006 (mkrips): optical 
+Sat Mar  4 14:13:36 2006 (mkrips): observe -s polaris 
+Sat Mar 04 14:15:00 2006 (mkrips): /application/bin/snapshot -s 200 
+Sat Mar  4 14:15:01 2006 (mkrips): c90cmd -a 1,2,3,4,5,6,7,8 -c snapshot -e 200  
+Sat Mar  4 14:20:40 2006 (mkrips): radio 
+Sat Mar  4 14:21:01 2006 (mkrips): observe -s 3c273 
+Sat Mar 04 14:22:44 2006 (mkrips): /application/bin/cpoint -s 3c273 -u l -p -q 
+Sat Mar  4 14:22:46 2006 (mkrips): getAntList 
+Sat Mar  4 14:22:47 2006 (mkrips): offsetUnit -s 2 
+Sat Mar  4 14:22:48 2006 (mkrips): observe -s 3c273 
+Sat Mar  4 14:22:49 2006 (mkrips): antennaWait -e 4 
+Sat Mar  4 14:22:52 2006 (mkrips): eloff -a 1 -s 2.000000 
+Sat Mar  4 14:22:53 2006 (mkrips): azoff -a 1 -s -137 
+Sat Mar  4 14:22:54 2006 (mkrips): eloff -a 2 -s 6.000000 
+Sat Mar  4 14:22:55 2006 (mkrips): azoff -a 2 -s -132 
+Sat Mar  4 14:22:55 2006 (mkrips): eloff -a 3 -s 5.000000 
+Sat Mar  4 14:22:56 2006 (mkrips): azoff -a 3 -s -80 
+Sat Mar  4 14:22:57 2006 (mkrips): eloff -a 4 -s -3.200000e+01 
+Sat Mar  4 14:22:58 2006 (mkrips): azoff -a 4 -s -92 
+Sat Mar  4 14:22:58 2006 (mkrips): eloff -a 5 -s 0.000000e+00 
+Sat Mar  4 14:22:59 2006 (mkrips): azoff -a 5 -s -110 
+Sat Mar  4 14:23:00 2006 (mkrips): eloff -a 6 -s 0.000000e+00 
+Sat Mar  4 14:23:01 2006 (mkrips): azoff -a 6 -s -114 
+Sat Mar  4 14:23:01 2006 (mkrips): eloff -a 7 -s -4.000000e+00 
+Sat Mar  4 14:23:02 2006 (mkrips): azoff -a 7 -s -154 
+Sat Mar  4 14:23:03 2006 (mkrips): eloff -a 8 -s 28.090000 
+Sat Mar  4 14:23:04 2006 (mkrips): azoff -a 8 -s -102.23 
+Sat Mar  4 14:23:04 2006 (mkrips): antennaWait -e 4 
+Sat Mar  4 14:23:10 2006 (mkrips): tsys 
+Sat Mar  4 14:23:20 2006 (mkrips): azscan 
+Sat Mar  4 14:23:21 2006 (mkrips): /application/bin/recordContinuum -a 1,2,3,4,5,6,7,8 -c 0 -s azscan -p 7,8 -u 1141482200 
+Sat Mar  4 14:25:43 2006 (mkrips): stopScan 
+Sat Mar  4 14:25:44 2006 (mkrips): eloff -a 1 -s 2.000000 
+Sat Mar  4 14:25:45 2006 (mkrips): azoff -a 1 -s -2.700000e+01 
+Sat Mar  4 14:25:54 2006 (mkrips): eloff -a 2 -s 6.000000 
+Sat Mar  4 14:25:55 2006 (mkrips): azoff -a 2 -s -2.200000e+01 
+Sat Mar  4 14:26:05 2006 (mkrips): eloff -a 3 -s 5.000000 
+Sat Mar  4 14:26:06 2006 (mkrips): azoff -a 3 -s 30.000000 
+Sat Mar  4 14:26:16 2006 (mkrips): eloff -a 4 -s -3.200000e+01 
+Sat Mar  4 14:26:17 2006 (mkrips): azoff -a 4 -s 18.000000 
+Sat Mar  4 14:26:26 2006 (mkrips): eloff -a 5 -s 0.000000e+00 
+Sat Mar  4 14:26:27 2006 (mkrips): azoff -a 5 -s 0.000000e+00 
+Sat Mar  4 14:26:35 2006 (mkrips): stopScan -a 1 
+Sat Mar  4 14:26:37 2006 (mkrips): azoff -a 1 -s -2.700000e+01 
+Sat Mar  4 14:26:38 2006 (mkrips): eloff -a 1 -s 2.000000 
+Sat Mar  4 14:26:38 2006 (mkrips): stopScan -a 2 
+Sat Mar  4 14:26:40 2006 (mkrips): azoff -a 2 -s -2.200000e+01 
+Sat Mar  4 14:26:42 2006 (mkrips): eloff -a 2 -s 6.000000 
+Sat Mar  4 14:26:42 2006 (mkrips): stopScan -a 3 
+Sat Mar  4 14:26:44 2006 (mkrips): azoff -a 3 -s 30.000000 
+Sat Mar  4 14:26:45 2006 (mkrips): eloff -a 3 -s 5.000000 
+Sat Mar  4 14:26:45 2006 (mkrips): stopScan -a 4 
+Sat Mar  4 14:26:48 2006 (mkrips): azoff -a 4 -s 18.000000 
+Sat Mar  4 14:26:49 2006 (mkrips): eloff -a 4 -s -3.200000e+01 
+Sat Mar  4 14:26:49 2006 (mkrips): closeM3 
+Sat Mar  4 14:26:49 2006 (mkrips): stopScan -a 5 
+Sat Mar  4 14:26:51 2006 (mkrips): azoff -a 5 -s 0.000000e+00 
+Sat Mar  4 14:26:53 2006 (mkrips): eloff -a 5 -s 0.000000e+00 
+Sat Mar  4 14:26:53 2006 (mkrips): stopScan -a 6 
+Sat Mar  4 14:26:55 2006 (mkrips): azoff -a 6 -s -4.000000e+00 
+Sat Mar  4 14:26:56 2006 (mkrips): eloff -a 6 -s 0.000000e+00 
+Sat Mar  4 14:26:56 2006 (mkrips): stopScan -a 7 
+Sat Mar  4 14:26:59 2006 (mkrips): azoff -a 7 -s -4.400000e+01 
+Sat Mar  4 14:27:00 2006 (mkrips): eloff -a 7 -s -4.000000e+00 
+Sat Mar  4 14:27:00 2006 (mkrips): stopScan -a 8 
+Sat Mar  4 14:27:02 2006 (mkrips): azoff -a 8 -s 7.770000 
+Sat Mar  4 14:27:03 2006 (mkrips): eloff -a 8 -s 28.090000 
+Sat Mar  4 14:28:00 2006 (mkrips): standby 
+Sat Mar  4 14:28:20 2006 (mkrips): el -d 20 
+Sat Mar  4 14:28:26 2006 (mkrips): resume 
+Sat Mar  4 14:28:32 2006 (mkrips): el -d 20 
+Sat Mar  4 14:28:56 2006 (mkrips): az -d 10 
+Sat Mar  4 14:29:35 2006 (mkrips): standby 
+Sat Mar  4 14:34:20 2006 (mareid): monitor 
+Sat Mar  4 14:34:45 2006 (mareid): deice 1 
+Sat Mar  4 14:44:19 2006 (mareid): /application/bin/killdaemon acc5 deiced restart
+Sat Mar  4 14:55:27 2006 (apeck): monitor 
+Sat Mar  4 15:06:08 2006 (mareid): lookup -s Sun 
+Sat Mar  4 15:06:11 2006 (mareid): lookup -s Sun 
+Sat Mar  4 15:06:14 2006 (mareid): lookup -s Sun 
+Sat Mar  4 15:16:29 2006 (mareid): lookup -s Sun 
+Sat Mar  4 15:16:46 2006 (mareid): lookup -s Sun 
+Sat Mar  4 15:27:50 2006 (mkrips): lookup -s sun 
+Sat Mar  4 15:40:00 2006 (mkrips): lookup -s sun 
+Sat Mar  4 15:43:29 2006 (mkrips): lookup -s sun 
+Sat Mar  4 15:46:46 2006 (mkrips): lookup -s sun 
+Sat Mar  4 15:48:15 2006 (rwilson): /application/bin/killdaemon acc6 airservo restart
+Sat Mar  4 15:50:41 2006 (rwilson): airadam -a6 -c servo 
+Sat Mar  4 15:51:12 2006 (rwilson): /application/bin/killdaemon acc6 airservo restart
+Sat Mar  4 15:51:57 2006 (rwilson): airadam -a6 -c servo 
+Sat Mar  4 15:53:42 2006 (rwilson): /application/bin/killdaemon acc6 airservo restart
+Sat Mar  4 15:54:11 2006 (rwilson): airadam -a6 -c servo 
+Sat Mar  4 15:54:58 2006 (rwilson): /application/bin/killdaemon acc6 airservo restart
+Sat Mar  4 16:07:03 2006 (rwilson): /application/bin/killdaemon acc6 airservo restart
+Sat Mar  4 16:11:24 2006 (apeck): monitor 
+Sat Mar  4 16:17:40 2006 (rwilson): /application/bin/killdaemon acc6 airservo restart
+Sat Mar  4 16:26:36 2006 (rwilson): /application/bin/killdaemon acc6 airservo restart
+Sat Mar  4 16:41:21 2006 (rwilson): /application/bin/killdaemon acc6 airservo restart
+Sat Mar  4 16:43:31 2006 (rwilson): airadam -a6 -c heater 
+Sat Mar  4 16:43:45 2006 (rwilson): airadam -a6 -c heater 
+Sat Mar  4 16:43:51 2006 (rwilson): airadam -a6 -c heater 
+Sat Mar  4 16:43:56 2006 (rwilson): airadam -a6 -c heater 
+Sat Mar  4 16:44:01 2006 (rwilson): airadam -a6 -c heater 
+Sat Mar  4 16:44:06 2006 (rwilson): airadam -a6 -c heater 
+Sat Mar  4 16:46:27 2006 (mareid): monitor 
+Sat Mar  4 17:04:12 2006 (rwilson): /application/bin/killdaemon acc6 airservo restart
+Sat Mar  4 17:22:22 2006 (rwilson): /application/bin/killdaemon acc6 airservo restart
+Sat Mar  4 18:08:07 2006 (rwilson): /application/bin/killdaemon acc6 airservo restart
+Sat Mar  4 18:16:44 2006 (root): monitor 
+Sat Mar  4 19:02:15 2006 (apeck): monitor 
+Sat Mar  4 19:03:19 2006 (apeck): deice 0 
+Sat Mar  4 19:04:27 2006 (apeck): endProject.
+Sat Mar  4 19:36:02 2006 (rwilson): /application/bin/killdaemon acc6 airservo restart
+Sat Mar  4 20:24:21 2006 (root): monitor 
+Sat Mar  4 22:19:15 2006 (root): monitor 
+Sat Mar  4 23:44:51 2006 (mkrips): monitor 
+Sat Mar  4 23:56:56 2006 (mkrips): monitor 
+Sun Mar  5 01:34:05 2006 (cflee): monitor 
+Sun Mar  5 01:53:38 2006 (brownd): monitor 
+Sun Mar  5 01:58:30 2006 (brownd): monitor 
+Sun Mar  5 02:01:07 2006 (brownd): initChopper -a 6 
+Sun Mar  5 02:03:34 2006 (brownd): resetChopper -a 6 
+Sun Mar  5 02:03:53 2006 (brownd): /application/bin/killdaemon acc6 chopperControl restart
+Sun Mar  5 02:04:51 2006 (brownd): farChopper -a 6 
+Sun Mar  5 02:05:04 2006 (brownd): resetChopper -a 6 
+Sun Mar  5 02:36:28 2006 (mareid): monitor 
+Sun Mar  5 02:36:30 2006 (mareid): monitor 
+Sun Mar  5 02:42:05 2006 (mareid): project -a 1..8 -s 1 -C 1..12 -R l -o Mike -l HP x285 -p SMA -d priming 
+Sun Mar  5 02:44:02 2006 (mareid): monitor 
+Sun Mar  5 02:55:21 2006 (mareid): restartCorrelator -d -s64 
+Sun Mar  5 02:58:03 2006 (mareid): observe -s 3c111 
+Sun Mar  5 02:58:36 2006 (mareid): dopplerTrack -t co2-1 -s 13 -u 
+Sun Mar  5 02:58:55 2006 (daemon): setLO: sending "tune -f0 225.47 -h0 16" to acc1
+Sun Mar  5 02:58:55 2006 (daemon): setLO: sending "tune -f0 225.47 -h0 16" to acc2
+Sun Mar  5 02:58:55 2006 (daemon): setLO: sending "tune -f0 225.47 -h0 16" to acc3
+Sun Mar  5 02:58:55 2006 (daemon): setLO: sending "tune -f0 225.47 -h0 16" to acc4
+Sun Mar  5 02:58:55 2006 (daemon): setLO: sending "tune -f0 225.47 -h0 16" to acc5
+Sun Mar  5 02:58:55 2006 (daemon): setLO: sending "tune -f0 225.47 -h0 16" to acc6
+Sun Mar  5 02:58:55 2006 (daemon): setLO: sending "tune -f0 225.47 -h0 16" to acc7
+Sun Mar  5 02:58:55 2006 (daemon): setLO: sending "tune -f0 225.47 -h0 16" to acc8
+Sun Mar  5 03:03:28 2006 (mareid): tune -a 4 -c t joy 
+Sun Mar  5 03:06:28 2006 (mareid): tune -a 4 -c opt tun 
+Sun Mar  5 03:06:45 2006 (mareid): tune -a 7 -c t joy 
+Sun Mar  5 03:08:24 2006 (mareid): tune -a 7 -c opt tun 
+Sun Mar  5 03:08:50 2006 (mareid): tune -a 7 -c opt curr -t 
+Sun Mar  5 03:10:46 2006 (mareid): tune -a 4 -c rfpower 18 
+Sun Mar  5 03:10:52 2006 (mareid): tune -a 4 -c t joy 
+Sun Mar  5 03:11:52 2006 (mareid): tune -a 4 -c opt curr -t 
+Sun Mar  5 03:12:02 2006 (mareid): tune -a 4 -c opt mult in 
+Sun Mar  5 03:12:26 2006 (mareid): tune -a 4 -c opt mult out 
+Sun Mar  5 03:13:13 2006 (mareid): tune -a 7 -c opt mult in 
+Sun Mar  5 03:13:25 2006 (mareid): tune -a 7 -c opt mult out 
+Sun Mar  5 03:13:50 2006 (mareid): tune -a 7 -c opt mult pow 
+Sun Mar  5 03:14:03 2006 (mareid): tune -a 7 -c opt pow 
+Sun Mar  5 03:14:18 2006 (mareid): tune -a 7 -c opt mult in 
+Sun Mar  5 03:14:43 2006 (mareid): tune -a 7 -c opt curr -t 
+Sun Mar  5 03:17:08 2006 (mareid): tune -a 7 -c rfpower  18 
+Sun Mar  5 03:17:19 2006 (mareid): tune -a 7 -c opt mult in 
+Sun Mar  5 03:17:26 2006 (mareid): tune -a 7 -c opt mult out 
+Sun Mar  5 03:18:28 2006 (mareid): tune -a 7 -c interpolatem -f 225.470 -g 
+Sun Mar  5 03:19:38 2006 (mareid): tune -a 7 -c a 16000 
+Sun Mar  5 03:19:43 2006 (mareid): tune -a 7 -c a 17000 
+Sun Mar  5 03:19:51 2006 (mareid): tune -a 7 -c a 16500 
+Sun Mar  5 03:20:09 2006 (mareid): tune -a 7 -c a 16200 
+Sun Mar  5 03:20:59 2006 (mareid): tune -a 1 -c iv0 
+Sun Mar  5 03:21:33 2006 (mareid): tune -a 1 -c ob0 
+Sun Mar  5 03:21:55 2006 (mareid): tune -a 2 -c iv0 
+Sun Mar  5 03:22:23 2006 (mareid): tune -a 2 -c ob0 
+Sun Mar  5 03:24:04 2006 (mareid): observe -s mars 
+Sun Mar  5 03:24:14 2006 (mareid): resume 
+Sun Mar  5 03:24:37 2006 (mareid): newFile 
+Sun Mar  5 03:25:26 2006 (mareid): openM3 
+Sun Mar  5 03:30:59 2006 (mareid): correlatorPause 
+Sun Mar  5 03:31:09 2006 (mareid): correlatorResume 
+Sun Mar  5 03:31:33 2006 (mareid): observe -s 3c111 
+Sun Mar  5 03:33:30 2006 (mareid): integrate -help 
+Sun Mar  5 03:33:35 2006 (mareid): integrate --help 
+Sun Mar  5 03:33:43 2006 (mareid): integrate -p 
+Sun Mar  5 03:35:02 2006 (root): monitor 
+Sun Mar  5 03:36:45 2006 (mareid): integrate -n -p 
+Sun Mar  5 03:36:49 2006 (mareid): integrate -p 
+Sun Mar  5 03:37:55 2006 (mareid): newFile 
+Sun Mar  5 03:38:09 2006 (mareid): newFile 
+Sun Mar  5 03:52:02 2006 (mareid): integrate -p 
+Sun Mar  5 03:53:03 2006 (mareid): standby 
+Sun Mar  5 03:53:39 2006 (mareid): monitor 
+Sun Mar  5 03:54:25 2006 (root): monitor 
+Sun Mar  5 03:55:33 2006 (root): monitor 
+Sun Mar  5 03:57:58 2006 (root): integrate -p 
+Sun Mar  5 03:58:32 2006 (rtm): /application/bin/killdaemon crate int_server QUIT
+Sun Mar  5 03:58:48 2006 (root): restartCorrelator -d -s128 
+Sun Mar  5 04:02:04 2006 (rtm): /application/bin/killdaemon crate int_server QUIT
+Sun Mar  5 04:02:13 2006 (root): restartCorrelator -d -s64 
+Sun Mar  5 04:09:55 2006 (rrao): monitor 
+Sun Mar  5 04:10:34 2006 (rrao): monitor 
+Sun Mar  5 04:12:58 2006 (brownd): monitor 
+Sun Mar  5 04:13:36 2006 (rrao): tune -a 7 -c vbias0 -1.5 
+Sun Mar  5 04:13:41 2006 (rrao): tune -a 7 -c vbias0 -1.45 
+Sun Mar  5 04:13:48 2006 (rrao): tune -a 7 -c vbias0 -1.4 
+Sun Mar  5 04:14:53 2006 (rrao): tune -a 7 -c hotload in 
+Sun Mar  5 04:15:14 2006 (rrao): tune -a 7 -c opt curr -c 48 
+Sun Mar  5 04:15:34 2006 (rrao): tune -a 7 -c vbias0 -1.45 
+Sun Mar  5 04:15:42 2006 (rrao): tune -a 7 -c vbias0 -1.51 
+Sun Mar  5 04:15:50 2006 (rrao): tune -a 7 -c vbias0 -1.46 
+Sun Mar  5 04:16:05 2006 (rrao): tune -a 7 -c iv0 
+Sun Mar  5 04:16:48 2006 (rrao): tune -a 7 -c vbias0 -1.47 
+Sun Mar  5 04:17:00 2006 (rrao): tune -a 7 -c opt curr -c 48 
+Sun Mar  5 04:17:12 2006 (rrao): tsys -a 7 
+Sun Mar  5 04:17:35 2006 (rrao): tune -a 7 -c ob0 -v -s 
+Sun Mar  5 04:18:26 2006 (rrao): tsys -a 7 
+Sun Mar  5 04:18:49 2006 (rrao): tune -a 7 -c hotload in 
+Sun Mar  5 04:19:02 2006 (rrao): tune -a 7 -c iv0 
+Sun Mar  5 04:19:40 2006 (rrao): tsys -a 7 
+Sun Mar  5 04:20:02 2006 (rrao): tune -a 8 -c vbias0 2.8 
+Sun Mar  5 04:20:14 2006 (rrao): tune -a 8 -c opt curr -c 48 
+Sun Mar  5 04:20:32 2006 (rrao): tune -a 8 -c iv0 
+Sun Mar  5 04:20:59 2006 (rrao): tsys -a 8 
+Sun Mar  5 04:21:21 2006 (rrao): tune -a 8 -c ob0 -v -s 
+Sun Mar  5 04:22:06 2006 (rrao): tune -a 8 -c iv0 
+Sun Mar  5 04:22:31 2006 (rrao): tsys -a 8 
+Sun Mar  5 04:22:58 2006 (rrao): tune -a 4 -c t joy 
+Sun Mar  5 04:23:39 2006 (rrao): tune -a 4 -c rfpower 17 
+Sun Mar  5 04:23:54 2006 (rrao): tune -a 4 -c rfpower 15 
+Sun Mar  5 04:24:00 2006 (rrao): tune -a 4 -c rfpower 17 
+Sun Mar  5 04:24:15 2006 (rrao): tune -a 4 -c opt curr -t 
+Sun Mar  5 04:24:40 2006 (rrao): tune -a 4 -c iv0 
+Sun Mar  5 04:25:13 2006 (rrao): tune -a 4 -c vbias0 2.4 
+Sun Mar  5 04:25:39 2006 (rrao): tsys -a 4 
+Sun Mar  5 04:25:59 2006 (rrao): tune -a 4 -c ob0 -v -s 
+Sun Mar  5 04:26:45 2006 (rrao): tune -a 4 -c iv0 
+Sun Mar  5 04:27:10 2006 (rrao): tsys -a 4 
+Sun Mar  5 04:27:40 2006 (rrao): ivplot8 
+Sun Mar  5 04:30:15 2006 (rrao): tune -a 8 -c iv0 
+Sun Mar  5 04:31:11 2006 (mareid): monitor 
+Sun Mar  5 04:31:23 2006 (mareid): monitor 
+Sun Mar  5 04:36:11 2006 (nimesh): monitor 
+Sun Mar  5 04:39:44 2006 (nimesh): monitor 
+Sun Mar  5 04:40:05 2006 (mareid): resume 
+Sun Mar  5 04:40:17 2006 (mareid): observe -s mars 
+Sun Mar  5 04:41:09 2006 (mareid): newFile 
+Sun Mar  5 04:42:29 2006 (nimesh): monitor 
+Sun Mar  5 04:43:51 2006 (rrao): tune -c hotload out 
+Sun Mar  5 04:46:24 2006 (mareid): tsys 
+Sun Mar  5 04:49:17 2006 (rrao): tune -a 4 -c zt 
+Sun Mar  5 04:49:23 2006 (rrao): tune -a 4 -c zb 
+Sun Mar  5 04:49:44 2006 (rrao): tune -a 4 -c interpolate -f 112.73 
+Sun Mar  5 04:50:01 2006 (rrao): tune -a 4 -c b 30400 
+Sun Mar  5 04:50:19 2006 (rrao): tune -a 4 -c t 5500 
+Sun Mar  5 04:50:25 2006 (lzapata): monitor 
+Sun Mar  5 04:50:33 2006 (rrao): tune -a 4 -c t joy 
+Sun Mar  5 04:50:54 2006 (rrao): tune -a 4 -c opt pow 
+Sun Mar  5 04:52:32 2006 (rrao): tune -a 4 -c rfpower -d 
+Sun Mar  5 04:52:41 2006 (rrao): tune -a 4 -c rfpower 17 
+Sun Mar  5 04:52:49 2006 (rrao): tune -a 4 -c rfpower 16.5 
+Sun Mar  5 04:52:54 2006 (rrao): tune -a 4 -c rfpower 16 
+Sun Mar  5 04:53:01 2006 (rrao): tune -a 4 -c rfpower 15.5 
+Sun Mar  5 04:53:09 2006 (rrao): tune -a 4 -c rfpower 15.2 
+Sun Mar  5 04:53:15 2006 (rrao): tune -a 4 -c rfpower 15. 
+Sun Mar  5 04:53:23 2006 (rrao): tune -a 4 -c rfpower 18. 
+Sun Mar  5 04:53:33 2006 (mareid): tune -a 3 -c iv0 
+Sun Mar  5 04:53:43 2006 (rrao): tune -a 4 -c opt curr -t 
+Sun Mar  5 04:54:13 2006 (rrao): tsys -a 4 
+Sun Mar  5 04:54:35 2006 (rrao): tune -a 4 -c iv0 
+Sun Mar  5 04:55:07 2006 (mareid): tune -a 3 -c ob0 -v 1.3 
+Sun Mar  5 04:55:46 2006 (mareid): tune -a 3 -c iv0 
+Sun Mar  5 04:56:31 2006 (mareid): initChopper -a 6 
+Sun Mar  5 04:57:55 2006 (rrao): tsys -a 4 
+Sun Mar  5 04:58:35 2006 (mareid): tune -a 3 -c ob0 
+Sun Mar  5 04:59:22 2006 (mareid): tune -a 6 -c iv0 
+Sun Mar  5 04:59:48 2006 (apeck): monitor 
+Sun Mar  5 05:00:10 2006 (mareid): tune -a 6 -c ob0 
+Sun Mar  5 05:01:37 2006 (mareid): tune -a 5 -c iv0 
+Sun Mar  5 05:03:02 2006 (mareid): tune -a 5 -c ob0 
+Sun Mar  5 05:03:12 2006 (rrao): tune -a 3 -c hotload out 
+Sun Mar  5 05:03:59 2006 (mareid): initChopper -a 6 
+Sun Mar  5 05:05:34 2006 (rrao): tune -a 5 -c iv0 
+Sun Mar  5 05:07:38 2006 (nimesh): monitor 
+Sun Mar  5 05:07:39 2006 (rrao): tune -a 5 -c opt curr -c 22 
+Sun Mar  5 05:07:51 2006 (rrao): tune -a 5 -c opt curr -c 20 
+Sun Mar  5 05:08:00 2006 (rrao): tsys -a 5 
+Sun Mar  5 05:08:02 2006 (mareid): tsys -a 4 
+Sun Mar  5 05:08:21 2006 (mareid): initChopper -a 6 
+Sun Mar  5 05:08:33 2006 (rrao): tune -a 5 -c hotload in 
+Sun Mar  5 05:08:54 2006 (rrao): tune -a 5 -c iv0 
+Sun Mar  5 05:09:34 2006 (rrao): tune -a 5 -c hotload out 
+Sun Mar  5 05:12:00 2006 (nimesh): monitor 
+Sun Mar  5 05:12:12 2006 (nimesh): standby -a 5 
+Sun Mar  5 05:12:19 2006 (nimesh): /application/bin/killdaemon acc5 Track restart
+Sun Mar  5 05:12:23 2006 (nimesh): monitor 
+Sun Mar  5 05:12:30 2006 (apeck): focusCurveOn -a 6 
+Sun Mar  5 05:12:35 2006 (nimesh): observe -a 5 -s mars 
+Sun Mar  5 05:12:37 2006 (nimesh): monitor 
+Sun Mar  5 05:12:43 2006 (nimesh): resume -a 5 
+Sun Mar  5 05:12:45 2006 (nimesh): monitor 
+Sun Mar  5 05:14:13 2006 (rrao): tune -a 6 -c hotload out 
+Sun Mar  5 05:14:44 2006 (rrao): tsys -a 5 
+Sun Mar  5 05:15:46 2006 (mareid): tune -a 6 -c iv0 
+Sun Mar  5 05:16:28 2006 (mareid): tune -a 6 -c vbias0 2.46 
+Sun Mar  5 05:16:31 2006 (mareid): tune -a 6 -c iv0 
+Sun Mar  5 05:17:02 2006 (mareid): tune -a 6 -c ob0 
+Sun Mar  5 05:17:54 2006 (mareid): tune -a 6 -c iv0 
+Sun Mar  5 05:19:01 2006 (mareid): tune -a 6 -c vbias0 2.48 
+Sun Mar  5 05:19:07 2006 (mareid): tsys 
+Sun Mar  5 05:20:15 2006 (mareid): setIFLevels 
+Sun Mar  5 05:22:42 2006 (mareid): setIFLevels --help 
+Sun Mar  5 05:26:43 2006 (mareid): lookup -s Mars 
+Sun Mar 05 05:27:56 2006 (mareid): /application/bin/cpoint -s Mars -u l -q -p 
+Sun Mar  5 05:27:58 2006 (mareid): getAntList 
+Sun Mar  5 05:27:59 2006 (mareid): offsetUnit -s 2 
+Sun Mar  5 05:28:00 2006 (mareid): observe -s Mars 
+Sun Mar  5 05:28:00 2006 (mareid): antennaWait -e 4 
+Sun Mar  5 05:28:04 2006 (mareid): eloff -a 1 -s 2.000000 
+Sun Mar  5 05:28:06 2006 (mareid): azoff -a 1 -s -137 
+Sun Mar  5 05:28:06 2006 (mareid): eloff -a 2 -s 6.000000 
+Sun Mar  5 05:28:07 2006 (mareid): azoff -a 2 -s -132 
+Sun Mar  5 05:28:08 2006 (mareid): eloff -a 3 -s 5.000000 
+Sun Mar  5 05:28:09 2006 (mareid): azoff -a 3 -s -80 
+Sun Mar  5 05:28:10 2006 (mareid): eloff -a 4 -s -3.200000e+01 
+Sun Mar  5 05:28:11 2006 (mareid): azoff -a 4 -s -92 
+Sun Mar  5 05:28:11 2006 (mareid): eloff -a 5 -s 0.000000e+00 
+Sun Mar  5 05:28:12 2006 (mareid): azoff -a 5 -s -110 
+Sun Mar  5 05:28:13 2006 (mareid): eloff -a 6 -s 0.000000e+00 
+Sun Mar  5 05:28:14 2006 (mareid): azoff -a 6 -s -114 
+Sun Mar  5 05:28:15 2006 (mareid): eloff -a 7 -s -4.000000e+00 
+Sun Mar  5 05:28:16 2006 (mareid): azoff -a 7 -s -154 
+Sun Mar  5 05:28:16 2006 (mareid): eloff -a 8 -s 28.090000 
+Sun Mar  5 05:28:18 2006 (mareid): azoff -a 8 -s -102.23 
+Sun Mar  5 05:28:18 2006 (mareid): antennaWait -e 4 
+Sun Mar  5 05:28:24 2006 (mareid): tsys 
+Sun Mar  5 05:28:35 2006 (mareid): azscan 
+Sun Mar  5 05:28:35 2006 (mareid): /application/bin/recordContinuum -a 1,2,3,4,5,6,7,8 -c 0 -s azscan -p 7,8 -u 1141536514 
+Sun Mar  5 05:30:57 2006 (mareid): stopScan 
+Sun Mar  5 05:30:58 2006 (mareid): eloff -a 1 -s 2.000000 
+Sun Mar  5 05:31:00 2006 (mareid): azoff -a 1 -s -2.700000e+01 
+Sun Mar  5 05:31:11 2006 (mareid): eloff -a 2 -s 6.000000 
+Sun Mar  5 05:31:12 2006 (mareid): azoff -a 2 -s -2.200000e+01 
+Sun Mar  5 05:31:24 2006 (mareid): eloff -a 3 -s 5.000000 
+Sun Mar  5 05:31:25 2006 (mareid): azoff -a 3 -s 30.000000 
+Sun Mar  5 05:31:36 2006 (mareid): eloff -a 4 -s -3.200000e+01 
+Sun Mar  5 05:31:37 2006 (mareid): azoff -a 4 -s 18.000000 
+Sun Mar  5 05:31:47 2006 (mareid): eloff -a 5 -s 0.000000e+00 
+Sun Mar  5 05:31:48 2006 (mareid): azoff -a 5 -s 0.000000e+00 
+Sun Mar  5 05:32:01 2006 (mareid): eloff -a 6 -s 0.000000e+00 
+Sun Mar  5 05:32:02 2006 (mareid): azoff -a 6 -s -4.000000e+00 
+Sun Mar  5 05:32:12 2006 (mareid): eloff -a 7 -s -4.000000e+00 
+Sun Mar  5 05:32:13 2006 (mareid): azoff -a 7 -s -4.400000e+01 
+Sun Mar  5 05:32:22 2006 (mareid): eloff -a 8 -s 28.090000 
+Sun Mar  5 05:32:23 2006 (mareid): azoff -a 8 -s 7.770000 
+Sun Mar  5 05:32:45 2006 (mareid): offsetUnit -s 2 
+Sun Mar  5 05:32:46 2006 (mareid): observe -s Mars 
+Sun Mar  5 05:32:46 2006 (mareid): antennaWait -e 4 
+Sun Mar  5 05:32:50 2006 (mareid): azoff -a 1 -s -2.700000e+01 
+Sun Mar  5 05:32:51 2006 (mareid): eloff -a 1 -s -108 
+Sun Mar  5 05:32:51 2006 (mareid): azoff -a 2 -s -2.200000e+01 
+Sun Mar  5 05:32:52 2006 (mareid): eloff -a 2 -s -104 
+Sun Mar  5 05:32:53 2006 (mareid): azoff -a 3 -s 30.000000 
+Sun Mar  5 05:32:54 2006 (mareid): eloff -a 3 -s -105 
+Sun Mar  5 05:32:55 2006 (mareid): azoff -a 4 -s 18.000000 
+Sun Mar  5 05:32:56 2006 (mareid): eloff -a 4 -s -142 
+Sun Mar  5 05:32:56 2006 (mareid): azoff -a 5 -s 0.000000e+00 
+Sun Mar  5 05:32:57 2006 (mareid): eloff -a 5 -s -110 
+Sun Mar  5 05:32:58 2006 (mareid): azoff -a 6 -s -4.000000e+00 
+Sun Mar  5 05:32:59 2006 (mareid): eloff -a 6 -s -110 
+Sun Mar  5 05:33:00 2006 (mareid): azoff -a 7 -s -4.400000e+01 
+Sun Mar  5 05:33:01 2006 (mareid): eloff -a 7 -s -114 
+Sun Mar  5 05:33:01 2006 (mareid): azoff -a 8 -s 7.770000 
+Sun Mar  5 05:33:02 2006 (mareid): eloff -a 8 -s -81.91 
+Sun Mar  5 05:33:03 2006 (mareid): antennaWait -e 4 
+Sun Mar  5 05:33:09 2006 (mareid): lookup -s 0530+135 
+Sun Mar  5 05:33:09 2006 (mareid): tsys 
+Sun Mar  5 05:33:20 2006 (mareid): elscan 
+Sun Mar  5 05:33:20 2006 (mareid): /application/bin/recordContinuum -a 1,2,3,4,5,6,7,8 -c 0 -s elscan -p 7,8 -u 1141536799 
+Sun Mar  5 05:35:04 2006 (mareid): lookup -s 3c272 
+Sun Mar  5 05:35:07 2006 (mareid): lookup -s 3c273 
+Sun Mar  5 05:35:10 2006 (mareid): lookup -s 3c273 
+Sun Mar  5 05:35:33 2006 (mareid): lookup -s 3c273 
+Sun Mar  5 05:35:47 2006 (mareid): stopScan 
+Sun Mar  5 05:35:48 2006 (mareid): eloff -a 1 -s 2.000000 
+Sun Mar  5 05:35:49 2006 (mareid): azoff -a 1 -s -2.700000e+01 
+Sun Mar  5 05:36:18 2006 (mareid): eloff -a 2 -s 6.000000 
+Sun Mar  5 05:36:19 2006 (mareid): azoff -a 2 -s -2.200000e+01 
+Sun Mar  5 05:36:30 2006 (mareid): eloff -a 3 -s 5.000000 
+Sun Mar  5 05:36:31 2006 (mareid): azoff -a 3 -s 30.000000 
+Sun Mar  5 05:36:42 2006 (mareid): eloff -a 4 -s -3.200000e+01 
+Sun Mar  5 05:36:43 2006 (mareid): azoff -a 4 -s 18.000000 
+Sun Mar  5 05:37:07 2006 (mareid): eloff -a 5 -s 0.000000e+00 
+Sun Mar  5 05:37:08 2006 (mareid): azoff -a 5 -s 0.000000e+00 
+Sun Mar  5 05:37:24 2006 (mareid): eloff -a 6 -s 0.000000e+00 
+Sun Mar  5 05:37:25 2006 (mareid): azoff -a 6 -s -4.000000e+00 
+Sun Mar  5 05:37:42 2006 (mareid): eloff -a 7 -s -4.000000e+00 
+Sun Mar  5 05:37:43 2006 (mareid): azoff -a 7 -s -4.400000e+01 
+Sun Mar  5 05:37:55 2006 (mareid): eloff -a 8 -s 28.090000 
+Sun Mar  5 05:37:56 2006 (mareid): azoff -a 8 -s 7.770000 
+Sun Mar  5 05:38:33 2006 (mareid): startChopping 
+Sun Mar 05 05:38:52 2006 (mareid): /application/bin/cpoint -s Mars -u l -q -c 
+Sun Mar  5 05:38:53 2006 (mareid): getAntList 
+Sun Mar  5 05:38:54 2006 (mareid): offsetUnit -s 2 
+Sun Mar  5 05:38:55 2006 (mareid): observe -s Mars 
+Sun Mar  5 05:38:56 2006 (mareid): antennaWait -e 4 
+Sun Mar  5 05:39:00 2006 (mareid): eloff -a 1 -s 2.000000 
+Sun Mar  5 05:39:01 2006 (mareid): azoff -a 1 -s -137 
+Sun Mar  5 05:39:02 2006 (mareid): eloff -a 2 -s 6.000000 
+Sun Mar  5 05:39:03 2006 (mareid): azoff -a 2 -s -132 
+Sun Mar  5 05:39:03 2006 (mareid): eloff -a 3 -s 5.000000 
+Sun Mar  5 05:39:04 2006 (mareid): azoff -a 3 -s -80 
+Sun Mar  5 05:39:05 2006 (mareid): eloff -a 4 -s -3.200000e+01 
+Sun Mar  5 05:39:06 2006 (mareid): azoff -a 4 -s -92 
+Sun Mar  5 05:39:07 2006 (mareid): eloff -a 5 -s 0.000000e+00 
+Sun Mar  5 05:39:08 2006 (mareid): azoff -a 5 -s -110 
+Sun Mar  5 05:39:08 2006 (mareid): eloff -a 6 -s 0.000000e+00 
+Sun Mar  5 05:39:10 2006 (mareid): azoff -a 6 -s -114 
+Sun Mar  5 05:39:10 2006 (mareid): eloff -a 7 -s -4.000000e+00 
+Sun Mar  5 05:39:11 2006 (mareid): azoff -a 7 -s -154 
+Sun Mar  5 05:39:11 2006 (mareid): eloff -a 8 -s 28.090000 
+Sun Mar  5 05:39:13 2006 (mareid): azoff -a 8 -s -102.23 
+Sun Mar  5 05:39:13 2006 (mareid): antennaWait -e 4 
+Sun Mar  5 05:39:20 2006 (mareid): tsys 
+Sun Mar  5 05:39:30 2006 (mareid): azscan 
+Sun Mar  5 05:39:31 2006 (mareid): /application/bin/recordContinuum -a 1,2,3,4,5,6,7,8 -c 1 -s azscan -p 7,8 -u 1141537170 
+Sun Mar  5 05:41:52 2006 (mareid): stopScan 
+Sun Mar  5 05:41:53 2006 (mareid): eloff -a 1 -s 2.000000 
+Sun Mar  5 05:41:54 2006 (mareid): azoff -a 1 -s -2.700000e+01 
+Sun Mar  5 05:42:04 2006 (mareid): eloff -a 2 -s 6.000000 
+Sun Mar  5 05:42:05 2006 (mareid): azoff -a 2 -s -2.200000e+01 
+Sun Mar  5 05:42:15 2006 (mareid): eloff -a 3 -s 5.000000 
+Sun Mar  5 05:42:17 2006 (mareid): azoff -a 3 -s 30.000000 
+Sun Mar  5 05:42:27 2006 (mareid): eloff -a 4 -s -3.200000e+01 
+Sun Mar  5 05:42:28 2006 (mareid): azoff -a 4 -s 18.000000 
+Sun Mar  5 05:42:37 2006 (mareid): eloff -a 5 -s 0.000000e+00 
+Sun Mar  5 05:42:38 2006 (mareid): azoff -a 5 -s 0.000000e+00 
+Sun Mar  5 05:42:50 2006 (mareid): eloff -a 6 -s 0.000000e+00 
+Sun Mar  5 05:42:51 2006 (mareid): azoff -a 6 -s -4.000000e+00 
+Sun Mar  5 05:43:00 2006 (mareid): eloff -a 7 -s -4.000000e+00 
+Sun Mar  5 05:43:01 2006 (mareid): azoff -a 7 -s -4.400000e+01 
+Sun Mar  5 05:43:08 2006 (root): integrate -s 5 
+Sun Mar  5 05:43:09 2006 (mareid): eloff -a 8 -s 28.090000 
+Sun Mar  5 05:43:10 2006 (mareid): azoff -a 8 -s 7.770000 
+Sun Mar  5 05:43:30 2006 (mareid): offsetUnit -s 2 
+Sun Mar  5 05:43:31 2006 (mareid): observe -s Mars 
+Sun Mar  5 05:43:32 2006 (mareid): antennaWait -e 4 
+Sun Mar  5 05:43:35 2006 (mareid): azoff -a 1 -s -72 
+Sun Mar  5 05:43:36 2006 (mareid): eloff -a 1 -s -108 
+Sun Mar  5 05:43:37 2006 (mareid): azoff -a 2 -s -67 
+Sun Mar  5 05:43:38 2006 (mareid): eloff -a 2 -s -104 
+Sun Mar  5 05:43:39 2006 (mareid): azoff -a 3 -s -15 
+Sun Mar  5 05:43:40 2006 (mareid): eloff -a 3 -s -105 
+Sun Mar  5 05:43:40 2006 (mareid): azoff -a 4 -s -27 
+Sun Mar  5 05:43:41 2006 (mareid): eloff -a 4 -s -142 
+Sun Mar  5 05:43:42 2006 (mareid): azoff -a 5 -s -45 
+Sun Mar  5 05:43:43 2006 (mareid): eloff -a 5 -s -110 
+Sun Mar  5 05:43:43 2006 (mareid): azoff -a 6 -s -49 
+Sun Mar  5 05:43:45 2006 (mareid): eloff -a 6 -s -110 
+Sun Mar  5 05:43:45 2006 (mareid): azoff -a 7 -s -89 
+Sun Mar  5 05:43:46 2006 (mareid): eloff -a 7 -s -114 
+Sun Mar  5 05:43:47 2006 (mareid): azoff -a 8 -s -37.23 
+Sun Mar  5 05:43:48 2006 (mareid): eloff -a 8 -s -81.91 
+Sun Mar  5 05:43:48 2006 (mareid): antennaWait -e 4 
+Sun Mar  5 05:43:54 2006 (mareid): tsys 
+Sun Mar  5 05:44:05 2006 (mareid): elscan 
+Sun Mar  5 05:44:05 2006 (mareid): /application/bin/recordContinuum -a 1,2,3,4,5,6,7,8 -c 1 -s elscan -p 7,8 -u 1141537444 
+Sun Mar  5 05:45:04 2006 (rtm): /application/bin/killdaemon hal9000 mir_server restart
+Sun Mar  5 05:46:32 2006 (mareid): stopScan 
+Sun Mar  5 05:46:34 2006 (mareid): eloff -a 1 -s 2.000000 
+Sun Mar  5 05:46:35 2006 (mareid): azoff -a 1 -s -2.700000e+01 
+Sun Mar  5 05:49:25 2006 (mareid): azoff -a 1 -s -15.57 
+Sun Mar  5 05:49:26 2006 (mareid): eloff -a 1 -s 10.46 
+Sun Mar  5 05:49:28 2006 (mareid): eloff -a 2 -s 6.000000 
+Sun Mar  5 05:49:29 2006 (mareid): azoff -a 2 -s -2.200000e+01 
+Sun Mar  5 05:50:13 2006 (mareid): azoff -a 2 -s -16.21 
+Sun Mar  5 05:50:14 2006 (mareid): eloff -a 2 -s 18.31 
+Sun Mar  5 05:50:15 2006 (mareid): eloff -a 3 -s 5.000000 
+Sun Mar  5 05:50:16 2006 (mareid): azoff -a 3 -s 30.000000 
+Sun Mar  5 05:51:50 2006 (mareid): azoff -a 3 -s 9.34 
+Sun Mar  5 05:51:51 2006 (mareid): eloff -a 3 -s 14.15 
+Sun Mar  5 05:51:52 2006 (mareid): eloff -a 4 -s -3.200000e+01 
+Sun Mar  5 05:51:53 2006 (mareid): azoff -a 4 -s 18.000000 
+Sun Mar  5 05:52:06 2006 (mareid): eloff -a 5 -s 0.000000e+00 
+Sun Mar  5 05:52:07 2006 (mareid): azoff -a 5 -s 0.000000e+00 
+Sun Mar  5 05:52:25 2006 (mareid): azoff -a 5 -s -12.78 
+Sun Mar  5 05:52:26 2006 (mareid): eloff -a 5 -s -8.99 
+Sun Mar  5 05:52:27 2006 (mareid): eloff -a 6 -s 0.000000e+00 
+Sun Mar  5 05:52:28 2006 (mareid): azoff -a 6 -s -4.000000e+00 
+Sun Mar  5 05:53:22 2006 (mareid): eloff -a 7 -s -4.000000e+00 
+Sun Mar  5 05:53:23 2006 (mareid): azoff -a 7 -s -4.400000e+01 
+Sun Mar  5 05:53:53 2006 (mareid): azoff -a 7 -s -11.98 
+Sun Mar  5 05:53:54 2006 (mareid): eloff -a 7 -s -8.79 
+Sun Mar  5 05:53:55 2006 (mareid): eloff -a 8 -s 28.090000 
+Sun Mar  5 05:53:56 2006 (mareid): azoff -a 8 -s 7.770000 
+Sun Mar  5 05:54:24 2006 (mareid): azoff -a 8 -s -0.90 
+Sun Mar  5 05:54:25 2006 (mareid): eloff -a 8 -s 6.52 
+Sun Mar  5 05:58:00 2006 (root): integrate -s 4 
+Sun Mar  5 05:59:30 2006 (apeck): monitor 
+Sun Mar  5 06:01:03 2006 (mareid): azoff -a 4 -s 0 
+Sun Mar  5 06:01:10 2006 (mareid): setIFLevels -2 
+Sun Mar 05 06:03:13 2006 (mareid): /application/bin/cpoint -a 4 -s Mars -u l -q -c -b -200 -e 200 
+Sun Mar  5 06:03:15 2006 (mareid): offsetUnit -a 4 -s 2 
+Sun Mar  5 06:03:17 2006 (mareid): observe -a 4 -s Mars 
+Sun Mar  5 06:03:17 2006 (mareid): antennaWait -a 4 -e 4 
+Sun Mar  5 06:03:21 2006 (mareid): eloff -a 4 -s -3.200000e+01 
+Sun Mar  5 06:03:22 2006 (mareid): azoff -a 4 -s -200 
+Sun Mar  5 06:03:22 2006 (mareid): antennaWait -a 4 -e 4 
+Sun Mar  5 06:03:29 2006 (mareid): tsys -a 4 
+Sun Mar  5 06:03:40 2006 (mareid): azscan -a 4 
+Sun Mar  5 06:03:40 2006 (mareid): /application/bin/recordContinuum -a 4 -c 1 -s azscan -p 7,8 -u 1141538620 
+Sun Mar  5 06:05:42 2006 (apeck): monitor 
+Sun Mar  5 06:07:04 2006 (mareid): stopScan -a 4 
+Sun Mar  5 06:07:07 2006 (mareid): eloff -a 4 -s -3.200000e+01 
+Sun Mar  5 06:07:08 2006 (mareid): azoff -a 4 -s 0.000000e+00 
+Sun Mar  5 06:07:18 2006 (mareid): offsetUnit -a 4 -s 2 
+Sun Mar  5 06:07:19 2006 (mareid): observe -a 4 -s Mars 
+Sun Mar  5 06:07:20 2006 (mareid): antennaWait -a 4 -e 4 
+Sun Mar  5 06:07:24 2006 (mareid): azoff -a 4 -s -45 
+Sun Mar  5 06:07:25 2006 (mareid): eloff -a 4 -s -142 
+Sun Mar  5 06:07:25 2006 (mareid): antennaWait -a 4 -e 4 
+Sun Mar  5 06:07:31 2006 (mareid): tsys -a 4 
+Sun Mar  5 06:07:42 2006 (mareid): elscan -a 4 
+Sun Mar  5 06:07:42 2006 (mareid): /application/bin/recordContinuum -a 4 -c 1 -s elscan -p 7,8 -u 1141538862 
+Sun Mar  5 06:09:36 2006 (mareid): stopScan -a 4 
+Sun Mar  5 06:09:39 2006 (mareid): eloff -a 4 -s -3.200000e+01 
+Sun Mar  5 06:09:40 2006 (mareid): azoff -a 4 -s 0.000000e+00 
+Sun Mar  5 06:11:01 2006 (mareid): lookup -s Saturn 
+Sun Mar  5 06:11:13 2006 (mareid): observe -a 4 -s Saturn 
+Sun Mar  5 06:11:41 2006 (mareid): eloff -a 4 -s 23.4 
+Sun Mar 05 06:12:12 2006 (mareid): /application/bin/cpoint -a 4 -s Saturn -u l -q -c -b -200 -e 200 
+Sun Mar  5 06:12:14 2006 (mareid): offsetUnit -a 4 -s 2 
+Sun Mar  5 06:12:16 2006 (mareid): observe -a 4 -s Saturn 
+Sun Mar  5 06:12:16 2006 (mareid): antennaWait -a 4 -e 4 
+Sun Mar  5 06:12:20 2006 (mareid): eloff -a 4 -s 23.400000 
+Sun Mar  5 06:12:21 2006 (mareid): azoff -a 4 -s -200 
+Sun Mar  5 06:12:21 2006 (mareid): antennaWait -a 4 -e 4 
+Sun Mar  5 06:12:28 2006 (mareid): tsys -a 4 
+Sun Mar  5 06:12:38 2006 (mareid): azscan -a 4 
+Sun Mar  5 06:12:38 2006 (mareid): /application/bin/recordContinuum -a 4 -c 1 -s azscan -p 7,8 -u 1141539158 
+Sun Mar  5 06:13:54 2006 (mareid): observe -a 6 -s 3c111 
+Sun Mar  5 06:16:04 2006 (mareid): stopScan -a 4 
+Sun Mar  5 06:16:06 2006 (mareid): eloff -a 4 -s 23.400000 
+Sun Mar  5 06:16:07 2006 (mareid): azoff -a 4 -s 0.000000e+00 
+Sun Mar  5 06:16:17 2006 (mareid): offsetUnit -a 4 -s 2 
+Sun Mar  5 06:16:18 2006 (mareid): observe -a 4 -s Saturn 
+Sun Mar  5 06:16:19 2006 (mareid): antennaWait -a 4 -e 4 
+Sun Mar  5 06:16:22 2006 (mareid): azoff -a 4 -s -45 
+Sun Mar  5 06:16:24 2006 (mareid): eloff -a 4 -s -86.6 
+Sun Mar  5 06:16:24 2006 (mareid): antennaWait -a 4 -e 4 
+Sun Mar  5 06:16:30 2006 (mareid): tsys -a 4 
+Sun Mar  5 06:16:40 2006 (mareid): elscan -a 4 
+Sun Mar  5 06:16:41 2006 (mareid): /application/bin/recordContinuum -a 4 -c 1 -s elscan -p 7,8 -u 1141539400 
+Sun Mar  5 06:18:35 2006 (mareid): stopScan -a 4 
+Sun Mar  5 06:18:37 2006 (mareid): eloff -a 4 -s 23.400000 
+Sun Mar  5 06:18:38 2006 (mareid): azoff -a 4 -s 0.000000e+00 
+Sun Mar  5 06:20:06 2006 (mareid): azoff -a 4 -s 2.73 
+Sun Mar  5 06:20:07 2006 (mareid): eloff -a 4 -s -11.92 
+Sun Mar  5 06:21:18 2006 (mareid): observe -a 4 -s Mars 
+Sun Mar 05 06:21:22 2006 (mareid): /application/bin/cpoint -a 4 -s Mars -u l -q -c -b -200 -e 200 
+Sun Mar  5 06:21:24 2006 (mareid): offsetUnit -a 4 -s 2 
+Sun Mar  5 06:21:25 2006 (mareid): observe -a 4 -s Mars 
+Sun Mar  5 06:21:26 2006 (mareid): antennaWait -a 4 -e 4 
+Sun Mar  5 06:22:06 2006 (mareid): eloff -a 4 -s -1.192000e+01 
+Sun Mar  5 06:22:07 2006 (mareid): azoff -a 4 -s -197.27 
+Sun Mar  5 06:22:07 2006 (mareid): antennaWait -a 4 -e 4 
+Sun Mar  5 06:22:14 2006 (mareid): tsys -a 4 
+Sun Mar  5 06:22:25 2006 (mareid): azscan -a 4 
+Sun Mar  5 06:22:25 2006 (mareid): /application/bin/recordContinuum -a 4 -c 1 -s azscan -p 7,8 -u 1141539745 
+Sun Mar  5 06:25:51 2006 (mareid): stopScan -a 4 
+Sun Mar  5 06:25:53 2006 (mareid): eloff -a 4 -s -1.192000e+01 
+Sun Mar  5 06:25:54 2006 (mareid): azoff -a 4 -s 2.730000 
+Sun Mar  5 06:26:04 2006 (mareid): offsetUnit -a 4 -s 2 
+Sun Mar  5 06:26:05 2006 (mareid): observe -a 4 -s Mars 
+Sun Mar  5 06:26:05 2006 (mareid): antennaWait -a 4 -e 4 
+Sun Mar  5 06:26:09 2006 (mareid): azoff -a 4 -s -42.27 
+Sun Mar  5 06:26:10 2006 (mareid): eloff -a 4 -s -121.92 
+Sun Mar  5 06:26:10 2006 (mareid): antennaWait -a 4 -e 4 
+Sun Mar  5 06:26:16 2006 (mareid): tsys -a 4 
+Sun Mar  5 06:26:27 2006 (mareid): elscan -a 4 
+Sun Mar  5 06:26:27 2006 (mareid): /application/bin/recordContinuum -a 4 -c 1 -s elscan -p 7,8 -u 1141539987 
+Sun Mar  5 06:27:49 2006 (mareid): observe -a 6 -s Mars 
+Sun Mar  5 06:28:21 2006 (mareid): stopScan -a 4 
+Sun Mar  5 06:28:24 2006 (mareid): eloff -a 4 -s -1.192000e+01 
+Sun Mar  5 06:28:25 2006 (mareid): azoff -a 4 -s 2.730000 
+Sun Mar  5 06:31:14 2006 (mareid): azoff -a 4 -s 29.13 
+Sun Mar  5 06:31:15 2006 (mareid): eloff -a 4 -s 25.88 
+Sun Mar  5 06:33:40 2006 (mareid): lookup -s 3c274 
+Sun Mar  5 06:35:42 2006 (mareid): observe -s 3c274 
+Sun Mar  5 06:37:03 2006 (mareid): observe -s Saturn 
+Sun Mar  5 06:37:33 2006 (mareid): observe -s 1055+018 
+Sun Mar  5 06:40:50 2006 (mareid): observe -s 3c274 
+Sun Mar  5 06:41:51 2006 (mareid): observe -s 1055+018 
+Sun Mar  5 06:42:15 2006 (cflee): monitor 
+Sun Mar  5 06:42:20 2006 (mareid): observe -s 0851+202 
+Sun Mar  5 06:43:18 2006 (mareid): lookup -s m87 
+Sun Mar  5 06:43:21 2006 (mareid): lookup -s M87 
+Sun Mar  5 06:43:28 2006 (mareid): stopChopping 
+Sun Mar  5 06:43:51 2006 (mareid): lookup -s m87 
+Sun Mar  5 06:45:39 2006 (mareid): lookup -s Saturn 
+Sun Mar  5 06:45:46 2006 (mareid): observe -s Saturn 
+Sun Mar  5 06:49:00 2006 (mareid): lookup -s 3c84 
+Sun Mar  5 06:49:07 2006 (mareid): observe -s 3c84 
+Sun Mar  5 06:52:46 2006 (mareid): observe -s Saturn 
+Sun Mar  5 06:59:28 2006 (mareid): lookup -s callisto 
+Sun Mar 05 07:14:26 2006 (mareid): /application/bin/cpoint -s Saturn -u l -q -p 
+Sun Mar  5 07:14:27 2006 (mareid): getAntList 
+Sun Mar  5 07:14:28 2006 (mareid): offsetUnit -s 2 
+Sun Mar  5 07:14:29 2006 (mareid): observe -s Saturn 
+Sun Mar  5 07:14:30 2006 (mareid): antennaWait -e 4 
+Sun Mar  5 07:14:33 2006 (mareid): eloff -a 1 -s 10.460000 
+Sun Mar  5 07:14:34 2006 (mareid): azoff -a 1 -s -125.57 
+Sun Mar  5 07:14:35 2006 (mareid): eloff -a 2 -s 18.310000 
+Sun Mar  5 07:14:36 2006 (mareid): azoff -a 2 -s -126.21 
+Sun Mar  5 07:14:36 2006 (mareid): eloff -a 3 -s 14.150000 
+Sun Mar  5 07:14:38 2006 (mareid): azoff -a 3 -s -100.66 
+Sun Mar  5 07:14:38 2006 (mareid): eloff -a 4 -s 25.880000 
+Sun Mar  5 07:14:39 2006 (mareid): azoff -a 4 -s -80.87 
+Sun Mar  5 07:14:40 2006 (mareid): eloff -a 5 -s -8.990000e+00 
+Sun Mar  5 07:14:41 2006 (mareid): azoff -a 5 -s -122.78 
+Sun Mar  5 07:14:41 2006 (mareid): eloff -a 6 -s 0.000000e+00 
+Sun Mar  5 07:14:43 2006 (mareid): azoff -a 6 -s -114 
+Sun Mar  5 07:14:43 2006 (mareid): eloff -a 7 -s -8.790000e+00 
+Sun Mar  5 07:14:44 2006 (mareid): azoff -a 7 -s -121.98 
+Sun Mar  5 07:14:45 2006 (mareid): eloff -a 8 -s 6.520000 
+Sun Mar  5 07:14:46 2006 (mareid): azoff -a 8 -s -110.9 
+Sun Mar  5 07:14:46 2006 (mareid): antennaWait -e 4 
+Sun Mar  5 07:14:53 2006 (mareid): tsys 
+Sun Mar  5 07:15:03 2006 (mareid): azscan 
+Sun Mar  5 07:15:03 2006 (mareid): /application/bin/recordContinuum -a 1,2,3,4,5,6,7,8 -c 0 -s azscan -p 7,8 -u 1141542903 
+Sun Mar  5 07:17:07 2006 (mareid): stopScan 
+Sun Mar  5 07:17:08 2006 (mareid): eloff -a 1 -s 10.460000 
+Sun Mar  5 07:17:09 2006 (mareid): azoff -a 1 -s -1.557000e+01 
+Sun Mar  5 07:17:17 2006 (mareid): eloff -a 2 -s 18.310000 
+Sun Mar  5 07:17:18 2006 (mareid): azoff -a 2 -s -1.621000e+01 
+Sun Mar  5 07:17:20 2006 (mareid): stopScan -a 1 
+Sun Mar  5 07:17:22 2006 (mareid): azoff -a 1 -s -1.557000e+01 
+Sun Mar  5 07:17:23 2006 (mareid): eloff -a 1 -s 10.460000 
+Sun Mar  5 07:17:23 2006 (mareid): stopScan -a 2 
+Sun Mar  5 07:17:25 2006 (mareid): azoff -a 2 -s -1.621000e+01 
+Sun Mar  5 07:17:27 2006 (mareid): eloff -a 2 -s 18.310000 
+Sun Mar  5 07:17:27 2006 (mareid): stopScan -a 3 
+Sun Mar  5 07:17:29 2006 (mareid): azoff -a 3 -s 9.340000 
+Sun Mar  5 07:17:30 2006 (mareid): eloff -a 3 -s 14.150000 
+Sun Mar  5 07:17:30 2006 (mareid): stopScan -a 4 
+Sun Mar  5 07:17:32 2006 (mareid): azoff -a 4 -s 29.130000 
+Sun Mar  5 07:17:34 2006 (mareid): eloff -a 4 -s 25.880000 
+Sun Mar  5 07:17:34 2006 (mareid): stopScan -a 5 
+Sun Mar  5 07:17:36 2006 (mareid): azoff -a 5 -s -1.278000e+01 
+Sun Mar  5 07:17:37 2006 (mareid): eloff -a 5 -s -8.990000e+00 
+Sun Mar  5 07:17:37 2006 (mareid): stopScan -a 6 
+Sun Mar 05 07:19:02 2006 (mareid): /application/bin/cpoint -s Saturn -u l -q -p 
+Sun Mar  5 07:19:04 2006 (mareid): getAntList 
+Sun Mar  5 07:19:04 2006 (mareid): offsetUnit -s 2 
+Sun Mar  5 07:19:06 2006 (mareid): observe -s Saturn 
+Sun Mar  5 07:19:06 2006 (mareid): antennaWait -e 4 
+Sun Mar  5 07:19:10 2006 (mareid): eloff -a 1 -s 10.460000 
+Sun Mar  5 07:19:11 2006 (mareid): azoff -a 1 -s -125.57 
+Sun Mar  5 07:19:11 2006 (mareid): eloff -a 2 -s 18.310000 
+Sun Mar  5 07:19:13 2006 (mareid): azoff -a 2 -s -126.21 
+Sun Mar  5 07:19:13 2006 (mareid): eloff -a 3 -s 14.150000 
+Sun Mar  5 07:19:14 2006 (mareid): azoff -a 3 -s -100.66 
+Sun Mar  5 07:19:14 2006 (mareid): eloff -a 4 -s 25.880000 
+Sun Mar  5 07:19:16 2006 (mareid): azoff -a 4 -s -80.87 
+Sun Mar  5 07:19:16 2006 (mareid): eloff -a 5 -s -8.990000e+00 
+Sun Mar  5 07:19:17 2006 (mareid): azoff -a 5 -s -122.78 
+Sun Mar  5 07:19:17 2006 (mareid): eloff -a 6 -s 0.000000e+00 
+Sun Mar  5 07:19:19 2006 (mareid): azoff -a 6 -s 22 
+Sun Mar  5 07:19:19 2006 (mareid): eloff -a 7 -s -8.790000e+00 
+Sun Mar  5 07:19:20 2006 (mareid): azoff -a 7 -s 12.02 
+Sun Mar  5 07:19:21 2006 (mareid): eloff -a 8 -s 6.520000 
+Sun Mar  5 07:19:22 2006 (mareid): azoff -a 8 -s 25.1 
+Sun Mar  5 07:19:22 2006 (mareid): antennaWait -e 4 
+Sun Mar  5 07:19:29 2006 (mareid): tsys 
+Sun Mar  5 07:19:40 2006 (mareid): azscan 
+Sun Mar  5 07:19:40 2006 (mareid): /application/bin/recordContinuum -a 1,2,3,4,5,6,7,8 -c 0 -s azscan -p 7,8 -u 1141543179 
+Sun Mar  5 07:21:40 2006 (mareid): azoff -a 1 -s -15.6 
+Sun Mar  5 07:21:48 2006 (mareid): azoff -a 2 -s -16.2 
+Sun Mar  5 07:21:57 2006 (mareid): azoff -a 3 -s 9.3 
+Sun Mar  5 07:22:09 2006 (mareid): azoff -a 4 -s 2.73 
+Sun Mar  5 07:22:17 2006 (mareid): azoff -a 5 -s -12.8 
+Sun Mar  5 07:22:24 2006 (mareid): azoff -a 6 -s 4.0 
+Sun Mar  5 07:22:30 2006 (mareid): azoff -a 7 -s -12 
+Sun Mar  5 07:22:36 2006 (mareid): azoff -a 8 -s -0.9 
+Sun Mar  5 07:22:45 2006 (mareid): eloff -a 8 -s 6.52 
+Sun Mar  5 07:22:53 2006 (mareid): eloff -a 7 -s -8.8 
+Sun Mar  5 07:23:00 2006 (mareid): eloff -a 6 -s 0 
+Sun Mar  5 07:23:05 2006 (mareid): eloff -a 5 -s -9 
+Sun Mar  5 07:23:14 2006 (mareid): eloff -a 4 -s -11.9 
+Sun Mar  5 07:23:24 2006 (mareid): eloff -a 3 -s 14.2 
+Sun Mar  5 07:23:29 2006 (mareid): eloff -a 2 -s 18.3 
+Sun Mar  5 07:23:39 2006 (mareid): eloff -a 1 -s -10.5 
+Sun Mar  5 07:23:48 2006 (mareid): observe -s Saturn 
+Sun Mar  5 07:25:51 2006 (brownd): stopScan 
+Sun Mar  5 07:28:15 2006 (mareid): azoff -a 1 -s -15.6 
+Sun Mar  5 07:28:17 2006 (mareid): azoff -a 2 -s -16.2 
+Sun Mar  5 07:28:19 2006 (mareid): azoff -a 3 -s 9.3 
+Sun Mar  5 07:28:20 2006 (mareid): azoff -a 4 -s 2.73 
+Sun Mar  5 07:28:22 2006 (mareid): azoff -a 5 -s -12.8 
+Sun Mar  5 07:28:24 2006 (mareid): azoff -a 6 -s 4.0 
+Sun Mar  5 07:28:26 2006 (mareid): azoff -a 7 -s -12 
+Sun Mar  5 07:28:28 2006 (mareid): azoff -a 8 -s -0.9 
+Sun Mar  5 07:30:32 2006 (mareid): setChunkPhaseOffsets -u 
+Sun Mar  5 07:36:14 2006 (brownd): lookup -s 3c11 
+Sun Mar  5 07:36:16 2006 (brownd): lookup -s 3c111 
+Sun Mar  5 07:36:24 2006 (brownd): lookup -s 3c84 
+Sun Mar  5 07:36:29 2006 (mareid): lookup -s 3c111 
+Sun Mar  5 07:36:35 2006 (mareid): observe -s 3c111 
+Sun Mar  5 07:37:24 2006 (brownd): lookup -s 1055+058 
+Sun Mar  5 07:37:56 2006 (brownd): lookup -s 1058+015 
+Sun Mar  5 07:38:37 2006 (brownd): lookup -s 1229+020 
+Sun Mar  5 07:38:44 2006 (mareid): lookup -s 1058+015 
+Sun Mar  5 07:38:57 2006 (brownd): lookup -s 0851+202 
+Sun Mar  5 07:39:04 2006 (mareid): observe -s 1058+015 
+Sun Mar  5 07:46:05 2006 (gpetitpa): monitor 
+Sun Mar  5 07:46:22 2006 (gpetitpa): monitor 
+Sun Mar  5 07:48:01 2006 (brownd): lookup -s 1229+020 
+Sun Mar  5 07:50:34 2006 (mareid): lookup -s 3c273 
+Sun Mar  5 07:52:35 2006 (mareid): lookup -s 1058+015 
+Sun Mar  5 07:53:32 2006 (mareid): lookup -s Saturn 
+Sun Mar  5 07:53:37 2006 (mareid): observe -s Saturn 
+Sun Mar  5 07:54:17 2006 (mareid): observe -s 1058+015 
+Sun Mar  5 07:56:52 2006 (mareid): lookup -s Saturn 
+Sun Mar  5 07:57:32 2006 (mareid): setIFLevels -2 
+Sun Mar  5 08:00:53 2006 (mareid): stopChopping 
+Sun Mar  5 08:01:16 2006 (mareid): point -i 60 -r 2 -l -t -m 
+Sun Mar  5 08:01:26 2006 (mareid): point --help 
+Sun Mar  5 08:02:03 2006 (mareid): point -i 60 -r 2 -l -t -f 
+Sun Mar  5 08:02:26 2006 (mareid): point -i 60 -r 2 -l -t -Q 
+		Repetition 1:
+		Ant 1	AzOff = -48.3	ElOff = -78.3	deltaAz = -32.7	deltaEl = -67.8
+		Ant 2	AzOff = -70.0	ElOff =  11.2	deltaAz = -53.8	deltaEl =  -7.1
+		Ant 3	AzOff = -222.6	ElOff = -26.0	deltaAz = -231.9	deltaEl = -40.2
+		Ant 4	AzOff =  97.4	ElOff =  28.6	deltaAz =  94.7	deltaEl =  40.5
+		Ant 5	AzOff = -65.5	ElOff = -97.6	deltaAz = -52.7	deltaEl = -88.6
+		Ant 6	AzOff =  58.7	ElOff = -13.7	deltaAz =  54.7	deltaEl = -13.7
+		Ant 7	AzOff = -240.8	ElOff = -36.8	deltaAz = -228.8	deltaEl = -28.0
+		Ant 8	AzOff =  48.0	ElOff = -13.5	deltaAz =  48.9	deltaEl = -20.0
+		Repetition 2:
+		Ant 1	AzOff =  -7.0	ElOff = -37.5	deltaAz =   8.6	deltaEl = -27.0
+		Ant 2	AzOff = -82.1	ElOff =  33.7	deltaAz = -65.9	deltaEl =  15.4
+		Ant 3	AzOff =  -3.4	ElOff = -35.9	deltaAz = -12.7	deltaEl = -50.1
+		Ant 4	AzOff =   2.0	ElOff = -22.2	deltaAz =  -0.8	deltaEl = -10.3
+		Ant 5	AzOff =   6.4	ElOff = -39.6	deltaAz =  19.2	deltaEl = -30.6
+		Ant 6	AzOff =   1.5	ElOff =  42.1	deltaAz =  -2.5	deltaEl =  42.1
+		Ant 7	AzOff = -62.1	ElOff = -38.6	deltaAz = -50.1	deltaEl = -29.8
+		Ant 8	AzOff =   1.4	ElOff =  51.9	deltaAz =   2.3	deltaEl =  45.4
+		Average:
+		Ant 1	AzOff = -27.7	ElOff = -57.9	deltaAz = -12.1	deltaEl = -47.4
+		Ant 2	AzOff = -76.0	ElOff =  22.5	deltaAz = -59.8	deltaEl =   4.2
+		Ant 3	AzOff =   9.3	ElOff = -31.0	deltaAz =   0.0	deltaEl = -45.2
+		Ant 4	AzOff =  49.7	ElOff =   3.2	deltaAz =  47.0	deltaEl =  15.1
+		Ant 5	AzOff = -29.6	ElOff = -68.6	deltaAz = -16.8	deltaEl = -59.6
+		Ant 6	AzOff =  30.1	ElOff =  14.2	deltaAz =  26.1	deltaEl =  14.2
+		Ant 7	AzOff = -12.0	ElOff = -37.7	deltaAz =   0.0	deltaEl = -28.9
+		Ant 8	AzOff =  24.7	ElOff =  19.2	deltaAz =  25.6	deltaEl =  12.7
+Sun Mar  5 08:23:21 2006 (brownd): lookup -s 1229+020 
+Sun Mar  5 08:23:51 2006 (mareid): observe -s 3c273 
+Sun Mar  5 08:25:53 2006 (mareid): point -i 60 -r 2 -l -t -Q 
+		Repetition 1:
+		Ant 1	AzOff = -49.9	ElOff = -157.0	deltaAz = -34.3	deltaEl = -146.5
+		Ant 2	AzOff = -19.2	ElOff =  25.0	deltaAz =  -3.0	deltaEl =   6.7
+		Ant 3	AzOff =  58.4	ElOff =   3.5	deltaAz =  49.1	deltaEl = -10.7
+		Ant 4	AzOff = -49.2	ElOff = -20.4	deltaAz = -52.0	deltaEl =  -8.5
+		Ant 5	AzOff =  40.1	ElOff = -38.9	deltaAz =  52.9	deltaEl = -29.9
+		Ant 6	AzOff =   6.2	ElOff =  -3.8	deltaAz =   2.2	deltaEl =  -3.8
+		Ant 7	AzOff = -27.2	ElOff =   7.5	deltaAz = -15.2	deltaEl =  16.3
+		Ant 8	AzOff = -10.5	ElOff =   4.3	deltaAz =  -9.6	deltaEl =  -2.2
+		Repetition 2:
+		Ant 1	AzOff = -23.0	ElOff =  24.9	deltaAz =  -7.4	deltaEl =  35.4
+		Ant 2	AzOff = -85.1	ElOff =  48.6	deltaAz = -68.9	deltaEl =  30.3
+		Ant 3	AzOff =   1.6	ElOff =  55.9	deltaAz =  -7.7	deltaEl =  41.7
+		Ant 4	AzOff =  26.5	ElOff =  32.9	deltaAz =  23.7	deltaEl =  44.8
+		Ant 5	AzOff = -22.8	ElOff = -20.5	deltaAz = -10.0	deltaEl = -11.5
+		Ant 6	AzOff = -12.0	ElOff =   1.4	deltaAz = -16.0	deltaEl =   1.4
+		Ant 7	AzOff = -13.3	ElOff =   5.4	deltaAz =  -1.3	deltaEl =  14.2
+		Ant 8	AzOff = -24.7	ElOff =  -2.2	deltaAz = -23.8	deltaEl =  -8.7
+		Average:
+		Ant 1	AzOff = -36.5	ElOff = -66.0	deltaAz = -20.9	deltaEl = -55.5
+		Ant 2	AzOff = -52.1	ElOff =  36.8	deltaAz = -35.9	deltaEl =  18.5
+		Ant 3	AzOff =  30.0	ElOff =  29.7	deltaAz =  20.7	deltaEl =  15.5
+		Ant 4	AzOff = -11.4	ElOff =   6.3	deltaAz = -14.1	deltaEl =  18.2
+		Ant 5	AzOff =   8.6	ElOff = -29.7	deltaAz =  21.4	deltaEl = -20.7
+		Ant 6	AzOff =  -2.9	ElOff =  -1.2	deltaAz =  -6.9	deltaEl =  -1.2
+		Ant 7	AzOff = -20.3	ElOff =   6.4	deltaAz =  -8.3	deltaEl =  15.2
+		Ant 8	AzOff = -17.6	ElOff =   1.1	deltaAz = -16.7	deltaEl =  -5.4
+Sun Mar  5 08:42:38 2006 (brownd): restartCorrelator -c 8 
+Sun Mar  5 08:43:03 2006 (mareid): restartCorrelator -c 8 
+Sun Mar  5 08:46:03 2006 (mareid): correlatorPause 
+Sun Mar  5 08:46:09 2006 (mareid): correlatorResume 
+Sun Mar  5 08:51:02 2006 (mareid): restartCorrelator -d -s64 
+Sun Mar  5 08:52:03 2006 (rrao): monitor 
+Sun Mar  5 08:53:29 2006 (mareid): restartCorrelator -d -s64 
+Sun Mar  5 08:59:30 2006 (mareid): point -i 60 -r 2 -l -t -Q 
+		Repetition 1:
+		Ant 1	AzOff = -94.2	ElOff =  13.4	deltaAz = -78.6	deltaEl =  23.9
+		Ant 2	AzOff = -211.8	ElOff = 135.3	deltaAz = -195.6	deltaEl = 117.0
+		Ant 3	AzOff =  13.0	ElOff = -66.4	deltaAz =   3.7	deltaEl = -80.6
+		Ant 4	AzOff =  -0.1	ElOff =  -7.6	deltaAz =  -2.8	deltaEl =   4.3
+		Ant 5	AzOff =  14.7	ElOff = -37.4	deltaAz =  27.5	deltaEl = -28.4
+		Ant 6	AzOff =  27.9	ElOff = -17.1	deltaAz =  23.9	deltaEl = -17.1
+		Ant 7	AzOff = -86.6	ElOff = -50.0	deltaAz = -74.6	deltaEl = -41.2
+		Ant 8	AzOff =  51.3	ElOff =  -2.9	deltaAz =  52.2	deltaEl =  -9.4
+		Repetition 2:
+		Ant 1	AzOff =  87.3	ElOff = 200.2	deltaAz = 102.9	deltaEl = 210.7
+		Ant 2	AzOff =  -5.0	ElOff = -1139.8	deltaAz =  11.2	deltaEl = -1158.1
+		Ant 3	AzOff = -115.0	ElOff = -252.8	deltaAz = -124.3	deltaEl = -267.0
+		Ant 4	AzOff = -202.3	ElOff =  42.2	deltaAz = -205.0	deltaEl =  54.1
+		Ant 5	AzOff =  -2.7	ElOff = 471.1	deltaAz =  10.1	deltaEl = 480.1
+		Ant 6	AzOff =  11.4	ElOff = -63.5	deltaAz =   7.4	deltaEl = -63.5
+		Ant 7	AzOff = -211.0	ElOff = -388.5	deltaAz = -199.0	deltaEl = -379.7
+		Ant 8	AzOff =   9.8	ElOff = -62.8	deltaAz =  10.7	deltaEl = -69.3
+		Average:
+		Ant 1	AzOff =  -3.5	ElOff = -10.5	deltaAz =  12.1	deltaEl =   0.0
+		Ant 2	AzOff = -108.4	ElOff =  18.3	deltaAz = -92.2	deltaEl =  -0.0
+		Ant 3	AzOff = -51.0	ElOff =  14.2	deltaAz = -60.3	deltaEl =  -0.0
+		Ant 4	AzOff =   2.7	ElOff =  17.3	deltaAz =   0.0	deltaEl =  29.2
+		Ant 5	AzOff =   6.0	ElOff =  -9.0	deltaAz =  18.8	deltaEl =   0.0
+		Ant 6	AzOff =  19.7	ElOff = -40.3	deltaAz =  15.7	deltaEl = -40.3
+		Ant 7	AzOff = -12.0	ElOff =  -8.8	deltaAz =   0.0	deltaEl =  -0.0
+		Ant 8	AzOff =  30.6	ElOff = -32.8	deltaAz =  31.5	deltaEl = -39.4
+Sun Mar  5 09:14:29 2006 (mareid): newFile 
+Sun Mar  5 09:29:51 2006 (mareid): tune -a 4 -c t joy 
+Sun Mar  5 09:33:38 2006 (mareid): tune -a 4 -c t joy 
+Sun Mar  5 09:34:10 2006 (mareid): tune -a 4 -c opt curr -t 
+Sun Mar  5 09:53:19 2006 (dfong): monitor 
+Sun Mar  5 10:07:41 2006 (mareid): lookup -s Saturn 
+Sun Mar  5 10:07:51 2006 (mareid): lookup -s Saturn 
+Sun Mar  5 10:08:06 2006 (mareid): observe -s Saturn 
+Sun Mar  5 10:09:16 2006 (mareid): startChopping 
+Sun Mar  5 10:09:22 2006 (mareid): stopChopping 
+Sun Mar 05 10:09:57 2006 (mareid): /application/bin/cpoint -s Saturn -u l -q -p 
+Sun Mar  5 10:09:58 2006 (mareid): getAntList 
+Sun Mar  5 10:09:59 2006 (mareid): offsetUnit -s 2 
+Sun Mar  5 10:10:00 2006 (mareid): observe -s Saturn 
+Sun Mar  5 10:10:01 2006 (mareid): antennaWait -e 4 
+Sun Mar  5 10:10:04 2006 (mareid): eloff -a 1 -s -1.050000e+01 
+Sun Mar  5 10:10:06 2006 (mareid): azoff -a 1 -s -125.6 
+Sun Mar  5 10:10:06 2006 (mareid): eloff -a 2 -s 18.300000 
+Sun Mar  5 10:10:07 2006 (mareid): azoff -a 2 -s -126.2 
+Sun Mar  5 10:10:08 2006 (mareid): eloff -a 3 -s 14.200000 
+Sun Mar  5 10:10:09 2006 (mareid): azoff -a 3 -s -100.7 
+Sun Mar  5 10:10:09 2006 (mareid): eloff -a 4 -s -1.190000e+01 
+Sun Mar  5 10:10:10 2006 (mareid): azoff -a 4 -s -107.27 
+Sun Mar  5 10:10:11 2006 (mareid): eloff -a 5 -s -9.000000e+00 
+Sun Mar  5 10:10:12 2006 (mareid): azoff -a 5 -s -122.8 
+Sun Mar  5 10:10:12 2006 (mareid): eloff -a 6 -s 0.000000e+00 
+Sun Mar  5 10:10:13 2006 (mareid): azoff -a 6 -s -106 
+Sun Mar  5 10:10:14 2006 (mareid): eloff -a 7 -s -8.800000e+00 
+Sun Mar  5 10:10:15 2006 (mareid): azoff -a 7 -s -122 
+Sun Mar  5 10:10:15 2006 (mareid): eloff -a 8 -s 6.520000 
+Sun Mar  5 10:10:16 2006 (mareid): azoff -a 8 -s -110.9 
+Sun Mar  5 10:10:17 2006 (mareid): antennaWait -e 4 
+Sun Mar  5 10:10:23 2006 (mareid): tsys 
+Sun Mar  5 10:10:33 2006 (mareid): azscan 
+Sun Mar  5 10:10:34 2006 (mareid): /application/bin/recordContinuum -a 1,2,3,4,5,6,7,8 -c 0 -s azscan -p 7,8 -u 1141553433 
+Sun Mar  5 10:12:38 2006 (mareid): stopScan 
+Sun Mar  5 10:12:39 2006 (mareid): eloff -a 1 -s -1.050000e+01 
+Sun Mar  5 10:12:40 2006 (mareid): azoff -a 1 -s -1.560000e+01 
+Sun Mar  5 10:12:48 2006 (mareid): eloff -a 2 -s 18.300000 
+Sun Mar  5 10:12:50 2006 (mareid): azoff -a 2 -s -1.620000e+01 
+Sun Mar  5 10:12:59 2006 (mareid): eloff -a 3 -s 14.200000 
+Sun Mar  5 10:13:00 2006 (mareid): azoff -a 3 -s 9.300000 
+Sun Mar  5 10:13:09 2006 (mareid): eloff -a 4 -s -1.190000e+01 
+Sun Mar  5 10:13:11 2006 (mareid): azoff -a 4 -s 2.730000 
+Sun Mar  5 10:13:16 2006 (brownd): project -r -i 122 -f ./test.pl 
+Sun Mar  5 10:13:20 2006 (brownd): radio 
+Sun Mar  5 10:13:20 2006 (mareid): eloff -a 5 -s -9.000000e+00 
+Sun Mar  5 10:13:22 2006 (mareid): azoff -a 5 -s -1.280000e+01 
+Sun Mar  5 10:13:32 2006 (mareid): eloff -a 6 -s 0.000000e+00 
+Sun Mar  5 10:13:33 2006 (mareid): azoff -a 6 -s 4.000000 
+Sun Mar  5 10:13:41 2006 (mareid): eloff -a 7 -s -8.800000e+00 
+Sun Mar  5 10:13:42 2006 (mareid): azoff -a 7 -s -1.200000e+01 
+Sun Mar  5 10:13:50 2006 (mareid): eloff -a 8 -s 6.520000 
+Sun Mar  5 10:13:51 2006 (mareid): azoff -a 8 -s -9.000000e-01 
+Sun Mar  5 10:14:10 2006 (mareid): offsetUnit -s 2 
+Sun Mar  5 10:14:11 2006 (mareid): observe -s Saturn 
+Sun Mar  5 10:14:12 2006 (mareid): antennaWait -e 4 
+Sun Mar  5 10:14:15 2006 (mareid): azoff -a 1 -s -1.560000e+01 
+Sun Mar  5 10:14:16 2006 (mareid): eloff -a 1 -s -120.5 
+Sun Mar  5 10:14:17 2006 (mareid): azoff -a 2 -s -1.620000e+01 
+Sun Mar  5 10:14:18 2006 (mareid): eloff -a 2 -s -91.7 
+Sun Mar  5 10:14:19 2006 (mareid): azoff -a 3 -s 9.300000 
+Sun Mar  5 10:14:20 2006 (mareid): eloff -a 3 -s -95.8 
+Sun Mar  5 10:14:20 2006 (mareid): azoff -a 4 -s 2.730000 
+Sun Mar  5 10:14:21 2006 (mareid): eloff -a 4 -s -121.9 
+Sun Mar  5 10:14:22 2006 (mareid): azoff -a 5 -s -1.280000e+01 
+Sun Mar  5 10:14:23 2006 (mareid): eloff -a 5 -s -119 
+Sun Mar  5 10:14:24 2006 (mareid): azoff -a 6 -s 4.000000 
+Sun Mar  5 10:14:25 2006 (mareid): eloff -a 6 -s -110 
+Sun Mar  5 10:14:25 2006 (mareid): azoff -a 7 -s -1.200000e+01 
+Sun Mar  5 10:14:26 2006 (mareid): eloff -a 7 -s -118.8 
+Sun Mar  5 10:14:27 2006 (mareid): azoff -a 8 -s -9.000000e-01 
+Sun Mar  5 10:14:28 2006 (mareid): eloff -a 8 -s -103.48 
+Sun Mar  5 10:14:28 2006 (mareid): antennaWait -e 4 
+Sun Mar  5 10:14:35 2006 (mareid): tsys 
+Sun Mar  5 10:14:45 2006 (mareid): elscan 
+Sun Mar  5 10:14:45 2006 (mareid): /application/bin/recordContinuum -a 1,2,3,4,5,6,7,8 -c 0 -s elscan -p 7,8 -u 1141553685 
+Sun Mar  5 10:16:51 2006 (mareid): stopScan 
+Sun Mar  5 10:16:52 2006 (mareid): eloff -a 1 -s -1.050000e+01 
+Sun Mar  5 10:16:53 2006 (mareid): azoff -a 1 -s -1.560000e+01 
+Sun Mar  5 10:17:50 2006 (mareid): azoff -a 1 -s -19.24 
+Sun Mar  5 10:17:52 2006 (mareid): eloff -a 1 -s 7.82 
+Sun Mar  5 10:17:53 2006 (mareid): eloff -a 2 -s 18.300000 
+Sun Mar  5 10:17:54 2006 (mareid): azoff -a 2 -s -1.620000e+01 
+Sun Mar  5 10:18:05 2006 (mareid): azoff -a 2 -s -22.32 
+Sun Mar  5 10:18:06 2006 (mareid): eloff -a 2 -s 14.03 
+Sun Mar  5 10:18:08 2006 (mareid): eloff -a 3 -s 14.200000 
+Sun Mar  5 10:18:09 2006 (mareid): azoff -a 3 -s 9.300000 
+Sun Mar  5 10:18:21 2006 (mareid): eloff -a 4 -s -1.190000e+01 
+Sun Mar  5 10:18:22 2006 (mareid): azoff -a 4 -s 2.730000 
+Sun Mar  5 10:18:38 2006 (mareid): azoff -a 4 -s 31.54 
+Sun Mar  5 10:18:40 2006 (mareid): eloff -a 4 -s 24.78 
+Sun Mar  5 10:18:41 2006 (mareid): eloff -a 5 -s -9.000000e+00 
+Sun Mar  5 10:18:42 2006 (mareid): azoff -a 5 -s -1.280000e+01 
+Sun Mar  5 10:18:54 2006 (mareid): azoff -a 5 -s 1.50 
+Sun Mar  5 10:18:55 2006 (mareid): eloff -a 5 -s -4.79 
+Sun Mar  5 10:18:56 2006 (mareid): eloff -a 6 -s 0.000000e+00 
+Sun Mar  5 10:18:58 2006 (mareid): azoff -a 6 -s 4.000000 
+Sun Mar  5 10:19:08 2006 (mareid): azoff -a 6 -s -1.96 
+Sun Mar  5 10:19:10 2006 (mareid): eloff -a 6 -s 0.75 
+Sun Mar  5 10:19:11 2006 (mareid): eloff -a 7 -s -8.800000e+00 
+Sun Mar  5 10:19:12 2006 (mareid): azoff -a 7 -s -1.200000e+01 
+Sun Mar  5 10:19:21 2006 (mareid): azoff -a 7 -s -11.53 
+Sun Mar  5 10:19:22 2006 (mareid): eloff -a 7 -s -12.51 
+Sun Mar  5 10:19:23 2006 (mareid): eloff -a 8 -s 6.520000 
+Sun Mar  5 10:19:25 2006 (mareid): azoff -a 8 -s -9.000000e-01 
+Sun Mar  5 10:19:44 2006 (mareid): azoff -a 8 -s 3.64 
+Sun Mar  5 10:19:45 2006 (mareid): eloff -a 8 -s -1.44 
+Sun Mar  5 10:19:54 2006 (mareid): setIFLevels -2 
+Sun Mar  5 10:26:49 2006 (mareid): restartCorrelator -d -s64 
+Sun Mar  5 10:31:14 2006 (mareid): restartCorrelator -d -s64 
+Sun Mar  5 10:34:36 2006 (mareid): tune -a 4 -c t joy 
+Sun Mar  5 10:36:05 2006 (dfong): tune -a 7 -c t joy 
+Sun Mar  5 10:36:18 2006 (mareid): tune -a 4 -c rfpower 16 
+Sun Mar  5 10:36:26 2006 (dfong): tune -a 7 -c cb 0 
+Sun Mar  5 10:36:28 2006 (mareid): tune -a 4 -c rfpower 18 
+Sun Mar  5 10:36:40 2006 (mareid): tune -a 4 -c rfpower -d 
+Sun Mar  5 10:40:24 2006 (mareid): setIFLevels 
+Sun Mar  5 10:46:55 2006 (mareid): setIFLevels -2 
+Sun Mar  5 10:50:15 2006 (mareid): setIFLevels -2 
+Sun Mar  5 10:51:59 2006 (mareid): setIFLevels -2 
+Sun Mar  5 10:53:08 2006 (mareid): setIFLevels -2 
+Sun Mar  5 10:55:09 2006 (dfong): setIFLevels --help 
+Sun Mar  5 10:55:43 2006 (mareid): setIFLevels --help 
+Sun Mar  5 10:57:46 2006 (mareid): project -r -i 13 -f baseline.pl 
+Sun Mar  5 10:57:49 2006 (mareid): radio 
+Sun Mar  5 10:57:50 2006 (mareid): integrate -t 30 
+Sun Mar  5 10:57:52 2006 (mareid): lookup -s 1229+020 
+Sun Mar  5 10:57:53 2006 (mareid): observe -s 1229+020 
+Sun Mar  5 10:57:54 2006 (mareid): tsys 
+Sun Mar  5 10:58:05 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 11:02:15 2006 (mareid): lookup -s 0418+380 
+Sun Mar  5 11:02:15 2006 (mareid): lookup -s 0418+380 
+Sun Mar  5 11:02:16 2006 (mareid): lookup -s 1058+015 
+Sun Mar  5 11:02:16 2006 (mareid): observe -s 1058+015 
+Sun Mar  5 11:02:18 2006 (mareid): tsys 
+Sun Mar  5 11:02:29 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 11:04:37 2006 (mareid): setIFLevels -a 4 
+Sun Mar  5 11:06:23 2006 (mareid): lookup -s 0359+509 
+Sun Mar  5 11:06:23 2006 (mareid): lookup -s 1743-038 
+Sun Mar  5 11:06:24 2006 (mareid): lookup -s 1751+096 
+Sun Mar  5 11:06:24 2006 (mareid): lookup -s 0237+288 
+Sun Mar  5 11:06:25 2006 (mareid): lookup -s 0418+380 
+Sun Mar  5 11:06:26 2006 (mareid): lookup -s 2005+778 
+Sun Mar  5 11:06:26 2006 (mareid): lookup -s 0825+031 
+Sun Mar  5 11:06:27 2006 (mareid): observe -s 0825+031 
+Sun Mar  5 11:06:28 2006 (mareid): tsys 
+Sun Mar  5 11:06:39 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 11:10:31 2006 (mareid): lookup -s 0418+380 
+Sun Mar  5 11:10:31 2006 (mareid): lookup -s 1751+096 
+Sun Mar  5 11:10:32 2006 (mareid): lookup -s 0359+509 
+Sun Mar  5 11:10:32 2006 (mareid): lookup -s 0455-462 
+Sun Mar  5 11:10:33 2006 (mareid): lookup -s 0721+713 
+Sun Mar  5 11:10:33 2006 (mareid): observe -s 0721+713 
+Sun Mar  5 11:10:34 2006 (mareid): tsys 
+Sun Mar  5 11:10:45 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 11:15:40 2006 (mareid): lookup -s 1229+020 
+Sun Mar  5 11:15:40 2006 (mareid): observe -s 1229+020 
+Sun Mar  5 11:15:42 2006 (mareid): tsys 
+Sun Mar  5 11:15:53 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 11:20:19 2006 (mareid): lookup -s 0538-440 
+Sun Mar  5 11:20:20 2006 (mareid): lookup -s 0841+708 
+Sun Mar  5 11:20:20 2006 (mareid): observe -s 0841+708 
+Sun Mar  5 11:20:21 2006 (mareid): tsys 
+Sun Mar  5 11:20:33 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 11:25:29 2006 (mareid): lookup -s 0418+380 
+Sun Mar  5 11:25:29 2006 (mareid): lookup -s 2202+422 
+Sun Mar  5 11:25:30 2006 (mareid): lookup -s 0958+655 
+Sun Mar  5 11:25:30 2006 (mareid): observe -s 0958+655 
+Sun Mar  5 11:25:31 2006 (mareid): tsys 
+Sun Mar  5 11:25:43 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 11:29:36 2006 (mareid): lookup -s 2148+069 
+Sun Mar  5 11:29:37 2006 (mareid): lookup -s 1642+398 
+Sun Mar  5 11:29:37 2006 (mareid): observe -s 1642+398 
+Sun Mar  5 11:29:39 2006 (mareid): tsys 
+Sun Mar  5 11:29:50 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 11:34:46 2006 (mareid): lookup -s 1229+020 
+Sun Mar  5 11:34:46 2006 (mareid): observe -s 1229+020 
+Sun Mar  5 11:34:48 2006 (mareid): tsys 
+Sun Mar  5 11:34:59 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 11:37:02 2006 (mareid): setIFLevels -a 4 
+Sun Mar  5 11:39:56 2006 (mareid): lookup -s 1048+717 
+Sun Mar  5 11:39:56 2006 (mareid): observe -s 1048+717 
+Sun Mar  5 11:39:57 2006 (mareid): tsys 
+Sun Mar  5 11:40:08 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 11:44:35 2006 (mareid): lookup -s 1048-191 
+Sun Mar  5 11:44:35 2006 (mareid): observe -s 1048-191 
+Sun Mar  5 11:44:36 2006 (mareid): tsys 
+Sun Mar  5 11:44:48 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 11:47:27 2006 (mareid): setIFLevels -2 
+Sun Mar  5 11:48:49 2006 (mareid): setIFLevels -2 
+Sun Mar  5 11:49:13 2006 (mareid): lookup -s 0423-013 
+Sun Mar  5 11:49:14 2006 (mareid): lookup -s 1419+543 
+Sun Mar  5 11:49:14 2006 (mareid): observe -s 1419+543 
+Sun Mar  5 11:49:16 2006 (mareid): tsys 
+Sun Mar  5 11:49:27 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 11:55:25 2006 (mareid): lookup -s 1229+020 
+Sun Mar  5 11:55:25 2006 (mareid): observe -s 1229+020 
+Sun Mar  5 11:55:27 2006 (mareid): tsys 
+Sun Mar  5 11:55:38 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 12:00:35 2006 (mareid): lookup -s 0423-013 
+Sun Mar  5 12:00:35 2006 (mareid): lookup -s 1058+015 
+Sun Mar  5 12:00:36 2006 (mareid): observe -s 1058+015 
+Sun Mar  5 12:00:37 2006 (mareid): tsys 
+Sun Mar  5 12:00:48 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 12:03:19 2006 (mareid): lookup --help 
+Sun Mar  5 12:04:10 2006 (mareid): lookup -s 3c273 -time 05 March 2006 12:04:04 
+Sun Mar  5 12:04:19 2006 (mareid): lookup -s 3c273 -time 05 March 2006 12:04:04 
+Sun Mar  5 12:04:23 2006 (mareid): lookup --help 
+Sun Mar  5 12:04:38 2006 (mareid): lookup -s 3c273 -time 12:04:04 
+Sun Mar  5 12:04:41 2006 (mareid): lookup --help 
+Sun Mar  5 12:04:43 2006 (mareid): lookup -s 0721+713 
+Sun Mar  5 12:04:43 2006 (mareid): lookup -s 1147-382 
+Sun Mar  5 12:04:44 2006 (mareid): observe -s 1147-382 
+Sun Mar  5 12:04:45 2006 (mareid): tsys 
+Sun Mar  5 12:04:50 2006 (mareid): lookup -s 3c273 -time=12:04:04 
+Sun Mar  5 12:04:54 2006 (mareid): lookup -s 3c273 -t 12:04:04 
+Sun Mar  5 12:04:56 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 12:05:07 2006 (mareid): lookup -s 3c273 -t 05 March 2006 12:04:04 
+Sun Mar  5 12:05:14 2006 (mareid): lookup -s 3c273 -t=05 March 2006 12:04:04 
+Sun Mar  5 12:05:25 2006 (mareid): lookup -s 3c273 
+Sun Mar  5 12:05:35 2006 (mareid): lookup -s 3c273 -t=05 March 2006 13:04:04 
+Sun Mar  5 12:05:44 2006 (mareid): lookup -s 3c273 -time=05 March 2006 13:04:04 
+Sun Mar  5 12:05:58 2006 (mareid): lookup -s 3c273 -time=05 March 2006 15:04:04 
+Sun Mar  5 12:06:03 2006 (mareid): lookup -s 3c273 -time=05 March 2006 16:04:04 
+Sun Mar  5 12:06:36 2006 (mareid): lookup -s callisto -time=05 March 2006 16:04:04 
+Sun Mar  5 12:08:50 2006 (mareid): lookup -s 1246-257 
+Sun Mar  5 12:08:51 2006 (mareid): observe -s 1246-257 
+Sun Mar  5 12:08:52 2006 (mareid): tsys 
+Sun Mar  5 12:09:03 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 12:13:29 2006 (mareid): lookup -s 1229+020 
+Sun Mar  5 12:13:29 2006 (mareid): observe -s 1229+020 
+Sun Mar  5 12:13:31 2006 (mareid): tsys 
+Sun Mar  5 12:13:42 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 12:17:37 2006 (mareid): lookup -s 0006-063 
+Sun Mar  5 12:17:37 2006 (mareid): lookup -s 1337-129 
+Sun Mar  5 12:17:38 2006 (mareid): observe -s 1337-129 
+Sun Mar  5 12:17:39 2006 (mareid): tsys 
+Sun Mar  5 12:17:50 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 12:21:45 2006 (mareid): lookup -s 0538-440 
+Sun Mar  5 12:21:45 2006 (mareid): lookup -s 2253+161 
+Sun Mar  5 12:21:46 2006 (mareid): lookup -s 2258-279 
+Sun Mar  5 12:21:46 2006 (mareid): lookup -s 0102+584 
+Sun Mar  5 12:21:47 2006 (mareid): lookup -s 2056-472 
+Sun Mar  5 12:21:47 2006 (mareid): lookup -s 1626-298 
+Sun Mar  5 12:21:48 2006 (mareid): lookup -s 2232+117 
+Sun Mar  5 12:21:49 2006 (mareid): lookup -s 1316-336 
+Sun Mar  5 12:21:49 2006 (mareid): observe -s 1316-336 
+Sun Mar  5 12:21:50 2006 (mareid): tsys 
+Sun Mar  5 12:22:01 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 12:26:23 2006 (mareid): lookup -s 0958+655 
+Sun Mar  5 12:26:24 2006 (mareid): observe -s 0958+655 
+Sun Mar  5 12:26:25 2006 (mareid): tsys 
+Sun Mar  5 12:26:36 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 12:32:35 2006 (mareid): lookup -s 1229+020 
+Sun Mar  5 12:32:35 2006 (mareid): observe -s 1229+020 
+Sun Mar  5 12:32:37 2006 (mareid): tsys 
+Sun Mar  5 12:32:48 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 12:37:14 2006 (mareid): lookup -s 1743-038 
+Sun Mar  5 12:37:14 2006 (mareid): lookup -s 1753+288 
+Sun Mar  5 12:37:15 2006 (mareid): observe -s 1753+288 
+Sun Mar  5 12:37:16 2006 (mareid): tsys 
+Sun Mar  5 12:37:27 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 12:42:24 2006 (mareid): lookup -s 1316-336 
+Sun Mar  5 12:42:24 2006 (mareid): observe -s 1316-336 
+Sun Mar  5 12:42:25 2006 (mareid): tsys 
+Sun Mar  5 12:42:36 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 12:47:02 2006 (mareid): lookup -s 2348-165 
+Sun Mar  5 12:47:03 2006 (mareid): lookup -s 0841+708 
+Sun Mar  5 12:47:03 2006 (mareid): observe -s 0841+708 
+Sun Mar  5 12:47:04 2006 (mareid): tsys 
+Sun Mar  5 12:47:16 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 12:52:43 2006 (mareid): lookup -s 1229+020 
+Sun Mar  5 12:52:43 2006 (mareid): observe -s 1229+020 
+Sun Mar  5 12:52:45 2006 (mareid): tsys 
+Sun Mar  5 12:52:56 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 12:57:22 2006 (mareid): lookup -s 1924-292 
+Sun Mar  5 12:57:22 2006 (mareid): lookup -s 0418+380 
+Sun Mar  5 12:57:23 2006 (mareid): lookup -s 1642+689 
+Sun Mar  5 12:57:23 2006 (mareid): observe -s 1642+689 
+Sun Mar  5 12:57:25 2006 (mareid): tsys 
+Sun Mar  5 12:57:36 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 13:02:01 2006 (mareid): lookup -s 1048-191 
+Sun Mar  5 13:02:01 2006 (mareid): observe -s 1048-191 
+Sun Mar  5 13:02:03 2006 (mareid): tsys 
+Sun Mar  5 13:02:14 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 13:06:39 2006 (mareid): lookup -s 1230+123 
+Sun Mar  5 13:06:40 2006 (mareid): observe -s 1230+123 
+Sun Mar  5 13:06:41 2006 (mareid): tsys 
+Sun Mar  5 13:06:52 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 13:08:32 2006 (mareid): setIFLevels -a 4 
+Sun Mar  5 13:12:20 2006 (mareid): lookup -s 1229+020 
+Sun Mar  5 13:12:20 2006 (mareid): observe -s 1229+020 
+Sun Mar  5 13:12:22 2006 (mareid): tsys 
+Sun Mar  5 13:12:33 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 13:16:28 2006 (mareid): lookup -s 1642+689 
+Sun Mar  5 13:16:28 2006 (mareid): observe -s 1642+689 
+Sun Mar  5 13:16:30 2006 (mareid): tsys 
+Sun Mar  5 13:16:41 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 13:20:58 2006 (mareid): setIFLevels -a 4 
+Sun Mar  5 13:21:07 2006 (mareid): lookup -s 0958+655 
+Sun Mar  5 13:21:07 2006 (mareid): observe -s 0958+655 
+Sun Mar  5 13:21:08 2006 (mareid): tsys 
+Sun Mar  5 13:21:20 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 13:25:14 2006 (mareid): lookup -s 0854+201 
+Sun Mar  5 13:25:15 2006 (mareid): lookup -s 0102+584 
+Sun Mar  5 13:25:15 2006 (mareid): lookup -s 0423-013 
+Sun Mar  5 13:25:16 2006 (mareid): lookup -s 0418+380 
+Sun Mar  5 13:25:17 2006 (mareid): lookup -s 0538-440 
+Sun Mar  5 13:25:17 2006 (mareid): lookup -s 1743-038 
+Sun Mar  5 13:25:17 2006 (mareid): observe -s 1743-038 
+Sun Mar  5 13:25:19 2006 (mareid): tsys 
+Sun Mar  5 13:25:30 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 13:28:12 2006 (mareid): setIFLevels -2 
+Sun Mar  5 13:29:52 2006 (mareid): lookup -s 3c273 
+Sun Mar  5 13:29:54 2006 (mareid): lookup -s 3c273 
+Sun Mar  5 13:30:24 2006 (mareid): lookup -s 1229+020 
+Sun Mar  5 13:30:24 2006 (mareid): observe -s 1229+020 
+Sun Mar  5 13:30:26 2006 (mareid): tsys 
+Sun Mar  5 13:30:37 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 13:35:05 2006 (mareid): setIFLevels -a 4 
+Sun Mar  5 13:35:34 2006 (mareid): lookup -s 1924-292 
+Sun Mar  5 13:35:35 2006 (mareid): lookup -s 0721+713 
+Sun Mar  5 13:35:35 2006 (mareid): lookup -s 0106-405 
+Sun Mar  5 13:35:36 2006 (mareid): lookup -s 1256-057 
+Sun Mar  5 13:35:36 2006 (mareid): observe -s 1256-057 
+Sun Mar  5 13:35:37 2006 (mareid): tsys 
+Sun Mar  5 13:35:48 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 13:39:42 2006 (mareid): lookup -s 0433+053 
+Sun Mar  5 13:39:42 2006 (mareid): lookup -s 1923-210 
+Sun Mar  5 13:39:43 2006 (mareid): lookup -s 1246-257 
+Sun Mar  5 13:39:43 2006 (mareid): observe -s 1246-257 
+Sun Mar  5 13:39:44 2006 (mareid): tsys 
+Sun Mar  5 13:39:56 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 13:43:49 2006 (mareid): lookup -s 2246-121 
+Sun Mar  5 13:43:50 2006 (mareid): lookup -s 0418+380 
+Sun Mar  5 13:43:51 2006 (mareid): lookup -s 0418+380 
+Sun Mar  5 13:43:51 2006 (mareid): lookup -s 0825+031 
+Sun Mar  5 13:43:52 2006 (mareid): lookup -s 1337-129 
+Sun Mar  5 13:43:52 2006 (mareid): observe -s 1337-129 
+Sun Mar  5 13:43:53 2006 (mareid): tsys 
+Sun Mar  5 13:44:04 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 13:45:47 2006 (mareid): setIFLevels -2 
+Sun Mar  5 13:48:31 2006 (apeck): monitor 
+Sun Mar  5 13:49:30 2006 (mareid): lookup -s 1229+020 
+Sun Mar  5 13:49:30 2006 (mareid): observe -s 1229+020 
+Sun Mar  5 13:49:32 2006 (mareid): tsys 
+Sun Mar  5 13:49:43 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 13:52:16 2006 (mareid): setIFLevels -a 4 
+Sun Mar  5 13:53:38 2006 (mareid): lookup -s 0428-379 
+Sun Mar  5 13:53:39 2006 (mareid): lookup -s 0237+288 
+Sun Mar  5 13:53:39 2006 (mareid): lookup -s 1911-201 
+Sun Mar  5 13:53:40 2006 (mareid): lookup -s 0530+135 
+Sun Mar  5 13:53:40 2006 (mareid): lookup -s 0418+380 
+Sun Mar  5 13:53:41 2006 (mareid): lookup -s 2232+117 
+Sun Mar  5 13:53:41 2006 (mareid): lookup -s 1316-336 
+Sun Mar  5 13:53:42 2006 (mareid): observe -s 1316-336 
+Sun Mar  5 13:53:43 2006 (mareid): tsys 
+Sun Mar  5 13:53:54 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 13:57:46 2006 (mareid): lookup -s 0102+584 
+Sun Mar  5 13:57:46 2006 (mareid): lookup -s 0418+380 
+Sun Mar  5 13:57:47 2006 (mareid): lookup -s 1246-257 
+Sun Mar  5 13:57:47 2006 (mareid): observe -s 1246-257 
+Sun Mar  5 13:57:48 2006 (mareid): tsys 
+Sun Mar  5 13:57:59 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 14:01:54 2006 (mareid): lookup -s 0359+509 
+Sun Mar  5 14:01:54 2006 (mareid): lookup -s 2056-472 
+Sun Mar  5 14:01:55 2006 (mareid): lookup -s 0538-440 
+Sun Mar  5 14:01:55 2006 (mareid): lookup -s 0927+390 
+Sun Mar  5 14:01:56 2006 (mareid): lookup -s 0428-379 
+Sun Mar  5 14:01:57 2006 (mareid): lookup -s 1642+689 
+Sun Mar  5 14:01:57 2006 (mareid): observe -s 1642+689 
+Sun Mar  5 14:01:58 2006 (mareid): tsys 
+Sun Mar  5 14:02:09 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 14:03:12 2006 (mareid): setIFLevels -a 4 
+Sun Mar  5 14:06:32 2006 (mareid): lookup -s 1229+020 
+Sun Mar  5 14:06:32 2006 (mareid): observe -s 1229+020 
+Sun Mar  5 14:06:34 2006 (mareid): tsys 
+Sun Mar  5 14:06:45 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 14:11:11 2006 (mareid): lookup -s 0359+509 
+Sun Mar  5 14:11:12 2006 (mareid): lookup -s 0428-379 
+Sun Mar  5 14:11:12 2006 (mareid): lookup -s 1911-201 
+Sun Mar  5 14:11:13 2006 (mareid): lookup -s 2148+069 
+Sun Mar  5 14:11:14 2006 (mareid): lookup -s 2246-121 
+Sun Mar  5 14:11:14 2006 (mareid): lookup -s 1419+543 
+Sun Mar  5 14:11:14 2006 (mareid): observe -s 1419+543 
+Sun Mar  5 14:11:16 2006 (mareid): tsys 
+Sun Mar  5 14:11:27 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 14:15:27 2006 (mareid): setIFLevels -2 
+Sun Mar  5 14:15:50 2006 (mareid): lookup -s 0650-166 
+Sun Mar  5 14:15:50 2006 (mareid): lookup -s 2232+117 
+Sun Mar  5 14:15:51 2006 (mareid): lookup -s 2246-121 
+Sun Mar  5 14:15:52 2006 (mareid): lookup -s 2232+117 
+Sun Mar  5 14:15:52 2006 (mareid): lookup -s 0841+708 
+Sun Mar  5 14:15:53 2006 (mareid): lookup -s 2229-085 
+Sun Mar  5 14:15:53 2006 (mareid): lookup -s 0455-462 
+Sun Mar  5 14:15:54 2006 (mareid): lookup -s 1911-201 
+Sun Mar  5 14:15:54 2006 (mareid): lookup -s 1924-292 
+Sun Mar  5 14:15:55 2006 (mareid): lookup -s 1159+292 
+Sun Mar  5 14:15:55 2006 (mareid): observe -s 1159+292 
+Sun Mar  5 14:15:56 2006 (mareid): tsys 
+Sun Mar  5 14:16:07 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 14:17:28 2006 (mareid): setIFLevels -2 
+Sun Mar  5 14:19:29 2006 (mareid): setIFLevels -2 
+Sun Mar  5 14:19:58 2006 (mareid): lookup -s 1246-257 
+Sun Mar  5 14:19:58 2006 (mareid): observe -s 1246-257 
+Sun Mar  5 14:19:59 2006 (mareid): tsys 
+Sun Mar  5 14:20:10 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 14:22:46 2006 (mareid): restartCorrelator -a 4 
+Sun Mar  5 14:24:40 2006 (mareid): setIFLevels -a 4 
+Sun Mar  5 14:25:07 2006 (mareid): lookup -s 1229+020 
+Sun Mar  5 14:25:07 2006 (mareid): observe -s 1229+020 
+Sun Mar  5 14:25:09 2006 (mareid): tsys 
+Sun Mar  5 14:25:20 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 14:30:48 2006 (mareid): lookup -s 2225-049 
+Sun Mar  5 14:30:49 2006 (mareid): lookup -s 1048-191 
+Sun Mar  5 14:30:49 2006 (mareid): lookup -s 1642+398 
+Sun Mar  5 14:30:50 2006 (mareid): observe -s 1642+398 
+Sun Mar  5 14:30:51 2006 (mareid): tsys 
+Sun Mar  5 14:31:02 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 14:31:29 2006 (mareid): setIFLevels -2 
+Sun Mar  5 14:32:38 2006 (mareid): setIFLevels -a 4 
+Sun Mar  5 14:35:58 2006 (mareid): lookup -s 1911-201 
+Sun Mar  5 14:35:59 2006 (mareid): lookup -s 0457-234 
+Sun Mar  5 14:36:00 2006 (mareid): lookup -s 0102+584 
+Sun Mar  5 14:36:01 2006 (mareid): lookup -s 1147-382 
+Sun Mar  5 14:36:02 2006 (mareid): lookup -s 1246-257 
+Sun Mar  5 14:36:02 2006 (mareid): observe -s 1246-257 
+Sun Mar  5 14:36:04 2006 (mareid): tsys 
+Sun Mar  5 14:36:15 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 14:40:36 2006 (mareid): lookup -s 0006-063 
+Sun Mar  5 14:40:37 2006 (mareid): lookup -s 0958+655 
+Sun Mar  5 14:40:38 2006 (mareid): lookup -s 2246-121 
+Sun Mar  5 14:40:39 2006 (mareid): lookup -s 1751+096 
+Sun Mar  5 14:40:40 2006 (mareid): observe -s 1751+096 
+Sun Mar  5 14:40:41 2006 (mareid): tsys 
+Sun Mar  5 14:40:53 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 14:46:49 2006 (mareid): lookup -s 1229+020 
+Sun Mar  5 14:46:49 2006 (mareid): observe -s 1229+020 
+Sun Mar  5 14:46:50 2006 (mareid): tsys 
+Sun Mar  5 14:47:01 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 14:51:27 2006 (mareid): lookup -s 0319+415 
+Sun Mar  5 14:51:27 2006 (mareid): lookup -s 1048+717 
+Sun Mar  5 14:51:28 2006 (mareid): observe -s 1048+717 
+Sun Mar  5 14:51:29 2006 (mareid): tsys 
+Sun Mar  5 14:51:41 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 14:55:35 2006 (mareid): lookup -s 0927+390 
+Sun Mar  5 14:55:36 2006 (mareid): lookup -s 1058+015 
+Sun Mar  5 14:55:37 2006 (mareid): lookup -s 0359+509 
+Sun Mar  5 14:55:38 2006 (mareid): lookup -s 2253+161 
+Sun Mar  5 14:55:38 2006 (mareid): lookup -s 1924-292 
+Sun Mar  5 14:55:39 2006 (mareid): lookup -s 1751+096 
+Sun Mar  5 14:55:39 2006 (mareid): observe -s 1751+096 
+Sun Mar  5 14:55:41 2006 (mareid): tsys 
+Sun Mar  5 14:55:52 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 15:00:45 2006 (mareid): lookup -s 1626-298 
+Sun Mar  5 15:00:45 2006 (mareid): observe -s 1626-298 
+Sun Mar  5 15:00:47 2006 (mareid): tsys 
+Sun Mar  5 15:00:58 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 15:06:25 2006 (mareid): lookup -s 1229+020 
+Sun Mar  5 15:06:26 2006 (mareid): observe -s 1229+020 
+Sun Mar  5 15:06:27 2006 (mareid): tsys 
+Sun Mar  5 15:06:38 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 15:11:04 2006 (mareid): lookup -s 0359+509 
+Sun Mar  5 15:11:05 2006 (mareid): lookup -s 0457-234 
+Sun Mar  5 15:11:06 2006 (mareid): lookup -s 2229-085 
+Sun Mar  5 15:11:07 2006 (mareid): lookup -s 0530+135 
+Sun Mar  5 15:11:07 2006 (mareid): lookup -s 1337-129 
+Sun Mar  5 15:11:08 2006 (mareid): observe -s 1337-129 
+Sun Mar  5 15:11:09 2006 (mareid): tsys 
+Sun Mar  5 15:11:21 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 15:15:12 2006 (mareid): lookup -s 1058+015 
+Sun Mar  5 15:15:13 2006 (mareid): lookup -s 0428-379 
+Sun Mar  5 15:15:14 2006 (mareid): lookup -s 1256-057 
+Sun Mar  5 15:15:14 2006 (mareid): observe -s 1256-057 
+Sun Mar  5 15:15:16 2006 (mareid): tsys 
+Sun Mar  5 15:15:27 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 15:19:19 2006 (mareid): lookup -s 0428-379 
+Sun Mar  5 15:19:20 2006 (mareid): lookup -s 1517-243 
+Sun Mar  5 15:19:21 2006 (mareid): observe -s 1517-243 
+Sun Mar  5 15:19:22 2006 (mareid): tsys 
+Sun Mar  5 15:19:33 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 15:23:59 2006 (mareid): lookup -s 1229+020 
+Sun Mar  5 15:23:59 2006 (mareid): observe -s 1229+020 
+Sun Mar  5 15:24:01 2006 (mareid): tsys 
+Sun Mar  5 15:24:12 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 15:28:37 2006 (mareid): lookup -s 1753+288 
+Sun Mar  5 15:28:38 2006 (mareid): observe -s 1753+288 
+Sun Mar  5 15:28:40 2006 (mareid): tsys 
+Sun Mar  5 15:28:51 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 15:29:15 2006 (mareid): lookup -s Sun 
+Sun Mar  5 15:33:47 2006 (mareid): lookup -s 1419+543 
+Sun Mar  5 15:33:47 2006 (mareid): observe -s 1419+543 
+Sun Mar  5 15:33:48 2006 (mareid): tsys 
+Sun Mar  5 15:34:00 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 15:37:54 2006 (mareid): lookup -s 2229-085 
+Sun Mar  5 15:37:55 2006 (mareid): lookup -s 1751+096 
+Sun Mar  5 15:37:55 2006 (mareid): observe -s 1751+096 
+Sun Mar  5 15:37:57 2006 (mareid): tsys 
+Sun Mar  5 15:38:08 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 15:41:42 2006 (root): monitor 
+Sun Mar  5 15:42:33 2006 (mareid): lookup -s 1229+020 
+Sun Mar  5 15:42:34 2006 (mareid): observe -s 1229+020 
+Sun Mar  5 15:42:35 2006 (mareid): tsys 
+Sun Mar  5 15:42:46 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 15:47:02 2006 (mareid): lookup -s Sun 
+Sun Mar  5 15:47:12 2006 (mareid): lookup -s 0006-063 
+Sun Mar  5 15:47:12 2006 (mareid): lookup -s 0958+655 
+Sun Mar  5 15:47:13 2006 (mareid): lookup -s 0237+288 
+Sun Mar  5 15:47:14 2006 (mareid): lookup -s 0102+584 
+Sun Mar  5 15:47:14 2006 (mareid): lookup -s 1642+398 
+Sun Mar  5 15:47:15 2006 (mareid): observe -s 1642+398 
+Sun Mar  5 15:47:16 2006 (mareid): tsys 
+Sun Mar  5 15:47:27 2006 (mareid): integrate -s 7 -t 30 -w 
+Sun Mar  5 15:48:55 2006 (mareid): lookup -s callisto 
+Sun Mar  5 15:50:47 2006 (mareid): lookup -s 1924-292 
+Sun Mar  5 15:50:48 2006 (mareid): lookup -s 1419+543 
+Sun Mar  5 15:50:48 2006 (mareid): observe -s 1419+543 
+Sun Mar  5 15:50:50 2006 (mareid): tsys 
+Sun Mar  5 15:51:01 2006 (mareid): observe -s callisto 
+Sun Mar  5 16:05:39 2006 (mareid): lookup -s titan 
+Sun Mar  5 16:05:44 2006 (mareid): lookup -s europa 
+Sun Mar  5 16:07:21 2006 (mareid): lookup -s uranus 
+Sun Mar  5 16:07:24 2006 (mareid): lookup -s neptune 
+Sun Mar  5 16:07:40 2006 (mareid): lookup -s mars 
+Sun Mar  5 16:07:46 2006 (mareid): lookup -s ganymede 
+Sun Mar  5 16:09:34 2006 (mareid): lookup --help 
+Sun Mar  5 16:09:44 2006 (mareid): lookup -s jupiter 
+Sun Mar  5 16:09:50 2006 (mareid): lookup -s callisto 
+Sun Mar  5 16:09:53 2006 (mareid): lookup -s jupiter 
+Sun Mar  5 16:10:38 2006 (mareid): lookup -s titan 
+Sun Mar  5 16:10:41 2006 (mareid): lookup -s uranus 
+Sun Mar  5 16:10:45 2006 (mareid): lookup -s neptune 
+Sun Mar  5 16:11:09 2006 (mareid): lookup -s 3c84 
+Sun Mar  5 16:11:12 2006 (mareid): lookup -s 3c273 
+Sun Mar  5 16:25:17 2006 (mareid): stow 
+Sun Mar  5 16:25:24 2006 (mareid): closeM3 
+Sun Mar  5 16:26:46 2006 (mareid): endProject.
+Sun Mar  5 16:27:36 2006 (mareid): standby 
+Sun Mar  5 16:27:49 2006 (mareid): standby -a 1,2,3,4,5,6,7,8 
+Sun Mar  5 16:36:27 2006 (apeck): monitor 
+Sun Mar  5 16:37:50 2006 (root): project -p Taco -o Tack -d Correlator stability test -s 1 -a 1..8 -C1..12 -R l -l Cambridge 
+Sun Mar  5 16:38:14 2006 (rtm): /application/bin/killdaemon crate int_server QUIT
+Sun Mar  5 16:38:19 2006 (root): standby 
+Sun Mar  5 16:38:26 2006 (root): observe -s 3c273 
+Sun Mar  5 16:38:36 2006 (root): restartCorrelator -d 
+Sun Mar  5 16:40:05 2006 (root): monitor 
+Sun Mar  5 16:40:47 2006 (root): dopplerTrack -t co2-1 -s12 
+Sun Mar  5 16:41:05 2006 (daemon): setLO: sending "tune -f0 225.59 -h0 16" to acc1
+Sun Mar  5 16:41:05 2006 (daemon): setLO: sending "tune -f0 225.59 -h0 16" to acc2
+Sun Mar  5 16:41:05 2006 (daemon): setLO: sending "tune -f0 225.59 -h0 16" to acc3
+Sun Mar  5 16:41:05 2006 (daemon): setLO: sending "tune -f0 225.59 -h0 16" to acc4
+Sun Mar  5 16:41:05 2006 (daemon): setLO: sending "tune -f0 225.59 -h0 16" to acc5
+Sun Mar  5 16:41:05 2006 (daemon): setLO: sending "tune -f0 225.59 -h0 16" to acc6
+Sun Mar  5 16:41:05 2006 (daemon): setLO: sending "tune -f0 225.59 -h0 16" to acc7
+Sun Mar  5 16:41:05 2006 (daemon): setLO: sending "tune -f0 225.59 -h0 16" to acc8
+Sun Mar  5 16:46:18 2006 (root): tune -a 4 -c t joy 
+Sun Mar  5 16:47:42 2006 (root): tune -a 4 -c rfpower -d 
+Sun Mar  5 16:47:53 2006 (root): tune -a 4 -c t joy 
+Sun Mar  5 16:48:41 2006 (root): tune -a 4 -c rfpower 10 
+Sun Mar  5 16:48:50 2006 (root): tune -a 4 -c rfpower 8 
+Sun Mar  5 16:48:59 2006 (root): tune -a 4 -c t joy 
+Sun Mar  5 16:49:10 2006 (apeck): monitor 
+Sun Mar  5 16:50:17 2006 (root): tune -a 4 -c zt 
+Sun Mar  5 16:50:39 2006 (root): tune -a 4 -c interpolate -g 112.8 
+Sun Mar  5 16:51:06 2006 (root): tune -a 4 -c rfpower 12 
+Sun Mar  5 16:51:17 2006 (root): tune -a 4 -c t joy 
+Sun Mar  5 16:52:42 2006 (root): tune -a 4 -c b joy 
+Sun Mar  5 16:56:25 2006 (root): tune -a 4 -c rfpower 11 
+Sun Mar  5 16:56:34 2006 (root): tune -a 4 -c rfpower 13 
+Sun Mar  5 16:56:44 2006 (root): tune -a 4 -c rfpower -d 
+Sun Mar  5 16:56:58 2006 (root): tune -a 4 -c cb0 
+Sun Mar  5 16:57:22 2006 (root): tune -a 4 -c rfpower 18 
+Sun Mar  5 16:57:50 2006 (root): tune -a 4 -c a 2000 
+Sun Mar  5 16:58:09 2006 (root): tune -a 7 -c rfpower 18 
+Sun Mar  5 16:58:23 2006 (root): tune -a 7 -c t joy 
+Sun Mar  5 17:00:21 2006 (root): tune -a 7 -c a 16000 
+Sun Mar  5 17:00:30 2006 (root): openM3 
+Sun Mar  5 17:00:44 2006 (root): tsys 
+Sun Mar  5 17:01:08 2006 (root): setIFLevels 
+Sun Mar  5 17:13:27 2006 (root): integrate -t 120 
+Sun Mar  5 17:28:01 2006 (mareid): monitor 
+Sun Mar  5 18:45:43 2006 (rwilson): /application/bin/killdaemon acc6 airservo restart
+Sun Mar  5 18:49:06 2006 (apeck): monitor 
+Sun Mar  5 22:13:43 2006 (root): monitor 
+Sun Mar  5 22:45:24 2006 (brownd): monitor 
+Sun Mar  5 22:46:17 2006 (cflee): monitor 
+Sun Mar  5 23:55:31 2006 (brownd): monitor 
+Mon Mar  6 00:04:19 2006 (brownd): monitor 
+Mon Mar  6 00:05:03 2006 (brownd): monitor 
+Mon Mar  6 00:06:39 2006 (brownd): monitor 
+Mon Mar  6 00:07:53 2006 (cflee): monitor 
+Mon Mar  6 00:52:22 2006 (root): closeM3 
+Mon Mar  6 00:52:27 2006 (root): endProject.
+Mon Mar  6 00:52:33 2006 (root): monitor 
+Mon Mar  6 02:16:54 2006 (pyamaguc): monitor 
+Mon Mar  6 02:25:59 2006 (rrao): monitor 
+Mon Mar  6 02:30:57 2006 (pyamaguc): monitor 
+Mon Mar  6 03:17:33 2006 (cflee): monitor 
+Mon Mar  6 03:18:04 2006 (cflee): monitor 
+Mon Mar  6 03:18:43 2006 (root): monitor 
+Mon Mar  6 03:29:52 2006 (brownd): monitor 
+Mon Mar  6 03:39:09 2006 (brownd): monitor 
+Mon Mar  6 03:39:20 2006 (brownd): monitor 
+Mon Mar  6 03:40:10 2006 (brownd): monitor 
+Mon Mar  6 03:48:05 2006 (brownd): lookup -s 0530+135 
+Mon Mar  6 03:48:22 2006 (brownd): lookup -s 0825+031 
+Mon Mar  6 03:49:15 2006 (cflee): monitor 
+Mon Mar  6 03:49:56 2006 (pyamaguc): monitor 
+Mon Mar  6 03:53:24 2006 (cflee): project -a 1..8 -C 1..12 -s 1 -p SMA -o Jonathan & ChinFei -l Summit -d Baseline -c x222 -R l 
+Mon Mar  6 03:54:49 2006 (cflee): restartCorrelator -d s32 
+Mon Mar  6 04:00:57 2006 (pyamaguc): monitor 
+Mon Mar  6 04:01:30 2006 (cflee): observe -s 3c273 
+Mon Mar  6 04:01:43 2006 (cflee): dopplerTrack -t co2-1 -s12 -n 
+Mon Mar  6 04:02:55 2006 (cflee): tune -a 2 -c rfpower -d 
+Mon Mar  6 04:03:10 2006 (cflee): tune -a 3 -c rfpower -d 
+Mon Mar  6 04:03:22 2006 (cflee): tune -a 5 -c rfpower -d 
+Mon Mar  6 04:03:36 2006 (cflee): tune -a 8 -c rfpower -d 
+Mon Mar  6 04:04:49 2006 (rrao): tune -a 7 -c t joy 
+Mon Mar  6 04:05:10 2006 (cflee): tune -a 4 -c rfpower 18 
+Mon Mar  6 04:05:21 2006 (rrao): tune -a 7 -c rpower 15 
+Mon Mar  6 04:05:26 2006 (rrao): tune -a 7 -c rfpower 15 
+Mon Mar  6 04:05:31 2006 (rrao): tune -a 7 -c rfpower 12 
+Mon Mar  6 04:05:38 2006 (cflee): tune -a 4 -c rfpower 15 
+Mon Mar  6 04:05:38 2006 (rrao): tune -a 7 -c t jou 
+Mon Mar  6 04:05:43 2006 (rrao): tune -a 7 -c t joy 
+Mon Mar  6 04:05:47 2006 (cflee): tune -a 4 -c rfpower 20 
+Mon Mar  6 04:05:52 2006 (cflee): tune -a 4 -c rfpower 5 
+Mon Mar  6 04:05:59 2006 (cflee): tune -a 4 -c rfpower 18 
+Mon Mar  6 04:06:07 2006 (cflee): tune -a 4 -c rfpower -d 
+Mon Mar  6 04:06:09 2006 (rrao): tune -a 7 -c zt 
+Mon Mar  6 04:06:17 2006 (rrao): tune -a 7 -c zb 
+Mon Mar  6 04:06:24 2006 (cflee): tune -a 4 -c rfpower 18 
+Mon Mar  6 04:06:31 2006 (cflee): tune -a 4 -c rfpower 16 
+Mon Mar  6 04:06:34 2006 (rrao): tune -a 7 -c rfpower 15 
+Mon Mar  6 04:06:39 2006 (rrao): tune -a 7 -c rfpower 19 
+Mon Mar  6 04:06:43 2006 (rrao): tune -a 7 -c rfpower 11 
+Mon Mar  6 04:06:43 2006 (cflee): tune -a 4 -c t joy 
+Mon Mar  6 04:06:56 2006 (rrao): tune -a 7 -c interpolate -f 112.8 -g 
+Mon Mar  6 04:07:13 2006 (rrao): tune -a 7 -c t joy 
+Mon Mar  6 04:07:57 2006 (rrao): tune -a 7 -c rfpower 7 
+Mon Mar  6 04:08:02 2006 (rrao): tune -a 7 -c rfpower 2 
+Mon Mar  6 04:08:05 2006 (rrao): tune -a 7 -c rfpower 10 
+Mon Mar  6 04:08:09 2006 (rrao): tune -a 7 -c rfpower 19 
+Mon Mar  6 04:08:15 2006 (rrao): tune -a 7 -c rfpower 16 
+Mon Mar  6 04:08:19 2006 (rrao): tune -a 7 -c interpolate -f 112.8 -g 
+Mon Mar  6 04:08:25 2006 (rrao): tune -a 7 -c t joy 
+Mon Mar  6 04:09:00 2006 (cflee): tune -a 4 -c rfpower 16 
+Mon Mar  6 04:09:05 2006 (cflee): tune -a 4 -c rfpower 5 
+Mon Mar  6 04:09:11 2006 (cflee): tune -a 4 -c rfpower 10 
+Mon Mar  6 04:09:30 2006 (cflee): tune -a 6 -c rfpower -d 
+Mon Mar  6 04:09:47 2006 (cflee): tune -a 4 -c rfpower 18 
+Mon Mar  6 04:09:56 2006 (cflee): tune -a 4 -c rfpower 18.5 
+Mon Mar  6 04:10:01 2006 (rrao): tune -a 7 -c interpolate -f 112.8 -g 
+Mon Mar  6 04:10:05 2006 (rrao): tune -a 7 -c t joy 
+Mon Mar  6 04:10:05 2006 (cflee): tune -a 4 -c rfpower 16.5 
+Mon Mar  6 04:10:17 2006 (cflee): tune -a 4 -c rfpower 18 
+Mon Mar  6 04:11:19 2006 (rrao): tune -a 7 -c vbiaso -1.5 
+Mon Mar  6 04:11:21 2006 (cflee): observe -s saturn 
+Mon Mar  6 04:11:25 2006 (rrao): tune -a 7 -c vbias0 -1.5 
+Mon Mar  6 04:11:29 2006 (rrao): tune -a 7 -c vbias0 -1.4 
+Mon Mar  6 04:11:39 2006 (rrao): tune -a 7 -c opt curr -c 48 
+Mon Mar  6 04:11:51 2006 (rrao): tune -a 7 -c vbias0 -1.45 
+Mon Mar  6 04:11:55 2006 (rrao): tune -a 7 -c vbias0 -1.47 
+Mon Mar  6 04:12:04 2006 (cflee): resume 
+Mon Mar  6 04:12:09 2006 (rrao): tune -a 8 -c vbias0 2.8 
+Mon Mar  6 04:12:18 2006 (rrao): tune -a 8 -c opt curr -c 48 
+Mon Mar  6 04:12:22 2006 (cflee): openM3 
+Mon Mar  6 04:12:31 2006 (rrao): tune -a 7 -c vbias0 -1.45 
+Mon Mar  6 04:12:35 2006 (cflee): initChopper 
+Mon Mar  6 04:12:41 2006 (rrao): tune -a 7 -c iv0 
+Mon Mar  6 04:12:45 2006 (cflee): tsys 
+Mon Mar  6 04:13:25 2006 (rrao): tune -a 8 -c iv0 
+Mon Mar  6 04:13:52 2006 (rrao): tune -a 8 -c opt curr -c 48 
+Mon Mar  6 04:14:05 2006 (rrao): tune -a 7 -c opt curr -c 48 
+Mon Mar  6 04:14:19 2006 (rrao): tune -a 8 -c vbias0 2.83 
+Mon Mar  6 04:14:25 2006 (cflee): setIFLevels -v 
+Mon Mar  6 04:14:27 2006 (rrao): tune -a 7 -c vbias0 -1.46 
+Mon Mar  6 04:14:35 2006 (rrao): tune -a 8 -c iv0 
+Mon Mar  6 04:14:52 2006 (cflee): ivplot8 
+Mon Mar  6 04:14:59 2006 (cflee): ivplot8 
+Mon Mar  6 04:15:44 2006 (rrao): tune -a 5 -c opt curr -c 19 
+Mon Mar  6 04:15:53 2006 (rrao): tune -a 5 -c iv0 
+Mon Mar  6 04:16:38 2006 (cflee): tune -a 4 -c iv0 
+Mon Mar  6 04:18:32 2006 (cflee): tune -a 4 -c vbias0 2.35 
+Mon Mar  6 04:19:06 2006 (cflee): tune -a 4 -c rfpower -d 
+Mon Mar  6 04:19:40 2006 (cflee): ivplot8 
+Mon Mar  6 04:21:52 2006 (rrao): tsys -a 7 
+Mon Mar  6 04:22:08 2006 (rrao): tune -a 3 -c iv0 
+Mon Mar  6 04:22:36 2006 (rrao): tune -a 3 -c ob0 -v -s 
+Mon Mar  6 04:23:16 2006 (rrao): tune -a 3 -c iv0 
+Mon Mar  6 04:23:40 2006 (brownd): monitor 
+Mon Mar  6 04:23:46 2006 (rrao): tsys -a 3 
+Mon Mar  6 04:23:55 2006 (nimesh): project -r -i 60 -f ./test.pl 
+Mon Mar  6 04:24:04 2006 (rrao): tune -a 7 -c ob0 -v -s 
+Mon Mar  6 04:24:39 2006 (brownd): lookup -s 1058+015 
+Mon Mar  6 04:24:52 2006 (brownd): lookup -s 0825+031 
+Mon Mar  6 04:24:55 2006 (rrao): tune -a 7 -c iv0 
+Mon Mar  6 04:25:25 2006 (cflee): lookup -s 0825+031 
+Mon Mar  6 04:25:38 2006 (rrao): tune -a 7 -c vbias0 -1.48 
+Mon Mar  6 04:25:46 2006 (rrao): tsys -a 7 
+Mon Mar  6 04:26:07 2006 (rrao): tune -a 8 -c ob0 -v -s 
+Mon Mar  6 04:26:49 2006 (rrao): tune -a 8 -c iv0 
+Mon Mar  6 04:27:13 2006 (rrao): tsys -a 8 
+Mon Mar  6 04:27:24 2006 (rrao): tsys -a 8 
+Mon Mar  6 04:27:37 2006 (rrao): tsys -a 1 
+Mon Mar  6 04:27:59 2006 (rrao): tune -a 6 -c ob0 -v -s 
+Mon Mar  6 04:28:07 2006 (cflee): tsys -a 4 
+Mon Mar  6 04:28:53 2006 (rrao): tune -a 6 -c iv0 
+Mon Mar  6 04:29:16 2006 (rrao): tsys -a 6 
+Mon Mar  6 04:29:34 2006 (rrao): tune -a 5 -c ob0 -v -s 
+Mon Mar  6 04:30:25 2006 (rrao): tune -a 5 -c iv0 
+Mon Mar  6 04:30:47 2006 (rrao): tsys -a 5 
+Mon Mar  6 04:31:01 2006 (nimesh): monitor 
+Mon Mar  6 04:31:04 2006 (rrao): tune -a 4 -c ob0 -v -s 
+Mon Mar  6 04:31:49 2006 (rrao): tune -a 4 -c iv0 
+Mon Mar  6 04:32:16 2006 (rrao): tsys -a 4 
+Mon Mar  6 04:32:36 2006 (rrao): tune -a 2 -c ob0 -v -s 
+Mon Mar  6 04:33:32 2006 (rrao): tune -a 2 -c iv0 
+Mon Mar  6 04:33:39 2006 (cflee): ivplot8 
+Mon Mar  6 04:34:03 2006 (rrao): tsys -a 2 
+Mon Mar  6 04:34:24 2006 (rrao): tune -a 1 -c ob0 -v -s 
+Mon Mar  6 04:35:18 2006 (rrao): tune -a 1 -c iv0 
+Mon Mar  6 04:35:39 2006 (rrao): tsys -a 1 
+Mon Mar  6 04:35:54 2006 (rrao): tsys 
+Mon Mar  6 04:36:58 2006 (rrao): ivplot8 
+Mon Mar  6 04:38:14 2006 (cflee): setIFLevels -v 
+Mon Mar  6 04:45:25 2006 (brownd): monitor 
+Mon Mar  6 04:46:33 2006 (cflee): tsys 
+Mon Mar  6 04:47:05 2006 (cflee): setIFLevels -v 
+Mon Mar  6 04:48:22 2006 (brownd): monitor 
+Mon Mar  6 04:51:40 2006 (cflee): observe -s 0851+202 
+Mon Mar  6 04:53:06 2006 (cflee): setIFLevels -v 
+Mon Mar  6 04:54:22 2006 (cflee): lookup -s 0825+031 
+Mon Mar  6 04:54:31 2006 (cflee): lookup -s 0851+202 
+Mon Mar  6 04:59:12 2006 (cflee): observe -s saturn 
+Mon Mar  6 04:59:53 2006 (brownd): lookup -s saturn 
+Mon Mar  6 05:00:48 2006 (cflee): startChopping 
+Mon Mar  6 05:01:11 2006 (cflee): monitor 
+Mon Mar  6 05:01:50 2006 (cflee): monitor 
+Mon Mar 06 05:02:17 2006 (cflee): /application/bin/cpoint -s saturn -u l -c -q 
+Mon Mar  6 05:02:19 2006 (cflee): getAntList 
+Mon Mar  6 05:02:20 2006 (cflee): offsetUnit -s 2 
+Mon Mar  6 05:02:21 2006 (cflee): observe -s saturn 
+Mon Mar  6 05:02:21 2006 (cflee): antennaWait -e 4 
+Mon Mar  6 05:02:25 2006 (cflee): eloff -a 1 -s 7.820000 
+Mon Mar  6 05:02:26 2006 (cflee): azoff -a 1 -s -129.24 
+Mon Mar  6 05:02:26 2006 (cflee): eloff -a 2 -s 14.030000 
+Mon Mar  6 05:02:28 2006 (cflee): azoff -a 2 -s -132.32 
+Mon Mar  6 05:02:28 2006 (cflee): eloff -a 3 -s 14.200000 
+Mon Mar  6 05:02:29 2006 (cflee): azoff -a 3 -s -100.7 
+Mon Mar  6 05:02:30 2006 (cflee): eloff -a 4 -s 24.780000 
+Mon Mar  6 05:02:31 2006 (cflee): azoff -a 4 -s -78.46 
+Mon Mar  6 05:02:31 2006 (cflee): eloff -a 5 -s -4.790000e+00 
+Mon Mar  6 05:02:32 2006 (cflee): azoff -a 5 -s -108.5 
+Mon Mar  6 05:02:33 2006 (cflee): eloff -a 6 -s 0.750000 
+Mon Mar  6 05:02:34 2006 (cflee): azoff -a 6 -s -111.96 
+Mon Mar  6 05:02:34 2006 (cflee): eloff -a 7 -s -1.251000e+01 
+Mon Mar  6 05:02:35 2006 (cflee): azoff -a 7 -s -121.53 
+Mon Mar  6 05:02:36 2006 (cflee): eloff -a 8 -s -1.440000e+00 
+Mon Mar  6 05:02:37 2006 (cflee): azoff -a 8 -s -106.36 
+Mon Mar  6 05:02:37 2006 (cflee): antennaWait -e 4 
+Mon Mar  6 05:02:43 2006 (cflee): tsys 
+Mon Mar  6 05:02:54 2006 (cflee): azscan 
+Mon Mar  6 05:02:54 2006 (cflee): /application/bin/recordContinuum -a 1,2,3,4,5,6,7,8 -c 1 -s azscan -p 7,8 -u 1141621373 
+Mon Mar  6 05:05:03 2006 (cflee): stopScan 
+Mon Mar  6 05:05:04 2006 (cflee): eloff -a 1 -s 7.820000 
+Mon Mar  6 05:05:05 2006 (cflee): azoff -a 1 -s -1.924000e+01 
+Mon Mar  6 05:05:16 2006 (cflee): eloff -a 2 -s 14.030000 
+Mon Mar  6 05:05:17 2006 (cflee): azoff -a 2 -s -2.232000e+01 
+Mon Mar  6 05:05:27 2006 (cflee): eloff -a 3 -s 14.200000 
+Mon Mar  6 05:05:28 2006 (cflee): azoff -a 3 -s 9.300000 
+Mon Mar  6 05:05:38 2006 (cflee): eloff -a 4 -s 24.780000 
+Mon Mar  6 05:05:39 2006 (cflee): azoff -a 4 -s 31.540000 
+Mon Mar  6 05:05:48 2006 (cflee): eloff -a 5 -s -4.790000e+00 
+Mon Mar  6 05:05:49 2006 (cflee): azoff -a 5 -s 1.500000 
+Mon Mar  6 05:06:00 2006 (cflee): eloff -a 6 -s 0.750000 
+Mon Mar  6 05:06:01 2006 (cflee): azoff -a 6 -s -1.960000e+00 
+Mon Mar  6 05:06:11 2006 (cflee): eloff -a 7 -s -1.251000e+01 
+Mon Mar  6 05:06:12 2006 (cflee): azoff -a 7 -s -1.153000e+01 
+Mon Mar  6 05:06:20 2006 (cflee): eloff -a 8 -s -1.440000e+00 
+Mon Mar  6 05:06:21 2006 (cflee): azoff -a 8 -s 3.640000 
+Mon Mar  6 05:06:41 2006 (cflee): offsetUnit -s 2 
+Mon Mar  6 05:06:42 2006 (cflee): observe -s saturn 
+Mon Mar  6 05:06:43 2006 (cflee): antennaWait -e 4 
+Mon Mar  6 05:06:47 2006 (cflee): azoff -a 1 -s -64.24 
+Mon Mar  6 05:06:48 2006 (cflee): eloff -a 1 -s -102.18 
+Mon Mar  6 05:06:48 2006 (cflee): azoff -a 2 -s -67.32 
+Mon Mar  6 05:06:49 2006 (cflee): eloff -a 2 -s -95.97 
+Mon Mar  6 05:06:50 2006 (cflee): azoff -a 3 -s -35.7 
+Mon Mar  6 05:06:51 2006 (cflee): eloff -a 3 -s -95.8 
+Mon Mar  6 05:06:52 2006 (cflee): azoff -a 4 -s -13.46 
+Mon Mar  6 05:06:53 2006 (cflee): eloff -a 4 -s -85.22 
+Mon Mar  6 05:06:54 2006 (cflee): azoff -a 5 -s -43.5 
+Mon Mar  6 05:06:55 2006 (cflee): eloff -a 5 -s -114.79 
+Mon Mar  6 05:06:55 2006 (cflee): azoff -a 6 -s -46.96 
+Mon Mar  6 05:06:56 2006 (cflee): eloff -a 6 -s -109.25 
+Mon Mar  6 05:06:57 2006 (cflee): azoff -a 7 -s -56.53 
+Mon Mar  6 05:06:58 2006 (cflee): eloff -a 7 -s -122.51 
+Mon Mar  6 05:06:59 2006 (cflee): azoff -a 8 -s -41.36 
+Mon Mar  6 05:07:00 2006 (cflee): eloff -a 8 -s -111.44 
+Mon Mar  6 05:07:00 2006 (cflee): antennaWait -e 4 
+Mon Mar  6 05:07:06 2006 (cflee): tsys 
+Mon Mar  6 05:07:17 2006 (cflee): elscan 
+Mon Mar  6 05:07:17 2006 (cflee): /application/bin/recordContinuum -a 1,2,3,4,5,6,7,8 -c 1 -s elscan -p 7,8 -u 1141621637 
+Mon Mar  6 05:08:08 2006 (brownd): monitor 
+Mon Mar  6 05:09:17 2006 (cflee): stopScan 
+Mon Mar  6 05:09:18 2006 (cflee): eloff -a 1 -s 7.820000 
+Mon Mar  6 05:09:19 2006 (cflee): azoff -a 1 -s -1.924000e+01 
+Mon Mar  6 05:11:53 2006 (cflee): azoff -a 1 -s -24.33 
+Mon Mar  6 05:11:54 2006 (cflee): eloff -a 1 -s -7.39 
+Mon Mar  6 05:11:55 2006 (cflee): eloff -a 2 -s 14.030000 
+Mon Mar  6 05:11:57 2006 (cflee): azoff -a 2 -s -2.232000e+01 
+Mon Mar  6 05:12:20 2006 (cflee): azoff -a 2 -s -6.90 
+Mon Mar  6 05:12:21 2006 (cflee): eloff -a 2 -s -9.11 
+Mon Mar  6 05:12:22 2006 (cflee): eloff -a 3 -s 14.200000 
+Mon Mar  6 05:12:23 2006 (cflee): azoff -a 3 -s 9.300000 
+Mon Mar  6 05:12:41 2006 (cflee): azoff -a 3 -s 21.69 
+Mon Mar  6 05:12:42 2006 (cflee): eloff -a 3 -s -16.75 
+Mon Mar  6 05:12:43 2006 (cflee): eloff -a 4 -s 24.780000 
+Mon Mar  6 05:12:44 2006 (cflee): azoff -a 4 -s 31.540000 
+Mon Mar  6 05:12:57 2006 (cflee): azoff -a 4 -s 12.03 
+Mon Mar  6 05:12:58 2006 (cflee): eloff -a 4 -s -5.12 
+Mon Mar  6 05:12:59 2006 (cflee): eloff -a 5 -s -4.790000e+00 
+Mon Mar  6 05:13:00 2006 (cflee): azoff -a 5 -s 1.500000 
+Mon Mar  6 05:13:17 2006 (cflee): azoff -a 5 -s 0.32 
+Mon Mar  6 05:13:18 2006 (cflee): eloff -a 5 -s 0.16 
+Mon Mar  6 05:13:19 2006 (cflee): eloff -a 6 -s 0.750000 
+Mon Mar  6 05:13:20 2006 (cflee): azoff -a 6 -s -1.960000e+00 
+Mon Mar  6 05:13:38 2006 (cflee): eloff -a 7 -s -1.251000e+01 
+Mon Mar  6 05:13:40 2006 (cflee): azoff -a 7 -s -1.153000e+01 
+Mon Mar  6 05:13:52 2006 (cflee): azoff -a 7 -s -34.43 
+Mon Mar  6 05:13:53 2006 (cflee): eloff -a 7 -s 2.30 
+Mon Mar  6 05:13:54 2006 (cflee): eloff -a 8 -s -1.440000e+00 
+Mon Mar  6 05:13:55 2006 (cflee): azoff -a 8 -s 3.640000 
+Mon Mar  6 05:14:42 2006 (cflee): azoff -a 8 -s 3.48 
+Mon Mar  6 05:14:43 2006 (cflee): eloff -a 8 -s 1.52 
+Mon Mar  6 05:17:27 2006 (cflee): stopChopping 
+Mon Mar 06 05:18:58 2006 (cflee): /application/bin/cpoint -a 6 -s saturn -u l -p -q 
+Mon Mar  6 05:19:00 2006 (cflee): offsetUnit -a 6 -s 2 
+Mon Mar  6 05:19:02 2006 (cflee): observe -a 6 -s saturn 
+Mon Mar  6 05:19:02 2006 (cflee): antennaWait -a 6 -e 4 
+Mon Mar  6 05:19:06 2006 (cflee): eloff -a 6 -s 0.750000 
+Mon Mar  6 05:19:07 2006 (cflee): azoff -a 6 -s -111.96 
+Mon Mar  6 05:19:08 2006 (cflee): antennaWait -a 6 -e 4 
+Mon Mar  6 05:19:14 2006 (cflee): tsys -a 6 
+Mon Mar  6 05:19:24 2006 (cflee): azscan -a 6 
+Mon Mar  6 05:19:25 2006 (cflee): /application/bin/recordContinuum -a 6 -c 0 -s azscan -p 7,8 -u 1141622364 
+Mon Mar  6 05:21:18 2006 (cflee): stopScan -a 6 
+Mon Mar  6 05:21:20 2006 (cflee): eloff -a 6 -s 0.750000 
+Mon Mar  6 05:21:21 2006 (cflee): azoff -a 6 -s -1.960000e+00 
+Mon Mar  6 05:21:31 2006 (cflee): offsetUnit -a 6 -s 2 
+Mon Mar  6 05:21:32 2006 (cflee): observe -a 6 -s saturn 
+Mon Mar  6 05:21:33 2006 (cflee): antennaWait -a 6 -e 4 
+Mon Mar  6 05:21:36 2006 (cflee): azoff -a 6 -s -1.960000e+00 
+Mon Mar  6 05:21:37 2006 (cflee): eloff -a 6 -s -109.25 
+Mon Mar  6 05:21:37 2006 (cflee): antennaWait -a 6 -e 4 
+Mon Mar  6 05:21:44 2006 (cflee): tsys -a 6 
+Mon Mar  6 05:21:54 2006 (cflee): elscan -a 6 
+Mon Mar  6 05:21:54 2006 (cflee): /application/bin/recordContinuum -a 6 -c 0 -s elscan -p 7,8 -u 1141622514 
+Mon Mar  6 05:23:48 2006 (cflee): stopScan -a 6 
+Mon Mar  6 05:23:50 2006 (cflee): eloff -a 6 -s 0.750000 
+Mon Mar  6 05:23:51 2006 (cflee): azoff -a 6 -s -1.960000e+00 
+Mon Mar  6 05:24:20 2006 (cflee): azoff -a 6 -s -6.38 
+Mon Mar  6 05:24:21 2006 (cflee): eloff -a 6 -s -1.29 
+Mon Mar  6 05:27:17 2006 (lzapata): monitor 
+Mon Mar  6 05:29:50 2006 (cflee): setChunkPhaseOffsets -l 
+Mon Mar  6 05:32:03 2006 (cflee): setChunkPhaseOffsets -u 
+Mon Mar  6 05:34:06 2006 (cflee): setChunkPhaseOffsets -u 
+Mon Mar  6 05:35:10 2006 (apeck): monitor 
+Mon Mar  6 05:35:45 2006 (cflee): newFile 

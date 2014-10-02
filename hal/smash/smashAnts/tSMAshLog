@@ -1,0 +1,2000 @@
+Sun Jul  9 05:38:09 2006 (shostler): lookup -s callisto 
+Sun Jul  9 05:38:10 2006 (shostler): observe -s callisto -t flux 
+Sun Jul  9 05:38:11 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 05:43:19 2006 (shostler): lookup -s callisto 
+Sun Jul  9 05:43:19 2006 (shostler): observe -s callisto -t flux 
+Sun Jul  9 05:43:21 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 05:48:29 2006 (shostler): lookup -s callisto 
+Sun Jul  9 05:48:29 2006 (shostler): observe -s callisto -t flux 
+Sun Jul  9 05:48:30 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 05:53:38 2006 (shostler): lookup -s callisto 
+Sun Jul  9 05:53:39 2006 (shostler): observe -s callisto -t flux 
+Sun Jul  9 05:53:40 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 05:58:48 2006 (shostler): lookup -s callisto 
+Sun Jul  9 05:58:48 2006 (shostler): observe -s callisto -t flux 
+Sun Jul  9 05:58:50 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 06:03:58 2006 (shostler): lookup -s 3c279 
+Sun Jul  9 06:03:59 2006 (shostler): lookup -s 3c279 
+Sun Jul  9 06:03:59 2006 (shostler): observe -s 3c279 -t bandpass 
+Sun Jul  9 06:04:00 2006 (shostler): tsys 
+Sun Jul  9 06:04:11 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 06:09:39 2006 (shostler): lookup -s 3c279 
+Sun Jul  9 06:09:39 2006 (shostler): observe -s 3c279 -t bandpass 
+Sun Jul  9 06:09:40 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 06:14:48 2006 (shostler): lookup -s 3c279 
+Sun Jul  9 06:14:49 2006 (shostler): observe -s 3c279 -t bandpass 
+Sun Jul  9 06:14:50 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 06:19:58 2006 (shostler): lookup -s 3c279 
+Sun Jul  9 06:19:58 2006 (shostler): observe -s 3c279 -t bandpass 
+Sun Jul  9 06:20:00 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 06:25:08 2006 (shostler): lookup -s 3c279 
+Sun Jul  9 06:25:08 2006 (shostler): observe -s 3c279 -t bandpass 
+Sun Jul  9 06:25:09 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 06:30:18 2006 (shostler): lookup -s 3c279 
+Sun Jul  9 06:30:18 2006 (shostler): observe -s 3c279 -t bandpass 
+Sun Jul  9 06:30:19 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 06:35:27 2006 (shostler): lookup -s 3c279 
+Sun Jul  9 06:35:27 2006 (shostler): observe -s 3c279 -t bandpass 
+Sun Jul  9 06:35:29 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 06:40:37 2006 (shostler): lookup -s 3c279 
+Sun Jul  9 06:40:37 2006 (shostler): observe -s 3c279 -t bandpass 
+Sun Jul  9 06:40:39 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 06:45:47 2006 (shostler): lookup -s 3c279 
+Sun Jul  9 06:45:47 2006 (shostler): observe -s 3c279 -t bandpass 
+Sun Jul  9 06:45:48 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 06:50:56 2006 (shostler): lookup -s 3c279 
+Sun Jul  9 06:50:57 2006 (shostler): observe -s 3c279 -t bandpass 
+Sun Jul  9 06:50:58 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 06:56:06 2006 (shostler): lookup -s 3c279 
+Sun Jul  9 06:56:07 2006 (shostler): observe -s 3c279 -t bandpass 
+Sun Jul  9 06:56:08 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 07:01:16 2006 (shostler): lookup -s 3c279 
+Sun Jul  9 07:01:16 2006 (shostler): observe -s 3c279 -t bandpass 
+Sun Jul  9 07:01:17 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 07:06:26 2006 (shostler): lookup -s 3c279 
+Sun Jul  9 07:06:26 2006 (shostler): observe -s 3c279 -t bandpass 
+Sun Jul  9 07:06:27 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 07:11:36 2006 (shostler): lookup -s 3c279 
+Sun Jul  9 07:11:36 2006 (shostler): observe -s 3c279 -t bandpass 
+Sun Jul  9 07:11:37 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 07:16:01 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 07:16:45 2006 (shostler): lookup -s 3c279 
+Sun Jul  9 07:16:45 2006 (shostler): observe -s 3c279 -t bandpass 
+Sun Jul  9 07:16:47 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 07:21:55 2006 (shostler): lookup -s 2230+114 
+Sun Jul  9 07:21:56 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 07:21:56 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 07:21:57 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 07:21:58 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 07:21:58 2006 (shostler): observe -s 3c418 
+Sun Jul  9 07:22:00 2006 (shostler): tsys 
+Sun Jul  9 07:22:11 2006 (shostler): observe -s 3c345 
+Sun Jul  9 07:22:42 2006 (shostler): tsys 
+Sun Jul  9 07:23:24 2006 (shostler): point -i 60 -r 2 -t -l -L -Q 
+		Repetition 1:
+		Ant 1	AzOff =  -6.1	ElOff =  -8.4	deltaAz =  -5.4	deltaEl =  -7.4
+		Ant 2	AzOff =  -0.1	ElOff =  -4.3	deltaAz =   5.7	deltaEl =   0.6
+		Ant 3	AzOff =  -2.4	ElOff =  -7.7	deltaAz =  -5.7	deltaEl =  -2.4
+		Ant 4	AzOff =  -6.2	ElOff = -12.6	deltaAz =  -5.0	deltaEl =  -4.8
+		Ant 5	AzOff =  -1.9	ElOff =  -2.2	deltaAz =  -2.8	deltaEl =  -3.5
+		Ant 6	AzOff =   5.5	ElOff =  -3.1	deltaAz =  -3.6	deltaEl =  -7.6
+		Repetition 2:
+		Ant 1	AzOff =  -4.7	ElOff =  -8.6	deltaAz =  -4.0	deltaEl =  -7.6
+		Ant 2	AzOff =   5.2	ElOff =   1.9	deltaAz =  11.0	deltaEl =   6.8
+		Ant 3	AzOff =  -4.0	ElOff =  -4.3	deltaAz =  -7.3	deltaEl =   1.0
+		Ant 4	AzOff =  -7.5	ElOff = -15.8	deltaAz =  -6.4	deltaEl =  -8.0
+		Ant 5	AzOff =  -0.6	ElOff =  -1.4	deltaAz =  -1.5	deltaEl =  -2.7
+		Ant 6	AzOff =   3.3	ElOff =  -6.2	deltaAz =  -5.8	deltaEl = -10.7
+		Average:
+		Ant 1	AzOff =  -5.4	ElOff =  -8.5	deltaAz =  -4.7	deltaEl =  -7.5
+		Ant 2	AzOff =   2.5	ElOff =  -1.2	deltaAz =   8.3	deltaEl =   3.7
+		Ant 3	AzOff =  -3.2	ElOff =  -6.0	deltaAz =  -6.5	deltaEl =  -0.7
+		Ant 4	AzOff =  -6.8	ElOff = -14.2	deltaAz =  -5.7	deltaEl =  -6.4
+		Ant 5	AzOff =  -1.2	ElOff =  -1.8	deltaAz =  -2.2	deltaEl =  -3.1
+		Ant 6	AzOff =   4.4	ElOff =  -4.6	deltaAz =  -4.7	deltaEl =  -9.2
+Sun Jul  9 07:35:51 2006 (shostler): observe -s 3c418 
+Sun Jul  9 07:36:15 2006 (shostler): tsys 
+Sun Jul  9 07:37:20 2006 (shostler): observe -s 3c279 
+Sun Jul  9 07:38:14 2006 (shostler): point -i 60 -r 2 -t -l -L -Q 
+		Repetition 1:
+		Ant 1	AzOff =  -5.9	ElOff =  -3.9	deltaAz =  -0.5	deltaEl =   4.5
+		Ant 2	AzOff =  -3.4	ElOff =  -4.2	deltaAz =  -6.0	deltaEl =  -3.0
+		Ant 3	AzOff =  -3.8	ElOff =  -5.5	deltaAz =  -0.6	deltaEl =   0.5
+		Ant 4	AzOff =  -9.8	ElOff =  -5.0	deltaAz =  -2.9	deltaEl =   9.3
+		Ant 5	AzOff =   0.5	ElOff =  -2.7	deltaAz =   1.7	deltaEl =  -0.9
+		Ant 6	AzOff =   4.7	ElOff =  -0.4	deltaAz =   0.3	deltaEl =   4.3
+		Ant 8	AzOff =  -2.3	ElOff =  -0.2	deltaAz =  -3.5	deltaEl =   5.5
+		Repetition 2:
+		Ant 1	AzOff =   2.2	ElOff =  -3.5	deltaAz =   7.5	deltaEl =   4.9
+		Ant 2	AzOff =  -3.3	ElOff =  -3.4	deltaAz =  -5.9	deltaEl =  -2.1
+		Ant 3	AzOff =  -2.5	ElOff =  -4.9	deltaAz =   0.7	deltaEl =   1.1
+		Ant 4	AzOff =  -5.3	ElOff =  -3.4	deltaAz =   1.6	deltaEl =  10.9
+		Ant 5	AzOff =   1.7	ElOff =   0.4	deltaAz =   2.9	deltaEl =   2.2
+		Ant 6	AzOff =   1.7	ElOff =   8.8	deltaAz =  -2.7	deltaEl =  13.4
+		Ant 8	AzOff =   1.9	ElOff =  -2.0	deltaAz =   0.7	deltaEl =   3.7
+		Average:
+		Ant 1	AzOff =  -1.9	ElOff =  -3.7	deltaAz =   3.5	deltaEl =   4.7
+		Ant 2	AzOff =  -3.4	ElOff =  -3.8	deltaAz =  -5.9	deltaEl =  -2.6
+		Ant 3	AzOff =  -3.2	ElOff =  -5.2	deltaAz =   0.1	deltaEl =   0.8
+		Ant 4	AzOff =  -7.5	ElOff =  -4.2	deltaAz =  -0.7	deltaEl =  10.1
+		Ant 5	AzOff =   1.1	ElOff =  -1.2	deltaAz =   2.3	deltaEl =   0.6
+		Ant 6	AzOff =   3.2	ElOff =   4.2	deltaAz =  -1.2	deltaEl =   8.8
+		Ant 8	AzOff =  -0.2	ElOff =  -1.1	deltaAz =  -1.4	deltaEl =   4.6
+Sun Jul  9 07:50:49 2006 (shostler): observe -s 3c418 
+Sun Jul  9 07:50:50 2006 (shostler): tsys 
+Sun Jul  9 07:52:11 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 07:56:09 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 07:56:10 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 07:56:11 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 07:56:11 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 07:56:12 2006 (shostler): tsys 
+Sun Jul  9 07:56:24 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 08:00:33 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 08:00:34 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 08:00:34 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 08:00:35 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 08:00:36 2006 (shostler): tsys 
+Sun Jul  9 08:00:47 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 08:05:58 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 08:05:58 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 08:06:00 2006 (shostler): tsys 
+Sun Jul  9 08:06:11 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 08:10:21 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 08:10:22 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 08:10:23 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 08:10:23 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 08:10:24 2006 (shostler): tsys 
+Sun Jul  9 08:10:36 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 08:15:47 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 08:15:47 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 08:15:48 2006 (shostler): tsys 
+Sun Jul  9 08:15:59 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 08:19:08 2006 (pyamaguc): monitor 
+Sun Jul  9 08:20:10 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 08:20:10 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 08:20:11 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 08:20:12 2006 (shostler): observe -s 3c418 
+Sun Jul  9 08:20:13 2006 (shostler): tsys 
+Sun Jul  9 08:20:24 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 08:24:33 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 08:24:34 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 08:24:35 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 08:24:35 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 08:24:36 2006 (shostler): tsys 
+Sun Jul  9 08:24:47 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 08:28:56 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 08:28:57 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 08:28:58 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 08:28:58 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 08:28:59 2006 (shostler): tsys 
+Sun Jul  9 08:29:10 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 08:34:21 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 08:34:22 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 08:34:23 2006 (shostler): tsys 
+Sun Jul  9 08:34:34 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 08:39:00 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 08:39:01 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 08:39:02 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 08:39:02 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 08:39:03 2006 (shostler): tsys 
+Sun Jul  9 08:39:15 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 08:44:25 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 08:44:26 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 08:44:27 2006 (shostler): tsys 
+Sun Jul  9 08:44:38 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 08:49:04 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 08:49:05 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 08:49:06 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 08:49:06 2006 (shostler): observe -s 3c418 
+Sun Jul  9 08:49:07 2006 (shostler): tsys 
+Sun Jul  9 08:49:19 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 08:53:28 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 08:53:28 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 08:53:29 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 08:53:29 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 08:53:30 2006 (shostler): tsys 
+Sun Jul  9 08:53:42 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 08:57:51 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 08:57:51 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 08:57:52 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 08:57:52 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 08:57:54 2006 (shostler): tsys 
+Sun Jul  9 08:58:05 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 09:03:16 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 09:03:16 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 09:03:17 2006 (shostler): tsys 
+Sun Jul  9 09:03:29 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 09:07:39 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 09:07:40 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 09:07:41 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 09:07:41 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 09:07:42 2006 (shostler): tsys 
+Sun Jul  9 09:07:54 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 09:13:05 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 09:13:05 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 09:13:06 2006 (shostler): tsys 
+Sun Jul  9 09:13:17 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 09:17:28 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 09:17:28 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 09:17:29 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 09:17:29 2006 (shostler): observe -s 3c418 
+Sun Jul  9 09:17:31 2006 (shostler): tsys 
+Sun Jul  9 09:17:42 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 09:21:51 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 09:21:52 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 09:21:53 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 09:21:53 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 09:21:54 2006 (shostler): tsys 
+Sun Jul  9 09:22:05 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 09:26:14 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 09:26:15 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 09:26:16 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 09:26:16 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 09:26:17 2006 (shostler): tsys 
+Sun Jul  9 09:26:28 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 09:31:40 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 09:31:40 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 09:31:41 2006 (shostler): tsys 
+Sun Jul  9 09:31:52 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 09:36:03 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 09:36:03 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 09:36:04 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 09:36:04 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 09:36:06 2006 (shostler): tsys 
+Sun Jul  9 09:36:17 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 09:41:28 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 09:41:28 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 09:41:30 2006 (shostler): tsys 
+Sun Jul  9 09:41:41 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 09:44:59 2006 (hchen): monitor 
+Sun Jul  9 09:45:51 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 09:45:52 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 09:45:53 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 09:45:54 2006 (shostler): observe -s 3c418 
+Sun Jul  9 09:45:55 2006 (shostler): tsys 
+Sun Jul  9 09:46:06 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 09:50:15 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 09:50:15 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 09:50:16 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 09:50:17 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 09:50:18 2006 (shostler): tsys 
+Sun Jul  9 09:50:29 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 09:54:38 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 09:54:39 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 09:54:39 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 09:54:40 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 09:54:41 2006 (shostler): tsys 
+Sun Jul  9 09:54:52 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 10:00:03 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 10:00:03 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 10:00:05 2006 (shostler): tsys 
+Sun Jul  9 10:00:16 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 10:04:26 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 10:04:27 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 10:04:28 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 10:04:28 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 10:04:30 2006 (shostler): tsys 
+Sun Jul  9 10:04:41 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 10:09:52 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 10:09:52 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 10:09:53 2006 (shostler): tsys 
+Sun Jul  9 10:10:05 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 10:14:15 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 10:14:16 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 10:14:16 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 10:14:17 2006 (shostler): observe -s 3c418 
+Sun Jul  9 10:14:18 2006 (shostler): tsys 
+Sun Jul  9 10:14:29 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 10:18:38 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 10:18:39 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 10:18:40 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 10:18:40 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 10:18:41 2006 (shostler): tsys 
+Sun Jul  9 10:18:53 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 10:23:01 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 10:23:02 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 10:23:03 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 10:23:03 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 10:23:04 2006 (shostler): tsys 
+Sun Jul  9 10:23:16 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 10:28:27 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 10:28:27 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 10:28:29 2006 (shostler): tsys 
+Sun Jul  9 10:28:40 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 10:33:05 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 10:33:06 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 10:33:07 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 10:33:07 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 10:33:08 2006 (shostler): tsys 
+Sun Jul  9 10:33:19 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 10:37:09 2006 (root): monitor 
+Sun Jul  9 10:38:31 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 10:38:31 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 10:38:32 2006 (shostler): tsys 
+Sun Jul  9 10:38:43 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 10:39:16 2006 (root): monitor 
+Sun Jul  9 10:42:54 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 10:42:55 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 10:42:56 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 10:42:56 2006 (shostler): observe -s 3c418 
+Sun Jul  9 10:42:57 2006 (shostler): tsys 
+Sun Jul  9 10:43:09 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 10:47:17 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 10:47:18 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 10:47:18 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 10:47:19 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 10:47:20 2006 (shostler): tsys 
+Sun Jul  9 10:47:31 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 10:51:40 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 10:51:41 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 10:51:42 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 10:51:42 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 10:51:43 2006 (shostler): tsys 
+Sun Jul  9 10:51:55 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 10:57:06 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 10:57:06 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 10:57:07 2006 (shostler): tsys 
+Sun Jul  9 10:57:18 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 11:01:29 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 11:01:30 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 11:01:30 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 11:01:31 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 11:01:32 2006 (shostler): tsys 
+Sun Jul  9 11:01:44 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 11:06:54 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 11:06:54 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 11:06:56 2006 (shostler): tsys 
+Sun Jul  9 11:07:07 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 11:11:18 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 11:11:18 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 11:11:19 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 11:11:19 2006 (shostler): observe -s 3c418 
+Sun Jul  9 11:11:21 2006 (shostler): tsys 
+Sun Jul  9 11:11:32 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 11:15:41 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 11:15:42 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 11:15:42 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 11:15:43 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 11:15:44 2006 (shostler): tsys 
+Sun Jul  9 11:15:56 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 11:20:04 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 11:20:06 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 11:20:07 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 11:20:08 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 11:20:09 2006 (shostler): tsys 
+Sun Jul  9 11:20:20 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 11:25:29 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 11:25:29 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 11:25:31 2006 (shostler): tsys 
+Sun Jul  9 11:25:42 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 11:29:52 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 11:29:53 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 11:29:54 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 11:29:55 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 11:29:56 2006 (shostler): tsys 
+Sun Jul  9 11:30:07 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 11:35:18 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 11:35:18 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 11:35:19 2006 (shostler): tsys 
+Sun Jul  9 11:35:30 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 11:39:41 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 11:39:42 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 11:39:43 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 11:39:43 2006 (shostler): observe -s 3c418 
+Sun Jul  9 11:39:44 2006 (shostler): tsys 
+Sun Jul  9 11:39:56 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 11:44:04 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 11:44:05 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 11:44:06 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 11:44:06 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 11:44:07 2006 (shostler): tsys 
+Sun Jul  9 11:44:19 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 11:48:27 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 11:48:28 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 11:48:29 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 11:48:29 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 11:48:30 2006 (shostler): tsys 
+Sun Jul  9 11:48:42 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 11:53:53 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 11:53:53 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 11:53:54 2006 (shostler): tsys 
+Sun Jul  9 11:54:06 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 11:58:16 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 11:58:17 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 11:58:17 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 11:58:18 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 11:58:19 2006 (shostler): tsys 
+Sun Jul  9 11:58:30 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 12:03:41 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 12:03:42 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 12:03:43 2006 (shostler): tsys 
+Sun Jul  9 12:03:54 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 12:08:05 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 12:08:05 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 12:08:06 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 12:08:07 2006 (shostler): observe -s 3c418 
+Sun Jul  9 12:08:08 2006 (shostler): tsys 
+Sun Jul  9 12:08:19 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 12:12:28 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 12:12:29 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 12:12:29 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 12:12:29 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 12:12:31 2006 (shostler): tsys 
+Sun Jul  9 12:12:42 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 12:16:51 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 12:16:52 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 12:16:53 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 12:16:53 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 12:16:54 2006 (shostler): tsys 
+Sun Jul  9 12:17:05 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 12:22:47 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 12:22:48 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 12:22:49 2006 (shostler): tsys 
+Sun Jul  9 12:23:00 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 12:27:11 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 12:27:11 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 12:27:12 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 12:27:12 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 12:27:13 2006 (shostler): tsys 
+Sun Jul  9 12:27:25 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 12:32:36 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 12:32:36 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 12:32:37 2006 (shostler): tsys 
+Sun Jul  9 12:32:49 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 12:36:59 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 12:37:00 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 12:37:01 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 12:37:01 2006 (shostler): observe -s 3c418 
+Sun Jul  9 12:37:02 2006 (shostler): tsys 
+Sun Jul  9 12:37:14 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 12:41:24 2006 (shostler): observe -s 3c454.3 
+Sun Jul  9 12:41:26 2006 (shostler): tsys 
+Sun Jul  9 12:42:30 2006 (shostler): point -i 60 -r 2 -t -l -L -Q 
+		Repetition 1:
+		Ant 1	AzOff = -10.5	ElOff =   1.3	deltaAz =  -8.6	deltaEl =   5.0
+		Ant 2	AzOff =   7.8	ElOff =  -2.9	deltaAz =  11.2	deltaEl =   0.9
+		Ant 3	AzOff =   2.1	ElOff =  -2.2	deltaAz =   5.3	deltaEl =   3.0
+		Ant 4	AzOff =  -5.6	ElOff = -12.6	deltaAz =   1.9	deltaEl =  -8.4
+		Ant 5	AzOff =   0.1	ElOff =   3.4	deltaAz =  -1.0	deltaEl =   4.6
+		Ant 6	AzOff =   8.1	ElOff =   7.3	deltaAz =   4.9	deltaEl =   3.1
+		Ant 8	AzOff =   9.2	ElOff =   0.7	deltaAz =   9.4	deltaEl =   1.8
+		Repetition 2:
+		Ant 1	AzOff =  -4.3	ElOff =  -4.5	deltaAz =  -2.4	deltaEl =  -0.7
+		Ant 2	AzOff =   5.9	ElOff =  -3.0	deltaAz =   9.3	deltaEl =   0.8
+		Ant 3	AzOff =   0.9	ElOff =  -2.7	deltaAz =   4.1	deltaEl =   2.5
+		Ant 4	AzOff =  -3.8	ElOff =  -9.5	deltaAz =   3.7	deltaEl =  -5.4
+		Ant 5	AzOff =   3.5	ElOff =   6.4	deltaAz =   2.4	deltaEl =   7.6
+		Ant 6	AzOff =   2.3	ElOff =   7.7	deltaAz =  -0.9	deltaEl =   3.5
+		Ant 8	AzOff =  10.9	ElOff =  -0.9	deltaAz =  11.1	deltaEl =   0.2
+		Average:
+		Ant 1	AzOff =  -7.4	ElOff =  -1.6	deltaAz =  -5.5	deltaEl =   2.1
+		Ant 2	AzOff =   6.9	ElOff =  -2.9	deltaAz =  10.2	deltaEl =   0.9
+		Ant 3	AzOff =   1.5	ElOff =  -2.5	deltaAz =   4.7	deltaEl =   2.7
+		Ant 4	AzOff =  -4.7	ElOff = -11.1	deltaAz =   2.8	deltaEl =  -6.9
+		Ant 5	AzOff =   1.8	ElOff =   4.9	deltaAz =   0.7	deltaEl =   6.1
+		Ant 6	AzOff =   5.2	ElOff =   7.5	deltaAz =   2.0	deltaEl =   3.3
+		Ant 8	AzOff =  10.1	ElOff =  -0.1	deltaAz =  10.2	deltaEl =   1.0
+Sun Jul  9 12:54:47 2006 (shostler): setIFLevels -v -a 5 -2 
+Sun Jul  9 12:55:45 2006 (shostler): observe -s 3c418 
+Sun Jul  9 12:55:49 2006 (shostler): tsys 
+Sun Jul  9 12:57:10 2006 (shostler): integrate -s 16 
+Sun Jul  9 13:01:20 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 13:01:20 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 13:01:21 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 13:01:21 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 13:01:23 2006 (shostler): tsys 
+Sun Jul  9 13:01:34 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 13:05:41 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 13:05:41 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 13:05:42 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 13:05:42 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 13:05:43 2006 (shostler): tsys 
+Sun Jul  9 13:05:55 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 13:11:06 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 13:11:06 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 13:11:07 2006 (shostler): tsys 
+Sun Jul  9 13:11:19 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 13:15:29 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 13:15:30 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 13:15:30 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 13:15:31 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 13:15:32 2006 (shostler): tsys 
+Sun Jul  9 13:15:43 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 13:20:54 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 13:20:54 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 13:20:56 2006 (shostler): tsys 
+Sun Jul  9 13:21:07 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 13:25:18 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 13:25:18 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 13:25:19 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 13:25:20 2006 (shostler): observe -s 3c418 
+Sun Jul  9 13:25:21 2006 (shostler): tsys 
+Sun Jul  9 13:25:32 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 13:29:41 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 13:29:42 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 13:29:42 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 13:29:43 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 13:29:44 2006 (shostler): tsys 
+Sun Jul  9 13:29:50 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 13:30:09 2006 (shostler): tsys 
+Sun Jul  9 13:30:35 2006 (shostler): azoff -a 1 -s -1.9 
+Sun Jul  9 13:30:41 2006 (shostler): eloff -a 1 -s -3.7 
+Sun Jul  9 13:30:48 2006 (shostler): azoff -a 2 -s -3.4 
+Sun Jul  9 13:30:52 2006 (shostler): eloff -a 2 -s -3.8 
+Sun Jul  9 13:30:56 2006 (shostler): azoff -a 3 -s -3.2 
+Sun Jul  9 13:31:01 2006 (shostler): eloff -a 3 -s -5.2 
+Sun Jul  9 13:31:05 2006 (shostler): azoff -a 4 -s -7.5 
+Sun Jul  9 13:31:09 2006 (shostler): eloff -a 4 -s -4.2 
+Sun Jul  9 13:31:13 2006 (shostler): azoff -a 5 -s 1.1 
+Sun Jul  9 13:31:17 2006 (shostler): eloff -a 5 -s -1.2 
+Sun Jul  9 13:31:22 2006 (shostler): azoff -a 6 -s 3.2 
+Sun Jul  9 13:31:27 2006 (shostler): eloff -a 6 -s 4.2 
+Sun Jul  9 13:31:31 2006 (shostler): azoff -a 8 -s -0.2 
+Sun Jul  9 13:31:36 2006 (shostler): eloff -a 8 -s -1.1 
+Sun Jul  9 13:35:58 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 13:35:59 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 13:36:00 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 13:36:00 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 13:36:01 2006 (shostler): tsys 
+Sun Jul  9 13:36:13 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 13:41:33 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 13:41:33 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 13:41:35 2006 (shostler): tsys 
+Sun Jul  9 13:41:46 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 13:45:56 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 13:45:57 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 13:45:58 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 13:45:58 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 13:46:00 2006 (shostler): tsys 
+Sun Jul  9 13:46:11 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 13:51:22 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 13:51:22 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 13:51:23 2006 (shostler): tsys 
+Sun Jul  9 13:51:34 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 13:55:45 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 13:55:46 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 13:55:47 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 13:55:47 2006 (shostler): observe -s 3c418 
+Sun Jul  9 13:55:49 2006 (shostler): tsys 
+Sun Jul  9 13:56:00 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 14:00:08 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 14:00:09 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 14:00:10 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 14:00:10 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 14:00:11 2006 (shostler): tsys 
+Sun Jul  9 14:00:23 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 14:04:31 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 14:04:32 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 14:04:33 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 14:04:33 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 14:04:35 2006 (shostler): tsys 
+Sun Jul  9 14:04:46 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 14:09:57 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 14:09:57 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 14:09:59 2006 (shostler): tsys 
+Sun Jul  9 14:10:10 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 14:13:28 2006 (shostler): monitor 
+Sun Jul  9 14:14:20 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 14:14:21 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 14:14:21 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 14:14:22 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 14:14:23 2006 (shostler): tsys 
+Sun Jul  9 14:14:34 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 14:19:45 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 14:19:46 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 14:19:47 2006 (shostler): tsys 
+Sun Jul  9 14:19:58 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 14:24:09 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 14:24:09 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 14:24:10 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 14:24:11 2006 (shostler): observe -s 3c418 
+Sun Jul  9 14:24:12 2006 (shostler): tsys 
+Sun Jul  9 14:24:23 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 14:28:32 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 14:28:32 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 14:28:33 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 14:28:33 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 14:28:35 2006 (shostler): tsys 
+Sun Jul  9 14:28:46 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 14:32:55 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 14:32:56 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 14:32:57 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 14:32:57 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 14:32:58 2006 (shostler): tsys 
+Sun Jul  9 14:33:09 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 14:38:20 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 14:38:21 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 14:38:22 2006 (shostler): tsys 
+Sun Jul  9 14:38:33 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 14:42:44 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 14:42:44 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 14:42:45 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 14:42:45 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 14:42:47 2006 (shostler): tsys 
+Sun Jul  9 14:42:58 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 14:48:09 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 14:48:09 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 14:48:10 2006 (shostler): tsys 
+Sun Jul  9 14:48:21 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 14:52:32 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 14:52:33 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 14:52:34 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 14:52:34 2006 (shostler): observe -s 3c418 
+Sun Jul  9 14:52:35 2006 (shostler): tsys 
+Sun Jul  9 14:52:46 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 14:56:56 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 14:56:57 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 14:56:58 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 14:56:58 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 14:56:59 2006 (shostler): tsys 
+Sun Jul  9 14:57:10 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 15:01:19 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 15:01:19 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 15:01:20 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 15:01:20 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 15:01:22 2006 (shostler): tsys 
+Sun Jul  9 15:01:33 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 15:06:44 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 15:06:44 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 15:06:45 2006 (shostler): tsys 
+Sun Jul  9 15:06:56 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 15:11:07 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 15:11:08 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 15:11:09 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 15:11:09 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 15:11:10 2006 (shostler): tsys 
+Sun Jul  9 15:11:22 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 15:16:32 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 15:16:33 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 15:16:34 2006 (shostler): tsys 
+Sun Jul  9 15:16:45 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 15:20:56 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 15:20:56 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 15:20:57 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 15:20:57 2006 (shostler): observe -s 3c418 
+Sun Jul  9 15:20:59 2006 (shostler): tsys 
+Sun Jul  9 15:21:10 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 15:25:19 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 15:25:20 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 15:25:20 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 15:25:21 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 15:25:22 2006 (shostler): tsys 
+Sun Jul  9 15:25:33 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 15:29:42 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 15:29:43 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 15:29:44 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 15:29:44 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 15:29:45 2006 (shostler): tsys 
+Sun Jul  9 15:29:56 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 15:35:07 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 15:35:07 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 15:35:09 2006 (shostler): tsys 
+Sun Jul  9 15:35:20 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 15:39:31 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 15:39:31 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 15:39:32 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 15:39:32 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 15:39:33 2006 (shostler): tsys 
+Sun Jul  9 15:39:45 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 15:44:56 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 15:44:56 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 15:44:57 2006 (shostler): tsys 
+Sun Jul  9 15:45:09 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 15:49:19 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 15:49:20 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 15:49:21 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 15:49:21 2006 (shostler): observe -s 3c418 
+Sun Jul  9 15:49:22 2006 (shostler): tsys 
+Sun Jul  9 15:49:33 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 15:53:42 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 15:53:43 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 15:53:44 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 15:53:44 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 15:53:45 2006 (shostler): tsys 
+Sun Jul  9 15:53:57 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 15:58:06 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 15:58:06 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 15:58:07 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 15:58:07 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 15:58:08 2006 (shostler): tsys 
+Sun Jul  9 15:58:20 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 16:03:31 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 16:03:31 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 16:03:33 2006 (shostler): tsys 
+Sun Jul  9 16:03:44 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 16:07:54 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 16:07:55 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 16:07:56 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 16:07:56 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 16:07:57 2006 (shostler): tsys 
+Sun Jul  9 16:08:08 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 16:13:19 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 16:13:20 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 16:13:21 2006 (shostler): tsys 
+Sun Jul  9 16:13:32 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 16:17:43 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 16:17:44 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 16:17:44 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 16:17:45 2006 (shostler): observe -s 3c418 
+Sun Jul  9 16:17:46 2006 (shostler): tsys 
+Sun Jul  9 16:17:57 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 16:22:06 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 16:22:07 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 16:22:07 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 16:22:08 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 16:22:09 2006 (shostler): tsys 
+Sun Jul  9 16:22:20 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 16:26:29 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 16:26:30 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 16:26:31 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 16:26:31 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 16:26:32 2006 (shostler): tsys 
+Sun Jul  9 16:26:44 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 16:31:54 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 16:31:55 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 16:31:56 2006 (shostler): tsys 
+Sun Jul  9 16:32:07 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 16:36:18 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 16:36:18 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 16:36:19 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Sun Jul  9 16:36:20 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 16:36:20 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Sun Jul  9 16:36:21 2006 (shostler): tsys 
+Sun Jul  9 16:36:32 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 16:40:41 2006 (shostler): lookup -s 3c418 
+Sun Jul  9 16:40:41 2006 (shostler): observe -s 3c418 
+Sun Jul  9 16:40:43 2006 (shostler): tsys 
+Sun Jul  9 16:40:54 2006 (shostler): integrate -s 16 -w 
+Sun Jul  9 16:45:04 2006 (shostler): lookup -s callisto 
+Sun Jul  9 16:45:05 2006 (shostler): lookup -s 3c279 
+Sun Jul  9 16:45:06 2006 (shostler): lookup -s 2230+114 
+Sun Jul  9 16:45:06 2006 (shostler): lookup -s 2230+114 
+Sun Jul  9 16:45:07 2006 (shostler): observe -s 2230+114 
+Sun Jul  9 16:45:08 2006 (shostler): tsys 
+Sun Jul  9 16:45:19 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 16:46:54 2006 (shostler): restartCorrelator -c 2 
+Sun Jul  9 16:48:40 2006 (shostler): restartCorrelator -c 8 
+Sun Jul  9 16:49:21 2006 (shostler): integrate -t 15 
+Sun Jul  9 16:49:30 2006 (shostler): correlatorPause 
+Sun Jul  9 16:49:33 2006 (shostler): lookup -s 2230+114 
+Sun Jul  9 16:49:33 2006 (shostler): observe -s 2230+114 
+Sun Jul  9 16:49:34 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 16:49:36 2006 (shostler): correlatorResume 
+Sun Jul  9 16:49:59 2006 (shostler): observe -s uranus 
+Sun Jul  9 16:51:13 2006 (shostler): observe -s 2230+114 
+Sun Jul  9 16:55:34 2006 (shostler): lookup -s 2230+114 
+Sun Jul  9 16:55:34 2006 (shostler): observe -s 2230+114 
+Sun Jul  9 16:55:36 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 17:00:44 2006 (shostler): lookup -s 2230+114 
+Sun Jul  9 17:00:44 2006 (shostler): observe -s 2230+114 
+Sun Jul  9 17:00:45 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 17:05:53 2006 (shostler): lookup -s 2230+114 
+Sun Jul  9 17:05:54 2006 (shostler): observe -s 2230+114 
+Sun Jul  9 17:05:55 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 17:11:03 2006 (shostler): lookup -s 2230+114 
+Sun Jul  9 17:11:03 2006 (shostler): observe -s 2230+114 
+Sun Jul  9 17:11:05 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 17:16:13 2006 (shostler): lookup -s 2230+114 
+Sun Jul  9 17:16:13 2006 (shostler): observe -s 2230+114 
+Sun Jul  9 17:16:14 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 17:19:36 2006 (shostler): monitor 
+Sun Jul  9 17:21:23 2006 (shostler): lookup -s 2230+114 
+Sun Jul  9 17:21:23 2006 (shostler): observe -s 2230+114 
+Sun Jul  9 17:21:24 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 17:26:33 2006 (shostler): lookup -s 2230+114 
+Sun Jul  9 17:26:33 2006 (shostler): observe -s 2230+114 
+Sun Jul  9 17:26:34 2006 (shostler): integrate -s 20 -w 
+Sun Jul  9 17:31:52 2006 (shostler): stow 
+Sun Jul  9 17:34:04 2006 (shostler): standby 
+Sun Jul  9 17:35:02 2006 (shostler): project -r -i 189 -f /application/realTimeScripts/endObs.pl 
+Sun Jul  9 17:35:16 2006 (shostler): endProject.
+Sun Jul  9 18:51:55 2006 (apeck): monitor 
+Mon Jul 10 00:18:32 2006 (root): monitor 
+Mon Jul 10 01:54:23 2006 (shostler): monitor 
+Mon Jul 10 02:01:21 2006 (shostler): project -a 1..6,8 -s 1 -R l -C 1..12 -o Shelbi -l HP -d tuning -p SMA 
+Mon Jul 10 02:02:55 2006 (shostler): tune -c activate -l 0 -h 6 -g 
+Mon Jul 10 02:03:48 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 02:04:15 2006 (shostler): dopplerTrack -r 240.183 -u -s 14 
+Mon Jul 10 02:04:21 2006 (shostler): setFeedOffset -f 230 
+Mon Jul 10 02:04:32 2006 (daemon): setLO: sending "tune -f0 235.08 -h0 16" to acc1
+Mon Jul 10 02:04:32 2006 (daemon): setLO: sending "tune -f0 235.08 -h0 16" to acc2
+Mon Jul 10 02:04:32 2006 (daemon): setLO: sending "tune -f0 235.08 -h0 16" to acc3
+Mon Jul 10 02:04:32 2006 (daemon): setLO: sending "tune -f0 235.08 -h0 16" to acc4
+Mon Jul 10 02:04:32 2006 (daemon): setLO: sending "tune -f0 235.08 -h0 16" to acc5
+Mon Jul 10 02:04:32 2006 (daemon): setLO: sending "tune -f0 235.08 -h0 16" to acc6
+Mon Jul 10 02:04:32 2006 (daemon): setLO: sending "tune -f0 235.08 -h0 16" to acc8
+Mon Jul 10 02:11:38 2006 (shostler): restartCorrelator -d -s256 
+Mon Jul 10 02:16:22 2006 (shostler): tune -a 4 -c rfpower 20 
+Mon Jul 10 02:16:29 2006 (shostler): tune -a 4 -c t joy 
+Mon Jul 10 02:18:28 2006 (shostler): tune -a 4 -c opt curr -c 50 
+Mon Jul 10 02:18:42 2006 (shostler): tune -a 5 -c rfpower 6.2 
+Mon Jul 10 02:18:47 2006 (shostler): tune -a 5 -c rfpower 6.6 
+Mon Jul 10 02:18:52 2006 (shostler): tune -a 5 -c rfpower 6.9 
+Mon Jul 10 02:18:59 2006 (shostler): tune -a 5 -c rfpower 7.2 
+Mon Jul 10 02:19:15 2006 (shostler): tune -a 6 -c rfpower 20 
+Mon Jul 10 02:19:26 2006 (shostler): tune -a 6 -c t joy 
+Mon Jul 10 02:20:26 2006 (shostler): tune -a 6 -c vbias0 2.3 
+Mon Jul 10 02:20:32 2006 (shostler): tune -c opt curr -t 
+Mon Jul 10 02:20:45 2006 (shostler): openM3 
+Mon Jul 10 02:22:37 2006 (shostler): tune -a 2 -c opt curr -t 
+Mon Jul 10 02:24:05 2006 (shostler): tune -a 1 -c iv0 -o 
+Mon Jul 10 02:24:32 2006 (shostler): tsys 
+Mon Jul 10 02:26:07 2006 (shostler): tune -a 1 -c opt curr -t 
+Mon Jul 10 02:26:29 2006 (shostler): tune -a 2 -c iv0 -o 
+Mon Jul 10 02:26:34 2006 (shostler): tune -a 3 -c iv0 
+Mon Jul 10 02:27:00 2006 (shostler): tune -a 3 -c ob0 
+Mon Jul 10 02:27:11 2006 (shostler): tune -a 4 -c iv0 -o 
+Mon Jul 10 02:27:47 2006 (shostler): tune -a 4 -c vbias0 2.5 
+Mon Jul 10 02:27:54 2006 (shostler): tune -a 4 -c iv0 
+Mon Jul 10 02:28:04 2006 (shostler): tune -a 3 -c iv0 -o 
+Mon Jul 10 02:28:36 2006 (shostler): tune -a 4 -c opt curr -c 45 
+Mon Jul 10 02:28:44 2006 (shostler): tune -a 3 -c ob0 
+Mon Jul 10 02:29:07 2006 (shostler): tune -a 4 -c iv0 
+Mon Jul 10 02:29:41 2006 (shostler): tune -a 4 -c vbias0 2.47 
+Mon Jul 10 02:29:56 2006 (shostler): tune -a 4 -c opt curr -c 43 
+Mon Jul 10 02:29:59 2006 (shostler): tune -a 3 -c iv0 -o 
+Mon Jul 10 02:30:24 2006 (shostler): tsys -a 1,2,3 
+Mon Jul 10 02:30:29 2006 (shostler): tune -a 4 -c iv0 
+Mon Jul 10 02:30:43 2006 (shostler): tune -a 5 -c iv0 -o 
+Mon Jul 10 02:31:00 2006 (shostler): tune -a 4 -c vbias0 2.4 
+Mon Jul 10 02:31:05 2006 (shostler): tune -a 4 -c iv0 
+Mon Jul 10 02:31:11 2006 (shostler): tsys -a 5 
+Mon Jul 10 02:31:26 2006 (shostler): tune -a 6 -c iv0 
+Mon Jul 10 02:31:37 2006 (shostler): tune -a 4 -c opt curr -c 38 
+Mon Jul 10 02:31:52 2006 (shostler): tune -a 6 -c ob0 
+Mon Jul 10 02:32:06 2006 (shostler): tune -a 4 -c iv0 
+Mon Jul 10 02:32:36 2006 (shostler): tune -a 4 -c opt curr -c 40 
+Mon Jul 10 02:33:00 2006 (shostler): tune -a 6 -c iv0 -o 
+Mon Jul 10 02:33:12 2006 (shostler): tune -a 4 -c iv0 
+Mon Jul 10 02:33:33 2006 (shostler): tune -a 6 -c vbias0 2.47 
+Mon Jul 10 02:33:41 2006 (shostler): tune -a 6 -c iv0 
+Mon Jul 10 02:33:47 2006 (shostler): tsys -a 4 
+Mon Jul 10 02:34:15 2006 (shostler): tune -a 6 -c vbias0 2.53 
+Mon Jul 10 02:34:20 2006 (shostler): tune -a 6 -c iv0 
+Mon Jul 10 02:34:26 2006 (shostler): tune -a 8 -c iv0 -o 
+Mon Jul 10 02:34:52 2006 (shostler): tune -a 6 -c opt curr -t 
+Mon Jul 10 02:34:59 2006 (shostler): tsys -a 8 
+Mon Jul 10 02:35:08 2006 (shostler): tune -a 6 -c iv0 
+Mon Jul 10 02:35:34 2006 (shostler): tsys 
+Mon Jul 10 02:36:03 2006 (shostler): ivplot8 
+Mon Jul 10 02:36:40 2006 (shostler): stow 
+Mon Jul 10 03:20:37 2006 (shostler): tune -a 8 -c opt tun 
+Mon Jul 10 03:23:25 2006 (shostler): project -r -o observers -l driving to summit 
+Mon Jul 10 03:30:06 2006 (apeck): monitor 
+Mon Jul 10 04:03:42 2006 (apeck): monitor 
+Mon Jul 10 04:22:18 2006 (shostler): monitor 
+Mon Jul 10 04:23:24 2006 (shostler): openM3 
+Mon Jul 10 04:23:49 2006 (shostler): observe -s jupiter 
+Mon Jul 10 04:23:51 2006 (shostler): resume 
+Mon Jul 10 04:23:54 2006 (shostler): tsys 
+Mon Jul 10 04:25:36 2006 (shostler): observe -s jupiter -a 6 
+Mon Jul 10 04:26:33 2006 (shostler): observe -s 3c279 
+Mon Jul 10 04:28:01 2006 (shostler): setIFLevels -v 
+Mon Jul 10 04:28:17 2006 (shostler): monitor 
+Mon Jul 10 04:32:38 2006 (apeck): monitor 
+Mon Jul 10 04:35:09 2006 (shostler): observe -s jupiter 
+Mon Jul 10 04:36:24 2006 (shostler): observe -s 3c345 
+Mon Jul 10 04:39:33 2006 (shostler): project -r -o Kevin and Shelbi -l Summit 
+Mon Jul 10 04:39:54 2006 (shostler): point -i 60 -r 2 -t -l -L -Q 
+Mon Jul 10 04:40:00 2006 (apeck): monitor 
+		Repetition 1:
+		Ant 1	AzOff =  -0.2	ElOff =  -1.0	deltaAz =   1.7	deltaEl =   2.7
+		Ant 2	AzOff =   0.5	ElOff =   9.3	deltaAz =   3.9	deltaEl =  13.1
+		Ant 3	AzOff =  -2.7	ElOff =   0.6	deltaAz =   0.5	deltaEl =   5.8
+		Ant 4	AzOff = -14.2	ElOff =   2.2	deltaAz =  -6.7	deltaEl =   6.4
+		Ant 5	AzOff =  -4.5	ElOff =   4.3	deltaAz =  -5.6	deltaEl =   5.5
+		Ant 6	AzOff =  -4.6	ElOff =  10.1	deltaAz =  -7.8	deltaEl =   5.9
+		Ant 8	AzOff =   0.2	ElOff =   8.7	deltaAz =   0.4	deltaEl =   9.8
+		Repetition 2:
+		Ant 1	AzOff =   0.2	ElOff =  -2.3	deltaAz =   2.1	deltaEl =   1.4
+		Ant 2	AzOff =   2.5	ElOff =  10.2	deltaAz =   5.9	deltaEl =  14.0
+		Ant 3	AzOff =  -0.4	ElOff =   1.2	deltaAz =   2.8	deltaEl =   6.4
+		Ant 4	AzOff = -12.2	ElOff =   1.8	deltaAz =  -4.7	deltaEl =   6.0
+		Ant 5	AzOff =  -4.4	ElOff =   2.0	deltaAz =  -5.5	deltaEl =   3.2
+		Ant 6	AzOff =  -3.5	ElOff =   6.3	deltaAz =  -6.7	deltaEl =   2.1
+		Ant 8	AzOff =  -1.6	ElOff =   7.7	deltaAz =  -1.4	deltaEl =   8.8
+		Average:
+		Ant 1	AzOff =   0.0	ElOff =  -1.7	deltaAz =   1.9	deltaEl =   2.0
+		Ant 2	AzOff =   1.5	ElOff =   9.7	deltaAz =   4.9	deltaEl =  13.5
+		Ant 3	AzOff =  -1.5	ElOff =   0.9	deltaAz =   1.7	deltaEl =   6.1
+		Ant 4	AzOff = -13.2	ElOff =   2.0	deltaAz =  -5.7	deltaEl =   6.2
+		Ant 5	AzOff =  -4.4	ElOff =   3.1	deltaAz =  -5.5	deltaEl =   4.3
+		Ant 6	AzOff =  -4.0	ElOff =   8.2	deltaAz =  -7.2	deltaEl =   4.0
+		Ant 8	AzOff =  -0.7	ElOff =   8.2	deltaAz =  -0.5	deltaEl =   9.3
+Mon Jul 10 04:53:17 2006 (shostler): observe -s 1308+326 
+Mon Jul 10 04:53:21 2006 (shostler): tsys 
+Mon Jul 10 04:56:14 2006 (shostler): observe -s 1055+018 
+Mon Jul 10 04:57:44 2006 (shostler): observe -s nrao530 
+Mon Jul 10 04:59:51 2006 (shostler): observe -s 3c274 
+Mon Jul 10 05:01:50 2006 (shostler): observe -s 3c279 
+Mon Jul 10 05:02:30 2006 (shostler): stow -a 6 
+Mon Jul 10 05:06:40 2006 (shostler): lockYIG -a 6 
+Mon Jul 10 05:06:55 2006 (shostler): tune -a 6 -c rfpower 20 
+Mon Jul 10 05:07:02 2006 (shostler): tune -a 6 -c t joy 
+Mon Jul 10 05:07:49 2006 (shostler): lockYIG -a 6 
+Mon Jul 10 05:08:04 2006 (shostler): tune -a 6 -c activate -l 0 -h 6 -g 
+Mon Jul 10 05:08:19 2006 (shostler): tune -a 6 -c activate -l 2 -g 
+Mon Jul 10 05:08:41 2006 (shostler): tune -a 6 -c activate -l 0 -h 6 -g 
+Mon Jul 10 05:09:09 2006 (shostler): /application/bin/killdaemon acc6 antIFServer restart
+Mon Jul 10 05:09:17 2006 (shostler): lockYIG -a 6 
+Mon Jul 10 05:09:59 2006 (shostler): lockYIG -a 6 
+Mon Jul 10 05:10:15 2006 (shostler): tune -a 6 -c tune 117.54 
+Mon Jul 10 05:10:25 2006 (shostler): openM3 -a 6 
+Mon Jul 10 05:10:30 2006 (shostler): observe -s 3c279 -a 6 
+Mon Jul 10 05:10:36 2006 (shostler): resume -a 6 
+Mon Jul 10 05:13:53 2006 (shostler): standby -a 6 
+Mon Jul 10 05:14:08 2006 (shostler): tune -a 6 -c rfpower 20 
+Mon Jul 10 05:14:14 2006 (shostler): tune -a 6 -c t joy 
+Mon Jul 10 05:14:43 2006 (shostler): /application/bin/killdaemon acc6 tune6 QUIT
+Mon Jul 10 05:14:56 2006 (shostler): /application/bin/killdaemon acc6 tune6 restart
+Mon Jul 10 05:15:27 2006 (shostler): lockYIG -a 6 
+Mon Jul 10 05:19:28 2006 (shostler): lockYIG -a 6 
+Mon Jul 10 05:19:52 2006 (shostler): tune -a 6 -c rfpower 20 
+Mon Jul 10 05:20:10 2006 (shostler): tune -a 6 -c t joy 
+Mon Jul 10 05:21:35 2006 (shostler): observe -s 3c279 -a 6 
+Mon Jul 10 05:21:45 2006 (shostler): resume -a 6 
+Mon Jul 10 05:22:56 2006 (shostler): tune -a 6 -c t joy 
+Mon Jul 10 05:23:54 2006 (shostler): tune -a 6 -c t joy 
+Mon Jul 10 05:25:03 2006 (apeck): monitor 
+Mon Jul 10 05:25:30 2006 (shostler): tune -a 6 -c activate -l 2 -g  
+Mon Jul 10 05:26:02 2006 (shostler): tune -a 6 -c activate -l 0 -g 
+Mon Jul 10 05:26:36 2006 (shostler): /application/bin/killdaemon acc6 antIFServer restart
+Mon Jul 10 05:26:55 2006 (shostler): lockYIG -a 6 
+Mon Jul 10 05:28:25 2006 (shostler): tune -a 6 -c load --default 
+Mon Jul 10 05:29:17 2006 (shostler): tune -a 6 -c activate -l 0 -g 
+Mon Jul 10 05:33:56 2006 (shostler): tune -a 6 -c rfpower 12 
+Mon Jul 10 05:34:29 2006 (thunter): tune -a 6 -c gunn off 
+Mon Jul 10 05:34:39 2006 (thunter): tune -a 6 -c rfpower 7 
+Mon Jul 10 05:34:45 2006 (thunter): tune -a 6 -c rfpower 3 
+Mon Jul 10 05:34:56 2006 (thunter): tune -a 6 -c rfpower -v 3 
+Mon Jul 10 05:35:07 2006 (thunter): tune -a 6 -c v 
+Mon Jul 10 05:35:53 2006 (thunter): tune -a 6 -c yigswitch -l 0 -h 6 
+Mon Jul 10 05:36:02 2006 (thunter): tune -a 6 -c yigswitch -l 0 -h 6 
+Mon Jul 10 05:36:31 2006 (thunter): acc6:/common/bin/killdaemon tune6 QUIT
+Mon Jul 10 05:37:09 2006 (root): acc6:/common/bin/killdaemon tune6 QUIT
+Mon Jul 10 05:39:03 2006 (root): acc6:/common/bin/killdaemon antIFServer restart
+Mon Jul 10 05:40:03 2006 (shostler): newFile 
+Mon Jul 10 05:46:04 2006 (thunter): standby -a 6 
+Mon Jul 10 05:50:37 2006 (thunter): acc6:/common/bin/killdaemon tune6 QUIT
+Mon Jul 10 05:51:23 2006 (thunter): acc6:/common/bin/killdaemon tune6 QUIT
+Mon Jul 10 05:52:22 2006 (thunter): lockYIG -a 6 
+Mon Jul 10 05:58:23 2006 (thunter): resume -a 6 
+Mon Jul 10 05:58:38 2006 (thunter): tsys -a 6 
+Mon Jul 10 05:59:15 2006 (shostler): observe -s 3c279 -a 6 
+Mon Jul 10 06:00:47 2006 (shostler): ivplot8 
+Mon Jul 10 06:02:30 2006 (shostler): project -r -i 103 -f .//2006-03-S049_240_vex.pl 
+Mon Jul 10 06:02:32 2006 (shostler): radio 
+Mon Jul 10 06:02:33 2006 (shostler): integrate -t 15 
+Mon Jul 10 06:02:35 2006 (shostler): project -r -p T. K. Sridharan -d 2006-03-S049 -i 103 
+Mon Jul 10 06:02:37 2006 (shostler): lookup -s callisto 
+Mon Jul 10 06:02:37 2006 (shostler): lookup -s callisto 
+Mon Jul 10 06:02:38 2006 (shostler): observe -s callisto -t flux 
+Mon Jul 10 06:02:39 2006 (shostler): tsys 
+Mon Jul 10 06:02:50 2006 (shostler): integrate -s 20 -w 
+Mon Jul 10 06:03:46 2006 (thunter): acc6:/common/bin/killdaemon tune6 restart
+Mon Jul 10 06:04:31 2006 (thunter): acc6:/common/bin/killdaemon tune6 restart
+Mon Jul 10 06:06:48 2006 (shostler): tune -a 6 -c iv0 
+Mon Jul 10 06:07:26 2006 (shostler): tune -a 6 -c ob0 
+Mon Jul 10 06:08:50 2006 (shostler): tune -a 6 -c iv0 
+Mon Jul 10 06:09:56 2006 (shostler): tune -a 6 -c vbias0 2.50 
+Mon Jul 10 06:10:00 2006 (shostler): tsys -a 6 
+Mon Jul 10 06:10:50 2006 (shostler): observe -s 3c279 
+Mon Jul 10 06:11:35 2006 (shostler): setIFLevels -v 
+Mon Jul 10 06:13:13 2006 (shostler): tune -a 6 -c opt curr -t 
+Mon Jul 10 06:13:35 2006 (shostler): project -r -i 49 -f .//2006-03-S049_240_vex.pl 
+Mon Jul 10 06:13:38 2006 (shostler): radio 
+Mon Jul 10 06:13:39 2006 (shostler): integrate -t 15 
+Mon Jul 10 06:13:40 2006 (shostler): project -r -p T. K. Sridharan -d 2006-03-S049 -i 49 
+Mon Jul 10 06:13:42 2006 (shostler): lookup -s callisto 
+Mon Jul 10 06:13:42 2006 (shostler): lookup -s callisto 
+Mon Jul 10 06:13:43 2006 (shostler): observe -s callisto -t flux 
+Mon Jul 10 06:13:44 2006 (shostler): tsys 
+Mon Jul 10 06:13:55 2006 (shostler): integrate -s 20 -w 
+Mon Jul 10 06:14:42 2006 (shostler): integrate -s 0 
+Mon Jul 10 06:14:49 2006 (shostler): lookup -s callisto 
+Mon Jul 10 06:14:49 2006 (shostler): observe -s callisto -t flux 
+Mon Jul 10 06:14:51 2006 (shostler): integrate -s 20 -w 
+Mon Jul 10 06:19:59 2006 (shostler): lookup -s callisto 
+Mon Jul 10 06:19:59 2006 (shostler): observe -s callisto -t flux 
+Mon Jul 10 06:20:00 2006 (shostler): integrate -s 20 -w 
+Mon Jul 10 06:25:09 2006 (shostler): lookup -s callisto 
+Mon Jul 10 06:25:09 2006 (shostler): observe -s callisto -t flux 
+Mon Jul 10 06:25:10 2006 (shostler): integrate -s 20 -w 
+Mon Jul 10 06:30:18 2006 (shostler): lookup -s callisto 
+Mon Jul 10 06:30:19 2006 (shostler): observe -s callisto -t flux 
+Mon Jul 10 06:30:20 2006 (shostler): integrate -s 20 -w 
+Mon Jul 10 06:35:28 2006 (shostler): lookup -s callisto 
+Mon Jul 10 06:35:28 2006 (shostler): observe -s callisto -t flux 
+Mon Jul 10 06:35:30 2006 (shostler): integrate -s 20 -w 
+Mon Jul 10 06:40:38 2006 (shostler): lookup -s callisto 
+Mon Jul 10 06:40:38 2006 (shostler): observe -s callisto -t flux 
+Mon Jul 10 06:40:39 2006 (shostler): integrate -s 20 -w 
+Mon Jul 10 06:45:48 2006 (shostler): lookup -s callisto 
+Mon Jul 10 06:45:48 2006 (shostler): observe -s callisto -t flux 
+Mon Jul 10 06:45:49 2006 (shostler): integrate -s 20 -w 
+Mon Jul 10 06:50:57 2006 (shostler): lookup -s callisto 
+Mon Jul 10 06:50:58 2006 (shostler): observe -s callisto -t flux 
+Mon Jul 10 06:50:59 2006 (shostler): integrate -s 20 -w 
+Mon Jul 10 06:56:07 2006 (shostler): lookup -s 3c279 
+Mon Jul 10 06:56:08 2006 (shostler): lookup -s 3c279 
+Mon Jul 10 06:56:08 2006 (shostler): observe -s 3c279 -t bandpass 
+Mon Jul 10 06:56:09 2006 (shostler): tsys 
+Mon Jul 10 06:56:21 2006 (shostler): integrate -s 20 -w 
+Mon Jul 10 07:00:50 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 07:01:48 2006 (shostler): lookup -s 3c279 
+Mon Jul 10 07:01:48 2006 (shostler): observe -s 3c279 -t bandpass 
+Mon Jul 10 07:01:49 2006 (shostler): integrate -s 20 -w 
+Mon Jul 10 07:06:58 2006 (shostler): lookup -s 3c279 
+Mon Jul 10 07:06:58 2006 (shostler): observe -s 3c279 -t bandpass 
+Mon Jul 10 07:06:59 2006 (shostler): integrate -s 20 -w 
+Mon Jul 10 07:12:07 2006 (shostler): lookup -s 3c279 
+Mon Jul 10 07:12:07 2006 (shostler): observe -s 3c279 -t bandpass 
+Mon Jul 10 07:12:09 2006 (shostler): integrate -s 20 -w 
+Mon Jul 10 07:17:17 2006 (shostler): lookup -s 3c279 
+Mon Jul 10 07:17:17 2006 (shostler): observe -s 3c279 -t bandpass 
+Mon Jul 10 07:17:19 2006 (shostler): integrate -s 20 -w 
+Mon Jul 10 07:22:27 2006 (shostler): lookup -s 3c279 
+Mon Jul 10 07:22:27 2006 (shostler): observe -s 3c279 -t bandpass 
+Mon Jul 10 07:22:28 2006 (shostler): integrate -s 20 -w 
+Mon Jul 10 07:27:21 2006 (shostler): lookup -s 3c279 
+Mon Jul 10 07:27:21 2006 (shostler): observe -s 3c279 -t bandpass 
+Mon Jul 10 07:27:23 2006 (shostler): integrate -s 20 -w 
+Mon Jul 10 07:29:08 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 07:32:31 2006 (shostler): lookup -s 3c279 
+Mon Jul 10 07:32:31 2006 (shostler): observe -s 3c279 -t bandpass 
+Mon Jul 10 07:32:32 2006 (shostler): integrate -s 20 -w 
+Mon Jul 10 07:37:40 2006 (shostler): lookup -s 3c279 
+Mon Jul 10 07:37:41 2006 (shostler): observe -s 3c279 -t bandpass 
+Mon Jul 10 07:37:42 2006 (shostler): integrate -s 20 -w 
+Mon Jul 10 07:43:05 2006 (shostler): observe -s 3c345 
+Mon Jul 10 07:43:06 2006 (shostler): tsys 
+Mon Jul 10 07:44:40 2006 (shostler): point -i 60 -r 2 -t -l -L -Q 
+		Repetition 1:
+		Ant 1	AzOff =  -2.5	ElOff =  -9.9	deltaAz =  -2.5	deltaEl =  -8.2
+		Ant 2	AzOff =   2.1	ElOff =  -0.2	deltaAz =   0.6	deltaEl = -10.0
+		Ant 3	AzOff =  -5.1	ElOff =  -7.9	deltaAz =  -3.5	deltaEl =  -8.8
+		Ant 4	AzOff = -15.6	ElOff = -18.8	deltaAz =  -2.4	deltaEl = -20.8
+		Ant 5	AzOff =  -0.7	ElOff =  -3.5	deltaAz =   3.7	deltaEl =  -6.6
+		Ant 6	AzOff =   0.7	ElOff =  -7.3	deltaAz =   4.8	deltaEl = -15.5
+		Ant 8	AzOff =   6.4	ElOff =  -1.3	deltaAz =   7.1	deltaEl =  -9.5
+		Repetition 2:
+		Ant 1	AzOff =  -1.6	ElOff =  -6.8	deltaAz =  -1.6	deltaEl =  -5.1
+		Ant 2	AzOff =   2.5	ElOff =  -1.2	deltaAz =   1.0	deltaEl = -11.0
+		Ant 3	AzOff =   0.1	ElOff =  -4.9	deltaAz =   1.7	deltaEl =  -5.8
+		Ant 4	AzOff = -12.0	ElOff = -19.4	deltaAz =   1.2	deltaEl = -21.4
+		Ant 5	AzOff =   0.7	ElOff =  -3.9	deltaAz =   5.2	deltaEl =  -7.0
+		Ant 6	AzOff =   3.0	ElOff =  -7.7	deltaAz =   7.0	deltaEl = -15.9
+		Ant 8	AzOff =   8.6	ElOff =  -1.3	deltaAz =   9.3	deltaEl =  -9.5
+		Average:
+		Ant 1	AzOff =  -2.0	ElOff =  -8.3	deltaAz =  -2.0	deltaEl =  -6.7
+		Ant 2	AzOff =   2.3	ElOff =  -0.7	deltaAz =   0.8	deltaEl = -10.5
+		Ant 3	AzOff =  -2.5	ElOff =  -6.4	deltaAz =  -0.9	deltaEl =  -7.3
+		Ant 4	AzOff = -13.8	ElOff = -19.1	deltaAz =  -0.6	deltaEl = -21.1
+		Ant 5	AzOff =  -0.0	ElOff =  -3.7	deltaAz =   4.4	deltaEl =  -6.8
+		Ant 6	AzOff =   1.9	ElOff =  -7.5	deltaAz =   5.9	deltaEl = -15.7
+		Ant 8	AzOff =   7.5	ElOff =  -1.3	deltaAz =   8.2	deltaEl =  -9.5
+Mon Jul 10 07:56:26 2006 (shostler): observe -s 3c279 
+Mon Jul 10 07:57:29 2006 (shostler): point -i 60 -r 2 -t -l -L -Q 
+Mon Jul 10 08:05:26 2006 (apeck): monitor 
+		Repetition 1:
+		Ant 1	AzOff =  -5.6	ElOff =  -4.9	deltaAz =  -5.6	deltaEl =  -3.3
+		Ant 2	AzOff =  -2.3	ElOff =  -9.4	deltaAz =  -3.8	deltaEl = -19.2
+		Ant 3	AzOff =   6.0	ElOff =   6.3	deltaAz =   7.5	deltaEl =   5.4
+		Ant 4	AzOff =  -5.1	ElOff = -17.5	deltaAz =   8.1	deltaEl = -19.5
+		Ant 5	AzOff =   2.8	ElOff =  -2.4	deltaAz =   7.2	deltaEl =  -5.6
+		Ant 6	AzOff =  -0.5	ElOff =   2.6	deltaAz =   3.5	deltaEl =  -5.6
+		Ant 8	AzOff =  -3.4	ElOff =   1.3	deltaAz =  -2.7	deltaEl =  -6.9
+		Repetition 2:
+		Ant 1	AzOff =   4.7	ElOff =  -1.9	deltaAz =   4.7	deltaEl =  -0.2
+		Ant 2	AzOff = -14.4	ElOff = -15.9	deltaAz = -15.9	deltaEl = -25.7
+		Ant 3	AzOff = -11.2	ElOff = -13.4	deltaAz =  -9.6	deltaEl = -14.3
+		Ant 4	AzOff =  -2.6	ElOff = -21.2	deltaAz =  10.6	deltaEl = -23.2
+		Ant 5	AzOff =  -9.3	ElOff =  10.1	deltaAz =  -4.9	deltaEl =   7.0
+		Ant 6	AzOff =   8.6	ElOff =   8.7	deltaAz =  12.7	deltaEl =   0.5
+		Ant 8	AzOff =  -0.6	ElOff =  -2.9	deltaAz =   0.1	deltaEl = -11.1
+		Average:
+		Ant 1	AzOff =  -0.5	ElOff =  -3.4	deltaAz =  -0.5	deltaEl =  -1.7
+		Ant 2	AzOff =  -8.3	ElOff = -12.7	deltaAz =  -9.8	deltaEl = -22.4
+		Ant 3	AzOff =  -2.6	ElOff =  -3.5	deltaAz =  -1.1	deltaEl =  -4.4
+		Ant 4	AzOff =  -3.8	ElOff = -19.4	deltaAz =   9.4	deltaEl = -21.4
+		Ant 5	AzOff =  -3.3	ElOff =   3.8	deltaAz =   1.2	deltaEl =   0.7
+		Ant 6	AzOff =   4.1	ElOff =   5.6	deltaAz =   8.1	deltaEl =  -2.6
+		Ant 8	AzOff =  -2.0	ElOff =  -0.8	deltaAz =  -1.3	deltaEl =  -9.0
+Mon Jul 10 08:09:13 2006 (shostler): project -r -i 58 -f .//2006-03-S049_240_vex.pl 
+Mon Jul 10 08:09:16 2006 (shostler): radio 
+Mon Jul 10 08:09:17 2006 (shostler): integrate -t 15 
+Mon Jul 10 08:09:18 2006 (shostler): project -r -p T. K. Sridharan -d 2006-03-S049 -i 58 
+Mon Jul 10 08:09:20 2006 (shostler): lookup -s callisto 
+Mon Jul 10 08:09:21 2006 (shostler): lookup -s callisto 
+Mon Jul 10 08:09:21 2006 (shostler): observe -s callisto -t flux 
+Mon Jul 10 08:09:22 2006 (shostler): tsys 
+Mon Jul 10 08:09:40 2006 (shostler): project -r -i 32 -f .//2006-03-S049_240_vex.pl 
+Mon Jul 10 08:09:42 2006 (shostler): radio 
+Mon Jul 10 08:09:43 2006 (shostler): integrate -t 15 
+Mon Jul 10 08:09:45 2006 (shostler): project -r -p T. K. Sridharan -d 2006-03-S049 -i 32 
+Mon Jul 10 08:09:46 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 08:09:47 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 08:09:48 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 08:09:48 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 08:09:49 2006 (shostler): observe -s 3c418 
+Mon Jul 10 08:09:50 2006 (shostler): tsys 
+Mon Jul 10 08:10:01 2006 (shostler): integrate -s 12 -w 
+Mon Jul 10 08:13:43 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 08:13:44 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 08:13:45 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 08:13:45 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 08:13:46 2006 (shostler): tsys 
+Mon Jul 10 08:13:57 2006 (shostler): integrate -s 12 -w 
+Mon Jul 10 08:17:05 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 08:17:05 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 08:17:06 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 08:17:06 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 08:17:07 2006 (shostler): tsys 
+Mon Jul 10 08:17:19 2006 (shostler): integrate -s 20 -w 
+Mon Jul 10 08:22:30 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 08:22:30 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 08:22:31 2006 (shostler): tsys 
+Mon Jul 10 08:22:42 2006 (shostler): integrate -s 12 -w 
+Mon Jul 10 08:25:51 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 08:25:52 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 08:25:53 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 08:25:53 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 08:25:54 2006 (shostler): tsys 
+Mon Jul 10 08:26:05 2006 (shostler): integrate -s 20 -w 
+Mon Jul 10 08:31:16 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 08:31:17 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 08:31:18 2006 (shostler): tsys 
+Mon Jul 10 08:31:29 2006 (shostler): integrate -s 12 -w 
+Mon Jul 10 08:34:38 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 08:34:38 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 08:34:39 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 08:34:39 2006 (shostler): observe -s 3c418 
+Mon Jul 10 08:34:41 2006 (shostler): tsys 
+Mon Jul 10 08:34:52 2006 (shostler): integrate -s 12 -w 
+Mon Jul 10 08:34:54 2006 (shostler): standby -a 1 
+Mon Jul 10 08:34:56 2006 (shostler): resume -a 1 
+Mon Jul 10 08:35:10 2006 (shostler): observe -s 3c418 -a 1 
+Mon Jul 10 08:38:30 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 08:38:31 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 08:38:31 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 08:38:32 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 08:38:33 2006 (shostler): tsys 
+Mon Jul 10 08:38:44 2006 (shostler): integrate -s 12 -w 
+Mon Jul 10 08:41:51 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 08:41:52 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 08:41:53 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 08:41:53 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 08:41:54 2006 (shostler): tsys 
+Mon Jul 10 08:42:06 2006 (shostler): integrate -s 20 -w 
+Mon Jul 10 08:47:17 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 08:47:17 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 08:47:18 2006 (shostler): tsys 
+Mon Jul 10 08:47:29 2006 (shostler): integrate -s 12 -w 
+Mon Jul 10 08:50:38 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 08:50:39 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 08:50:39 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 08:50:40 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 08:50:41 2006 (shostler): tsys 
+Mon Jul 10 08:50:52 2006 (shostler): integrate -s 20 -w 
+Mon Jul 10 08:56:03 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 08:56:04 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 08:56:05 2006 (shostler): tsys 
+Mon Jul 10 08:56:16 2006 (shostler): integrate -s 12 -w 
+Mon Jul 10 08:59:25 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 08:59:26 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 08:59:26 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 08:59:27 2006 (shostler): observe -s 3c418 
+Mon Jul 10 08:59:28 2006 (shostler): tsys 
+Mon Jul 10 08:59:39 2006 (shostler): integrate -s 12 -w 
+Mon Jul 10 09:02:46 2006 (shostler): observe -s 3c345 
+Mon Jul 10 09:03:33 2006 (shostler): point -i 60 -r 2 -t -l -L -Q 
+		Repetition 1:
+		Ant 1	AzOff =  -0.7	ElOff =  -6.3	deltaAz =  -0.7	deltaEl =  -4.6
+		Ant 2	AzOff =  -0.2	ElOff =  -1.0	deltaAz =  -1.7	deltaEl = -10.7
+		Ant 3	AzOff =  -0.8	ElOff =  -7.4	deltaAz =   0.8	deltaEl =  -8.3
+		Ant 4	AzOff = -13.3	ElOff = -10.9	deltaAz =  -0.1	deltaEl = -12.9
+		Ant 5	AzOff =  -4.4	ElOff =   1.3	deltaAz =   0.0	deltaEl =  -1.8
+		Ant 6	AzOff =   0.8	ElOff =  -5.9	deltaAz =   4.9	deltaEl = -14.1
+		Ant 8	AzOff =   3.4	ElOff =  -6.7	deltaAz =   4.1	deltaEl = -14.9
+		Repetition 2:
+		Ant 1	AzOff =   1.0	ElOff =  -7.4	deltaAz =   1.0	deltaEl =  -5.8
+		Ant 2	AzOff =   2.4	ElOff =   0.6	deltaAz =   0.9	deltaEl =  -9.2
+		Ant 3	AzOff =  -1.6	ElOff =  -8.8	deltaAz =  -0.1	deltaEl =  -9.7
+		Ant 4	AzOff = -11.6	ElOff = -13.5	deltaAz =   1.6	deltaEl = -15.5
+		Ant 5	AzOff =   1.3	ElOff =   1.9	deltaAz =   5.7	deltaEl =  -1.2
+		Ant 6	AzOff =   3.6	ElOff =  -5.6	deltaAz =   7.7	deltaEl = -13.8
+		Ant 8	AzOff =   2.3	ElOff =  -5.5	deltaAz =   3.0	deltaEl = -13.7
+		Average:
+		Ant 1	AzOff =   0.1	ElOff =  -6.9	deltaAz =   0.1	deltaEl =  -5.2
+		Ant 2	AzOff =   1.1	ElOff =  -0.2	deltaAz =  -0.4	deltaEl = -10.0
+		Ant 3	AzOff =  -1.2	ElOff =  -8.1	deltaAz =   0.3	deltaEl =  -9.0
+		Ant 4	AzOff = -12.4	ElOff = -12.2	deltaAz =   0.8	deltaEl = -14.2
+		Ant 5	AzOff =  -1.6	ElOff =   1.6	deltaAz =   2.9	deltaEl =  -1.5
+		Ant 6	AzOff =   2.2	ElOff =  -5.8	deltaAz =   6.3	deltaEl = -14.0
+		Ant 8	AzOff =   2.8	ElOff =  -6.1	deltaAz =   3.6	deltaEl = -14.3
+Mon Jul 10 09:15:08 2006 (shostler): observe -s 3c418 
+Mon Jul 10 09:15:10 2006 (shostler): tsys 
+Mon Jul 10 09:15:48 2006 (shostler): integrate -s 12 
+Mon Jul 10 09:20:51 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 09:20:51 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 09:20:52 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 09:20:52 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 09:20:54 2006 (shostler): tsys 
+Mon Jul 10 09:21:05 2006 (shostler): integrate -s 12 -w 
+Mon Jul 10 09:24:11 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 09:24:12 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 09:24:12 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 09:24:13 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 09:24:14 2006 (shostler): tsys 
+Mon Jul 10 09:24:25 2006 (shostler): integrate -s 20 -w 
+Mon Jul 10 09:29:36 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 09:29:37 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 09:29:38 2006 (shostler): tsys 
+Mon Jul 10 09:29:49 2006 (shostler): integrate -s 12 -w 
+Mon Jul 10 09:32:58 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 09:32:58 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 09:32:59 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 09:32:59 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 09:33:01 2006 (shostler): tsys 
+Mon Jul 10 09:33:12 2006 (shostler): integrate -s 20 -w 
+Mon Jul 10 09:38:23 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 09:38:23 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 09:38:25 2006 (shostler): tsys 
+Mon Jul 10 09:38:36 2006 (shostler): integrate -s 12 -w 
+Mon Jul 10 09:41:44 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 09:41:45 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 09:41:46 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 09:41:46 2006 (shostler): observe -s 3c418 
+Mon Jul 10 09:41:47 2006 (shostler): tsys 
+Mon Jul 10 09:41:58 2006 (shostler): integrate -s 12 -w 
+Mon Jul 10 09:45:06 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 09:45:06 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 09:45:07 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 09:45:07 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 09:45:09 2006 (shostler): tsys 
+Mon Jul 10 09:45:20 2006 (shostler): integrate -s 12 -w 
+Mon Jul 10 09:48:27 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 09:48:28 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 09:48:29 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 09:48:29 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 09:48:30 2006 (shostler): tsys 
+Mon Jul 10 09:48:41 2006 (shostler): integrate -s 20 -w 
+Mon Jul 10 09:53:52 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 09:53:53 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 09:53:54 2006 (shostler): tsys 
+Mon Jul 10 09:54:05 2006 (shostler): integrate -s 12 -w 
+Mon Jul 10 09:57:14 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 09:57:14 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 09:57:15 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 09:57:15 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 09:57:16 2006 (shostler): tsys 
+Mon Jul 10 09:57:28 2006 (shostler): integrate -s 20 -w 
+Mon Jul 10 10:02:39 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 10:02:39 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 10:02:40 2006 (shostler): tsys 
+Mon Jul 10 10:02:51 2006 (shostler): integrate -s 12 -w 
+Mon Jul 10 10:03:58 2006 (596): /application/bin/writeWeatherStructure 0.084 0.0 0 JCMT. 0.130434782608696 596 588
+Mon Jul 10 10:06:00 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 10:06:01 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 10:06:02 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 10:06:02 2006 (shostler): observe -s 3c418 
+Mon Jul 10 10:06:03 2006 (shostler): tsys 
+Mon Jul 10 10:06:14 2006 (shostler): integrate -s 12 -w 
+Mon Jul 10 10:09:21 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 10:09:22 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 10:09:23 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 10:09:23 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 10:09:24 2006 (shostler): tsys 
+Mon Jul 10 10:09:36 2006 (shostler): integrate -s 12 -w 
+Mon Jul 10 10:12:43 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 10:12:43 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 10:12:44 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 10:12:44 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 10:12:46 2006 (shostler): tsys 
+Mon Jul 10 10:12:57 2006 (shostler): integrate -s 20 -w 
+Mon Jul 10 10:18:08 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 10:18:08 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 10:18:09 2006 (shostler): tsys 
+Mon Jul 10 10:18:21 2006 (shostler): integrate -s 12 -w 
+Mon Jul 10 10:21:29 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 10:21:30 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 10:21:31 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 10:21:31 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 10:21:32 2006 (shostler): tsys 
+Mon Jul 10 10:21:43 2006 (shostler): integrate -s 20 -w 
+Mon Jul 10 10:26:54 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 10:26:55 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 10:26:56 2006 (shostler): tsys 
+Mon Jul 10 10:27:07 2006 (shostler): integrate -s 12 -w 
+Mon Jul 10 10:30:16 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 10:30:17 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 10:30:17 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 10:30:18 2006 (shostler): observe -s 3c418 
+Mon Jul 10 10:30:19 2006 (shostler): tsys 
+Mon Jul 10 10:30:30 2006 (shostler): integrate -s 12 -w 
+Mon Jul 10 10:33:37 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 10:33:38 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 10:33:39 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 10:33:39 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 10:33:40 2006 (shostler): tsys 
+Mon Jul 10 10:33:51 2006 (shostler): integrate -s 12 -w 
+Mon Jul 10 10:36:58 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 10:36:59 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 10:37:00 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 10:37:00 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 10:37:02 2006 (shostler): tsys 
+Mon Jul 10 10:37:13 2006 (shostler): integrate -s 20 -w 
+Mon Jul 10 10:42:24 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 10:42:24 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 10:42:25 2006 (shostler): tsys 
+Mon Jul 10 10:42:37 2006 (shostler): integrate -s 12 -w 
+Mon Jul 10 10:45:45 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 10:45:45 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 10:45:46 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 10:45:46 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 10:45:48 2006 (shostler): tsys 
+Mon Jul 10 10:45:59 2006 (shostler): integrate -s 20 -w 
+Mon Jul 10 10:51:10 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 10:51:10 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 10:51:12 2006 (shostler): tsys 
+Mon Jul 10 10:51:23 2006 (shostler): integrate -s 12 -w 
+Mon Jul 10 10:54:31 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 10:54:32 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 10:54:33 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 10:54:33 2006 (shostler): observe -s 3c418 
+Mon Jul 10 10:54:34 2006 (shostler): tsys 
+Mon Jul 10 10:54:46 2006 (shostler): integrate -s 12 -w 
+Mon Jul 10 10:57:53 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 10:57:54 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 10:57:54 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 10:57:55 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 10:57:56 2006 (shostler): tsys 
+Mon Jul 10 10:58:07 2006 (shostler): integrate -s 12 -w 
+Mon Jul 10 11:01:14 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 11:01:15 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 11:01:16 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 11:01:16 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 11:01:17 2006 (shostler): tsys 
+Mon Jul 10 11:01:28 2006 (shostler): integrate -s 20 -w 
+Mon Jul 10 11:06:39 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 11:06:40 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 11:06:41 2006 (shostler): tsys 
+Mon Jul 10 11:06:52 2006 (shostler): integrate -s 12 -w 
+Mon Jul 10 11:10:01 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 11:10:01 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 11:10:02 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 11:10:02 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 11:10:04 2006 (shostler): tsys 
+Mon Jul 10 11:10:15 2006 (shostler): integrate -s 20 -w 
+Mon Jul 10 11:15:26 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 11:15:26 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 11:15:27 2006 (shostler): tsys 
+Mon Jul 10 11:15:39 2006 (shostler): integrate -s 12 -w 
+Mon Jul 10 11:18:47 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 11:18:48 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 11:18:49 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 11:18:49 2006 (shostler): observe -s 3c418 
+Mon Jul 10 11:18:50 2006 (shostler): tsys 
+Mon Jul 10 11:19:02 2006 (shostler): integrate -s 12 -w 
+Mon Jul 10 11:22:09 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 11:22:09 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 11:22:10 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 11:22:10 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 11:22:11 2006 (shostler): tsys 
+Mon Jul 10 11:22:23 2006 (shostler): integrate -s 12 -w 
+Mon Jul 10 11:25:30 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 11:25:31 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 11:25:32 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 11:25:32 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 11:25:33 2006 (shostler): tsys 
+Mon Jul 10 11:25:45 2006 (shostler): integrate -s 20 -w 
+Mon Jul 10 11:30:56 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 11:30:56 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 11:30:57 2006 (shostler): tsys 
+Mon Jul 10 11:31:09 2006 (shostler): integrate -s 12 -w 
+Mon Jul 10 11:34:16 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 11:34:17 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 11:34:18 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 11:34:18 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 11:34:19 2006 (shostler): tsys 
+Mon Jul 10 11:34:30 2006 (shostler): integrate -s 20 -w 
+Mon Jul 10 11:39:42 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 11:39:42 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 11:39:43 2006 (shostler): tsys 
+Mon Jul 10 11:39:54 2006 (shostler): integrate -s 12 -w 
+Mon Jul 10 11:41:52 2006 (smatsushita): monitor 
+Mon Jul 10 11:43:03 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 11:43:04 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 11:43:04 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 11:43:05 2006 (shostler): observe -s 3c418 
+Mon Jul 10 11:43:06 2006 (shostler): tsys 
+Mon Jul 10 11:43:17 2006 (shostler): integrate -s 12 -w 
+Mon Jul 10 11:46:24 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 11:46:25 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 11:46:26 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 11:46:26 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 11:46:28 2006 (shostler): tsys 
+Mon Jul 10 11:46:39 2006 (shostler): integrate -s 12 -w 
+Mon Jul 10 11:49:46 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 11:49:46 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 11:49:47 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 11:49:47 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 11:49:49 2006 (shostler): tsys 
+Mon Jul 10 11:50:00 2006 (shostler): integrate -s 20 -w 
+Mon Jul 10 11:55:11 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 11:55:11 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 11:55:12 2006 (shostler): tsys 
+Mon Jul 10 11:55:24 2006 (shostler): integrate -s 12 -w 
+Mon Jul 10 11:58:32 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 11:58:33 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 11:58:34 2006 (shostler): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 11:58:34 2006 (shostler): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 11:58:35 2006 (shostler): tsys 
+Mon Jul 10 11:58:46 2006 (shostler): integrate -s 20 -w 
+Mon Jul 10 12:03:58 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 12:03:58 2006 (shostler): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 12:03:59 2006 (shostler): tsys 
+Mon Jul 10 12:04:10 2006 (shostler): integrate -s 12 -w 
+Mon Jul 10 12:07:19 2006 (shostler): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 12:07:20 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 12:07:21 2006 (shostler): lookup -s 3c418 
+Mon Jul 10 12:07:21 2006 (shostler): observe -s 3c418 
+Mon Jul 10 12:07:22 2006 (shostler): tsys 
+Mon Jul 10 12:07:34 2006 (shostler): integrate -s 12 -w 
+Mon Jul 10 12:13:51 2006 (smatsushita): project -r -i 60 -f .//nightly230.pl 
+Mon Jul 10 12:13:54 2006 (smatsushita): radio 
+Mon Jul 10 12:13:55 2006 (smatsushita): lookup -s 3c454.3 
+Mon Jul 10 12:13:55 2006 (smatsushita): observe -s 3c454.3 
+Mon Jul 10 12:13:57 2006 (smatsushita): point -D -i 60 -r 1 -L -l -t -f /data/engineering/pointing/nightly 
+		Repetition 1:
+		Ant 1	AzOff =   2.0	ElOff =  -1.5	deltaAz =   1.8	deltaEl =   5.4
+		Ant 2	AzOff =   6.9	ElOff =  -2.8	deltaAz =   5.9	deltaEl =  -2.6
+		Ant 3	AzOff =   0.9	ElOff =  -2.7	deltaAz =   2.1	deltaEl =   5.4
+		Ant 4	AzOff =  -8.4	ElOff =  -7.5	deltaAz =   4.1	deltaEl =   4.8
+		Ant 5	AzOff =   0.1	ElOff =   0.6	deltaAz =   1.7	deltaEl =  -1.0
+		Ant 6	AzOff =   6.3	ElOff =  12.7	deltaAz =   4.1	deltaEl =  18.4
+		Ant 8	AzOff =   8.5	ElOff =  -1.6	deltaAz =   5.6	deltaEl =   4.5
+Mon Jul 10 12:20:06 2006 (smatsushita): optical 
+Mon Jul 10 12:20:07 2006 (smatsushita): observe -s hip112997 
+Mon Jul 10 12:20:08 2006 (smatsushita): antennaWait 
+Mon Jul 10 12:20:23 2006 (smatsushita): /application/bin/snapshot -s 200 
+Mon Jul 10 12:20:24 2006 (smatsushita): c90cmd -a 1,2,3,4,5,6,8 -c snapshot -e 200  
+Mon Jul 10 12:20:47 2006 (smatsushita): observe -s polaris 
+Mon Jul 10 12:20:49 2006 (smatsushita): antennaWait 
+Mon Jul 10 12:21:22 2006 (smatsushita): /application/bin/snapshot -s 100 
+Mon Jul 10 12:21:23 2006 (smatsushita): c90cmd -a 1,2,3,4,5,6,8 -c snapshot -e 100  
+Mon Jul 10 12:21:44 2006 (smatsushita): radio 
+Mon Jul 10 12:21:50 2006 (smatsushita): /application/bin/dip 
+Mon Jul 10 12:21:50 2006 (smatsushita): openM3 -a 1,2,3,4,5,6,8 
+Mon Jul 10 12:21:54 2006 (smatsushita): el -d 80 -a 1,2,3,4,5,6,8 
+Mon Jul 10 12:21:57 2006 (smatsushita): resume -a 1,2,3,4,5,6,8 
+Mon Jul 10 12:22:05 2006 (smatsushita): tune -a 1 -c hotload in 
+Mon Jul 10 12:22:07 2006 (smatsushita): tune -a 2 -c hotload in 
+Mon Jul 10 12:22:10 2006 (smatsushita): tune -a 3 -c hotload in 
+Mon Jul 10 12:22:12 2006 (smatsushita): tune -a 4 -c hotload in 
+Mon Jul 10 12:22:14 2006 (smatsushita): tune -a 5 -c hotload in 
+Mon Jul 10 12:22:16 2006 (smatsushita): tune -a 6 -c hotload in 
+Mon Jul 10 12:22:18 2006 (smatsushita): tune -a 8 -c hotload in 
+Mon Jul 10 12:22:26 2006 (smatsushita): tune -a 1 -c hotload out 
+Mon Jul 10 12:22:29 2006 (smatsushita): tune -a 2 -c hotload out 
+Mon Jul 10 12:22:32 2006 (smatsushita): tune -a 3 -c hotload out 
+Mon Jul 10 12:22:36 2006 (smatsushita): tune -a 4 -c hotload out 
+Mon Jul 10 12:22:39 2006 (smatsushita): tune -a 5 -c hotload out 
+Mon Jul 10 12:22:43 2006 (smatsushita): tune -a 6 -c hotload out 
+Mon Jul 10 12:22:46 2006 (smatsushita): tune -a 8 -c hotload out 
+Mon Jul 10 12:22:55 2006 (smatsushita): resume -a 1 
+Mon Jul 10 12:22:55 2006 (smatsushita): resume -a 2 
+Mon Jul 10 12:22:55 2006 (smatsushita): resume -a 3 
+Mon Jul 10 12:22:55 2006 (smatsushita): resume -a 4 
+Mon Jul 10 12:22:55 2006 (smatsushita): resume -a 5 
+Mon Jul 10 12:22:55 2006 (smatsushita): resume -a 6 
+Mon Jul 10 12:22:55 2006 (smatsushita): resume -a 8 
+Mon Jul 10 12:22:56 2006 (smatsushita): el -a 1,2,3,4,5,6,8 -d 80 
+Mon Jul 10 12:22:58 2006 (smatsushita): antennaWait -a 1,2,3,4,5,6,8 -e 
+Mon Jul 10 12:23:30 2006 (smatsushita): el -a 1,2,3,4,5,6,8 -d 60.81 
+Mon Jul 10 12:23:33 2006 (smatsushita): antennaWait -a 1,2,3,4,5,6,8 -e 
+Mon Jul 10 12:24:16 2006 (smatsushita): el -a 1,2,3,4,5,6,8 -d 41.81 
+Mon Jul 10 12:24:19 2006 (smatsushita): antennaWait -a 1,2,3,4,5,6,8 -e 
+Mon Jul 10 12:25:01 2006 (smatsushita): el -a 1,2,3,4,5,6,8 -d 30 
+Mon Jul 10 12:25:04 2006 (smatsushita): antennaWait -a 1,2,3,4,5,6,8 -e 
+Mon Jul 10 12:25:43 2006 (smatsushita): el -a 1,2,3,4,5,6,8 -d 23.58 
+Mon Jul 10 12:25:45 2006 (smatsushita): antennaWait -a 1,2,3,4,5,6,8 -e 
+Mon Jul 10 12:26:23 2006 (smatsushita): el -a 1,2,3,4,5,6,8 -d 19.47 
+Mon Jul 10 12:26:25 2006 (smatsushita): antennaWait -a 1,2,3,4,5,6,8 -e 
+Mon Jul 10 12:27:01 2006 (smatsushita): el -a 1,2,3,4,5,6,8 -d 16.6 
+Mon Jul 10 12:27:03 2006 (smatsushita): antennaWait -a 1,2,3,4,5,6,8 -e 
+Mon Jul 10 12:27:39 2006 (smatsushita): writeDSM -m hal9000 -n 230 -v DSM_HAL_HAL_NIGHTLY_POINTING_S 
+Mon Jul 10 12:29:56 2006 (smatsushita): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 12:31:39 2006 (smatsushita): point -i 90 -r 2 -L -l -t -Q 
+Mon Jul 10 12:34:40 2006 (ccyeh): project -r -o Sherry & Satoki -l Taipei 
+Mon Jul 10 12:43:23 2006 (root): monitor 
+		Repetition 1:
+		Ant 1	AzOff =  -0.2	ElOff =  -3.1	deltaAz =  -0.4	deltaEl =   3.8
+		Ant 2	AzOff =   6.3	ElOff =   1.7	deltaAz =   5.3	deltaEl =   1.9
+		Ant 3	AzOff =   1.0	ElOff =  -8.0	deltaAz =   2.2	deltaEl =   0.1
+		Ant 4	AzOff =  -8.0	ElOff = -13.3	deltaAz =   4.4	deltaEl =  -1.1
+		Ant 5	AzOff =  -0.9	ElOff =   0.1	deltaAz =   0.7	deltaEl =  -1.5
+		Ant 6	AzOff =   2.4	ElOff =  -3.8	deltaAz =   0.2	deltaEl =   2.0
+		Ant 8	AzOff =   5.2	ElOff =  -2.1	deltaAz =   2.3	deltaEl =   4.0
+		Repetition 2:
+		Ant 1	AzOff =  -0.9	ElOff =  -5.0	deltaAz =  -1.1	deltaEl =   1.9
+		Ant 2	AzOff =   3.4	ElOff =   0.6	deltaAz =   2.4	deltaEl =   0.8
+		Ant 3	AzOff =   0.4	ElOff =  -5.6	deltaAz =   1.6	deltaEl =   2.5
+		Ant 4	AzOff = -10.6	ElOff = -17.1	deltaAz =   1.8	deltaEl =  -4.9
+		Ant 5	AzOff =   2.2	ElOff =  -1.4	deltaAz =   3.8	deltaEl =  -3.0
+		Ant 6	AzOff =   1.1	ElOff =  -3.7	deltaAz =  -1.2	deltaEl =   2.1
+		Ant 8	AzOff =   6.1	ElOff =  -2.4	deltaAz =   3.3	deltaEl =   3.7
+		Average:
+		Ant 1	AzOff =  -0.6	ElOff =  -4.0	deltaAz =  -0.7	deltaEl =   2.8
+		Ant 2	AzOff =   4.9	ElOff =   1.1	deltaAz =   3.8	deltaEl =   1.4
+		Ant 3	AzOff =   0.7	ElOff =  -6.8	deltaAz =   1.9	deltaEl =   1.3
+		Ant 4	AzOff =  -9.3	ElOff = -15.2	deltaAz =   3.1	deltaEl =  -3.0
+		Ant 5	AzOff =   0.6	ElOff =  -0.7	deltaAz =   2.2	deltaEl =  -2.3
+		Ant 6	AzOff =   1.7	ElOff =  -3.7	deltaAz =  -0.5	deltaEl =   2.0
+		Ant 8	AzOff =   5.6	ElOff =  -2.2	deltaAz =   2.8	deltaEl =   3.8
+Mon Jul 10 12:49:25 2006 (rwilson): monitor 
+Mon Jul 10 12:50:04 2006 (smatsushita): project -r -i 28 -f .//2006-03-S049_240_vex.pl 
+Mon Jul 10 12:50:07 2006 (smatsushita): radio 
+Mon Jul 10 12:50:09 2006 (smatsushita): integrate -t 15 
+Mon Jul 10 12:50:10 2006 (smatsushita): project -r -p T. K. Sridharan -d 2006-03-S049 -i 28 
+Mon Jul 10 12:50:12 2006 (smatsushita): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 12:50:13 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 12:50:14 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 12:50:14 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 12:50:15 2006 (smatsushita): observe -s 3c418 
+Mon Jul 10 12:50:16 2006 (smatsushita): tsys 
+Mon Jul 10 12:50:27 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 12:53:46 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 12:53:47 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 12:53:48 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 12:53:48 2006 (smatsushita): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 12:53:49 2006 (smatsushita): tsys 
+Mon Jul 10 12:54:01 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 12:57:08 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 12:57:09 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 12:57:10 2006 (smatsushita): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 12:57:10 2006 (smatsushita): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 12:57:11 2006 (smatsushita): tsys 
+Mon Jul 10 12:57:22 2006 (smatsushita): integrate -s 20 -w 
+Mon Jul 10 13:02:33 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 13:02:34 2006 (smatsushita): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 13:02:35 2006 (smatsushita): tsys 
+Mon Jul 10 13:02:46 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 13:05:55 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 13:05:55 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 13:05:56 2006 (smatsushita): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 13:05:56 2006 (smatsushita): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 13:05:58 2006 (smatsushita): tsys 
+Mon Jul 10 13:06:09 2006 (smatsushita): integrate -s 20 -w 
+Mon Jul 10 13:11:20 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 13:11:20 2006 (smatsushita): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 13:11:21 2006 (smatsushita): tsys 
+Mon Jul 10 13:11:32 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 13:14:41 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 13:14:42 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 13:14:42 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 13:14:43 2006 (smatsushita): observe -s 3c418 
+Mon Jul 10 13:14:44 2006 (smatsushita): tsys 
+Mon Jul 10 13:14:56 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 13:18:02 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 13:18:04 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 13:18:05 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 13:18:06 2006 (smatsushita): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 13:18:07 2006 (smatsushita): tsys 
+Mon Jul 10 13:18:18 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 13:21:23 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 13:21:24 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 13:21:25 2006 (smatsushita): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 13:21:25 2006 (smatsushita): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 13:21:27 2006 (smatsushita): tsys 
+Mon Jul 10 13:21:38 2006 (smatsushita): integrate -s 20 -w 
+Mon Jul 10 13:26:49 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 13:26:49 2006 (smatsushita): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 13:26:51 2006 (smatsushita): tsys 
+Mon Jul 10 13:27:02 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 13:30:10 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 13:30:11 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 13:30:11 2006 (smatsushita): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 13:30:12 2006 (smatsushita): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 13:30:13 2006 (smatsushita): tsys 
+Mon Jul 10 13:30:24 2006 (smatsushita): integrate -s 20 -w 
+Mon Jul 10 13:35:36 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 13:35:36 2006 (smatsushita): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 13:35:37 2006 (smatsushita): tsys 
+Mon Jul 10 13:35:48 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 13:38:57 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 13:38:57 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 13:38:58 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 13:38:59 2006 (smatsushita): observe -s 3c418 
+Mon Jul 10 13:39:00 2006 (smatsushita): tsys 
+Mon Jul 10 13:39:11 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 13:42:18 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 13:42:19 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 13:42:19 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 13:42:20 2006 (smatsushita): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 13:42:21 2006 (smatsushita): tsys 
+Mon Jul 10 13:42:33 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 13:45:39 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 13:45:40 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 13:45:41 2006 (smatsushita): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 13:45:41 2006 (smatsushita): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 13:45:43 2006 (smatsushita): tsys 
+Mon Jul 10 13:45:54 2006 (smatsushita): integrate -s 20 -w 
+Mon Jul 10 13:51:04 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 13:51:05 2006 (smatsushita): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 13:51:06 2006 (smatsushita): tsys 
+Mon Jul 10 13:51:17 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 13:54:26 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 13:54:26 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 13:54:27 2006 (smatsushita): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 13:54:27 2006 (smatsushita): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 13:54:29 2006 (smatsushita): tsys 
+Mon Jul 10 13:54:40 2006 (smatsushita): integrate -s 20 -w 
+Mon Jul 10 13:59:51 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 13:59:51 2006 (smatsushita): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 13:59:53 2006 (smatsushita): tsys 
+Mon Jul 10 14:00:04 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 14:03:12 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 14:03:13 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 14:03:14 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 14:03:14 2006 (smatsushita): observe -s 3c418 
+Mon Jul 10 14:03:16 2006 (smatsushita): tsys 
+Mon Jul 10 14:03:27 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 14:06:34 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 14:06:34 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 14:06:35 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 14:06:36 2006 (smatsushita): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 14:06:37 2006 (smatsushita): tsys 
+Mon Jul 10 14:06:49 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 14:09:55 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 14:09:56 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 14:09:57 2006 (smatsushita): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 14:09:57 2006 (smatsushita): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 14:09:58 2006 (smatsushita): tsys 
+Mon Jul 10 14:10:10 2006 (smatsushita): integrate -s 20 -w 
+Mon Jul 10 14:15:20 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 14:15:20 2006 (smatsushita): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 14:15:21 2006 (smatsushita): tsys 
+Mon Jul 10 14:15:33 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 14:18:42 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 14:18:42 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 14:18:44 2006 (smatsushita): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 14:18:44 2006 (smatsushita): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 14:18:45 2006 (smatsushita): tsys 
+Mon Jul 10 14:18:56 2006 (smatsushita): integrate -s 20 -w 
+Mon Jul 10 14:24:07 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 14:24:07 2006 (smatsushita): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 14:24:08 2006 (smatsushita): tsys 
+Mon Jul 10 14:24:19 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 14:27:28 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 14:27:29 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 14:27:30 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 14:27:30 2006 (smatsushita): observe -s 3c418 
+Mon Jul 10 14:27:31 2006 (smatsushita): tsys 
+Mon Jul 10 14:27:42 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 14:30:49 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 14:30:50 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 14:30:51 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 14:30:51 2006 (smatsushita): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 14:30:53 2006 (smatsushita): tsys 
+Mon Jul 10 14:31:04 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 14:34:11 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 14:34:11 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 14:34:12 2006 (smatsushita): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 14:34:12 2006 (smatsushita): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 14:34:14 2006 (smatsushita): tsys 
+Mon Jul 10 14:34:25 2006 (smatsushita): integrate -s 20 -w 
+Mon Jul 10 14:39:36 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 14:39:36 2006 (smatsushita): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 14:39:38 2006 (smatsushita): tsys 
+Mon Jul 10 14:39:49 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 14:42:57 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 14:42:58 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 14:42:59 2006 (smatsushita): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 14:42:59 2006 (smatsushita): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 14:43:00 2006 (smatsushita): tsys 
+Mon Jul 10 14:43:12 2006 (smatsushita): integrate -s 20 -w 
+Mon Jul 10 14:48:22 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 14:48:23 2006 (smatsushita): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 14:48:24 2006 (smatsushita): tsys 
+Mon Jul 10 14:48:35 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 14:51:44 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 14:51:45 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 14:51:45 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 14:51:46 2006 (smatsushita): observe -s 3c418 
+Mon Jul 10 14:51:47 2006 (smatsushita): tsys 
+Mon Jul 10 14:51:58 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 14:55:05 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 14:55:06 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 14:55:07 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 14:55:07 2006 (smatsushita): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 14:55:08 2006 (smatsushita): tsys 
+Mon Jul 10 14:55:20 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 14:58:28 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 14:58:29 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 14:58:30 2006 (smatsushita): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 14:58:30 2006 (smatsushita): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 14:58:31 2006 (smatsushita): tsys 
+Mon Jul 10 14:58:42 2006 (smatsushita): integrate -s 20 -w 
+Mon Jul 10 15:03:52 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 15:03:52 2006 (smatsushita): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 15:03:53 2006 (smatsushita): tsys 
+Mon Jul 10 15:04:05 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 15:07:13 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 15:07:14 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 15:07:15 2006 (smatsushita): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 15:07:15 2006 (smatsushita): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 15:07:16 2006 (smatsushita): tsys 
+Mon Jul 10 15:07:28 2006 (smatsushita): integrate -s 20 -w 
+Mon Jul 10 15:12:38 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 15:12:39 2006 (smatsushita): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 15:12:40 2006 (smatsushita): tsys 
+Mon Jul 10 15:12:51 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 15:16:00 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 15:16:01 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 15:16:01 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 15:16:02 2006 (smatsushita): observe -s 3c418 
+Mon Jul 10 15:16:03 2006 (smatsushita): tsys 
+Mon Jul 10 15:16:14 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 15:19:21 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 15:19:22 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 15:19:22 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 15:19:23 2006 (smatsushita): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 15:19:24 2006 (smatsushita): tsys 
+Mon Jul 10 15:19:35 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 15:22:42 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 15:22:43 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 15:22:44 2006 (smatsushita): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 15:22:44 2006 (smatsushita): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 15:22:45 2006 (smatsushita): tsys 
+Mon Jul 10 15:22:57 2006 (smatsushita): integrate -s 20 -w 
+Mon Jul 10 15:28:07 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 15:28:08 2006 (smatsushita): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 15:28:09 2006 (smatsushita): tsys 
+Mon Jul 10 15:28:20 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 15:31:29 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 15:31:29 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 15:31:30 2006 (smatsushita): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 15:31:31 2006 (smatsushita): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 15:31:32 2006 (smatsushita): tsys 
+Mon Jul 10 15:31:43 2006 (smatsushita): integrate -s 20 -w 
+Mon Jul 10 15:36:54 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 15:36:54 2006 (smatsushita): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 15:36:56 2006 (smatsushita): tsys 
+Mon Jul 10 15:37:07 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 15:40:15 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 15:40:16 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 15:40:17 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 15:40:17 2006 (smatsushita): observe -s 3c418 
+Mon Jul 10 15:40:18 2006 (smatsushita): tsys 
+Mon Jul 10 15:40:29 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 15:43:37 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 15:43:37 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 15:43:38 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 15:43:38 2006 (smatsushita): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 15:43:40 2006 (smatsushita): tsys 
+Mon Jul 10 15:43:51 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 15:46:58 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 15:46:59 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 15:46:59 2006 (smatsushita): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 15:47:00 2006 (smatsushita): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 15:47:01 2006 (smatsushita): tsys 
+Mon Jul 10 15:47:12 2006 (smatsushita): integrate -s 20 -w 
+Mon Jul 10 15:48:03 2006 (root): monitor 
+Mon Jul 10 15:52:23 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 15:52:23 2006 (smatsushita): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 15:52:25 2006 (smatsushita): tsys 
+Mon Jul 10 15:52:36 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 15:55:44 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 15:55:45 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 15:55:46 2006 (smatsushita): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 15:55:46 2006 (smatsushita): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 15:55:47 2006 (smatsushita): tsys 
+Mon Jul 10 15:55:59 2006 (smatsushita): integrate -s 20 -w 
+Mon Jul 10 16:01:10 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 16:01:10 2006 (smatsushita): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 16:01:11 2006 (smatsushita): tsys 
+Mon Jul 10 16:01:23 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 16:04:31 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 16:04:32 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 16:04:33 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 16:04:33 2006 (smatsushita): observe -s 3c418 
+Mon Jul 10 16:04:35 2006 (smatsushita): tsys 
+Mon Jul 10 16:04:46 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 16:07:52 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 16:07:53 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 16:07:54 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 16:07:54 2006 (smatsushita): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 16:07:55 2006 (smatsushita): tsys 
+Mon Jul 10 16:08:07 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 16:11:14 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 16:11:14 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 16:11:15 2006 (smatsushita): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 16:11:15 2006 (smatsushita): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 16:11:17 2006 (smatsushita): tsys 
+Mon Jul 10 16:11:28 2006 (smatsushita): integrate -s 20 -w 
+Mon Jul 10 16:16:39 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 16:16:39 2006 (smatsushita): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 16:16:40 2006 (smatsushita): tsys 
+Mon Jul 10 16:16:52 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 16:20:00 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 16:20:01 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 16:20:02 2006 (smatsushita): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 16:20:02 2006 (smatsushita): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 16:20:03 2006 (smatsushita): tsys 
+Mon Jul 10 16:20:14 2006 (smatsushita): integrate -s 20 -w 
+Mon Jul 10 16:25:26 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 16:25:26 2006 (smatsushita): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 16:25:27 2006 (smatsushita): tsys 
+Mon Jul 10 16:25:38 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 16:27:47 2006 (ccyeh): monitor 
+Mon Jul 10 16:28:47 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 16:28:48 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 16:28:49 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 16:28:49 2006 (smatsushita): observe -s 3c418 
+Mon Jul 10 16:28:50 2006 (smatsushita): tsys 
+Mon Jul 10 16:29:02 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 16:32:08 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 16:32:09 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 16:32:10 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 16:32:10 2006 (smatsushita): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 16:32:11 2006 (smatsushita): tsys 
+Mon Jul 10 16:32:23 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 16:35:30 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 16:35:30 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 16:35:32 2006 (smatsushita): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 16:35:32 2006 (smatsushita): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 16:35:33 2006 (smatsushita): tsys 
+Mon Jul 10 16:35:44 2006 (smatsushita): integrate -s 20 -w 
+Mon Jul 10 16:40:55 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 16:40:55 2006 (smatsushita): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 16:40:57 2006 (smatsushita): tsys 
+Mon Jul 10 16:41:08 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 16:44:16 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 16:44:17 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 16:44:17 2006 (smatsushita): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 16:44:18 2006 (smatsushita): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 16:44:19 2006 (smatsushita): tsys 
+Mon Jul 10 16:44:30 2006 (smatsushita): integrate -s 20 -w 
+Mon Jul 10 16:49:11 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 16:49:11 2006 (smatsushita): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 16:49:12 2006 (smatsushita): tsys 
+Mon Jul 10 16:49:24 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 16:49:56 2006 (ccyeh): correlatorPause 
+Mon Jul 10 16:50:04 2006 (ccyeh): correlatorResume 
+Mon Jul 10 16:51:05 2006 (smatsushita): monitor 
+Mon Jul 10 16:51:22 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 16:51:23 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 16:51:24 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 16:51:24 2006 (smatsushita): observe -s 3c418 
+Mon Jul 10 16:51:25 2006 (smatsushita): tsys 
+Mon Jul 10 16:51:36 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 16:54:43 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 16:54:44 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 16:54:45 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 16:54:45 2006 (smatsushita): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 16:54:47 2006 (smatsushita): tsys 
+Mon Jul 10 16:54:58 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 16:58:05 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 16:58:06 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 16:58:07 2006 (smatsushita): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 16:58:07 2006 (smatsushita): observe -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 16:58:08 2006 (smatsushita): tsys 
+Mon Jul 10 16:58:19 2006 (smatsushita): integrate -s 20 -w 
+Mon Jul 10 17:03:30 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 17:03:30 2006 (smatsushita): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 17:03:32 2006 (smatsushita): tsys 
+Mon Jul 10 17:03:43 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 17:06:51 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 17:06:52 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 17:06:53 2006 (smatsushita): lookup -s I20126 -r 20:14:26.04 -d +41:13:32.60 -e 2000 -v -3.5 
+Mon Jul 10 17:06:54 2006 (smatsushita): lookup -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 17:06:54 2006 (smatsushita): observe -s mwc349 -r 20:32:45.44 -d +40:39:36.80 -e 2000 
+Mon Jul 10 17:06:56 2006 (smatsushita): tsys 
+Mon Jul 10 17:07:07 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 17:10:12 2006 (smatsushita): lookup -s 3c418 
+Mon Jul 10 17:10:13 2006 (smatsushita): observe -s 3c418 
+Mon Jul 10 17:10:14 2006 (smatsushita): tsys 
+Mon Jul 10 17:10:25 2006 (smatsushita): integrate -s 12 -w 
+Mon Jul 10 17:13:34 2006 (smatsushita): lookup -s callisto 
+Mon Jul 10 17:13:35 2006 (smatsushita): lookup -s 3c279 
+Mon Jul 10 17:13:36 2006 (smatsushita): lookup -s 2230+114 
+Mon Jul 10 17:13:36 2006 (smatsushita): lookup -s 2230+114 
+Mon Jul 10 17:13:37 2006 (smatsushita): observe -s 2230+114 
+Mon Jul 10 17:13:38 2006 (smatsushita): tsys 
+Mon Jul 10 17:13:50 2006 (smatsushita): integrate -s 20 -w 
+Mon Jul 10 17:19:14 2006 (smatsushita): lookup -s 2230+114 
+Mon Jul 10 17:19:15 2006 (smatsushita): observe -s 2230+114 
+Mon Jul 10 17:19:16 2006 (smatsushita): integrate -s 20 -w 
+Mon Jul 10 17:24:25 2006 (smatsushita): lookup -s 2230+114 
+Mon Jul 10 17:24:25 2006 (smatsushita): observe -s 2230+114 
+Mon Jul 10 17:24:26 2006 (smatsushita): integrate -s 20 -w 
+Mon Jul 10 17:29:34 2006 (smatsushita): lookup -s 2230+114 
+Mon Jul 10 17:29:34 2006 (smatsushita): observe -s 2230+114 
+Mon Jul 10 17:29:36 2006 (smatsushita): integrate -s 20 -w 
+Mon Jul 10 17:34:44 2006 (smatsushita): lookup -s 2230+114 
+Mon Jul 10 17:34:44 2006 (smatsushita): observe -s 2230+114 
+Mon Jul 10 17:34:45 2006 (smatsushita): integrate -s 20 -w 
+Mon Jul 10 17:40:09 2006 (smatsushita): lookup -s 2230+114 
+Mon Jul 10 17:40:09 2006 (smatsushita): observe -s 2230+114 
+Mon Jul 10 17:40:11 2006 (smatsushita): integrate -s 20 -w 
+Mon Jul 10 17:45:13 2006 (bchitwood): monitor 
+Mon Jul 10 17:45:18 2006 (smatsushita): lookup -s 2230+114 
+Mon Jul 10 17:45:19 2006 (smatsushita): observe -s 2230+114 
+Mon Jul 10 17:45:21 2006 (smatsushita): integrate -s 20 -w 
+Mon Jul 10 17:50:28 2006 (smatsushita): lookup -s 2230+114 
+Mon Jul 10 17:50:29 2006 (smatsushita): observe -s 2230+114 
+Mon Jul 10 17:50:30 2006 (smatsushita): integrate -s 20 -w 
+Mon Jul 10 17:55:38 2006 (smatsushita): lookup -s 2230+114 
+Mon Jul 10 17:55:39 2006 (smatsushita): observe -s 2230+114 
+Mon Jul 10 17:55:40 2006 (smatsushita): integrate -s 20 -w 
+Mon Jul 10 17:57:10 2006 (bchitwood): monitor 
+Mon Jul 10 18:00:48 2006 (smatsushita): lookup -s 2230+114 
+Mon Jul 10 18:00:48 2006 (smatsushita): observe -s 2230+114 
+Mon Jul 10 18:00:49 2006 (smatsushita): integrate -s 20 -w 
+Mon Jul 10 18:04:03 2006 (pyamaguc): monitor 
+Mon Jul 10 18:05:58 2006 (smatsushita): lookup -s 2230+114 
+Mon Jul 10 18:05:58 2006 (smatsushita): observe -s 2230+114 
+Mon Jul 10 18:05:59 2006 (smatsushita): integrate -s 20 -w 
+Mon Jul 10 18:11:07 2006 (smatsushita): lookup -s 2230+114 
+Mon Jul 10 18:11:08 2006 (smatsushita): observe -s 2230+114 
+Mon Jul 10 18:11:09 2006 (smatsushita): integrate -s 20 -w 
+Mon Jul 10 18:16:17 2006 (smatsushita): lookup -s 2230+114 
+Mon Jul 10 18:16:18 2006 (smatsushita): observe -s 2230+114 
+Mon Jul 10 18:16:19 2006 (smatsushita): integrate -s 20 -w 
+Mon Jul 10 18:21:27 2006 (smatsushita): lookup -s 2230+114 
+Mon Jul 10 18:21:27 2006 (smatsushita): observe -s 2230+114 
+Mon Jul 10 18:21:29 2006 (smatsushita): integrate -s 20 -w 
+Mon Jul 10 18:26:36 2006 (smatsushita): lookup -s 2230+114 
+Mon Jul 10 18:26:37 2006 (smatsushita): observe -s 2230+114 
+Mon Jul 10 18:26:38 2006 (smatsushita): integrate -s 20 -w 
+Mon Jul 10 18:38:51 2006 (smatsushita): project -r -i 153 -f .//endObs.pl 
+Mon Jul 10 18:43:16 2006 (root): monitor 
+Mon Jul 10 18:48:12 2006 (root): monitor 
+Mon Jul 10 18:49:58 2006 (root): monitor 
+Mon Jul 10 18:51:54 2006 (smatsushita): project -r -i 87 -f .//endObs.pl 
+Mon Jul 10 18:51:55 2006 (smatsushita): tune -q -c hotload out 
+Mon Jul 10 18:51:59 2006 (smatsushita): tune -q -c hotload in 
+Mon Jul 10 18:52:55 2006 (smatsushita): el -d 30 
+Mon Jul 10 18:54:33 2006 (smatsushita): tune -q -c hotload out 
+Mon Jul 10 18:54:37 2006 (smatsushita): tune -q -c activate -w 
+Mon Jul 10 18:54:40 2006 (smatsushita): tune -q -c vbias0 10 
+Mon Jul 10 18:54:43 2006 (smatsushita): tune -q -c vbias1 10 
+Mon Jul 10 18:54:45 2006 (smatsushita): tune -q -c hotload in 
+Mon Jul 10 18:57:19 2006 (smatsushita): tune -q -c activate -r 
+Mon Jul 10 18:57:22 2006 (smatsushita): tune -q -c iv0 
+Mon Jul 10 19:12:57 2006 (smatsushita): resume 
+Mon Jul 10 19:13:06 2006 (smatsushita): stow 
+Mon Jul 10 19:21:07 2006 (smatsushita): endProject.
+Mon Jul 10 19:24:21 2006 (root): project -p Taco -o Taco -l Cambridge -d RM & DSM re-allocation -s 1..8 -R l -C1..12 
+Mon Jul 10 19:24:24 2006 (root): project -p Taco -o Taco -l Cambridge -d RM & DSM re-allocation -s 1..8 -R l -C1..12 -s 1 
+Mon Jul 10 19:24:33 2006 (root): project -p Taco -o Taco -l Cambridge -d RM & DSM re-allocation -a 1..8 -R l -C1..12 -s 1 
+Mon Jul 10 19:28:49 2006 (root): accRemoteReset -a 1..8 
+Mon Jul 10 19:31:34 2006 (root): /application/bin/raoff -a 1..8 -s 0 
+Mon Jul 10 19:31:35 2006 (root): /application/bin/decoff -a 1..8 -s 0 
+Mon Jul 10 19:31:36 2006 (root): /application/bin/standby -a 1..8 
+Mon Jul 10 19:31:37 2006 (root): /application/bin/focusCurveOn -a1..8 
+Mon Jul 10 19:31:38 2006 (root): /application/bin/tol -c off -a 1..8 
+Mon Jul 10 19:31:40 2006 (root): /application/bin/setSunSafeMinutes -a1..8 120 
+Mon Jul 10 19:32:20 2006 (bchitwood): monitor 
+Mon Jul 10 19:32:34 2006 (bchitwood): monitor 
+Mon Jul 10 19:32:41 2006 (root): monitor 
+Mon Jul 10 19:33:23 2006 (rtm): /application/bin/killdaemon all dsm restart
+Mon Jul 10 19:35:04 2006 (root): monitor 
+Mon Jul 10 19:35:38 2006 (root): colossusRemoteReset 
+Mon Jul 10 19:35:46 2006 (root): endProject.
+Mon Jul 10 19:38:50 2006 (bchitwood): monitor 
+Mon Jul 10 19:40:08 2006 (root): /application/bin/accResetDaemon 
+Mon Jul 10 19:44:26 2006 (adiven): monitor 
+Mon Jul 10 19:44:59 2006 (adiven): initChopper -a1 
+Mon Jul 10 19:45:07 2006 (adiven): initChopper -a2 
+Mon Jul 10 19:45:12 2006 (adiven): monitor 
+Mon Jul 10 19:46:34 2006 (rtm): /application/bin/killdaemon all logger restart
+Mon Jul 10 19:52:44 2006 (root): monitor 
+Mon Jul 10 19:54:29 2006 (rtm): /application/bin/killdaemon acc7 logTilts QUIT
+Mon Jul 10 20:06:24 2006 (root): project -p Taco -o Taco -l Cambridge -d Software -R l -C1..6 -s 1 -a1..6 
+Mon Jul 10 20:10:06 2006 (root): endProject.
+Mon Jul 10 20:10:11 2006 (root): project -p Taco -o Taco -l Cambridge -d Software -R l -C1..6 -s 1 -a1..6 
+Mon Jul 10 20:12:10 2006 (root): endProject.
+Mon Jul 10 20:12:14 2006 (root): project -p Taco -o Taco -l Cambridge -d Software -R l -C1..6 -s 1 -a1..6 
+Mon Jul 10 20:14:54 2006 (root): endProject.

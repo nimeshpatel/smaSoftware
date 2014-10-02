@@ -1,0 +1,48 @@
+CC = gcc -g
+BIN = rpoint
+FCC = g77 -g
+PH=
+#PH=/application/lib/ph.o
+
+all: rpoint /application/bin/aperEff
+
+/application/bin/aperEff: apereff.c
+	$(CC) apereff.c -o $@ -lm
+
+rpoint:rpoint.o nrutil.o nrpoint.o nrpoint2.o mrqmin.o mrqcof.o covsrt.o gaussj.o fgauss2.o rms.o $(PH)
+	$(FCC) -o rpoint rpoint.o nrpoint.o nrpoint2.o nrutil.o mrqmin.o mrqcof.o \
+	covsrt.o gaussj.o fgauss2.o rms.o $(PH) \
+	-lcpgplot -lpgplot -lm\
+
+nrpoint.o:nrpoint.c mrqmin.o mrqcof.o covsrt.o gaussj.o fgauss2.o rms.o rpoint.h
+	$(CC) -c nrpoint.c -o nrpoint.o
+
+nrpoint2.o:nrpoint2.c mrqmin.o mrqcof.o covsrt.o gaussj.o fgauss2.o rms.o rpoint.h
+	$(CC) -c nrpoint2.c -o nrpoint2.o
+
+rpoint.o:rpoint.c rpoint.h
+	$(CC) -c rpoint.c -o rpoint.o 
+
+nrutil.o:nrutil.c
+	$(CC) -c nrutil.c -o nrutil.o
+
+mrqmin.o:mrqmin.c
+	$(CC) -c mrqmin.c -o mrqmin.o
+
+mrqcof.o:mrqcof.c
+	$(CC) -c mrqcof.c -o mrqcof.o
+
+covsrt.o:covsrt.c
+	$(CC) -c covsrt.c -o covsrt.o
+
+gaussj.o:gaussj.c
+	$(CC) -c gaussj.c -o gaussj.o
+
+fgauss2.o:fgauss2.c
+	$(CC) -c fgauss2.c -o fgauss2.o
+
+rms.o:rms.c
+	$(CC) -c rms.c -o rms.o
+
+clean cleanup:
+	rm -f *.o $(BIN)

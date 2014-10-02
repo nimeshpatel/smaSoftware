@@ -1,0 +1,7 @@
+opening GPIB device at address = 8....
+Address 8: found device = HEWLETT-PACKARD,8508A-050,0,2944
+Succeeded.  Descriptor = 8
+opening GPIB device at address = 9....
+Address 9: found device = HEWLETT-PACKARD,8508A-050,0,2944
+Succeeded.  Descriptor = 9
+vectorVoltmeter1@addr8> vectorVoltmeter2@addr9> vectorVoltmeter2@addr9> vectorVoltmeter2@addr9> 

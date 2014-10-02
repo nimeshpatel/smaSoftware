@@ -1,0 +1,50 @@
+#!/usr/local/bin/perl
+# 3 Jun 2003 NaP
+# Revised snapshot for the new guidescopes. 
+
+use Getopt::Long;
+$Getopt::Long::autoabbrev=1;
+
+sub Usage(){
+    printf "Usage: snapshot  -a 4 -s 200 \n";
+}
+
+GetOptions('antenna=i'=>\$antennaNumber,
+	   'seconds=i'=>\$exposure,
+	   'verbose'=>\$verboseFlag);
+
+if (!$exposure) {
+  &Usage;
+  die "Please specify exposure time using -s (in msec).\n";
+}
+
+@antennalist = ();
+
+# if no antenna is specified, get the antennas from project command.
+if($antennaNumber!=0) {
+    push(@antennalist,$antennaNumber);
+} else {
+    for($i=1;$i<8;$i++) {
+	$antenna_status=`value -a $i -v antenna_status`;
+	if ($antenna_status==1) { 
+	    push(@antennalist,$i); 
+	}       
+    }
+}
+
+foreach $antenna (@antennalist) {
+    `integrationTime -a $antenna -s $exposure`;
+    sleep 1;
+    if ($antenna < 7) {
+	$response=`c90cmd -a $antenna -c "snapshot -e $exposure"`;
+	if ($verboseFlag) {
+	    print "$response\n";
+	}
+	($junk,$filename) = split(/file=/,$response);
+	chomp($filename);
+	printf "Filename = %s\n",$filename;
+    } else {
+	`snapshotCommand -a $antenna`;
+    }
+}
+

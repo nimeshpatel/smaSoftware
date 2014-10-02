@@ -1,0 +1,43 @@
+#!/usr/local/bin/perl
+# modified so that you can specify ant
+# written by NP
+# modified by Masao 02/22/01
+# modified by Nimesh 04/27/02
+
+sub Usage(){
+        print "Usage: setFreq -f 232.4 -t 14 -s <u/l> -a<n:optional>\n setFreq --frequency 232.4 --times 14 -sideband u --antenna <n:optional>\n";
+print "Please use this command only for engineering purposes. Otherwise
+use the dopperTrack command.\n";}
+
+use Getopt::Long;
+$Getopt::Long::autoabbrev=1;
+GetOptions('frequency=f'=>\$obsFrequency,'sideband=s'=>\$sideband,'times=i'=>\$harmonics,'antenna=i'=>\$antennaNumber);
+
+#die("Don't use setFreq anymore. Use dopplerTrack instead\n");
+
+
+#if($obsFrequency<200 or $obsFrequency>700) {Usage();die "Frequency must be 200 - 700 GHz.\n";}
+#if($harmonics<14 or $harmonics>16) {Usage();die "harmonics should be 14 or 15.\n";}
+if ($sideband ne "u" and $sideband ne "l") {Usage(); die "set sideband u or l\n";}
+
+#initializations
+$freqOffset=0.122; #GHz Taco's recomendation 061400 by Masao
+$PLLIF=0.109; #GHz
+
+$multiplier = int($obsFrequency/115.0 + 0.5);
+
+
+if($sideband eq "u")
+{
+$yigfrequency=(($obsFrequency-(5.0+$freqOffset))/$multiplier - $PLLIF)/$harmonics;
+}
+
+elsif($sideband eq "l")
+{
+$yigfrequency=(($obsFrequency+(5.0+$freqOffset))/$multiplier - $PLLIF)/$harmonics;
+}
+
+unless($antennaNumber){$command="/application/bin/setMRG -f $yigfrequency \n";}
+else{$command="/application/bin/setMRG -f $yigfrequency -a $antennaNumber\n";}
+print "$command";
+system("$command");

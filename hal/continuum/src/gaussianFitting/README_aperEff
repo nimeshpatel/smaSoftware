@@ -1,0 +1,6 @@
+The aperInput.tmp looks like this:
+
+rscan-/data/engineering/rpoint/ant2/ant2.elscan.26May05_044740.rpoint 2 jupiter 54.312046 0.000000 293.293274 274.899994 -0.000000 0.000000 1.052117 0.279964 0.128720 0.000000 -0.000000 40.865376 56.480705 165.000000 0.000000 1
+
+written in as (nrpoint.c):
+          fprintf(fpi_eta, "%s %d %s %f %f %f %f %f %f %f %f %f %f %f %f %f %f %f %d\n", rawfilename, ant_num, object, el, tau_zenith, Thot,Tamb,Tatm,eta_l,Vhot,Vsky,delVsource,fwhm_beam,Frequency, PlanetDia, WidthFwhm,TBright,err,use_beam);

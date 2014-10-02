@@ -1,0 +1,244 @@
+#!/usr/local/bin/perl
+use  Tk;
+
+my  $mw  =  MainWindow->new;
+$integ2=1; $integ3=1; $integ4=1; $integ5=1;
+$scanflg2=0; $scanflg3=0; $scanflg4=0; $scanflg5=0;
+$saveflg2=0; $saveflg3=0; $saveflg4=0; $saveflg5=0;
+$chopflg2=0; $chopflg3=0; $chopflg4=0; $chopflg5=0;
+$fitflg2=0; $fitflg3=0; $fitflg4=0; $fitflg5=0;
+ 
+$mw->title("SMA  Radio Pointing System");
+
+  my $f=$mw->Menubutton(-relief=>'ridge',-borderwidth=>2);
+  $f->pack(-side=>'top',-anchor=>'n',-expand=>1,-fill=>'x');
+  foreach (qw/File Options Help/){
+	push (@menus,$f->Menubutton(-text=>$_));
+  }
+  $menus[2]->pack(-side=>'right');
+  $menus[0]->pack(-side=>'left');
+  $menus[1]->pack(-side=>'left');
+
+  $menus[0]->command(-label=>'open',
+		accelerator=>'Meta+F',
+		underline =>0,
+		);
+  $menus[0]->command(-label=>'close',
+		accelerator=>'Meta+C',
+		underline =>0,
+		);
+  $menus[2]->cascade(-label=>"topic");
+  $menus[2]->command(-label=>"version",-command=>sub{system'ver.pl'});
+
+  $mw->Label(-text  =>  "Ant 2")->place(-x=>100,-y=>30);
+  $mw->Label(-text  =>  "Ant 3")->place(-x=>150,-y=>30);
+  $mw->Label(-text  =>  "Ant 4")->place(-x=>200,-y=>30);
+  $mw->Label(-text  =>  "Ant 5")->place(-x=>250,-y=>30);
+  $mw->Label(-text  =>  "rpoint on")->place(-x=>0,-y=>60);
+  $mw->Label(-text  =>  "On scan")->place(-x=>0,-y=>80);
+  $mw->Label(-text  =>  "Az")->place(-x=>0,-y=>100);
+  $mw->Label(-text  =>  "El")->place(-x=>0,-y=>120);
+  $mw->Label(-text  =>  "Sync")->place(-x=>0,-y=>140);
+  $mw->Label(-text  =>  "Total")->place(-x=>0,-y=>160);
+  $mw->Label(-text  =>  "Integ(sec)")->place(-x=>0,-y=>180);
+  $mw->Checkbutton(
+        -variable => \$fitflg2,
+	-relief => 'ridge',
+	-background=>'yellow',
+	-foreground=>'blue')
+        ->place(-x=>100,-y=>60);
+  $mw->Checkbutton(
+        -variable => \$fitflg3,
+	-relief => 'ridge',
+	-background=>'yellow',
+	-foreground=>'blue')
+        ->place(-x=>150,-y=>60);
+  $mw->Checkbutton(
+        -variable => \$fitflg4,
+	-relief => 'ridge',
+	-background=>'yellow',
+	-foreground=>'blue')
+        ->place(-x=>200,-y=>60);
+  $mw->Checkbutton(
+        -variable => \$fitflg5,
+	-relief => 'ridge',
+	-background=>'yellow',
+	-foreground=>'blue')
+        ->place(-x=>250,-y=>60);
+
+  $mw->Checkbutton(
+        -variable => \$saveflg2)
+        ->place(-x=>100,-y=>80);
+  $mw->Checkbutton(
+        -variable => \$saveflg3)
+        ->place(-x=>150,-y=>80);
+  $mw->Checkbutton(
+        -variable => \$saveflg4)
+        ->place(-x=>200,-y=>80);
+  $mw->Checkbutton(
+        -variable => \$saveflg5)
+        ->place(-x=>250,-y=>80);
+
+  $mw->Radiobutton(
+        -variable => \$scanflg2,
+        -value => 1)
+        ->place(-x=>100,-y=>100);
+  $mw->Radiobutton(
+        -variable => \$scanflg3,
+        -value => 1)
+        ->place(-x=>150,-y=>100);
+  $mw->Radiobutton(
+        -variable => \$scanflg4,
+        -value => 1)
+        ->place(-x=>200,-y=>100);
+  $mw->Radiobutton(
+        -variable => \$scanflg5,
+        -value => 1)
+        ->place(-x=>250,-y=>100);
+
+  $mw->Radiobutton(
+        -variable => \$scanflg2,
+        -value => 0)
+        ->place(-x=>100,-y=>120);
+  $mw->Radiobutton(
+        -variable => \$scanflg3,
+        -value => 0)
+        ->place(-x=>150,-y=>120);
+  $mw->Radiobutton(
+        -variable => \$scanflg4,
+        -value => 0)
+        ->place(-x=>200,-y=>120);
+  $mw->Radiobutton(
+        -variable => \$scanflg5,
+        -value => 0)
+        ->place(-x=>250,-y=>120);
+
+  $mw->Radiobutton(
+        -variable => \$chopflg2,
+        -value => 1)
+        ->place(-x=>100,-y=>140);
+  $mw->Radiobutton(
+        -variable => \$chopflg3,
+        -value => 1)
+        ->place(-x=>150,-y=>140);
+  $mw->Radiobutton(
+        -variable => \$chopflg4,
+        -value => 1)
+        ->place(-x=>200,-y=>140);
+  $mw->Radiobutton(
+        -variable => \$chopflg5,
+        -value => 1)
+        ->place(-x=>250,-y=>140);
+
+  $mw->Radiobutton(
+        -variable => \$chopflg2,
+        -value => 0)
+        ->place(-x=>100,-y=>160);
+  $mw->Radiobutton(
+        -variable => \$chopflg3,
+        -value => 0)
+        ->place(-x=>150,-y=>160);
+  $mw->Radiobutton(
+        -variable => \$chopflg4,
+        -value => 0)
+        ->place(-x=>200,-y=>160);
+  $mw->Radiobutton(
+        -variable => \$chopflg5,
+        -value => 0)
+        ->place(-x=>250,-y=>160);
+ 
+  my  $integ =  $mw->Entry(-width  =>  2, -textvariable=>\$integ2);
+  $integ->place(-x=>100,-y=>180);
+  my  $integ =  $mw->Entry(-width  =>  2, -textvariable=>\$integ3);
+  $integ->place(-x=>150,-y=>180);
+  my  $integ =  $mw->Entry(-width  =>  2, -textvariable=>\$integ4);
+  $integ->place(-x=>200,-y=>180);
+  my  $integ =  $mw->Entry(-width  =>  2, -textvariable=>\$integ5);
+  $integ->place(-x=>250,-y=>180);
+
+ 
+  $btest = $mw->Button(-text => 'Read Status',
+                      -command =>  sub{
+                               read_param()
+                       }
+                      )->pack(-side=>'left',-expand  =>  1,-fill => 'x');
+
+  $mw->Button(-text  =>  "Exit",
+  -command  =>  sub  { exit  })->pack(-side  =>  'right',
+  -expand  =>  1,
+  -fill  =>  'x');
+
+  MainLoop;
+
+	
+sub read_param{
+	
+    $filename2="/export/home/lynx/applications/hal/data/ant2/stat.ant2";
+    open(IN2,$filename2)||die "cannot open\n";
+    $filename3="/export/home/lynx/applications/hal/data/ant3/stat.ant3";
+    open(IN3,$filename3)||die "cannot open\n";
+    $filename4="/export/home/lynx/applications/hal/data/ant4/stat.ant4";
+    open(IN4,$filename4)||die "cannot open\n";
+#    $filename5="/export/home/lynx/applications/hal/data/ant5/stat.ant5";
+#    open(IN5,$filename5)||die "cannot open\n";
+    $line2=<IN2>;
+    $line3=<IN3>;
+    $line4=<IN4>;
+#   $line5=<IN5>;
+
+    close(IN2);
+    close(IN3);
+    close(IN4);
+#   close(IN5);
+
+    $date=`date`;
+    chomp($date);
+
+      if(length($line2)>7) {
+   	($saveflg2,$scanflg2,$chopflg2,$integ2,$dummy)=split (/ /,$line2);
+#   	printf "%2d %2d %2d %2d %s\r",$saveflg2,$scanflg2,$chopflg2,$integ2, $date;
+   	printf "%s\r",$date;
+      } else {printf "fail grabbing the data2:%s\r",$date;}
+      if(length($line3)>7) {
+   	($saveflg3,$scanflg3,$chopflg3,$integ3,$dummy)=split (/ /,$line3);
+      } else {printf "fail grabbing the data3:%s\r",$date;}
+      if(length($line4)>7) {
+   	($saveflg4,$scanflg4,$chopflg4,$integ4,$dummy)=split (/ /,$line4);
+      } else {printf "fail grabbing the data4:%s\r",$date;}
+#      if(length($line5)>7) {
+#   	($saveflg5,$scanflg5,$chopflg5,$integ5,$dummy)=split (/ /,$line5);
+#      } else {printf "fail grabbing the data5:%s\r",$date;}
+
+	$fitflg2=`ps -a|grep rpoint`;
+	if($fitflg2=~/rpoint 2/m){$fitflg2=1;}
+	else{$fitflg2=0;}
+	$fitflg3=`ps -a|grep rpoint`;
+	if($fitflg3=~/rpoint 3/m){$fitflg3=1;}
+	else{$fitflg3=0;}
+	$fitflg4=`ps -a|grep rpoint`;
+	if($fitflg4=~/rpoint 4/m){$fitflg4=1;}
+	else{$fitflg4=0;}
+	$fitflg5=`ps -a|grep rpoint`;
+	if($fitflg5=~/rpoint 5/m){$fitflg5=1;}
+	else{$fitflg5=0;}
+
+     # change label on button, as well as background, so that user
+     # knows (s)he can stop the listing
+     $btest->configure(text=> "Stop Status", 
+			    bg=>red,
+				command => \&stop_param);
+     $timer = $btest->after(300, sub {read_param()});
+
+} # closes subroutine
+
+sub stop_param {
+# issues a cancel to the looping "read_param" subroutine, and  changes 
+# the  button back to the defaults (toggles it back)
+	
+	$timer->cancel();
+	 $btest->configure(text=> "Read Status", 
+			   bg=>gray,
+                                command => \&read_param);
+
+}
+

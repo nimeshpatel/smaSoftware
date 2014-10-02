@@ -1,0 +1,553 @@
+                    SUMMARY FILE FOR PROJECT: new27   
+
+COVER INFORMATION: 
+
+  Experiment: US+APEX, without Europe
+  Exp. Code:  new27   
+  Start Day  86 is Wed  27 Mar 2013   MJD  56378          
+
+  Schedule Version:      10.00
+  Processed by SCHED version:  10.20  Release of about July 12, 2012
+
+  PI:       S. Doeleman
+
+  Address:  MIT Haystack Observatory
+            Off Route 40
+            Westford, MA 01886
+            USA
+
+  Phone:    +1(781)981-5400
+  EMAIL:    dole@haystack.mit.edu
+  Fax:      +1(781)981-0590
+  Phone during observation: +1(781)981-5400
+
+  Observing mode: RDBE/DBE1
+
+  Notes:    Will use RDBE_PFB and DBBC_PFB
+   
+   
+   
+
+
+No cover letter provided.
+
+CORRELATION REQUESTS (Defaults in parentheses):
+
+  Correlator (Required if recording):          HAYSTACK
+  Correlator average time (2 sec):               0.100 sec.
+    Alternate average time (for spacecraft).     0.000 sec.
+  Output spectral channels per baseband (16):          64
+     Correlator FFT size (128):                       128
+  Number of antennas to be correlated:                 11
+  Polarization (ON):                           ON
+  Correlator weighting function (UNIFORM):     UNIFORM
+  Distribution tape (DAT):                     FTP
+
+  Distribution format (FITS):                  FITS
+  Source positions from:             STANDARD
+
+  Shipping address for correlator output:
+      Mike Titus
+
+      MIT Haystack Observatory
+      Off Route 40
+      Westford, MA 01886 USA
+  Correlator Notes: dual polarisation setup using 32 MHz channels
+      zoom mode for PdB with 16 MHz channels USB/LSB
+
+
+
+
+
+
+DERIVED INFORMATION FOR CORRELATION: 
+
+  Elapsed time for project:          6.25 hours.
+  Total time in scheduled scans:     3.49 hours.
+  Total time in recording scans:     3.49 hours.
+  Total number of baseline hours:   34.92    (Recording scans only)
+  Projected maximum data output rate from the correlator:    1638.4 kbytes/sec of observe time.
+  Projected correlator output data set size:       20594.7 Mbytes
+  NOTE:  Above numbers assume the same correlator parameters are used for all data.
+    NOTE:  Output data set size large.  Consider requesting high density tapes.
+
+
+
+STATIONS USED IN SCHEDULE:
+
+   Station  Code   Latitude Longitude Elevation       X            Y            Z       Axis
+                                                                                       Offset
+
+   SMTO      Az   32.70161 109.89124    3159.   -1828796.200 -5054406.800  3427865.200  0.000
+   CARMA     Cm   37.23341 118.28338    1188.   -2409585.790 -4478197.550  3838767.460  0.000
+   SMAP      Sm   19.82423 155.47755    4115.   -5464555.493 -2492927.989  2150797.176  0.000
+   JCMT      Jc   19.80138 155.45550    3763.   -5464074.960 -2495249.116  2148296.845  0.000
+
+
+   Plate tectonic motion adjustments for MJD  56378
+   Station  Code      Station motions (m/yr)             Adjusted positions 
+                     X       Y       Z     MJD0        X            Y            Z 
+   SMTO      Az   0.0000  0.0000  0.0000  50449  -1828796.200 -5054406.800  3427865.200
+   CARMA     Cm  -0.0162  0.0062 -0.0084  50449  -2409586.053 -4478197.450  3838767.324
+   SMAP      Sm   0.0000  0.0000  0.0000  50449  -5464555.493 -2492927.989  2150797.176
+   JCMT      Jc   0.0000  0.0000  0.0000  50449  -5464074.960 -2495249.116  2148296.845
+
+
+
+BASELINE LENGTHS (km)
+
+          Az    Cm    Sm    Jc
+
+   Az      0   915  4627  4626
+   Cm    915     0  4015  4014
+   Sm   4627  4015     0     3
+   Jc   4626  4014     3     0
+
+
+RECORDING SYSTEM AND CALIBRATION INFORMATION:
+
+  DISKS - Stations potentially recording on disks.
+   Station    Drive type   DAR     NBBC    Tsys
+   SMTO         MARK5C     RDBE     16     CONT
+   CARMA        MARK5C     RDBE     16     CONT
+   SMAP         MARK5C     RDBE     16     CONT
+   JCMT         MARK5C     RDBE     16     CONT
+
+
+
+
+EXPERIMENT SUMMARY:
+  Number of input scans:         62
+  Number of scans scheduled:     62
+  Number of stations:             4
+  Number of sources input:        4
+  Number of setup files used:     1
+
+
+ Station summaries (disk stations): 
+  Station  Control   Scans   Scan   Record  Record   Gbytes     Formatter       Sync 
+                            Hours   Hours   Scans              Reconfigures    Hours  
+  SMTO       VEX       62    3.49    3.49      62     3244.            0        0.02
+  CARMA      VEX       62    3.49    3.49      62     3244.            0        0.02
+  SMAP       VEX       62    3.49    3.49      62     3244.            0        0.02
+  JCMT       VEX       62    3.49    3.49      62     3244.            0        0.02
+
+Notes on the station summaries: 
+
+    "Record Scans" are periods of recording with no gap.  The Mark5A disk systems 
+    have a limit of 1024 such scans.  There are often multiple projects on a disk pack.
+    Try to keep above about 6 GB per record scan by using MINPAUSE and PRESTART 
+    to prevent short gaps.  However, also try to prevent record scans of more than
+    an hour to minimize risk to data from playback problems.
+
+    "Sync Hours" is on-source, in-scan time lost during correlation to resyncing
+    recordings.  Resyncs follow tape stoppages and formatter reconfigures.
+
+    For VLBA DAR stations, total reconfigures and reconfigures during recording are shown.
+    Reconfigures during recording can cause slow correlator sync.
+    Any reconfigure can slow sync at JIVE.
+
+
+
+
+
+The following setup groups are the same as group   1 below.
+   2:CARMA   3:SMAP   4:JCMT
+
+
+ ======== Setup file: 1mmlcp.set
+   Matching groups in 1mm-freq-b.dat:
+     1mm_hht_mk5c    for RDBE
+
+   Setup group:    1         Station: SMTO              Total bit rate: 2048
+   Format: MARK5B            Bits per sample: 2         Sample rate: 64.000
+   Number of channels: 16    DBE type: RDBE_PFB         Speedup factor:   1.00
+
+   Disk used to record data.
+
+   1st LO= 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00
+           228321.00 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00
+   Net SB=         L         L         L         L         L         L         L         L
+                   L         L         L         L         L         L         L         L
+   Pol.  =      LCP       LCP       LCP       LCP       LCP       LCP       LCP       LCP 
+                LCP       LCP       LCP       LCP       LCP       LCP       LCP       LCP 
+   BBC   =         1         2         3         4         5         6         7         8
+                   9        10        11        12        13        14        15        16
+   BBC SB=         L         L         L         L         L         L         L         L
+                   L         L         L         L         L         L         L         L
+   IF    =        A         A         A         A         A         A         A         A 
+                  A         A         A         A         A         A         A         A 
+
+  The following frequency sets based on these setups were used.
+
+   Frequency Set:   1  Setup file default.
+   LO sum=   229361.00  229329.00  229297.00  229265.00  229233.00  229201.00  229169.00  229137.00
+             229105.00  229073.00  229041.00  229009.00  228977.00  228945.00  228913.00  228881.00
+   BBC fr=     1040.00    1008.00     976.00     944.00     912.00     880.00     848.00     816.00
+                784.00     752.00     720.00     688.00     656.00     624.00     592.00     560.00
+   Bandwd=       32.00      32.00      32.00      32.00      32.00      32.00      32.00      32.00
+                 32.00      32.00      32.00      32.00      32.00      32.00      32.00      32.00
+    Matching frequency sets:   1   2   3   4
+
+   Track assignments are: 
+    track1=   2,  4,  6,  8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32
+    barrel=roll_off 
+
+
+ SUMMARY for experiment new27   US+APEX, without Europe                                                 
+     Flags: D=>Down, H=>Below Horizon, R=>Rises, S=>Sets, W=>Slew too long, t=>Tape Chg.
+     Top item is:    Average elevation.
+     Bottom item is: Average azimuth.
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  86 is Wed  27 Mar 2013   MJD  56378          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    Az    Cm    Sm    Jc
+
+   1   86 12:00:10 3C279         -    20    25    60    60
+       86 12:00:40 1mmlcp.set    -  -112   241  -148   212
+
+   2   86 12:01:00 3C279         -    20    24    60    60
+       86 12:09:00 -             -  -111   241  -146   214
+
+   3   86 12:14:10 1749+096      -    65    58    36    36
+       86 12:14:40 -             -  -202   146  -268    92
+
+   4   86 12:15:00 1749+096      -    66    59    37    37
+       86 12:23:00 -             -  -200   147  -267    93
+
+   5   86 12:28:10 SGRA          -    28    23    21    21
+       86 12:28:40 -             -  -184   168  -226   134
+
+   6   86 12:29:00 SGRA          -    28    23    22    22
+       86 12:37:00 -             -  -183   169  -225   135
+
+   7   86 12:41:10 SGRA          -    28    23    24    24
+       86 12:41:40 -             -  -181   171  -224   136
+
+   8   86 12:42:00 SGRA          -    28    23    24    24
+       86 12:50:00 -             -  -180   172  -223   137
+
+   9   86 12:54:10 SGRA          -    28    24    26    26
+       86 12:54:40 -             -  -178   174  -222   138
+
+  10   86 12:55:00 SGRA          -    28    24    26    26
+       86 13:03:00 -             -  -177   175  -221   139
+
+  11   86 13:07:10 SGRA          -    28    24    28    28
+       86 13:07:40 -             -  -175   177  -220   140
+
+  12   86 13:08:00 SGRA          -    28    24    28    28
+       86 13:16:00 -             -  -173   178  -219   141
+
+  13   86 13:20:10 SGRA          -    28    24    30    30
+       86 13:20:40 -             -  -171   180  -217   143
+
+  14   86 13:21:00 SGRA          -    28    24    30    30
+       86 13:29:00 -             -  -170   181  -216   144
+
+  15   86 13:39:10 SGRA          -    27    24    32    32
+       86 13:39:40 -             -  -167   185  -213   147
+
+  16   86 13:40:00 SGRA          -    27    23    33    33
+       86 13:48:00 -             -  -166   186  -212   148
+
+
+
+ SUMMARY for experiment new27   US+APEX, without Europe                                                 
+     Flags: D=>Down, H=>Below Horizon, R=>Rises, S=>Sets, W=>Slew too long, t=>Tape Chg.
+     Top item is:    Average elevation.
+     Bottom item is: Average azimuth.
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  86 is Wed  27 Mar 2013   MJD  56378          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    Az    Cm    Sm    Jc
+
+  17   86 13:52:10 SGRA          -    26    23    34    34
+       86 13:52:40 1mmlcp.set    -  -164   188  -211   149
+
+  18   86 13:53:00 SGRA          -    26    23    34    34
+       86 14:01:00 -             -  -163   189  -209   151
+
+  19   86 14:05:10 SGRA          -    25    23    35    35
+       86 14:05:40 -             -  -161   191  -208   152
+
+  20   86 14:06:00 SGRA          -    25    23    36    36
+       86 14:14:00 -             -  -160   192  -206   154
+
+  21   86 14:18:10 SGRA          -    24    22    37    37
+       86 14:18:40 -             -  -158   194  -204   156
+
+  22   86 14:19:00 SGRA          -    24    22    37    37
+       86 14:27:00 -             -  -157   195  -203   157
+
+  23   86 14:31:10 SGRA          -    23    22    38    38
+       86 14:31:40 -             -  -155   197  -201   159
+
+  24   86 14:32:00 SGRA          -    23    21    38    38
+       86 14:40:00 -             -  -154   198  -200   160
+
+  25   86 14:44:10 SGRA          -    22    21    39    39
+       86 14:44:40 -             -  -152   200  -198   162
+
+  26   86 14:45:00 SGRA          -    22    20    39    39
+       86 14:53:00 -             -  -151   201  -197   163
+
+  27   86 15:13:10 BLLAC         -    67    62    26    26
+       86 15:13:40 -             -    58    68    52    52
+
+  28   86 15:14:00 BLLAC         -    67    63    26    26
+       86 15:19:00 -             -    58    68    52    52
+
+  29   86 15:23:10 BLLAC         -    68    64    28    28
+       86 15:23:40 -             -    57    68    52    52
+
+  30   86 15:24:00 BLLAC         -    69    65    28    28
+       86 15:29:00 -             -    56    68    52    52
+
+  31   86 15:33:10 BLLAC         -    70    66    29    29
+       86 15:33:40 -             -    55    68    52    52
+
+  32   86 15:34:00 BLLAC         -    71    67    30    30
+       86 15:39:00 -             -    54    68    52    52
+
+
+
+ SUMMARY for experiment new27   US+APEX, without Europe                                                 
+     Flags: D=>Down, H=>Below Horizon, R=>Rises, S=>Sets, W=>Slew too long, t=>Tape Chg.
+     Top item is:    Average elevation.
+     Bottom item is: Average azimuth.
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  86 is Wed  27 Mar 2013   MJD  56378          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    Az    Cm    Sm    Jc
+
+  33   86 15:43:10 BLLAC         -    72    68    31    31
+       86 15:43:40 1mmlcp.set    -    52    68    52    52
+
+  34   86 15:44:00 BLLAC         -    72    69    32    32
+       86 15:49:00 -             -    52    68    52    52
+
+  35   86 15:53:10 BLLAC         -    73    70    33    33
+       86 15:53:40 -             -    50    67    52    52
+
+  36   86 15:54:00 BLLAC         -    74    70    34    34
+       86 15:59:00 -             -    49    67    52    52
+
+  37   86 16:03:10 BLLAC         -    75    72    35    35
+       86 16:03:40 -             -    46    67    52    52
+
+  38   86 16:04:00 BLLAC         -    75    72    36    36
+       86 16:09:00 -             -    45    66    52    51
+
+  39   86 16:13:10 BLLAC         -    76    73    37    37
+       86 16:13:40 -             -    41    66    51    51
+
+  40   86 16:14:00 BLLAC         -    77    74    37    37
+       86 16:19:00 -             -    40    65    51    51
+
+  41   86 16:23:10 BLLAC         -    78    75    39    39
+       86 16:23:40 -             -    35    64    51    51
+
+  42   86 16:24:00 BLLAC         -    78    76    39    39
+       86 16:29:00 -             -    33    63    51    51
+
+  43   86 16:33:10 BLLAC         -    79    77    41    41
+       86 16:33:40 -             -    28    62    51    51
+
+  44   86 16:34:00 BLLAC         -    79    78    41    41
+       86 16:39:00 -             -    26    61    51    51
+
+  45   86 16:49:10 BLLAC         -    80    80    43    43
+       86 16:49:40 -             -    13    56    50    50
+
+  46   86 16:50:00 BLLAC         -    80    80    44    44
+       86 16:55:00 -             -    10    55    50    50
+
+  47   86 16:59:10 BLLAC         -    80    81    45    45
+       86 16:59:40 -             -     3    51    49    49
+
+  48   86 17:00:00 BLLAC         -    80    82    46    46
+       86 17:05:00 -             -    -1    48    49    49
+
+
+
+ SUMMARY for experiment new27   US+APEX, without Europe                                                 
+     Flags: D=>Down, H=>Below Horizon, R=>Rises, S=>Sets, W=>Slew too long, t=>Tape Chg.
+     Top item is:    Average elevation.
+     Bottom item is: Average azimuth.
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  86 is Wed  27 Mar 2013   MJD  56378          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    Az    Cm    Sm    Jc
+
+  49   86 17:09:10 BLLAC         -    80    83    47    47
+       86 17:09:40 1mmlcp.set    -    -8    42    48    48
+
+  50   86 17:10:00 BLLAC         -    80    83    48    48
+       86 17:15:00 -             -   -12    39    48    48
+
+  51   86 17:19:10 BLLAC         -    80    84    49    49
+       86 17:19:40 -             -   -19    29    48    48
+
+  52   86 17:20:00 BLLAC         -    80    84    49    49
+       86 17:25:00 -             -   -22    24    47    47
+
+  53   86 17:29:10 BLLAC         -    79    85    50    50
+       86 17:29:40 -             -   -28    12    47    46
+
+  54   86 17:30:00 BLLAC         -    79    85    51    51
+       86 17:35:00 -             -   -30     5    46    46
+
+  55   86 17:39:10 BLLAC         -    78    85    52    52
+       86 17:39:40 -             -   -35    -9    45    45
+
+  56   86 17:40:00 BLLAC         -    77    85    53    53
+       86 17:45:00 -             -   -37   -15    45    45
+
+  57   86 17:49:10 BLLAC         -    76    84    54    54
+       86 17:49:40 -             -   -41   -27    44    44
+
+  58   86 17:50:00 BLLAC         -    76    84    54    54
+       86 17:55:00 -             -   -43   -32    43    43
+
+  59   86 17:59:10 BLLAC         -    75    83    55    55
+       86 17:59:40 -             -   -46   -41    42    42
+
+  60   86 18:00:00 BLLAC         -    75    83    56    56
+       86 18:05:00 -             -   -47   -44    42    42
+
+  61   86 18:09:10 BLLAC         -    73    82    57    57
+       86 18:09:40 -             -   -49   -50    41    41
+
+  62   86 18:10:00 BLLAC         -    73    81    57    57
+       86 18:15:00 -             -   -50   -52    40    40
+
+
+
+ TIME RANGE OF RECORDINGS and TOTAL BYTES:
+
+                Obs. start time.     Obs. end time.      Total 
+ Station          Day    Time         Day    Time        GBytes
+                     (UT)                 (UT)
+  SMTO            86  12:00:10        86  18:15:00       3243.7
+  CARMA           86  12:00:10        86  18:15:00       3243.7
+  SMAP            86  12:00:10        86  18:15:00       3243.7
+  JCMT            86  12:00:10        86  18:15:00       3243.7
+
+ SOURCES USED IN RECORDING SCANS --                         US+APEX, without Europe
+     Catalog positions marked with *. 
+     Precession of date coordinates is based on stop time of first scan.
+     Names used in schedule marked with *. 
+     Short names used in VLA and SNAP files marked with +. 
+     Observation date used in B1950/J2000 coordinate conversion (PRECDATE):  1979.900
+     No adjustments are made for rates (DRA, DDEC).
+     Scan hours are for recording scans only. 
+     Baseline hours are only counted for scans above horizon at both ends.
+
+   Source                         Source position (RA/Dec)                        Error
+                        (B1950)             (J2000)             (Date)            (mas)
+
+ * SGRA              17 42 29.305071   * 17 45 40.036064     17 46 31.760539       0.00
+                    -28 59 18.58223    *-29 00 28.16726     -29 00 37.29647        0.00
+                     From catalog imbedded in main SCHED input file.
+                        1.558 scan and      9.350 baseline hours in setup: 1mmlcp.set
+                     Frequency sets (dups not shown):   1
+
+   J1256-0547        12 53 35.831299   * 12 56 11.166567     12 56 54.390341       0.69
+ * 3C279            -05 31 07.99595    *-05 47 21.52481     -05 51 50.22929        0.92
+   1253-055          /data1/sched_10.2/catalogs/sources.vlba
+   J1256-05          GSFC 2011A astro solution      7402 Observations
+                        0.142 scan and      0.850 baseline hours in setup: 1mmlcp.set
+                     Frequency sets (dups not shown):   1
+
+   J1751+0939        17 49 10.387929   * 17 51 32.818572     17 52 11.429782       0.10
+ * 1749+096          09 39 42.82574    * 09 39 00.72829      09 38 45.37186        0.10
+   J1751+09          /data1/sched_10.2/catalogs/sources.vlba
+                     rfc_2012b Petrov, 2012, unpublished 133560 observations
+                        0.142 scan and      0.850 baseline hours in setup: 1mmlcp.set
+                     Frequency sets (dups not shown):   1
+
+   J2202+4216        22 00 39.362504   * 22 02 43.291371     22 03 15.665345       0.14
+ * BLLAC             42 02 08.59073    * 42 16 39.97987      42 20 25.09057        0.10
+   2200+420          /data1/sched_10.2/catalogs/sources.vlba
+   J2202+42          rfc_2012b Petrov, 2012, unpublished 59418 observations
+   VR422201             1.650 scan and      9.900 baseline hours in setup: 1mmlcp.set
+                     Frequency sets (dups not shown):   1
+
+
+
+  The solar corona can cause unstable phases for sources too close to the Sun.
+  SCHED provides warnings at individual scans for distances less than 10 degrees.
+  The distance from the Sun to each source in this schedule is:
+    Source         Sun distance (deg) 
+   SGRA               100.0
+   3C279              171.7
+   1749+096            97.9
+   BLLAC               50.8
+
+  Barry Clark estimates from predictions by Ketan Desai of IPM scattering sizes 
+  that the Sun will cause amplitude reductions on the  longest VLBA baselines 
+  at a solar distance of 60deg F^(-0.6) where F is in GHz. 
+  For common VLBI bands, this is: 
+       327 MHz        117. deg 
+       610 MHz         81. deg 
+       1.6 GHz         45. deg 
+       2.3 GHz         36. deg 
+       5.0 GHz         23. deg 
+       8.4 GHz         17. deg 
+      15.0 GHz         12. deg 
+      22.0 GHz          9. deg 
+      43.0 GHz          6. deg 
+
+
+ Source separations in degrees for pairs closer than  30.00 degrees.
+
+
+
+
+
+
+ J2000 coordinates formatted for possible transfer to the correlator data base:
+name = 'SGRA'  ra = 17h45m40.036064s  dec = -29d00'28.16726"
+name = '3C279'  ra = 12h56m11.166567s  dec = -05d47'21.52481"
+name = '1749+096'  ra = 17h51m32.818572s  dec = 09d39'00.72829"
+name = 'BLLAC'  ra = 22h02m43.291371s  dec = 42d16'39.97987"
+
+
+ Correlation blocks required by setup changes. 
+
+UTTIMERANGE 2013MAR27 at 12:00:10 to 2013MAR27 at 18:15:00
+
+
+Catalogs: 
+  Station:   1mm-stations-b.dat
+                 Version:  2013-Mar-19-12:00:00
+  Location:  1mm-locations-b.dat
+                 Version:  2013-Mar-08-17:00:00
+  Frequency: 1mm-freq-b.dat
+                 Version:  2013-Mar-18-12:00:00
+  Source:   /data1/sched_10.2/catalogs/sources.vlba
+                 Version:  Not given
+  Source2:  NONE
+                 Version:   ---
+
+
+Other external files: 
+  Ephemeris: NONE
+  PEAKFILE:  /data1/sched_10.2/catalogs/peak.cmd
+  MSGFILE:   /data1/sched_10.2/catalogs/messages.txt
+
+
+Code versions: 
+  Release version:           10.20  Release of about July 12, 2012
+  Version of VEX standard:   1.50
+  Version of VEX code:       0.87
+  Version of plot code:      1.06
+  Version of ephemeris code: 1.01
+  Version of PGPLOT:        v5.2.2
+
+This schedule produced on: Tue Mar 26 20:24:51 2013      

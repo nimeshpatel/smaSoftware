@@ -1,0 +1,11 @@
+RM = $(COMMON)/reflmem/api
+BIN = ../test/
+
+all: $(BIN)logTilts
+
+install: all
+	cp $(BIN)logTilts $(ACCBIN)/
+
+$(BIN)logTilts: logTilts.c Makefile
+	gcc -g -o $(BIN)logTilts -I$(RM) -I$(COMMONINC) logTilts.c \
+	$(COMMONLIB)/commonLib $(RM)/rm.o -lrpc -lnetinet

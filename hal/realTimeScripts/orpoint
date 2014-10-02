@@ -1,0 +1,140 @@
+#!/bin/tcsh -vf
+# originally written by Nimesh
+# modified by Todd to take the antenna number command line argument
+#
+set list = ""  # list of antennas
+set alist = "" # list of antennas prepended with -a, or blank if using project
+set args = $#argv
+set antennawaitarcsec = 2
+set source = "none"
+set star = "none"
+set scans = 2   # used as argument to -t in rscan
+foreach i ( $argv )
+  if (`expr $i == '-h'`) then
+    goto usage
+  endif
+  if (`expr $i == '--help'`) then
+    goto usage
+  endif
+  if (`expr $i == '-a'` || `expr $i == '--antenna'`) then
+    if (`expr $ctr != $args`) then
+      set ctr = `expr $ctr + 1`
+      set list = $argv[$ctr]
+      set alist = "-a $list"
+      echo will use antenna argument = $alist
+    else
+      echo You must supply a list of antennas after -a
+      goto usage
+    endif
+  endif
+  if (`expr $i == '-w'`) then
+      set ctr = `expr $ctr + 1`
+      set antennawaitarcsec = $argv[$ctr]
+  endif
+  if (`expr $i == '-t'`) then
+      set ctr = `expr $ctr + 1`
+      set scans = $argv[$ctr]
+  endif
+  if (`expr $i == '-r'`) then
+    if (`expr $ctr != $args`) then
+      set ctr = `expr $ctr + 1`
+      set source = $argv[$ctr]
+    else
+      echo You must supply an rscan source name after -r
+      goto usage
+    endif
+  endif
+  if (`expr $i == '-o'`) then
+    if (`expr $ctr != $args`) then
+      set ctr = `expr $ctr + 1`
+      set star = $argv[$ctr]
+    else
+      echo You must supply an optical star name after -o
+      echo You may use the 'lookup -o' command to locate a suitable star.
+      goto usage
+    endif
+  endif
+end
+
+if (`expr $source == 'none'`) then
+  echo You must provide an rscan source name with -r
+  goto usage
+endif
+
+if (`expr $star == 'none'`) then
+  echo You must provide an optical star name with -o
+  echo You may use the 'lookup -o' command to locate a suitable star.
+  goto usage
+endif
+
+echo `date -u +"%a %b %d %X %Y"` '('$USER'):' $0 $argv >> /rootfs/logs/SMAshLog
+
+if (`expr "$list" == ""`) then
+  set checklist = `getAntList`
+  echo Will use all antennas in the current project = $checklist
+  set alist = ""
+  set project = 1
+else
+  echo Will use antennas: $list
+  set checklist = `getAntList $alist`
+  set project = 0
+endif
+set commalist = `commaAntennaList "$checklist"`
+echo commalist = $commalist
+#
+integrationTime -s 50
+while (1)
+    if (`expr "$list" == ""`) then
+	observe -s $source
+    else
+      foreach a ( $checklist )
+        observe -s $source -a $a
+        sleep 1
+        wait
+      end
+    endif
+    foreach a ( $checklist )
+      azoff -s 0 -a $a
+      sleep 1
+      wait
+      eloff -s 0 -a $a
+      sleep 1
+      wait
+    end
+    radio 
+    antennaWait -e $antennawaitArcsec -a $commalist
+    rscan -s $source -p -t $scans -o 2 -v 3,5
+    wait
+    optical
+    wait
+    foreach a ( $checklist )
+      azoff -s 0
+      sleep 1
+      wait
+      eloff -s 0
+      sleep 1
+      wait
+    end
+    if (`expr "$list" == ""`) then
+      observe -s $star
+    else
+      foreach a ( $checklist )
+        observe -s $star -a $a
+        sleep 1
+        wait
+      end
+    endif
+    antennaWait -e $antennawaitArcsec -a $commalist
+    foreach a ( $checklist )
+      snapshot -a $a -s 400
+      sleep 1
+      wait
+    end
+end
+
+usage:
+  echo "orpoint -r <rscanSourceName> -o <opticalStarName> [-t <#rscans>] [-a <antennaList: comma-delimited>]"
+  echo "   It will run forever (or until you hit control-c)."
+  echo "   Please note that no cleanup is attempted after control-c."
+  echo "   The default is to take 2 rscans (in order to have symmetric data)."
+  exit 0

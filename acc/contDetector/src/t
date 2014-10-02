@@ -1,0 +1,165 @@
+Index: syncdet2.c
+===================================================================
+RCS file: /usr/CVS/online/lynxOS/applications/acc/contDetector/src/syncdet2.c,v
+retrieving revision 1.25
+diff -r1.25 syncdet2.c
+2a3,5
+> 
+> Some changes made to allow the code to run on acc9 and acc10, which
+> do not have the full hardware complement.   RTM 03/26/08
+150,151d152
+< int oldDay = -1;
+< int unixTime0Today;
+153a155,156
+> int oldDay = -1;
+> int unixTime0Today;
+348,350c351,356
+<   if((cdfd = open(cdName, O_RDONLY, 0)) < 0) {
+<     perror("Can not open contDetector0, I quit");
+<     exit(1);
+---
+>   if (antenna < 9) {
+>     if((cdfd = open(cdName, O_RDONLY, 0)) < 0) {
+>       perror("Can not open contDetector0, I quit");
+>       exit(1);
+>     }
+>     ioctl(cdfd, CONTDET_SETMODE, &cdIoctlArg);
+352,353d357
+<   ioctl(cdfd, CONTDET_SETMODE, &cdIoctlArg);
+< 
+412,421c416,427
+<   if ((status = pthread_create(&checkDeadThreadTID, &thread_attr,
+<                 &CheckDeadThread, (void *) 0)) < 0) {
+<     fprintf(stderr, "main: pthread_create for Check Dead Thread failed"
+<             "- %s\n", strerror(status));
+<   }
+<   if ((status = pthread_create(&avThreadTID, &thread_attr, &avThread,
+<                 (void *) 0)) < 0) {
+<     fprintf(stderr, "main: pthread_create for Allan Var Thread failed"
+<             "- %s\n", strerror(status));
+<   }
+---
+>   if (antenna < 9)
+>     if ((status = pthread_create(&checkDeadThreadTID, &thread_attr,
+> 				 &CheckDeadThread, (void *) 0)) < 0) {
+>       fprintf(stderr, "main: pthread_create for Check Dead Thread failed"
+> 	      "- %s\n", strerror(status));
+>     }
+>   if (antenna < 9)
+>     if ((status = pthread_create(&avThreadTID, &thread_attr, &avThread,
+> 				 (void *) 0)) < 0) {
+>       fprintf(stderr, "main: pthread_create for Allan Var Thread failed"
+> 	      "- %s\n", strerror(status));
+>     }
+422a429,431
+>   if (antenna > 8)
+>     while (TRUE)
+>       sleep(3600);
+455c464,465
+<         ioctl(cdfd, CONTDET_SETMODE, &cdIoctlArg);
+---
+> 	if (antenna < 9)
+> 	  ioctl(cdfd, CONTDET_SETMODE, &cdIoctlArg);
+470,473c480,484
+<     if(read(cdfd, &cdOut, sizeof(cdOut)) < 0) {
+<       ioctl(cdfd, CONTDET_SETMODE, &cdIoctlArg);
+<       perror("Reading cont det");
+<     }
+---
+>     if (antenna < 9)
+>       if(read(cdfd, &cdOut, sizeof(cdOut)) < 0) {
+> 	ioctl(cdfd, CONTDET_SETMODE, &cdIoctlArg);
+> 	perror("Reading cont det");
+>       }
+489a501,504
+>         if(oldDay != sctime.yday) {
+>           GetUnixT0Today();
+>         }
+> 	unixTime = unixTime0Today + sDay;
+495a511
+>         rm_read(RM_ANT_0, "RM_UNIX_TIME_L", &unixTime);
+502a519
+>       rm_read(RM_ANT_0, "RM_UNIX_TIME_L", &unixTime);
+504c521
+<     if(choppingFlag != 0) {
+---
+>     if ((choppingFlag != 0) && (antenna < 9)) {
+566,568d582
+<         if(oldDay != sctime.yday) {
+<           GetUnixT0Today();
+<         }
+660a675
+> #if 0
+661a677
+> #endif
+721d736
+< #if 1
+724d738
+< #endif
+748d761
+< #if 1
+751d763
+< #endif
+772a785
+> #if 0
+773a787,789
+> #else
+> 	  if(shortInPosCount > 0) shortInPosCount--;
+> #endif
+885a902
+> #if 0
+886a904
+> #endif
+892c910,912
+<       i = ((curMsec+500)/1000) % 60;
+---
+>       /* Record the samples on the half second and set the timestamp to
+>        * to the time of the first sample. */
+>       i = ((curMsec+30500)/1000) % 60;
+895a916,917
+> 	int unixTimeAtStart;
+> 
+897a920
+> 	unixTimeAtStart = unixTime - 59;
+899c922
+<                     "RM_SYNCDET2_1SEC_SAMPLES_TIMESTAMP_L", &unixTime);
+---
+>                     "RM_SYNCDET2_1SEC_SAMPLES_TIMESTAMP_L", &unixTimeAtStart);
+1045a1069
+> #endif /* DO_CHOPPER_TIMING */
+1057d1080
+< #endif /* DO_CHOPPER_TIMING */
+1319,1333c1342,1358
+<       ioctl(cdfd, CONTDET_GETMODE, &myCdIoctlArg);
+<       if(ioctl(cdfd, CONTDET_RELEASEWAIT, NULL) < 0) {
+<         if(warned < 2) {
+<           fprintf(stderr, "syncdet2 stalled: releasing semaphore"
+<                   " failed status %d sem %d\n",
+<                   myCdIoctlArg.mode, myCdIoctlArg.intTime);
+<           warned++;
+<         }
+<       } else {
+<         if(warned == 0) {
+<           fprintf(stderr, "syncdet2 stalled: status %d  waitSem %d,"
+<                   " semaphore released\n",
+<                   myCdIoctlArg.mode, myCdIoctlArg.intTime);
+<           warned = 1;
+<         }
+---
+>       if (antenna < 9) {
+> 	ioctl(cdfd, CONTDET_GETMODE, &myCdIoctlArg);
+> 	if(ioctl(cdfd, CONTDET_RELEASEWAIT, NULL) < 0) {
+> 	  if(warned < 2) {
+> 	    fprintf(stderr, "syncdet2 stalled: releasing semaphore"
+> 		    " failed status %d sem %d\n",
+> 		    myCdIoctlArg.mode, myCdIoctlArg.intTime);
+> 	    warned++;
+> 	  }
+> 	} else {
+> 	  if(warned == 0) {
+> 	    fprintf(stderr, "syncdet2 stalled: status %d  waitSem %d,"
+> 		    " semaphore released\n",
+> 		    myCdIoctlArg.mode, myCdIoctlArg.intTime);
+> 	    warned = 1;
+> 	  }
+> 	}

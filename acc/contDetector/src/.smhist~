@@ -1,0 +1,83 @@
+pl d
+pl r
+pl min
+pl max
+lim x 438 445
+ovl min
+ovl max
+pl d
+pl r
+quit
+data t
+read {h 1 ms 13}
+quit
+data t
+read {h 1 ms 13}
+set x=(h-h[0])*3600
+do i=1,494 {set m[i] = ms[i] -ms[i-1]}
+do i=1,494 {set m[$i] = ms[$i] -ms[$i-1]}
+set m=ms
+do i=1,493 {set m[$i] = ms[$i] -ms[$i-1]}
+pl m
+lim x 0 1000
+ovl m
+lim x 990 1200
+ovl m
+quit
+data t
+read { h 1 v 6}
+set x=(h-h[0])*3600
+pl v
+fitlin v
+fitlin x v
+pl var
+list set
+pl D_v
+print {var_a}
+pl D_a
+pl D_v
+print {a}
+print D_v
+print {D_v}
+help print
+print t.txt {D_v}
+quit
+data t1
+read { h 1 v 6}
+set x=(h-h[0])*3600
+pl v
+data t1
+read { ms 13 v 6}
+set x=ms/1000
+pl t1
+pl v
+read { ms 13 v 6}
+set x=ms/1000
+pl v
+set x=(ms - ms[0])/1000
+pl v
+quit
+data t1
+read {ms 13 v 6 }
+set x=(ms - ms[0])/1000
+pl v
+quit
+data t1
+read {ms 13 v 6 }
+set x=(ms - ms[0])/1000
+pl v
+read {ms 13 v 6 }
+set x=(ms - ms[0])/1000
+pl v
+read {ms 13 v 6 }
+set x=(ms - ms[0])/1000
+pl v
+print {ms[0]}
+read {ms 13 v 6 }
+set x=(ms - ms[0])/1000
+pl v
+plf r3var.ps
+pl v
+ylabel Ant3 lo rx output
+xlabel time (sec.)
+quit

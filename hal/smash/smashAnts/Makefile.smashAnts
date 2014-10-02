@@ -1,0 +1,176 @@
+CC = gcc
+BFLAGS = -O -g 
+LFLAGS = -L$(COMMONLIB)
+INC = -I$(COMMONINC)  -I$(GLOBALINC) -I../../modbusTCP
+CFLAGS = -O -Wall -g $(INC)
+GRPC = /global/rpcFiles
+LIBS = -llynx -lsmapopt
+RM = $(COMMONLIB)/rm.o
+DSM = $(COMMONLIB)/libdsm.a
+CLIB = $(COMMONLIB)/commonLib
+VPATH=../../modbusTCP
+SOURCES = writeTilts.c tol.c az.c el.c \
+       azel.c stow.c \
+       azscan.c elscan.c raoff.c decoff.c \
+       radecoff.c \
+       azoff.c eloff.c limbOffset.c \
+       openM3.c closeM3.c observe.c \
+       offsetUnit.c project.c writeProjectID.c \
+       endProject.c integrationTime.c \
+       newPointingModel.c standby.c resume.c \
+       stopScan.c value.c \ 
+# tsys.c \
+       disableDrivesTimeout.c setFeedOffset.c \
+       enableDrivesTimeout.c limbOffset.c \
+       optical.c radio.c setSunSafeMinutes.c
+
+SMASH = $(HALBIN)/writeTilts $(HALBIN)/tol $(HALBIN)/az $(HALBIN)/el \
+	$(HALBIN)/azel $(HALBIN)/stow \
+	$(HALBIN)/azscan $(HALBIN)/elscan $(HALBIN)/raoff $(HALBIN)/decoff \
+	$(HALBIN)/azoff $(HALBIN)/eloff $(HALBIN)/radecoff \
+	$(HALBIN)/openM3 $(HALBIN)/closeM3 $(HALBIN)/observe \
+	$(HALBIN)/offsetUnit $(HALBIN)/project $(HALBIN)/writeProjectID \
+	$(HALBIN)/endProject $(HALBIN)/integrationTime \
+	$(HALBIN)/standby $(HALBIN)/newPointingModel $(HALBIN)/resume \
+	$(HALBIN)/stopScan $(HALBIN)/value $(HALBIN)/limbOffset \
+# $(HALBIN)/tsys \
+	$(HALBIN)/disableDrivesTimeout $(HALBIN)/setFeedOffset \
+	$(HALBIN)/enableDrivesTimeout $(HALBIN)/limbOffset \
+	$(HALBIN)/optical $(HALBIN)/radio $(HALBIN)/setSunSafeMinutes
+
+all :   $(SMASH)
+
+#all :   $(HALBIN)/writeTilts
+
+$(HALBIN)/setFeedOffset : setFeedOffset.o $(COMMONLIB)/libdsm.a
+	${CC} ${BFLAGS} -o $(HALBIN)/setFeedOffset setFeedOffset.o ${RM} ${DSM} ${LFLAGS} -lrpc -lnetinet ${LIBS} ${CLIB}
+
+./statusServer.h: $(GRPC)/statusServer.x $(ALLDEPS)
+	cp $(GRPC)/statusServer.x ./
+	rpcgen statusServer.x
+	mv statusServer.h $(INC)/
+
+statusServer_clnt.o: $(GRPC)/statusServer.x $(ALLDEPS)
+	cp $(GRPC)/statusServer.x ./
+	rpcgen statusServer.x
+	$(CC) -c statusServer_clnt.c
+
+statusServer_xdr.o: $(GRPC)/statusServer.x $(ALLDEPS)
+	cp $(GRPC)/statusServer.x ./
+	rpcgen statusServer.x
+	$(CC) -c statusServer_xdr.c
+
+$(HALBIN)/observe : observe.o $(COMMONLIB)/libdsm.a $(GRPC)/statusServer.x statusServer_clnt.o statusServer_xdr.o ./statusServer.h
+	${CC} ${BFLAGS} -o $(HALBIN)/observe observe.o statusServer_clnt.o statusServer_xdr.o ${RM} ${DSM} ${LFLAGS} -lrpc -lnetinet ${LIBS} ${CLIB}
+
+$(HALBIN)/writeProjectID : writeProjectID.o
+	${CC} ${BFLAGS} -o $@ $^ ${LFLAGS} ${DSM} ${LFLAGS} -lrpc -lnetinet ${LIBS} ${CLIB}
+
+$(HALBIN)/project : project.o ../../modbusTCP/ModbusTCP.o
+	${CC} ${BFLAGS} -o $(HALBIN)/project $^ $(HALLIB)/functionLib ${LFLAGS} ${RM} ${DSM} ${LFLAGS} tune_clnt.o tune_xdr.o -lrpc -lnetinet ${LIBS} ${CLIB}
+
+$(HALBIN)/endProject : endProject.o ../../modbusTCP/ModbusTCP.o
+	${CC} ${BFLAGS} -o $(HALBIN)/endProject $^ $(HALLIB)/functionLib ${LFLAGS} ${RM} ${DSM} ${LFLAGS} -lrpc -lnetinet ${LIBS} ${CLIB}
+
+$(HALBIN)/value : value.o
+	${CC} ${BFLAGS} -o $(HALBIN)/value value.o ${LFLAGS} ${RM} ${LIBS}
+
+$(HALBIN)/optical : optical.o
+	${CC} ${BFLAGS} -o $(HALBIN)/optical optical.o ${LFLAGS} ${RM} ${LIBS} ${CLIB}
+
+$(HALBIN)/radio : radio.o
+	${CC} ${BFLAGS} -o $(HALBIN)/radio radio.o ${LFLAGS} ${RM} ${LIBS} ${CLIB}
+
+$(HALBIN)/stopScan : stopScan.o
+	${CC} ${BFLAGS} -o $(HALBIN)/stopScan stopScan.o ${LFLAGS} ${RM} ${LIBS} ${CLIB}
+
+$(HALBIN)/disableDrivesTimeout : disableDrivesTimeout.o
+	${CC} ${BFLAGS} -o $(HALBIN)/disableDrivesTimeout disableDrivesTimeout.o ${LFLAGS} ${RM} ${LIBS} ${CLIB}
+
+$(HALBIN)/enableDrivesTimeout : enableDrivesTimeout.o
+	${CC} ${BFLAGS} -o $(HALBIN)/enableDrivesTimeout enableDrivesTimeout.o ${LFLAGS} ${RM} ${LIBS} ${CLIB}
+
+$(HALBIN)/closeM3 : closeM3.o
+	${CC} ${BFLAGS} -o $(HALBIN)/closeM3 closeM3.o ${LFLAGS} ${RM} ${LIBS} ${CLIB}
+
+$(HALBIN)/openM3 : openM3.o
+	${CC} ${BFLAGS} -o $(HALBIN)/openM3 openM3.o ${LFLAGS} ${RM} ${LIBS} ${CLIB}
+
+$(HALBIN)/elscan : elscan.o
+	${CC} ${BFLAGS} -o $(HALBIN)/elscan elscan.o ${LFLAGS} ${RM} ${LIBS} ${CLIB}
+
+#$(HALBIN)/tsys : tsys.o
+#	${CC} ${BFLAGS} -o $(HALBIN)/tsys tsys.o ${LFLAGS} ${RM} ${LIBS} ${CLIB}
+
+$(HALBIN)/azscan : azscan.o
+	${CC} ${BFLAGS} -o $(HALBIN)/azscan azscan.o ${LFLAGS} ${RM} ${LIBS} ${CLIB}
+
+$(HALBIN)/az : az.o
+	${CC} ${BFLAGS} -o $(HALBIN)/az az.o ${LFLAGS} ${RM} ${LIBS} ${CLIB}
+
+$(HALBIN)/el : el.o
+	${CC} ${BFLAGS} -o $(HALBIN)/el el.o ${LFLAGS} ${RM} ${LIBS} ${CLIB}
+
+$(HALBIN)/azel : azel.o
+	${CC} ${BFLAGS} -o $(HALBIN)/azel azel.o ${LFLAGS} ${RM} ${LIBS} ${CLIB}
+
+$(HALBIN)/stow : stow.o
+	${CC} ${BFLAGS} -o $(HALBIN)/stow stow.o ${LFLAGS} ${RM} ${LIBS} ${CLIB}
+
+$(HALBIN)/decoff : decoff.o
+	${CC} ${BFLAGS} -o $(HALBIN)/decoff decoff.o ${LFLAGS} ${RM} ${LIBS} ${CLIB}
+
+$(HALBIN)/raoff : raoff.o
+	${CC} ${BFLAGS} -o $(HALBIN)/raoff raoff.o ${LFLAGS} ${RM} ${LIBS} ${CLIB}
+
+$(HALBIN)/radecoff : radecoff.o
+	${CC} ${BFLAGS} -o $(HALBIN)/radecoff radecoff.o ${LFLAGS} ${RM} ${LIBS} ${CLIB}
+
+$(HALBIN)/limbOffset : limbOffset.o
+	${CC} ${BFLAGS} -o $(HALBIN)/limbOffset limbOffset.o ${LFLAGS} \
+	${RM} ${LIBS} ${CLIB}
+
+$(HALBIN)/azoff : azoff.o
+	${CC} ${BFLAGS} -o $(HALBIN)/azoff azoff.o ${LFLAGS} ${RM} ${LIBS} ${CLIB}
+
+$(HALBIN)/eloff : eloff.o
+	${CC} ${BFLAGS} -o $(HALBIN)/eloff eloff.o ${LFLAGS} ${RM} ${LIBS} ${CLIB}
+
+$(HALBIN)/offsetUnit : offsetUnit.o
+	${CC} ${BFLAGS} -o $(HALBIN)/offsetUnit offsetUnit.o ${LFLAGS} \
+	${RM} ${LIBS} ${CLIB}
+
+$(HALBIN)/integrationTime : integrationTime.o
+	${CC} ${BFLAGS} -o $(HALBIN)/integrationTime integrationTime.o \
+	${LFLAGS} ${RM} ${LIBS} ${CLIB}
+
+$(HALBIN)/tol : tol.o
+	${CC} ${BFLAGS} -o $(HALBIN)/tol tol.o ${LFLAGS} ${RM} ${LIBS} ${CLIB}
+
+$(HALBIN)/writeTilts : writeTilts.o
+	${CC} ${BFLAGS} -o $(HALBIN)/writeTilts writeTilts.o ${LFLAGS} ${RM} ${LIBS} ${CLIB}
+
+$(HALBIN)/resume : resume.o
+	${CC} ${BFLAGS} -o $(HALBIN)/resume resume.o ${LFLAGS} \
+	${RM} ${LIBS} ${CLIB}
+
+$(HALBIN)/standby : standby.o
+	${CC} ${BFLAGS} -o $(HALBIN)/standby standby.o ${LFLAGS} \
+	${RM} ${LIBS} ${CLIB}
+
+$(HALBIN)/newPointingModel : newPointingModel.o
+	${CC} ${BFLAGS} -o $(HALBIN)/newPointingModel newPointingModel.o ${LFLAGS} \
+	${RM} ${LIBS} ${CLIB}
+
+$(HALBIN)/setSunSafeMinutes: setSunSafeMinutes.o
+	$(CC) -o $(HALBIN)/setSunSafeMinutes setSunSafeMinutes.o $(LFLAGS) \
+	$(LIBS) $(RM) $(CLIB)
+
+depend:
+	$(CC) -MM $(INC) $(SOURCES) > dependencies
+
+include dependencies
+
+clean :
+	\rm az.o el.o stow.o azel.o azoff.o eloff.o observe.o offsetUnit.o
+	\rm integrationTime.o trackCommand.o

@@ -1,0 +1,6 @@
+chopperControl.o: chopperControl.c \
+ /usr/PowerPC/common/include/chopperControl.h \
+ /usr/PowerPC/common/include/smadaemon.h \
+ /usr/PowerPC/common/include/rm.h \
+ /usr/PowerPC/common/include/iPOctal232.h
+232talk.o: 232talk.c /usr/PowerPC/common/include/iPOctal232.h

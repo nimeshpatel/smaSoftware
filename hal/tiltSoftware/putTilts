@@ -1,0 +1,41 @@
+#!/usr/local/bin/perl
+open(FILE,"fitresults")||die "no such file.\n";
+use DBI;
+use Getopt::Long;
+GetOptions('observers=s'=>\$observers,'comments=s'=>\$comment);
+my $dbh = DBI->connect ("dbi:Sybase:server=SMASY","npatel","npatel","Sybase");
+if(($observers eq "")||($comment eq "")) {
+print "Observer: ";
+$observers=<STDIN>; chop($observers);
+print "Comment: ";
+$comment=<STDIN>; chop($comment);
+}
+$tilttimestamp='';
+$sth=$dbh->prepare("
+insert into stars..tilts(filename, tiltmeterno, antenna, pad, time, slewdirection, sunaz, sunel,el, ambienttemp, cabintemp, windspeed, winddirection, tiltmagnitude, tiltdirection, dc, dcerror, sin, sinerror, cos, coserror, sin2, sin2error,  cos2, cos2error, sin3, sin3error, cos3, cos3error, rms, reducedchisq, observers, comment ,tilttimestamp) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")||die $dbh->errstr;
+while(<FILE>) {
+($filename, $time, $antenna, $pad, $tiltmeterno,$el,$sunaz,$sunel,$cabintemp,
+$ambienttemp,$windspeed,$winddirection, 
+$tiltmagnitude, $tiltdirection, 
+$dc, $dcerror, $sin, $sinerror, $cos, $coserror, $sin2, $sin2error,  
+$cos2, $cos2error, $sin3, $sin3error, $cos3, $cos3error, $rms, $reducedchisq 
+)=split;
+}
+close(FILE);
+
+($t,$t,$ds,$ts,$ell,$el,$slewdirection)=split('\_',$filename);
+($ds,$ts)= split('\_',$time);
+($year,$month,$day)=unpack("a4a2a2",$ds);
+($hour,$minute,$second)=unpack("a2a2a2",$ts);
+$month=(Jan,Feb,Mar,Apr,May,Jun,July,Aug,Sep,Oct,Nov,Dec)[$month-1];
+$time="$day $month $year $hour:$minute";
+
+print "$filename, $tiltmeterno, $antenna, $pad, $time, $slewdirection, $sunaz, $sunel,$el, $ambienttemp, $cabintemp, $windspeed, $winddirection, $tiltmagnitude, $tiltdirection, $dc, $dcerror, $sin, $sinerror, $cos, $coserror, $sin2, $sin2error,  $cos2, $cos2error, $sin3, $sin3error, $cos3, $cos3error, $rms, $reducedchisq, $observers, $comment, $tilttimestamp\n";
+
+$sth->execute($filename, $tiltmeterno, $antenna, $pad, $time, $slewdirection, $sunaz, $sunel, $el,$ambienttemp, $cabintemp, $windspeed, $winddirection, $tiltmagnitude, $tiltdirection, $dc, $dcerror, $sin, $sinerror, $cos, $coserror, $sin2, $sin2error,  $cos2, $cos2error, $sin3, $sin3error, $cos3, $cos3error, $rms, $reducedchisq, $observers, $comment,$tilttimestamp)||die $dbh->errstr;
+
+$sth->finish;
+$dbh->commit;
+$dbh->disconnect;
+
+exit;

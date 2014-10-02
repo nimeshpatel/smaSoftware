@@ -1,0 +1,6 @@
+open: Device busy
+opening GPIB device at address = 8....
+ioctl error:  SELECT_DEVICE: Bad file number
+Skipping read due to call_ibwrt() error = -1
+Address 8: error in response to identification query
+Failed

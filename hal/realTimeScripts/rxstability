@@ -1,0 +1,49 @@
+#!/usr/bin/perl -w
+
+#unshift  @ARGV, "--simulate";
+print " The arguments are @ARGV\n";
+
+# init values for optional params.
+use Getopt::Long;
+$Getopt::Long::autoabbrev=1;
+
+$nloop=1;
+GetOptions('antennas' => \$antlist, 'simulate');
+$nloop--;
+
+if($opt_simulate) {$simulateMode=1;} else {$simulateMode=0;}
+print "opt_antennas = $opt_antennas, antlist = $antlist\n";
+
+print $simulateMode, "\n";
+
+# load the sma library of functions used in this observing script.
+# do '/application/observingScripts/sma.pl';
+$dir = "/data/engineering/allanVariance";
+
+#printPID();
+
+# check participating antennas.
+# checkANT();
+# open AL, "< /usr/home/rwilson/list";
+open AL, "< /global/projects/antennasInArray";
+@sma = (split " ", <AL>);
+close AL;
+$alist = "-a" . join ",",@sma;
+print "$alist will be used\n";
+@originalBias = `shmValue $alist RM_SIS_MIXER0_VOLTAGE_CALIB_F RM_SIS_MIXER1_VOLTAGE_CALIB_F`;
+print "The current biases are @originalBias\n";
+chop ($date = `date`);
+save_allanvars("$date Warm Load");
+
+sub save_allanvars {
+    my @av = split " ",
+	    `shmValue $alist "RM_SYNCDET2_ALLAN_VARIANCE_V2_V10_F[][0..3]"`;
+    print "the AV values are: @av\n";
+    $i = 0;
+    for my $ant (@sma) {
+	my @avs = @av[$i..$i+3];
+	print "rx1 ant $ant @avs\n";
+	$i += 8;
+    }
+    print "@_, AVs have been saved\n";
+}

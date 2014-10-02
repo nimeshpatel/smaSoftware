@@ -1,0 +1,330 @@
+/***************************************************************
+*
+* choppersmash.c
+* 
+* SMAsh commands for controlling SMA choppers.
+* RWW 
+* 4 Sept. 2003
+*
+* $Log: choppersmash.c,v $
+*
+****************************************************************/
+static char rcsid[] = "$Id: choppersmash.c$";
+
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "smapopt.h"
+#include "rm.h"
+#include "deiced.h"
+
+#define KEY (0x559966aa)
+#define NUMANTENNAS 8
+#define VERBOSE 0
+
+/* Deice system conntrol and current report */
+static char powerCmdv[] = "RM_DEICE_POWER_CMD_V5_S";
+static char cmdTimestampv[] = "RM_DEICE_CMD_TIMESTAMP_L";
+static char currentv[] = "RM_DEICE_CURRENT_V3_F";
+static char sysStatusv[] = "RM_DEICE_STATUS_BITS_L";
+static char statusTimestampv[] = "RM_DEICE_TIMESTAMP_L";
+static char unixTimev[] = "RM_UNIX_TIME_L";
+
+static int testFlag = 0;
+static int mainPwr = -1, subreflectorPwr = -1, chopperPwr = -1, opTelPwr = -1;
+static int zone = -1;
+static int generalPower = -1;
+static int antennaArray[SMAPOPT_MAX_ANTENNAS + 1];
+#define ANT_ARRAY_SZ (sizeof(antennaArray)/sizeof(antennaArray[0]))
+static int antennasGiven = 0;
+static int powerGiven = 0;
+static int rm_antlist[RM_ARRAY_SIZE];
+static int unixTime;
+
+static struct	smapoptOption optionsTable[] = {
+	{"antenna",'a',SMAPOPT_ARG_ANTENNAS, antennaArray,'a',
+		"Antennas (Comma and ellipsis separated list).  "
+		"Default all with deice control"},
+	{"main",'m',SMAPOPT_ARG_INT,&mainPwr,'s',
+    	    "# of deice phases surface and quad leg heaters will be on (0-6)"},
+	{"subreflector",'s',SMAPOPT_ARG_INT,&subreflectorPwr,'s',
+    	    "# of deice phases subreflector heaters will be on (0-8)"},
+	{"chopper",'c',SMAPOPT_ARG_INT,&chopperPwr,'s',
+    	    "# of deice phases chopper case heaters will be on (0-8)"},
+	{"opTel",'o',SMAPOPT_ARG_INT,&opTelPwr,'s',
+	    "# of deice phases optical telescope heaters will be on (0-8)"},
+	{"zone",'z',SMAPOPT_ARG_INT,&zone,0,
+	    "Single zone to turn on continuously (1, 11)"},
+	{"test",'t',SMAPOPT_ARG_NONE,&testFlag,0,
+	    "Print heater currents for each zone of each antenna"},
+	{"help",'h',SMAPOPT_ARG_NONE,0,'h',""},
+/*	SMAPOPT_AUTOHELP */
+	{NULL,0,0,NULL,0,0}
+};	  
+smapoptContext optCon;
+
+/* deice.c */
+void SetUp(int *ip, int high, char *name);
+static void RunTests(void);
+void GetUnixTime(void);
+
+void errorOut(char *error, char *addl) {
+	if (error) fprintf(stderr, "\n%s: %s.  For help use -h.\n",
+		error, addl);
+	exit(1);
+}
+
+void usage(void) {
+
+	smapoptPrintHelp(optCon, stderr, 0);
+	fprintf(stderr,
+	    "\nOr to set all zones to the same fractional power:\n\n"
+	    "\tdeice [-a<n>]  <PowerLevel(0-10)>\n\n");
+}
+
+int main(int argc, char *argv[]) {
+	int i, ant, j, rm_status;
+	char c, *cp, ts[64];
+
+	optCon = smapoptGetContext("deice", argc, argv, optionsTable,0);
+
+	while ((c = smapoptGetNextOpt(optCon)) >= 0) {
+	    switch(c) {
+	    case 'a':
+		antennasGiven = 1;
+		break;
+	    case 's':
+		powerGiven++;
+		break;
+	    case 'h':
+		usage();
+		exit(0);
+	    }
+
+	}
+	if((cp = smapoptGetArg(optCon)) != 0) {
+	    powerGiven++;
+	    generalPower = atoi(cp);
+	}
+	smapoptFreeContext(optCon);
+
+	/* initializing ref. mem. */
+	rm_status=rm_open(rm_antlist);
+	if(rm_status != RM_SUCCESS) {
+	    rm_error_message(rm_status,"rm_open()");
+	    exit(1);
+	}
+
+	if(testFlag == 0 && powerGiven <= 0 && zone < 0) {
+	    errorOut("Insufficient arguments" ,"Some action required");
+	}
+	if(zone > 0 && powerGiven) {
+	    errorOut("Over Specified", "Can't specify zone with a power");
+	}
+
+	if(generalPower < -1 || generalPower > 10) {
+	    printf("If general power level given, it must be between 0"
+		" and 10\n");
+	    exit(1);
+	}
+	SetUp(&mainPwr, 6, "Main Power");
+	SetUp(&chopperPwr, 8, "Chopper Power");
+	SetUp(&subreflectorPwr, 8, "Subreflector Power");
+	SetUp(&opTelPwr, 8, "Subreflector Power");
+	if(zone > 0) {
+	    if(zone > ZONES) {
+		printf("Zone must be between 1 and 11\n");
+		exit(1);
+	    }
+	    mainPwr = - zone;
+	}
+
+	if(antennasGiven == 0) {
+	    for(i = 1; i < ANT_ARRAY_SZ; i++) {
+		antennaArray[i] = 1;
+	    }
+	}
+
+#if VERBOSE
+	printf("Requested Antennas:");
+	for(i = 1; i < ANT_ARRAY_SZ; i++) {
+	    printf(" %d", antennaArray[i]);
+	}
+	printf("\ntestFlag = %d  zone = %d  generalPower = %d\n",
+		testFlag, zone, generalPower);
+	printf("mainPwr = %d subreflectorPwr = %d  chopperP = %d"
+		"  opTelPwr = %d\n",
+		mainPwr, subreflectorPwr, chopperPwr, opTelPwr);
+	printf("Antennas with RM:");
+	for(i = 0; (ant = rm_antlist[i]) != RM_ANT_LIST_END; i++) {
+	    printf(" %d", ant);
+	}
+	putchar('\n');
+#endif VERBOSE
+
+	GetUnixTime();
+	/* Limit list to requested antennas with active deiced */
+	for(i = j = 0; (ant = rm_antlist[i]) != RM_ANT_LIST_END; i++) {
+	    int deicedTime;
+	    if( antennaArray[ant]) {
+		rm_status = rm_read(ant, statusTimestampv, &deicedTime);
+		if(rm_status != RM_SUCCESS) {
+		    sprintf(ts, "Reading deiced time from antenna %d", ant);
+		    rm_error_message(rm_status, ts);
+		}
+#if VERBOSE
+		printf("Antenna %d unixtime %d, deicedTime %d\n", ant,
+			unixTime, deicedTime);
+#endif VERBOSE
+		rm_antlist[j++] = ant;
+	    }
+	}
+	rm_antlist[j] = RM_ANT_LIST_END;
+	printf("Antennas to be controlled:");
+	for(i = 0; (ant = rm_antlist[i]) != RM_ANT_LIST_END; i++) {
+	    printf(" %d", ant);
+	}
+	putchar('\n');
+	if(testFlag) {
+	    if(mainPwr != 0 || chopperPwr != 0 || subreflectorPwr != 0 ||
+			opTelPwr != 0 ) {
+		printf("You may not specify a power with a test\n");
+		exit(1);
+	    }
+	    RunTests();
+	    exit(0);
+	}
+
+	for(i = 0; (ant = rm_antlist[i]) != RM_ANT_LIST_END; i++) {
+	    short powerCmd[5];
+
+	    powerCmd[MAIN_P] = mainPwr;
+	    powerCmd[CHOP_P] = chopperPwr;
+	    powerCmd[SUBR_P] = subreflectorPwr;
+	    powerCmd[OPTEL_P] = opTelPwr;
+	    powerCmd[CHECK_P] = CHECKWORD(powerCmd); 
+	    rm_status = rm_write(ant, powerCmdv, powerCmd);
+	    rm_status |= rm_write_notify(ant, cmdTimestampv, &unixTime);
+	    if(rm_status != RM_SUCCESS) {
+		printf("rm_write error occurred for antenna %d\n", ant);
+	    }
+	}
+
+	return(0);
+}
+
+void SetUp(int *ip, int high, char *name) {
+	double scale;
+
+	scale = 0.1 * high;
+	if(generalPower >= 0 && *ip == -1) {
+	    *ip = (int)(scale * generalPower + 0.49);
+	} else if(*ip > high || *ip < -1) {
+	    printf("%s is out of range (%d), must be between 0 and %d\n",
+		name, *ip, high);
+	    exit(1);
+	}
+	if(*ip < 0)
+	    *ip = 0;
+}
+
+static void RunTests(void) {
+#if 1
+	float current[RM_ARRAY_SIZE][3];
+	int statusTimestamp[RM_ARRAY_SIZE];
+	unsigned int status[RM_ARRAY_SIZE];
+	short powerCmd[5];
+	int i, zone, ant, rm_status;
+	unsigned int expectedStatus;
+	char errorString[64];
+	static char *zoneName[] = {" ", "None", "Dish", "Quadrupod",
+	    "Quadrupod", "Chopper Case A&B", "Subreflector C",
+	    "Optical Telescope A"};
+
+	for(i = MAIN_P; i < CHECK_P; i++) {
+	    powerCmd[i] = 0;
+	}
+	for(i = 0; i < ANT_ARRAY_SZ; i++) {
+	    antennaArray[i] = 0;
+	}
+	for(i = 0; (ant = rm_antlist[i]) != RM_ANT_LIST_END; i++) {
+	    antennaArray[ant] = 1;
+	}
+	printf("\n         Zone Type   Z Ph ");
+	for(i = 1; i <= NUMANTENNAS; i++) {
+	    printf("%3d  ", i);
+	}
+	putchar('\n');
+	for(zone = 0; zone <= 12; zone++) {
+	    if(zone > 0 && zone < 12) {
+		powerCmd[MAIN_P] = -zone;
+	    } else {
+		powerCmd[MAIN_P] = 0;
+	    }
+	    powerCmd[CHECK_P] = CHECKWORD(powerCmd); 
+	    GetUnixTime();
+	    for(i = 0; (ant = rm_antlist[i]) != RM_ANT_LIST_END; i++) {
+		sprintf(errorString, "Setting zone of ant %d", ant);
+		rm_status = rm_write(ant, powerCmdv, powerCmd);
+		if(rm_status != RM_SUCCESS) {
+		    rm_error_message(rm_status, errorString);
+		}
+		rm_status = rm_write_notify(ant, cmdTimestampv, &unixTime);
+		if(rm_status != RM_SUCCESS) {
+		    rm_error_message(rm_status, errorString);
+		}
+	    }
+	    if(zone == 12) {
+		exit(0);
+	    }
+	    sleep(5);
+	    rm_status = rm_read(RM_ANT_ALL, statusTimestampv, statusTimestamp);
+	    if(rm_status != RM_SUCCESS) {
+		rm_error_message(rm_status, "reading deiced status timestamps");
+	    }
+	    rm_status = rm_read(RM_ANT_ALL, currentv, current);
+	    if(rm_status != RM_SUCCESS) {
+		rm_error_message(rm_status, "reading deice currents");
+	    }
+	    rm_status = rm_read(RM_ANT_ALL, sysStatusv, status);
+	    if(rm_status != RM_SUCCESS) {
+		rm_error_message(rm_status, "reading deiced status bits");
+	    }
+	    expectedStatus = (zone > 0)? 0x7000 | (1 << zone): 0;
+	    for(i = 0; (ant = rm_antlist[i]) != RM_ANT_LIST_END; i++) {
+		if(statusTimestamp[ant] <= unixTime || status[ant] !=
+			expectedStatus) {
+		    printf("antenna %d error: timestamp %d sec after cmd, "
+			"status = %4x - expected %4x\n", ant,
+			statusTimestamp[ant] - unixTime, status[ant],
+			expectedStatus);
+		}
+	    }
+	    for(i = 0; i < 3; i++) {
+		printf("%19s %2d %c", zoneName[(zone == 0)?1: (zone < 7)? 2:
+			zone - 4], zone, 'A' + i);
+		for(ant = 1; ant <= NUMANTENNAS; ant++) {
+		    if(antennaArray[ant]) {
+			printf("%5.1f", current[ant][i]);
+		    }else {
+			printf("     ");
+		    }
+		}
+		putchar('\n');
+	    }
+	}
+#endif
+}
+
+void GetUnixTime(void) {
+	int i;
+
+	for(i = 0; rm_antlist[i] != RM_ANT_LIST_END; i++) {
+	    if(rm_read(rm_antlist[i], unixTimev, &unixTime) == RM_SUCCESS) {
+		return;
+	    }
+	}
+}

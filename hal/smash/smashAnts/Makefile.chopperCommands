@@ -1,0 +1,93 @@
+CC = gcc
+CFLAGS = -O -Wall -g -c
+BFLAGS = -O -g 
+LFLAGS = -L$(COMMONLIB)
+INC = -I$(COMMONINC) 
+LIBS = -llynx -lsmapopt
+RM = $(COMMONLIB)/rm.o
+DSM = $(COMMONLIB)/libdsm.a
+CLIB = $(COMMONLIB)/commonLib
+SMASH = startChopping2 stopChopping2  homeChopper2 stowChopper2 chopperX2 \
+chopperY2 chopperZ2  farChopper2 nearChopper2 chopperCommand2 \
+chopperTilt2 resetChopLimits2 stowChopper
+
+all :   $(SMASH)
+
+
+nearChopper2.o : nearChopper2.c
+	${CC} ${CFLAGS} -o nearChopper2.o nearChopper2.c ${INC}
+
+nearChopper2 : nearChopper2.o
+	${CC} ${BFLAGS} -o nearChopper2 nearChopper2.o ${LFLAGS} ${RM} ${LIBS}
+
+farChopper2.o : farChopper2.c
+	${CC} ${CFLAGS} -o farChopper2.o farChopper2.c ${INC}
+
+farChopper2 : farChopper2.o
+	${CC} ${BFLAGS} -o farChopper2 farChopper2.o ${LFLAGS} ${RM} ${LIBS}
+
+resetChopLimits2.o : resetChopLimits2.c
+	${CC} ${CFLAGS} -o resetChopLimits2.o resetChopLimits2.c ${INC}
+
+resetChopLimits2 : resetChopLimits2.o
+	${CC} ${BFLAGS} -o resetChopLimits2 resetChopLimits2.o ${LFLAGS} ${RM} ${LIBS}
+
+chopperTilt2.o : chopperTilt2.c
+	${CC} ${CFLAGS} -o chopperTilt2.o chopperTilt2.c ${INC}
+
+chopperTilt2 : chopperTilt2.o
+	${CC} ${BFLAGS} -o chopperTilt2 chopperTilt2.o ${LFLAGS} ${RM} ${LIBS}
+
+chopperZ2.o : chopperZ2.c
+	${CC} ${CFLAGS} -o chopperZ2.o chopperZ2.c ${INC}
+
+chopperZ2 : chopperZ2.o
+	${CC} ${BFLAGS} -o chopperZ2 chopperZ2.o ${LFLAGS} ${RM} ${LIBS}
+
+chopperY2.o : chopperY2.c
+	${CC} ${CFLAGS} -o chopperY2.o chopperY2.c ${INC}
+
+chopperY2 : chopperY2.o
+	${CC} ${BFLAGS} -o chopperY2 chopperY2.o ${LFLAGS} ${RM} ${LIBS}
+
+chopperX2.o : chopperX2.c
+	${CC} ${CFLAGS} -o chopperX2.o chopperX2.c ${INC}
+
+chopperX2 : chopperX2.o
+	${CC} ${BFLAGS} -o chopperX2 chopperX2.o ${LFLAGS} ${RM} ${LIBS}
+
+stowChopper2.o : stowChopper2.c
+	${CC} ${CFLAGS} -o stowChopper2.o stowChopper2.c ${INC}
+
+stowChopper2 : stowChopper2.o
+	${CC} ${BFLAGS} -o stowChopper2 stowChopper2.o ${LFLAGS} ${RM} ${LIBS}
+
+homeChopper2.o : homeChopper2.c
+	${CC} ${CFLAGS} -o homeChopper2.o homeChopper2.c ${INC}
+
+homeChopper2 : homeChopper2.o
+	${CC} ${BFLAGS} -o homeChopper2 homeChopper2.o ${LFLAGS} ${RM} ${LIBS}
+
+chopperCommand2.o : chopperCommand2.c
+	${CC} ${CFLAGS} -o chopperCommand2.o chopperCommand2.c ${INC}
+
+chopperCommand2 : chopperCommand2.o
+	${CC} ${BFLAGS} -o chopperCommand2 chopperCommand2.o ${LFLAGS} ${RM} ${LIBS}
+
+startChopping2.o : startChopping2.c
+	${CC} ${CFLAGS} -o startChopping2.o startChopping2.c ${INC}
+
+startChopping2 : startChopping2.o
+	${CC} ${BFLAGS} -o startChopping2 startChopping2.o ${LFLAGS} ${RM} ${LIBS}
+
+stopChopping2.o : stopChopping2.c
+	${CC} ${CFLAGS} -o stopChopping2.o stopChopping2.c ${INC}
+
+stopChopping2 : stopChopping2.o
+	${CC} ${BFLAGS} -o stopChopping2 stopChopping2.o ${LFLAGS} ${RM} ${LIBS}
+
+stowChopper2.o : stowChopper2.c
+	${CC} ${CFLAGS} -o stowChopper2.o stowChopper2.c ${INC}
+
+stowChopper2 : stowChopper2.o
+	${CC} ${BFLAGS} -o stowChopper2 stowChopper2.o ${LFLAGS} ${RM} ${LIBS}

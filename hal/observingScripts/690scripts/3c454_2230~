@@ -1,0 +1,8 @@
+#!/bin/csh
+observe -s 3c454.3
+sleep 1
+tsys
+integrate -t 60
+observe -s 
+sleep 1
+tsys

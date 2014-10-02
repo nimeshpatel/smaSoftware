@@ -1,0 +1,86 @@
+#!/usr/local/bin/perl
+# NaP 14 Nov 2001
+# a perl wrapper for  tiltfit, tiltplot and putTilts programs to ease
+# the pain of using them.
+
+sub Usage() {
+  print "Usage: reduceTilts -f <filename> [-o <observers>] [-c <comments>] [-p] [-a]\n";
+  print "If -o is not given, the $USER env. variable will be used.\n";
+  print "If there are more than one observer, use double-quotes around the argument.\n";
+  print "Give the -p option if you want to generate postscript plots.\n";
+  print "Use -a option to skip writing the data to Sybase (and only append to the\n";
+  print "ascii file of results instead).\n";
+}
+
+use Getopt::Long;
+GetOptions('filename=s'=>\$filename,'observers=s'=>\$observers,'comment=s'=>\$comments,'plot'=>\$plot,
+'verbose'=>\$verbose,'ascii'=>\$ascii);
+
+$checkoptions=1;
+
+if($filename eq "") {
+  $checkoptions=0;
+}
+if($observers eq "") {
+  $observers = $ENV{"USER"};
+}
+if($comments eq "") {$comments="-";}
+
+if($checkoptions ==0) {
+  Usage();
+  exit;
+}
+
+if (index($filename,"ccw") == -1) {
+    $scandirection = +1;
+} else {
+    $scandirection = -1;
+}
+
+($junk,$ant,$day,$time,$junk2,$elev,$dir) = split('_',$filename);
+
+for($tiltnumber=1;$tiltnumber<5;$tiltnumber++) {
+  $answer=`/application/bin/tiltfit $filename $tiltnumber`;
+  ($filename, $timestamp,$antenna,$pad,$tiltmeter,$elevation,
+    $sunaz,$sunel,$cabintemp,$ambienttemp,$windspeed,$winddirection,
+    $tiltmagnitude,$tiltdirection,$dc,$dcerror,$sin,$sinerror,
+    $cos,$coserror,$sin2,$sin2error,$cos2,$cos2error,$sin3,$sin3error,
+    $cos3,$cos3error,$rms,$reducedchisquare)=split(' ',$answer);
+  if($plot==1) {
+  	$max=$tiltmagnitude+0.2*$tiltmagnitude;
+	$min=-$max;
+	`tiltplot -180 360 $min $max`;
+	$plotfile=$filename.".$tiltnumber".".ps";
+	`mv pgplot.ps $plotfile`;
+  }
+  if ($ascii==0) {
+	`putTilts -o "$observers" -c "$comments"`;
+  }
+  $outfile = "/global/data/engineering/tilt/antenna$antenna/tilt.ant$antenna.pad$pad.summary";
+  open(LOGFILE,">>$outfile") || die "Could not open file = $outfile\n";
+  printf LOGFILE "%8d %06d %1d %2d %1d %+1d %4.1f %+5.1f %+4.1f %+4.1f %4.1f %3.0f %+5.1f %+6.1f %+6.1f %+6.1f %+6.1f\n", 
+  $day, $time, $antenna, $pad, $tiltmeter, $scandirection, $elevation,
+  $sunaz, $cabintemp, $ambienttemp, $windspeed, $winddirection, $tiltmagnitude,
+  $tiltdirection, $dc, $sin, $cos;
+  close(LOGFILE);
+  print "Appended one line of results to file $outfile\n";
+
+  if ($verbose==1) {
+	print "=====================================================================================\n";
+	print "Filename=$filename	Date/Time=$timestamp\n";
+	print "Antenna $antenna on pad $pad\n";
+	print "Tiltmeter number $tiltmeter\n";
+	print "Elevation: $elevation degrees\n";
+	print "Sun at Azimuth: $sunaz degrees, Elevation: $sunel degrees\n";
+	print "Cabin temperature: $cabintemp C\n";
+	print "Ambient temperature: $ambienttemp C\n";
+	print "Wind-speed: $windspeed m/s from Azimuth: $winddirection degrees\n";
+	print "Tilt magnitude: $tiltmagnitude arcseconds towards azimuth: $tiltdirection degrees\n";
+	print "Fitted function: ($dc+-$dcerror)+($sin+-$sinerror)*sin(az)+($cos+-$coserror)*cos(az)+
+		($sin2+-$sin2error)*sin(2az)+($cos2+-$cos2error)*cos(2az)+
+		($sin3+-$sin3error)*sin(3az)+($cos3+-$cos3error)*cos(3az)\n";
+	print "RMS of residuals: $rms arcseconds, reduced chi-square: $reducedchisquare\n";
+	print "=====================================================================================\n";
+	
+  }
+}

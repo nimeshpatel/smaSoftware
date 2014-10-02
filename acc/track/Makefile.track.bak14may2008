@@ -1,0 +1,60 @@
+CC = gcc -g -Wall
+BIN = Track
+LFLAGS = -L$(COMMONLIB)
+LIB = -lrpc -lnetinet -lm -lcurses -llynx  -mthreads -lsmapopt
+INC = -I$(COMMONINC) -I$(COMMON)/vme_sg_simple/ -I$(ACCAPP)/servo/include/ -I$(HALAPP)/hal/rxCode/src/include/ \
+-I$(ACCAPP)/rxCode/src \
+-I$(ACCAPP)/rxCode/src/include
+OBJ = track.o local.o mount.o Refract.o solsys2.o readeph0.o novas.o novascon.o irig2sma.o\
+pleph2.o  ccd_xdr.o ccd_clnt.o $(COMMONLIB)/rm.o $(COMMONLIB)/commonLib $(COMMONLIB)/openshm.o \
+$(COMMONLIB)/tune_clnt.o \
+$(COMMONLIB)/tune_xdr.o \
+$(COMMONLIB)/cspice.a
+
+all: $(BIN)
+
+Track: track.o local.o mount.o Refract.o solsys2.o readeph0.o novas.o novascon.o irig2sma.o\
+pleph2.o ccd_xdr.o ccd_clnt.o 
+	$(CC) -o $(BIN) $(OBJ) $(LIB) ${LFLAGS}
+
+tune_clnt.o: tune_clnt.c
+	$(CC) -c tune_clnt.c
+
+tune_xdr.o: tune_xdr.c
+	$(CC) -c tune_xdr.c
+
+irig2sma.o: irig2sma.c
+	$(CC) -c irig2sma.c
+
+ccd_xdr.o: ccd_xdr.c
+	$(CC) -c ccd_xdr.c
+
+ccd_clnt.o: ccd_clnt.c
+	$(CC) -c ccd_clnt.c
+
+track.o: track.c
+	$(CC) -c track.c  $(INC)
+
+local.o: local.c
+	$(CC) -c  local.c  ${INC}
+
+Refract.o: Refract.c
+	$(CC) -c Refract.c ${INC}
+
+mount.o: mount.c
+	$(CC) -c mount.c ${INC}
+
+solsys2.o: solsys2.c
+	$(CC) -c solsys2.c
+
+readeph0.o: readeph0.c
+	$(CC) -c readeph0.c
+
+novas.o: novas.c
+	$(CC) -c novas.c
+
+novascon.o: novascon.c
+	$(CC) -c novascon.c
+
+pleph2.o: pleph2.c
+	$(CC) -c pleph2.c ${INC}

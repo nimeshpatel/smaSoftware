@@ -1,0 +1,1260 @@
+initializing.....
+Not running on hal9000, entering simulation mode.
+Script: ../2006-03-S057/2006-03-S057_267_vex.pl.
+	06/27/2006 03:20:00 --> 06/27/2006 03:20:00  ---- radio
+	06/27/2006 03:20:00 --> 06/27/2006 03:20:00  ---- integrate -t 30
+	06/27/2006 03:20:00 --> 06/27/2006 03:20:00  ---- project -r -p 'Susanne Aalto' -d '2006-03-S057' -i 29740
+----- initialization done, starting script -----
+
+#################################
+# FLUX and BANDPASS Calibration #
+#################################
+
+LST [hr]=  11.34
+lookup time: 6 27 2006 3:20
+uranus is at -76.5 degrees elevation
+LST [hr]=  11.34
+lookup time: 6 27 2006 3:20
+1924-292 is at -36.7 degrees elevation
+
+###########################
+# Initial Elevation Check #
+###########################
+
+LST [hr]=  11.34
+arp220 is at 30.7 degrees elevation
+---- Target source is available. ----
+LST [hr]=  11.34
+lookup time: 6 27 2006 3:20
+1613+342 is at 24.0 degrees elevation
+LST [hr]=  11.34
+lookup time: 6 27 2006 3:20
+1635+381 is at 20.3 degrees elevation
+---- At least one calibrator is available. ----
+
+#############
+# Main Loop #
+#############
+
+LST [hr]=  11.34
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+LST [hr]=  11.34
+lookup time: 6 27 2006 3:20
+1613+342 is at 24.0 degrees elevation
+	06/27/2006 03:20:00 --> 06/27/2006 03:20:10  ---- observe -s 1613+342
+	06/27/2006 03:20:10 --> 06/27/2006 03:20:21  ---- tsys
+	06/27/2006 03:20:21 --> 06/27/2006 03:24:21  ---- integrate -s 8 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  11.41
+lookup time: 6 27 2006 3:24
+1613+342 is at 24.8 degrees elevation
+LST [hr]=  11.41
+lookup time: 6 27 2006 3:24
+1635+381 is at 21.1 degrees elevation
+---- At least one calibrator is above 20 degrees ----
+
+---- Observing Target Source (Loop = 1) ----
+
+LST [hr]=  11.41
+arp220 is at 31.6 degrees elevation
+	06/27/2006 03:24:21 --> 06/27/2006 03:24:31  ---- observe -s arp220 -r 15:34:57.26 -d +23:30:11.4 -e 2000 -v 0
+	06/27/2006 03:24:31 --> 06/27/2006 03:24:42  ---- tsys
+	06/27/2006 03:24:42 --> 06/27/2006 03:34:42  ---- integrate -s 20 -w
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+LST [hr]=  11.59
+lookup time: 6 27 2006 3:34
+1635+381 is at 23.1 degrees elevation
+	06/27/2006 03:34:42 --> 06/27/2006 03:34:52  ---- observe -s 1635+381
+	06/27/2006 03:34:52 --> 06/27/2006 03:35:03  ---- tsys
+	06/27/2006 03:35:03 --> 06/27/2006 03:39:03  ---- integrate -s 8 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  11.66
+lookup time: 6 27 2006 3:39
+1613+342 is at 27.9 degrees elevation
+LST [hr]=  11.66
+lookup time: 6 27 2006 3:39
+1635+381 is at 24.0 degrees elevation
+---- At least one calibrator is above 20 degrees ----
+
+---- Observing Target Source (Loop = 1) ----
+
+LST [hr]=  11.66
+arp220 is at 35.0 degrees elevation
+	06/27/2006 03:39:03 --> 06/27/2006 03:39:13  ---- observe -s arp220 -r 15:34:57.26 -d +23:30:11.4 -e 2000 -v 0
+	06/27/2006 03:39:13 --> 06/27/2006 03:39:24  ---- tsys
+	06/27/2006 03:39:24 --> 06/27/2006 03:49:24  ---- integrate -s 20 -w
+LST [hr]=  11.83
+Loop No.= 2
+
+---- Observing Gain Calibrator (Loop = 2) ----
+
+LST [hr]=  11.83
+lookup time: 6 27 2006 3:49
+1613+342 is at 30.0 degrees elevation
+	06/27/2006 03:49:24 --> 06/27/2006 03:49:34  ---- observe -s 1613+342
+	06/27/2006 03:49:34 --> 06/27/2006 03:49:45  ---- tsys
+	06/27/2006 03:49:45 --> 06/27/2006 03:53:45  ---- integrate -s 8 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  11.91
+lookup time: 6 27 2006 3:53
+1613+342 is at 30.8 degrees elevation
+LST [hr]=  11.91
+lookup time: 6 27 2006 3:53
+1635+381 is at 26.8 degrees elevation
+---- At least one calibrator is above 20 degrees ----
+
+---- Observing Target Source (Loop = 2) ----
+
+LST [hr]=  11.91
+arp220 is at 38.2 degrees elevation
+	06/27/2006 03:53:45 --> 06/27/2006 03:53:55  ---- observe -s arp220 -r 15:34:57.26 -d +23:30:11.4 -e 2000 -v 0
+	06/27/2006 03:53:55 --> 06/27/2006 03:54:06  ---- tsys
+	06/27/2006 03:54:06 --> 06/27/2006 04:04:06  ---- integrate -s 20 -w
+
+---- Observing Gain Calibrator (Loop = 2) ----
+
+LST [hr]=  12.08
+lookup time: 6 27 2006 4:4
+1635+381 is at 28.9 degrees elevation
+	06/27/2006 04:04:06 --> 06/27/2006 04:04:16  ---- observe -s 1635+381
+	06/27/2006 04:04:16 --> 06/27/2006 04:04:27  ---- tsys
+	06/27/2006 04:04:27 --> 06/27/2006 04:08:27  ---- integrate -s 8 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  12.15
+lookup time: 6 27 2006 4:8
+1613+342 is at 33.9 degrees elevation
+LST [hr]=  12.15
+lookup time: 6 27 2006 4:8
+1635+381 is at 29.7 degrees elevation
+---- At least one calibrator is above 20 degrees ----
+
+---- Observing Target Source (Loop = 2) ----
+
+LST [hr]=  12.15
+arp220 is at 41.6 degrees elevation
+	06/27/2006 04:08:27 --> 06/27/2006 04:08:37  ---- observe -s arp220 -r 15:34:57.26 -d +23:30:11.4 -e 2000 -v 0
+	06/27/2006 04:08:37 --> 06/27/2006 04:08:48  ---- tsys
+	06/27/2006 04:08:48 --> 06/27/2006 04:18:48  ---- integrate -s 20 -w
+LST [hr]=  12.32
+Loop No.= 3
+
+---- Observing Gain Calibrator (Loop = 3) ----
+
+LST [hr]=  12.32
+lookup time: 6 27 2006 4:18
+1613+342 is at 36.0 degrees elevation
+	06/27/2006 04:18:48 --> 06/27/2006 04:18:58  ---- observe -s 1613+342
+	06/27/2006 04:18:58 --> 06/27/2006 04:19:09  ---- tsys
+	06/27/2006 04:19:09 --> 06/27/2006 04:23:09  ---- integrate -s 8 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  12.40
+lookup time: 6 27 2006 4:23
+1613+342 is at 37.0 degrees elevation
+LST [hr]=  12.40
+lookup time: 6 27 2006 4:23
+1635+381 is at 32.7 degrees elevation
+---- At least one calibrator is above 20 degrees ----
+
+---- Observing Target Source (Loop = 3) ----
+
+LST [hr]=  12.40
+arp220 is at 45.1 degrees elevation
+	06/27/2006 04:23:09 --> 06/27/2006 04:23:19  ---- observe -s arp220 -r 15:34:57.26 -d +23:30:11.4 -e 2000 -v 0
+	06/27/2006 04:23:19 --> 06/27/2006 04:23:30  ---- tsys
+	06/27/2006 04:23:30 --> 06/27/2006 04:33:30  ---- integrate -s 20 -w
+
+---- Observing Gain Calibrator (Loop = 3) ----
+
+LST [hr]=  12.57
+lookup time: 6 27 2006 4:33
+1635+381 is at 34.7 degrees elevation
+	06/27/2006 04:33:30 --> 06/27/2006 04:33:40  ---- observe -s 1635+381
+	06/27/2006 04:33:40 --> 06/27/2006 04:33:51  ---- tsys
+	06/27/2006 04:33:51 --> 06/27/2006 04:37:51  ---- integrate -s 8 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  12.64
+lookup time: 6 27 2006 4:37
+1613+342 is at 39.9 degrees elevation
+LST [hr]=  12.64
+lookup time: 6 27 2006 4:37
+1635+381 is at 35.4 degrees elevation
+---- At least one calibrator is above 20 degrees ----
+
+---- Observing Target Source (Loop = 3) ----
+
+LST [hr]=  12.64
+arp220 is at 48.3 degrees elevation
+	06/27/2006 04:37:51 --> 06/27/2006 04:38:01  ---- observe -s arp220 -r 15:34:57.26 -d +23:30:11.4 -e 2000 -v 0
+	06/27/2006 04:38:01 --> 06/27/2006 04:38:12  ---- tsys
+	06/27/2006 04:38:12 --> 06/27/2006 04:48:12  ---- integrate -s 20 -w
+LST [hr]=  12.82
+Loop No.= 4
+
+---- Observing Gain Calibrator (Loop = 4) ----
+
+LST [hr]=  12.82
+lookup time: 6 27 2006 4:48
+1613+342 is at 42.2 degrees elevation
+	06/27/2006 04:48:12 --> 06/27/2006 04:48:22  ---- observe -s 1613+342
+	06/27/2006 04:48:22 --> 06/27/2006 04:48:33  ---- tsys
+	06/27/2006 04:48:33 --> 06/27/2006 04:52:33  ---- integrate -s 8 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  12.89
+lookup time: 6 27 2006 4:52
+1613+342 is at 43.0 degrees elevation
+LST [hr]=  12.89
+lookup time: 6 27 2006 4:52
+1635+381 is at 38.4 degrees elevation
+---- At least one calibrator is above 20 degrees ----
+
+---- Observing Target Source (Loop = 4) ----
+
+LST [hr]=  12.89
+arp220 is at 51.7 degrees elevation
+	06/27/2006 04:52:33 --> 06/27/2006 04:52:43  ---- observe -s arp220 -r 15:34:57.26 -d +23:30:11.4 -e 2000 -v 0
+	06/27/2006 04:52:43 --> 06/27/2006 04:52:54  ---- tsys
+	06/27/2006 04:52:54 --> 06/27/2006 05:02:54  ---- integrate -s 20 -w
+
+---- Observing Gain Calibrator (Loop = 4) ----
+
+LST [hr]=  13.06
+lookup time: 6 27 2006 5:2
+1635+381 is at 40.4 degrees elevation
+	06/27/2006 05:02:54 --> 06/27/2006 05:03:04  ---- observe -s 1635+381
+	06/27/2006 05:03:04 --> 06/27/2006 05:03:15  ---- tsys
+	06/27/2006 05:03:15 --> 06/27/2006 05:07:15  ---- integrate -s 8 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  13.13
+lookup time: 6 27 2006 5:7
+1613+342 is at 46.1 degrees elevation
+LST [hr]=  13.13
+lookup time: 6 27 2006 5:7
+1635+381 is at 41.3 degrees elevation
+---- At least one calibrator is above 20 degrees ----
+
+---- Observing Target Source (Loop = 4) ----
+
+LST [hr]=  13.13
+arp220 is at 55.2 degrees elevation
+	06/27/2006 05:07:15 --> 06/27/2006 05:07:25  ---- observe -s arp220 -r 15:34:57.26 -d +23:30:11.4 -e 2000 -v 0
+	06/27/2006 05:07:25 --> 06/27/2006 05:07:36  ---- tsys
+	06/27/2006 05:07:36 --> 06/27/2006 05:17:36  ---- integrate -s 20 -w
+LST [hr]=  13.31
+Loop No.= 5
+
+---- Observing Gain Calibrator (Loop = 5) ----
+
+LST [hr]=  13.31
+lookup time: 6 27 2006 5:17
+1613+342 is at 48.2 degrees elevation
+	06/27/2006 05:17:36 --> 06/27/2006 05:17:46  ---- observe -s 1613+342
+	06/27/2006 05:17:46 --> 06/27/2006 05:17:57  ---- tsys
+	06/27/2006 05:17:57 --> 06/27/2006 05:21:57  ---- integrate -s 8 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  13.38
+lookup time: 6 27 2006 5:21
+1613+342 is at 49.0 degrees elevation
+LST [hr]=  13.38
+lookup time: 6 27 2006 5:21
+1635+381 is at 44.1 degrees elevation
+---- At least one calibrator is above 20 degrees ----
+
+---- Observing Target Source (Loop = 5) ----
+
+LST [hr]=  13.38
+arp220 is at 58.4 degrees elevation
+	06/27/2006 05:21:57 --> 06/27/2006 05:22:07  ---- observe -s arp220 -r 15:34:57.26 -d +23:30:11.4 -e 2000 -v 0
+	06/27/2006 05:22:07 --> 06/27/2006 05:22:18  ---- tsys
+	06/27/2006 05:22:18 --> 06/27/2006 05:32:18  ---- integrate -s 20 -w
+
+---- Observing Gain Calibrator (Loop = 5) ----
+
+LST [hr]=  13.55
+lookup time: 6 27 2006 5:32
+1635+381 is at 46.2 degrees elevation
+	06/27/2006 05:32:18 --> 06/27/2006 05:32:28  ---- observe -s 1635+381
+	06/27/2006 05:32:28 --> 06/27/2006 05:32:39  ---- tsys
+	06/27/2006 05:32:39 --> 06/27/2006 05:36:39  ---- integrate -s 8 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  13.62
+lookup time: 6 27 2006 5:36
+1613+342 is at 52.1 degrees elevation
+LST [hr]=  13.62
+lookup time: 6 27 2006 5:36
+1635+381 is at 47.0 degrees elevation
+---- At least one calibrator is above 20 degrees ----
+
+---- Observing Target Source (Loop = 5) ----
+
+LST [hr]=  13.62
+arp220 is at 61.8 degrees elevation
+	06/27/2006 05:36:39 --> 06/27/2006 05:36:49  ---- observe -s arp220 -r 15:34:57.26 -d +23:30:11.4 -e 2000 -v 0
+	06/27/2006 05:36:49 --> 06/27/2006 05:37:00  ---- tsys
+	06/27/2006 05:37:00 --> 06/27/2006 05:47:00  ---- integrate -s 20 -w
+LST [hr]=  13.80
+Loop No.= 6
+
+---- Observing Gain Calibrator (Loop = 6) ----
+
+LST [hr]=  13.80
+lookup time: 6 27 2006 5:47
+1613+342 is at 54.3 degrees elevation
+	06/27/2006 05:47:00 --> 06/27/2006 05:47:10  ---- observe -s 1613+342
+	06/27/2006 05:47:10 --> 06/27/2006 05:47:21  ---- tsys
+	06/27/2006 05:47:21 --> 06/27/2006 05:51:21  ---- integrate -s 8 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  13.87
+lookup time: 6 27 2006 5:51
+1613+342 is at 55.1 degrees elevation
+LST [hr]=  13.87
+lookup time: 6 27 2006 5:51
+1635+381 is at 49.9 degrees elevation
+---- At least one calibrator is above 20 degrees ----
+
+---- Observing Target Source (Loop = 6) ----
+
+LST [hr]=  13.87
+arp220 is at 65.3 degrees elevation
+	06/27/2006 05:51:21 --> 06/27/2006 05:51:31  ---- observe -s arp220 -r 15:34:57.26 -d +23:30:11.4 -e 2000 -v 0
+	06/27/2006 05:51:31 --> 06/27/2006 05:51:42  ---- tsys
+	06/27/2006 05:51:42 --> 06/27/2006 06:01:42  ---- integrate -s 20 -w
+
+---- Observing Gain Calibrator (Loop = 6) ----
+
+LST [hr]=  14.04
+lookup time: 6 27 2006 6:1
+1635+381 is at 51.8 degrees elevation
+	06/27/2006 06:01:42 --> 06/27/2006 06:01:52  ---- observe -s 1635+381
+	06/27/2006 06:01:52 --> 06/27/2006 06:02:03  ---- tsys
+	06/27/2006 06:02:03 --> 06/27/2006 06:06:03  ---- integrate -s 8 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  14.12
+lookup time: 6 27 2006 6:6
+1613+342 is at 58.1 degrees elevation
+LST [hr]=  14.12
+lookup time: 6 27 2006 6:6
+1635+381 is at 52.7 degrees elevation
+---- At least one calibrator is above 20 degrees ----
+
+---- Observing Target Source (Loop = 6) ----
+
+LST [hr]=  14.12
+arp220 is at 68.7 degrees elevation
+	06/27/2006 06:06:03 --> 06/27/2006 06:06:13  ---- observe -s arp220 -r 15:34:57.26 -d +23:30:11.4 -e 2000 -v 0
+	06/27/2006 06:06:13 --> 06/27/2006 06:06:24  ---- tsys
+	06/27/2006 06:06:24 --> 06/27/2006 06:16:24  ---- integrate -s 20 -w
+LST [hr]=  14.29
+Loop No.= 7
+
+---- Observing Gain Calibrator (Loop = 7) ----
+
+LST [hr]=  14.29
+lookup time: 6 27 2006 6:16
+1613+342 is at 60.0 degrees elevation
+	06/27/2006 06:16:24 --> 06/27/2006 06:16:34  ---- observe -s 1613+342
+	06/27/2006 06:16:34 --> 06/27/2006 06:16:45  ---- tsys
+	06/27/2006 06:16:45 --> 06/27/2006 06:20:45  ---- integrate -s 8 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  14.36
+lookup time: 6 27 2006 6:20
+1613+342 is at 60.8 degrees elevation
+LST [hr]=  14.36
+lookup time: 6 27 2006 6:20
+1635+381 is at 55.3 degrees elevation
+---- At least one calibrator is above 20 degrees ----
+
+---- Observing Target Source (Loop = 7) ----
+
+LST [hr]=  14.36
+arp220 is at 71.9 degrees elevation
+	06/27/2006 06:20:45 --> 06/27/2006 06:20:55  ---- observe -s arp220 -r 15:34:57.26 -d +23:30:11.4 -e 2000 -v 0
+	06/27/2006 06:20:55 --> 06/27/2006 06:21:06  ---- tsys
+	06/27/2006 06:21:06 --> 06/27/2006 06:31:06  ---- integrate -s 20 -w
+
+---- Observing Gain Calibrator (Loop = 7) ----
+
+LST [hr]=  14.53
+lookup time: 6 27 2006 6:31
+1635+381 is at 57.3 degrees elevation
+	06/27/2006 06:31:06 --> 06/27/2006 06:31:16  ---- observe -s 1635+381
+	06/27/2006 06:31:16 --> 06/27/2006 06:31:27  ---- tsys
+	06/27/2006 06:31:27 --> 06/27/2006 06:35:27  ---- integrate -s 8 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  14.61
+lookup time: 6 27 2006 6:35
+1613+342 is at 63.6 degrees elevation
+LST [hr]=  14.61
+lookup time: 6 27 2006 6:35
+1635+381 is at 58.0 degrees elevation
+---- At least one calibrator is above 20 degrees ----
+
+---- Observing Target Source (Loop = 7) ----
+
+LST [hr]=  14.61
+arp220 is at 75.3 degrees elevation
+	06/27/2006 06:35:27 --> 06/27/2006 06:35:37  ---- observe -s arp220 -r 15:34:57.26 -d +23:30:11.4 -e 2000 -v 0
+	06/27/2006 06:35:37 --> 06/27/2006 06:35:48  ---- tsys
+	06/27/2006 06:35:48 --> 06/27/2006 06:45:48  ---- integrate -s 20 -w
+LST [hr]=  14.78
+Loop No.= 8
+
+---- Observing Gain Calibrator (Loop = 8) ----
+
+LST [hr]=  14.78
+lookup time: 6 27 2006 6:45
+1613+342 is at 65.5 degrees elevation
+	06/27/2006 06:45:48 --> 06/27/2006 06:45:58  ---- observe -s 1613+342
+	06/27/2006 06:45:58 --> 06/27/2006 06:46:09  ---- tsys
+	06/27/2006 06:46:09 --> 06/27/2006 06:50:09  ---- integrate -s 8 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  14.85
+lookup time: 6 27 2006 6:50
+1613+342 is at 66.3 degrees elevation
+LST [hr]=  14.85
+lookup time: 6 27 2006 6:50
+1635+381 is at 60.6 degrees elevation
+---- At least one calibrator is above 20 degrees ----
+
+---- Observing Target Source (Loop = 8) ----
+
+LST [hr]=  14.85
+arp220 is at 78.7 degrees elevation
+	06/27/2006 06:50:09 --> 06/27/2006 06:50:19  ---- observe -s arp220 -r 15:34:57.26 -d +23:30:11.4 -e 2000 -v 0
+	06/27/2006 06:50:19 --> 06/27/2006 06:50:30  ---- tsys
+	06/27/2006 06:50:30 --> 06/27/2006 07:00:30  ---- integrate -s 20 -w
+
+---- Observing Gain Calibrator (Loop = 8) ----
+
+LST [hr]=  15.03
+lookup time: 6 27 2006 7:0
+1635+381 is at 62.2 degrees elevation
+	06/27/2006 07:00:30 --> 06/27/2006 07:00:40  ---- observe -s 1635+381
+	06/27/2006 07:00:40 --> 06/27/2006 07:00:51  ---- tsys
+	06/27/2006 07:00:51 --> 06/27/2006 07:04:51  ---- integrate -s 8 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  15.10
+lookup time: 6 27 2006 7:4
+1613+342 is at 68.7 degrees elevation
+LST [hr]=  15.10
+lookup time: 6 27 2006 7:4
+1635+381 is at 62.9 degrees elevation
+---- At least one calibrator is above 20 degrees ----
+
+---- Observing Target Source (Loop = 8) ----
+
+LST [hr]=  15.10
+arp220 is at 81.7 degrees elevation
+	06/27/2006 07:04:51 --> 06/27/2006 07:05:01  ---- observe -s arp220 -r 15:34:57.26 -d +23:30:11.4 -e 2000 -v 0
+	06/27/2006 07:05:01 --> 06/27/2006 07:05:12  ---- tsys
+	06/27/2006 07:05:12 --> 06/27/2006 07:15:12  ---- integrate -s 20 -w
+LST [hr]=  15.27
+Loop No.= 9
+
+---- Observing Gain Calibrator (Loop = 9) ----
+
+LST [hr]=  15.27
+lookup time: 6 27 2006 7:15
+1613+342 is at 70.5 degrees elevation
+	06/27/2006 07:15:12 --> 06/27/2006 07:15:22  ---- observe -s 1613+342
+	06/27/2006 07:15:22 --> 06/27/2006 07:15:33  ---- tsys
+	06/27/2006 07:15:33 --> 06/27/2006 07:19:33  ---- integrate -s 8 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  15.34
+lookup time: 6 27 2006 7:19
+1613+342 is at 71.0 degrees elevation
+LST [hr]=  15.34
+lookup time: 6 27 2006 7:19
+1635+381 is at 65.2 degrees elevation
+---- At least one calibrator is above 20 degrees ----
+
+---- Observing Target Source (Loop = 9) ----
+
+LST [hr]=  15.34
+arp220 is at 84.6 degrees elevation
+---- Target Source too high. Going to Transcal ----
+---- Entering a loop until source becomes available ----
+arp220 is at 84.6 degrees elevation
+LST [hr]=  15.34
+LST [hr]=  15.34
+lookup time: 6 27 2006 7:19
+3c279 is at 46.7 degrees elevation
+	06/27/2006 07:19:33 --> 06/27/2006 07:19:43  ---- observe -s 3c279
+	06/27/2006 07:19:43 --> 06/27/2006 07:19:54  ---- tsys
+	06/27/2006 07:19:54 --> 06/27/2006 07:24:54  ---- integrate -s 10 -w
+arp220 is at 84.6 degrees elevation
+LST [hr]=  15.43
+LST [hr]=  15.43
+lookup time: 6 27 2006 7:24
+3c279 is at 45.8 degrees elevation
+	06/27/2006 07:24:54 --> 06/27/2006 07:25:04  ---- observe -s 3c279
+	06/27/2006 07:25:04 --> 06/27/2006 07:25:15  ---- tsys
+	06/27/2006 07:25:15 --> 06/27/2006 07:30:15  ---- integrate -s 10 -w
+arp220 is at 85.4 degrees elevation
+LST [hr]=  15.52
+LST [hr]=  15.52
+lookup time: 6 27 2006 7:30
+3c279 is at 44.5 degrees elevation
+	06/27/2006 07:30:15 --> 06/27/2006 07:30:25  ---- observe -s 3c279
+	06/27/2006 07:30:25 --> 06/27/2006 07:30:36  ---- tsys
+	06/27/2006 07:30:36 --> 06/27/2006 07:35:36  ---- integrate -s 10 -w
+arp220 is at 86.1 degrees elevation
+LST [hr]=  15.61
+LST [hr]=  15.61
+lookup time: 6 27 2006 7:35
+3c279 is at 43.5 degrees elevation
+	06/27/2006 07:35:36 --> 06/27/2006 07:35:46  ---- observe -s 3c279
+	06/27/2006 07:35:46 --> 06/27/2006 07:35:57  ---- tsys
+	06/27/2006 07:35:57 --> 06/27/2006 07:40:57  ---- integrate -s 10 -w
+arp220 is at 86.3 degrees elevation
+LST [hr]=  15.70
+LST [hr]=  15.70
+lookup time: 6 27 2006 7:40
+3c279 is at 42.5 degrees elevation
+	06/27/2006 07:40:57 --> 06/27/2006 07:41:07  ---- observe -s 3c279
+	06/27/2006 07:41:07 --> 06/27/2006 07:41:18  ---- tsys
+	06/27/2006 07:41:18 --> 06/27/2006 07:46:18  ---- integrate -s 10 -w
+arp220 is at 86.2 degrees elevation
+LST [hr]=  15.79
+LST [hr]=  15.79
+lookup time: 6 27 2006 7:46
+3c279 is at 41.2 degrees elevation
+	06/27/2006 07:46:18 --> 06/27/2006 07:46:28  ---- observe -s 3c279
+	06/27/2006 07:46:28 --> 06/27/2006 07:46:39  ---- tsys
+	06/27/2006 07:46:39 --> 06/27/2006 07:51:39  ---- integrate -s 10 -w
+arp220 is at 85.7 degrees elevation
+LST [hr]=  15.88
+LST [hr]=  15.88
+lookup time: 6 27 2006 7:51
+3c279 is at 40.2 degrees elevation
+	06/27/2006 07:51:39 --> 06/27/2006 07:51:49  ---- observe -s 3c279
+	06/27/2006 07:51:49 --> 06/27/2006 07:52:00  ---- tsys
+	06/27/2006 07:52:00 --> 06/27/2006 07:57:00  ---- integrate -s 10 -w
+arp220 is at 85.0 degrees elevation
+LST [hr]=  15.97
+LST [hr]=  15.97
+lookup time: 6 27 2006 7:57
+3c279 is at 38.9 degrees elevation
+	06/27/2006 07:57:00 --> 06/27/2006 07:57:10  ---- observe -s 3c279
+	06/27/2006 07:57:10 --> 06/27/2006 07:57:21  ---- tsys
+	06/27/2006 07:57:21 --> 06/27/2006 08:02:21  ---- integrate -s 10 -w
+arp220 is at 83.9 degrees elevation
+LST [hr]=  16.06
+LST [hr]=  16.06
+lookup time: 6 27 2006 8:2
+3c279 is at 37.8 degrees elevation
+	06/27/2006 08:02:21 --> 06/27/2006 08:02:31  ---- observe -s 3c279
+	06/27/2006 08:02:31 --> 06/27/2006 08:02:42  ---- tsys
+	06/27/2006 08:02:42 --> 06/27/2006 08:07:42  ---- integrate -s 10 -w
+arp220 is at 82.9 degrees elevation
+LST [hr]=  16.15
+Loop No.= 10
+
+---- Observing Gain Calibrator (Loop = 10) ----
+
+LST [hr]=  16.15
+lookup time: 6 27 2006 8:7
+1613+342 is at 75.5 degrees elevation
+	06/27/2006 08:07:42 --> 06/27/2006 08:07:52  ---- observe -s 1613+342
+	06/27/2006 08:07:52 --> 06/27/2006 08:08:03  ---- tsys
+	06/27/2006 08:08:03 --> 06/27/2006 08:12:03  ---- integrate -s 8 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  16.22
+lookup time: 6 27 2006 8:12
+1613+342 is at 75.6 degrees elevation
+LST [hr]=  16.22
+lookup time: 6 27 2006 8:12
+1635+381 is at 71.0 degrees elevation
+---- At least one calibrator is above 20 degrees ----
+
+---- Observing Target Source (Loop = 10) ----
+
+LST [hr]=  16.22
+arp220 is at 80.9 degrees elevation
+	06/27/2006 08:12:03 --> 06/27/2006 08:12:13  ---- observe -s arp220 -r 15:34:57.26 -d +23:30:11.4 -e 2000 -v 0
+	06/27/2006 08:12:13 --> 06/27/2006 08:12:24  ---- tsys
+	06/27/2006 08:12:24 --> 06/27/2006 08:22:24  ---- integrate -s 20 -w
+
+---- Observing Gain Calibrator (Loop = 10) ----
+
+LST [hr]=  16.40
+lookup time: 6 27 2006 8:22
+1635+381 is at 71.4 degrees elevation
+	06/27/2006 08:22:24 --> 06/27/2006 08:22:34  ---- observe -s 1635+381
+	06/27/2006 08:22:34 --> 06/27/2006 08:22:45  ---- tsys
+	06/27/2006 08:22:45 --> 06/27/2006 08:26:45  ---- integrate -s 8 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  16.47
+lookup time: 6 27 2006 8:26
+1613+342 is at 75.4 degrees elevation
+LST [hr]=  16.47
+lookup time: 6 27 2006 8:26
+1635+381 is at 71.6 degrees elevation
+---- At least one calibrator is above 20 degrees ----
+
+---- Observing Target Source (Loop = 10) ----
+
+LST [hr]=  16.47
+arp220 is at 77.8 degrees elevation
+	06/27/2006 08:26:45 --> 06/27/2006 08:26:55  ---- observe -s arp220 -r 15:34:57.26 -d +23:30:11.4 -e 2000 -v 0
+	06/27/2006 08:26:55 --> 06/27/2006 08:27:06  ---- tsys
+	06/27/2006 08:27:06 --> 06/27/2006 08:37:06  ---- integrate -s 20 -w
+LST [hr]=  16.64
+Loop No.= 11
+
+---- Observing Gain Calibrator (Loop = 11) ----
+
+LST [hr]=  16.64
+lookup time: 6 27 2006 8:37
+1613+342 is at 74.8 degrees elevation
+	06/27/2006 08:37:06 --> 06/27/2006 08:37:16  ---- observe -s 1613+342
+	06/27/2006 08:37:16 --> 06/27/2006 08:37:27  ---- tsys
+	06/27/2006 08:37:27 --> 06/27/2006 08:41:27  ---- integrate -s 8 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  16.71
+lookup time: 6 27 2006 8:41
+1613+342 is at 74.5 degrees elevation
+LST [hr]=  16.71
+lookup time: 6 27 2006 8:41
+1635+381 is at 71.7 degrees elevation
+---- At least one calibrator is above 20 degrees ----
+
+---- Observing Target Source (Loop = 11) ----
+
+LST [hr]=  16.71
+arp220 is at 74.4 degrees elevation
+	06/27/2006 08:41:27 --> 06/27/2006 08:41:37  ---- observe -s arp220 -r 15:34:57.26 -d +23:30:11.4 -e 2000 -v 0
+	06/27/2006 08:41:37 --> 06/27/2006 08:41:48  ---- tsys
+	06/27/2006 08:41:48 --> 06/27/2006 08:51:48  ---- integrate -s 20 -w
+
+---- Observing Gain Calibrator (Loop = 11) ----
+
+LST [hr]=  16.89
+lookup time: 6 27 2006 8:51
+1635+381 is at 71.4 degrees elevation
+	06/27/2006 08:51:48 --> 06/27/2006 08:51:58  ---- observe -s 1635+381
+	06/27/2006 08:51:58 --> 06/27/2006 08:52:09  ---- tsys
+	06/27/2006 08:52:09 --> 06/27/2006 08:56:09  ---- integrate -s 8 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  16.96
+lookup time: 6 27 2006 8:56
+1613+342 is at 72.9 degrees elevation
+LST [hr]=  16.96
+lookup time: 6 27 2006 8:56
+1635+381 is at 71.2 degrees elevation
+---- At least one calibrator is above 20 degrees ----
+
+---- Observing Target Source (Loop = 11) ----
+
+LST [hr]=  16.96
+arp220 is at 71.0 degrees elevation
+	06/27/2006 08:56:09 --> 06/27/2006 08:56:19  ---- observe -s arp220 -r 15:34:57.26 -d +23:30:11.4 -e 2000 -v 0
+	06/27/2006 08:56:19 --> 06/27/2006 08:56:30  ---- tsys
+	06/27/2006 08:56:30 --> 06/27/2006 09:06:30  ---- integrate -s 20 -w
+LST [hr]=  17.13
+Loop No.= 12
+
+---- Observing Gain Calibrator (Loop = 12) ----
+
+LST [hr]=  17.13
+lookup time: 6 27 2006 9:6
+1613+342 is at 71.6 degrees elevation
+	06/27/2006 09:06:30 --> 06/27/2006 09:06:40  ---- observe -s 1613+342
+	06/27/2006 09:06:40 --> 06/27/2006 09:06:51  ---- tsys
+	06/27/2006 09:06:51 --> 06/27/2006 09:10:51  ---- integrate -s 8 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  17.20
+lookup time: 6 27 2006 9:10
+1613+342 is at 71.1 degrees elevation
+LST [hr]=  17.20
+lookup time: 6 27 2006 9:10
+1635+381 is at 70.3 degrees elevation
+---- At least one calibrator is above 20 degrees ----
+
+---- Observing Target Source (Loop = 12) ----
+
+LST [hr]=  17.20
+arp220 is at 67.8 degrees elevation
+	06/27/2006 09:10:51 --> 06/27/2006 09:11:01  ---- observe -s arp220 -r 15:34:57.26 -d +23:30:11.4 -e 2000 -v 0
+	06/27/2006 09:11:01 --> 06/27/2006 09:11:12  ---- tsys
+	06/27/2006 09:11:12 --> 06/27/2006 09:21:12  ---- integrate -s 20 -w
+
+---- Observing Gain Calibrator (Loop = 12) ----
+
+LST [hr]=  17.38
+lookup time: 6 27 2006 9:21
+1635+381 is at 69.3 degrees elevation
+	06/27/2006 09:21:12 --> 06/27/2006 09:21:22  ---- observe -s 1635+381
+	06/27/2006 09:21:22 --> 06/27/2006 09:21:33  ---- tsys
+	06/27/2006 09:21:33 --> 06/27/2006 09:25:33  ---- integrate -s 8 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  17.45
+lookup time: 6 27 2006 9:25
+1613+342 is at 68.8 degrees elevation
+LST [hr]=  17.45
+lookup time: 6 27 2006 9:25
+1635+381 is at 68.8 degrees elevation
+---- At least one calibrator is above 20 degrees ----
+
+---- Observing Target Source (Loop = 12) ----
+
+LST [hr]=  17.45
+arp220 is at 64.4 degrees elevation
+	06/27/2006 09:25:33 --> 06/27/2006 09:25:43  ---- observe -s arp220 -r 15:34:57.26 -d +23:30:11.4 -e 2000 -v 0
+	06/27/2006 09:25:43 --> 06/27/2006 09:25:54  ---- tsys
+	06/27/2006 09:25:54 --> 06/27/2006 09:35:54  ---- integrate -s 20 -w
+LST [hr]=  17.62
+Loop No.= 13
+
+---- Observing Gain Calibrator (Loop = 13) ----
+
+LST [hr]=  17.62
+lookup time: 6 27 2006 9:35
+1613+342 is at 67.1 degrees elevation
+	06/27/2006 09:35:54 --> 06/27/2006 09:36:04  ---- observe -s 1613+342
+	06/27/2006 09:36:04 --> 06/27/2006 09:36:15  ---- tsys
+	06/27/2006 09:36:15 --> 06/27/2006 09:40:15  ---- integrate -s 8 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  17.70
+lookup time: 6 27 2006 9:40
+1613+342 is at 66.2 degrees elevation
+LST [hr]=  17.70
+lookup time: 6 27 2006 9:40
+1635+381 is at 67.0 degrees elevation
+---- At least one calibrator is above 20 degrees ----
+
+---- Observing Target Source (Loop = 13) ----
+
+LST [hr]=  17.70
+arp220 is at 60.9 degrees elevation
+	06/27/2006 09:40:15 --> 06/27/2006 09:40:25  ---- observe -s arp220 -r 15:34:57.26 -d +23:30:11.4 -e 2000 -v 0
+	06/27/2006 09:40:25 --> 06/27/2006 09:40:36  ---- tsys
+	06/27/2006 09:40:36 --> 06/27/2006 09:50:36  ---- integrate -s 20 -w
+
+---- Observing Gain Calibrator (Loop = 13) ----
+
+LST [hr]=  17.87
+lookup time: 6 27 2006 9:50
+1635+381 is at 65.7 degrees elevation
+	06/27/2006 09:50:36 --> 06/27/2006 09:50:46  ---- observe -s 1635+381
+	06/27/2006 09:50:46 --> 06/27/2006 09:50:57  ---- tsys
+	06/27/2006 09:50:57 --> 06/27/2006 09:54:57  ---- integrate -s 8 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  17.94
+lookup time: 6 27 2006 9:54
+1613+342 is at 63.7 degrees elevation
+LST [hr]=  17.94
+lookup time: 6 27 2006 9:54
+1635+381 is at 65.1 degrees elevation
+---- At least one calibrator is above 20 degrees ----
+
+---- Observing Target Source (Loop = 13) ----
+
+LST [hr]=  17.94
+arp220 is at 57.7 degrees elevation
+	06/27/2006 09:54:57 --> 06/27/2006 09:55:07  ---- observe -s arp220 -r 15:34:57.26 -d +23:30:11.4 -e 2000 -v 0
+	06/27/2006 09:55:07 --> 06/27/2006 09:55:18  ---- tsys
+	06/27/2006 09:55:18 --> 06/27/2006 10:05:18  ---- integrate -s 20 -w
+LST [hr]=  18.11
+Loop No.= 14
+
+---- Observing Gain Calibrator (Loop = 14) ----
+
+LST [hr]=  18.11
+lookup time: 6 27 2006 10:5
+1613+342 is at 61.6 degrees elevation
+	06/27/2006 10:05:18 --> 06/27/2006 10:05:28  ---- observe -s 1613+342
+	06/27/2006 10:05:28 --> 06/27/2006 10:05:39  ---- tsys
+	06/27/2006 10:05:39 --> 06/27/2006 10:09:39  ---- integrate -s 8 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  18.19
+lookup time: 6 27 2006 10:9
+1613+342 is at 60.8 degrees elevation
+LST [hr]=  18.19
+lookup time: 6 27 2006 10:9
+1635+381 is at 62.8 degrees elevation
+---- At least one calibrator is above 20 degrees ----
+
+---- Observing Target Source (Loop = 14) ----
+
+LST [hr]=  18.19
+arp220 is at 54.3 degrees elevation
+	06/27/2006 10:09:39 --> 06/27/2006 10:09:49  ---- observe -s arp220 -r 15:34:57.26 -d +23:30:11.4 -e 2000 -v 0
+	06/27/2006 10:09:49 --> 06/27/2006 10:10:00  ---- tsys
+	06/27/2006 10:10:00 --> 06/27/2006 10:20:00  ---- integrate -s 20 -w
+
+---- Observing Gain Calibrator (Loop = 14) ----
+
+LST [hr]=  18.36
+lookup time: 6 27 2006 10:20
+1635+381 is at 61.0 degrees elevation
+	06/27/2006 10:20:00 --> 06/27/2006 10:20:10  ---- observe -s 1635+381
+	06/27/2006 10:20:10 --> 06/27/2006 10:20:21  ---- tsys
+	06/27/2006 10:20:21 --> 06/27/2006 10:24:21  ---- integrate -s 8 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  18.43
+lookup time: 6 27 2006 10:24
+1613+342 is at 57.9 degrees elevation
+LST [hr]=  18.43
+lookup time: 6 27 2006 10:24
+1635+381 is at 60.3 degrees elevation
+---- At least one calibrator is above 20 degrees ----
+
+---- Observing Target Source (Loop = 14) ----
+
+LST [hr]=  18.43
+arp220 is at 50.8 degrees elevation
+	06/27/2006 10:24:21 --> 06/27/2006 10:24:31  ---- observe -s arp220 -r 15:34:57.26 -d +23:30:11.4 -e 2000 -v 0
+	06/27/2006 10:24:31 --> 06/27/2006 10:24:42  ---- tsys
+	06/27/2006 10:24:42 --> 06/27/2006 10:34:42  ---- integrate -s 20 -w
+LST [hr]=  18.61
+Loop No.= 15
+
+---- Observing Gain Calibrator (Loop = 15) ----
+
+LST [hr]=  18.61
+lookup time: 6 27 2006 10:34
+1613+342 is at 55.9 degrees elevation
+	06/27/2006 10:34:42 --> 06/27/2006 10:34:52  ---- observe -s 1613+342
+	06/27/2006 10:34:52 --> 06/27/2006 10:35:03  ---- tsys
+	06/27/2006 10:35:03 --> 06/27/2006 10:39:03  ---- integrate -s 8 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  18.68
+lookup time: 6 27 2006 10:39
+1613+342 is at 54.9 degrees elevation
+LST [hr]=  18.68
+lookup time: 6 27 2006 10:39
+1635+381 is at 57.7 degrees elevation
+---- At least one calibrator is above 20 degrees ----
+
+---- Observing Target Source (Loop = 15) ----
+
+LST [hr]=  18.68
+arp220 is at 47.4 degrees elevation
+	06/27/2006 10:39:03 --> 06/27/2006 10:39:13  ---- observe -s arp220 -r 15:34:57.26 -d +23:30:11.4 -e 2000 -v 0
+	06/27/2006 10:39:13 --> 06/27/2006 10:39:24  ---- tsys
+	06/27/2006 10:39:24 --> 06/27/2006 10:49:24  ---- integrate -s 20 -w
+
+---- Observing Gain Calibrator (Loop = 15) ----
+
+LST [hr]=  18.85
+lookup time: 6 27 2006 10:49
+1635+381 is at 55.9 degrees elevation
+	06/27/2006 10:49:24 --> 06/27/2006 10:49:34  ---- observe -s 1635+381
+	06/27/2006 10:49:34 --> 06/27/2006 10:49:45  ---- tsys
+	06/27/2006 10:49:45 --> 06/27/2006 10:53:45  ---- integrate -s 8 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  18.92
+lookup time: 6 27 2006 10:53
+1613+342 is at 52.1 degrees elevation
+LST [hr]=  18.92
+lookup time: 6 27 2006 10:53
+1635+381 is at 55.2 degrees elevation
+---- At least one calibrator is above 20 degrees ----
+
+---- Observing Target Source (Loop = 15) ----
+
+LST [hr]=  18.92
+arp220 is at 44.2 degrees elevation
+	06/27/2006 10:53:45 --> 06/27/2006 10:53:55  ---- observe -s arp220 -r 15:34:57.26 -d +23:30:11.4 -e 2000 -v 0
+	06/27/2006 10:53:55 --> 06/27/2006 10:54:06  ---- tsys
+	06/27/2006 10:54:06 --> 06/27/2006 11:04:06  ---- integrate -s 20 -w
+LST [hr]=  19.10
+Loop No.= 16
+
+---- Observing Gain Calibrator (Loop = 16) ----
+
+LST [hr]=  19.10
+lookup time: 6 27 2006 11:4
+1613+342 is at 49.9 degrees elevation
+	06/27/2006 11:04:06 --> 06/27/2006 11:04:16  ---- observe -s 1613+342
+	06/27/2006 11:04:16 --> 06/27/2006 11:04:27  ---- tsys
+	06/27/2006 11:04:27 --> 06/27/2006 11:08:27  ---- integrate -s 8 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  19.17
+lookup time: 6 27 2006 11:8
+1613+342 is at 49.1 degrees elevation
+LST [hr]=  19.17
+lookup time: 6 27 2006 11:8
+1635+381 is at 52.4 degrees elevation
+---- At least one calibrator is above 20 degrees ----
+
+---- Observing Target Source (Loop = 16) ----
+
+LST [hr]=  19.17
+arp220 is at 40.8 degrees elevation
+	06/27/2006 11:08:27 --> 06/27/2006 11:08:37  ---- observe -s arp220 -r 15:34:57.26 -d +23:30:11.4 -e 2000 -v 0
+	06/27/2006 11:08:37 --> 06/27/2006 11:08:48  ---- tsys
+	06/27/2006 11:08:48 --> 06/27/2006 11:18:48  ---- integrate -s 20 -w
+
+---- Observing Gain Calibrator (Loop = 16) ----
+
+LST [hr]=  19.34
+lookup time: 6 27 2006 11:18
+1635+381 is at 50.5 degrees elevation
+	06/27/2006 11:18:48 --> 06/27/2006 11:18:58  ---- observe -s 1635+381
+	06/27/2006 11:18:58 --> 06/27/2006 11:19:09  ---- tsys
+	06/27/2006 11:19:09 --> 06/27/2006 11:23:09  ---- integrate -s 8 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  19.42
+lookup time: 6 27 2006 11:23
+1613+342 is at 46.0 degrees elevation
+LST [hr]=  19.42
+lookup time: 6 27 2006 11:23
+1635+381 is at 49.5 degrees elevation
+---- At least one calibrator is above 20 degrees ----
+
+---- Observing Target Source (Loop = 16) ----
+
+LST [hr]=  19.42
+arp220 is at 37.3 degrees elevation
+	06/27/2006 11:23:09 --> 06/27/2006 11:23:19  ---- observe -s arp220 -r 15:34:57.26 -d +23:30:11.4 -e 2000 -v 0
+	06/27/2006 11:23:19 --> 06/27/2006 11:23:30  ---- tsys
+	06/27/2006 11:23:30 --> 06/27/2006 11:33:30  ---- integrate -s 20 -w
+LST [hr]=  19.59
+Loop No.= 17
+
+---- Observing Gain Calibrator (Loop = 17) ----
+
+LST [hr]=  19.59
+lookup time: 6 27 2006 11:33
+1613+342 is at 43.9 degrees elevation
+	06/27/2006 11:33:30 --> 06/27/2006 11:33:40  ---- observe -s 1613+342
+	06/27/2006 11:33:40 --> 06/27/2006 11:33:51  ---- tsys
+	06/27/2006 11:33:51 --> 06/27/2006 11:37:51  ---- integrate -s 8 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  19.66
+lookup time: 6 27 2006 11:37
+1613+342 is at 43.1 degrees elevation
+LST [hr]=  19.66
+lookup time: 6 27 2006 11:37
+1635+381 is at 46.9 degrees elevation
+---- At least one calibrator is above 20 degrees ----
+
+---- Observing Target Source (Loop = 17) ----
+
+LST [hr]=  19.66
+arp220 is at 34.1 degrees elevation
+	06/27/2006 11:37:51 --> 06/27/2006 11:38:01  ---- observe -s arp220 -r 15:34:57.26 -d +23:30:11.4 -e 2000 -v 0
+	06/27/2006 11:38:01 --> 06/27/2006 11:38:12  ---- tsys
+	06/27/2006 11:38:12 --> 06/27/2006 11:48:12  ---- integrate -s 20 -w
+
+---- Observing Gain Calibrator (Loop = 17) ----
+
+LST [hr]=  19.83
+lookup time: 6 27 2006 11:48
+1635+381 is at 44.7 degrees elevation
+	06/27/2006 11:48:12 --> 06/27/2006 11:48:22  ---- observe -s 1635+381
+	06/27/2006 11:48:22 --> 06/27/2006 11:48:33  ---- tsys
+	06/27/2006 11:48:33 --> 06/27/2006 11:52:33  ---- integrate -s 8 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  19.91
+lookup time: 6 27 2006 11:52
+1613+342 is at 40.0 degrees elevation
+LST [hr]=  19.91
+lookup time: 6 27 2006 11:52
+1635+381 is at 43.9 degrees elevation
+---- At least one calibrator is above 20 degrees ----
+
+---- Observing Target Source (Loop = 17) ----
+
+LST [hr]=  19.91
+arp220 is at 30.7 degrees elevation
+	06/27/2006 11:52:33 --> 06/27/2006 11:52:43  ---- observe -s arp220 -r 15:34:57.26 -d +23:30:11.4 -e 2000 -v 0
+	06/27/2006 11:52:43 --> 06/27/2006 11:52:54  ---- tsys
+	06/27/2006 11:52:54 --> 06/27/2006 12:02:54  ---- integrate -s 20 -w
+LST [hr]=  20.08
+Loop No.= 18
+
+---- Observing Gain Calibrator (Loop = 18) ----
+
+LST [hr]=  20.08
+lookup time: 6 27 2006 12:2
+1613+342 is at 37.9 degrees elevation
+	06/27/2006 12:02:54 --> 06/27/2006 12:03:04  ---- observe -s 1613+342
+	06/27/2006 12:03:04 --> 06/27/2006 12:03:15  ---- tsys
+	06/27/2006 12:03:15 --> 06/27/2006 12:07:15  ---- integrate -s 8 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  20.15
+lookup time: 6 27 2006 12:7
+1613+342 is at 36.9 degrees elevation
+LST [hr]=  20.15
+lookup time: 6 27 2006 12:7
+1635+381 is at 41.0 degrees elevation
+---- At least one calibrator is above 20 degrees ----
+
+---- Observing Target Source (Loop = 18) ----
+
+LST [hr]=  20.15
+arp220 is at 27.4 degrees elevation
+	06/27/2006 12:07:15 --> 06/27/2006 12:07:25  ---- observe -s arp220 -r 15:34:57.26 -d +23:30:11.4 -e 2000 -v 0
+	06/27/2006 12:07:25 --> 06/27/2006 12:07:36  ---- tsys
+	06/27/2006 12:07:36 --> 06/27/2006 12:17:36  ---- integrate -s 20 -w
+
+---- Observing Gain Calibrator (Loop = 18) ----
+
+LST [hr]=  20.33
+lookup time: 6 27 2006 12:17
+1635+381 is at 39.0 degrees elevation
+	06/27/2006 12:17:36 --> 06/27/2006 12:17:46  ---- observe -s 1635+381
+	06/27/2006 12:17:46 --> 06/27/2006 12:17:57  ---- tsys
+	06/27/2006 12:17:57 --> 06/27/2006 12:21:57  ---- integrate -s 8 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  20.40
+lookup time: 6 27 2006 12:21
+1613+342 is at 34.0 degrees elevation
+LST [hr]=  20.40
+lookup time: 6 27 2006 12:21
+1635+381 is at 38.3 degrees elevation
+---- At least one calibrator is above 20 degrees ----
+
+---- Observing Target Source (Loop = 18) ----
+
+LST [hr]=  20.40
+arp220 is at 24.2 degrees elevation
+	06/27/2006 12:21:57 --> 06/27/2006 12:22:07  ---- observe -s arp220 -r 15:34:57.26 -d +23:30:11.4 -e 2000 -v 0
+	06/27/2006 12:22:07 --> 06/27/2006 12:22:18  ---- tsys
+	06/27/2006 12:22:18 --> 06/27/2006 12:32:18  ---- integrate -s 20 -w
+LST [hr]=  20.57
+Loop No.= 19
+
+---- Observing Gain Calibrator (Loop = 19) ----
+
+LST [hr]=  20.57
+lookup time: 6 27 2006 12:32
+1613+342 is at 31.7 degrees elevation
+	06/27/2006 12:32:18 --> 06/27/2006 12:32:28  ---- observe -s 1613+342
+	06/27/2006 12:32:28 --> 06/27/2006 12:32:39  ---- tsys
+	06/27/2006 12:32:39 --> 06/27/2006 12:36:39  ---- integrate -s 8 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  20.64
+lookup time: 6 27 2006 12:36
+1613+342 is at 30.9 degrees elevation
+LST [hr]=  20.64
+lookup time: 6 27 2006 12:36
+1635+381 is at 35.3 degrees elevation
+---- At least one calibrator is above 20 degrees ----
+
+---- Observing Target Source (Loop = 19) ----
+
+LST [hr]=  20.64
+arp220 is at 20.8 degrees elevation
+	06/27/2006 12:36:39 --> 06/27/2006 12:36:49  ---- observe -s arp220 -r 15:34:57.26 -d +23:30:11.4 -e 2000 -v 0
+	06/27/2006 12:36:49 --> 06/27/2006 12:37:00  ---- tsys
+	06/27/2006 12:37:00 --> 06/27/2006 12:47:00  ---- integrate -s 20 -w
+
+---- Observing Gain Calibrator (Loop = 19) ----
+
+LST [hr]=  20.82
+lookup time: 6 27 2006 12:47
+1635+381 is at 33.1 degrees elevation
+	06/27/2006 12:47:00 --> 06/27/2006 12:47:10  ---- observe -s 1635+381
+	06/27/2006 12:47:10 --> 06/27/2006 12:47:21  ---- tsys
+	06/27/2006 12:47:21 --> 06/27/2006 12:51:21  ---- integrate -s 8 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  20.89
+lookup time: 6 27 2006 12:51
+1613+342 is at 27.8 degrees elevation
+LST [hr]=  20.89
+lookup time: 6 27 2006 12:51
+1635+381 is at 32.3 degrees elevation
+---- At least one calibrator is above 20 degrees ----
+
+---- Observing Target Source (Loop = 19) ----
+
+LST [hr]=  20.89
+arp220 is at 17.5 degrees elevation
+	06/27/2006 12:51:21 --> 06/27/2006 12:51:31  ---- observe -s arp220 -r 15:34:57.26 -d +23:30:11.4 -e 2000 -v 0
+	06/27/2006 12:51:31 --> 06/27/2006 12:51:42  ---- tsys
+	06/27/2006 12:51:42 --> 06/27/2006 13:01:42  ---- integrate -s 20 -w
+LST [hr]=  21.06
+Loop No.= 20
+
+---- Observing Gain Calibrator (Loop = 20) ----
+
+LST [hr]=  21.06
+lookup time: 6 27 2006 13:1
+1613+342 is at 25.7 degrees elevation
+	06/27/2006 13:01:42 --> 06/27/2006 13:01:52  ---- observe -s 1613+342
+	06/27/2006 13:01:52 --> 06/27/2006 13:02:03  ---- tsys
+	06/27/2006 13:02:03 --> 06/27/2006 13:06:03  ---- integrate -s 8 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  21.14
+lookup time: 6 27 2006 13:6
+1613+342 is at 24.7 degrees elevation
+LST [hr]=  21.14
+lookup time: 6 27 2006 13:6
+1635+381 is at 29.4 degrees elevation
+---- At least one calibrator is above 20 degrees ----
+
+---- Observing Target Source (Loop = 20) ----
+
+LST [hr]=  21.14
+arp220 is at 14.2 degrees elevation
+
+##########################
+# Final Gain Calibration #
+##########################
+
+LST [hr]=  21.14
+lookup time: 6 27 2006 13:6
+1613+342 is at 24.7 degrees elevation
+	06/27/2006 13:06:03 --> 06/27/2006 13:06:13  ---- observe -s 1613+342
+	06/27/2006 13:06:13 --> 06/27/2006 13:06:24  ---- tsys
+	06/27/2006 13:06:24 --> 06/27/2006 13:10:24  ---- integrate -s 8 -w
+LST [hr]=  21.21
+lookup time: 6 27 2006 13:10
+1635+381 is at 28.6 degrees elevation
+	06/27/2006 13:10:24 --> 06/27/2006 13:10:34  ---- observe -s 1635+381
+	06/27/2006 13:10:34 --> 06/27/2006 13:10:45  ---- tsys
+	06/27/2006 13:10:45 --> 06/27/2006 13:14:45  ---- integrate -s 8 -w
+
+#################################
+# Flux and Bandpass Calibration #
+#################################
+
+LST [hr]=  21.28
+lookup time: 6 27 2006 13:14
+uranus is at 51.9 degrees elevation
+
+---- Observing uranus. ----
+
+LST [hr]=  21.28
+lookup time: 6 27 2006 13:14
+uranus is at 51.9 degrees elevation
+	06/27/2006 13:14:45 --> 06/27/2006 13:14:55  ---- observe -s uranus
+	06/27/2006 13:14:55 --> 06/27/2006 13:15:06  ---- tsys
+	06/27/2006 13:15:06 --> 06/27/2006 13:20:06  ---- integrate -s 10 -w
+Finished 10/90 on uranus.
+LST [hr]=  21.37
+lookup time: 6 27 2006 13:20
+uranus is at 53.0 degrees elevation
+	06/27/2006 13:20:06 --> 06/27/2006 13:20:16  ---- observe -s uranus
+	06/27/2006 13:20:16 --> 06/27/2006 13:25:16  ---- integrate -s 10 -w
+Finished 20/90 on uranus.
+LST [hr]=  21.46
+lookup time: 6 27 2006 13:25
+uranus is at 53.8 degrees elevation
+	06/27/2006 13:25:16 --> 06/27/2006 13:25:26  ---- observe -s uranus
+	06/27/2006 13:25:26 --> 06/27/2006 13:30:26  ---- integrate -s 10 -w
+Finished 30/90 on uranus.
+LST [hr]=  21.54
+lookup time: 6 27 2006 13:30
+uranus is at 54.7 degrees elevation
+	06/27/2006 13:30:26 --> 06/27/2006 13:30:36  ---- observe -s uranus
+	06/27/2006 13:30:36 --> 06/27/2006 13:35:36  ---- integrate -s 10 -w
+Finished 40/90 on uranus.
+LST [hr]=  21.63
+lookup time: 6 27 2006 13:35
+uranus is at 55.5 degrees elevation
+	06/27/2006 13:35:36 --> 06/27/2006 13:35:46  ---- observe -s uranus
+	06/27/2006 13:35:46 --> 06/27/2006 13:40:46  ---- integrate -s 10 -w
+Finished 50/90 on uranus.
+LST [hr]=  21.72
+lookup time: 6 27 2006 13:40
+uranus is at 56.2 degrees elevation
+	06/27/2006 13:40:46 --> 06/27/2006 13:40:56  ---- observe -s uranus
+	06/27/2006 13:40:56 --> 06/27/2006 13:45:56  ---- integrate -s 10 -w
+Finished 60/90 on uranus.
+LST [hr]=  21.80
+lookup time: 6 27 2006 13:45
+uranus is at 57.0 degrees elevation
+	06/27/2006 13:45:56 --> 06/27/2006 13:46:06  ---- observe -s uranus
+	06/27/2006 13:46:06 --> 06/27/2006 13:51:06  ---- integrate -s 10 -w
+Finished 70/90 on uranus.
+LST [hr]=  21.89
+lookup time: 6 27 2006 13:51
+uranus is at 57.8 degrees elevation
+	06/27/2006 13:51:06 --> 06/27/2006 13:51:16  ---- observe -s uranus
+	06/27/2006 13:51:16 --> 06/27/2006 13:56:16  ---- integrate -s 10 -w
+Finished 80/90 on uranus.
+LST [hr]=  21.97
+lookup time: 6 27 2006 13:56
+uranus is at 58.5 degrees elevation
+	06/27/2006 13:56:16 --> 06/27/2006 13:56:26  ---- observe -s uranus
+	06/27/2006 13:56:26 --> 06/27/2006 14:01:26  ---- integrate -s 10 -w
+Finished 90/90 on uranus.
+LST [hr]=  22.06
+lookup time: 6 27 2006 14:1
+1924-292 is at 28.2 degrees elevation
+
+----  Observing 1924-292. ----
+
+LST [hr]=  22.06
+lookup time: 6 27 2006 14:1
+1924-292 is at 28.2 degrees elevation
+	06/27/2006 14:01:26 --> 06/27/2006 14:01:36  ---- observe -s 1924-292
+	06/27/2006 14:01:36 --> 06/27/2006 14:01:47  ---- tsys
+	06/27/2006 14:01:47 --> 06/27/2006 14:06:47  ---- integrate -s 10 -w
+Finished 10/120 on 1924-292.
+LST [hr]=  22.15
+lookup time: 6 27 2006 14:6
+1924-292 is at 27.5 degrees elevation
+	06/27/2006 14:06:47 --> 06/27/2006 14:06:57  ---- observe -s 1924-292
+	06/27/2006 14:06:57 --> 06/27/2006 14:11:57  ---- integrate -s 10 -w
+Finished 20/120 on 1924-292.
+LST [hr]=  22.24
+lookup time: 6 27 2006 14:11
+1924-292 is at 26.7 degrees elevation
+	06/27/2006 14:11:57 --> 06/27/2006 14:12:07  ---- observe -s 1924-292
+	06/27/2006 14:12:07 --> 06/27/2006 14:17:07  ---- integrate -s 10 -w
+Finished 30/120 on 1924-292.
+LST [hr]=  22.32
+lookup time: 6 27 2006 14:17
+1924-292 is at 25.8 degrees elevation
+	06/27/2006 14:17:07 --> 06/27/2006 14:17:17  ---- observe -s 1924-292
+	06/27/2006 14:17:17 --> 06/27/2006 14:22:17  ---- integrate -s 10 -w
+Finished 40/120 on 1924-292.
+LST [hr]=  22.41
+lookup time: 6 27 2006 14:22
+1924-292 is at 25.0 degrees elevation
+	06/27/2006 14:22:17 --> 06/27/2006 14:22:27  ---- observe -s 1924-292
+	06/27/2006 14:22:27 --> 06/27/2006 14:27:27  ---- integrate -s 10 -w
+Finished 50/120 on 1924-292.
+LST [hr]=  22.50
+lookup time: 6 27 2006 14:27
+1924-292 is at 24.2 degrees elevation
+	06/27/2006 14:27:27 --> 06/27/2006 14:27:37  ---- observe -s 1924-292
+	06/27/2006 14:27:37 --> 06/27/2006 14:32:37  ---- integrate -s 10 -w
+Finished 60/120 on 1924-292.
+LST [hr]=  22.58
+lookup time: 6 27 2006 14:32
+1924-292 is at 23.4 degrees elevation
+	06/27/2006 14:32:37 --> 06/27/2006 14:32:47  ---- observe -s 1924-292
+	06/27/2006 14:32:47 --> 06/27/2006 14:37:47  ---- integrate -s 10 -w
+Finished 70/120 on 1924-292.
+LST [hr]=  22.67
+lookup time: 6 27 2006 14:37
+1924-292 is at 22.6 degrees elevation
+	06/27/2006 14:37:47 --> 06/27/2006 14:37:57  ---- observe -s 1924-292
+	06/27/2006 14:37:57 --> 06/27/2006 14:42:57  ---- integrate -s 10 -w
+Finished 80/120 on 1924-292.
+LST [hr]=  22.75
+lookup time: 6 27 2006 14:42
+1924-292 is at 21.7 degrees elevation
+	06/27/2006 14:42:57 --> 06/27/2006 14:43:07  ---- observe -s 1924-292
+	06/27/2006 14:43:07 --> 06/27/2006 14:48:07  ---- integrate -s 10 -w
+Finished 90/120 on 1924-292.
+LST [hr]=  22.84
+lookup time: 6 27 2006 14:48
+1924-292 is at 20.7 degrees elevation
+	06/27/2006 14:48:07 --> 06/27/2006 14:48:17  ---- observe -s 1924-292
+	06/27/2006 14:48:17 --> 06/27/2006 14:53:17  ---- integrate -s 10 -w
+Finished 100/120 on 1924-292.
+LST [hr]=  22.93
+lookup time: 6 27 2006 14:53
+1924-292 is at 19.8 degrees elevation
+	06/27/2006 14:53:17 --> 06/27/2006 14:53:27  ---- observe -s 1924-292
+	06/27/2006 14:53:27 --> 06/27/2006 14:58:27  ---- integrate -s 10 -w
+Finished 110/120 on 1924-292.
+LST [hr]=  23.01
+lookup time: 6 27 2006 14:58
+1924-292 is at 19.0 degrees elevation
+	06/27/2006 14:58:27 --> 06/27/2006 14:58:37  ---- observe -s 1924-292
+	06/27/2006 14:58:37 --> 06/27/2006 15:03:37  ---- integrate -s 10 -w
+Finished 120/120 on 1924-292.
+----- Congratulations!  This is the end of the script.  -----

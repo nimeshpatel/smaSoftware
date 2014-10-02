@@ -1,0 +1,24 @@
+ Data source:             051018_2225.dip6
+ Antenna:                 6
+ Skydip date/time:        051018_2225
+ Frequency (GHz):           270.
+ Number of sky voltages:   70
+ Minimum airmass:           1.01542664
+ Maximum airmass:           3.5005219
+ Minimum voltage:           0.814999998
+ Maximum voltage:           1.09099996
+  
+ Hot load voltage:          1.73360801
+ Hot load temperature:      290.40799
+ Cold load voltage:         0.836731017
+ Cold load temperature:     77.
+ Bias voltage:              0.
+  
+ Receiver Y-factor:         2.07188201
+ Receiver temperature:      128.269501
+ Fit (linear,nonlinear):     LINEAR
+ Forward effic. (eta_l):    0.905945659  +/-  0.00321624731
+   Spillover temperature:   26.7093067  +/-  0.913341522
+ T(hot) - T(atmosphere):    16.8111401  +/-  6.17088509
+ Zenith opacity:            0.159219906  +/-  0.00550086284
+  

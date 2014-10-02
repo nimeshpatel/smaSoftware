@@ -1,0 +1,850 @@
+initializing.....
+Not running on hal9000, entering simulation mode.
+nants = 8
+radio
+	09/26/2014 06:30:00 --> 09/26/2014 06:30:00  ---- radio
+integrate -t 30
+	09/26/2014 06:30:00 --> 09/26/2014 06:30:00  ---- integrate -t 30
+project -r -p 'Ren-Shiang Sung' -d '2014A-A008'
+	09/26/2014 06:30:00 --> 09/26/2014 06:30:00  ---- project -r -p 'Ren-Shiang Sung' -d '2014A-A008'
+----- initialization done, starting script -----
+----- initial flux and bandpass calibration -----
+radecoff -r 0 -d 0
+	09/26/2014 06:30:00 --> 09/26/2014 06:30:00  ---- radecoff -r 0 -d 0
+Checking elevation of Bandpass Cal 3c454.3...
+LST [hr]=  20.50
+lookup time: 9 26 2014 6:30
+3c454.3 is at 55.0147 degrees elevation
+
+###########################
+# BANDPASS Calibration    #
+###########################
+
+----  Observing bpass0. ----
+
+LST [hr]=  20.50
+lookup time: 9 26 2014 6:30
+3c454.3 is at 55.0147 degrees elevation
+observe -s 3c454.3 -t bandpass
+	09/26/2014 06:30:00 --> 09/26/2014 06:30:10  ---- observe -s 3c454.3 -t bandpass
+tsys
+integrate -s 10 -t 30 -w
+	09/26/2014 06:30:10 --> 09/26/2014 06:35:10  ---- integrate -s 10 -t 30 -w
+Finished 10/240 on 3c454.3.
+LST [hr]=  20.59
+lookup time: 9 26 2014 6:35
+3c454.3 is at 56.1939 degrees elevation
+observe -s 3c454.3 -t bandpass
+	09/26/2014 06:35:10 --> 09/26/2014 06:35:20  ---- observe -s 3c454.3 -t bandpass
+integrate -s 10 -t 30 -w
+	09/26/2014 06:35:20 --> 09/26/2014 06:40:20  ---- integrate -s 10 -t 30 -w
+Finished 20/240 on 3c454.3.
+LST [hr]=  20.67
+lookup time: 9 26 2014 6:40
+3c454.3 is at 57.3730 degrees elevation
+observe -s 3c454.3 -t bandpass
+	09/26/2014 06:40:20 --> 09/26/2014 06:40:30  ---- observe -s 3c454.3 -t bandpass
+integrate -s 10 -t 30 -w
+	09/26/2014 06:40:30 --> 09/26/2014 06:45:30  ---- integrate -s 10 -t 30 -w
+Finished 30/240 on 3c454.3.
+LST [hr]=  20.76
+lookup time: 9 26 2014 6:45
+3c454.3 is at 58.5520 degrees elevation
+observe -s 3c454.3 -t bandpass
+	09/26/2014 06:45:30 --> 09/26/2014 06:45:40  ---- observe -s 3c454.3 -t bandpass
+integrate -s 10 -t 30 -w
+	09/26/2014 06:45:40 --> 09/26/2014 06:50:40  ---- integrate -s 10 -t 30 -w
+Finished 40/240 on 3c454.3.
+LST [hr]=  20.85
+lookup time: 9 26 2014 6:50
+3c454.3 is at 59.7308 degrees elevation
+observe -s 3c454.3 -t bandpass
+	09/26/2014 06:50:40 --> 09/26/2014 06:50:50  ---- observe -s 3c454.3 -t bandpass
+integrate -s 10 -t 30 -w
+	09/26/2014 06:50:50 --> 09/26/2014 06:55:50  ---- integrate -s 10 -t 30 -w
+Finished 50/240 on 3c454.3.
+LST [hr]=  20.93
+lookup time: 9 26 2014 6:55
+3c454.3 is at 60.9093 degrees elevation
+observe -s 3c454.3 -t bandpass
+	09/26/2014 06:55:50 --> 09/26/2014 06:56:00  ---- observe -s 3c454.3 -t bandpass
+integrate -s 10 -t 30 -w
+	09/26/2014 06:56:00 --> 09/26/2014 07:01:00  ---- integrate -s 10 -t 30 -w
+Finished 60/240 on 3c454.3.
+LST [hr]=  21.02
+lookup time: 9 26 2014 7:1
+3c454.3 is at 62.3230 degrees elevation
+observe -s 3c454.3 -t bandpass
+	09/26/2014 07:01:00 --> 09/26/2014 07:01:10  ---- observe -s 3c454.3 -t bandpass
+integrate -s 10 -t 30 -w
+	09/26/2014 07:01:10 --> 09/26/2014 07:06:10  ---- integrate -s 10 -t 30 -w
+Finished 70/240 on 3c454.3.
+LST [hr]=  21.10
+lookup time: 9 26 2014 7:6
+3c454.3 is at 63.5005 degrees elevation
+observe -s 3c454.3 -t bandpass
+	09/26/2014 07:06:10 --> 09/26/2014 07:06:20  ---- observe -s 3c454.3 -t bandpass
+integrate -s 10 -t 30 -w
+	09/26/2014 07:06:20 --> 09/26/2014 07:11:20  ---- integrate -s 10 -t 30 -w
+Finished 80/240 on 3c454.3.
+LST [hr]=  21.19
+lookup time: 9 26 2014 7:11
+3c454.3 is at 64.6774 degrees elevation
+observe -s 3c454.3 -t bandpass
+	09/26/2014 07:11:20 --> 09/26/2014 07:11:30  ---- observe -s 3c454.3 -t bandpass
+integrate -s 10 -t 30 -w
+	09/26/2014 07:11:30 --> 09/26/2014 07:16:30  ---- integrate -s 10 -t 30 -w
+Finished 90/240 on 3c454.3.
+LST [hr]=  21.28
+lookup time: 9 26 2014 7:16
+3c454.3 is at 65.8534 degrees elevation
+observe -s 3c454.3 -t bandpass
+	09/26/2014 07:16:30 --> 09/26/2014 07:16:40  ---- observe -s 3c454.3 -t bandpass
+integrate -s 10 -t 30 -w
+	09/26/2014 07:16:40 --> 09/26/2014 07:21:40  ---- integrate -s 10 -t 30 -w
+Finished 100/240 on 3c454.3.
+LST [hr]=  21.36
+lookup time: 9 26 2014 7:21
+3c454.3 is at 67.0284 degrees elevation
+observe -s 3c454.3 -t bandpass
+	09/26/2014 07:21:40 --> 09/26/2014 07:21:50  ---- observe -s 3c454.3 -t bandpass
+integrate -s 10 -t 30 -w
+	09/26/2014 07:21:50 --> 09/26/2014 07:26:50  ---- integrate -s 10 -t 30 -w
+Finished 110/240 on 3c454.3.
+LST [hr]=  21.45
+lookup time: 9 26 2014 7:26
+3c454.3 is at 68.2022 degrees elevation
+observe -s 3c454.3 -t bandpass
+	09/26/2014 07:26:50 --> 09/26/2014 07:27:00  ---- observe -s 3c454.3 -t bandpass
+integrate -s 10 -t 30 -w
+	09/26/2014 07:27:00 --> 09/26/2014 07:32:00  ---- integrate -s 10 -t 30 -w
+Finished 120/240 on 3c454.3.
+LST [hr]=  21.54
+lookup time: 9 26 2014 7:32
+3c454.3 is at 69.6087 degrees elevation
+observe -s 3c454.3 -t bandpass
+	09/26/2014 07:32:00 --> 09/26/2014 07:32:10  ---- observe -s 3c454.3 -t bandpass
+integrate -s 10 -t 30 -w
+	09/26/2014 07:32:10 --> 09/26/2014 07:37:10  ---- integrate -s 10 -t 30 -w
+Finished 130/240 on 3c454.3.
+LST [hr]=  21.62
+lookup time: 9 26 2014 7:37
+3c454.3 is at 70.7787 degrees elevation
+observe -s 3c454.3 -t bandpass
+	09/26/2014 07:37:10 --> 09/26/2014 07:37:20  ---- observe -s 3c454.3 -t bandpass
+integrate -s 10 -t 30 -w
+	09/26/2014 07:37:20 --> 09/26/2014 07:42:20  ---- integrate -s 10 -t 30 -w
+Finished 140/240 on 3c454.3.
+LST [hr]=  21.71
+lookup time: 9 26 2014 7:42
+3c454.3 is at 71.9463 degrees elevation
+observe -s 3c454.3 -t bandpass
+	09/26/2014 07:42:20 --> 09/26/2014 07:42:30  ---- observe -s 3c454.3 -t bandpass
+integrate -s 10 -t 30 -w
+	09/26/2014 07:42:30 --> 09/26/2014 07:47:30  ---- integrate -s 10 -t 30 -w
+Finished 150/240 on 3c454.3.
+LST [hr]=  21.80
+lookup time: 9 26 2014 7:47
+3c454.3 is at 73.1111 degrees elevation
+observe -s 3c454.3 -t bandpass
+	09/26/2014 07:47:30 --> 09/26/2014 07:47:40  ---- observe -s 3c454.3 -t bandpass
+integrate -s 10 -t 30 -w
+	09/26/2014 07:47:40 --> 09/26/2014 07:52:40  ---- integrate -s 10 -t 30 -w
+Finished 160/240 on 3c454.3.
+LST [hr]=  21.88
+lookup time: 9 26 2014 7:52
+3c454.3 is at 74.2722 degrees elevation
+observe -s 3c454.3 -t bandpass
+	09/26/2014 07:52:40 --> 09/26/2014 07:52:50  ---- observe -s 3c454.3 -t bandpass
+integrate -s 10 -t 30 -w
+	09/26/2014 07:52:50 --> 09/26/2014 07:57:50  ---- integrate -s 10 -t 30 -w
+Finished 170/240 on 3c454.3.
+LST [hr]=  21.97
+lookup time: 9 26 2014 7:57
+3c454.3 is at 75.4287 degrees elevation
+observe -s 3c454.3 -t bandpass
+	09/26/2014 07:57:50 --> 09/26/2014 07:58:00  ---- observe -s 3c454.3 -t bandpass
+integrate -s 10 -t 30 -w
+	09/26/2014 07:58:00 --> 09/26/2014 08:03:00  ---- integrate -s 10 -t 30 -w
+Finished 180/240 on 3c454.3.
+LST [hr]=  22.05
+lookup time: 9 26 2014 8:3
+3c454.3 is at 76.8088 degrees elevation
+observe -s 3c454.3 -t bandpass
+	09/26/2014 08:03:00 --> 09/26/2014 08:03:10  ---- observe -s 3c454.3 -t bandpass
+integrate -s 10 -t 30 -w
+	09/26/2014 08:03:10 --> 09/26/2014 08:08:10  ---- integrate -s 10 -t 30 -w
+Finished 190/240 on 3c454.3.
+LST [hr]=  22.14
+lookup time: 9 26 2014 8:8
+3c454.3 is at 77.9503 degrees elevation
+observe -s 3c454.3 -t bandpass
+	09/26/2014 08:08:10 --> 09/26/2014 08:08:20  ---- observe -s 3c454.3 -t bandpass
+integrate -s 10 -t 30 -w
+	09/26/2014 08:08:20 --> 09/26/2014 08:13:20  ---- integrate -s 10 -t 30 -w
+Finished 200/240 on 3c454.3.
+LST [hr]=  22.23
+lookup time: 9 26 2014 8:13
+3c454.3 is at 79.0814 degrees elevation
+observe -s 3c454.3 -t bandpass
+	09/26/2014 08:13:20 --> 09/26/2014 08:13:30  ---- observe -s 3c454.3 -t bandpass
+integrate -s 10 -t 30 -w
+	09/26/2014 08:13:30 --> 09/26/2014 08:18:30  ---- integrate -s 10 -t 30 -w
+Finished 210/240 on 3c454.3.
+LST [hr]=  22.31
+lookup time: 9 26 2014 8:18
+3c454.3 is at 80.1984 degrees elevation
+observe -s 3c454.3 -t bandpass
+	09/26/2014 08:18:30 --> 09/26/2014 08:18:40  ---- observe -s 3c454.3 -t bandpass
+integrate -s 10 -t 30 -w
+	09/26/2014 08:18:40 --> 09/26/2014 08:23:40  ---- integrate -s 10 -t 30 -w
+Finished 220/240 on 3c454.3.
+LST [hr]=  22.40
+lookup time: 9 26 2014 8:23
+3c454.3 is at 81.2958 degrees elevation
+observe -s 3c454.3 -t bandpass
+	09/26/2014 08:23:40 --> 09/26/2014 08:23:50  ---- observe -s 3c454.3 -t bandpass
+integrate -s 10 -t 30 -w
+	09/26/2014 08:23:50 --> 09/26/2014 08:28:50  ---- integrate -s 10 -t 30 -w
+Finished 230/240 on 3c454.3.
+LST [hr]=  22.49
+lookup time: 9 26 2014 8:28
+3c454.3 is at 82.3650 degrees elevation
+observe -s 3c454.3 -t bandpass
+	09/26/2014 08:28:50 --> 09/26/2014 08:29:00  ---- observe -s 3c454.3 -t bandpass
+integrate -s 10 -t 30 -w
+	09/26/2014 08:29:00 --> 09/26/2014 08:34:00  ---- integrate -s 10 -t 30 -w
+Finished 240/240 on 3c454.3.
+radecoff -r 0 -d 0
+	09/26/2014 08:34:00 --> 09/26/2014 08:34:00  ---- radecoff -r 0 -d 0
+Checking elevation of Flux Cal Uranus...
+LST [hr]=  22.57
+lookup time: 9 26 2014 8:34
+Uranus is at 52.1171 degrees elevation
+
+#######################
+# FLUX Calibration    #
+#######################
+
+---- Observing flux0. ----
+
+LST [hr]=  22.57
+lookup time: 9 26 2014 8:34
+Uranus is at 52.1171 degrees elevation
+observe -s Uranus -t flux
+	09/26/2014 08:34:00 --> 09/26/2014 08:34:10  ---- observe -s Uranus -t flux
+tsys
+integrate -s 10 -t 30 -w
+	09/26/2014 08:34:10 --> 09/26/2014 08:39:10  ---- integrate -s 10 -t 30 -w
+Finished 10/40 on Uranus.
+LST [hr]=  22.66
+lookup time: 9 26 2014 8:39
+Uranus is at 53.2373 degrees elevation
+observe -s Uranus -t flux
+	09/26/2014 08:39:10 --> 09/26/2014 08:39:20  ---- observe -s Uranus -t flux
+integrate -s 10 -t 30 -w
+	09/26/2014 08:39:20 --> 09/26/2014 08:44:20  ---- integrate -s 10 -t 30 -w
+Finished 20/40 on Uranus.
+LST [hr]=  22.75
+lookup time: 9 26 2014 8:44
+Uranus is at 54.3514 degrees elevation
+observe -s Uranus -t flux
+	09/26/2014 08:44:20 --> 09/26/2014 08:44:30  ---- observe -s Uranus -t flux
+integrate -s 10 -t 30 -w
+	09/26/2014 08:44:30 --> 09/26/2014 08:49:30  ---- integrate -s 10 -t 30 -w
+Finished 30/40 on Uranus.
+LST [hr]=  22.83
+lookup time: 9 26 2014 8:49
+Uranus is at 55.4587 degrees elevation
+observe -s Uranus -t flux
+	09/26/2014 08:49:30 --> 09/26/2014 08:49:40  ---- observe -s Uranus -t flux
+integrate -s 10 -t 30 -w
+	09/26/2014 08:49:40 --> 09/26/2014 08:54:40  ---- integrate -s 10 -t 30 -w
+Finished 40/40 on Uranus.
+radecoff -r 0 -d 0
+	09/26/2014 08:54:40 --> 09/26/2014 08:54:40  ---- radecoff -r 0 -d 0
+Checking elevation of Flux Cal Callisto...
+LST [hr]=  22.92
+lookup time: 9 26 2014 8:54
+Callisto is at -45.7884 degrees elevation
+too low, skipping.
+----- main science target observe loop -----
+
+#############
+# Main Loop #
+#############
+Loop No.= 1
+LST [hr]=  22.92
+
+###########################
+# Initial Elevation Check #
+###########################
+
+Checking the elevation of the targets!
+VeLLO_a is at 17.1296 degrees elevation
+lookup time: 9 26 2014 8:54
+3c111 is at 18.3976 degrees elevation
+
+---- Observing Gain Calibrator (Loop = 1) ----
+lookup time: 9 26 2014 8:54
+3c111 is at 18.3976 degrees elevation
+observe -s 3c111 -R 0 -D 0
+	09/26/2014 08:54:40 --> 09/26/2014 08:54:50  ---- observe -s 3c111 -R 0 -D 0
+tsys
+integrate -s 10 -t 30 -w
+	09/26/2014 08:54:50 --> 09/26/2014 08:59:50  ---- integrate -s 10 -t 30 -w
+LST [hr]=  23.00
+
+---- Observing Target Source (Loop = 1) ----
+
+VeLLO_a is at 18.2041 degrees elevation
+observe -s VeLLO_a -r 04:14:12.30 -d +28:08:37.3 -e 2000 -v 6.2 -R 0 -D 0
+	09/26/2014 08:59:50 --> 09/26/2014 09:00:00  ---- observe -s VeLLO_a -r 04:14:12.30 -d +28:08:37.3 -e 2000 -v 6.2 -R 0 -D 0
+tsys
+integrate -s 40 -t 30 -w
+	09/26/2014 09:00:00 --> 09/26/2014 09:20:00  ---- integrate -s 40 -t 30 -w
+LST [hr]=  23.34
+
+---- Observing Gain Calibrator (Loop = 1) ----
+lookup time: 9 26 2014 9:20
+3c111 is at 23.4611 degrees elevation
+observe -s 3c111 -R 0 -D 0
+	09/26/2014 09:20:00 --> 09/26/2014 09:20:10  ---- observe -s 3c111 -R 0 -D 0
+tsys
+integrate -s 10 -t 30 -w
+	09/26/2014 09:20:10 --> 09/26/2014 09:25:10  ---- integrate -s 10 -t 30 -w
+LST [hr]=  23.43
+
+---- Observing Target Source (Loop = 1) ----
+
+VeLLO_b is at 22.9462 degrees elevation
+observe -s VeLLO_b -r 04:18:31.24 -d +28:26:17.7 -e 2000 -v 6.2 -R 0 -D 0
+	09/26/2014 09:25:10 --> 09/26/2014 09:25:20  ---- observe -s VeLLO_b -r 04:18:31.24 -d +28:26:17.7 -e 2000 -v 6.2 -R 0 -D 0
+tsys
+integrate -s 40 -t 30 -w
+	09/26/2014 09:25:20 --> 09/26/2014 09:45:20  ---- integrate -s 40 -t 30 -w
+LST [hr]=  23.76
+
+---- Observing Gain Calibrator (Loop = 1) ----
+lookup time: 9 26 2014 9:45
+3c111 is at 28.3709 degrees elevation
+observe -s 3c111 -R 0 -D 0
+	09/26/2014 09:45:20 --> 09/26/2014 09:45:30  ---- observe -s 3c111 -R 0 -D 0
+tsys
+integrate -s 10 -t 30 -w
+	09/26/2014 09:45:30 --> 09/26/2014 09:50:30  ---- integrate -s 10 -t 30 -w
+LST [hr]=  23.85
+
+---- Observing Target Source (Loop = 1) ----
+
+VeLLO_c is at 25.9688 degrees elevation
+observe -s VeLLO_c -r 04:27:57.31 -d +26:19:18.3 -e 2000 -v 6.2 -R 0 -D 0
+	09/26/2014 09:50:30 --> 09/26/2014 09:50:40  ---- observe -s VeLLO_c -r 04:27:57.31 -d +26:19:18.3 -e 2000 -v 6.2 -R 0 -D 0
+tsys
+integrate -s 40 -t 30 -w
+	09/26/2014 09:50:40 --> 09/26/2014 10:10:40  ---- integrate -s 40 -t 30 -w
+Loop No.= 2
+LST [hr]=   0.19
+
+---- Observing Gain Calibrator (Loop = 2) ----
+lookup time: 9 26 2014 10:10
+3c111 is at 33.3017 degrees elevation
+observe -s 3c111 -R 0 -D 0
+	09/26/2014 10:10:40 --> 09/26/2014 10:10:50  ---- observe -s 3c111 -R 0 -D 0
+tsys
+integrate -s 10 -t 30 -w
+	09/26/2014 10:10:50 --> 09/26/2014 10:15:50  ---- integrate -s 10 -t 30 -w
+LST [hr]=   0.27
+
+---- Observing Target Source (Loop = 2) ----
+
+VeLLO_a is at 34.7605 degrees elevation
+observe -s VeLLO_a -r 04:14:12.30 -d +28:08:37.3 -e 2000 -v 6.2 -R 0 -D 0
+	09/26/2014 10:15:50 --> 09/26/2014 10:16:00  ---- observe -s VeLLO_a -r 04:14:12.30 -d +28:08:37.3 -e 2000 -v 6.2 -R 0 -D 0
+tsys
+integrate -s 40 -t 30 -w
+	09/26/2014 10:16:00 --> 09/26/2014 10:36:00  ---- integrate -s 40 -t 30 -w
+LST [hr]=   0.61
+
+---- Observing Gain Calibrator (Loop = 2) ----
+lookup time: 9 26 2014 10:36
+3c111 is at 38.4295 degrees elevation
+observe -s 3c111 -R 0 -D 0
+	09/26/2014 10:36:00 --> 09/26/2014 10:36:10  ---- observe -s 3c111 -R 0 -D 0
+tsys
+integrate -s 10 -t 30 -w
+	09/26/2014 10:36:10 --> 09/26/2014 10:41:10  ---- integrate -s 10 -t 30 -w
+LST [hr]=   0.70
+
+---- Observing Target Source (Loop = 2) ----
+
+VeLLO_b is at 39.5556 degrees elevation
+observe -s VeLLO_b -r 04:18:31.24 -d +28:26:17.7 -e 2000 -v 6.2 -R 0 -D 0
+	09/26/2014 10:41:10 --> 09/26/2014 10:41:20  ---- observe -s VeLLO_b -r 04:18:31.24 -d +28:26:17.7 -e 2000 -v 6.2 -R 0 -D 0
+tsys
+integrate -s 40 -t 30 -w
+	09/26/2014 10:41:20 --> 09/26/2014 11:01:20  ---- integrate -s 40 -t 30 -w
+LST [hr]=   1.03
+
+---- Observing Gain Calibrator (Loop = 2) ----
+lookup time: 9 26 2014 11:1
+3c111 is at 43.3338 degrees elevation
+observe -s 3c111 -R 0 -D 0
+	09/26/2014 11:01:20 --> 09/26/2014 11:01:30  ---- observe -s 3c111 -R 0 -D 0
+tsys
+integrate -s 10 -t 30 -w
+	09/26/2014 11:01:30 --> 09/26/2014 11:06:30  ---- integrate -s 10 -t 30 -w
+LST [hr]=   1.12
+
+---- Observing Target Source (Loop = 2) ----
+
+VeLLO_c is at 42.9088 degrees elevation
+observe -s VeLLO_c -r 04:27:57.31 -d +26:19:18.3 -e 2000 -v 6.2 -R 0 -D 0
+	09/26/2014 11:06:30 --> 09/26/2014 11:06:40  ---- observe -s VeLLO_c -r 04:27:57.31 -d +26:19:18.3 -e 2000 -v 6.2 -R 0 -D 0
+tsys
+integrate -s 40 -t 30 -w
+	09/26/2014 11:06:40 --> 09/26/2014 11:26:40  ---- integrate -s 40 -t 30 -w
+Loop No.= 3
+LST [hr]=   1.46
+
+---- Observing Gain Calibrator (Loop = 3) ----
+lookup time: 9 26 2014 11:26
+3c111 is at 48.1798 degrees elevation
+observe -s 3c111 -R 0 -D 0
+	09/26/2014 11:26:40 --> 09/26/2014 11:26:50  ---- observe -s 3c111 -R 0 -D 0
+tsys
+integrate -s 10 -t 30 -w
+	09/26/2014 11:26:50 --> 09/26/2014 11:31:50  ---- integrate -s 10 -t 30 -w
+LST [hr]=   1.54
+
+---- Observing Target Source (Loop = 3) ----
+
+VeLLO_a is at 51.5337 degrees elevation
+observe -s VeLLO_a -r 04:14:12.30 -d +28:08:37.3 -e 2000 -v 6.2 -R 0 -D 0
+	09/26/2014 11:31:50 --> 09/26/2014 11:32:00  ---- observe -s VeLLO_a -r 04:14:12.30 -d +28:08:37.3 -e 2000 -v 6.2 -R 0 -D 0
+tsys
+integrate -s 40 -t 30 -w
+	09/26/2014 11:32:00 --> 09/26/2014 11:52:00  ---- integrate -s 40 -t 30 -w
+LST [hr]=   1.88
+
+---- Observing Gain Calibrator (Loop = 3) ----
+lookup time: 9 26 2014 11:52
+3c111 is at 53.1096 degrees elevation
+observe -s 3c111 -R 0 -D 0
+	09/26/2014 11:52:00 --> 09/26/2014 11:52:10  ---- observe -s 3c111 -R 0 -D 0
+tsys
+integrate -s 10 -t 30 -w
+	09/26/2014 11:52:10 --> 09/26/2014 11:57:10  ---- integrate -s 10 -t 30 -w
+LST [hr]=   1.97
+
+---- Observing Target Source (Loop = 3) ----
+
+VeLLO_b is at 56.2772 degrees elevation
+observe -s VeLLO_b -r 04:18:31.24 -d +28:26:17.7 -e 2000 -v 6.2 -R 0 -D 0
+	09/26/2014 11:57:10 --> 09/26/2014 11:57:20  ---- observe -s VeLLO_b -r 04:18:31.24 -d +28:26:17.7 -e 2000 -v 6.2 -R 0 -D 0
+tsys
+integrate -s 40 -t 30 -w
+	09/26/2014 11:57:20 --> 09/26/2014 12:17:20  ---- integrate -s 40 -t 30 -w
+LST [hr]=   2.31
+
+---- Observing Gain Calibrator (Loop = 3) ----
+lookup time: 9 26 2014 12:17
+3c111 is at 57.6762 degrees elevation
+observe -s 3c111 -R 0 -D 0
+	09/26/2014 12:17:20 --> 09/26/2014 12:17:30  ---- observe -s 3c111 -R 0 -D 0
+tsys
+integrate -s 10 -t 30 -w
+	09/26/2014 12:17:30 --> 09/26/2014 12:22:30  ---- integrate -s 10 -t 30 -w
+LST [hr]=   2.39
+
+---- Observing Target Source (Loop = 3) ----
+
+VeLLO_c is at 59.9614 degrees elevation
+observe -s VeLLO_c -r 04:27:57.31 -d +26:19:18.3 -e 2000 -v 6.2 -R 0 -D 0
+	09/26/2014 12:22:30 --> 09/26/2014 12:22:40  ---- observe -s VeLLO_c -r 04:27:57.31 -d +26:19:18.3 -e 2000 -v 6.2 -R 0 -D 0
+tsys
+integrate -s 40 -t 30 -w
+	09/26/2014 12:22:40 --> 09/26/2014 12:42:40  ---- integrate -s 40 -t 30 -w
+Loop No.= 4
+LST [hr]=   2.73
+
+---- Observing Gain Calibrator (Loop = 4) ----
+lookup time: 9 26 2014 12:42
+3c111 is at 61.9688 degrees elevation
+observe -s 3c111 -R 0 -D 0
+	09/26/2014 12:42:40 --> 09/26/2014 12:42:50  ---- observe -s 3c111 -R 0 -D 0
+tsys
+integrate -s 10 -t 30 -w
+	09/26/2014 12:42:50 --> 09/26/2014 12:47:50  ---- integrate -s 10 -t 30 -w
+LST [hr]=   2.81
+
+---- Observing Target Source (Loop = 4) ----
+
+VeLLO_a is at 68.0588 degrees elevation
+observe -s VeLLO_a -r 04:14:12.30 -d +28:08:37.3 -e 2000 -v 6.2 -R 0 -D 0
+	09/26/2014 12:47:50 --> 09/26/2014 12:48:00  ---- observe -s VeLLO_a -r 04:14:12.30 -d +28:08:37.3 -e 2000 -v 6.2 -R 0 -D 0
+tsys
+integrate -s 40 -t 30 -w
+	09/26/2014 12:48:00 --> 09/26/2014 13:08:00  ---- integrate -s 40 -t 30 -w
+LST [hr]=   3.15
+
+---- Observing Gain Calibrator (Loop = 4) ----
+lookup time: 9 26 2014 13:8
+3c111 is at 65.9661 degrees elevation
+observe -s 3c111 -R 0 -D 0
+	09/26/2014 13:08:00 --> 09/26/2014 13:08:10  ---- observe -s 3c111 -R 0 -D 0
+tsys
+integrate -s 10 -t 30 -w
+	09/26/2014 13:08:10 --> 09/26/2014 13:13:10  ---- integrate -s 10 -t 30 -w
+LST [hr]=   3.24
+
+---- Observing Target Source (Loop = 4) ----
+
+VeLLO_b is at 72.4075 degrees elevation
+observe -s VeLLO_b -r 04:18:31.24 -d +28:26:17.7 -e 2000 -v 6.2 -R 0 -D 0
+	09/26/2014 13:13:10 --> 09/26/2014 13:13:20  ---- observe -s VeLLO_b -r 04:18:31.24 -d +28:26:17.7 -e 2000 -v 6.2 -R 0 -D 0
+tsys
+integrate -s 40 -t 30 -w
+	09/26/2014 13:13:20 --> 09/26/2014 13:33:20  ---- integrate -s 40 -t 30 -w
+LST [hr]=   3.58
+
+---- Observing Gain Calibrator (Loop = 4) ----
+lookup time: 9 26 2014 13:33
+3c111 is at 69.0926 degrees elevation
+observe -s 3c111 -R 0 -D 0
+	09/26/2014 13:33:20 --> 09/26/2014 13:33:30  ---- observe -s 3c111 -R 0 -D 0
+tsys
+integrate -s 10 -t 30 -w
+	09/26/2014 13:33:30 --> 09/26/2014 13:38:30  ---- integrate -s 10 -t 30 -w
+LST [hr]=   3.66
+
+---- Observing Target Source (Loop = 4) ----
+
+VeLLO_c is at 76.4571 degrees elevation
+observe -s VeLLO_c -r 04:27:57.31 -d +26:19:18.3 -e 2000 -v 6.2 -R 0 -D 0
+	09/26/2014 13:38:30 --> 09/26/2014 13:38:40  ---- observe -s VeLLO_c -r 04:27:57.31 -d +26:19:18.3 -e 2000 -v 6.2 -R 0 -D 0
+tsys
+integrate -s 40 -t 30 -w
+	09/26/2014 13:38:40 --> 09/26/2014 13:58:40  ---- integrate -s 40 -t 30 -w
+Loop No.= 5
+LST [hr]=   4.00
+
+---- Observing Gain Calibrator (Loop = 5) ----
+lookup time: 9 26 2014 13:58
+3c111 is at 71.1461 degrees elevation
+observe -s 3c111 -R 0 -D 0
+	09/26/2014 13:58:40 --> 09/26/2014 13:58:50  ---- observe -s 3c111 -R 0 -D 0
+tsys
+integrate -s 10 -t 30 -w
+	09/26/2014 13:58:50 --> 09/26/2014 14:03:50  ---- integrate -s 10 -t 30 -w
+LST [hr]=   4.08
+
+---- Observing Target Source (Loop = 5) ----
+
+VeLLO_a is at 81.1471 degrees elevation
+observe -s VeLLO_a -r 04:14:12.30 -d +28:08:37.3 -e 2000 -v 6.2 -R 0 -D 0
+	09/26/2014 14:03:50 --> 09/26/2014 14:04:00  ---- observe -s VeLLO_a -r 04:14:12.30 -d +28:08:37.3 -e 2000 -v 6.2 -R 0 -D 0
+tsys
+integrate -s 40 -t 30 -w
+	09/26/2014 14:04:00 --> 09/26/2014 14:24:00  ---- integrate -s 40 -t 30 -w
+LST [hr]=   4.42
+
+---- Observing Gain Calibrator (Loop = 5) ----
+lookup time: 9 26 2014 14:24
+3c111 is at 71.7449 degrees elevation
+observe -s 3c111 -R 0 -D 0
+	09/26/2014 14:24:00 --> 09/26/2014 14:24:10  ---- observe -s 3c111 -R 0 -D 0
+tsys
+integrate -s 10 -t 30 -w
+	09/26/2014 14:24:10 --> 09/26/2014 14:29:10  ---- integrate -s 10 -t 30 -w
+LST [hr]=   4.51
+
+---- Observing Target Source (Loop = 5) ----
+
+VeLLO_b is at 81.1182 degrees elevation
+observe -s VeLLO_b -r 04:18:31.24 -d +28:26:17.7 -e 2000 -v 6.2 -R 0 -D 0
+	09/26/2014 14:29:10 --> 09/26/2014 14:29:20  ---- observe -s VeLLO_b -r 04:18:31.24 -d +28:26:17.7 -e 2000 -v 6.2 -R 0 -D 0
+tsys
+integrate -s 40 -t 30 -w
+	09/26/2014 14:29:20 --> 09/26/2014 14:49:20  ---- integrate -s 40 -t 30 -w
+LST [hr]=   4.85
+
+---- Observing Gain Calibrator (Loop = 5) ----
+lookup time: 9 26 2014 14:49
+3c111 is at 70.7068 degrees elevation
+observe -s 3c111 -R 0 -D 0
+	09/26/2014 14:49:20 --> 09/26/2014 14:49:30  ---- observe -s 3c111 -R 0 -D 0
+tsys
+integrate -s 10 -t 30 -w
+	09/26/2014 14:49:30 --> 09/26/2014 14:54:30  ---- integrate -s 10 -t 30 -w
+LST [hr]=   4.93
+
+---- Observing Target Source (Loop = 5) ----
+
+VeLLO_c is at 81.3727 degrees elevation
+observe -s VeLLO_c -r 04:27:57.31 -d +26:19:18.3 -e 2000 -v 6.2 -R 0 -D 0
+	09/26/2014 14:54:30 --> 09/26/2014 14:54:40  ---- observe -s VeLLO_c -r 04:27:57.31 -d +26:19:18.3 -e 2000 -v 6.2 -R 0 -D 0
+tsys
+integrate -s 40 -t 30 -w
+	09/26/2014 14:54:40 --> 09/26/2014 15:14:40  ---- integrate -s 40 -t 30 -w
+Loop No.= 6
+LST [hr]=   5.27
+
+---- Observing Gain Calibrator (Loop = 6) ----
+lookup time: 9 26 2014 15:14
+3c111 is at 68.3146 degrees elevation
+observe -s 3c111 -R 0 -D 0
+	09/26/2014 15:14:40 --> 09/26/2014 15:14:50  ---- observe -s 3c111 -R 0 -D 0
+tsys
+integrate -s 10 -t 30 -w
+	09/26/2014 15:14:50 --> 09/26/2014 15:19:50  ---- integrate -s 10 -t 30 -w
+LST [hr]=   5.36
+
+---- Observing Target Source (Loop = 6) ----
+
+VeLLO_a is at 73.3156 degrees elevation
+observe -s VeLLO_a -r 04:14:12.30 -d +28:08:37.3 -e 2000 -v 6.2 -R 0 -D 0
+	09/26/2014 15:19:50 --> 09/26/2014 15:20:00  ---- observe -s VeLLO_a -r 04:14:12.30 -d +28:08:37.3 -e 2000 -v 6.2 -R 0 -D 0
+tsys
+integrate -s 40 -t 30 -w
+	09/26/2014 15:20:00 --> 09/26/2014 15:40:00  ---- integrate -s 40 -t 30 -w
+LST [hr]=   5.69
+
+---- Observing Gain Calibrator (Loop = 6) ----
+lookup time: 9 26 2014 15:40
+3c111 is at 64.8099 degrees elevation
+observe -s 3c111 -R 0 -D 0
+	09/26/2014 15:40:00 --> 09/26/2014 15:40:10  ---- observe -s 3c111 -R 0 -D 0
+tsys
+integrate -s 10 -t 30 -w
+	09/26/2014 15:40:10 --> 09/26/2014 15:45:10  ---- integrate -s 10 -t 30 -w
+LST [hr]=   5.78
+
+---- Observing Target Source (Loop = 6) ----
+
+VeLLO_b is at 68.7897 degrees elevation
+observe -s VeLLO_b -r 04:18:31.24 -d +28:26:17.7 -e 2000 -v 6.2 -R 0 -D 0
+	09/26/2014 15:45:10 --> 09/26/2014 15:45:20  ---- observe -s VeLLO_b -r 04:18:31.24 -d +28:26:17.7 -e 2000 -v 6.2 -R 0 -D 0
+tsys
+integrate -s 40 -t 30 -w
+	09/26/2014 15:45:20 --> 09/26/2014 16:05:20  ---- integrate -s 40 -t 30 -w
+LST [hr]=   6.12
+
+---- Observing Gain Calibrator (Loop = 6) ----
+lookup time: 9 26 2014 16:5
+3c111 is at 60.8119 degrees elevation
+observe -s 3c111 -R 0 -D 0
+	09/26/2014 16:05:20 --> 09/26/2014 16:05:30  ---- observe -s 3c111 -R 0 -D 0
+tsys
+integrate -s 10 -t 30 -w
+	09/26/2014 16:05:30 --> 09/26/2014 16:10:30  ---- integrate -s 10 -t 30 -w
+LST [hr]=   6.20
+
+---- Observing Target Source (Loop = 6) ----
+
+VeLLO_c is at 65.9727 degrees elevation
+observe -s VeLLO_c -r 04:27:57.31 -d +26:19:18.3 -e 2000 -v 6.2 -R 0 -D 0
+	09/26/2014 16:10:30 --> 09/26/2014 16:10:40  ---- observe -s VeLLO_c -r 04:27:57.31 -d +26:19:18.3 -e 2000 -v 6.2 -R 0 -D 0
+tsys
+integrate -s 40 -t 30 -w
+	09/26/2014 16:10:40 --> 09/26/2014 16:30:40  ---- integrate -s 40 -t 30 -w
+Loop No.= 7
+LST [hr]=   6.54
+
+---- Observing Gain Calibrator (Loop = 7) ----
+lookup time: 9 26 2014 16:30
+3c111 is at 56.4300 degrees elevation
+observe -s 3c111 -R 0 -D 0
+	09/26/2014 16:30:40 --> 09/26/2014 16:30:50  ---- observe -s 3c111 -R 0 -D 0
+tsys
+integrate -s 10 -t 30 -w
+	09/26/2014 16:30:50 --> 09/26/2014 16:35:50  ---- integrate -s 10 -t 30 -w
+LST [hr]=   6.63
+
+---- Observing Target Source (Loop = 7) ----
+
+VeLLO_a is at 57.1736 degrees elevation
+observe -s VeLLO_a -r 04:14:12.30 -d +28:08:37.3 -e 2000 -v 6.2 -R 0 -D 0
+	09/26/2014 16:35:50 --> 09/26/2014 16:36:00  ---- observe -s VeLLO_a -r 04:14:12.30 -d +28:08:37.3 -e 2000 -v 6.2 -R 0 -D 0
+tsys
+integrate -s 40 -t 30 -w
+	09/26/2014 16:36:00 --> 09/26/2014 16:56:00  ---- integrate -s 40 -t 30 -w
+LST [hr]=   6.96
+
+---- Observing Gain Calibrator (Loop = 7) ----
+lookup time: 9 26 2014 16:56
+3c111 is at 51.6189 degrees elevation
+observe -s 3c111 -R 0 -D 0
+	09/26/2014 16:56:00 --> 09/26/2014 16:56:10  ---- observe -s 3c111 -R 0 -D 0
+tsys
+integrate -s 10 -t 30 -w
+	09/26/2014 16:56:10 --> 09/26/2014 17:01:10  ---- integrate -s 10 -t 30 -w
+LST [hr]=   7.05
+
+---- Observing Target Source (Loop = 7) ----
+
+VeLLO_b is at 52.3810 degrees elevation
+observe -s VeLLO_b -r 04:18:31.24 -d +28:26:17.7 -e 2000 -v 6.2 -R 0 -D 0
+	09/26/2014 17:01:10 --> 09/26/2014 17:01:20  ---- observe -s VeLLO_b -r 04:18:31.24 -d +28:26:17.7 -e 2000 -v 6.2 -R 0 -D 0
+tsys
+integrate -s 40 -t 30 -w
+	09/26/2014 17:01:20 --> 09/26/2014 17:21:20  ---- integrate -s 40 -t 30 -w
+LST [hr]=   7.39
+
+---- Observing Gain Calibrator (Loop = 7) ----
+lookup time: 9 26 2014 17:21
+3c111 is at 46.8418 degrees elevation
+observe -s 3c111 -R 0 -D 0
+	09/26/2014 17:21:20 --> 09/26/2014 17:21:30  ---- observe -s 3c111 -R 0 -D 0
+tsys
+integrate -s 10 -t 30 -w
+	09/26/2014 17:21:30 --> 09/26/2014 17:26:30  ---- integrate -s 10 -t 30 -w
+LST [hr]=   7.47
+
+---- Observing Target Source (Loop = 7) ----
+
+VeLLO_c is at 48.9772 degrees elevation
+observe -s VeLLO_c -r 04:27:57.31 -d +26:19:18.3 -e 2000 -v 6.2 -R 0 -D 0
+	09/26/2014 17:26:30 --> 09/26/2014 17:26:40  ---- observe -s VeLLO_c -r 04:27:57.31 -d +26:19:18.3 -e 2000 -v 6.2 -R 0 -D 0
+tsys
+integrate -s 40 -t 30 -w
+	09/26/2014 17:26:40 --> 09/26/2014 17:46:40  ---- integrate -s 40 -t 30 -w
+Loop No.= 8
+LST [hr]=   7.81
+
+---- Observing Gain Calibrator (Loop = 8) ----
+lookup time: 9 26 2014 17:46
+3c111 is at 41.9758 degrees elevation
+observe -s 3c111 -R 0 -D 0
+	09/26/2014 17:46:40 --> 09/26/2014 17:46:50  ---- observe -s 3c111 -R 0 -D 0
+tsys
+integrate -s 10 -t 30 -w
+	09/26/2014 17:46:50 --> 09/26/2014 17:51:50  ---- integrate -s 10 -t 30 -w
+LST [hr]=   7.90
+
+---- Observing Target Source (Loop = 8) ----
+
+VeLLO_a is at 40.4073 degrees elevation
+observe -s VeLLO_a -r 04:14:12.30 -d +28:08:37.3 -e 2000 -v 6.2 -R 0 -D 0
+	09/26/2014 17:51:50 --> 09/26/2014 17:52:00  ---- observe -s VeLLO_a -r 04:14:12.30 -d +28:08:37.3 -e 2000 -v 6.2 -R 0 -D 0
+tsys
+integrate -s 40 -t 30 -w
+	09/26/2014 17:52:00 --> 09/26/2014 18:12:00  ---- integrate -s 40 -t 30 -w
+LST [hr]=   8.23
+
+---- Observing Gain Calibrator (Loop = 8) ----
+lookup time: 9 26 2014 18:12
+3c111 is at 36.8643 degrees elevation
+observe -s 3c111 -R 0 -D 0
+	09/26/2014 18:12:00 --> 09/26/2014 18:12:10  ---- observe -s 3c111 -R 0 -D 0
+tsys
+integrate -s 10 -t 30 -w
+	09/26/2014 18:12:10 --> 09/26/2014 18:17:10  ---- integrate -s 10 -t 30 -w
+LST [hr]=   8.32
+
+---- Observing Target Source (Loop = 8) ----
+
+VeLLO_b is at 35.6512 degrees elevation
+observe -s VeLLO_b -r 04:18:31.24 -d +28:26:17.7 -e 2000 -v 6.2 -R 0 -D 0
+	09/26/2014 18:17:10 --> 09/26/2014 18:17:20  ---- observe -s VeLLO_b -r 04:18:31.24 -d +28:26:17.7 -e 2000 -v 6.2 -R 0 -D 0
+tsys
+integrate -s 40 -t 30 -w
+	09/26/2014 18:17:20 --> 09/26/2014 18:37:20  ---- integrate -s 40 -t 30 -w
+LST [hr]=   8.66
+
+---- Observing Gain Calibrator (Loop = 8) ----
+lookup time: 9 26 2014 18:37
+3c111 is at 31.9311 degrees elevation
+observe -s 3c111 -R 0 -D 0
+	09/26/2014 18:37:20 --> 09/26/2014 18:37:30  ---- observe -s 3c111 -R 0 -D 0
+tsys
+integrate -s 10 -t 30 -w
+	09/26/2014 18:37:30 --> 09/26/2014 18:42:30  ---- integrate -s 10 -t 30 -w
+LST [hr]=   8.74
+
+---- Observing Target Source (Loop = 8) ----
+
+VeLLO_c is at 31.9638 degrees elevation
+observe -s VeLLO_c -r 04:27:57.31 -d +26:19:18.3 -e 2000 -v 6.2 -R 0 -D 0
+	09/26/2014 18:42:30 --> 09/26/2014 18:42:40  ---- observe -s VeLLO_c -r 04:27:57.31 -d +26:19:18.3 -e 2000 -v 6.2 -R 0 -D 0
+tsys
+integrate -s 40 -t 30 -w
+	09/26/2014 18:42:40 --> 09/26/2014 19:02:40  ---- integrate -s 40 -t 30 -w
+Loop No.= 9
+LST [hr]=   9.08
+
+---- Observing Gain Calibrator (Loop = 9) ----
+lookup time: 9 26 2014 19:2
+3c111 is at 27.0041 degrees elevation
+observe -s 3c111 -R 0 -D 0
+	09/26/2014 19:02:40 --> 09/26/2014 19:02:50  ---- observe -s 3c111 -R 0 -D 0
+tsys
+integrate -s 10 -t 30 -w
+	09/26/2014 19:02:50 --> 09/26/2014 19:07:50  ---- integrate -s 10 -t 30 -w
+LST [hr]=   9.17
+
+---- Observing Target Source (Loop = 9) ----
+
+VeLLO_a is at 23.7437 degrees elevation
+observe -s VeLLO_a -r 04:14:12.30 -d +28:08:37.3 -e 2000 -v 6.2 -R 0 -D 0
+	09/26/2014 19:07:50 --> 09/26/2014 19:08:00  ---- observe -s VeLLO_a -r 04:14:12.30 -d +28:08:37.3 -e 2000 -v 6.2 -R 0 -D 0
+tsys
+integrate -s 40 -t 30 -w
+	09/26/2014 19:08:00 --> 09/26/2014 19:28:00  ---- integrate -s 40 -t 30 -w
+LST [hr]=   9.50
+
+---- Observing Gain Calibrator (Loop = 9) ----
+lookup time: 9 26 2014 19:28
+3c111 is at 21.9084 degrees elevation
+observe -s 3c111 -R 0 -D 0
+	09/26/2014 19:28:00 --> 09/26/2014 19:28:10  ---- observe -s 3c111 -R 0 -D 0
+tsys
+integrate -s 10 -t 30 -w
+	09/26/2014 19:28:10 --> 09/26/2014 19:33:10  ---- integrate -s 10 -t 30 -w
+LST [hr]=   9.59
+
+---- Observing Target Source (Loop = 9) ----
+
+VeLLO_b is at 19.1153 degrees elevation
+THE CALIBRATOR WILL BE TOO LOW AFTER THIS SOURCE LOOP, SKIPPING TO THE FINAL GAIN CAL. 
+THE LAST TARGET IS CURRENTLY AT 19.115348 DEGREES.
+
+##########################
+# Final Gain Calibration #
+##########################
+
+lookup time: 9 26 2014 19:33
+3c111 is at 20.9335 degrees elevation
+The current calibrator was just observed, skipping to the next source.
+lookup time: 9 26 2014 19:33
+3c111 is at 20.9335 degrees elevation
+The current calibrator was just observed, skipping to the next source.
+lookup time: 9 26 2014 19:33
+3c111 is at 20.9335 degrees elevation
+The current calibrator was just observed, skipping to the next source.
+##########################
+# End of Observing Loop  #
+##########################
+----- final flux and bandpass calibration -----
+radecoff -r 0 -d 0
+	09/26/2014 19:33:10 --> 09/26/2014 19:33:10  ---- radecoff -r 0 -d 0
+Checking elevation of Flux Cal Uranus...
+LST [hr]=   9.59
+lookup time: 9 26 2014 19:33
+Uranus is at -34.1780 degrees elevation
+too low, skipping.
+radecoff -r 0 -d 0
+	09/26/2014 19:33:10 --> 09/26/2014 19:33:10  ---- radecoff -r 0 -d 0
+Checking elevation of Flux Cal Callisto...
+LST [hr]=   9.59
+lookup time: 9 26 2014 19:33
+Callisto is at 84.0269 degrees elevation
+too high, skipping.
+radecoff -r 0 -d 0
+	09/26/2014 19:33:10 --> 09/26/2014 19:33:10  ---- radecoff -r 0 -d 0
+Checking elevation of Bandpass Cal 3c454.3...
+LST [hr]=   9.59
+lookup time: 9 26 2014 19:33
+3c454.3 is at -48.7558 degrees elevation
+too low, skipping.
+----- Congratulations!  This is the end of the script.  -----

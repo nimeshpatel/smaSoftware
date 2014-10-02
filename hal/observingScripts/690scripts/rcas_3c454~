@@ -1,0 +1,11 @@
+#!/bin/tcsh -vf
+while (1)
+observe -s 3c454.3
+sleep 2
+tsys
+integrate -t 60 -s 8 -w
+observe -s 2232+117
+sleep 2
+tsys
+integrate -t 60 -s 8 -w
+end

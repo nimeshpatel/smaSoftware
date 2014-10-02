@@ -1,0 +1,19 @@
+CC = gcc
+CFLAGS = -O -Wall -g -c
+BFLAGS = -O -g 
+LFLAGS = -L$(COMMONLIB)
+INC = -I$(COMMONINC) 
+LIBS = -llynx -lsmapopt
+RM = $(COMMONLIB)/rm.o
+DSM = $(COMMONLIB)/libdsm.a
+CLIB = $(COMMONLIB)/commonLib
+SMASH = projectTry
+
+all :   $(SMASH)
+
+projectTry.o : projectTry.c
+	${CC} ${CFLAGS} -o projectTry.o  projectTry.c ${INC}
+
+projectTry : projectTry.o
+	${CC} ${BFLAGS} -o projectTry projectTry.o $(HALLIB)/functionLib ${LFLAGS} ${RM} ${LIBS} ${CLIB}
+

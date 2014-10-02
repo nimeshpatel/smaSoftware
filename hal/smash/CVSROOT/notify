@@ -1,0 +1,24 @@
+# The "notify" file controls where notifications from watches set by
+# "cvs watch add" or "cvs edit" are sent.  The first entry on a line is
+# a regular expression which is tested against the directory that the
+# change is being made to, relative to the $CVSROOT.  If it matches,
+# then the remainder of the line is a filter program that should contain
+# one occurrence of %s for the user to notify, and information on its
+# standard input.
+#
+# "ALL" or "DEFAULT" can be used in place of the regular expression.
+#
+# For example:
+#ALL mail %s -s "CVS notification"
+
+# 1999aug31 MRD add "online" prefix to path to match relative to CVSROOT
+#               see comments above.
+online/correlator/dSPCode mail %s -s "CVS notification DSP code"
+
+# 1999aug31 MRD added
+online/correlator/rb mail %s -s "CVS Receiver Board microprocessor code"
+online/correlator/2nd mail %s -s "CVS C2DC microprocessor code"
+online/correlator/solaris/pgplot mail %s -s 'CVS pgplot code"
+online/lynxOS/applications/crate mail %s -s 'CVS correlator crate code"
+online/lynxOS/applications/crate/misc mail %s -s 'CVS correlator crate code"
+

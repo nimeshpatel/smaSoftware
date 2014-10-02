@@ -1,0 +1,15 @@
+#!/bin/tcsh -vf
+while (1) 
+observe -s ceres
+sleep 2
+tsys
+integrate -t 30 -s 12 -w
+observe -s nrao530
+sleep 2
+tsys
+integrate -t 30 -s 12 -w
+observe -s mars
+sleep 2
+tsys
+integrate -t 30 -s 20 -w
+end

@@ -1,0 +1,262 @@
+#!/usr/local/bin/perl
+
+# RR 28 Jan 2004. Use more ants from the command line. for ex. -a 3,4,8 etc.
+# RR 28 Jan 2004. Does Ant 6 as well
+# NAP 3 Oct 2003. Removed all old antenna stuff since 
+# antennas 2 and 3 are both new-type now.
+# TRH and NAP 25 Mar 2001
+# MS 13 Jun 2001 pmacCommand part with new arguments
+# This script commands the antenna(s) to move in
+# azimuth for acquisition of tiltmeter readings.
+# The tiltmeters are read by track, which is 
+# required to be running on the antennas.
+# Included antenna 7. NaP 13 Jul 01
+
+$radian = 4.0 * atan2(1.0,1.0)/180.;
+@antennalist = ();
+
+sub Usage() {
+  print "Usage: tilt [-a 3] -d cw -e 45. -r 1. \n tilt [--antenna 4] --direction ccw --elevation 45. --rate 1.\n";
+  print "(rate is in deg/s,  if -a is not specified, all antennas in the project will run).\n";
+  print "More than one antenna can be specified,  for example, -a 3..5,8  \n";
+}
+
+use Getopt::Long;
+$antpick=0;
+foreach $i ( @ARGV ) {
+    $args = $args . $i . " ";
+}
+GetOptions('antenna=s'=>\$antpick,'direction=s'=>\$direction,'elevation=f'=>\$el,'rate=f'=>\$enteredrate);
+
+
+if(!$direction){
+  Usage();
+  exit;
+}
+
+if(!$el) {
+  Usage();
+  exit;
+}
+
+open(logfile,">>/rootfs/logs/SMAshLog");
+$line = `date -u +"%a %b %d %X %Y"`;
+chop($line);
+$user = $ENV{"USER"};
+printf logfile "%s ($user): $0 %s\n", $line, $args;
+close(logfile);
+
+if(!$enteredrate){
+  $enteredrate=1.0;
+}
+
+if ($antpick!=0) {
+  $checklist = `/application/bin/getAntList -a $antPick -l`;
+  @antennalisttemp = split(' ',$checklist);
+  $numants=@antennalisttemp;
+  for($antindex=0;$antindex<$numants;$antindex++) {
+    if(($antennalisttemp[$antindex]<1) || ($antennalisttemp[$antindex]>8)) {
+      Usage();
+      die "Check the command-line arguments.\n";
+    }
+    push @antennalist, $antennalisttemp[$antindex];
+  }
+}
+
+#print "List of ants = @antennalist\n";
+
+if ($antpick==0) {
+  @antennalist = ();
+  #find the antennas specified in the project command.
+  for($i=1;$i<9;$i++) {
+    $antenna_status=`value -a $i -v antenna_status`;
+    if ($antenna_status==1) {
+      push(@antennalist,$i);
+    }
+  }
+}
+
+if(($enteredrate<=0.)||($enteredrate>4)) {
+  die "Slew rate ($enteredrate) cannot exceed 4 degrees/s.\n";
+}
+
+$delta_azstop = $enteredrate;
+# convert rate from deg/s to "/s
+$rate = $enteredrate * 3600. * cos($el*$radian); 
+
+$azlow=-130.; # for antenna 4.
+$azhigh=340.; # for antenna 4.
+
+# check el limits
+if(($el < 9.0) || ($el > 88.0)) {
+  die "commanded elevation is beyond limits.\n";
+}
+
+foreach $ant (@antennalist) {
+  if(($ant < 1) || ($ant > 9)) {
+    die "Antenna number should be between 1 and 8.\n";
+  }
+  print "Checking if track is running on antenna $ant.\n";
+  $com="value -a ".$ant." -v utc_hours";
+  $tim1=`$com`;
+  sleep(2);
+  $tim2=`$com`;
+  ($tim1 != $tim2) || die "track is not running on antenna $ant.\n";
+  print "...track is running.\n";
+} # end of the 'foreach' that checks if track is running
+
+foreach $ant (@antennalist) {
+  if($direction eq "cw"){
+    `azel -a $ant -z $azlow -e $el`;
+  }
+  if($direction eq "ccw"){
+    `azel -a $ant -z $azhigh -e $el`;
+  }
+  sleep 1;
+} # end of the 'foreach' that sets up each antenna to run
+
+# wait for all the antennas to stop after reaching the starting az.
+print "Waiting for antennas ";
+foreach $ant (@antennalist) {
+  printf "%d ", $ant;
+}
+print "to reach the start position\n";
+@antennasAcquired = ();
+
+while ($#antennasAcquired < $#antennalist) {
+# compute the difference in the two lists (from page 106 of Perl cookbook)
+  @union = @isect = @diff = ();
+  %union = %isect = ();
+  %count = ();  
+  foreach $e (@antennalist, @antennasAcquired) {
+    $count{$e}++;
+  }
+  foreach $e (keys %count) {
+    push @union, $e;
+    if ($count{$e} == 2) {
+      push @isect, $e; 
+    } else {
+      push @diff, $e; 
+    }
+  }
+# check to see if any of the remaining antennas have stopped
+  foreach $ant (@diff) {
+    $az1=`value -a $ant -v actual_az_deg`;
+    sleep 1;
+    $az2=`value -a $ant -v actual_az_deg`;
+    $azdifference=abs($az1-$az2);
+    if($azdifference<0.01)
+    {
+      push @antennasAcquired, $ant;
+    }
+  }
+}
+
+foreach $ant (@antennalist) {
+# tell track to start recording the tilt data.
+  print "Starting tilt data reading on antenna $ant...\n";
+  `trackCommand -a $ant -c t`;
+  sleep 1;
+
+# Now start scanning the antenna in az.
+
+# it is an antenna with the new servo
+    if($direction eq "cw"){
+      `offsetUnit -a $ant -s $rate`;
+      sleep 1;
+      `azscan -a $ant`;
+    }
+    if ($direction eq "ccw"){
+      `offsetUnit -a $ant -s -$rate`;
+      sleep 1;
+      `azscan -a $ant`;
+    }
+}   # end of the 'foreach' loop that starts the scans
+
+print "Waiting for antennas ";
+foreach $ant (@antennalist) {
+  printf "%d ", $ant;
+}
+print "to complete their tilt\n";
+
+
+# wait for the scans to complete
+
+@antennasAcquired = ();
+while ($#antennasAcquired < $#antennalist) {
+# compute the difference in the two lists (from page 106 of Perl cookbook)
+  @union = @isect = @diff = ();
+  %union = %isect = ();
+  %count = ();  
+  foreach $e (@antennalist, @antennasAcquired) {
+    $count{$e}++;
+  }
+  foreach $e (keys %count) {
+    push @union, $e;
+    if ($count{$e} == 2) {
+      push @isect, $e; 
+    } else {
+      push @diff, $e; 
+    }
+  }
+# only check on the antennas that have not yet completed the tilt
+  foreach $ant (@diff) {
+# it is an antenna with a new servo
+      if($direction eq "cw"){
+        $az1=`value -a $ant -v actual_az_deg`;
+        if ($az1>=($azhigh-$delta_azstop)) {
+          `stopScan -a $ant`;
+          push @antennasAcquired, $ant;
+          sleep 1;
+          `trackCommand -a $ant -c v`;
+          print "Scan completed on antenna $ant\n";
+          writeDataFile();
+        }
+      }
+      if ($direction eq "ccw"){
+        $az1=`value -a $ant -v actual_az_deg`;
+        if($az1<=($azlow+$delta_azstop)) {
+          `stopScan -a $ant`;
+          push @antennasAcquired, $ant;
+          sleep 1;
+          `trackCommand -a $ant -c v`;
+          print "Scan completed on antenna $ant\n";
+          writeDataFile();
+        }
+      }
+  } # end of 'foreach' loop over remaining active antennas
+}
+
+foreach $ant (@antennalist) {
+  print "Setting azoff to zero and cmdAz to present az on antenna $ant\n";
+  # putting back track in the state as it was before.
+  `standby -a $ant`;
+  sleep 1;
+  `azoff -a $ant -s 0`;
+  sleep 1;
+  $az1=`value -a $ant -v actual_az_deg`;
+  `az -a $ant -d $az1`;
+  sleep 1;
+  `resume -a $ant`; 
+}
+
+#`playSound -f /homes/smauser/sounds/StarTrek/Boatswain_Whistle.WAV`;
+
+#$r=`ssh sma1 /user1/software/sma/src/data/tiltfit /user1/software/sma/src/data/$filename 1`;
+##print $r;
+#`ssh sma1 /user1/software/sma/src/data/tiltplot`;
+
+sub writeDataFile() {
+# rename the data file
+  print "Renaming the tilt datafile for antenna $ant\n";
+  $tiltfile="/global/data/engineering/tilt/tiltdata.ant$ant";
+  open(FILE,$tiltfile);
+  @lines=<FILE>; 
+  ($timestamp,$utc,$az,$t1,$t2)=split(' ',$lines[0]);
+  close(FILE);
+  $filename="tilt"."_"."ant$ant"."_".$timestamp."_"."el"."_".$el."_".$direction;
+  $dir="/global/data/engineering/tilt/";
+  $filename=$dir.$filename;
+  rename($tiltfile,$filename);
+#  `playSound -f /usr/share/sounds/gnobots2/victory.wav`;
+}

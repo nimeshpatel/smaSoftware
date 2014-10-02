@@ -1,0 +1,4 @@
+#!/bin/tcsh -vf
+cp /common/configFiles/walshFunctions.txt.8step /common/configFiles/walshFunctions.txt
+
+

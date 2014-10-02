@@ -1,0 +1,67 @@
+#!/usr/bin/perl -w
+# Experiment Title: Nightly pointing at 230 GHz on a bright QSO and a nearby
+#                   star, along with Polaris.
+#
+# PI: SMA Pointing Team
+# Author: Todd Hunter, Nimesh Patel, Taco
+# Contact person: Nimesh Patel
+# Office phone: 617 496 7649 Evening phone: 617 577 1597
+#
+# load the sma library of functions used in this observing script.
+do 'sma.pl';
+
+printPID();
+
+# check participating antennas.
+checkANT();
+command("radio");  
+# $targel=checkEl("2230+114");  hip112029
+$targel=checkEl("3c454.3");
+if ($targel>25.0) {
+    command("observe -s 3c454.3");
+    command("point -i 60 -r 1 -L -l -t -f /data/engineering/pointing/nightly");
+    command("optical");
+    command("observe -s hip112997");
+} else {
+#    $targel=checkEl("0359+509");
+    $targel=checkEl("3c111");
+    if ($targel>25.) {
+#	command("observe -s 0359+509");
+	command("observe -s 3c111");
+	command("point -i 60 -r 1 -L -l -t -f /data/engineering/pointing/nightly");
+	command("optical");
+#  hip19811 is near 3c111
+	command("observe -s hip19811");
+#  hip19167 is near 0359+590
+#	command("observe -s hip19167"); 
+    } else {
+	$targel = checkEl("3c273");
+	if ($targel>25.) {
+	    command("observe -s 3c273");
+	    command("point -i 60 -r 1 -L -l -t -f /data/engineering/pointing/nightly");
+	    command("optical");
+	    command("observe -s hip64238");
+	} else {
+	    $targel=checkEl("0851+202");
+	    if ($targel > 25.0 && $targel<80.0) {
+		command("observe -s 0851+202");
+		command("point -i 60 -r 1 -L -l -t -f /data/engineering/pointing/nightly");
+		command("optical");
+		command("observe -s hip42911");
+	    } else {
+		command("observe -s 1924-292");
+		command("point -i 60 -r 1 -L -l -t -f /data/engineering/pointing/nightly");
+		command("optical");
+		command("observe -s hip95865");
+	    }
+	}
+    }
+}
+command("antennaWait");
+command("c90cmd -c 'snapshot -e 200'");
+
+command("observe -s polaris");
+command("antennaWait");
+command("c90cmd -c 'snapshot -e 100'");
+command("radio");
+command("dip");

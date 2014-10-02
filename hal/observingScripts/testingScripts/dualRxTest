@@ -1,0 +1,35 @@
+#!/bin/tcsh -vf
+while (1)
+correlatorResume
+observe -s 1751_LR -r 17:51:32.8185 -d +09:39:00.728
+rotateWaveplate -s L
+rotateWaveplate -a 2,3 -s R
+sleep 4
+tsys
+integrate -t 30 -s 7 -w
+#
+observe -s 1751+096
+rotateWaveplate -s L
+integrate -t 30 -s 7 -w
+#
+observe -s g35p2 -r 18:58:12.94 -d 01:40:37.1
+rotateWaveplate -s L
+sleep 4
+tsys
+integrate -t 30 -s 30 -w
+observe -s 1751_LR -r 17:51:32.8185 -d +09:39:00.728
+rotateWaveplate -s L
+rotateWaveplate -a 2,3 -s R
+sleep 4
+tsys
+integrate -t 30 -s 7 -w
+#
+observe -s g35p2 -r 18:58:12.94 -d 01:40:37.1
+rotateWaveplate -s L
+integrate -s 1 -t 22 -w
+sleep 5
+correlatorPause
+sleep 5
+polarPattern -p 3 -c 2 -w
+end
+

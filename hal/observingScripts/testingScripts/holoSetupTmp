@@ -1,0 +1,8 @@
+opening GPIB device at address = 8....
+Address 8: found device = JM_LM\\mXIKKIZLlx}xxImx}xlxlzx}ww}}OSucceeded.  Descriptor = 8
+opening GPIB device at address = 9....
+write error to dd=9: *IDN?
+Resetting the GPIB bus
+Skipping read due to call_ibwrt() error = -1
+Address 9: error in response to identification query
+Failed

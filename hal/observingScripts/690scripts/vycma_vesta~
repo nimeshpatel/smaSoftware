@@ -1,0 +1,10 @@
+#!/bin/tcsh -vf
+while (1) 
+  observe -s vycma
+  sleep 2
+  tsys
+  integrate -t 30 -s 10 -w
+  observe -s vesta
+  sleep 2
+  integrate -t 30 -s 10 -w
+end

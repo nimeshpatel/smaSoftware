@@ -1,0 +1,25 @@
+#!/usr/bin/perl -w
+`project -r -p "SMA" -d "Flux Track"`;
+`integrate -t 15`;
+`observe -s 3c279`;
+`tsys`;
+`integrate -s 12 -w`;
+for($c = 0; $c < 2; $c++)
+{
+    `observe -s titan`;
+    `tsys`;
+    `integrate -s 12 -w`;
+    `observe -s 1310+323`;
+    `tsys`;
+    `integrate -s 12 -w`;
+    `observe -s 1153+495`;
+    `tsys`;
+    `integrate -s 12 -w`;
+}   
+`observe -s titan`;
+`tsys`;
+`integrate -s 12 -w`;
+`observe -s 3c279`;
+`tsys`;
+`integrate -s 12 -w`;
+print "The script is finished\n";

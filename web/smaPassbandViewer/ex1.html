@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Flot - Basic Charts</title>
+  <style>
+    .chart {
+      width: 500px;
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <div class="chart" id="sampleChart"></div>
+  <script src="jquery-1.11.0.min.js"></script>
+  <script src="./flot/excanvas.min.js"></script>
+  <script src="./flot/jquery.flot.min.js"></script>
+  <script src="./flot/jquery.flot.selection.js"></script>
+  <script src="./flot/jquery.flot.navigate.js"></script>
+
+  <script>
+   $('#sampleChart').plot(
+    [ [[0,3],[1,-1],[2,2]]],
+    {series: {lines:{show:true}},
+       xaxis:{
+       transform: function(v) {return -v;},
+       inverseTransform: function(v) {return -v;}
+       }
+    }
+   );
+  </script>
+</body>
+</html>
+</body>
+</html>

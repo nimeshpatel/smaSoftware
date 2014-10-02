@@ -1,0 +1,18 @@
+#!/bin/tcsh -f
+/application/bin/raoff -a 1..8 -s 0
+sleep 1
+/application/bin/decoff -a 1..8 -s 0
+sleep 1
+/application/bin/standby -a 1..8  
+sleep 1
+/application/bin/focusCurveOn -a1..8
+sleep 1
+/application/bin/tol -c off -a 1..8
+sleep 1
+/application/bin/setSunSafeMinutes -a1..8 120
+sleep 1
+/application/bin/writeProjectID
+sleep 1
+#
+touch /otherPowerPCs/corcon/1/smainit_req/corr_monitor.HUP
+#

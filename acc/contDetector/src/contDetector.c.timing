@@ -1,0 +1,320 @@
+/* Version of the driver for temporarily measuring the timing of the
+ * chopper for autocorrelation.
+ * RWW 3/23/04
+ */
+/* contDetector.c
+ * $Log: contDetector.c,v $
+ * Revision 1.4  2004/03/23 15:13:52  rwilson
+ * removed executable file from archivs
+ *
+ * Revision 1.3  2003/04/01 14:50:12  rwilson
+ * Increase timeout
+ *
+ * Revision 1.2  2003/03/20 14:15:19  rwilson
+ * ContDetector works as driver with test setup
+ *
+ * Revision 1.1.1.1  2002/06/13 15:12:26  rwilson
+ * Early non-working version
+ *
+ *
+ * Driver for the continuum detector using an Acromag counter
+ * ip module to count the output of the v/f converters.
+ *
+ * Bob Wilson, May 2002
+ */
+
+#define __LYNXOS 1
+
+#include <sys/types.h>
+#include <kernel.h>
+extern int iointset _AP((int vector, void (*function)(void *), char *argument));
+/* #include <port_ops_ppc.h> The defs here are not correct */
+#include <dldd.h>
+/* #include <kern_proto.h> This causes lots of errors, so the needed defs
+ * are here */
+extern void cprintf(char *, ...);
+extern char *sysbrk(long);
+extern int sysfree(char *, long);
+extern int tswait(int *, int, int);
+extern int ssignal(int *);
+extern int sreset(int *);
+#include <semaphore.h>
+
+#include <sys/file.h>
+#include <errno.h>
+
+#include "contDetector.h"
+#include "contDetectordrvr.h"
+
+/****************************/
+/* driver statics structure */
+/****************************/
+struct contDetectorStatics {
+	ACROMAG *cntr;
+	int intVect;
+	int waitSem;
+	int debug;
+	int open;
+	int intTime;
+	unsigned short int *unidigRead;
+	enum mode mode;
+	int status;
+};
+#define dprintf  if(s->debug) cprintf
+
+/* contDetector.c */
+void cSetCntl(ACROMAG *cntr);
+void iSetCntl(ACROMAG *cntr);
+void tSetCntl(ACROMAG *cntr);
+void intHndlr(struct contDetectorStatics *s);
+
+/**********************/
+/* open() entry point */
+/**********************/
+int contDetectorOpen(struct contDetectorStatics *s, int devno, struct file *f) {
+
+	if((f->access_mode ^ FREAD) != 0) {
+	    pseterr(EINVAL);
+	    return(SYSERR);
+	}
+	/* Only allow one process to open at any time */
+	if(s->open) {
+	    pseterr(EBUSY);
+	    return(SYSERR);
+	}
+	s->open = TRUE;
+	dprintf ("contDetectorOpen: opened\r\n");
+	return (OK);
+}
+
+/***********************/
+/* close() entry point */
+/***********************/
+int contDetectorClose(struct contDetectorStatics *s, int devno, struct file *f) {
+
+	/* we only get called when the last process closes the device */
+	s->open = FALSE;
+
+	dprintf("contDetectorClosed\r\n");
+	return (OK);
+}
+
+/**********************/
+/* read() entry point */
+/**********************/
+
+int contDetectorRead(struct contDetectorStatics *s, struct file *f, char *buff,
+		int count) {
+	contDetector_result_t *re = (contDetector_result_t *)buff;
+	int stat;
+
+	if(s->mode == IND) {
+	    s->cntr->initValue[4] = s->intTime >> 16;
+	    s->cntr->initValue[5] = s->intTime & 0xffff;
+	    s->cntr->triggerCntl = 0x2a;
+	    re->status =  s->unidigRead[0];
+	    stat = tswait(&s->waitSem, SEM_SIGABORT, 2 + s->intTime/10000);
+	} else if(s->mode == CHOP) {
+	    s->cntr->triggerCntl = 0x2a;
+	    do {
+		stat = tswait(&s->waitSem, SEM_SIGABORT, 1);
+	    } while(s->cntr->rb[5] == 0);
+	    re->status =  s->unidigRead[0];
+	    stat = tswait(&s->waitSem, SEM_SIGABORT, 200000);
+	} else if(s->mode == TIMING_TEST) {
+	    s->cntr->triggerCntl = 0x2a;
+	    stat = tswait(&s->waitSem, SEM_SIGABORT, 2 + s->intTime/10000);
+	    re->status =  s->status;
+	} else {
+	    return(0);
+	}
+	if(stat==TSWAIT_NOTOUTS) {
+	    dprintf("contDetector: "
+              "tswait() reports no timeouts available\r\n");
+	    pseterr(EAGAIN);
+	    return(SYSERR);
+	} else if(stat==TSWAIT_ABORTED) {
+	    dprintf("contDetector: "
+              "tswait() released on signal\r\n");
+	    pseterr(EINTR);
+	    return(SYSERR);
+	} else if(stat==TSWAIT_TIMEDOUT) {
+	    dprintf("contDetector: "
+              "tswait() timed out before semaphore was posted\r\n");
+	    pseterr(ETIMEDOUT);
+	    return(SYSERR);
+	}
+	re->lowRx = (s->cntr->rb[0] << 16) | s->cntr->rb[1];
+	re->highRx = (s->cntr->rb[2] << 16) | s->cntr->rb[3];
+	re->timer = (s->cntr->rb[4] << 16) | s->cntr->rb[5];
+	return(sizeof(contDetector_result_t));
+}
+
+/***************************************************/
+/* write() and select entry points not implemented */
+/***************************************************/
+
+int contDetectorInvalid(void) {
+	pseterr(EPERM);
+	return(SYSERR);
+}
+
+/***********************/
+/* ioctl() entry point */
+/***********************/
+int contDetectorioctl(struct contDetectorStatics *s, struct file *f,
+	int command, contDetectorioc_t *argp) {
+
+	switch(command) {
+	case EIOCCLRDEBUG:
+	    s->debug = FALSE;
+	    break;
+	case EIOCSETDEBUG:
+	    s->debug = TRUE;
+	    break;
+	case EIOCRESETCARD:
+	    break;
+	case EIOCSETMODE:
+	    s->cntr->softReset = 1;
+	    s->mode = argp->mode;
+	    s->intTime = argp->intTime;
+	    s->waitSem = 0;
+	    if(s->mode == IND) {
+		iSetCntl(s->cntr);
+	    } else if(s->mode == CHOP) {
+		cSetCntl(s->cntr);
+	    } else if(s->mode == TIMING_TEST) {
+		tSetCntl(s->cntr);
+	    }
+	    break;
+	case EIOCGETMODE:
+	    argp->mode = s->mode;
+	    argp->intTime = s->intTime;
+	    break;
+	default:
+	    pseterr(EINVAL);
+	    return (SYSERR);
+	}
+	return(OK);
+}
+
+
+/***********************/
+/* install entry point */
+/***********************/
+
+char *contDetectorInstall(struct contDetectorInfo *info) {
+	static unsigned char idTest[] = {'I', 'P', 'A', 'C', 0xa3, 0x16, 0,
+		0, 0, 0, 0xc, 0x1e};
+	struct contDetectorStatics *s;
+	int i;
+
+/*	cprintf("Entering install of contDetector device\r\n"); */
+	for(i = 0; i < sizeof(idTest); i++) {
+	    if((info->cntr->ascii[i] & 0xff) != idTest[i]) {
+		pseterr(ENXIO);
+		return( (char *)SYSERR );
+	    }
+	}
+
+	/* initialize statics structure */
+	s = (struct contDetectorStatics *)sysbrk((long)sizeof(*s));
+	if( s == NULL) {
+	    pseterr(ENOMEM);
+	    return( (char *)SYSERR );
+	}
+
+	s->cntr = info->cntr;
+	s->unidigRead = info->unidigAddress + UD_READ_REGISTER;
+	s->debug = FALSE;
+	s->open = FALSE;
+	s->mode = UNDEF_MODE;
+	s->cntr->softReset = 1;
+	s->waitSem = 0;
+	s->cntr->intPend = 0;
+	s->intVect = info->intVect;
+	s->cntr->intVect = info->intVect;
+	iointset(s->intVect, (void (*)(void *))intHndlr, (void *)s);
+
+	dprintf("contDetector driver installed\r\n");
+	return ((char *)s);
+}
+
+/*************************/
+/* uninstall entry point */
+/*************************/
+int contDetectorUninstall(struct contDetectorStatics *s) {
+
+	dprintf("contDetectorUninstall: freeing memory for statics struct\r\n");
+	iointclr(s->intVect);
+	sysfree((char *)s, (long)sizeof(*s));
+	return (OK);
+}
+
+/************************/
+/* specify entry points */
+/************************/
+struct dldd entry_points = {
+	contDetectorOpen,
+	contDetectorClose,
+	contDetectorRead,
+	contDetectorInvalid,		/* write() entry point */
+	contDetectorInvalid,		/* select() entry point */
+	contDetectorioctl,
+	contDetectorInstall,
+	contDetectorUninstall,
+	(char *)0
+};
+
+/* Subroutine to set the counter control registers for independent (32-bit)
+ * operation */
+void iSetCntl(ACROMAG *cntr) {
+	int i;
+
+	cntr->cntl[5] = WATCH_DOG_MODE | OUTPUT_ACTIVE_HIGH |
+		INTERRUPT_ENABLE | USE_32_BITS;
+	cntr->cntl[1] = PULSE_WIDTH_MODE | INPUT_ACTIVE_HIGH | USE_32_BITS |
+		EXT_CLOCK;
+	cntr->cntl[3] = PULSE_WIDTH_MODE | INPUT_ACTIVE_HIGH | USE_32_BITS |
+		EXT_CLOCK;
+	for(i = 0; i < 6; i++) {
+	    cntr->initValue[i] = 0;
+	}
+}
+
+/* Subroutine to set the counter control registers for chopper (16-bit)
+ * operation */
+void cSetCntl(ACROMAG *cntr) {
+	int i;
+
+	cntr->cntl[5] = PULSE_WIDTH_MODE | INTERRUPT_ENABLE  | USE_32_BITS;
+	cntr->cntl[1] = PULSE_WIDTH_MODE | INPUT_ACTIVE_HIGH | USE_32_BITS |
+		EXT_CLOCK | DEBOUNCE_INPUT;
+	cntr->cntl[3] = PULSE_WIDTH_MODE | INPUT_ACTIVE_HIGH | USE_32_BITS |
+		EXT_CLOCK;
+	for(i = 0; i < 6; i++) {
+	    cntr->initValue[i] = 0;
+	}
+}
+
+/* Subroutine to set the counter control registers for Timing test (32-bit)
+ * operation */
+void tSetCntl(ACROMAG *cntr) {
+	int i;
+
+	cntr->cntl[1] = PULSE_WIDTH_MODE | INPUT_ACTIVE_HIGH | USE_32_BITS |
+		INTERRUPT_ENABLE;
+	cntr->cntl[3] = PULSE_WIDTH_MODE | INPUT_ACTIVE_HIGH | USE_32_BITS |
+		INTERRUPT_ENABLE;
+	cntr->cntl[5] = PULSE_WIDTH_MODE | INPUT_ACTIVE_HIGH | USE_32_BITS |
+		INTERRUPT_ENABLE;
+	for(i = 0; i < 6; i++) {
+	    cntr->initValue[i] = 0;
+	}
+}
+
+void intHndlr(struct contDetectorStatics *s) {
+	s->status = s->cntr->intPend >> 8;
+	s->cntr->intPend = 0;
+	sreset(&s->waitSem);
+}

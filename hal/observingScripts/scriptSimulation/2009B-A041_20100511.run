@@ -1,0 +1,42 @@
+initializing.....
+Not running on hal9000, entering simulation mode.
+Script: /sma/observingScripts/2009B-A041.pl.
+	05/11/2010 03:00:00 --> 05/11/2010 03:00:00  ---- radio
+	05/11/2010 03:00:00 --> 05/11/2010 03:00:00  ---- setFeedOffset -f 345
+	05/11/2010 03:00:00 --> 05/11/2010 03:00:00  ---- radecoff -r 0 -d 0
+	05/11/2010 03:00:00 --> 05/11/2010 03:00:00  ---- integrate -t 20
+	05/11/2010 03:00:00 --> 05/11/2010 03:00:00  ---- project -r -p 'Kazushi Sakamoto' -d '2009B-A041' -i 18644
+----- initialization done, starting script -----
+
+LST [hr]=   7.92
+LST [hr]=   7.92
+#################################
+# Initial calibration           #
+#################################
+
+source name = 0854+201 
+lookup time: 5 11 2010 3:0
+0854+201 is at 75.4 degrees elevation
+source name = mars 
+lookup time: 5 11 2010 3:0
+mars is at 69.5 degrees elevation
+	05/11/2010 03:00:00 --> 05/11/2010 03:00:10  ---- observe -s 0854+201
+	05/11/2010 03:00:10 --> 05/11/2010 03:00:21  ---- tsys
+
+### IPOINT : Accept offsets when they look ok!  ###
+	05/11/2010 03:00:21 --> 05/11/2010 03:20:21  ---- ipoint -i 30 -r 2 -k 
+source name = mars 
+lookup time: 5 11 2010 3:0
+mars is at 69.5 degrees elevation
+	05/11/2010 03:20:21 --> 05/11/2010 03:30:21  ---- integrate -s 30 -t 20 -w
+source name = 3c273 
+lookup time: 5 11 2010 3:0
+3c273 is at 20.3 degrees elevation
+
+#############
+# Main Loop #
+#############
+
+LST [hr]=   8.43
+LST [hr]=   8.43
+----- Congratulations! -----

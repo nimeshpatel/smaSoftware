@@ -1,0 +1,19 @@
+#!/bin/tcsh -vf
+while (1)
+/application/bin/observe -s 0059+581
+sleep 5
+tsys
+/application/bin/integrate -s 10 -w
+/application/bin/observe -s R-Cas -r 23:58:24.873 -d 51:23:19.70 -v 26.0
+sleep 5
+/application/bin/integrate -s 40 -w
+/application/bin/observe -s 2354+458
+sleep 5
+tsys
+/application/bin/integrate -s 20 -w
+/application/bin/observe -s uranus
+sleep 5
+tsys
+/application/bin/integrate -s 15 -w
+end
+

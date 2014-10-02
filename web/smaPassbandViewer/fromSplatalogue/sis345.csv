@@ -1,0 +1,16 @@
+Species:Chemical Name:Freq-GHz:Freq Err:Meas Freq-GHz:Meas Freq Err:Resolved QNs:CDMS/JPL Intensity:Lovas/AST Intensity:E_L (cm^-1):Linelist
+SiSv=0:Silicon monosulfide  :272.24270:0.0015977:::15-14:-1.63450::63.57730:JPL
+SiSv=0:Silicon monosulfide  :272.24304:4.1E-5:::15-14:0.00000: 0.48:63.57700:SLAIM
+SiSv=0:Silicon monosulfide  :272.24305:1.3E-6:::15-14:-1.64490::63.57740:CDMS
+SiSv=0:Silicon monosulfide  :290.38032:0.001948:::16-15:-1.57000::72.65840:JPL
+SiSv=0:Silicon monosulfide  :290.38073:4.4E-5:::16-15:0.00000: 0.22:72.65800:SLAIM
+SiSv=0:Silicon monosulfide  :::290.38076:1.0E-5:16-15:-1.58040::72.65840:CDMS
+SiSv=0:Silicon monosulfide  :308.51564:0.0023456:::17-16:-1.51180::82.34440:JPL
+SiSv=0:Silicon monosulfide  :308.51613:4.7E-5:::17-16:0.00000::82.34400:SLAIM
+SiSv=0:Silicon monosulfide  :308.51614:1.4E-6:::17-16:-1.52220::82.34450:CDMS
+SiSv=0:Silicon monosulfide  :326.64850:0.0027932:::18-17:-1.45950::92.63540:JPL
+SiSv=0:Silicon monosulfide  :326.64909:5.0E-5:::18-17:0.00000::92.63500:SLAIM
+SiSv=0:Silicon monosulfide  :::326.64911:1.0E-5:18-17:-1.46990::92.63550:CDMS
+SiSv=0:Silicon monosulfide  :344.77878:0.0032939:::19-18:-1.41240::103.53120:JPL
+SiSv=0:Silicon monosulfide  :344.77947:5.4E-5:::19-18:0.00000::103.53100:SLAIM
+SiSv=0:Silicon monosulfide  :::344.77948:1.0E-5:19-18:-1.42280::103.53130:CDMS

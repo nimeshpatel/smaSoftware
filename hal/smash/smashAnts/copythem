@@ -1,0 +1,37 @@
+#!/usr/bin/tcsh -vf 
+cp radio $HALBIN
+cp optical $HALBIN
+cp limbOffset $HALBIN
+cp enableDrivesTimeout $HALBIN
+cp disableDr
+cp disableDrivesTimeout $HALBIN
+cp tsys $HALBIN
+cp value $HALBIN
+cp stopScan $HALBIN
+cp startPositionSw
+cp startPositionSwitching $HALBIN
+cp resume $HALBIN
+cp standby $HALBIN
+cp snapshot $HALBIN
+cp trackCommand $HALBIN
+cp integrationTime $HALBIN
+cp endProject $HALBIN
+cp project $HALBIN
+cp offsetUnit $HALBIN
+cp observe $HALBIN
+cp closeM3 $HALBIN
+cp openM3 $HALBIN
+cp eloff $HALBIN
+cp azoff $HALBIN
+cp decoff $HALBIN
+cp raoff $HALBIN
+cp elscan $HALBIN
+cp azscan $HALBIN
+cp stow $HALBIN
+cp azel $HALBIN
+cp az $HALBIN
+cp el $HALBIN
+cp tol 4HALBIN
+cp tol $HALBIN
+cp writeTilts $HALBIN
+

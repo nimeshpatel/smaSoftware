@@ -1,0 +1,40 @@
+CC = gcc -g
+BIN = rpointOffline
+FCC = g77 -g
+
+rpointOffline:rpointOffline.o nrutil.o nrpointOffline.o nrpointOffline2.o mrqmin.o mrqcof.o covsrt.o gaussj.o fgauss2.o rms.o
+	$(FCC) -o rpointOffline rpointOffline.o nrpointOffline.o nrpointOffline2.o nrutil.o \
+	mrqmin.o mrqcof.o  covsrt.o gaussj.o fgauss2.o rms.o  -lcpgplot -lpgplot -lm\
+
+nrpointOffline.o:nrpointOffline.c mrqmin.o mrqcof.o covsrt.o gaussj.o fgauss2.o rms.o
+	$(CC) -c nrpointOffline.c -o nrpointOffline.o
+
+nrpointOffline2.o:nrpointOffline2.c mrqmin.o mrqcof.o covsrt.o gaussj.o fgauss2.o rms.o
+	$(CC) -c nrpointOffline2.c -o nrpointOffline2.o
+
+rpointOffline.o:rpointOffline.c
+	$(CC) -c rpointOffline.c -o rpointOffline.o 
+
+nrutil.o:nrutil.c
+	$(CC) -c nrutil.c -o nrutil.o
+
+mrqmin.o:mrqmin.c
+	$(CC) -c mrqmin.c -o mrqmin.o
+
+mrqcof.o:mrqcof.c
+	$(CC) -c mrqcof.c -o mrqcof.o
+
+covsrt.o:covsrt.c
+	$(CC) -c covsrt.c -o covsrt.o
+
+gaussj.o:gaussj.c
+	$(CC) -c gaussj.c -o gaussj.o
+
+fgauss2.o:fgauss2.c
+	$(CC) -c fgauss2.c -o fgauss2.o
+
+rms.o:rms.c
+	$(CC) -c rms.c -o rms.o
+
+clean cleanup:
+	rm -f *.o $(BIN)

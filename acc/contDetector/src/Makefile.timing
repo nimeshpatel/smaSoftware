@@ -1,0 +1,77 @@
+#$Log: Makefile,v $
+#Revision 1.2  2003/03/20 14:15:19  rwilson
+#ContDetector works as driver with test setup
+#
+#Revision 1.1.1.1  2002/06/13 15:12:26  rwilson
+#Early non-working version
+#
+# Makefile for the driver for the continuum detector integrator
+# using the Acromag IP480-6 counter card.
+#
+INC = ../include
+KINC = $(ENV_PREFIX)/sys/include/kernel
+PINC = $(ENV_PREFIX)/sys/include/family/ppc/
+UDINC = $(ACCAPP)/iPUniDig_E/includeFiles
+CC = gcc
+#CFLAGS = -ansi -pedantic -Wall -Wcast-align -O -finline-functions\
+#	-I$(INC) -I$(KINC) -I$(PINC)
+CFLAGS = -ansi -Wall -Wcast-align -O -finline-functions -I$(INC)
+LD = ld
+CC=gcc
+OBJ =contDetector.obj mkcontDetectorInfo contDetector.import \
+	testcntr testCD testIP testTiming
+
+all: $(OBJ)
+#all: testcntr testUD mkcontDetectorInfo contDetector.obj
+
+contDetector.obj: contDetector.o contDetector.import
+	$(LD) -bM:SRE -bimport:contDetector.import \
+           -o contDetector.obj contDetector.o
+
+contDetector.o: contDetector.c ../include/contDetectordrvr.h\
+	../include/contDetector.h
+	$(CC) $(CFLAGS) -c -I$(KINC) -I$(PINC) -o contDetector.o contDetector.c
+
+contDetector.s: contDetector.c ../include/contDetectordrvr.h\
+	../include/contDetector.h
+	$(CC) $(CFLAGS) -S -I$(KINC) -I$(PINC) contDetector.c
+
+contDetector.import: contDetector.o
+	nm -u contDetector.o > contDetector.import
+
+mkcontDetectorInfo: mkcontDetectorInfo.c ../include/contDetectordrvr.h
+	$(CC) -I $(INC) mkcontDetectorInfo.c -o mkcontDetectorInfo
+
+testcntr: testcntr.o
+	$(CC) -o testcntr testcntr.o $(ENV_PREFIX)/usr/lib/libreadline.a
+
+testcntr.o: testcntr.c ../include/contDetectordrvr.h ../include/contDetector.h
+	$(CC) $(CFLAGS) -I$(KINC) -I$(PINC) -c testcntr.c
+
+testCD: testCD.o
+	$(CC) -o testCD testCD.o -mthreads $(ENV_PREFIX)/usr/lib/libreadline.a
+
+testCD.o: testCD.c ../include/contDetectordrvr.h ../include/contDetector.h
+	$(CC) $(CFLAGS) -I$(UDINC) -I$(KINC) -I$(PINC) -c testCD.c
+
+testTiming: testTiming.o
+	$(CC) -o testTiming testTiming.o $(ENV_PREFIX)/usr/lib/libreadline.a
+
+testTiming.o: testTiming.c ../include/contDetectordrvr.h \
+	../include/contDetector.h $(COMMONINC)/vme_sg_simple.h
+	$(CC) $(CFLAGS) -I$(UDINC) -I$(KINC) -I$(PINC) -I$(COMMONINC) -c testTiming.c
+
+testIP: testIP.o
+	$(CC) -o testIP testIP.o
+
+testIP.o: testIP.c ../include/contDetectordrvr.h
+	$(CC) $(CFLAGS) -c testIP.c
+
+testUD: testUD.o
+	$(CC) -o testUD testUD.o
+
+testUD.o: testUD.c $(UDINC)/iPUniDig_E.h
+	$(CC) $(CFLAGS) -c -I$(UDINC) testUD.c
+
+clean:
+	rm -f $(OBJ) *.o

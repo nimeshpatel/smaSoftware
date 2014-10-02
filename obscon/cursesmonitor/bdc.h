@@ -1,0 +1,4 @@
+#define CONTROL_MAX 9.5
+#define CONTROL_MIN 0.5
+#define DETECTOR_MAX 9.5
+#define DETECTOR_MIN -9.5

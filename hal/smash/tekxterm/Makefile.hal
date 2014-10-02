@@ -1,0 +1,44 @@
+CC=gcc -Wall
+
+all: testtek $(HALBIN)/stripchart.test $(HALBIN)/coldload $(HALBIN)/ivplot $(HALBIN)/ivplot8
+VPATH=$(COMMONLIB)
+
+testtek: testtek.o tek_driv.o
+	$(CC) $^ -o $@
+
+testtek.o: testtek.c tek_driv.h
+	$(CC) -c $< -o $@
+
+coldload.o: coldload.c coldload.h stripchart.h
+	$(CC) -I$(COMMONINC) -c $< -o $@
+
+$(HALBIN)/coldload: stripchart_sub.o tek_driv.o rm.o coldload.o
+	$(CC) -L$(COMMONLIB) -lm $^ -lsmapopt -o $@
+
+stripchart_sub.o: stripchart.c tek_driv.h stripchart.h coldload.h
+	$(CC) -DUSE_AS_SUBROUTINE -I$(COMMONINC) -c $< -o $@
+
+$(HALBIN)/stripchart.test: stripchart.o tek_driv.o rm.o
+	$(CC) -L$(COMMONLIB) -lm $^ -lsmapopt -o $@
+
+$(HALBIN)/stripchart: stripchart.o tek_driv.o rm.o
+	$(CC) -L$(COMMONLIB) -lm $^ -lsmapopt -o $@
+
+stripchart.o: stripchart.c tek_driv.h stripchart.h
+	$(CC) -I$(COMMONINC) -c $< -o $@
+
+$(HALBIN)/ivplot: ivplot_standalone.o tek_driv.o
+	$(CC) -L$(COMMONLIB) -lm $^ -lsmapopt -o $@
+
+ivplot_standalone.o: ivplot.c tek_driv.h
+	$(CC) -I$(COMMONINC) -c $< -o $@
+
+$(HALBIN)/ivplot8: ivplot8.o tek_driv.o rm.o
+	$(CC) -L$(COMMONLIB) -lm $^ -lsmapopt -o $@
+
+ivplot8.o: ivplot8.c tek_driv.h
+	$(CC) -I$(COMMONINC) -c $< -o $@
+
+tek_driv.o: tek_driv.c tek_driv.h
+	$(CC) -c $< -o $@
+#

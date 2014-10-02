@@ -1,0 +1,11 @@
+#!/bin/tcsh -vf
+while(1)
+radio -a 4
+wait
+lotsOfScans -a 4 -s saturn -p -t 1
+wait
+optical -a 4
+wait
+snapshot -a 4
+wait
+end

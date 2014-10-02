@@ -1,0 +1,2000 @@
+Thu Jul  7 08:03:47 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:03:54 2005 (shostler): optical -a 8 
+Thu Jul  7 08:03:55 2005 (shostler): observe -a 8 -s hip55219 
+Thu Jul  7 08:03:55 2005 (shostler): antennaWait -a 8 -s hip55219 -e 2 
+Thu Jul 07 08:04:05 2005 (shostler): .//snapshot -a 8 -s 100 -c 
+Thu Jul  7 08:04:06 2005 (shostler): c90cmd -a 8 -c snapshot -e 100 -c 
+Thu Jul  7 08:04:12 2005 (shostler): optical -a 8 
+Thu Jul  7 08:04:13 2005 (shostler): observe -a 8 -s hip54537 
+Thu Jul  7 08:04:13 2005 (shostler): antennaWait -a 8 -s hip54537 -e 2 
+Thu Jul 07 08:04:23 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:04:23 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:04:32 2005 (shostler): optical -a 8 
+Thu Jul  7 08:04:33 2005 (shostler): observe -a 8 -s hip52425 
+Thu Jul  7 08:04:33 2005 (shostler): antennaWait -a 8 -s hip52425 -e 2 
+Thu Jul 07 08:04:46 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 08:04:46 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 08:04:54 2005 (shostler): optical -a 8 
+Thu Jul  7 08:04:55 2005 (shostler): observe -a 8 -s hip11767 
+Thu Jul  7 08:04:56 2005 (shostler): antennaWait -a 8 -s hip11767 -e 2 
+Thu Jul 07 08:05:08 2005 (shostler): .//snapshot -a 8 -s 50 -c 
+Thu Jul  7 08:05:09 2005 (shostler): c90cmd -a 8 -c snapshot -e 50 -c 
+Thu Jul  7 08:05:16 2005 (shostler): optical -a 8 
+Thu Jul  7 08:05:17 2005 (shostler): observe -a 8 -s hip110725 
+Thu Jul  7 08:05:17 2005 (shostler): antennaWait -a 8 -s hip110725 -e 2 
+Thu Jul 07 08:05:31 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:05:31 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:05:38 2005 (shostler): optical -a 8 
+Thu Jul  7 08:05:40 2005 (shostler): observe -a 8 -s hip108924 
+Thu Jul  7 08:05:40 2005 (shostler): antennaWait -a 8 -s hip108924 -e 2 
+Thu Jul 07 08:05:49 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:05:50 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:05:58 2005 (shostler): optical -a 8 
+Thu Jul  7 08:05:59 2005 (shostler): observe -a 8 -s hip109102 
+Thu Jul  7 08:05:59 2005 (shostler): antennaWait -a 8 -s hip109102 -e 2 
+Thu Jul 07 08:06:13 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:06:13 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:06:21 2005 (shostler): optical -a 8 
+Thu Jul  7 08:06:22 2005 (shostler): observe -a 8 -s hip109654 
+Thu Jul  7 08:06:22 2005 (shostler): antennaWait -a 8 -s hip109654 -e 2 
+Thu Jul 07 08:06:32 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:06:32 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:06:39 2005 (shostler): optical -a 8 
+Thu Jul  7 08:06:41 2005 (shostler): observe -a 8 -s hip107472 
+Thu Jul  7 08:06:41 2005 (shostler): antennaWait -a 8 -s hip107472 -e 2 
+Thu Jul 07 08:06:50 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:06:51 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:06:59 2005 (shostler): optical -a 8 
+Thu Jul  7 08:07:00 2005 (shostler): observe -a 8 -s hip107151 
+Thu Jul  7 08:07:00 2005 (shostler): antennaWait -a 8 -s hip107151 -e 2 
+Thu Jul 07 08:07:14 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:07:14 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:07:22 2005 (shostler): optical -a 8 
+Thu Jul  7 08:07:23 2005 (shostler): observe -a 8 -s hip105767 
+Thu Jul  7 08:07:23 2005 (shostler): antennaWait -a 8 -s hip105767 -e 2 
+Thu Jul 07 08:07:34 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:07:34 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:07:42 2005 (shostler): optical -a 8 
+Thu Jul  7 08:07:43 2005 (shostler): observe -a 8 -s hip103401 
+Thu Jul  7 08:07:43 2005 (shostler): antennaWait -a 8 -s hip103401 -e 2 
+Thu Jul 07 08:07:52 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:07:53 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:08:00 2005 (shostler): optical -a 8 
+Thu Jul  7 08:08:01 2005 (shostler): observe -a 8 -s hip101984 
+Thu Jul  7 08:08:02 2005 (shostler): antennaWait -a 8 -s hip101984 -e 2 
+Thu Jul 07 08:08:11 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:08:12 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:08:19 2005 (shostler): optical -a 8 
+Thu Jul  7 08:08:20 2005 (shostler): observe -a 8 -s hip99825 
+Thu Jul  7 08:08:20 2005 (shostler): antennaWait -a 8 -s hip99825 -e 2 
+Thu Jul 07 08:08:30 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:08:31 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:08:38 2005 (shostler): optical -a 8 
+Thu Jul  7 08:08:39 2005 (shostler): observe -a 8 -s hip98842 
+Thu Jul  7 08:08:39 2005 (shostler): antennaWait -a 8 -s hip98842 -e 2 
+Thu Jul 07 08:08:49 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 08:08:49 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 08:08:56 2005 (shostler): optical -a 8 
+Thu Jul  7 08:08:57 2005 (shostler): observe -a 8 -s hip94160 
+Thu Jul  7 08:08:57 2005 (shostler): antennaWait -a 8 -s hip94160 -e 2 
+Thu Jul 07 08:09:07 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 08:09:07 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 08:09:14 2005 (shostler): optical -a 8 
+Thu Jul  7 08:09:15 2005 (shostler): observe -a 8 -s hip90414 
+Thu Jul  7 08:09:15 2005 (shostler): antennaWait -a 8 -s hip90414 -e 2 
+Thu Jul 07 08:09:25 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:09:25 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:09:32 2005 (shostler): optical -a 8 
+Thu Jul  7 08:09:33 2005 (shostler): observe -a 8 -s hip86248 
+Thu Jul  7 08:09:34 2005 (shostler): antennaWait -a 8 -s hip86248 -e 2 
+Thu Jul 07 08:09:43 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:09:44 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:09:52 2005 (shostler): optical -a 8 
+Thu Jul  7 08:09:53 2005 (shostler): observe -a 8 -s hip76935 
+Thu Jul  7 08:09:53 2005 (shostler): antennaWait -a 8 -s hip76935 -e 2 
+Thu Jul 07 08:10:07 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:10:07 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:10:15 2005 (shostler): optical -a 8 
+Thu Jul  7 08:10:16 2005 (shostler): observe -a 8 -s hip70987 
+Thu Jul  7 08:10:16 2005 (shostler): antennaWait -a 8 -s hip70987 -e 2 
+Thu Jul 07 08:10:29 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:10:30 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul 07 08:10:37 2005 (shostler): .//azelstar -a 8 -e 70 -w 5 -n 1 -d ccw -c 
+Thu Jul  7 08:10:38 2005 (shostler): optical -a 8 
+Thu Jul  7 08:10:39 2005 (shostler): observe -a 8 -s hip79120 
+Thu Jul  7 08:10:39 2005 (shostler): antennaWait -a 8 -s hip79120 -e 2 
+Thu Jul 07 08:11:09 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:11:10 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:11:17 2005 (shostler): optical -a 8 
+Thu Jul  7 08:11:18 2005 (shostler): observe -a 8 -s hip80693 
+Thu Jul  7 08:11:18 2005 (shostler): antennaWait -a 8 -s hip80693 -e 2 
+Thu Jul 07 08:11:32 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:11:32 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:11:40 2005 (shostler): optical -a 8 
+Thu Jul  7 08:11:41 2005 (shostler): observe -a 8 -s hip81300 
+Thu Jul  7 08:11:41 2005 (shostler): antennaWait -a 8 -s hip81300 -e 2 
+Thu Jul 07 08:11:51 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:11:51 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:11:59 2005 (shostler): optical -a 8 
+Thu Jul  7 08:12:00 2005 (shostler): observe -a 8 -s hip84514 
+Thu Jul  7 08:12:01 2005 (shostler): antennaWait -a 8 -s hip84514 -e 2 
+Thu Jul 07 08:12:14 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 08:12:15 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 08:12:21 2005 (root): monitor 
+Thu Jul  7 08:12:22 2005 (shostler): optical -a 8 
+Thu Jul  7 08:12:23 2005 (shostler): observe -a 8 -s hip84514 
+Thu Jul  7 08:12:24 2005 (shostler): antennaWait -a 8 -s hip84514 -e 2 
+Thu Jul 07 08:12:27 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 08:12:28 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 08:12:34 2005 (shostler): optical -a 8 
+Thu Jul  7 08:12:35 2005 (shostler): observe -a 8 -s hip85355 
+Thu Jul  7 08:12:35 2005 (shostler): antennaWait -a 8 -s hip85355 -e 2 
+		Repetition 1:
+		Ant 1	AzOff =   8.0	ElOff =  -1.1	deltaAz =  -0.9	deltaEl =  -5.3
+		Ant 2	AzOff =   5.2	ElOff =  -2.7	deltaAz =  -4.3	deltaEl =  -6.9
+		Ant 3	AzOff =   5.7	ElOff =  -8.5	deltaAz =  -2.2	deltaEl =  -5.8
+		Ant 4	AzOff =   1.8	ElOff =  -3.6	deltaAz =  -4.6	deltaEl =  -1.4
+		Ant 5	AzOff =   8.1	ElOff =   5.6	deltaAz =   4.0	deltaEl =  -1.1
+		Ant 6	AzOff =   3.9	ElOff =  -6.5	deltaAz =  -6.9	deltaEl =  -9.4
+		Ant 7	AzOff =   9.6	ElOff =   7.9	deltaAz =  -0.1	deltaEl =  -3.1
+		Repetition 2:
+		Ant 1	AzOff =   6.1	ElOff =   3.5	deltaAz =  -2.8	deltaEl =  -0.7
+		Ant 2	AzOff =   8.8	ElOff =  -4.9	deltaAz =  -0.7	deltaEl =  -9.1
+		Ant 3	AzOff =   3.6	ElOff =  -9.6	deltaAz =  -4.3	deltaEl =  -6.9
+		Ant 4	AzOff =   5.7	ElOff =  -1.9	deltaAz =  -0.7	deltaEl =   0.3
+		Ant 5	AzOff =   6.5	ElOff =   1.3	deltaAz =   2.4	deltaEl =  -5.4
+		Ant 6	AzOff =   2.9	ElOff =  -6.9	deltaAz =  -7.9	deltaEl =  -9.8
+		Ant 7	AzOff =   8.7	ElOff =   4.6	deltaAz =  -1.0	deltaEl =  -6.4
+		Average:
+		Ant 1	AzOff =   7.1	ElOff =   1.2	deltaAz =  -1.8	deltaEl =  -3.0
+		Ant 2	AzOff =   7.0	ElOff =  -3.8	deltaAz =  -2.5	deltaEl =  -8.0
+		Ant 3	AzOff =   4.7	ElOff =  -9.1	deltaAz =  -3.2	deltaEl =  -6.4
+		Ant 4	AzOff =   3.7	ElOff =  -2.7	deltaAz =  -2.7	deltaEl =  -0.5
+		Ant 5	AzOff =   7.3	ElOff =   3.5	deltaAz =   3.2	deltaEl =  -3.2
+		Ant 6	AzOff =   3.4	ElOff =  -6.7	deltaAz =  -7.4	deltaEl =  -9.6
+		Ant 7	AzOff =   9.2	ElOff =   6.3	deltaAz =  -0.5	deltaEl =  -4.7
+Thu Jul 07 08:12:45 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 08:12:46 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 08:12:53 2005 (shostler): optical -a 8 
+Thu Jul  7 08:12:54 2005 (shostler): observe -a 8 -s hip86742 
+Thu Jul  7 08:12:54 2005 (shostler): antennaWait -a 8 -s hip86742 -e 2 
+Thu Jul 07 08:13:04 2005 (shostler): .//snapshot -a 8 -s 100 -c 
+Thu Jul  7 08:13:05 2005 (shostler): c90cmd -a 8 -c snapshot -e 100 -c 
+Thu Jul  7 08:13:13 2005 (shostler): optical -a 8 
+Thu Jul  7 08:13:15 2005 (shostler): observe -a 8 -s hip90067 
+Thu Jul  7 08:13:15 2005 (shostler): antennaWait -a 8 -s hip90067 -e 2 
+Thu Jul 07 08:13:33 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:13:33 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:13:40 2005 (shostler): optical -a 8 
+Thu Jul  7 08:13:42 2005 (shostler): observe -a 8 -s hip89773 
+Thu Jul  7 08:13:42 2005 (shostler): antennaWait -a 8 -s hip89773 -e 2 
+Thu Jul 07 08:13:52 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:13:52 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:13:59 2005 (shostler): optical -a 8 
+Thu Jul  7 08:14:00 2005 (shostler): observe -a 8 -s hip89773 
+Thu Jul  7 08:14:01 2005 (shostler): antennaWait -a 8 -s hip89773 -e 2 
+Thu Jul 07 08:14:04 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:14:05 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:14:12 2005 (shostler): optical -a 8 
+Thu Jul  7 08:14:13 2005 (shostler): observe -a 8 -s hip89827 
+Thu Jul  7 08:14:14 2005 (shostler): antennaWait -a 8 -s hip89827 -e 2 
+Thu Jul  7 08:14:15 2005 (shostler): observe -s jupiter 
+Thu Jul 07 08:14:23 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:14:24 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:14:31 2005 (shostler): optical -a 8 
+Thu Jul  7 08:14:32 2005 (shostler): observe -a 8 -s hip87933 
+Thu Jul  7 08:14:32 2005 (shostler): antennaWait -a 8 -s hip87933 -e 2 
+Thu Jul 07 08:14:42 2005 (shostler): .//snapshot -a 8 -s 100 -c 
+Thu Jul  7 08:14:43 2005 (shostler): c90cmd -a 8 -c snapshot -e 100 -c 
+Thu Jul  7 08:14:49 2005 (shostler): optical -a 8 
+Thu Jul  7 08:14:50 2005 (shostler): observe -a 8 -s hip88190 
+Thu Jul  7 08:14:50 2005 (shostler): antennaWait -a 8 -s hip88190 -e 2 
+Thu Jul 07 08:15:00 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:15:01 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:15:08 2005 (shostler): optical -a 8 
+Thu Jul  7 08:15:09 2005 (shostler): observe -a 8 -s hip87808 
+Thu Jul  7 08:15:09 2005 (shostler): antennaWait -a 8 -s hip87808 -e 2 
+Thu Jul 07 08:15:19 2005 (shostler): .//snapshot -a 8 -s 100 -c 
+Thu Jul  7 08:15:20 2005 (shostler): c90cmd -a 8 -c snapshot -e 100 -c 
+Thu Jul  7 08:15:27 2005 (shostler): optical -a 8 
+Thu Jul  7 08:15:28 2005 (shostler): observe -a 8 -s hip83947 
+Thu Jul  7 08:15:28 2005 (shostler): antennaWait -a 8 -s hip83947 -e 2 
+Thu Jul 07 08:15:42 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:15:42 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:15:49 2005 (shostler): optical -a 8 
+Thu Jul  7 08:15:51 2005 (shostler): observe -a 8 -s hip82172 
+Thu Jul  7 08:15:51 2005 (shostler): antennaWait -a 8 -s hip82172 -e 2 
+Thu Jul 07 08:16:01 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:16:01 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:16:08 2005 (shostler): optical -a 8 
+Thu Jul  7 08:16:10 2005 (shostler): observe -a 8 -s hip80704 
+Thu Jul  7 08:16:10 2005 (shostler): antennaWait -a 8 -s hip80704 -e 2 
+Thu Jul  7 08:16:15 2005 (shostler): observe -s 1733-130 
+Thu Jul  7 08:16:17 2005 (shostler): tsys 
+Thu Jul 07 08:16:19 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 08:16:20 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 08:16:27 2005 (shostler): optical -a 8 
+Thu Jul  7 08:16:28 2005 (shostler): observe -a 8 -s hip79358 
+Thu Jul  7 08:16:29 2005 (shostler): antennaWait -a 8 -s hip79358 -e 2 
+Thu Jul 07 08:16:38 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:16:39 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:16:46 2005 (shostler): optical -a 8 
+Thu Jul  7 08:16:47 2005 (shostler): observe -a 8 -s hip78276 
+Thu Jul  7 08:16:47 2005 (shostler): antennaWait -a 8 -s hip78276 -e 2 
+Thu Jul 07 08:16:57 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:16:58 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:17:05 2005 (shostler): optical -a 8 
+Thu Jul  7 08:17:06 2005 (shostler): observe -a 8 -s hip77655 
+Thu Jul  7 08:17:06 2005 (shostler): antennaWait -a 8 -s hip77655 -e 2 
+Thu Jul  7 08:17:09 2005 (shostler): integrate -s 10 
+Thu Jul 07 08:17:16 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 08:17:17 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 08:17:24 2005 (shostler): optical -a 8 
+Thu Jul  7 08:17:25 2005 (shostler): observe -a 8 -s hip75674 
+Thu Jul  7 08:17:26 2005 (shostler): antennaWait -a 8 -s hip75674 -e 2 
+Thu Jul 07 08:17:39 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:17:40 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:17:49 2005 (shostler): optical -a 8 
+Thu Jul  7 08:17:50 2005 (shostler): observe -a 8 -s hip76372 
+Thu Jul  7 08:17:50 2005 (shostler): antennaWait -a 8 -s hip76372 -e 2 
+Thu Jul 07 08:18:07 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:18:08 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:18:16 2005 (shostler): optical -a 8 
+Thu Jul  7 08:18:17 2005 (shostler): observe -a 8 -s hip78442 
+Thu Jul  7 08:18:17 2005 (shostler): antennaWait -a 8 -s hip78442 -e 2 
+Thu Jul 07 08:18:31 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:18:31 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:18:39 2005 (shostler): optical -a 8 
+Thu Jul  7 08:18:40 2005 (shostler): observe -a 8 -s hip78442 
+Thu Jul  7 08:18:40 2005 (shostler): antennaWait -a 8 -s hip78442 -e 2 
+Thu Jul 07 08:18:44 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:18:44 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul 07 08:18:52 2005 (shostler): .//azelstar -z 0 -d up -w 5 -n 1 -a 8 -c 
+Thu Jul  7 08:18:53 2005 (shostler): optical -a 8 
+Thu Jul  7 08:18:54 2005 (shostler): observe -a 8 -s hip5372 
+Thu Jul  7 08:18:54 2005 (shostler): antennaWait -a 8 -s hip5372 -e 2 
+Thu Jul 07 08:19:35 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 08:19:35 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 08:19:43 2005 (shostler): optical -a 8 
+Thu Jul  7 08:19:44 2005 (shostler): observe -a 8 -s hip84769 
+Thu Jul  7 08:19:45 2005 (shostler): antennaWait -a 8 -s hip84769 -e 2 
+Thu Jul 07 08:19:54 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:19:55 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:20:04 2005 (shostler): optical -a 8 
+Thu Jul  7 08:20:05 2005 (shostler): observe -a 8 -s hip81660 
+Thu Jul  7 08:20:05 2005 (shostler): antennaWait -a 8 -s hip81660 -e 2 
+Thu Jul 07 08:20:18 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 08:20:18 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 08:20:25 2005 (shostler): optical -a 8 
+Thu Jul  7 08:20:26 2005 (shostler): observe -a 8 -s hip83138 
+Thu Jul  7 08:20:26 2005 (shostler): antennaWait -a 8 -s hip83138 -e 2 
+Thu Jul 07 08:20:36 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:20:37 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:20:45 2005 (shostler): optical -a 8 
+Thu Jul  7 08:20:46 2005 (shostler): observe -a 8 -s hip82611 
+Thu Jul  7 08:20:46 2005 (shostler): antennaWait -a 8 -s hip82611 -e 2 
+Thu Jul 07 08:20:56 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:20:56 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:21:04 2005 (shostler): optical -a 8 
+Thu Jul  7 08:21:05 2005 (shostler): observe -a 8 -s hip83947 
+Thu Jul  7 08:21:05 2005 (shostler): antennaWait -a 8 -s hip83947 -e 2 
+Thu Jul 07 08:21:15 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:21:15 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:21:23 2005 (shostler): optical -a 8 
+Thu Jul  7 08:21:24 2005 (shostler): observe -a 8 -s hip84380 
+Thu Jul  7 08:21:24 2005 (shostler): antennaWait -a 8 -s hip84380 -e 2 
+Thu Jul 07 08:21:34 2005 (shostler): .//snapshot -a 8 -s 100 -c 
+Thu Jul  7 08:21:34 2005 (shostler): c90cmd -a 8 -c snapshot -e 100 -c 
+Thu Jul 07 08:21:41 2005 (shostler): .//azelstar -z 30 -d down -w 5 -n 1 -a 8 -c 
+Thu Jul  7 08:21:43 2005 (shostler): optical -a 8 
+Thu Jul  7 08:21:44 2005 (shostler): observe -a 8 -s hip86462 
+Thu Jul  7 08:21:44 2005 (shostler): antennaWait -a 8 -s hip86462 -e 2 
+Thu Jul 07 08:21:58 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:21:58 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:22:06 2005 (shostler): optical -a 8 
+Thu Jul  7 08:22:08 2005 (shostler): observe -a 8 -s hip87445 
+Thu Jul  7 08:22:08 2005 (shostler): antennaWait -a 8 -s hip87445 -e 2 
+Thu Jul 07 08:22:18 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:22:18 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:22:22 2005 (shostler): lookup -s 1733-130 
+Thu Jul  7 08:22:25 2005 (shostler): lookup -s 1924-292 
+Thu Jul  7 08:22:27 2005 (shostler): lookup -s 1924-292 
+Thu Jul  7 08:22:29 2005 (shostler): optical -a 8 
+Thu Jul  7 08:22:29 2005 (shostler): observe -s 1924-292 
+Thu Jul  7 08:22:30 2005 (shostler): observe -a 8 -s hip94013 
+Thu Jul  7 08:22:30 2005 (shostler): antennaWait -a 8 -s hip94013 -e 2 
+Thu Jul  7 08:22:30 2005 (shostler): tsys 
+Thu Jul  7 08:22:41 2005 (shostler): integrate -s 4 -w 
+Thu Jul 07 08:22:44 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:22:44 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:22:52 2005 (shostler): optical -a 8 
+Thu Jul  7 08:22:54 2005 (shostler): observe -a 8 -s hip99663 
+Thu Jul  7 08:22:54 2005 (shostler): antennaWait -a 8 -s hip99663 -e 2 
+Thu Jul 07 08:23:08 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:23:08 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:23:15 2005 (shostler): optical -a 8 
+Thu Jul  7 08:23:16 2005 (shostler): observe -a 8 -s hip102422 
+Thu Jul  7 08:23:17 2005 (shostler): antennaWait -a 8 -s hip102422 -e 2 
+Thu Jul 07 08:23:22 2005 (shostler): .//snapshot -a 8 -s 100 -c 
+Thu Jul  7 08:23:23 2005 (shostler): c90cmd -a 8 -c snapshot -e 100 -c 
+Thu Jul  7 08:23:30 2005 (shostler): optical -a 8 
+Thu Jul  7 08:23:31 2005 (shostler): observe -a 8 -s hip107586 
+Thu Jul  7 08:23:32 2005 (shostler): antennaWait -a 8 -s hip107586 -e 2 
+Thu Jul 07 08:23:41 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:23:42 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:23:49 2005 (shostler): optical -a 8 
+Thu Jul  7 08:23:50 2005 (shostler): observe -a 8 -s hip108317 
+Thu Jul  7 08:23:50 2005 (shostler): antennaWait -a 8 -s hip108317 -e 2 
+Thu Jul 07 08:24:00 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:24:01 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:24:08 2005 (shostler): optical -a 8 
+Thu Jul  7 08:24:09 2005 (shostler): observe -a 8 -s hip112998 
+Thu Jul  7 08:24:10 2005 (shostler): antennaWait -a 8 -s hip112998 -e 2 
+Thu Jul 07 08:24:19 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:24:20 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul 07 08:24:27 2005 (shostler): .//azelstar -z 60 -d up -w 5 -n 1 -a 8 -c 
+Thu Jul  7 08:24:28 2005 (shostler): optical -a 8 
+Thu Jul  7 08:24:30 2005 (shostler): observe -a 8 -s hip110873 
+Thu Jul  7 08:24:30 2005 (shostler): antennaWait -a 8 -s hip110873 -e 2 
+Thu Jul 07 08:24:43 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:24:44 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:24:51 2005 (shostler): optical -a 8 
+Thu Jul  7 08:24:53 2005 (shostler): observe -a 8 -s hip109654 
+Thu Jul  7 08:24:53 2005 (shostler): antennaWait -a 8 -s hip109654 -e 2 
+Thu Jul 07 08:25:02 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:25:03 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:25:11 2005 (shostler): optical -a 8 
+Thu Jul  7 08:25:13 2005 (shostler): observe -a 8 -s hip102488 
+Thu Jul  7 08:25:13 2005 (shostler): antennaWait -a 8 -s hip102488 -e 2 
+Thu Jul  7 08:25:18 2005 (shostler): lookup -s 1733-130 
+Thu Jul  7 08:25:19 2005 (shostler): lookup -s 1924-292 
+Thu Jul  7 08:25:20 2005 (shostler): lookup -s gc_21b -r 17:45:38.63 -d -28:59:50.60 -e 2000 -v 0 
+Thu Jul  7 08:25:20 2005 (shostler): observe -s gc_21b -r 17:45:38.63 -d -28:59:50.60 -e 2000 -v 0 
+Thu Jul  7 08:25:21 2005 (shostler): tsys 
+Thu Jul 07 08:25:28 2005 (shostler): .//snapshot -a 8 -s 100 -c 
+Thu Jul  7 08:25:28 2005 (shostler): c90cmd -a 8 -c snapshot -e 100 -c 
+Thu Jul  7 08:25:34 2005 (shostler): integrate -s 8 -w 
+Thu Jul  7 08:25:35 2005 (shostler): optical -a 8 
+Thu Jul  7 08:25:36 2005 (shostler): observe -a 8 -s hip101474 
+Thu Jul  7 08:25:36 2005 (shostler): antennaWait -a 8 -s hip101474 -e 2 
+Thu Jul 07 08:25:42 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 08:25:42 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 08:25:50 2005 (shostler): optical -a 8 
+Thu Jul  7 08:25:51 2005 (shostler): observe -a 8 -s hip98110 
+Thu Jul  7 08:25:51 2005 (shostler): antennaWait -a 8 -s hip98110 -e 2 
+Thu Jul 07 08:26:02 2005 (shostler): .//snapshot -a 8 -s 100 -c 
+Thu Jul  7 08:26:02 2005 (shostler): c90cmd -a 8 -c snapshot -e 100 -c 
+Thu Jul  7 08:26:09 2005 (shostler): optical -a 8 
+Thu Jul  7 08:26:10 2005 (shostler): observe -a 8 -s hip94630 
+Thu Jul  7 08:26:10 2005 (shostler): antennaWait -a 8 -s hip94630 -e 2 
+Thu Jul 07 08:26:20 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:26:21 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:26:28 2005 (shostler): optical -a 8 
+Thu Jul  7 08:26:29 2005 (shostler): observe -a 8 -s hip93279 
+Thu Jul  7 08:26:29 2005 (shostler): antennaWait -a 8 -s hip93279 -e 2 
+Thu Jul 07 08:26:39 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 08:26:39 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 08:26:47 2005 (shostler): optical -a 8 
+Thu Jul  7 08:26:49 2005 (shostler): observe -a 8 -s hip89827 
+Thu Jul  7 08:26:49 2005 (shostler): antennaWait -a 8 -s hip89827 -e 2 
+Thu Jul 07 08:26:58 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:26:59 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:27:06 2005 (shostler): optical -a 8 
+Thu Jul  7 08:27:07 2005 (shostler): observe -a 8 -s hip87194 
+Thu Jul  7 08:27:08 2005 (shostler): antennaWait -a 8 -s hip87194 -e 2 
+Thu Jul 07 08:27:17 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:27:18 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul 07 08:27:25 2005 (shostler): .//azelstar -z 90 -d down -w 5 -n 1 -a 8 -c 
+Thu Jul  7 08:27:28 2005 (shostler): optical -a 8 
+Thu Jul  7 08:27:29 2005 (shostler): observe -a 8 -s hip90067 
+Thu Jul  7 08:27:29 2005 (shostler): antennaWait -a 8 -s hip90067 -e 2 
+Thu Jul 07 08:27:47 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:27:47 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:27:55 2005 (shostler): optical -a 8 
+Thu Jul  7 08:27:56 2005 (shostler): observe -a 8 -s hip92937 
+Thu Jul  7 08:27:57 2005 (shostler): antennaWait -a 8 -s hip92937 -e 2 
+Thu Jul 07 08:28:06 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:28:07 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:28:14 2005 (shostler): optical -a 8 
+Thu Jul  7 08:28:15 2005 (shostler): observe -a 8 -s hip95822 
+Thu Jul  7 08:28:15 2005 (shostler): antennaWait -a 8 -s hip95822 -e 2 
+Thu Jul 07 08:28:26 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:28:27 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:28:36 2005 (shostler): optical -a 8 
+Thu Jul  7 08:28:37 2005 (shostler): observe -a 8 -s hip101882 
+Thu Jul  7 08:28:37 2005 (shostler): antennaWait -a 8 -s hip101882 -e 2 
+Thu Jul 07 08:28:51 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:28:51 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:28:59 2005 (shostler): optical -a 8 
+Thu Jul  7 08:29:00 2005 (shostler): observe -a 8 -s hip105224 
+Thu Jul  7 08:29:00 2005 (shostler): antennaWait -a 8 -s hip105224 -e 2 
+Thu Jul 07 08:29:10 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:29:11 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:29:18 2005 (shostler): optical -a 8 
+Thu Jul  7 08:29:19 2005 (shostler): observe -a 8 -s hip107151 
+Thu Jul  7 08:29:19 2005 (shostler): antennaWait -a 8 -s hip107151 -e 2 
+Thu Jul 07 08:29:29 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:29:30 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:29:37 2005 (shostler): optical -a 8 
+Thu Jul  7 08:29:38 2005 (shostler): observe -a 8 -s hip108699 
+Thu Jul  7 08:29:38 2005 (shostler): antennaWait -a 8 -s hip108699 -e 2 
+Thu Jul 07 08:29:48 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:29:49 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul 07 08:29:56 2005 (shostler): .//azelstar -z 120 -d up -w 5 -n 1 -a 8 -c 
+Thu Jul  7 08:29:57 2005 (shostler): optical -a 8 
+Thu Jul  7 08:29:58 2005 (shostler): lookup -s gc_22b -r 17:45:40.00 -d -28:59:50.60 -e 2000 -v 0 
+Thu Jul  7 08:29:58 2005 (shostler): observe -s gc_22b -r 17:45:40.00 -d -28:59:50.60 -e 2000 -v 0 
+Thu Jul  7 08:29:59 2005 (shostler): observe -a 8 -s hip104963 
+Thu Jul  7 08:29:59 2005 (shostler): antennaWait -a 8 -s hip104963 -e 2 
+Thu Jul  7 08:29:59 2005 (shostler): tsys 
+Thu Jul  7 08:30:10 2005 (shostler): integrate -s 8 -w 
+Thu Jul 07 08:30:12 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:30:13 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:30:20 2005 (shostler): optical -a 8 
+Thu Jul  7 08:30:22 2005 (shostler): observe -a 8 -s hip103226 
+Thu Jul  7 08:30:22 2005 (shostler): antennaWait -a 8 -s hip103226 -e 2 
+Thu Jul 07 08:30:31 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:30:32 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:30:39 2005 (shostler): optical -a 8 
+Thu Jul  7 08:30:40 2005 (shostler): observe -a 8 -s hip102026 
+Thu Jul  7 08:30:41 2005 (shostler): antennaWait -a 8 -s hip102026 -e 2 
+Thu Jul 07 08:30:46 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:30:47 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:30:55 2005 (shostler): optical -a 8 
+Thu Jul  7 08:30:56 2005 (shostler): observe -a 8 -s hip97928 
+Thu Jul  7 08:30:57 2005 (shostler): antennaWait -a 8 -s hip97928 -e 2 
+Thu Jul 07 08:31:10 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:31:11 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:31:18 2005 (shostler): optical -a 8 
+Thu Jul  7 08:31:19 2005 (shostler): observe -a 8 -s hip95937 
+Thu Jul  7 08:31:20 2005 (shostler): antennaWait -a 8 -s hip95937 -e 2 
+Thu Jul 07 08:31:29 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 08:31:30 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 08:31:37 2005 (shostler): optical -a 8 
+Thu Jul  7 08:31:38 2005 (shostler): observe -a 8 -s hip94885 
+Thu Jul  7 08:31:38 2005 (shostler): antennaWait -a 8 -s hip94885 -e 2 
+Thu Jul 07 08:31:48 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:31:49 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul 07 08:31:59 2005 (shostler): .//azelstar -z 150 -d down -w 5 -n 1 -a 8 -c 
+Thu Jul  7 08:32:01 2005 (shostler): optical -a 8 
+Thu Jul  7 08:32:03 2005 (shostler): observe -a 8 -s hip86742 
+Thu Jul  7 08:32:03 2005 (shostler): antennaWait -a 8 -s hip86742 -e 2 
+Thu Jul 07 08:32:21 2005 (shostler): .//snapshot -a 8 -s 100 -c 
+Thu Jul  7 08:32:21 2005 (shostler): c90cmd -a 8 -c snapshot -e 100 -c 
+Thu Jul  7 08:32:28 2005 (shostler): optical -a 8 
+Thu Jul  7 08:32:29 2005 (shostler): observe -a 8 -s hip87491 
+Thu Jul  7 08:32:29 2005 (shostler): antennaWait -a 8 -s hip87491 -e 2 
+Thu Jul 07 08:32:39 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:32:39 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:32:46 2005 (shostler): optical -a 8 
+Thu Jul  7 08:32:48 2005 (shostler): observe -a 8 -s hip88101 
+Thu Jul  7 08:32:48 2005 (shostler): antennaWait -a 8 -s hip88101 -e 2 
+Thu Jul 07 08:32:57 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:32:58 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:33:05 2005 (shostler): optical -a 8 
+Thu Jul  7 08:33:06 2005 (shostler): observe -a 8 -s hip90135 
+Thu Jul  7 08:33:07 2005 (shostler): antennaWait -a 8 -s hip90135 -e 2 
+Thu Jul 07 08:33:16 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 08:33:17 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 08:33:24 2005 (shostler): optical -a 8 
+Thu Jul  7 08:33:25 2005 (shostler): observe -a 8 -s hip90913 
+Thu Jul  7 08:33:25 2005 (shostler): antennaWait -a 8 -s hip90913 -e 2 
+Thu Jul 07 08:33:35 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:33:36 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:33:43 2005 (shostler): optical -a 8 
+Thu Jul  7 08:33:44 2005 (shostler): observe -a 8 -s hip90687 
+Thu Jul  7 08:33:44 2005 (shostler): antennaWait -a 8 -s hip90687 -e 2 
+Thu Jul 07 08:33:54 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:33:54 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:34:02 2005 (shostler): optical -a 8 
+Thu Jul  7 08:34:03 2005 (shostler): observe -a 8 -s hip92111 
+Thu Jul  7 08:34:03 2005 (shostler): antennaWait -a 8 -s hip92111 -e 2 
+Thu Jul 07 08:34:13 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:34:14 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:34:21 2005 (shostler): optical -a 8 
+Thu Jul  7 08:34:22 2005 (shostler): observe -a 8 -s hip93498 
+Thu Jul  7 08:34:22 2005 (shostler): antennaWait -a 8 -s hip93498 -e 2 
+Thu Jul 07 08:34:32 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:34:32 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:34:36 2005 (shostler): lookup -s gc_23b -r 17:45:41.37 -d -28:59:50.60 -e 2000 -v 0 
+Thu Jul  7 08:34:36 2005 (shostler): observe -s gc_23b -r 17:45:41.37 -d -28:59:50.60 -e 2000 -v 0 
+Thu Jul  7 08:34:39 2005 (shostler): tsys 
+Thu Jul  7 08:34:40 2005 (shostler): optical -a 8 
+Thu Jul  7 08:34:41 2005 (shostler): observe -a 8 -s hip93864 
+Thu Jul  7 08:34:41 2005 (shostler): antennaWait -a 8 -s hip93864 -e 2 
+Thu Jul 07 08:34:47 2005 (shostler): .//snapshot -a 8 -s 100 -c 
+Thu Jul  7 08:34:47 2005 (shostler): c90cmd -a 8 -c snapshot -e 100 -c 
+Thu Jul  7 08:34:50 2005 (shostler): integrate -s 8 -w 
+Thu Jul  7 08:34:55 2005 (shostler): optical -a 8 
+Thu Jul  7 08:34:56 2005 (shostler): observe -a 8 -s hip98032 
+Thu Jul  7 08:34:56 2005 (shostler): antennaWait -a 8 -s hip98032 -e 2 
+Thu Jul 07 08:35:10 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 08:35:11 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul 07 08:35:18 2005 (shostler): .//azelstar -z 180 -d up -w 5 -n 1 -a 8 -c 
+Thu Jul  7 08:35:19 2005 (shostler): optical -a 8 
+Thu Jul  7 08:35:20 2005 (shostler): observe -a 8 -s hip85312 
+Thu Jul  7 08:35:21 2005 (shostler): antennaWait -a 8 -s hip85312 -e 2 
+Thu Jul 07 08:35:34 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:35:35 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:35:42 2005 (shostler): optical -a 8 
+Thu Jul  7 08:35:43 2005 (shostler): observe -a 8 -s hip84105 
+Thu Jul  7 08:35:44 2005 (shostler): antennaWait -a 8 -s hip84105 -e 2 
+Thu Jul 07 08:35:49 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:35:50 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:35:58 2005 (shostler): optical -a 8 
+Thu Jul  7 08:35:59 2005 (shostler): observe -a 8 -s hip84709 
+Thu Jul  7 08:35:59 2005 (shostler): antennaWait -a 8 -s hip84709 -e 2 
+Thu Jul 07 08:36:13 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:36:13 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:36:21 2005 (shostler): optical -a 8 
+Thu Jul  7 08:36:22 2005 (shostler): observe -a 8 -s hip84405 
+Thu Jul  7 08:36:23 2005 (shostler): antennaWait -a 8 -s hip84405 -e 2 
+Thu Jul 07 08:36:32 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 08:36:33 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 08:36:39 2005 (shostler): optical -a 8 
+Thu Jul  7 08:36:40 2005 (shostler): observe -a 8 -s hip84626 
+Thu Jul  7 08:36:40 2005 (shostler): antennaWait -a 8 -s hip84626 -e 2 
+Thu Jul 07 08:36:46 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:36:47 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:36:54 2005 (shostler): optical -a 8 
+Thu Jul  7 08:36:55 2005 (shostler): observe -a 8 -s hip83854 
+Thu Jul  7 08:36:55 2005 (shostler): antennaWait -a 8 -s hip83854 -e 2 
+Thu Jul 07 08:37:05 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:37:06 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:37:13 2005 (shostler): optical -a 8 
+Thu Jul  7 08:37:14 2005 (shostler): observe -a 8 -s hip84402 
+Thu Jul  7 08:37:14 2005 (shostler): antennaWait -a 8 -s hip84402 -e 2 
+Thu Jul 07 08:37:24 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:37:24 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:37:33 2005 (shostler): optical -a 8 
+Thu Jul  7 08:37:34 2005 (shostler): observe -a 8 -s hip84514 
+Thu Jul  7 08:37:34 2005 (shostler): antennaWait -a 8 -s hip84514 -e 2 
+Thu Jul 07 08:37:47 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 08:37:48 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 08:37:55 2005 (shostler): optical -a 8 
+Thu Jul  7 08:37:56 2005 (shostler): observe -a 8 -s hip85139 
+Thu Jul  7 08:37:56 2005 (shostler): antennaWait -a 8 -s hip85139 -e 2 
+Thu Jul 07 08:38:06 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:38:06 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul 07 08:38:14 2005 (shostler): .//azelstar -z 210 -d down -w 5 -n 1 -a 8 -c 
+Thu Jul  7 08:38:15 2005 (shostler): optical -a 8 
+Thu Jul  7 08:38:16 2005 (shostler): observe -a 8 -s hip83430 
+Thu Jul  7 08:38:17 2005 (shostler): antennaWait -a 8 -s hip83430 -e 2 
+Thu Jul 07 08:38:34 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 08:38:35 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 08:38:42 2005 (shostler): optical -a 8 
+Thu Jul  7 08:38:43 2005 (shostler): observe -a 8 -s hip82073 
+Thu Jul  7 08:38:44 2005 (shostler): antennaWait -a 8 -s hip82073 -e 2 
+Thu Jul 07 08:38:53 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:38:54 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:39:02 2005 (shostler): optical -a 8 
+Thu Jul  7 08:39:03 2005 (shostler): observe -a 8 -s hip80693 
+Thu Jul  7 08:39:03 2005 (shostler): antennaWait -a 8 -s hip80693 -e 2 
+Thu Jul 07 08:39:13 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:39:13 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:39:15 2005 (shostler): lookup -s gc_24b -r 17:45:42.74 -d -28:59:50.60 -e 2000 -v 0 
+Thu Jul  7 08:39:15 2005 (shostler): observe -s gc_24b -r 17:45:42.74 -d -28:59:50.60 -e 2000 -v 0 
+Thu Jul  7 08:39:16 2005 (shostler): tsys 
+Thu Jul  7 08:39:21 2005 (shostler): optical -a 8 
+Thu Jul  7 08:39:22 2005 (shostler): observe -a 8 -s hip81300 
+Thu Jul  7 08:39:22 2005 (shostler): antennaWait -a 8 -s hip81300 -e 2 
+Thu Jul  7 08:39:27 2005 (shostler): integrate -s 8 -w 
+Thu Jul 07 08:39:32 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:39:32 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:39:40 2005 (shostler): optical -a 8 
+Thu Jul  7 08:39:41 2005 (shostler): observe -a 8 -s hip80620 
+Thu Jul  7 08:39:41 2005 (shostler): antennaWait -a 8 -s hip80620 -e 2 
+Thu Jul  7 08:39:43 2005 (apeck): monitor 
+Thu Jul 07 08:39:51 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:39:51 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:39:59 2005 (shostler): optical -a 8 
+Thu Jul  7 08:40:00 2005 (shostler): observe -a 8 -s hip79540 
+Thu Jul  7 08:40:00 2005 (shostler): antennaWait -a 8 -s hip79540 -e 2 
+Thu Jul 07 08:40:10 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:40:10 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:40:18 2005 (shostler): optical -a 8 
+Thu Jul  7 08:40:19 2005 (shostler): observe -a 8 -s hip77853 
+Thu Jul  7 08:40:19 2005 (shostler): antennaWait -a 8 -s hip77853 -e 2 
+Thu Jul 07 08:40:29 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 08:40:29 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 08:40:35 2005 (shostler): optical -a 8 
+Thu Jul  7 08:40:37 2005 (shostler): observe -a 8 -s hip76742 
+Thu Jul  7 08:40:37 2005 (shostler): antennaWait -a 8 -s hip76742 -e 2 
+Thu Jul 07 08:40:47 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 08:40:47 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 08:40:54 2005 (shostler): optical -a 8 
+Thu Jul  7 08:40:55 2005 (shostler): observe -a 8 -s hip76259 
+Thu Jul  7 08:40:56 2005 (shostler): antennaWait -a 8 -s hip76259 -e 2 
+Thu Jul 07 08:41:01 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:41:02 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:41:09 2005 (shostler): optical -a 8 
+Thu Jul  7 08:41:10 2005 (shostler): observe -a 8 -s hip74857 
+Thu Jul  7 08:41:11 2005 (shostler): antennaWait -a 8 -s hip74857 -e 2 
+Thu Jul 07 08:41:16 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 08:41:17 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 08:41:23 2005 (shostler): optical -a 8 
+Thu Jul  7 08:41:24 2005 (shostler): observe -a 8 -s hip75177 
+Thu Jul  7 08:41:24 2005 (shostler): antennaWait -a 8 -s hip75177 -e 2 
+Thu Jul 07 08:41:34 2005 (shostler): .//snapshot -a 8 -s 100 -c 
+Thu Jul  7 08:41:35 2005 (shostler): c90cmd -a 8 -c snapshot -e 100 -c 
+Thu Jul  7 08:41:41 2005 (shostler): optical -a 8 
+Thu Jul  7 08:41:42 2005 (shostler): observe -a 8 -s hip72296 
+Thu Jul  7 08:41:42 2005 (shostler): antennaWait -a 8 -s hip72296 -e 2 
+Thu Jul 07 08:41:52 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:41:53 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul 07 08:42:01 2005 (shostler): .//azelstar -z 240 -d up -w 5 -n 1 -a 8 -c 
+Thu Jul  7 08:42:02 2005 (shostler): optical -a 8 
+Thu Jul  7 08:42:03 2005 (shostler): observe -a 8 -s hip64725 
+Thu Jul  7 08:42:03 2005 (shostler): antennaWait -a 8 -s hip64725 -e 2 
+Thu Jul 07 08:42:16 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:42:16 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:42:24 2005 (shostler): optical -a 8 
+Thu Jul  7 08:42:25 2005 (shostler): observe -a 8 -s hip65639 
+Thu Jul  7 08:42:25 2005 (shostler): antennaWait -a 8 -s hip65639 -e 2 
+Thu Jul 07 08:42:35 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 08:42:35 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 08:42:43 2005 (shostler): optical -a 8 
+Thu Jul  7 08:42:45 2005 (shostler): observe -a 8 -s hip69427 
+Thu Jul  7 08:42:45 2005 (shostler): antennaWait -a 8 -s hip69427 -e 2 
+Thu Jul 07 08:42:58 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 08:42:59 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 08:43:06 2005 (shostler): optical -a 8 
+Thu Jul  7 08:43:08 2005 (shostler): observe -a 8 -s hip70794 
+Thu Jul  7 08:43:08 2005 (shostler): antennaWait -a 8 -s hip70794 -e 2 
+Thu Jul 07 08:43:17 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:43:18 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:43:26 2005 (shostler): optical -a 8 
+Thu Jul  7 08:43:27 2005 (shostler): observe -a 8 -s hip73497 
+Thu Jul  7 08:43:27 2005 (shostler): antennaWait -a 8 -s hip73497 -e 2 
+Thu Jul 07 08:43:37 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:43:38 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:43:45 2005 (shostler): optical -a 8 
+Thu Jul  7 08:43:46 2005 (shostler): observe -a 8 -s hip74901 
+Thu Jul  7 08:43:46 2005 (shostler): antennaWait -a 8 -s hip74901 -e 2 
+Thu Jul  7 08:43:53 2005 (shostler): lookup -s gc_25b -r 17:45:42.06 -d -28:59:32.60 -e 2000 -v 0 
+Thu Jul  7 08:43:54 2005 (shostler): observe -s gc_25b -r 17:45:42.06 -d -28:59:32.60 -e 2000 -v 0 
+Thu Jul  7 08:43:55 2005 (shostler): tsys 
+Thu Jul 07 08:43:56 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:43:57 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:44:04 2005 (shostler): optical -a 8 
+Thu Jul  7 08:44:06 2005 (shostler): observe -a 8 -s hip77070 
+Thu Jul  7 08:44:06 2005 (shostler): antennaWait -a 8 -s hip77070 -e 2 
+Thu Jul  7 08:44:06 2005 (shostler): integrate -s 8 -w 
+Thu Jul 07 08:44:16 2005 (shostler): .//snapshot -a 8 -s 100 -c 
+Thu Jul  7 08:44:16 2005 (shostler): c90cmd -a 8 -c snapshot -e 100 -c 
+Thu Jul  7 08:44:23 2005 (shostler): optical -a 8 
+Thu Jul  7 08:44:24 2005 (shostler): observe -a 8 -s hip79072 
+Thu Jul  7 08:44:24 2005 (shostler): antennaWait -a 8 -s hip79072 -e 2 
+Thu Jul 07 08:44:34 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:44:34 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:44:41 2005 (shostler): optical -a 8 
+Thu Jul  7 08:44:43 2005 (shostler): observe -a 8 -s hip81008 
+Thu Jul  7 08:44:43 2005 (shostler): antennaWait -a 8 -s hip81008 -e 2 
+Thu Jul 07 08:44:53 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 08:44:53 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 08:45:01 2005 (shostler): optical -a 8 
+Thu Jul  7 08:45:02 2005 (shostler): observe -a 8 -s hip82028 
+Thu Jul  7 08:45:02 2005 (shostler): antennaWait -a 8 -s hip82028 -e 2 
+Thu Jul 07 08:45:12 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:45:12 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul 07 08:45:20 2005 (shostler): .//azelstar -z 270 -d down -w 5 -n 1 -a 8 -c 
+Thu Jul  7 08:45:22 2005 (shostler): optical -a 8 
+Thu Jul  7 08:45:23 2005 (shostler): observe -a 8 -s hip79666 
+Thu Jul  7 08:45:23 2005 (shostler): antennaWait -a 8 -s hip79666 -e 2 
+Thu Jul 07 08:45:37 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:45:38 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:45:45 2005 (shostler): optical -a 8 
+Thu Jul  7 08:45:46 2005 (shostler): observe -a 8 -s hip77450 
+Thu Jul  7 08:45:46 2005 (shostler): antennaWait -a 8 -s hip77450 -e 2 
+Thu Jul 07 08:45:56 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 08:45:56 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 08:46:04 2005 (shostler): optical -a 8 
+Thu Jul  7 08:46:05 2005 (shostler): observe -a 8 -s hip75530 
+Thu Jul  7 08:46:05 2005 (shostler): antennaWait -a 8 -s hip75530 -e 2 
+Thu Jul 07 08:46:15 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:46:15 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:46:23 2005 (shostler): optical -a 8 
+Thu Jul  7 08:46:24 2005 (shostler): observe -a 8 -s hip74386 
+Thu Jul  7 08:46:24 2005 (shostler): antennaWait -a 8 -s hip74386 -e 2 
+Thu Jul 07 08:46:34 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:46:34 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:46:41 2005 (shostler): optical -a 8 
+Thu Jul  7 08:46:43 2005 (shostler): observe -a 8 -s hip72125 
+Thu Jul  7 08:46:43 2005 (shostler): antennaWait -a 8 -s hip72125 -e 2 
+Thu Jul 07 08:46:52 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 08:46:53 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 08:47:00 2005 (shostler): optical -a 8 
+Thu Jul  7 08:47:01 2005 (shostler): observe -a 8 -s hip69829 
+Thu Jul  7 08:47:02 2005 (shostler): antennaWait -a 8 -s hip69829 -e 2 
+Thu Jul 07 08:47:10 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:47:11 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:47:19 2005 (shostler): optical -a 8 
+Thu Jul  7 08:47:20 2005 (shostler): observe -a 8 -s hip65790 
+Thu Jul  7 08:47:20 2005 (shostler): antennaWait -a 8 -s hip65790 -e 2 
+Thu Jul 07 08:47:34 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:47:34 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:47:42 2005 (shostler): optical -a 8 
+Thu Jul  7 08:47:43 2005 (shostler): observe -a 8 -s hip64179 
+Thu Jul  7 08:47:43 2005 (shostler): antennaWait -a 8 -s hip64179 -e 2 
+Thu Jul 07 08:47:53 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:47:53 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:48:01 2005 (shostler): optical -a 8 
+Thu Jul  7 08:48:02 2005 (shostler): observe -a 8 -s hip62325 
+Thu Jul  7 08:48:02 2005 (shostler): antennaWait -a 8 -s hip62325 -e 2 
+Thu Jul 07 08:48:12 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:48:13 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:48:20 2005 (shostler): optical -a 8 
+Thu Jul  7 08:48:21 2005 (shostler): observe -a 8 -s hip61103 
+Thu Jul  7 08:48:21 2005 (shostler): antennaWait -a 8 -s hip61103 -e 2 
+Thu Jul 07 08:48:27 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:48:28 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:48:35 2005 (shostler): lookup -s 1733-130 
+Thu Jul  7 08:48:35 2005 (shostler): observe -s 1733-130 
+Thu Jul  7 08:48:36 2005 (shostler): tsys 
+Thu Jul 07 08:48:36 2005 (shostler): .//azelstar -z 300 -d up -w 5 -n 1 -a 8 -c 
+Thu Jul  7 08:48:37 2005 (shostler): optical -a 8 
+Thu Jul  7 08:48:38 2005 (shostler): observe -a 8 -s hip58460 
+Thu Jul  7 08:48:38 2005 (shostler): antennaWait -a 8 -s hip58460 -e 2 
+Thu Jul  7 08:48:47 2005 (shostler): integrate -s 10 -w 
+Thu Jul 07 08:48:52 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:48:53 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:49:00 2005 (shostler): optical -a 8 
+Thu Jul  7 08:49:01 2005 (shostler): observe -a 8 -s hip61309 
+Thu Jul  7 08:49:01 2005 (shostler): antennaWait -a 8 -s hip61309 -e 2 
+Thu Jul 07 08:49:11 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:49:12 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:49:20 2005 (shostler): optical -a 8 
+Thu Jul  7 08:49:21 2005 (shostler): observe -a 8 -s hip64212 
+Thu Jul  7 08:49:21 2005 (shostler): antennaWait -a 8 -s hip64212 -e 2 
+Thu Jul 07 08:49:30 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:49:30 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:49:38 2005 (shostler): optical -a 8 
+Thu Jul  7 08:49:39 2005 (shostler): observe -a 8 -s hip67605 
+Thu Jul  7 08:49:39 2005 (shostler): antennaWait -a 8 -s hip67605 -e 2 
+Thu Jul 07 08:49:48 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:49:48 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:49:56 2005 (shostler): optical -a 8 
+Thu Jul  7 08:49:57 2005 (shostler): observe -a 8 -s hip69879 
+Thu Jul  7 08:49:57 2005 (shostler): antennaWait -a 8 -s hip69879 -e 2 
+Thu Jul 07 08:50:06 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 08:50:06 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 08:50:13 2005 (shostler): optical -a 8 
+Thu Jul  7 08:50:14 2005 (shostler): observe -a 8 -s hip71277 
+Thu Jul  7 08:50:14 2005 (shostler): antennaWait -a 8 -s hip71277 -e 2 
+Thu Jul 07 08:50:20 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:50:20 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:50:28 2005 (shostler): optical -a 8 
+Thu Jul  7 08:50:30 2005 (shostler): observe -a 8 -s hip74561 
+Thu Jul  7 08:50:30 2005 (shostler): antennaWait -a 8 -s hip74561 -e 2 
+Thu Jul 07 08:50:40 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:50:40 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:50:49 2005 (shostler): optical -a 8 
+Thu Jul  7 08:50:50 2005 (shostler): observe -a 8 -s hip82504 
+Thu Jul  7 08:50:51 2005 (shostler): antennaWait -a 8 -s hip82504 -e 2 
+Thu Jul 07 08:51:07 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 08:51:08 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul 07 08:51:14 2005 (shostler): .//azelstar -z 330 -d down -w 5 -n 1 -a 8 -c 
+Thu Jul  7 08:51:18 2005 (shostler): optical -a 8 
+Thu Jul  7 08:51:19 2005 (shostler): observe -a 8 -s hip79357 
+Thu Jul  7 08:51:19 2005 (shostler): antennaWait -a 8 -s hip79357 -e 2 
+Thu Jul 07 08:51:33 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:51:33 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul 07 08:51:46 2005 (shostler): .//azelstar -z 345 -d up -w 5 -n 1 -r 20-50 -a 8 -c 
+Thu Jul  7 08:51:48 2005 (shostler): optical -a 8 
+Thu Jul  7 08:51:49 2005 (shostler): observe -a 8 -s hip63340 
+Thu Jul  7 08:51:49 2005 (shostler): antennaWait -a 8 -s hip63340 -e 2 
+Thu Jul 07 08:52:14 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:52:14 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:52:22 2005 (shostler): optical -a 8 
+Thu Jul  7 08:52:24 2005 (shostler): observe -a 8 -s hip74793 
+Thu Jul  7 08:52:24 2005 (shostler): antennaWait -a 8 -s hip74793 -e 2 
+Thu Jul 07 08:52:33 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 08:52:34 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 08:52:40 2005 (shostler): optical -a 8 
+Thu Jul  7 08:52:41 2005 (shostler): observe -a 8 -s hip75974 
+Thu Jul  7 08:52:42 2005 (shostler): antennaWait -a 8 -s hip75974 -e 2 
+Thu Jul 07 08:52:51 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:52:52 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:52:59 2005 (shostler): optical -a 8 
+Thu Jul  7 08:53:00 2005 (shostler): observe -a 8 -s hip79804 
+Thu Jul  7 08:53:01 2005 (shostler): antennaWait -a 8 -s hip79804 -e 2 
+Thu Jul 07 08:53:10 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:53:11 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul 07 08:53:18 2005 (shostler): .//azelstar -z 315 -d down -w 5 -n 1 -r 20-50 -a 8 -c 
+Thu Jul  7 08:53:20 2005 (shostler): optical -a 8 
+Thu Jul  7 08:53:21 2005 (shostler): observe -a 8 -s hip71568 
+Thu Jul  7 08:53:21 2005 (shostler): antennaWait -a 8 -s hip71568 -e 2 
+Thu Jul 07 08:53:35 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:53:36 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:53:44 2005 (shostler): optical -a 8 
+Thu Jul  7 08:53:45 2005 (shostler): observe -a 8 -s hip65550 
+Thu Jul  7 08:53:45 2005 (shostler): antennaWait -a 8 -s hip65550 -e 2 
+Thu Jul 07 08:53:58 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:53:58 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:54:06 2005 (shostler): optical -a 8 
+Thu Jul  7 08:54:07 2005 (shostler): observe -a 8 -s hip63024 
+Thu Jul  7 08:54:07 2005 (shostler): antennaWait -a 8 -s hip63024 -e 2 
+Thu Jul  7 08:54:13 2005 (shostler): lookup -s 1733-130 
+Thu Jul  7 08:54:14 2005 (shostler): lookup -s 1924-292 
+Thu Jul  7 08:54:14 2005 (shostler): lookup -s 1924-292 
+Thu Jul  7 08:54:15 2005 (shostler): observe -s 1924-292 
+Thu Jul  7 08:54:16 2005 (shostler): tsys 
+Thu Jul 07 08:54:16 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:54:17 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul 07 08:54:25 2005 (shostler): .//azelstar -z 285 -d up -w 5 -n 1 -r 20-50 -a 8 -c 
+Thu Jul  7 08:54:26 2005 (shostler): optical -a 8 
+Thu Jul  7 08:54:27 2005 (shostler): observe -a 8 -s hip61418 
+Thu Jul  7 08:54:27 2005 (shostler): integrate -s 4 -w 
+Thu Jul  7 08:54:27 2005 (shostler): antennaWait -a 8 -s hip61418 -e 2 
+Thu Jul 07 08:54:44 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 08:54:45 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 08:54:51 2005 (shostler): optical -a 8 
+Thu Jul  7 08:54:52 2005 (shostler): observe -a 8 -s hip63950 
+Thu Jul  7 08:54:52 2005 (shostler): antennaWait -a 8 -s hip63950 -e 2 
+Thu Jul 07 08:55:01 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:55:01 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:55:09 2005 (shostler): optical -a 8 
+Thu Jul  7 08:55:10 2005 (shostler): observe -a 8 -s hip63950 
+Thu Jul  7 08:55:10 2005 (shostler): antennaWait -a 8 -s hip63950 -e 2 
+Thu Jul 07 08:55:14 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:55:14 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:55:22 2005 (shostler): optical -a 8 
+Thu Jul  7 08:55:23 2005 (shostler): observe -a 8 -s hip66417 
+Thu Jul  7 08:55:23 2005 (shostler): antennaWait -a 8 -s hip66417 -e 2 
+Thu Jul 07 08:55:33 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:55:33 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul 07 08:55:42 2005 (shostler): .//azelstar -z 255 -d down -w 5 -n 1 -r 20-50 -a 8 -c 
+Thu Jul  7 08:55:43 2005 (shostler): optical -a 8 
+Thu Jul  7 08:55:44 2005 (shostler): observe -a 8 -s hip73350 
+Thu Jul  7 08:55:44 2005 (shostler): antennaWait -a 8 -s hip73350 -e 2 
+Thu Jul 07 08:55:58 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:55:59 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:56:08 2005 (shostler): optical -a 8 
+Thu Jul  7 08:56:09 2005 (shostler): observe -a 8 -s hip67929 
+Thu Jul  7 08:56:09 2005 (shostler): antennaWait -a 8 -s hip67929 -e 2 
+Thu Jul 07 08:56:23 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:56:23 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:56:31 2005 (shostler): optical -a 8 
+Thu Jul  7 08:56:32 2005 (shostler): observe -a 8 -s hip65323 
+Thu Jul  7 08:56:32 2005 (shostler): antennaWait -a 8 -s hip65323 -e 2 
+Thu Jul 07 08:56:42 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:56:42 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:56:49 2005 (shostler): lookup -s 1733-130 
+Thu Jul  7 08:56:50 2005 (shostler): lookup -s 1924-292 
+Thu Jul  7 08:56:52 2005 (shostler): lookup -s gc_1b -r 17:45:37.26 -d -29:01:02.60 -e 2000 -v 0 
+Thu Jul 07 08:56:52 2005 (shostler): .//azelstar -z 225 -d up -w 5 -n 1 -r 20-50 -a 8 -c 
+Thu Jul  7 08:56:52 2005 (shostler): observe -s gc_1b -r 17:45:37.26 -d -29:01:02.60 -e 2000 -v 0 
+Thu Jul  7 08:56:54 2005 (shostler): optical -a 8 
+Thu Jul  7 08:56:54 2005 (shostler): tsys 
+Thu Jul  7 08:56:55 2005 (shostler): observe -a 8 -s hip70306 
+Thu Jul  7 08:56:55 2005 (shostler): antennaWait -a 8 -s hip70306 -e 2 
+Thu Jul  7 08:57:05 2005 (shostler): integrate -s 8 -w 
+Thu Jul 07 08:57:09 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 08:57:09 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 08:57:17 2005 (shostler): optical -a 8 
+Thu Jul  7 08:57:18 2005 (shostler): observe -a 8 -s hip72210 
+Thu Jul  7 08:57:18 2005 (shostler): antennaWait -a 8 -s hip72210 -e 2 
+Thu Jul 07 08:57:27 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:57:27 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:57:35 2005 (shostler): optical -a 8 
+Thu Jul  7 08:57:36 2005 (shostler): observe -a 8 -s hip73184 
+Thu Jul  7 08:57:36 2005 (shostler): antennaWait -a 8 -s hip73184 -e 2 
+Thu Jul 07 08:57:42 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:57:43 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:57:50 2005 (shostler): optical -a 8 
+Thu Jul  7 08:57:51 2005 (shostler): observe -a 8 -s hip75730 
+Thu Jul  7 08:57:52 2005 (shostler): antennaWait -a 8 -s hip75730 -e 2 
+Thu Jul 07 08:58:01 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:58:02 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:58:09 2005 (shostler): optical -a 8 
+Thu Jul  7 08:58:10 2005 (shostler): observe -a 8 -s hip76333 
+Thu Jul  7 08:58:11 2005 (shostler): antennaWait -a 8 -s hip76333 -e 2 
+Thu Jul 07 08:58:15 2005 (shostler): .//snapshot -a 8 -s 100 -c 
+Thu Jul  7 08:58:16 2005 (shostler): c90cmd -a 8 -c snapshot -e 100 -c 
+Thu Jul 07 08:58:23 2005 (shostler): .//azelstar -z 195 -d down -w 5 -n 1 -r 20-50 -a 8 -c 
+Thu Jul  7 08:58:24 2005 (shostler): optical -a 8 
+Thu Jul  7 08:58:25 2005 (shostler): observe -a 8 -s hip83854 
+Thu Jul  7 08:58:25 2005 (shostler): antennaWait -a 8 -s hip83854 -e 2 
+Thu Jul 07 08:58:39 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:58:39 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:58:47 2005 (shostler): optical -a 8 
+Thu Jul  7 08:58:48 2005 (shostler): observe -a 8 -s hip83176 
+Thu Jul  7 08:58:48 2005 (shostler): antennaWait -a 8 -s hip83176 -e 2 
+Thu Jul 07 08:58:58 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:58:58 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 08:59:06 2005 (shostler): optical -a 8 
+Thu Jul  7 08:59:07 2005 (shostler): observe -a 8 -s hip81304 
+Thu Jul  7 08:59:08 2005 (shostler): antennaWait -a 8 -s hip81304 -e 2 
+Thu Jul 07 08:59:17 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 08:59:18 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 08:59:25 2005 (shostler): optical -a 8 
+Thu Jul  7 08:59:26 2005 (shostler): observe -a 8 -s hip80672 
+Thu Jul  7 08:59:27 2005 (shostler): antennaWait -a 8 -s hip80672 -e 2 
+Thu Jul 07 08:59:32 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:59:33 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul 07 08:59:41 2005 (shostler): .//azelstar -z 165 -d up -w 5 -n 1 -r 20-50 -a 8 -c 
+Thu Jul  7 08:59:42 2005 (shostler): optical -a 8 
+Thu Jul  7 08:59:43 2005 (shostler): observe -a 8 -s hip92630 
+Thu Jul  7 08:59:43 2005 (shostler): antennaWait -a 8 -s hip92630 -e 2 
+Thu Jul 07 08:59:57 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 08:59:58 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 09:00:05 2005 (shostler): optical -a 8 
+Thu Jul  7 09:00:06 2005 (shostler): observe -a 8 -s hip94005 
+Thu Jul  7 09:00:06 2005 (shostler): antennaWait -a 8 -s hip94005 -e 2 
+Thu Jul 07 09:00:16 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 09:00:16 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 09:00:24 2005 (shostler): optical -a 8 
+Thu Jul  7 09:00:25 2005 (shostler): observe -a 8 -s hip91989 
+Thu Jul  7 09:00:25 2005 (shostler): antennaWait -a 8 -s hip91989 -e 2 
+Thu Jul 07 09:00:35 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 09:00:35 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 09:00:44 2005 (shostler): optical -a 8 
+Thu Jul  7 09:00:45 2005 (shostler): observe -a 8 -s hip90260 
+Thu Jul  7 09:00:45 2005 (shostler): antennaWait -a 8 -s hip90260 -e 2 
+Thu Jul 07 09:00:55 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 09:00:55 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 09:01:03 2005 (shostler): optical -a 8 
+Thu Jul  7 09:01:03 2005 (shostler): observe -a 8 -s hip90496 
+Thu Jul  7 09:01:03 2005 (shostler): antennaWait -a 8 -s hip90496 -e 2 
+Thu Jul 07 09:01:13 2005 (shostler): .//snapshot -a 8 -s 100 -c 
+Thu Jul  7 09:01:13 2005 (shostler): c90cmd -a 8 -c snapshot -e 100 -c 
+Thu Jul 07 09:01:20 2005 (shostler): .//azelstar -z 135 -d down -w 5 -n 1 -r 20-50 -a 8 -c 
+Thu Jul  7 09:01:22 2005 (shostler): optical -a 8 
+Thu Jul  7 09:01:23 2005 (shostler): observe -a 8 -s hip97499 
+Thu Jul  7 09:01:23 2005 (shostler): antennaWait -a 8 -s hip97499 -e 2 
+Thu Jul  7 09:01:27 2005 (shostler): lookup -s gc_2b -r 17:45:38.63 -d -29:01:02.60 -e 2000 -v 0 
+Thu Jul  7 09:01:27 2005 (shostler): observe -s gc_2b -r 17:45:38.63 -d -29:01:02.60 -e 2000 -v 0 
+Thu Jul  7 09:01:28 2005 (shostler): tsys 
+Thu Jul  7 09:01:39 2005 (shostler): integrate -s 8 -w 
+Thu Jul 07 09:01:41 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 09:01:41 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 09:01:49 2005 (shostler): optical -a 8 
+Thu Jul  7 09:01:50 2005 (shostler): observe -a 8 -s hip97783 
+Thu Jul  7 09:01:50 2005 (shostler): antennaWait -a 8 -s hip97783 -e 2 
+Thu Jul 07 09:02:01 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 09:02:01 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 09:02:09 2005 (shostler): optical -a 8 
+Thu Jul  7 09:02:10 2005 (shostler): observe -a 8 -s hip100195 
+Thu Jul  7 09:02:10 2005 (shostler): antennaWait -a 8 -s hip100195 -e 2 
+Thu Jul 07 09:02:20 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 09:02:20 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 09:02:28 2005 (shostler): optical -a 8 
+Thu Jul  7 09:02:30 2005 (shostler): observe -a 8 -s hip102978 
+Thu Jul  7 09:02:30 2005 (shostler): antennaWait -a 8 -s hip102978 -e 2 
+Thu Jul 07 09:02:40 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 09:02:40 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul 07 09:02:48 2005 (shostler): .//azelstar -z 105 -d up -w 5 -n 1 -r 20-50 -a 8 -c 
+Thu Jul  7 09:02:49 2005 (shostler): optical -a 8 
+Thu Jul  7 09:02:50 2005 (shostler): observe -a 8 -s hip108868 
+Thu Jul  7 09:02:50 2005 (shostler): antennaWait -a 8 -s hip108868 -e 2 
+Thu Jul 07 09:03:08 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 09:03:08 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 09:03:16 2005 (shostler): optical -a 8 
+Thu Jul  7 09:03:17 2005 (shostler): observe -a 8 -s hip108102 
+Thu Jul  7 09:03:17 2005 (shostler): antennaWait -a 8 -s hip108102 -e 2 
+Thu Jul 07 09:03:27 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 09:03:27 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 09:03:35 2005 (shostler): optical -a 8 
+Thu Jul  7 09:03:36 2005 (shostler): observe -a 8 -s hip105767 
+Thu Jul  7 09:03:36 2005 (shostler): antennaWait -a 8 -s hip105767 -e 2 
+Thu Jul 07 09:03:46 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 09:03:46 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul 07 09:03:56 2005 (shostler): .//azelstar -z 75 -d down -w 5 -n 1 -r 20-50 -a 8 -c 
+Thu Jul  7 09:03:57 2005 (shostler): optical -a 8 
+Thu Jul  7 09:03:58 2005 (shostler): observe -a 8 -s hip101870 
+Thu Jul  7 09:03:58 2005 (shostler): antennaWait -a 8 -s hip101870 -e 2 
+Thu Jul 07 09:04:12 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 09:04:12 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 09:04:20 2005 (shostler): optical -a 8 
+Thu Jul  7 09:04:21 2005 (shostler): observe -a 8 -s hip103511 
+Thu Jul  7 09:04:21 2005 (shostler): antennaWait -a 8 -s hip103511 -e 2 
+Thu Jul 07 09:04:31 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 09:04:31 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 09:04:39 2005 (shostler): optical -a 8 
+Thu Jul  7 09:04:40 2005 (shostler): observe -a 8 -s hip105411 
+Thu Jul  7 09:04:40 2005 (shostler): antennaWait -a 8 -s hip105411 -e 2 
+Thu Jul 07 09:04:50 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 09:04:50 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 09:04:58 2005 (shostler): optical -a 8 
+Thu Jul  7 09:04:59 2005 (shostler): observe -a 8 -s hip107472 
+Thu Jul  7 09:04:59 2005 (shostler): antennaWait -a 8 -s hip107472 -e 2 
+Thu Jul 07 09:05:09 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 09:05:09 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul 07 09:05:18 2005 (shostler): .//azelstar -z 45 -d up -w 5 -n 1 -r 20-50 -a 8 -c 
+Thu Jul  7 09:05:19 2005 (shostler): optical -a 8 
+Thu Jul  7 09:05:20 2005 (shostler): observe -a 8 -s hip113919 
+Thu Jul  7 09:05:20 2005 (shostler): antennaWait -a 8 -s hip113919 -e 2 
+Thu Jul 07 09:05:34 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 09:05:35 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 09:05:41 2005 (shostler): optical -a 8 
+Thu Jul  7 09:05:42 2005 (shostler): observe -a 8 -s hip111022 
+Thu Jul  7 09:05:43 2005 (shostler): antennaWait -a 8 -s hip111022 -e 2 
+Thu Jul 07 09:05:52 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 09:05:53 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 09:06:01 2005 (shostler): optical -a 8 
+Thu Jul  7 09:06:02 2005 (shostler): observe -a 8 -s hip106642 
+Thu Jul  7 09:06:02 2005 (shostler): antennaWait -a 8 -s hip106642 -e 2 
+Thu Jul  7 09:06:05 2005 (shostler): lookup -s gc_3b -r 17:45:40.00 -d -29:01:02.60 -e 2000 -v 0 
+Thu Jul  7 09:06:06 2005 (shostler): observe -s gc_3b -r 17:45:40.00 -d -29:01:02.60 -e 2000 -v 0 
+Thu Jul  7 09:06:07 2005 (shostler): tsys 
+Thu Jul 07 09:06:12 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 09:06:12 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 09:06:19 2005 (shostler): integrate -s 8 -w 
+Thu Jul  7 09:06:20 2005 (shostler): optical -a 8 
+Thu Jul  7 09:06:21 2005 (shostler): observe -a 8 -s hip104194 
+Thu Jul  7 09:06:21 2005 (shostler): antennaWait -a 8 -s hip104194 -e 2 
+Thu Jul 07 09:06:32 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 09:06:32 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 09:06:40 2005 (shostler): optical -a 8 
+Thu Jul  7 09:06:41 2005 (shostler): observe -a 8 -s hip101986 
+Thu Jul  7 09:06:41 2005 (shostler): antennaWait -a 8 -s hip101986 -e 2 
+Thu Jul 07 09:06:51 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 09:06:52 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul 07 09:06:59 2005 (shostler): .//azelstar -z 15 -d down -w 5 -n 1 -r 20-50 -a 8 -c 
+Thu Jul  7 09:07:00 2005 (shostler): optical -a 8 
+Thu Jul  7 09:07:02 2005 (shostler): observe -a 8 -s hip92512 
+Thu Jul  7 09:07:02 2005 (shostler): antennaWait -a 8 -s hip92512 -e 2 
+Thu Jul 07 09:07:19 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 09:07:20 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 09:07:28 2005 (shostler): optical -a 8 
+Thu Jul  7 09:07:29 2005 (shostler): observe -a 8 -s hip98583 
+Thu Jul  7 09:07:30 2005 (shostler): antennaWait -a 8 -s hip98583 -e 2 
+Thu Jul 07 09:07:39 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 09:07:40 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 09:07:47 2005 (shostler): optical -a 8 
+Thu Jul  7 09:07:48 2005 (shostler): observe -a 8 -s hip98702 
+Thu Jul  7 09:07:49 2005 (shostler): antennaWait -a 8 -s hip98702 -e 2 
+Thu Jul 07 09:07:54 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 09:07:55 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 09:08:01 2005 (shostler): optical -a 8 
+Thu Jul  7 09:08:03 2005 (shostler): observe -a 8 -s hip107119 
+Thu Jul  7 09:08:03 2005 (shostler): antennaWait -a 8 -s hip107119 -e 2 
+Thu Jul 07 09:08:13 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 09:08:13 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 09:08:20 2005 (shostler): optical -a 8 
+Thu Jul  7 09:08:22 2005 (shostler): observe -a 8 -s hip111660 
+Thu Jul  7 09:08:22 2005 (shostler): antennaWait -a 8 -s hip111660 -e 2 
+Thu Jul 07 09:08:32 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 09:08:32 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul 07 09:08:40 2005 (shostler): .//azelstar -a 8 -e 45 -w 5 -n 1 -d cw -c 
+Thu Jul  7 09:08:41 2005 (shostler): optical -a 8 
+Thu Jul  7 09:08:42 2005 (shostler): observe -a 8 -s hip77853 
+Thu Jul  7 09:08:42 2005 (shostler): antennaWait -a 8 -s hip77853 -e 2 
+Thu Jul 07 09:09:28 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 09:09:28 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 09:09:36 2005 (shostler): optical -a 8 
+Thu Jul  7 09:09:37 2005 (shostler): observe -a 8 -s hip76219 
+Thu Jul  7 09:09:37 2005 (shostler): antennaWait -a 8 -s hip76219 -e 2 
+Thu Jul 07 09:09:47 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 09:09:48 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 09:09:55 2005 (shostler): optical -a 8 
+Thu Jul  7 09:09:56 2005 (shostler): observe -a 8 -s hip75127 
+Thu Jul  7 09:09:57 2005 (shostler): antennaWait -a 8 -s hip75127 -e 2 
+Thu Jul 07 09:10:06 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 09:10:07 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 09:10:14 2005 (shostler): optical -a 8 
+Thu Jul  7 09:10:15 2005 (shostler): observe -a 8 -s hip73193 
+Thu Jul  7 09:10:15 2005 (shostler): antennaWait -a 8 -s hip73193 -e 2 
+Thu Jul 07 09:10:25 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 09:10:26 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 09:10:34 2005 (shostler): optical -a 8 
+Thu Jul  7 09:10:35 2005 (shostler): observe -a 8 -s hip72208 
+Thu Jul  7 09:10:35 2005 (shostler): antennaWait -a 8 -s hip72208 -e 2 
+Thu Jul  7 09:10:44 2005 (shostler): lookup -s gc_4b -r 17:45:41.37 -d -29:01:02.60 -e 2000 -v 0 
+Thu Jul  7 09:10:44 2005 (shostler): observe -s gc_4b -r 17:45:41.37 -d -29:01:02.60 -e 2000 -v 0 
+Thu Jul  7 09:10:46 2005 (shostler): tsys 
+Thu Jul 07 09:10:49 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 09:10:49 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 09:10:57 2005 (shostler): integrate -s 8 -w 
+Thu Jul  7 09:10:57 2005 (shostler): optical -a 8 
+Thu Jul  7 09:10:59 2005 (shostler): observe -a 8 -s hip71995 
+Thu Jul  7 09:10:59 2005 (shostler): antennaWait -a 8 -s hip71995 -e 2 
+Thu Jul 07 09:11:09 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 09:11:09 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 09:11:17 2005 (shostler): optical -a 8 
+Thu Jul  7 09:11:18 2005 (shostler): observe -a 8 -s hip71277 
+Thu Jul  7 09:11:18 2005 (shostler): antennaWait -a 8 -s hip71277 -e 2 
+Thu Jul 07 09:11:28 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 09:11:28 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 09:11:36 2005 (shostler): optical -a 8 
+Thu Jul  7 09:11:37 2005 (shostler): observe -a 8 -s hip71568 
+Thu Jul  7 09:11:37 2005 (shostler): antennaWait -a 8 -s hip71568 -e 2 
+Thu Jul 07 09:11:47 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 09:11:47 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 09:11:56 2005 (shostler): optical -a 8 
+Thu Jul  7 09:11:57 2005 (shostler): observe -a 8 -s hip76311 
+Thu Jul  7 09:11:57 2005 (shostler): antennaWait -a 8 -s hip76311 -e 2 
+Thu Jul 07 09:12:10 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 09:12:10 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 09:12:18 2005 (shostler): optical -a 8 
+Thu Jul  7 09:12:19 2005 (shostler): observe -a 8 -s hip79804 
+Thu Jul  7 09:12:19 2005 (shostler): antennaWait -a 8 -s hip79804 -e 2 
+Thu Jul 07 09:12:28 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 09:12:28 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 09:12:36 2005 (shostler): optical -a 8 
+Thu Jul  7 09:12:37 2005 (shostler): observe -a 8 -s hip81660 
+Thu Jul  7 09:12:37 2005 (shostler): antennaWait -a 8 -s hip81660 -e 2 
+Thu Jul 07 09:12:47 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 09:12:48 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 09:12:56 2005 (shostler): optical -a 8 
+Thu Jul  7 09:12:57 2005 (shostler): observe -a 8 -s hip98073 
+Thu Jul  7 09:12:58 2005 (shostler): antennaWait -a 8 -s hip98073 -e 2 
+Thu Jul 07 09:13:11 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 09:13:12 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 09:13:20 2005 (shostler): optical -a 8 
+Thu Jul  7 09:13:21 2005 (shostler): observe -a 8 -s hip102635 
+Thu Jul  7 09:13:21 2005 (shostler): antennaWait -a 8 -s hip102635 -e 2 
+Thu Jul 07 09:13:36 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 09:13:36 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 09:13:44 2005 (shostler): optical -a 8 
+Thu Jul  7 09:13:45 2005 (shostler): observe -a 8 -s hip104060 
+Thu Jul  7 09:13:45 2005 (shostler): antennaWait -a 8 -s hip104060 -e 2 
+Thu Jul 07 09:13:55 2005 (shostler): .//snapshot -a 8 -s 100 -c 
+Thu Jul  7 09:13:56 2005 (shostler): c90cmd -a 8 -c snapshot -e 100 -c 
+Thu Jul  7 09:14:03 2005 (shostler): optical -a 8 
+Thu Jul  7 09:14:05 2005 (shostler): observe -a 8 -s hip103511 
+Thu Jul  7 09:14:05 2005 (shostler): antennaWait -a 8 -s hip103511 -e 2 
+Thu Jul 07 09:14:19 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 09:14:19 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 09:14:27 2005 (shostler): optical -a 8 
+Thu Jul  7 09:14:28 2005 (shostler): observe -a 8 -s hip103294 
+Thu Jul  7 09:14:28 2005 (shostler): antennaWait -a 8 -s hip103294 -e 2 
+Thu Jul 07 09:14:38 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 09:14:38 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 09:14:46 2005 (shostler): optical -a 8 
+Thu Jul  7 09:14:48 2005 (shostler): observe -a 8 -s hip101936 
+Thu Jul  7 09:14:48 2005 (shostler): antennaWait -a 8 -s hip101936 -e 2 
+Thu Jul 07 09:15:02 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 09:15:02 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 09:15:10 2005 (shostler): optical -a 8 
+Thu Jul  7 09:15:11 2005 (shostler): observe -a 8 -s hip101101 
+Thu Jul  7 09:15:11 2005 (shostler): antennaWait -a 8 -s hip101101 -e 2 
+Thu Jul 07 09:15:21 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 09:15:21 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 09:15:23 2005 (shostler): lookup -s gc_5b -r 17:45:42.74 -d -29:00:44.60 -e 2000 -v 0 
+Thu Jul  7 09:15:23 2005 (shostler): observe -s gc_5b -r 17:45:42.74 -d -29:00:44.60 -e 2000 -v 0 
+Thu Jul  7 09:15:25 2005 (shostler): tsys 
+Thu Jul  7 09:15:28 2005 (shostler): optical -a 8 
+Thu Jul  7 09:15:30 2005 (shostler): observe -a 8 -s hip96808 
+Thu Jul  7 09:15:30 2005 (shostler): antennaWait -a 8 -s hip96808 -e 2 
+Thu Jul  7 09:15:36 2005 (shostler): integrate -s 8 -w 
+Thu Jul 07 09:15:44 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 09:15:44 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 09:15:52 2005 (shostler): optical -a 8 
+Thu Jul  7 09:15:53 2005 (shostler): observe -a 8 -s hip94820 
+Thu Jul  7 09:15:53 2005 (shostler): antennaWait -a 8 -s hip94820 -e 2 
+Thu Jul 07 09:16:03 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 09:16:03 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 09:16:11 2005 (shostler): optical -a 8 
+Thu Jul  7 09:16:12 2005 (shostler): observe -a 8 -s hip92390 
+Thu Jul  7 09:16:12 2005 (shostler): antennaWait -a 8 -s hip92390 -e 2 
+Thu Jul 07 09:16:22 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 09:16:22 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 09:16:30 2005 (shostler): optical -a 8 
+Thu Jul  7 09:16:31 2005 (shostler): observe -a 8 -s hip90496 
+Thu Jul  7 09:16:31 2005 (shostler): antennaWait -a 8 -s hip90496 -e 2 
+Thu Jul 07 09:16:41 2005 (shostler): .//snapshot -a 8 -s 100 -c 
+Thu Jul  7 09:16:41 2005 (shostler): c90cmd -a 8 -c snapshot -e 100 -c 
+Thu Jul  7 09:16:48 2005 (shostler): optical -a 8 
+Thu Jul  7 09:16:50 2005 (shostler): observe -a 8 -s hip84626 
+Thu Jul  7 09:16:50 2005 (shostler): antennaWait -a 8 -s hip84626 -e 2 
+Thu Jul 07 09:17:04 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 09:17:04 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 09:17:12 2005 (shostler): optical -a 8 
+Thu Jul  7 09:17:13 2005 (shostler): observe -a 8 -s hip83176 
+Thu Jul  7 09:17:13 2005 (shostler): antennaWait -a 8 -s hip83176 -e 2 
+Thu Jul 07 09:17:23 2005 (shostler): .//snapshot -a 8 -s 400 -c 
+Thu Jul  7 09:17:23 2005 (shostler): c90cmd -a 8 -c snapshot -e 400 -c 
+Thu Jul  7 09:17:31 2005 (shostler): optical -a 8 
+Thu Jul  7 09:17:32 2005 (shostler): observe -a 8 -s hip80343 
+Thu Jul  7 09:17:32 2005 (shostler): antennaWait -a 8 -s hip80343 -e 2 
+Thu Jul 07 09:17:41 2005 (shostler): .//snapshot -a 8 -s 200 -c 
+Thu Jul  7 09:17:41 2005 (shostler): c90cmd -a 8 -c snapshot -e 200 -c 
+Thu Jul  7 09:19:21 2005 (shostler): radio -a 8 
+Thu Jul  7 09:19:25 2005 (shostler): stow -a 8 
+Thu Jul  7 09:20:02 2005 (shostler): lookup -s 1733-130 
+Thu Jul  7 09:20:02 2005 (shostler): observe -s 1733-130 
+Thu Jul  7 09:20:03 2005 (shostler): tsys 
+Thu Jul  7 09:20:14 2005 (shostler): integrate -s 10 -w 
+Thu Jul  7 09:20:38 2005 (shostler): standby -a 8 
+Thu Jul  7 09:25:42 2005 (shostler): lookup -s 1733-130 
+Thu Jul  7 09:25:43 2005 (shostler): lookup -s 1924-292 
+Thu Jul  7 09:25:44 2005 (shostler): lookup -s 1924-292 
+Thu Jul  7 09:25:44 2005 (shostler): observe -s 1924-292 
+Thu Jul  7 09:25:45 2005 (shostler): tsys 
+Thu Jul  7 09:25:56 2005 (shostler): integrate -s 4 -w 
+Thu Jul  7 09:28:17 2005 (shostler): lookup -s 1733-130 
+Thu Jul  7 09:28:18 2005 (shostler): lookup -s 1924-292 
+Thu Jul  7 09:28:18 2005 (shostler): lookup -s gc_6b -r 17:45:41.37 -d -29:00:44.60 -e 2000 -v 0 
+Thu Jul  7 09:28:19 2005 (shostler): observe -s gc_6b -r 17:45:41.37 -d -29:00:44.60 -e 2000 -v 0 
+Thu Jul  7 09:28:20 2005 (shostler): tsys 
+Thu Jul  7 09:28:31 2005 (shostler): integrate -s 8 -w 
+Thu Jul  7 09:32:56 2005 (shostler): lookup -s gc_7b -r 17:45:40.00 -d -29:00:44.60 -e 2000 -v 0 
+Thu Jul  7 09:32:56 2005 (shostler): observe -s gc_7b -r 17:45:40.00 -d -29:00:44.60 -e 2000 -v 0 
+Thu Jul  7 09:32:57 2005 (shostler): tsys 
+Thu Jul  7 09:33:08 2005 (shostler): integrate -s 8 -w 
+Thu Jul  7 09:37:35 2005 (shostler): lookup -s gc_8b -r 17:45:38.63 -d -29:00:44.60 -e 2000 -v 0 
+Thu Jul  7 09:37:35 2005 (shostler): observe -s gc_8b -r 17:45:38.63 -d -29:00:44.60 -e 2000 -v 0 
+Thu Jul  7 09:37:36 2005 (shostler): tsys 
+Thu Jul  7 09:37:47 2005 (shostler): integrate -s 8 -w 
+Thu Jul  7 09:42:14 2005 (shostler): lookup -s gc_9b -r 17:45:37.26 -d -29:00:44.60 -e 2000 -v 0 
+Thu Jul  7 09:42:14 2005 (shostler): observe -s gc_9b -r 17:45:37.26 -d -29:00:44.60 -e 2000 -v 0 
+Thu Jul  7 09:42:15 2005 (shostler): tsys 
+Thu Jul  7 09:42:26 2005 (shostler): integrate -s 8 -w 
+Thu Jul  7 09:46:52 2005 (shostler): lookup -s gc_10b -r 17:45:37.26 -d -29:00:26.60 -e 2000 -v 0 
+Thu Jul  7 09:46:52 2005 (shostler): observe -s gc_10b -r 17:45:37.26 -d -29:00:26.60 -e 2000 -v 0 
+Thu Jul  7 09:46:54 2005 (shostler): tsys 
+Thu Jul  7 09:47:05 2005 (shostler): integrate -s 8 -w 
+Thu Jul  7 09:51:31 2005 (shostler): lookup -s 1733-130 
+Thu Jul  7 09:51:31 2005 (shostler): observe -s 1733-130 
+Thu Jul  7 09:51:32 2005 (shostler): tsys 
+Thu Jul  7 09:51:44 2005 (shostler): integrate -s 10 -w 
+Thu Jul  7 09:57:12 2005 (shostler): lookup -s 1733-130 
+Thu Jul  7 09:57:12 2005 (shostler): lookup -s 1924-292 
+Thu Jul  7 09:57:13 2005 (shostler): lookup -s 1924-292 
+Thu Jul  7 09:57:13 2005 (shostler): observe -s 1924-292 
+Thu Jul  7 09:57:15 2005 (shostler): tsys 
+Thu Jul  7 09:57:26 2005 (shostler): integrate -s 4 -w 
+Thu Jul  7 09:59:47 2005 (shostler): lookup -s 1733-130 
+Thu Jul  7 09:59:47 2005 (shostler): lookup -s 1924-292 
+Thu Jul  7 09:59:48 2005 (shostler): lookup -s gc_11b -r 17:45:38.63 -d -29:00:26.60 -e 2000 -v 0 
+Thu Jul  7 09:59:48 2005 (shostler): observe -s gc_11b -r 17:45:38.63 -d -29:00:26.60 -e 2000 -v 0 
+Thu Jul  7 09:59:49 2005 (shostler): tsys 
+Thu Jul  7 10:00:00 2005 (shostler): integrate -s 8 -w 
+Thu Jul  7 10:04:25 2005 (shostler): lookup -s gc_12b -r 17:45:40.00 -d -29:00:26.60 -e 2000 -v 0 
+Thu Jul  7 10:04:26 2005 (shostler): observe -s gc_12b -r 17:45:40.00 -d -29:00:26.60 -e 2000 -v 0 
+Thu Jul  7 10:04:27 2005 (shostler): tsys 
+Thu Jul  7 10:04:38 2005 (shostler): integrate -s 8 -w 
+Thu Jul  7 10:09:04 2005 (shostler): lookup -s gc_13b -r 17:45:41.37 -d -29:00:26.60 -e 2000 -v 0 
+Thu Jul  7 10:09:04 2005 (shostler): observe -s gc_13b -r 17:45:41.37 -d -29:00:26.60 -e 2000 -v 0 
+Thu Jul  7 10:09:06 2005 (shostler): tsys 
+Thu Jul  7 10:09:17 2005 (shostler): integrate -s 8 -w 
+Thu Jul  7 10:13:43 2005 (shostler): lookup -s gc_14b -r 17:45:42.74 -d -29:00:26.60 -e 2000 -v 0 
+Thu Jul  7 10:13:43 2005 (shostler): observe -s gc_14b -r 17:45:42.74 -d -29:00:26.60 -e 2000 -v 0 
+Thu Jul  7 10:13:44 2005 (shostler): tsys 
+Thu Jul  7 10:13:55 2005 (shostler): integrate -s 8 -w 
+Thu Jul  7 10:18:22 2005 (shostler): lookup -s gc_15b -r 17:45:42.74 -d -29:00:08.60 -e 2000 -v 0 
+Thu Jul  7 10:18:22 2005 (shostler): observe -s gc_15b -r 17:45:42.74 -d -29:00:08.60 -e 2000 -v 0 
+Thu Jul  7 10:18:23 2005 (shostler): tsys 
+Thu Jul  7 10:18:34 2005 (shostler): integrate -s 8 -w 
+Thu Jul  7 10:23:01 2005 (shostler): lookup -s 1733-130 
+Thu Jul  7 10:23:01 2005 (shostler): observe -s 1733-130 
+Thu Jul  7 10:23:02 2005 (shostler): tsys 
+Thu Jul  7 10:23:13 2005 (shostler): integrate -s 10 -w 
+Thu Jul  7 10:28:41 2005 (shostler): lookup -s 1733-130 
+Thu Jul  7 10:28:42 2005 (shostler): lookup -s 1924-292 
+Thu Jul  7 10:28:42 2005 (shostler): lookup -s 1924-292 
+Thu Jul  7 10:28:43 2005 (shostler): observe -s 1924-292 
+Thu Jul  7 10:28:44 2005 (shostler): tsys 
+Thu Jul  7 10:28:55 2005 (shostler): integrate -s 4 -w 
+Thu Jul  7 10:31:16 2005 (shostler): lookup -s 1733-130 
+Thu Jul  7 10:31:16 2005 (shostler): lookup -s 1924-292 
+Thu Jul  7 10:31:17 2005 (shostler): lookup -s gc_16b -r 17:45:41.37 -d -29:00:08.60 -e 2000 -v 0 
+Thu Jul  7 10:31:17 2005 (shostler): observe -s gc_16b -r 17:45:41.37 -d -29:00:08.60 -e 2000 -v 0 
+Thu Jul  7 10:31:19 2005 (shostler): tsys 
+Thu Jul  7 10:31:30 2005 (shostler): integrate -s 8 -w 
+Thu Jul  7 10:35:55 2005 (shostler): lookup -s gc_17b -r 17:45:40.00 -d -29:00:08.60 -e 2000 -v 0 
+Thu Jul  7 10:35:55 2005 (shostler): observe -s gc_17b -r 17:45:40.00 -d -29:00:08.60 -e 2000 -v 0 
+Thu Jul  7 10:35:56 2005 (shostler): tsys 
+Thu Jul  7 10:36:07 2005 (shostler): integrate -s 8 -w 
+Thu Jul  7 10:40:33 2005 (shostler): lookup -s gc_18b -r 17:45:38.63 -d -29:00:08.60 -e 2000 -v 0 
+Thu Jul  7 10:40:34 2005 (shostler): observe -s gc_18b -r 17:45:38.63 -d -29:00:08.60 -e 2000 -v 0 
+Thu Jul  7 10:40:35 2005 (shostler): tsys 
+Thu Jul  7 10:40:46 2005 (shostler): integrate -s 8 -w 
+Thu Jul  7 10:45:12 2005 (shostler): lookup -s gc_19b -r 17:45:37.26 -d -29:00:08.60 -e 2000 -v 0 
+Thu Jul  7 10:45:12 2005 (shostler): observe -s gc_19b -r 17:45:37.26 -d -29:00:08.60 -e 2000 -v 0 
+Thu Jul  7 10:45:14 2005 (shostler): tsys 
+Thu Jul  7 10:45:25 2005 (shostler): integrate -s 8 -w 
+Thu Jul  7 10:49:51 2005 (shostler): lookup -s gc_20b -r 17:45:37.26 -d -28:59:50.60 -e 2000 -v 0 
+Thu Jul  7 10:49:51 2005 (shostler): observe -s gc_20b -r 17:45:37.26 -d -28:59:50.60 -e 2000 -v 0 
+Thu Jul  7 10:49:52 2005 (shostler): tsys 
+Thu Jul  7 10:50:04 2005 (shostler): integrate -s 8 -w 
+Thu Jul  7 10:54:30 2005 (shostler): lookup -s 1733-130 
+Thu Jul  7 10:54:30 2005 (shostler): observe -s 1733-130 
+Thu Jul  7 10:54:31 2005 (shostler): tsys 
+Thu Jul  7 10:54:42 2005 (shostler): integrate -s 10 -w 
+Thu Jul  7 11:00:11 2005 (shostler): lookup -s 1733-130 
+Thu Jul  7 11:00:11 2005 (shostler): lookup -s 1924-292 
+Thu Jul  7 11:00:12 2005 (shostler): lookup -s 1924-292 
+Thu Jul  7 11:00:12 2005 (shostler): observe -s 1924-292 
+Thu Jul  7 11:00:13 2005 (shostler): tsys 
+Thu Jul  7 11:00:24 2005 (shostler): integrate -s 4 -w 
+Thu Jul  7 11:02:45 2005 (shostler): lookup -s 1733-130 
+Thu Jul  7 11:02:46 2005 (shostler): lookup -s 1924-292 
+Thu Jul  7 11:02:47 2005 (shostler): lookup -s gc_21b -r 17:45:38.63 -d -28:59:50.60 -e 2000 -v 0 
+Thu Jul  7 11:02:47 2005 (shostler): observe -s gc_21b -r 17:45:38.63 -d -28:59:50.60 -e 2000 -v 0 
+Thu Jul  7 11:02:48 2005 (shostler): tsys 
+Thu Jul  7 11:02:59 2005 (shostler): integrate -s 8 -w 
+Thu Jul  7 11:07:24 2005 (shostler): lookup -s gc_22b -r 17:45:40.00 -d -28:59:50.60 -e 2000 -v 0 
+Thu Jul  7 11:07:24 2005 (shostler): observe -s gc_22b -r 17:45:40.00 -d -28:59:50.60 -e 2000 -v 0 
+Thu Jul  7 11:07:26 2005 (shostler): tsys 
+Thu Jul  7 11:07:37 2005 (shostler): integrate -s 8 -w 
+Thu Jul  7 11:12:03 2005 (shostler): lookup -s gc_23b -r 17:45:41.37 -d -28:59:50.60 -e 2000 -v 0 
+Thu Jul  7 11:12:03 2005 (shostler): observe -s gc_23b -r 17:45:41.37 -d -28:59:50.60 -e 2000 -v 0 
+Thu Jul  7 11:12:04 2005 (shostler): tsys 
+Thu Jul  7 11:12:15 2005 (shostler): integrate -s 8 -w 
+Thu Jul  7 11:16:41 2005 (shostler): lookup -s gc_24b -r 17:45:42.74 -d -28:59:50.60 -e 2000 -v 0 
+Thu Jul  7 11:16:42 2005 (shostler): observe -s gc_24b -r 17:45:42.74 -d -28:59:50.60 -e 2000 -v 0 
+Thu Jul  7 11:16:43 2005 (shostler): tsys 
+Thu Jul  7 11:16:54 2005 (shostler): integrate -s 8 -w 
+Thu Jul  7 11:21:20 2005 (shostler): lookup -s gc_25b -r 17:45:42.06 -d -28:59:32.60 -e 2000 -v 0 
+Thu Jul  7 11:21:21 2005 (shostler): observe -s gc_25b -r 17:45:42.06 -d -28:59:32.60 -e 2000 -v 0 
+Thu Jul  7 11:21:22 2005 (shostler): tsys 
+Thu Jul  7 11:21:33 2005 (shostler): integrate -s 8 -w 
+Thu Jul  7 11:25:59 2005 (shostler): lookup -s 1733-130 
+Thu Jul  7 11:26:00 2005 (shostler): observe -s 1733-130 
+Thu Jul  7 11:26:01 2005 (shostler): tsys 
+Thu Jul  7 11:26:12 2005 (shostler): integrate -s 10 -w 
+Thu Jul  7 11:27:53 2005 (nimesh): monitor 
+Thu Jul  7 11:31:40 2005 (shostler): lookup -s 1733-130 
+Thu Jul  7 11:31:40 2005 (shostler): lookup -s 1924-292 
+Thu Jul  7 11:31:41 2005 (shostler): lookup -s 1924-292 
+Thu Jul  7 11:31:42 2005 (shostler): observe -s 1924-292 
+Thu Jul  7 11:31:43 2005 (shostler): tsys 
+Thu Jul  7 11:31:54 2005 (shostler): integrate -s 4 -w 
+Thu Jul  7 11:37:42 2005 (nimesh): project -r -i 126 -f ./nightly345.pl 
+Thu Jul  7 11:37:44 2005 (nimesh): optical 
+Thu Jul  7 11:37:52 2005 (nimesh): observe -s polaris 
+Thu Jul  7 11:37:53 2005 (nimesh): antennaWait 
+Thu Jul  7 11:38:50 2005 (nimesh): c90cmd -c snapshot -e 200 
+Thu Jul  7 11:39:02 2005 (nimesh): radio 
+Thu Jul  7 11:39:10 2005 (nimesh): lookup -s 3c454.3 
+Thu Jul  7 11:39:10 2005 (nimesh): observe -s 3c454.3 
+Thu Jul  7 11:39:12 2005 (nimesh): point -i 60 -r 1 -L -l -t -f /data/engineering/pointing/nightly 
+		Repetition 1:
+		Ant 1	AzOff =  -2.5	ElOff =   0.5	deltaAz =  -9.5	deltaEl =  -0.7
+		Ant 2	AzOff =   0.4	ElOff =  -4.9	deltaAz =  -6.6	deltaEl =  -1.1
+		Ant 3	AzOff =  -1.7	ElOff =   8.1	deltaAz =  -6.3	deltaEl =  17.1
+		Ant 4	AzOff =  -3.8	ElOff =  -7.6	deltaAz =  -7.5	deltaEl =  -4.8
+		Ant 5	AzOff =   4.1	ElOff =   7.6	deltaAz =  -3.2	deltaEl =   4.2
+		Ant 6	AzOff =  -1.9	ElOff =  -1.7	deltaAz =  -5.3	deltaEl =   5.0
+		Ant 7	AzOff =   3.2	ElOff =  -3.4	deltaAz =  -6.0	deltaEl =  -9.7
+Thu Jul  7 11:45:09 2005 (nimesh): optical 
+Thu Jul  7 11:45:17 2005 (nimesh): observe -s hip112997 
+Thu Jul  7 11:45:18 2005 (nimesh): antennaWait 
+Thu Jul  7 11:45:27 2005 (nimesh): c90cmd -c snapshot -e 200 
+Thu Jul  7 11:45:39 2005 (nimesh): radio 
+Thu Jul  7 11:47:30 2005 (nimesh): project -r -i 73 -f ./gc_mosaic.25mp.2nd.pl 
+Thu Jul  7 11:47:32 2005 (nimesh): radio 
+Thu Jul  7 11:47:40 2005 (nimesh): integrate -t 30 
+Thu Jul  7 11:47:42 2005 (nimesh): lookup -s gc_1b -r 17:45:37.26 -d -29:01:02.60 -e 2000 -v 0 
+Thu Jul  7 11:47:42 2005 (nimesh): lookup -s gc_2b -r 17:45:38.63 -d -29:01:02.60 -e 2000 -v 0 
+Thu Jul  7 11:47:43 2005 (nimesh): lookup -s gc_3b -r 17:45:40.00 -d -29:01:02.60 -e 2000 -v 0 
+Thu Jul  7 11:47:44 2005 (nimesh): lookup -s gc_4b -r 17:45:41.37 -d -29:01:02.60 -e 2000 -v 0 
+Thu Jul  7 11:47:44 2005 (nimesh): lookup -s gc_5b -r 17:45:42.74 -d -29:00:44.60 -e 2000 -v 0 
+Thu Jul  7 11:47:45 2005 (nimesh): lookup -s gc_6b -r 17:45:41.37 -d -29:00:44.60 -e 2000 -v 0 
+Thu Jul  7 11:47:46 2005 (nimesh): lookup -s gc_7b -r 17:45:40.00 -d -29:00:44.60 -e 2000 -v 0 
+Thu Jul  7 11:47:46 2005 (nimesh): lookup -s gc_8b -r 17:45:38.63 -d -29:00:44.60 -e 2000 -v 0 
+Thu Jul  7 11:47:47 2005 (nimesh): lookup -s gc_9b -r 17:45:37.26 -d -29:00:44.60 -e 2000 -v 0 
+Thu Jul  7 11:47:47 2005 (nimesh): lookup -s gc_10b -r 17:45:37.26 -d -29:00:26.60 -e 2000 -v 0 
+Thu Jul  7 11:47:48 2005 (nimesh): lookup -s gc_11b -r 17:45:38.63 -d -29:00:26.60 -e 2000 -v 0 
+Thu Jul  7 11:47:49 2005 (nimesh): lookup -s gc_12b -r 17:45:40.00 -d -29:00:26.60 -e 2000 -v 0 
+Thu Jul  7 11:47:50 2005 (nimesh): lookup -s gc_13b -r 17:45:41.37 -d -29:00:26.60 -e 2000 -v 0 
+Thu Jul  7 11:47:50 2005 (nimesh): lookup -s gc_14b -r 17:45:42.74 -d -29:00:26.60 -e 2000 -v 0 
+Thu Jul  7 11:47:51 2005 (nimesh): lookup -s gc_15b -r 17:45:42.74 -d -29:00:08.60 -e 2000 -v 0 
+Thu Jul  7 11:47:52 2005 (nimesh): lookup -s gc_16b -r 17:45:41.37 -d -29:00:08.60 -e 2000 -v 0 
+Thu Jul  7 11:47:52 2005 (nimesh): lookup -s gc_17b -r 17:45:40.00 -d -29:00:08.60 -e 2000 -v 0 
+Thu Jul  7 11:47:53 2005 (nimesh): lookup -s gc_18b -r 17:45:38.63 -d -29:00:08.60 -e 2000 -v 0 
+Thu Jul  7 11:47:53 2005 (nimesh): lookup -s gc_19b -r 17:45:37.26 -d -29:00:08.60 -e 2000 -v 0 
+Thu Jul  7 11:47:54 2005 (nimesh): lookup -s gc_20b -r 17:45:37.26 -d -28:59:50.60 -e 2000 -v 0 
+Thu Jul  7 11:47:55 2005 (nimesh): lookup -s gc_21b -r 17:45:38.63 -d -28:59:50.60 -e 2000 -v 0 
+Thu Jul  7 11:47:55 2005 (nimesh): lookup -s gc_22b -r 17:45:40.00 -d -28:59:50.60 -e 2000 -v 0 
+Thu Jul  7 11:47:56 2005 (nimesh): lookup -s gc_23b -r 17:45:41.37 -d -28:59:50.60 -e 2000 -v 0 
+Thu Jul  7 11:47:57 2005 (nimesh): lookup -s gc_24b -r 17:45:42.74 -d -28:59:50.60 -e 2000 -v 0 
+Thu Jul  7 11:47:57 2005 (nimesh): lookup -s gc_25b -r 17:45:42.06 -d -28:59:32.60 -e 2000 -v 0 
+Thu Jul  7 11:47:58 2005 (nimesh): lookup -s 1733-130 
+Thu Jul  7 11:47:59 2005 (nimesh): lookup -s 1924-292 
+Thu Jul  7 11:48:00 2005 (nimesh): lookup -s 1733-130 
+Thu Jul  7 11:48:00 2005 (nimesh): observe -s 1733-130 
+Thu Jul  7 11:48:01 2005 (nimesh): tsys 
+Thu Jul  7 11:48:12 2005 (nimesh): integrate -s 10 -w 
+Thu Jul  7 11:50:04 2005 (nimesh): azel -a 8 -z 270 -e 80 
+Thu Jul  7 11:50:06 2005 (nimesh): resume -a 8 
+Thu Jul  7 11:54:20 2005 (nimesh): azoff -a 1 -s -2.5 
+Thu Jul  7 11:54:24 2005 (nimesh): eloff -a 1 -s 0.5 
+Thu Jul  7 11:54:30 2005 (nimesh): azoff -a 2 -s 0.4 
+Thu Jul  7 11:54:35 2005 (nimesh): eloff -a 2 -s -4.9 
+Thu Jul  7 11:54:42 2005 (nimesh): azoff -a 3 -s -1.7 
+Thu Jul  7 11:54:48 2005 (nimesh): eloff -a 3 -s 8.1 
+Thu Jul  7 11:54:55 2005 (nimesh): azoff -a 4 -s -3.8 
+Thu Jul  7 11:55:00 2005 (nimesh): eloff -a 4 -s -7.6 
+Thu Jul  7 11:55:06 2005 (nimesh): azoff -a 5 -s 4.1 
+Thu Jul  7 11:55:14 2005 (nimesh): eloff -a 5 -s 7.6 
+Thu Jul  7 11:55:20 2005 (nimesh): azoff -a 6 -s -1.9 
+Thu Jul  7 11:55:26 2005 (nimesh): eloff -a 6 -s -1.7 
+Thu Jul  7 11:55:31 2005 (nimesh): azoff -a 7 -s 3.2 
+Thu Jul  7 11:55:38 2005 (nimesh): eloff -a 7 -s -3.4 
+Thu Jul  7 11:56:09 2005 (nimesh): project -r -o Nimesh -l CfA-M227 
+Thu Jul  7 11:56:26 2005 (nimesh): resume -a 8 
+Thu Jul  7 11:56:32 2005 (nimesh): lookup -s 1733-130 
+Thu Jul  7 11:56:32 2005 (nimesh): lookup -s 1924-292 
+Thu Jul  7 11:56:33 2005 (nimesh): lookup -s 1924-292 
+Thu Jul  7 11:56:33 2005 (nimesh): observe -s 1924-292 
+Thu Jul  7 11:56:35 2005 (nimesh): tsys 
+Thu Jul  7 11:56:46 2005 (nimesh): integrate -s 4 -w 
+Thu Jul  7 11:56:49 2005 (nimesh): recordTilts -a 8 -z azscan 
+Thu Jul  7 11:57:03 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 11:57:03 2005 (nimesh): az -a 8 -d 270 
+Thu Jul  7 11:57:13 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 11:57:19 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 11:57:19 2005 (nimesh): az -a 8 -d 280 
+Thu Jul  7 11:57:29 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 11:57:35 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 11:57:35 2005 (nimesh): az -a 8 -d 290 
+Thu Jul  7 11:57:46 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 11:57:52 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 11:57:52 2005 (nimesh): az -a 8 -d 300 
+Thu Jul  7 11:58:02 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 11:58:08 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 11:58:08 2005 (nimesh): az -a 8 -d 310 
+Thu Jul  7 11:58:18 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 11:58:24 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 11:58:24 2005 (nimesh): az -a 8 -d 330 
+Thu Jul  7 11:58:34 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 11:58:41 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 11:58:41 2005 (nimesh): az -a 8 -d 340 
+Thu Jul  7 11:58:51 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 11:58:57 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 11:58:57 2005 (nimesh): az -a 8 -d 350 
+Thu Jul  7 11:59:07 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 11:59:13 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 11:59:13 2005 (nimesh): az -a 8 -d 0 
+Thu Jul  7 11:59:23 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 11:59:29 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 11:59:29 2005 (nimesh): az -a 8 -d 10 
+Thu Jul  7 11:59:40 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 11:59:46 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 11:59:46 2005 (nimesh): az -a 8 -d 20 
+Thu Jul  7 11:59:56 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 12:00:02 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 12:00:02 2005 (nimesh): az -a 8 -d 30 
+Thu Jul  7 12:00:09 2005 (nimesh): lookup -s 1733-130 
+Thu Jul  7 12:00:09 2005 (nimesh): lookup -s 1924-292 
+Thu Jul  7 12:00:10 2005 (nimesh): lookup -s gc_1b -r 17:45:37.26 -d -29:01:02.60 -e 2000 -v 0 
+Thu Jul  7 12:00:10 2005 (nimesh): observe -s gc_1b -r 17:45:37.26 -d -29:01:02.60 -e 2000 -v 0 
+Thu Jul  7 12:00:11 2005 (nimesh): tsys 
+Thu Jul  7 12:00:12 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 12:00:18 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 12:00:18 2005 (nimesh): az -a 8 -d 40 
+Thu Jul  7 12:00:23 2005 (nimesh): integrate -s 8 -w 
+Thu Jul  7 12:00:29 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 12:00:35 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 12:00:35 2005 (nimesh): az -a 8 -d 50 
+Thu Jul  7 12:00:45 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 12:00:51 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 12:00:51 2005 (nimesh): az -a 8 -d 60 
+Thu Jul  7 12:01:01 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 12:01:07 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 12:01:07 2005 (nimesh): az -a 8 -d 70 
+Thu Jul  7 12:01:17 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 12:01:23 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 12:01:24 2005 (nimesh): az -a 8 -d 80 
+Thu Jul  7 12:01:34 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 12:01:40 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 12:01:40 2005 (nimesh): az -a 8 -d 90 
+Thu Jul  7 12:01:50 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 12:01:56 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 12:01:56 2005 (nimesh): az -a 8 -d 100 
+Thu Jul  7 12:02:06 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 12:02:12 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 12:02:12 2005 (nimesh): az -a 8 -d 110 
+Thu Jul  7 12:02:23 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 12:02:29 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 12:02:29 2005 (nimesh): az -a 8 -d 120 
+Thu Jul  7 12:02:39 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 12:02:45 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 12:02:45 2005 (nimesh): az -a 8 -d 130 
+Thu Jul  7 12:02:55 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 12:03:01 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 12:03:01 2005 (nimesh): az -a 8 -d 140 
+Thu Jul  7 12:03:11 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 12:03:18 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 12:03:18 2005 (nimesh): az -a 8 -d 150 
+Thu Jul  7 12:03:28 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 12:03:34 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 12:03:34 2005 (nimesh): az -a 8 -d 160 
+Thu Jul  7 12:03:44 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 12:03:50 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 12:03:50 2005 (nimesh): az -a 8 -d 170 
+Thu Jul  7 12:04:00 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 12:04:06 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 12:04:07 2005 (nimesh): az -a 8 -d 180 
+Thu Jul  7 12:04:17 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 12:04:23 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 12:04:23 2005 (nimesh): az -a 8 -d 190 
+Thu Jul  7 12:04:33 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 12:04:39 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 12:04:39 2005 (nimesh): az -a 8 -d 200 
+Thu Jul  7 12:04:47 2005 (nimesh): lookup -s gc_2b -r 17:45:38.63 -d -29:01:02.60 -e 2000 -v 0 
+Thu Jul  7 12:04:47 2005 (nimesh): observe -s gc_2b -r 17:45:38.63 -d -29:01:02.60 -e 2000 -v 0 
+Thu Jul  7 12:04:49 2005 (nimesh): tsys 
+Thu Jul  7 12:04:49 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 12:04:55 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 12:04:55 2005 (nimesh): az -a 8 -d 210 
+Thu Jul  7 12:05:00 2005 (nimesh): integrate -s 8 -w 
+Thu Jul  7 12:05:06 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 12:05:12 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 12:05:12 2005 (nimesh): az -a 8 -d 220 
+Thu Jul  7 12:05:22 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 12:05:28 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 12:05:28 2005 (nimesh): az -a 8 -d 230 
+Thu Jul  7 12:05:38 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 12:05:44 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 12:05:44 2005 (nimesh): az -a 8 -d 240 
+Thu Jul  7 12:05:55 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 12:06:01 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 12:06:01 2005 (nimesh): az -a 8 -d 250 
+Thu Jul  7 12:06:11 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 12:06:17 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 12:06:17 2005 (nimesh): az -a 8 -d 260 
+Thu Jul  7 12:06:27 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 12:06:33 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 12:06:33 2005 (nimesh): az -a 8 -d 270 
+Thu Jul  7 12:06:43 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 12:06:50 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 12:06:50 2005 (nimesh): az -a 8 -d 280 
+Thu Jul  7 12:07:00 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 12:07:06 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 12:07:06 2005 (nimesh): az -a 8 -d 290 
+Thu Jul  7 12:07:16 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 12:07:22 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 12:07:22 2005 (nimesh): az -a 8 -d 300 
+Thu Jul  7 12:07:32 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 12:07:38 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 12:07:39 2005 (nimesh): az -a 8 -d 310 
+Thu Jul  7 12:07:49 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 12:07:55 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 12:07:55 2005 (nimesh): az -a 8 -d 320 
+Thu Jul  7 12:08:05 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 12:08:11 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 12:08:11 2005 (nimesh): az -a 8 -d 330 
+Thu Jul  7 12:08:21 2005 (nimesh): writeTilts -a 8 -c on 
+Thu Jul  7 12:08:27 2005 (nimesh): writeTilts -a 8 -c off 
+Thu Jul  7 12:09:26 2005 (nimesh): lookup -s gc_3b -r 17:45:40.00 -d -29:01:02.60 -e 2000 -v 0 
+Thu Jul  7 12:09:26 2005 (nimesh): observe -s gc_3b -r 17:45:40.00 -d -29:01:02.60 -e 2000 -v 0 
+Thu Jul  7 12:09:27 2005 (nimesh): tsys 
+Thu Jul  7 12:09:39 2005 (nimesh): integrate -s 8 -w 
+Thu Jul  7 12:11:00 2005 (nimesh): stow -a 8 
+Thu Jul  7 12:14:05 2005 (nimesh): lookup -s gc_4b -r 17:45:41.37 -d -29:01:02.60 -e 2000 -v 0 
+Thu Jul  7 12:14:05 2005 (nimesh): observe -s gc_4b -r 17:45:41.37 -d -29:01:02.60 -e 2000 -v 0 
+Thu Jul  7 12:14:06 2005 (nimesh): tsys 
+Thu Jul  7 12:14:17 2005 (nimesh): integrate -s 8 -w 
+Thu Jul  7 12:18:44 2005 (nimesh): lookup -s gc_5b -r 17:45:42.74 -d -29:00:44.60 -e 2000 -v 0 
+Thu Jul  7 12:18:44 2005 (nimesh): observe -s gc_5b -r 17:45:42.74 -d -29:00:44.60 -e 2000 -v 0 
+Thu Jul  7 12:18:45 2005 (nimesh): tsys 
+Thu Jul  7 12:18:56 2005 (nimesh): integrate -s 8 -w 
+Thu Jul  7 12:23:22 2005 (nimesh): lookup -s 1733-130 
+Thu Jul  7 12:23:23 2005 (nimesh): observe -s 1733-130 
+Thu Jul  7 12:23:24 2005 (nimesh): tsys 
+Thu Jul  7 12:23:35 2005 (nimesh): integrate -s 10 -w 
+Thu Jul  7 12:29:03 2005 (nimesh): lookup -s 1733-130 
+Thu Jul  7 12:29:04 2005 (nimesh): lookup -s 1924-292 
+Thu Jul  7 12:29:04 2005 (nimesh): lookup -s 1924-292 
+Thu Jul  7 12:29:05 2005 (nimesh): observe -s 1924-292 
+Thu Jul  7 12:29:06 2005 (nimesh): tsys 
+Thu Jul  7 12:29:17 2005 (nimesh): integrate -s 4 -w 
+Thu Jul  7 12:31:38 2005 (nimesh): lookup -s 1733-130 
+Thu Jul  7 12:31:38 2005 (nimesh): lookup -s 1924-292 
+Thu Jul  7 12:31:39 2005 (nimesh): lookup -s gc_6b -r 17:45:41.37 -d -29:00:44.60 -e 2000 -v 0 
+Thu Jul  7 12:31:39 2005 (nimesh): observe -s gc_6b -r 17:45:41.37 -d -29:00:44.60 -e 2000 -v 0 
+Thu Jul  7 12:31:41 2005 (nimesh): tsys 
+Thu Jul  7 12:31:52 2005 (nimesh): integrate -s 8 -w 
+Thu Jul  7 12:36:17 2005 (nimesh): lookup -s gc_7b -r 17:45:40.00 -d -29:00:44.60 -e 2000 -v 0 
+Thu Jul  7 12:36:17 2005 (nimesh): observe -s gc_7b -r 17:45:40.00 -d -29:00:44.60 -e 2000 -v 0 
+Thu Jul  7 12:36:18 2005 (nimesh): tsys 
+Thu Jul  7 12:36:29 2005 (nimesh): integrate -s 8 -w 
+Thu Jul  7 12:40:55 2005 (nimesh): lookup -s gc_8b -r 17:45:38.63 -d -29:00:44.60 -e 2000 -v 0 
+Thu Jul  7 12:40:56 2005 (nimesh): observe -s gc_8b -r 17:45:38.63 -d -29:00:44.60 -e 2000 -v 0 
+Thu Jul  7 12:40:57 2005 (nimesh): tsys 
+Thu Jul  7 12:41:08 2005 (nimesh): integrate -s 8 -w 
+Thu Jul  7 12:45:34 2005 (nimesh): lookup -s gc_9b -r 17:45:37.26 -d -29:00:44.60 -e 2000 -v 0 
+Thu Jul  7 12:45:34 2005 (nimesh): observe -s gc_9b -r 17:45:37.26 -d -29:00:44.60 -e 2000 -v 0 
+Thu Jul  7 12:45:35 2005 (nimesh): tsys 
+Thu Jul  7 12:45:47 2005 (nimesh): integrate -s 8 -w 
+Thu Jul  7 12:50:13 2005 (nimesh): lookup -s gc_10b -r 17:45:37.26 -d -29:00:26.60 -e 2000 -v 0 
+Thu Jul  7 12:50:13 2005 (nimesh): observe -s gc_10b -r 17:45:37.26 -d -29:00:26.60 -e 2000 -v 0 
+Thu Jul  7 12:50:14 2005 (nimesh): tsys 
+Thu Jul  7 12:50:25 2005 (nimesh): integrate -s 8 -w 
+Thu Jul  7 12:51:03 2005 (tbourke): monitor 
+Thu Jul  7 12:54:52 2005 (nimesh): lookup -s 1733-130 
+Thu Jul  7 12:54:52 2005 (nimesh): observe -s 1733-130 
+Thu Jul  7 12:54:53 2005 (nimesh): tsys 
+Thu Jul  7 12:55:04 2005 (nimesh): integrate -s 10 -w 
+Thu Jul  7 13:00:32 2005 (nimesh): lookup -s 1733-130 
+Thu Jul  7 13:00:33 2005 (nimesh): lookup -s 1924-292 
+Thu Jul  7 13:00:34 2005 (nimesh): lookup -s 1924-292 
+Thu Jul  7 13:00:34 2005 (nimesh): observe -s 1924-292 
+Thu Jul  7 13:00:35 2005 (nimesh): tsys 
+Thu Jul  7 13:00:46 2005 (nimesh): integrate -s 4 -w 
+Thu Jul  7 13:03:07 2005 (nimesh): lookup -s 1733-130 
+Thu Jul  7 13:03:08 2005 (nimesh): lookup -s 1924-292 
+Thu Jul  7 13:03:09 2005 (nimesh): lookup -s gc_11b -r 17:45:38.63 -d -29:00:26.60 -e 2000 -v 0 
+Thu Jul  7 13:03:09 2005 (nimesh): lookup -s 1733-130 
+Thu Jul  7 13:03:10 2005 (nimesh): observe -s 1733-130 
+Thu Jul  7 13:03:11 2005 (nimesh): tsys 
+Thu Jul  7 13:03:22 2005 (nimesh): integrate -s 10 -w 
+Thu Jul  7 13:08:48 2005 (nimesh): lookup -s 1924-292 
+Thu Jul  7 13:08:48 2005 (nimesh): observe -s 1924-292 
+Thu Jul  7 13:08:49 2005 (nimesh): tsys 
+Thu Jul  7 13:09:00 2005 (nimesh): integrate -s 4 -w 
+Thu Jul  7 13:11:23 2005 (nimesh): lookup -s callisto 
+Thu Jul  7 13:11:24 2005 (nimesh): lookup -s 3c454.3 
+Thu Jul  7 13:11:24 2005 (nimesh): lookup -s 3c454.3 
+Thu Jul  7 13:11:25 2005 (nimesh): observe -s 3c454.3 
+Thu Jul  7 13:11:26 2005 (nimesh): tsys 
+Thu Jul  7 13:11:37 2005 (nimesh): integrate -s 10 -w 
+Thu Jul  7 13:18:06 2005 (nimesh): lookup -s 3c454.3 
+Thu Jul  7 13:18:06 2005 (nimesh): observe -s 3c454.3 
+Thu Jul  7 13:18:07 2005 (nimesh): integrate -s 10 -w 
+Thu Jul  7 13:23:15 2005 (nimesh): lookup -s 3c454.3 
+Thu Jul  7 13:23:15 2005 (nimesh): observe -s 3c454.3 
+Thu Jul  7 13:23:17 2005 (nimesh): integrate -s 10 -w 
+Thu Jul  7 13:28:25 2005 (nimesh): lookup -s 3c454.3 
+Thu Jul  7 13:28:25 2005 (nimesh): observe -s 3c454.3 
+Thu Jul  7 13:28:26 2005 (nimesh): integrate -s 10 -w 
+Thu Jul  7 13:33:35 2005 (nimesh): lookup -s 3c454.3 
+Thu Jul  7 13:33:35 2005 (nimesh): observe -s 3c454.3 
+Thu Jul  7 13:33:36 2005 (nimesh): integrate -s 10 -w 
+Thu Jul  7 13:38:44 2005 (nimesh): lookup -s 3c454.3 
+Thu Jul  7 13:38:45 2005 (nimesh): observe -s 3c454.3 
+Thu Jul  7 13:38:46 2005 (nimesh): integrate -s 10 -w 
+Thu Jul  7 13:43:54 2005 (nimesh): lookup -s 3c454.3 
+Thu Jul  7 13:43:54 2005 (nimesh): observe -s 3c454.3 
+Thu Jul  7 13:43:56 2005 (nimesh): integrate -s 10 -w 
+Thu Jul  7 13:49:04 2005 (nimesh): lookup -s 3c454.3 
+Thu Jul  7 13:49:04 2005 (nimesh): observe -s 3c454.3 
+Thu Jul  7 13:49:05 2005 (nimesh): integrate -s 10 -w 
+Thu Jul  7 13:54:14 2005 (nimesh): lookup -s 3c454.3 
+Thu Jul  7 13:54:14 2005 (nimesh): observe -s 3c454.3 
+Thu Jul  7 13:54:15 2005 (nimesh): integrate -s 10 -w 
+Thu Jul  7 13:56:54 2005 (tksridha): monitor 
+Thu Jul  7 13:58:37 2005 (tksridha): monitor 
+Thu Jul  7 13:59:23 2005 (nimesh): lookup -s 3c454.3 
+Thu Jul  7 13:59:24 2005 (nimesh): observe -s 3c454.3 
+Thu Jul  7 13:59:25 2005 (nimesh): integrate -s 10 -w 
+Thu Jul  7 14:04:33 2005 (nimesh): lookup -s 3c454.3 
+Thu Jul  7 14:04:34 2005 (nimesh): observe -s 3c454.3 
+Thu Jul  7 14:04:35 2005 (nimesh): integrate -s 10 -w 
+Thu Jul  7 14:06:42 2005 (tksridha): cholo --help 
+Thu Jul  7 14:09:43 2005 (nimesh): lookup -s 3c454.3 
+Thu Jul  7 14:09:43 2005 (nimesh): standby 
+Thu Jul  7 14:11:19 2005 (nimesh): resume 
+Thu Jul  7 14:15:45 2005 (nimesh): lookup -s uranus 
+Thu Jul  7 14:16:05 2005 (nimesh): observe -s uranus 
+Thu Jul  7 14:17:00 2005 (nimesh): tsys 
+Thu Jul  7 14:18:22 2005 (nimesh): integrate -s 10 -w 
+Thu Jul  7 14:19:11 2005 (nimesh): integrate -s 120 -w 
+Thu Jul  7 14:38:33 2005 (maria): monitor 
+Thu Jul  7 14:44:45 2005 (nimesh): lookup -s moon 
+Thu Jul  7 14:44:50 2005 (nimesh): monitor 
+Thu Jul  7 15:21:25 2005 (nimesh): tsys 
+Thu Jul  7 15:21:45 2005 (nimesh): stow 
+Thu Jul  7 15:23:50 2005 (nimesh): endProject.
+Thu Jul  7 15:24:00 2005 (nimesh): lookup -s moon 
+Thu Jul  7 15:24:04 2005 (nimesh): lookup -s saturn 
+Thu Jul  7 15:24:10 2005 (nimesh): lookup -s mars 
+Thu Jul  7 15:24:59 2005 (nimesh): project 
+Thu Jul  7 15:25:35 2005 (nimesh): project -p Nimesh  -o Nimesh -d rscans test -l CfA-M227 -a 4,5 -s 1 -R l -C 1..12 
+Thu Jul  7 15:25:52 2005 (nimesh): openM3 
+Thu Jul  7 15:25:58 2005 (nimesh): observe -s mars 
+Thu Jul  7 15:30:12 2005 (tksridha): endProject.
+Thu Jul  7 15:30:31 2005 (tksridha): project --help 
+Thu Jul  7 15:31:38 2005 (tksridha): project -a 1,2,3,6,7 -C 1..12 -s 1 -D 1 -p TK -o TK -l Cambridge -c 5-7090 -d HoloTests 
+Thu Jul  7 15:32:23 2005 (tksridha): tune -c activate -l 0 -g 
+Thu Jul  7 15:33:07 2005 (nimesh): startChopping -a 4,5 
+Thu Jul  7 15:33:25 2005 (root): monitor 
+Thu Jul 07 15:33:28 2005 (nimesh): /application/bin/rscan -a 4,5 -t 1 -s mars -c -v 7,8 
+Thu Jul  7 15:33:29 2005 (nimesh): writeDSM -a 4,5 -v DUALRXPOINT_TOTAL_SCANS_V8_L -n 1 
+Thu Jul  7 15:33:29 2005 (nimesh): writeDSM -a 4,5 -v DUALRXPOINT_SCAN_NUMBER_V8_L -n 0 
+Thu Jul  7 15:33:30 2005 (nimesh): offsetUnit -a 4 -s -2 
+Thu Jul  7 15:33:31 2005 (nimesh): observe -a 4 -s mars 
+Thu Jul  7 15:33:31 2005 (nimesh): offsetUnit -a 5 -s -2 
+Thu Jul  7 15:33:32 2005 (nimesh): observe -a 5 -s mars 
+Thu Jul  7 15:33:32 2005 (nimesh): antennaWait -a 4,5 -e 4 
+Thu Jul  7 15:33:36 2005 (nimesh): eloff -a 4 -s -7.600000e+00 
+Thu Jul  7 15:33:37 2005 (nimesh): azoff -a 4 -s 106.2 
+Thu Jul  7 15:33:39 2005 (nimesh): eloff -a 5 -s 7.600000 
+Thu Jul  7 15:33:40 2005 (nimesh): azoff -a 5 -s 114.1 
+Thu Jul  7 15:33:41 2005 (nimesh): antennaWait -a 4,5 -e 4 
+Thu Jul  7 15:33:46 2005 (nimesh): azscan -a 4 
+Thu Jul  7 15:33:46 2005 (nimesh): azscan -a 5 
+Thu Jul  7 15:33:47 2005 (nimesh): /application/bin/recordContinuum -a 4,5 -c 1 -s azscan -p 7,8 -u 1120750426 
+Thu Jul  7 15:35:41 2005 (nimesh): stopScan -a 4 
+Thu Jul  7 15:35:43 2005 (nimesh): stopScan -a 5 
+Thu Jul  7 15:35:45 2005 (nimesh): eloff -a 4 -s -7.600000e+00 
+Thu Jul  7 15:35:46 2005 (nimesh): azoff -a 4 -s -3.800000e+00 
+Thu Jul  7 15:35:48 2005 (nimesh): eloff -a 5 -s 7.600000 
+Thu Jul  7 15:35:49 2005 (nimesh): azoff -a 5 -s 4.100000 
+Thu Jul  7 15:35:51 2005 (nimesh): offsetUnit -a 4 -s -2 
+Thu Jul  7 15:35:52 2005 (nimesh): observe -a 4 -s mars 
+Thu Jul  7 15:35:52 2005 (nimesh): offsetUnit -a 5 -s -2 
+Thu Jul  7 15:35:53 2005 (nimesh): observe -a 5 -s mars 
+Thu Jul  7 15:35:53 2005 (nimesh): antennaWait -a 4,5 -e 4 
+Thu Jul  7 15:35:57 2005 (nimesh): azoff -a 4 -s -48.8 
+Thu Jul  7 15:35:58 2005 (nimesh): eloff -a 4 -s 102.4 
+Thu Jul  7 15:35:59 2005 (nimesh): azoff -a 5 -s -40.9 
+Thu Jul  7 15:36:00 2005 (nimesh): eloff -a 5 -s 117.6 
+Thu Jul  7 15:36:01 2005 (nimesh): antennaWait -a 4,5 -e 4 
+Thu Jul  7 15:36:07 2005 (nimesh): elscan -a 4 
+Thu Jul  7 15:36:07 2005 (nimesh): elscan -a 5 
+Thu Jul  7 15:36:07 2005 (nimesh): /application/bin/recordContinuum -a 4,5 -c 1 -s elscan -p 7,8 -u 1120750566 
+Thu Jul  7 15:38:01 2005 (nimesh): stopScan -a 4 
+Thu Jul  7 15:38:03 2005 (nimesh): stopScan -a 5 
+Thu Jul  7 15:38:06 2005 (nimesh): eloff -a 4 -s -7.600000e+00 
+Thu Jul  7 15:38:07 2005 (nimesh): azoff -a 4 -s -3.800000e+00 
+Thu Jul  7 15:38:08 2005 (nimesh): eloff -a 5 -s 7.600000 
+Thu Jul  7 15:38:09 2005 (nimesh): azoff -a 5 -s 4.100000 
+Thu Jul  7 15:38:10 2005 (nimesh): writeDSM -a 4,5 -v DUALRXPOINT_SCAN_NUMBER_V8_L -n 1 
+Thu Jul  7 15:40:17 2005 (nimesh): stow -a 5 
+Thu Jul  7 15:40:25 2005 (nimesh): stopChopping -a 5 
+Thu Jul  7 15:40:29 2005 (nimesh): closeM3 -a 5 
+Thu Jul  7 15:42:22 2005 (tksridha): tune -c activate -l 0 -g -h 6 
+Thu Jul  7 15:42:35 2005 (tksridha): dopplerTrack -tco2-1 -u -s12 
+Thu Jul 07 15:43:39 2005 (nimesh): /application/bin/rscan -a 4 -t 1 -s mars -c -v 7,8 
+Thu Jul  7 15:43:41 2005 (nimesh): writeDSM -a 4 -v DUALRXPOINT_TOTAL_SCANS_V8_L -n 1 
+Thu Jul  7 15:43:41 2005 (nimesh): writeDSM -a 4 -v DUALRXPOINT_SCAN_NUMBER_V8_L -n 0 
+Thu Jul  7 15:43:41 2005 (nimesh): offsetUnit -a 4 -s -2 
+Thu Jul  7 15:43:42 2005 (nimesh): observe -a 4 -s mars 
+Thu Jul  7 15:43:42 2005 (nimesh): antennaWait -a 4 -e 4 
+Thu Jul  7 15:43:46 2005 (nimesh): eloff -a 4 -s -7.600000e+00 
+Thu Jul  7 15:43:47 2005 (nimesh): azoff -a 4 -s 106.2 
+Thu Jul  7 15:43:48 2005 (nimesh): antennaWait -a 4 -e 4 
+Thu Jul  7 15:43:54 2005 (nimesh): azscan -a 4 
+Thu Jul  7 15:43:54 2005 (nimesh): /application/bin/recordContinuum -a 4 -c 1 -s azscan -p 7,8 -u 1120751034 
+Thu Jul  7 15:45:21 2005 (tksridha): dopplerTrack -tco2-1 -u -s12 
+Thu Jul  7 15:45:50 2005 (nimesh): stopScan -a 4 
+Thu Jul  7 15:45:52 2005 (nimesh): eloff -a 4 -s -7.600000e+00 
+Thu Jul  7 15:45:53 2005 (nimesh): azoff -a 4 -s -3.800000e+00 
+Thu Jul  7 15:45:55 2005 (nimesh): offsetUnit -a 4 -s -2 
+Thu Jul  7 15:45:56 2005 (nimesh): observe -a 4 -s mars 
+Thu Jul  7 15:45:56 2005 (nimesh): antennaWait -a 4 -e 4 
+Thu Jul  7 15:46:01 2005 (nimesh): azoff -a 4 -s -48.8 
+Thu Jul  7 15:46:02 2005 (nimesh): eloff -a 4 -s 102.4 
+Thu Jul  7 15:46:03 2005 (nimesh): antennaWait -a 4 -e 4 
+Thu Jul  7 15:46:08 2005 (nimesh): elscan -a 4 
+Thu Jul  7 15:46:08 2005 (nimesh): /application/bin/recordContinuum -a 4 -c 1 -s elscan -p 7,8 -u 1120751168 
+Thu Jul  7 15:47:02 2005 (tksridha): tune -c activate -l 0 -g -h 6 
+Thu Jul  7 15:47:29 2005 (tksridha): dopplerTrack -tco2-1 -u -s12 
+Thu Jul  7 15:48:04 2005 (nimesh): stopScan -a 4 
+Thu Jul  7 15:48:06 2005 (nimesh): eloff -a 4 -s -7.600000e+00 
+Thu Jul  7 15:48:07 2005 (nimesh): azoff -a 4 -s -3.800000e+00 
+Thu Jul  7 15:48:08 2005 (nimesh): writeDSM -a 4 -v DUALRXPOINT_SCAN_NUMBER_V8_L -n 1 
+Thu Jul  7 15:49:09 2005 (root): dopplerTrack -tco2-1 
+Thu Jul  7 15:49:25 2005 (daemon): setLO: sending "tune -f0 225.56 -h0 16" to acc1
+Thu Jul  7 15:49:25 2005 (daemon): setLO: sending "tune -f0 225.56 -h0 16" to acc2
+Thu Jul  7 15:49:25 2005 (daemon): setLO: sending "tune -f0 225.56 -h0 16" to acc3
+Thu Jul  7 15:49:25 2005 (daemon): setLO: sending "tune -f0 225.56 -h0 16" to acc6
+Thu Jul  7 15:49:25 2005 (daemon): setLO: sending "tune -f0 225.56 -h0 16" to acc7
+Thu Jul  7 15:51:35 2005 (root): lockYIG -a 2 
+Thu Jul  7 15:52:05 2005 (rtm): /application/bin/killdaemon acc2 antIFServer restart
+Thu Jul  7 15:52:12 2005 (root): lockYIG -a 2 
+Thu Jul  7 15:52:33 2005 (root): lockYIG -a 2 
+Thu Jul  7 15:54:47 2005 (root): dopplerTrack -tco2-1 -u -s12 
+Thu Jul  7 15:55:03 2005 (daemon): setLO: sending "tune -f0 225.60 -h0 16" to acc1
+Thu Jul  7 15:55:03 2005 (daemon): setLO: sending "tune -f0 225.60 -h0 16" to acc2
+Thu Jul  7 15:55:03 2005 (daemon): setLO: sending "tune -f0 225.60 -h0 16" to acc3
+Thu Jul  7 15:55:03 2005 (daemon): setLO: sending "tune -f0 225.60 -h0 16" to acc6
+Thu Jul  7 15:55:03 2005 (daemon): setLO: sending "tune -f0 225.60 -h0 16" to acc7
+Thu Jul  7 15:55:51 2005 (nimesh): stow -a 4 
+Thu Jul  7 15:55:56 2005 (nimesh): stopScan -a 4 
+Thu Jul  7 15:56:01 2005 (nimesh): stopChopping -a 4 
+Thu Jul  7 15:57:13 2005 (tksridha): project -r -a 5 -s 1 
+Thu Jul  7 15:57:55 2005 (tksridha): project -r -a 4 -s 1 
+Thu Jul  7 15:58:27 2005 (tksridha): tune -a 4,5 -c activate -l 0 -g -h 6 
+Thu Jul  7 16:00:22 2005 (kyoung): dopplerTrack -tco2-1 -u -s12 
+Thu Jul  7 16:00:38 2005 (daemon): setLO: sending "tune -f0 225.60 -h0 16" to acc1
+Thu Jul  7 16:00:38 2005 (daemon): setLO: sending "tune -f0 225.60 -h0 16" to acc2
+Thu Jul  7 16:00:38 2005 (daemon): setLO: sending "tune -f0 225.60 -h0 16" to acc3
+Thu Jul  7 16:00:38 2005 (daemon): setLO: sending "tune -f0 225.60 -h0 16" to acc4
+Thu Jul  7 16:00:38 2005 (daemon): setLO: sending "tune -f0 225.60 -h0 16" to acc5
+Thu Jul  7 16:00:38 2005 (daemon): setLO: sending "tune -f0 225.60 -h0 16" to acc6
+Thu Jul  7 16:00:38 2005 (daemon): setLO: sending "tune -f0 225.60 -h0 16" to acc7
+Thu Jul  7 16:06:15 2005 (tksridha): observe -s 3C454.5 
+Thu Jul  7 16:06:42 2005 (tksridha): setFeedOffset -f 230 
+Thu Jul  7 16:07:16 2005 (root): tune -a 3 -c rfpower 18 
+Thu Jul  7 16:07:24 2005 (root): tune -a 3 -c t joy 
+Thu Jul  7 16:07:40 2005 (tksridha): observe -s 3C454.3 
+Thu Jul  7 16:07:53 2005 (tksridha): resume 
+Thu Jul  7 16:07:54 2005 (root): tune -a 3 -c cb 0 
+Thu Jul  7 16:08:00 2005 (root): tune -a 3 -c a 3000 
+Thu Jul  7 16:08:06 2005 (root): tune -a 3 -c a 4500 
+Thu Jul  7 16:08:11 2005 (root): tune -a 3 -c a 4800 
+Thu Jul  7 16:08:33 2005 (tksridha): openM3 
+Thu Jul  7 16:09:10 2005 (tksridha): restartCorrelator -s 32 
+Thu Jul  7 16:11:13 2005 (root): correlatorPause 
+Thu Jul  7 16:11:17 2005 (root): correlatorResume 
+Thu Jul  7 16:11:28 2005 (tksridha): setIFLevels 
+Thu Jul  7 16:13:51 2005 (tksridha): newFile 
+Thu Jul  7 16:15:22 2005 (tksridha): point -r 2 -i 30 -t -l -Q 
+		Repetition 1:
+		Ant 1	AzOff =   6.0	ElOff =  -0.3	deltaAz =   8.5	deltaEl =  -0.8
+		Ant 2	AzOff =   4.3	ElOff =  -0.6	deltaAz =   3.9	deltaEl =   4.3
+		Ant 3	AzOff =   4.7	ElOff =  -7.5	deltaAz =   6.4	deltaEl = -15.6
+		Ant 4	AzOff =   3.8	ElOff =  -5.8	deltaAz =   7.6	deltaEl =   1.8
+		Ant 5	AzOff =   1.8	ElOff =  -1.6	deltaAz =  -2.3	deltaEl =  -9.2
+		Ant 6	AzOff =   6.3	ElOff =  -3.9	deltaAz =   8.2	deltaEl =  -2.2
+		Ant 7	AzOff =  12.8	ElOff =   0.6	deltaAz =   9.6	deltaEl =   4.0
+		Repetition 2:
+		Ant 1	AzOff =   6.0	ElOff =  -0.1	deltaAz =   8.5	deltaEl =  -0.6
+		Ant 2	AzOff =   4.3	ElOff =  -0.3	deltaAz =   3.9	deltaEl =   4.6
+		Ant 3	AzOff =   4.4	ElOff =  -7.4	deltaAz =   6.1	deltaEl = -15.5
+		Ant 4	AzOff =   3.0	ElOff =  -5.2	deltaAz =   6.8	deltaEl =   2.4
+		Ant 5	AzOff =   1.4	ElOff =  -1.3	deltaAz =  -2.7	deltaEl =  -8.9
+		Ant 6	AzOff =   6.5	ElOff =  -2.6	deltaAz =   8.4	deltaEl =  -0.9
+		Ant 7	AzOff =  12.0	ElOff =   0.8	deltaAz =   8.8	deltaEl =   4.2
+		Average:
+		Ant 1	AzOff =   6.0	ElOff =  -0.2	deltaAz =   8.5	deltaEl =  -0.7
+		Ant 2	AzOff =   4.3	ElOff =  -0.4	deltaAz =   3.9	deltaEl =   4.5
+		Ant 3	AzOff =   4.6	ElOff =  -7.5	deltaAz =   6.3	deltaEl = -15.6
+		Ant 4	AzOff =   3.4	ElOff =  -5.5	deltaAz =   7.2	deltaEl =   2.1
+		Ant 5	AzOff =   1.6	ElOff =  -1.4	deltaAz =  -2.5	deltaEl =  -9.0
+		Ant 6	AzOff =   6.4	ElOff =  -3.2	deltaAz =   8.3	deltaEl =  -1.5
+		Ant 7	AzOff =  12.4	ElOff =   0.7	deltaAz =   9.2	deltaEl =   4.1
+Thu Jul  7 16:26:04 2005 (tksridha): cholo --help 
+Thu Jul  7 16:26:57 2005 (tksridha): cholo -r 1,3,4,7 -i 15 -n 4 -B 2 
+Thu Jul  7 16:37:25 2005 (tksridha): cholo -r 1,3,4,7 -i 15 -n 4 -B 2 
+Thu Jul  7 16:48:11 2005 (tksridha): cholo -r 1,3,4,7 -i 15 -n 16 -B 2 
+Thu Jul  7 16:50:26 2005 (tksridha): azoff -a 2 -s 4 
+Thu Jul  7 16:50:39 2005 (tksridha): azoff -a 5 -s 2 
+Thu Jul  7 16:50:47 2005 (tksridha): azoff -a 6 -s 6 
+Thu Jul  7 16:51:04 2005 (tksridha): eloff -a 6 -s -3 
+Thu Jul  7 16:51:12 2005 (tksridha): eloff -a 5 -s -1 
+Thu Jul  7 16:51:20 2005 (tksridha): eloff -a 2 -s 0 
+Thu Jul  7 16:51:53 2005 (tksridha): cholo -r 1,3,4,7 -i 15 -n 16 -B 4 
+Thu Jul  7 17:34:28 2005 (root): monitor 
+Thu Jul  7 17:37:06 2005 (root): monitor 
+Thu Jul  7 18:03:28 2005 (root): monitor 
+Thu Jul  7 18:27:54 2005 (tksridha): point -r 2 -i 30 -t -l -Q 
+		Repetition 1:
+		Ant 1	AzOff =  10.9	ElOff =   5.1	deltaAz =   4.9	deltaEl =   5.3
+		Ant 2	AzOff =   6.0	ElOff =   7.3	deltaAz =   2.0	deltaEl =   7.3
+		Ant 3	AzOff =   8.5	ElOff =  -0.2	deltaAz =   3.9	deltaEl =   7.3
+		Ant 4	AzOff =   5.4	ElOff =   4.1	deltaAz =   1.9	deltaEl =   9.6
+		Ant 5	AzOff =   0.9	ElOff =   8.7	deltaAz =  -1.1	deltaEl =   9.7
+		Ant 6	AzOff =   1.8	ElOff =   4.8	deltaAz =  -4.2	deltaEl =   7.8
+		Ant 7	AzOff =  17.5	ElOff =  10.9	deltaAz =   5.0	deltaEl =  10.2
+		Repetition 2:
+		Ant 1	AzOff =   9.5	ElOff =  26.8	deltaAz =   3.5	deltaEl =  27.0
+		Ant 2	AzOff =   6.7	ElOff =   6.0	deltaAz =   2.7	deltaEl =   6.0
+		Ant 3	AzOff =   7.6	ElOff =  -2.1	deltaAz =   3.1	deltaEl =   5.4
+		Ant 4	AzOff =  16.2	ElOff =   9.7	deltaAz =  12.7	deltaEl =  15.2
+		Ant 5	AzOff =  24.3	ElOff =  18.4	deltaAz =  22.3	deltaEl =  19.4
+		Ant 6	AzOff =   6.1	ElOff =   9.7	deltaAz =   0.1	deltaEl =  12.7
+		Ant 7	AzOff =  25.0	ElOff =  17.5	deltaAz =  12.5	deltaEl =  16.8
+		Average:
+		Ant 1	AzOff =  10.2	ElOff =  16.0	deltaAz =   4.2	deltaEl =  16.2
+		Ant 2	AzOff =   6.3	ElOff =   6.7	deltaAz =   2.3	deltaEl =   6.7
+		Ant 3	AzOff =   8.0	ElOff =  -1.1	deltaAz =   3.5	deltaEl =   6.3
+		Ant 4	AzOff =  10.8	ElOff =   6.9	deltaAz =   7.3	deltaEl =  12.4
+		Ant 5	AzOff =  12.6	ElOff =  13.5	deltaAz =  10.6	deltaEl =  14.5
+		Ant 6	AzOff =   4.0	ElOff =   7.3	deltaAz =  -2.0	deltaEl =  10.3
+		Ant 7	AzOff =  21.2	ElOff =  14.2	deltaAz =   8.8	deltaEl =  13.5
+Thu Jul  7 18:36:33 2005 (tksridha): project -r -a 5 -s 0 
+Thu Jul  7 18:37:58 2005 (tksridha): stow -a 5 
+Thu Jul  7 18:39:17 2005 (tksridha): project -r -a 6,7 -s 0 
+Thu Jul  7 18:39:47 2005 (tksridha): holon -a 7 -r 6 -m 96 -s 400 -f 232.4 
+Thu Jul  7 18:39:48 2005 (tksridha): azoff -a 7 -s 0 
+Thu Jul  7 18:39:48 2005 (tksridha): eloff -a 7 -s 0 
+Thu Jul  7 18:39:48 2005 (tksridha): azel -a 6 -z 48.360001 -e 18.735001 
+Thu Jul  7 18:39:49 2005 (tksridha): azel -a 7 -z 61.391998 -e 19.889999 
+Thu Jul  7 18:39:50 2005 (tksridha): offsetUnit -a 7 -s -400 
+Thu Jul  7 18:39:51 2005 (tksridha): resume -a 7 
+Thu Jul  7 18:40:01 2005 (tksridha): resume -a 6,7 
+Thu Jul  7 18:42:52 2005 (tksridha): stow -a 7 
+Thu Jul  7 18:44:53 2005 (tksridha): project -r -a 4 -s 0 
+Thu Jul  7 18:45:23 2005 (tksridha): holon -a 4 -r 6 -m 96 -s 400 -f 232.4 
+Thu Jul  7 18:45:24 2005 (tksridha): azoff -a 4 -s 0 
+Thu Jul  7 18:45:24 2005 (tksridha): eloff -a 4 -s 0 
+Thu Jul  7 18:45:25 2005 (tksridha): azel -a 6 -z 48.360001 -e 18.735001 
+Thu Jul  7 18:45:25 2005 (tksridha): azel -a 4 -z 48.775002 -e 16.695000 
+Thu Jul  7 18:45:26 2005 (tksridha): offsetUnit -a 4 -s -400 
+Thu Jul  7 18:45:27 2005 (tksridha): resume -a 4 
+Thu Jul  7 18:47:12 2005 (tksridha): observe -s 0420-014 
+Thu Jul  7 18:48:46 2005 (tksridha): newFile 
+Thu Jul  7 18:51:53 2005 (tksridha): focusCurveOff -a 6 
+Thu Jul  7 14:55:16 2005 (root): tune -a 9 -c network 
+Thu Jul  7 18:53:21 2005 (tksridha): positionChopper -a 6 -c -x 77 -y -2852 -z 79000 
+Thu Jul  7 18:56:48 2005 (root): dopplerTrack -r 232.4 -b 4 -c 2 -l -n 
+Thu Jul  7 18:59:36 2005 (tksridha): focusCurveOff -a 4 
+Thu Jul  7 18:59:45 2005 (dkubo): monitor 
+Thu Jul  7 19:00:01 2005 (tksridha): positionChopper -a 4 -c -x 379 -y -927 -z 70000 
+Thu Jul  7 19:01:22 2005 (root): dopplerTrack -r 232.392348752 -b 4 -c 2 -l -n 
+Thu Jul  7 19:02:40 2005 (root): dopplerTrack -r 232.392348754 -b 4 -c 2 -l -n 
+Thu Jul  7 19:03:35 2005 (root): dopplerTrack -r 232.392348756 -b 4 -c 2 -l -n 
+Thu Jul  7 19:04:06 2005 (root): dopplerTrack -r 232.39234876 -b 4 -c 2 -l -n 
+Thu Jul  7 19:04:39 2005 (root): dopplerTrack -r 232.39234877 -b 4 -c 2 -l -n 
+Thu Jul  7 19:05:39 2005 (root): restartCorrelator -c 12 
+Thu Jul  7 19:06:09 2005 (root): dopplerTrack -r 232.3923488 -b 4 -c 2 -l -n 
+Thu Jul  7 19:08:59 2005 (root): dopplerTrack -r 232.3923488 -b 4 -c 2 -l 
+Thu Jul  7 19:09:14 2005 (daemon): setLO: sending "tune -f0 237.60 -h0 16" to acc1
+Thu Jul  7 19:09:14 2005 (daemon): setLO: sending "tune -f0 237.60 -h0 16" to acc2
+Thu Jul  7 19:09:14 2005 (daemon): setLO: sending "tune -f0 237.60 -h0 16" to acc3
+Thu Jul  7 19:09:32 2005 (root): restartCorrelator 
+Thu Jul  7 19:13:14 2005 (tksridha): endProject.
+Thu Jul  7 19:13:40 2005 (tksridha): project -help 
+Thu Jul  7 19:13:42 2005 (tksridha): project --help 
+Thu Jul  7 19:14:48 2005 (tksridha): project -a 1,2,3,4,6 -C 1..12 -s 1 -D 1 -p TK/Taco -o TK/taco -l Cambridge/summit -d HoloTests 
+Thu Jul  7 19:14:54 2005 (root): dopplerTrack -r 232.3923488 -b 4 -c 2 -l -n 
+Thu Jul  7 19:15:52 2005 (root): monitor 
+Thu Jul  7 19:16:06 2005 (root): dopplerTrack -r 232.3923488 -b 4 -c 2 -l -n 
+Thu Jul  7 19:16:47 2005 (root): dopplerTrack -r 232.3923488 -b 4 -c 2 -l 
+Thu Jul  7 19:17:03 2005 (daemon): setLO: sending "tune -f0 237.60 -h0 16" to acc1
+Thu Jul  7 19:17:03 2005 (daemon): setLO: sending "tune -f0 237.60 -h0 16" to acc2
+Thu Jul  7 19:17:03 2005 (daemon): setLO: sending "tune -f0 237.60 -h0 16" to acc3
+Thu Jul  7 19:17:03 2005 (daemon): setLO: sending "tune -f0 237.60 -h0 16" to acc4
+Thu Jul  7 19:17:03 2005 (daemon): setLO: sending "tune -f0 237.60 -h0 16" to acc6
+Thu Jul  7 19:17:04 2005 (root): restartCorrelator 
+Thu Jul  7 19:18:11 2005 (root): restartCorrelator 
+Thu Jul  7 19:19:28 2005 (root): tune -a 6 -c t joy 
+Thu Jul  7 19:19:51 2005 (root): tune -a 6 -c zt 
+Thu Jul  7 19:19:58 2005 (root): tune -a 6 -c gunn off 
+Thu Jul  7 19:20:10 2005 (root): tune -a 6 -c rfpower 18 
+Thu Jul  7 19:20:16 2005 (root): tune -a 6 -c gunn on 
+Thu Jul  7 19:20:32 2005 (root): tune -a 6 -c interpolate -g 118.8 
+Thu Jul  7 19:20:38 2005 (root): tune -a 6 -c rfpower 16 
+Thu Jul  7 19:20:45 2005 (root): tune -a 6 -c t joy 
+Thu Jul  7 19:21:01 2005 (root): tune -a 6 -c cb 0 
+Thu Jul  7 19:21:08 2005 (root): tune -a 6 -c a 7000 
+Thu Jul  7 19:21:13 2005 (root): tune -a 6 -c a 7700 
+Thu Jul  7 19:21:45 2005 (root): tune -a 3 -c rfpower 18 
+Thu Jul  7 19:21:57 2005 (root): tune -a 3 -c t joy 
+Thu Jul  7 19:22:20 2005 (tksridha): holon -a 4 -r 6 -m 96 -s 400 -f 232.4 
+Thu Jul  7 19:22:21 2005 (tksridha): azoff -a 4 -s 0 
+Thu Jul  7 19:22:21 2005 (tksridha): eloff -a 4 -s 0 
+Thu Jul  7 19:22:22 2005 (tksridha): azel -a 6 -z 48.360001 -e 18.735001 
+Thu Jul  7 19:22:22 2005 (tksridha): azel -a 4 -z 48.775002 -e 16.695000 
+Thu Jul  7 19:22:23 2005 (tksridha): offsetUnit -a 4 -s -400 
+Thu Jul  7 19:22:24 2005 (root): tune -a 3 -c cb 0 
+Thu Jul  7 19:22:24 2005 (tksridha): resume -a 4 
+Thu Jul  7 19:22:35 2005 (tksridha): resume -a 4,6 
+Thu Jul  7 19:23:14 2005 (root): tune -a 1 -c opt mult in 
+Thu Jul  7 19:23:26 2005 (root): tune -a 1 -c opt mult out 
+Thu Jul  7 19:23:38 2005 (root): tune -a 1 -c opt mult cur 
+Thu Jul  7 19:23:54 2005 (root): tune -a 1 -c opt pow 
+Thu Jul  7 19:24:19 2005 (root): tune -a 1 -c opt mult curr 
+Thu Jul  7 19:27:34 2005 (root): tsys 
+Thu Jul  7 19:32:51 2005 (root): setIFLevels 
+Thu Jul  7 19:35:06 2005 (rtm): /application/bin/killdaemon ant4 antIFServer QUIT
+Thu Jul  7 19:35:12 2005 (rtm): /application/bin/killdaemon ant6 antIFServer QUIT
+Thu Jul  7 19:35:42 2005 (root): monitor 
+Thu Jul  7 19:36:30 2005 (rtm): /application/bin/killdaemon acc4 antIFServer QUIT
+Thu Jul  7 19:36:33 2005 (rtm): /application/bin/killdaemon acc6 antIFServer QUIT
+Thu Jul  7 19:39:29 2005 (root): tune -a 7 -c hotload in 
+Thu Jul  7 19:39:34 2005 (root): tune -a 7 -c iv0 
+Thu Jul  7 19:39:36 2005 (root): restartCorrelator -d 
+Thu Jul  7 19:41:58 2005 (root): tune -a 7 -c iv0 
+Thu Jul  7 19:42:32 2005 (tksridha): holon -a 4 -r 6 -m 96 -s 400 -f 232.4 
+Thu Jul  7 19:42:33 2005 (tksridha): azoff -a 4 -s 0 
+Thu Jul  7 19:42:33 2005 (tksridha): eloff -a 4 -s 0 
+Thu Jul  7 19:42:33 2005 (tksridha): azel -a 6 -z 48.360001 -e 18.735001 
+Thu Jul  7 19:42:34 2005 (tksridha): azel -a 4 -z 48.775002 -e 16.695000 
+Thu Jul  7 19:42:35 2005 (tksridha): offsetUnit -a 4 -s -400 
+Thu Jul  7 19:42:36 2005 (tksridha): resume -a 4 
+Thu Jul  7 19:42:42 2005 (tksridha): resume -a 4,6 
+Thu Jul  7 19:43:16 2005 (tksridha): resume -a 4,6 
+Thu Jul  7 19:43:53 2005 (root): newFile 
+Thu Jul  7 19:44:16 2005 (root): tune -a 7 -c iv0 
+Thu Jul  7 19:48:42 2005 (tksridha): holon -a 4 -r 6 -m 96 -s 400 -f 232.4 
+Thu Jul  7 19:48:43 2005 (tksridha): azoff -a 4 -s 0 
+Thu Jul  7 19:48:43 2005 (tksridha): eloff -a 4 -s 0 
+Thu Jul  7 19:48:43 2005 (tksridha): azel -a 6 -z 48.360001 -e 18.735001 
+Thu Jul  7 19:48:44 2005 (tksridha): azel -a 4 -z 48.775002 -e 16.695000 
+Thu Jul  7 19:48:45 2005 (tksridha): offsetUnit -a 4 -s -400 
+Thu Jul  7 19:48:46 2005 (tksridha): resume -a 4 
+Thu Jul  7 19:48:52 2005 (tksridha): resume -a 4,6 
+Thu Jul  7 19:59:12 2005 (root): tune -a 7 -c iv0 
+Thu Jul  7 20:00:05 2005 (tksridha): resume -a 6 
+Thu Jul  7 20:01:34 2005 (root): tune -a 7 -c iv1 
+Thu Jul  7 20:03:45 2005 (root): tune -a 7 -c iv1 
+Thu Jul  7 20:07:38 2005 (tksridha): resume -a 6 
+Thu Jul  7 20:13:41 2005 (nimesh): monitor 
+Thu Jul  7 20:17:46 2005 (poshiro): monitor 
+Thu Jul  7 20:20:01 2005 (nimesh): monitor 
+Thu Jul  7 20:22:39 2005 (pyamaguc): monitor 
+Thu Jul  7 20:27:19 2005 (pyamaguc): monitor 
+Thu Jul  7 20:27:24 2005 (tksridha): resume -a 6 
+Thu Jul  7 20:28:38 2005 (poshiro): monitor 
+Thu Jul  7 20:29:49 2005 (tksridha): monitor 
+Thu Jul  7 20:31:36 2005 (root): tune -a 7 -c iv0 
+Thu Jul  7 20:34:06 2005 (rtm): /application/bin/killdaemon acc4 antIFServer restart
+Thu Jul  7 20:34:12 2005 (tksridha): endProject.

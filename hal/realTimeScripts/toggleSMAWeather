@@ -1,0 +1,16 @@
+#/bin/tcsh -vf
+foreach i ( $argv )
+  if (`expr $i == '-h'` || `expr $i == '--help'`) then
+    goto usage
+  endif
+end
+echo `date -u +"%a %b %d %X %Y"` '('$USER'):' $0 $argv >> /rootfs/logs/SMAshLog
+killdaemon colossus getWeatherFast QUIT
+killdaemon colossus getWeather HUP
+echo "Please wait 2 minutes for the change to take effect."
+exit 0
+
+usage:
+  echo "Usage: toggleSMAWeather"
+  echo "   This command will disable (or re-enable) the use of SMA weather data by the array."
+  echo "   The acquisition and storage of the data is unaffected."

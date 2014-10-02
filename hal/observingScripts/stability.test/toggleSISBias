@@ -1,0 +1,14 @@
+#!/bin/tcsh
+while (1)
+tune -a 1 -c vbias0 2.47
+tune -a 2 -c vbias0 2.47
+tune -a 3 -c vbias0 2.43
+tune -a 5 -c vbias0 2.41
+tune -a 6 -c vbias0 2.17
+tune -a 4 -c vbias0 2.31 
+tune -a 8 -c vbias0 2.58
+sleep 1800
+tune -c vbias0 10
+sleep 1800
+end
+

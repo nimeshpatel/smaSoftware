@@ -1,0 +1,5 @@
+#!/bin/tcsh
+/bin/rm -f /otherPowerPCs/dds/1/configFiles/useRealWeather
+touch /otherPowerPCs/dds/1/smainit_req/dDSServer.HUP
+echo `date -u +"%a %b %d %X %Y"` '('$USER'):' $0 $argv >> /rootfs/logs/SMAshLog
+

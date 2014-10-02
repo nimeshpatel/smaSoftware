@@ -1,0 +1,657 @@
+/* recordContinuum.c
+NAP 2003
+This code replaces chartu.
+Multithreaded for antennas.
+Added multiple ports option on 4 October 2003.
+*/
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <time.h>
+#include <pthread.h>
+#include <signal.h>
+#include <string.h>
+#include "rm.h"
+#include "dsm.h"
+#include "smapopt.h"
+#include "ph.h"
+
+#define ANT_ARRAY_SZ (sizeof(antennaArray)/sizeof(antennaArray[0]))
+
+void signalHandler(int signum);
+void *antennaThread(void *antennas);
+int copyFile(char *in, int antenna);
+
+int fileWriteFlag=1;
+int quitFlag=0;
+pthread_t antennaThreadTID[10];
+pthread_attr_t *attr;
+char *scantype = "noscan";
+char *port = "3,5";
+char *givenFileName="                                                                                                                        ";
+int chopflag=0,iport=0;
+pthread_mutex_t *copyFileMutex;
+int integration=1;
+int channel[2];
+int gotfilename=0;
+int unixtime = 0;
+char killfile[80];
+
+int main(int argc, char **argv)
+{
+	int iant,numberOfAnts,antennaArray[SMAPOPT_MAX_ANTENNAS+1];
+	int antennas[SMAPOPT_MAX_ANTENNAS+1];
+	int waiting;
+	char c;
+        const char delimiter[]=",";
+	char *token;
+	int gotport=0,gotantennas=0,gotscantype=0,gotchopflag=0;
+	int integrationtime=1,gotintegrationtime=0;
+	int rm_status, antlist[RM_ARRAY_SIZE];/*variables for encoderClient*/
+	smapoptContext optCon;
+	struct sigaction action, old_action; int sigactionInt;
+	struct  smapoptOption optionsTable[] = {
+		{"antennas",'a',SMAPOPT_ARG_ANTENNAS,antennaArray,'a',
+		"a comma-separated list of antennas"},
+		{"integrationtime",'i',SMAPOPT_ARG_INT,&integrationtime,'i',
+		"integration time in seconds (integer), default= 1 sec."},
+		{"chopflag",'c',SMAPOPT_ARG_INT,&chopflag,'c',
+		"chopflag: integer 0-no chopping, 1-chopping (optional)"},
+		{"filename",'f',SMAPOPT_ARG_STRING,&givenFileName,'f',
+		"filename: file to write data into (optional), must be
+		less than 120 characters in length, and include a full path if
+		required."},
+		{"port",'p',SMAPOPT_ARG_STRING,&port,'p',
+		"optional comma separated pair of port numbers for simultaneous dual-channel recording
+		  e.g. -p 2,3 will record total-power-volts2 and cont1_det1 values 
+                  default = 3,5
+ 		  port numbers can have following values:
+			1: total_power_volts
+			2: total_power_volts2
+			3: cont1_det1
+			4: cont1_det2
+			5: cont2_det1
+			6: cont2_det2
+                        7: syncdet2_channels_v2[0]
+                        8: syncdet2_channels_v2[1]
+                        "},
+		{"scantype",'s',SMAPOPT_ARG_STRING,&scantype,'s',
+		"scantype string: azscan/elscan, default is noscan."},
+		{"unixtime",'u',SMAPOPT_ARG_INT,&unixtime,'u',
+		"unixtime: only respond to kill file with this timetag (optional)"},
+		SMAPOPT_AUTOHELP
+		{NULL,'\0',0,NULL,0},
+		"This program records the continuum detector voltage into \n
+	         an ascii file with UTC time-stamp and other antenna info.\n
+		 Some of the header variables may have incorrect/invalid values."
+	};
+
+	optCon = smapoptGetContext("chartu", argc, argv, optionsTable,
+			SMAPOPT_CONTEXT_EXPLAIN);
+
+
+	while ((c = smapoptGetNextOpt(optCon)) >= 0) { 
+
+	  switch(c) {
+
+	  case 's' :
+	    gotscantype=1;		
+	    break;
+	    
+	  case 'c':
+	    gotchopflag=1;
+	    break;
+	    
+	  case 'a':
+	    gotantennas=1;
+	    break;
+	    
+	  case 'p':
+	    gotport=1;
+	    break;
+	    
+	  case 'i':
+	    gotintegrationtime=1;
+	    break;
+	    
+	  case 'f':
+	    gotfilename=1;
+	    break;
+	    
+	  }
+	}
+	if(gotchopflag==0) chopflag=0;
+
+	if(gotport==1) {
+	  iport=0;
+	  token=strtok(port,delimiter);
+	  channel[0]=atoi(token);
+	  while( (token=strtok(NULL,delimiter)) ) {
+	    iport++;
+	    if(iport>1) {
+	      printf("Only up to two channels can be recorded. Bye.\n");
+	      exit(-1);
+	    }
+	    channel[iport]=atoi(token);
+	  }
+	}
+
+	
+	if(gotintegrationtime==0) integration=1;
+	else integration=integrationtime;
+
+	numberOfAnts=0;
+	for(iant=1;iant<ANT_ARRAY_SZ;iant++) {
+	  if(antennaArray[iant]==1) {
+	    antennas[numberOfAnts]=iant;
+	    numberOfAnts++;
+	  }
+	}	
+
+	/* signal handler for control C */
+	action.sa_flags=0;
+	sigemptyset(&action.sa_mask);
+	action.sa_handler = signalHandler;
+	sigactionInt = sigaction(SIGUSR1,&action, &old_action);
+
+	/* initializing ref. mem. */
+	rm_status=rm_open(antlist);
+	if(rm_status != RM_SUCCESS) {
+	  rm_error_message(rm_status,"rm_open()");
+	  exit(1);
+	}
+
+	if (unixtime == 0) {
+	  strcpy(killfile,"/global/killrecordContinuum");
+	} else {
+	  sprintf(killfile,"/global/killrecordContinuum.%d",unixtime);
+	}
+	
+	for (iant=0; iant<numberOfAnts; iant++) {
+	  if (pthread_create(&antennaThreadTID[iant], attr, antennaThread,
+			     (void *) &antennas[iant]) == -1) {
+	    perror("pthread_create antennaThread");
+	  } else {
+	    fprintf(stderr,"Created thread for antenna %d\n",antennas[iant]);
+	  }
+	}
+	waiting = 0;
+/* Wait for all antennas to finish, but not longer than 30 seconds after the first
+ * one has finished. 
+ */
+	while(quitFlag < numberOfAnts && waiting < 30) {
+	  sleep(1);
+	  if (quitFlag > 0) {
+	    waiting++;
+	  }
+	}
+	if (waiting == 30) {
+	  fprintf(stderr,"Sorry, %d antennas failed to record data\n",numberOfAnts-quitFlag);
+	}
+	fprintf(stderr,"Detached thread for antenna ");
+	for (iant=0; iant<numberOfAnts; iant++) {
+	  pthread_detach(&antennaThreadTID[iant]);
+	  fprintf(stderr,"%d ",antennas[iant]);
+	}
+	fprintf(stderr,"\n");
+	/* close ref. mem. */
+	rm_status=rm_close(); 
+	if(rm_status != RM_SUCCESS) {
+	  rm_error_message(rm_status,"rm_close()");
+	  exit(1);
+	}
+	fprintf(stderr,"All antennas finished. Main thread of recordContinuum is deleting the killfile and exiting\n");
+	remove(killfile);
+	return(0);
+}
+
+void *antennaThread(void *antenna) {
+  FILE *fp;
+	FILE *fp1,*fp2,*fp3,*fp4,*fp5,*fp6,*fp7,*fp8;
+	char filename[120];
+	char somecomment[100];
+	char emsg[80];
+	int i,iavg,rm_status,ant_num;
+	float Azoff_avg,Eloff_avg,Az_avg,El_avg,Azerr_avg,Elerr_avg,Azmod_avg,Elmod_avg,Data_avg1;
+	float Data_avg2;
+	float az_deg,el_deg,az_err,el_err,az_mod,el_mod;
+	float Utc_avg,utc_hours;
+	double output1,output2, az_off, el_off;
+	time_t new_time,old_time,cur_time;
+	char *curtim,source[40],timestamp[50];
+	struct tm *Time;
+	struct ph p;
+	int flag;
+	double chartTotalPowerVolts[6];
+	double chartSyncdetVolts[2];
+	float chartSyncdet2Volts[2];
+	int copystat;
+
+	ant_num = *((int *)antenna);
+
+	new_time=time(NULL);
+	Time=localtime(&new_time);
+	strftime(timestamp,100,"%d%b%y_%H%M%S",Time);
+	if(gotfilename==0) {
+	  sprintf(filename,
+		  "/data/engineering/rpoint/ant%d/ant%d.%s.%s.rpoint", 
+		  ant_num,ant_num,scantype,timestamp);
+	}
+	else {
+	  strcpy(filename,givenFileName);
+	}
+	
+	if(ant_num==1) {
+	  if ((fp1=fopen(filename,"w"))==NULL){
+	    fprintf(stderr,"cannot open data file:%s\n",filename);
+	    exit(1);
+	  } 
+	}
+	if(ant_num==2) {
+	  if ((fp2=fopen(filename,"w"))==NULL){
+	    fprintf(stderr,"cannot open data file:%s\n",filename);
+	    exit(1);
+	  } 
+	}
+	if(ant_num==3) {
+	  if ((fp3=fopen(filename,"w"))==NULL){
+	    fprintf(stderr,"cannot open data file:%s\n",filename);
+	    exit(1);
+	  } 
+	}
+	if(ant_num==4) {
+	  if ((fp4=fopen(filename,"w"))==NULL){
+	    fprintf(stderr,"cannot open data file:%s\n",filename);
+	    exit(1);
+	  } 
+	}
+	if(ant_num==5) {
+	  if ((fp5=fopen(filename,"w"))==NULL){
+	    fprintf(stderr,"cannot open data file:%s\n",filename);
+	    exit(1);
+	  } 
+	}
+	if(ant_num==6) {
+	  if ((fp6=fopen(filename,"w"))==NULL){
+	    fprintf(stderr,"cannot open data file:%s\n",filename);
+	    exit(1);
+	  } 
+	}
+	if(ant_num==7) {
+	  if ((fp7=fopen(filename,"w"))==NULL){
+	    fprintf(stderr,"cannot open data file:%s\n",filename);
+	    exit(1);
+	  } 
+	}
+	if(ant_num==8) {
+	  if ((fp8=fopen(filename,"w"))==NULL){
+	    fprintf(stderr,"cannot open data file:%s\n",filename);
+	    exit(1);
+	  } 
+	}
+	
+	sprintf(somecomment,"rscan-%s", filename);
+		
+	if(!(strcmp(scantype,"azscan"))) flag=1;
+	if(!(strcmp(scantype,"elscan"))) flag=0;
+	if(!(strcmp(scantype,"noscan"))) flag=-1;
+	
+
+	if(ant_num==1) {
+	  fprintf(fp1,"# %d %d\n#",flag,chopflag);
+	  readHeader(ant_num,0,0,&p);
+	  printHeader(fp1,p,somecomment);
+	}
+	if(ant_num==2) {
+	  fprintf(fp2,"# %d %d\n#",flag,chopflag);
+	  readHeader(ant_num,0,0,&p);
+	  printHeader(fp2,p,somecomment);
+	}
+	if(ant_num==3) {
+	  fprintf(fp3,"# %d %d\n#",flag,chopflag);
+	  readHeader(ant_num,0,0,&p);
+	  printHeader(fp3,p,somecomment);
+	}
+	if(ant_num==4) {
+	  fprintf(fp4,"# %d %d\n#",flag,chopflag);
+	  readHeader(ant_num,0,0,&p);
+	  printHeader(fp4,p,somecomment);
+	}
+	if(ant_num==5) {
+	  fprintf(fp5,"# %d %d\n#",flag,chopflag);
+	  readHeader(ant_num,0,0,&p);
+	  printHeader(fp5,p,somecomment);
+	}
+	if(ant_num==6) {
+	  fprintf(fp6,"# %d %d\n#",flag,chopflag);
+	  readHeader(ant_num,0,0,&p);
+	  printHeader(fp6,p,somecomment);
+	}
+	if(ant_num==7) {
+	  fprintf(fp7,"# %d %d\n#",flag,chopflag);
+	  readHeader(ant_num,0,0,&p);
+	  printHeader(fp7,p,somecomment);
+	}
+	if(ant_num==8) {
+	  fprintf(fp8,"# %d %d\n#",flag,chopflag);
+	  readHeader(ant_num,0,0,&p);
+	  printHeader(fp8,p,somecomment);
+	}
+	printf("Will listen for killfile = %s\n",killfile);
+	fp = fopen(killfile,"r");
+	if (fp != NULL) {
+	  fprintf(stderr,"The file %s was seen.  You must delete this first.\n",killfile);
+	  exit(0);
+	}
+	while (fopen(killfile,"r") == NULL &&fileWriteFlag==1) {
+	  while (fopen(killfile,"r") == NULL&&fileWriteFlag==1){
+	    /*
+	    fprintf(stderr,"No killfile seen in antenna %d thread\n",ant_num);
+	    */
+	    Az_avg=0;El_avg=0;Azerr_avg=0;Elerr_avg=0;iavg=1; Utc_avg=0.;
+	    Azoff_avg=0; Eloff_avg=0; Azmod_avg=0; Elmod_avg=0;
+	    old_time=time(NULL);
+	    new_time=time(NULL);
+	    rm_status=rm_read(ant_num,"RM_SOURCE_C34",&source);
+	    if(rm_status != RM_SUCCESS) {
+	      sprintf(emsg,"error reading RM_SOURCE_C34 (antenna %d)",ant_num);
+	      rm_error_message(rm_status,emsg);
+	      exit(1);
+	    }
+
+	    while ((new_time-old_time)<integration) {
+
+	      rm_status=rm_read(ant_num,"RM_UTC_HOURS_F",&utc_hours);
+	      if(rm_status != RM_SUCCESS) {
+		sprintf(emsg,"error reading RM_UTC_HOURS_F (antenna %d)",ant_num);
+		rm_error_message(rm_status,emsg);
+		exit(1);
+	      }
+	      rm_status=rm_read(ant_num,"RM_ACTUAL_AZ_DEG_F",&az_deg);
+	      if(rm_status != RM_SUCCESS) {
+		sprintf(emsg,"error reading RM_ACTUAL_AZ_DEG_F (antenna %d)",ant_num);
+		rm_error_message(rm_status,emsg);
+		exit(1);
+	      }
+	      rm_status=rm_read(ant_num,"RM_ACTUAL_EL_DEG_F",&el_deg);
+	      if(rm_status != RM_SUCCESS) {
+		sprintf(emsg,"error reading RM_ACTUAL_EL_DEG_F (antenna %d)",ant_num);
+		rm_error_message(rm_status,emsg);
+		exit(1);
+	      }
+	      rm_status=rm_read(ant_num,"RM_AZ_TRACKING_ERROR_F",&az_err);
+	      if(rm_status != RM_SUCCESS) {
+		sprintf(emsg,"error reading RM_AZ_TRACKING_ERROR_F (antenna %d)",ant_num);
+		rm_error_message(rm_status,emsg);
+		exit(1);
+	      }
+	      rm_status=rm_read(ant_num,"RM_EL_TRACKING_ERROR_F",&el_err);
+	      if(rm_status != RM_SUCCESS) {
+		sprintf(emsg,"error reading RM_EL_TRACKING_ERROR_F (antenna %d)",ant_num);
+		rm_error_message(rm_status,emsg);
+		exit(1);
+	      }
+	      rm_status=rm_read(ant_num,"RM_PMDAZ_F",&az_mod);
+	      if(rm_status != RM_SUCCESS) {
+		sprintf(emsg,"error reading RM_PMDAZ_F (antenna %d)",ant_num);
+		rm_error_message(rm_status,emsg);
+		exit(1);
+	      }
+	      rm_status=rm_read(ant_num,"RM_PMDEL_F",&el_mod);
+	      if(rm_status != RM_SUCCESS) {
+		sprintf(emsg,"error reading RM_PMDEL_F (antenna %d)",ant_num);
+		rm_error_message(rm_status,emsg);
+		exit(1);
+	      }
+	      rm_status=rm_read(ant_num,"RM_CHART_AZOFF_ARCSEC_D",&az_off);
+	      if(rm_status != RM_SUCCESS) {
+		sprintf(emsg,"error reading RM_CHART_AZOFF_ARCSEC_D (antenna %d)",ant_num);
+		rm_error_message(rm_status,emsg);
+		exit(1);
+	      }
+	      rm_status=rm_read(ant_num,"RM_CHART_ELOFF_ARCSEC_D",&el_off);
+	      if(rm_status != RM_SUCCESS) {
+		sprintf(emsg,"error reading RM_CHART_ELOFF_ARCSEC_D (antenna %d)",ant_num);
+		rm_error_message(rm_status,emsg);
+		exit(1);
+	      }
+	      if (channel[0] == 7) {
+		rm_status=rm_read(ant_num,"RM_SYNCDET2_CHANNELS_V2_F",&chartSyncdet2Volts);
+	      } else {
+		if(chopflag==1) {
+		  rm_status=rm_read(ant_num,"RM_SYNCDET_CHANNELS_V2_D",&chartSyncdetVolts);
+		}
+		if(chopflag==0) {
+		  rm_status=rm_read(ant_num,"RM_CHART_TOTAL_POWER_VOLTS_V6_D",&chartTotalPowerVolts);
+		}
+	      }
+	      if(rm_status != RM_SUCCESS) {
+		sprintf(emsg,"error reading total power voltage RM var (antenna %d)",ant_num);
+		rm_error_message(rm_status,emsg);
+		exit(1);
+	      }
+	      
+	      if(iport==0) {
+		if (channel[0] == 7) {
+		  output1 = chartSyncdet2Volts[0];
+		} else {
+		  if(chopflag==0) {
+		    output1=chartTotalPowerVolts[channel[0]-1]; 
+		  }
+		  if(chopflag==1) {
+		    output1=chartSyncdetVolts[0]; 
+		  }
+		}
+		output2=0.0;
+	      } else {
+		if (channel[0] == 7) {
+		  output1 = chartSyncdet2Volts[0];
+		  output2 = chartSyncdet2Volts[1];
+		} else {
+		  if(chopflag==0) {
+		    output1=chartTotalPowerVolts[channel[0]-1];
+		  }
+		  if(chopflag==1) {
+		    output1=chartSyncdetVolts[0];
+		  }
+		  if(chopflag==0) {
+		    output2=chartTotalPowerVolts[channel[1]-1];
+		  }
+		  if(chopflag==1) {
+		    output2=chartSyncdetVolts[1];
+		  }
+		}
+	      }
+	      
+	      Utc_avg=((iavg-1)*Utc_avg+utc_hours)/iavg;
+	      Az_avg=((iavg-1)*Az_avg+az_deg)/iavg;
+	      El_avg=((iavg-1)*El_avg+el_deg)/iavg;
+	      Azoff_avg=((iavg-1)*Azoff_avg+az_off)/iavg;
+	      Eloff_avg=((iavg-1)*Eloff_avg+el_off)/iavg;
+	      Azerr_avg=((iavg-1)*Azerr_avg+az_err)/iavg;
+	      Elerr_avg=((iavg-1)*Elerr_avg+el_err)/iavg;
+	      Azmod_avg=((iavg-1)*Azmod_avg+az_mod)/iavg;
+	      Elmod_avg=((iavg-1)*Elmod_avg+el_mod)/iavg;
+	      Data_avg1=((iavg-1)*Data_avg1+(float)output1)/iavg;
+	      Data_avg2=((iavg-1)*Data_avg2+(float)output2)/iavg;
+	      usleep(10000);
+	      iavg++;
+	      new_time=time(NULL);
+	    } /* end while loop over integration time interval */
+	    
+	    if(ant_num==1) {
+	      fprintf(fp1,"%10.6f %10.4f %10.4f %+6.2f %+6.2f %.9f %.9f %.9f %4.1f %9.2f %9.2f\n",
+		      Utc_avg,Az_avg,El_avg,Azoff_avg,Eloff_avg,Data_avg1,Data_avg2,Azerr_avg,Elerr_avg,Azmod_avg,Elmod_avg);
+	      fflush(fp1);
+	    }
+	    if(ant_num==2) {
+	      fprintf(fp2,"%10.6f %10.4f %10.4f %+6.2f %+6.2f %.9f %.9f %.9f %4.1f %9.2f %9.2f\n",
+		      Utc_avg,Az_avg,El_avg,Azoff_avg,Eloff_avg,Data_avg1,Data_avg2,Azerr_avg,Elerr_avg,Azmod_avg,Elmod_avg);
+	      fflush(fp2);
+	    }
+	    if(ant_num==3) {
+	      fprintf(fp3,"%10.6f %10.4f %10.4f %+6.2f %+6.2f %.9f %.9f %.9f %4.1f %9.2f %9.2f\n",
+		      Utc_avg,Az_avg,El_avg,Azoff_avg,Eloff_avg,Data_avg1,Data_avg2,Azerr_avg,Elerr_avg,Azmod_avg,Elmod_avg);
+	      fflush(fp3);
+	    }
+	    if(ant_num==4) {
+	      fprintf(fp4,"%10.6f %10.4f %10.4f %+6.2f %+6.2f %.9f %.9f %.9f %4.1f %9.2f %9.2f\n",
+		      Utc_avg,Az_avg,El_avg,Azoff_avg,Eloff_avg,Data_avg1,Data_avg2,Azerr_avg,Elerr_avg,Azmod_avg,Elmod_avg);
+	      fflush(fp4);
+	    }
+	    if(ant_num==5) {
+	      fprintf(fp5,"%10.6f %10.4f %10.4f %+6.2f %+6.2f %.9f %.9f %.9f %4.1f %9.2f %9.2f\n",
+		      Utc_avg,Az_avg,El_avg,Azoff_avg,Eloff_avg,Data_avg1,Data_avg2,Azerr_avg,Elerr_avg,Azmod_avg,Elmod_avg);
+	      fflush(fp5);
+	    }
+	    if(ant_num==6) {
+	      fprintf(fp6,"%10.6f %10.4f %10.4f %+6.2f %+6.2f %.9f %.9f %.9f %4.1f %9.2f %9.2f\n",
+		      Utc_avg,Az_avg,El_avg,Azoff_avg,Eloff_avg,Data_avg1,Data_avg2,Azerr_avg,Elerr_avg,Azmod_avg,Elmod_avg);
+	      fflush(fp6);
+	    }
+	    if(ant_num==7) {
+	      fprintf(fp7,"%10.6f %10.4f %10.4f %+6.2f %+6.2f %.9f %.9f %.9f %4.1f %9.2f %9.2f\n",
+		      Utc_avg,Az_avg,El_avg,Azoff_avg,Eloff_avg,Data_avg1,Data_avg2,Azerr_avg,Elerr_avg,Azmod_avg,Elmod_avg);
+	      fflush(fp7);
+	    }
+	    if(ant_num==8) {
+	      fprintf(fp8,"%10.6f %10.4f %10.4f %+6.2f %+6.2f %.9f %.9f %.9f %4.1f %9.2f %9.2f\n",
+		      Utc_avg,Az_avg,El_avg,Azoff_avg,Eloff_avg,Data_avg1,Data_avg2,Azerr_avg,Elerr_avg,Azmod_avg,Elmod_avg);
+	      fflush(fp8);
+	    }
+	    
+	    i++;
+	    
+	  } /* end while save flag is on */
+	  
+#if 0
+	  if(fileWriteFlag==0) {
+#endif
+	    fprintf(stderr,"About to readHeader(%d)\n",ant_num);
+	    if(ant_num==1) {
+	      readHeader(ant_num,0,0,&p);
+	      fprintf(fp1,"#");
+	      printHeader(fp1,p,somecomment);
+	      fflush(fp1);
+	      fclose(fp1);
+	    }
+	    if(ant_num==2) {
+	      readHeader(ant_num,0,0,&p);
+	      fprintf(fp2,"#");
+	      printHeader(fp2,p,somecomment);
+	      fflush(fp2);
+	      fclose(fp2);
+	    }
+	    if(ant_num==3) {
+	      readHeader(ant_num,0,0,&p);
+	      fprintf(fp3,"#");
+	      printHeader(fp3,p,somecomment);
+	      fflush(fp3);
+	      fclose(fp3);
+	    }
+	    if(ant_num==4) {
+	      readHeader(ant_num,0,0,&p);
+	      fprintf(fp4,"#");
+	      printHeader(fp4,p,somecomment);
+	      fflush(fp4);
+	      fclose(fp4);
+	    }
+	    if(ant_num==5) {
+	      readHeader(ant_num,0,0,&p);
+	      fprintf(fp5,"#");
+	      printHeader(fp5,p,somecomment);
+	      fflush(fp5);
+	      fclose(fp5);
+	    }
+	    if(ant_num==6) {
+	      readHeader(ant_num,0,0,&p);
+	      fprintf(fp6,"#");
+	      printHeader(fp6,p,somecomment);
+	      fflush(fp6);
+	      fclose(fp6);
+	    }
+	    if(ant_num==7) {
+	      readHeader(ant_num,0,0,&p);
+	      fprintf(fp7,"#");
+	      printHeader(fp7,p,somecomment);
+	      fflush(fp7);
+	      fclose(fp7);
+	    }
+	    if(ant_num==8) {
+	      readHeader(ant_num,0,0,&p);
+	      fprintf(fp8,"#");
+	      printHeader(fp8,p,somecomment);
+	      fflush(fp8);
+	      fclose(fp8);
+	    }
+	    /*
+	    fprintf(stderr,"filewriteing stopped for antenna %d... quitting.\n",
+               ant_num);
+	    */
+	    pthread_mutex_lock(copyFileMutex);
+	    copystat = copyFile(filename,ant_num); 
+	    quitFlag++;
+	    pthread_mutex_unlock(copyFileMutex);
+	    if (copystat == 0) {
+	      fprintf(stderr,"Copied file successfully (ant%d).\n",ant_num);
+	    }
+	    break;
+#if 0
+	  }
+#endif	  
+	  cur_time=time(NULL);
+	  curtim=ctime(&cur_time);
+	  sleep(1);
+	} /* end while */
+	return(0);
+}
+
+void signalHandler(int signum)
+{
+if(signum==SIGUSR1) {
+  printf("Got signal.\n");
+  fileWriteFlag=0;
+ }
+}
+
+
+int copyFile(char *in, int ant_num) {
+  FILE *fin, *fout;
+  char buffer[256];
+  char fullfilename[120];
+  int openlimit = 10;
+  int finCtr = 0;
+  int foutCtr = 0;
+
+  sprintf(fullfilename,"/data/engineering/rpoint/ant%d/tmp.dat",ant_num);
+  fprintf(stderr,"copying the file to %s\n",fullfilename);
+  do {
+    fin = fopen(in,"r");
+    if (fin == NULL) {
+      fprintf(stderr,"Failed to open input file = %s\n",in);
+    }
+  } while (fin == NULL && ++finCtr < openlimit);
+  if (finCtr >= openlimit) {
+    fprintf(stderr,"Giving up on %s\n",in);
+    return(-1);
+  }
+  do {
+    fout = fopen(fullfilename,"w");
+    if (fout == NULL) {
+      fprintf(stderr,"1. Failed to open output file = %s. Sleeping(1).\n",fullfilename);
+      sleep(1);
+    }
+  } while (fout == NULL && foutCtr < openlimit);
+  if (foutCtr >= openlimit) {
+    fprintf(stderr,"Giving up on %s\n",fullfilename);
+    return(-2);
+  }
+
+  while (fgets(buffer,sizeof(buffer),fin) != NULL) {
+    fputs(buffer,fout);
+  }
+  fclose(fin);
+  fclose(fout);
+  chmod(fullfilename,0666);
+  return(0);
+}

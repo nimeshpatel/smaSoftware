@@ -1,0 +1,102 @@
+initializing.....
+Not running on hal9000, entering simulation mode.
+Script: ../wvrobs_nodip.pl.
+	08/10/2006 06:45:00 --> 08/10/2006 06:45:00  ---- radio
+	08/10/2006 06:45:00 --> 08/10/2006 06:45:00  ---- integrate -t 3
+	08/10/2006 06:45:00 --> 08/10/2006 06:45:00  ---- project -r -p 'Ross Williamson' -d 'wvrobs' -i 5798
+----- initialization done, starting script -----
+
+#####################################################################
+# corrPlotter scan mode does not update, use MIR mode (phs vs time) #
+#                 all scans are being recorded                      #
+#####################################################################
+
+	08/10/2006 06:45:00 --> 08/10/2006 06:45:00  ---- integrate -n -p
+
+###########################
+# Initial Elevation Check #
+###########################
+
+LST [hr]=  17.66
+source name = 3c279 
+lookup time: 8 10 2006 6:45
+3c279 is at 16.4 degrees elevation
+LST [hr]=  17.66
+source name = 3c273 
+lookup time: 8 10 2006 6:45
+3c273 is at 12.9 degrees elevation
+LST [hr]=  17.66
+source name = 2232+117 
+lookup time: 8 10 2006 6:45
+2232+117 is at 19.0 degrees elevation
+LST [hr]=  17.66
+source name = 1924-292 
+lookup time: 8 10 2006 6:45
+1924-292 is at 34.5 degrees elevation
+LST [hr]=  17.66
+source name = 3c454.3 
+lookup time: 8 10 2006 6:45
+3c454.3 is at 15.3 degrees elevation
+LST [hr]=  17.66
+source name = 3c111 
+lookup time: 8 10 2006 6:45
+3c111 is at -29.2 degrees elevation
+---- At least one calibrator is available. ----
+LST [hr]=  17.66
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+LST [hr]=  17.66
+source name = 3c279 
+lookup time: 8 10 2006 6:45
+3c279 is at 16.4 degrees elevation
+---- Source elevation limit. ----
+---- Searching for an available calibrator.. ----
+LST [hr]=  17.66
+source name = 3c279 
+lookup time: 8 10 2006 6:45
+3c279 is at 16.4 degrees elevation
+LST [hr]=  17.66
+source name = 3c273 
+lookup time: 8 10 2006 6:45
+3c273 is at 12.9 degrees elevation
+LST [hr]=  17.66
+source name = 2232+117 
+lookup time: 8 10 2006 6:45
+2232+117 is at 19.0 degrees elevation
+LST [hr]=  17.66
+source name = 1924-292 
+lookup time: 8 10 2006 6:45
+1924-292 is at 34.5 degrees elevation
+	08/10/2006 06:45:00 --> 08/10/2006 06:45:10  ---- observe -s 1924-292
+	08/10/2006 06:45:10 --> 08/10/2006 06:45:21  ---- tsys
+	08/10/2006 06:45:21 --> 08/10/2006 07:21:21  ---- integrate -s 720 -w
+	08/10/2006 07:21:21 --> 08/10/2006 07:21:32  ---- tsys
+	08/10/2006 07:21:32 --> 08/10/2006 07:57:32  ---- integrate -s 720 -w
+LST [hr]=  18.87
+source name = 3c279 
+lookup time: 8 10 2006 7:57
+3c279 is at -0.4 degrees elevation
+LST [hr]=  18.87
+source name = 3c273 
+lookup time: 8 10 2006 7:57
+3c273 is at -4.1 degrees elevation
+LST [hr]=  18.87
+source name = 2232+117 
+lookup time: 8 10 2006 7:57
+2232+117 is at 35.9 degrees elevation
+LST [hr]=  18.87
+source name = 1924-292 
+lookup time: 8 10 2006 7:57
+1924-292 is at 40.2 degrees elevation
+LST [hr]=  18.87
+source name = 3c454.3 
+lookup time: 8 10 2006 7:57
+3c454.3 is at 32.0 degrees elevation
+LST [hr]=  18.87
+source name = 3c111 
+lookup time: 8 10 2006 7:57
+3c111 is at -22.1 degrees elevation
+---- At least one calibrator is above 25 degrees ----
+----- This is the end of the script.  -----

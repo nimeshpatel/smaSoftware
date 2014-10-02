@@ -1,0 +1,16 @@
+CC = gcc
+CFLAGS = -O -Wall -g -c
+BFLAGS = -O -g 
+LFLAGS = -L$(COMMONLIB)
+INC = -I$(COMMONINC) 
+LIBS = -llynx 
+RM = $(COMMONLIB)/rm.o
+DT = dt
+
+all :   $(DT)
+
+dt.o : dt.c 
+	${CC} ${CFLAGS} -o dt.o dt.c  ${INC} 
+
+dt : dt.o 
+	${CC} ${BFLAGS} -o dt dt.o ${RM} ${LFLAGS} ${LIBS}

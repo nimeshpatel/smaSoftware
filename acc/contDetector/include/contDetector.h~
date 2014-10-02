@@ -1,0 +1,57 @@
+/*
+ * $Log: contDetector.h,v $
+ * Revision 1.2  2003/03/20 14:34:41  rwilson
+ * driver works
+ *
+ * Revision 1.1.1.1  2002/06/13 15:12:26  rwilson
+ * Early non-working version
+ *
+ *
+ * Continuum detector device interface.
+ */
+
+#define CAMBRIDGE_ACC2 0
+
+/* ioctl codes for the continuum detector */
+#define IOCTL_BASE	256
+
+/* Turn debugging on or off.  */
+#define EIOCCLRDEBUG	(IOCTL_BASE + 0)
+#define EIOCSETDEBUG	(IOCTL_BASE + 1)
+
+#define EIOCRESETCARD	(IOCTL_BASE + 2)
+
+
+/* Set the mode and integration time */
+#define EIOCSETMODE	(IOCTL_BASE + 3)
+#define EIOCGETMODE	(IOCTL_BASE + 4)
+
+/* Defs for the IOCTL argument */
+
+enum mode { UNDEF_MODE = 0, IND, CHOP, IND_MULTIREAD, TIMING_TEST};
+
+typedef struct {
+	enum mode mode;
+	int intTime;
+} contDetectorioc_t;
+
+/* Structure for integration results. */
+
+typedef struct {
+#if CAMBRIDGE_ACC2
+	int status;		/* Bits from the UNIDIG */
+#endif
+	int lowRx, highRx;	/* Counts of the two V/Fs */
+	int timer;		/* final reading of counter 6 */
+} contDetector_result_t;
+
+/* Bits in the UNIDIG */
+#if CAMBRIDGE_ACC2
+#define UNIDIG_READ_ADDRESS (UNIDIG_CARRIER_BASE + IP_MODULE_OFFSET * \
+	UNIDIG_MODULE + UD_READ_REGISTER)
+#define FREE_RUN 1
+#define CHOPPER_IN_POSITION 2
+#define POSITION_1 4
+#define POSITION_2 8
+#endif
+

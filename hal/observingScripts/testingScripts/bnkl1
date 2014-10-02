@@ -1,0 +1,12 @@
+#!/bin/tcsh -vf
+while (1)
+/application/bin/observe -s 0420-014
+sleep 5
+tsys
+/application/bin/integrate -s 10 -w
+/application/bin/observe -s bnkl1
+sleep 5
+tsys
+/application/bin/integrate -s 30 -w
+end
+

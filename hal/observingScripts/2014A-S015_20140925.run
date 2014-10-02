@@ -1,0 +1,110 @@
+initializing.....
+Not running on hal9000, entering simulation mode.
+nants = 8
+radio
+	09/26/2014 05:30:00 --> 09/26/2014 05:30:00  ---- radio
+integrate -t 15
+	09/26/2014 05:30:00 --> 09/26/2014 05:30:00  ---- integrate -t 15
+project -r -p 'James Moran' -d '2013B-S008'
+	09/26/2014 05:30:00 --> 09/26/2014 05:30:00  ---- project -r -p 'James Moran' -d '2013B-S008'
+----- initialization done, starting script -----
+----- initial flux and bandpass calibration -----
+radecoff -r 0 -d 0
+	09/26/2014 05:30:00 --> 09/26/2014 05:30:00  ---- radecoff -r 0 -d 0
+Checking elevation of Flux Cal titan...
+LST [hr]=  19.50
+lookup time: 9 26 2014 5:30
+titan is at 17.9285 degrees elevation
+too low, skipping.
+radecoff -r 0 -d 0
+	09/26/2014 05:30:00 --> 09/26/2014 05:30:00  ---- radecoff -r 0 -d 0
+Checking elevation of Flux Cal neptune...
+LST [hr]=  19.50
+lookup time: 9 26 2014 5:30
+neptune is at 36.0073 degrees elevation
+
+#######################
+# FLUX Calibration    #
+#######################
+
+---- Observing flux1. ----
+
+LST [hr]=  19.50
+lookup time: 9 26 2014 5:30
+neptune is at 36.0073 degrees elevation
+observe -s neptune -t flux
+	09/26/2014 05:30:00 --> 09/26/2014 05:30:10  ---- observe -s neptune -t flux
+tsys
+integrate -s 10 -t 15 -w
+	09/26/2014 05:30:10 --> 09/26/2014 05:32:40  ---- integrate -s 10 -t 15 -w
+Finished 10/9 on neptune.
+----- main science target observe loop -----
+LST [hr]=  19.54
+lookup time: 9 26 2014 5:32
+1733-130 is at 46.4358 degrees elevation
+observe -s 1733-130
+	09/26/2014 05:32:40 --> 09/26/2014 05:32:50  ---- observe -s 1733-130
+tsys
+	09/26/2014 05:32:50 --> 09/26/2014 05:33:01  ---- tsys
+Loop 1.  Target is 1733-130.
+integrate -s 6 -w
+	09/26/2014 05:33:01 --> 09/26/2014 05:34:31  ---- integrate -s 6 -w
+LST [hr]=  19.57
+sgrastar is at 34.9543 degrees elevation
+observe -s sgrastar -r 17:45:40.0383 -d -29:00:28.069 -e 2000 -v 0
+	09/26/2014 05:34:31 --> 09/26/2014 05:34:41  ---- observe -s sgrastar -r 17:45:40.0383 -d -29:00:28.069 -e 2000 -v 0
+tsys
+	09/26/2014 05:34:41 --> 09/26/2014 05:34:52  ---- tsys
+Loop 1.  Target is sgrastar -r 17:45:40.0383 -d -29:00:28.069 -e 2000 -v 0.
+integrate -s 12 -w
+	09/26/2014 05:34:52 --> 09/26/2014 05:37:52  ---- integrate -s 12 -w
+LST [hr]=  19.63
+lookup time: 9 26 2014 5:37
+1733-130 is at 45.6180 degrees elevation
+observe -s 1733-130
+	09/26/2014 05:37:52 --> 09/26/2014 05:38:02  ---- observe -s 1733-130
+tsys
+	09/26/2014 05:38:02 --> 09/26/2014 05:38:13  ---- tsys
+Loop 2.  Target is 1733-130.
+integrate -s 6 -w
+	09/26/2014 05:38:13 --> 09/26/2014 05:39:43  ---- integrate -s 6 -w
+LST [hr]=  19.66
+sgrastar is at 34.3861 degrees elevation
+observe -s sgrastar -r 17:45:40.0383 -d -29:00:28.069 -e 2000 -v 0
+	09/26/2014 05:39:43 --> 09/26/2014 05:39:53  ---- observe -s sgrastar -r 17:45:40.0383 -d -29:00:28.069 -e 2000 -v 0
+tsys
+	09/26/2014 05:39:53 --> 09/26/2014 05:40:04  ---- tsys
+Loop 2.  Target is sgrastar -r 17:45:40.0383 -d -29:00:28.069 -e 2000 -v 0.
+integrate -s 12 -w
+	09/26/2014 05:40:04 --> 09/26/2014 05:43:04  ---- integrate -s 12 -w
+----- final flux and bandpass calibration -----
+radecoff -r 0 -d 0
+	09/26/2014 05:43:04 --> 09/26/2014 05:43:04  ---- radecoff -r 0 -d 0
+Checking elevation of Flux Cal titan...
+LST [hr]=  19.72
+lookup time: 9 26 2014 5:43
+titan is at 15.1320 degrees elevation
+too low, skipping.
+radecoff -r 0 -d 0
+	09/26/2014 05:43:04 --> 09/26/2014 05:43:04  ---- radecoff -r 0 -d 0
+Checking elevation of Flux Cal neptune...
+LST [hr]=  19.72
+lookup time: 9 26 2014 5:43
+neptune is at 38.6407 degrees elevation
+
+#######################
+# FLUX Calibration    #
+#######################
+
+---- Observing flux1. ----
+
+LST [hr]=  19.72
+lookup time: 9 26 2014 5:43
+neptune is at 38.6407 degrees elevation
+observe -s neptune -t flux
+	09/26/2014 05:43:04 --> 09/26/2014 05:43:14  ---- observe -s neptune -t flux
+tsys
+integrate -s 10 -t 15 -w
+	09/26/2014 05:43:14 --> 09/26/2014 05:45:44  ---- integrate -s 10 -t 15 -w
+Finished 10/9 on neptune.
+----- Congratulations!  This is the end of the script.  -----

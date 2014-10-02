@@ -1,0 +1,682 @@
+#!/usr/local/bin/perl -w
+#
+# NAME:
+#	focus
+#
+# PURPOSE:
+#	derive optimized chopper position by maximizing abs(total power).
+# 
+# REVISION HISTORY: 
+#	2002 Dec 23  Created by Kazushi Sakamoto
+#	2002 Dec 26 KS  Added fitting routine. Tested -z successfully with Ant-4.
+#	2002 Dec 31 KS  -x, -y options now work. updated default steps based on experiments.
+#  2003 Aug.28 KS  v2.0 Now works even when the antenna is chopping. Accepts Ctrl-C.
+#  2003 Oct.10 KS  v2.1 updated for the new chopper command 'positionChopper'.
+#  2003 Oct.23 KS  v2.2 updated for the new ways to read total power.
+#  2003 Nov.03 KS  v3.0 updated to use mm throughout. logfile format changed.                
+#--
+
+
+$chopX_step_default=1.5; 
+$chopY_step_default=1.5;
+$chopZ_step_default=0.6; 
+$chopT_step_default=40.0; 
+$inttime_default   =  10;
+$sleep = 1.05;
+
+$Azoff_per_Xmm =  66.3; 
+$Eloff_per_Ymm = -66.3; 
+$Azoff_per_Tasec = 1.0; 
+
+#-----------------------------------------------------------------------------#
+sub Usage()
+{
+my @cmd=split(/\//,$0);
+
+print "Usage: $cmd[@cmd-1] -z -a 4 -c 2.653 -s 0.5 -n 2 -i 10 -r 2 [-update -help]\n";
+print "  -z   move chopperZ. alternatives are -x, -y, and -tilt.\n";
+print "  -a   [required] antenna number \n";
+print "  -c   center value in mm (from home). default=current value \n";
+print "  -s   step size in mm.";
+print " (default=[$chopX_step_default,$chopY_step_default,$chopZ_step_default]*230/freq for X,Y,Z)\n";
+print "  -n   number of steps on each side of the center. (default=2, total 5 points)\n";
+print "       total power is measured at the following chopper positions;\n";
+print "       center-step*n,center-step*(n-1), ..., center+step*n.\n";
+print "  -i   integration time in seconds on each chopper position. (default=$inttime_default)\n";
+print "  -r   number of repeats of the chopper scans. (default=1)\n";
+print "  -update  use the derived value when finishing. (default=>back to initial)\n";
+print "  -freq [optional] manually set LO freq in GHz\n";
+print "  -chan [optional] specify channel of total_power [1-6]. ignored when chopping\n";
+print "  -silent  not beep when done\n";
+print "  -donotlog do not write a log file. useful for tests.\n";
+print "  -help    print this help\n";
+}
+
+
+$pid=$$;
+
+$SIG{INT}=\&Bailout;
+
+if($#ARGV==-1){&Usage;die;}
+
+
+use Getopt::Long;
+GetOptions("a=i"    => \$antenna,
+           "c:i"    => \$centerValue,
+           "s:i"    => \$stepSize,
+           "n:i"    => \$number,
+           "i:i"    => \$integration,
+           "r:i"    => \$repeats,
+			 "freq:f" => \$freq,
+           "x"      => \$xAxis,
+           "y"      => \$yAxis,
+           "z"      => \$zAxis,
+           "t"      => \$t,
+           "tilt"   => \$tilt,
+           "update" => \$update,
+			 "chan:i" => \$channel,
+           "help"   => \$help,
+			 "donotlog"  => \$donotlog,
+			 "silent" => \$silent,
+           "debug"  => \$debug);
+
+
+if($help)						{&Usage;die;}
+if(!defined($antenna))		{&Usage;die;}
+if(!defined($number))		{$number=2}
+if(!defined($integration))	{$integration=$inttime_default}
+if(!defined($repeats)) 		{$repeats=1}
+$tilt=($t || $tilt);
+if ($tilt) {die "Warning: focus -$axis is in Alpha.\n"}
+
+
+@chopX=(); @chopY=(); @chopZ=(); @chopT=(); @azo=(); @elo=();     
+ReadChopper();
+$initialAzoff=(sprintf "%7.1f",$azo[0])+0;
+$initialEloff=(sprintf "%7.1f",$elo[0])+0;
+@initialpositions=($chopX[0],$chopY[0],$chopZ[0],$chopT[0],$azo[0],$elo[0]);
+
+
+unless (defined($freq)) {
+	$freq=`getLOfreq`; chomp($freq);
+	$freq=$freq/1.0e9;
+}
+if    ($freq lt 200) {$band='unknown'}
+elsif ($freq lt 300) {$band='230'}
+elsif ($freq lt 400) {$band='350'}
+elsif ($freq lt 600) {$band='unknown'}
+elsif ($freq lt 750) {$band='650'}
+elsif ($freq lt 900) {$band='800'}
+else                 {$band='unknown'}
+if ($band eq 'unknown') {die "unknown observing band\n"}
+$stepfactor=230.0/$freq; 
+if ($band eq '230' || $band eq '350') {$lowfreq=1} else {$lowfreq=0}
+
+
+if    ($xAxis) {$axis='x';$Axis='X';$axisid=0;$initialValue=$chopX[0];}
+elsif ($yAxis) {$axis='y';$Axis='Y';$axisid=1;$initialValue=$chopY[0];}
+elsif ($zAxis) {$axis='z';$Axis='Z';$axisid=2;$initialValue=$chopZ[0];}
+elsif ($tilt)  {$axis='t';$Axis='T';$axisid=3;$initialValue=$chopT[0];}
+else           {print "Error! specify -x -y or -z\n";&Usage;die;}
+$initialValue=sprintf "%7.3f",$initialValue;
+unless(defined($centerValue)) {$centerValue=$initialValue}
+if(!defined($stepSize)) {
+   if    ($xAxis) {$stepSize=$chopX_step_default*$stepfactor}
+   elsif ($yAxis) {$stepSize=$chopY_step_default*$stepfactor}
+   elsif ($zAxis) {$stepSize=$chopZ_step_default*$stepfactor}
+   elsif ($tilt)  {$stepSize=$chopT_step_default*$stepfactor}
+}
+$stepSize=sprintf "%7.3f",$stepSize;
+if    ($xAxis) {$aeoff='azoff';$initialOffset=$initialAzoff;$off_per_mm=$Azoff_per_Xmm;}
+elsif ($yAxis) {$aeoff='eloff';$initialOffset=$initialEloff;$off_per_mm=$Eloff_per_Ymm;}
+elsif ($zAxis) {$aeoff=''     ;$initialOffset=0;            $off_per_mm=0;}
+elsif ($tilt)  {$aeoff='azoff';$initialOffset=$initialAzoff;$off_per_mm=$Azoff_per_Tasec;}
+
+
+@cmd=split(/\//,$0);
+$command="$cmd[@cmd-1] -$axis -a $antenna -c $centerValue -s $stepSize -n $number ";
+$command=$command."-i $integration -r $repeats ";
+if ($update) {$command=$command."-update "}
+if ($debug)  {$command=$command."-debug "}
+print "$command \n";
+
+
+PrintInitialValues();
+
+
+$chop_mode=`value -a $antenna -v chop_mode`; chomp($chop_mode);
+if ($chop_mode == 1) {
+	$chopping=1;
+	$choppingoffset=45;
+	print "chop_mode=1 (i.e., chopping) is detected.  ";
+	print "=>  Adding $choppingoffset arcsec to azoff.\n";
+
+	$chopperAzoff=$initialAzoff+$choppingoffset;
+	doCommand("azoff -a $antenna -s $chopperAzoff");
+	$command=$command.' (chopping)'; 
+} else {
+	$chopping=0;
+	$choppingoffset=0;
+}
+
+
+@choppervalues=();
+print "chopper$Axis values to be used = ";
+for ($n=-$number ; $n <= $number ; $n++) {
+	$cval=$centerValue + $n*$stepSize;
+   @choppervalues=(@choppervalues, $cval);
+	printf "%7.3f ",$cval;
+} 
+print "\n";
+$npos=@choppervalues;
+
+
+$date=`/bin/date +"%Y-%m-%d"`; chomp($date);
+$filename="/data/engineering/focus/ant$antenna.$band.$axis.$date.focus";
+if ($donotlog) {$filename='/dev/null'}
+if ( open(LOGFILE,">>$filename") ) {
+	print "log file $filename has been opened\n";
+} else {
+	die "Error! Can't open/create $filename\n";
+}
+
+use FileHandle;
+LOGFILE -> autoflush(1);
+
+
+$source=`value -a $antenna -v source`; chomp($source);
+$source =~ s/\s+//g;
+
+
+if ($chopping) {
+	$rm_variable='syncdet_channels_v2';
+	$reading="sync. det.[mV]";
+} else {
+	if ($lowfreq) 	{$rm_variable='cont1_det1'} 
+	else 				{$rm_variable='cont2_det1'}
+	if (defined($channel)) {
+		if 		($channel==1) {$rm_variable='total_power_volts'}
+		elsif	($channel==2) {$rm_variable='total_power_volts2'}
+		elsif	($channel==3) {$rm_variable='cont1_det1'}
+		elsif	($channel==4) {$rm_variable='cont2_det1'}
+		elsif	($channel==5) {$rm_variable='cont1_det2'}
+		elsif	($channel==6) {$rm_variable='cont2_det2'}
+		else					 {die "Error! unknown channel\n"}
+	}
+	$reading="cont. det.[mV]";
+}
+print "rm_variable=$rm_variable\n";
+$readvolts ="prio 50 value -a $antenna -v $rm_variable";
+
+
+@focus=(); @focus_err=();
+
+for($rep = 1; $rep <= $repeats; $rep++) {
+   print "PID=$pid --- rep= $rep / $repeats --- \n";
+   @totalpower=();
+   @totalpower_err=();
+   @chopperX=(); @chopperY=(); @chopperZ=(); @chopperT=();
+   @azoff=(); @eloff=();
+   $az_before = `prio 50 value -a $antenna -v actual_az_deg`;
+   $el_before = `prio 50 value -a $antenna -v actual_el_deg`;
+   $ut_before = `prio 50 value -a $antenna -v utc_hours`; 
+   foreach $choppermm (@choppervalues) {
+      MoveChopper();
+      $sum=0.0;
+      $squaresum=0.0;
+      @chopX=(); @chopY=(); @chopZ=(); @chopT=(); @azo=(); @elo=(); 
+      ReadChopper();    
+      for($intg = 0; $intg < $integration; $intg++) {
+			$volts =`$readvolts`; chomp($volts);
+			if ($chopping) {
+				@array=split(/ /,$volts);
+				if ($lowfreq) {$volts=$array[0]} else {$volts=$array[1]}
+				#print "volt = $volts\n";
+			}
+         $sum      =$sum       +$volts;
+         $squaresum=$squaresum +$volts*$volts;
+         select undef, undef, undef, $sleep;
+      }
+      ReadChopper();
+      $mean=$sum/$integration;
+      $stddev= sqrt( ($squaresum -$mean*$mean*$integration)/($integration-1) );
+      $mean_err=$stddev/sqrt($integration);
+      printf "=> $reading= %8.2f +- %6.2f\n",$mean*1e3,$mean_err*1e3;
+      @totalpower    =(@totalpower,    $mean    );
+      @totalpower_err=(@totalpower_err,$mean_err);
+      @chopperX=(@chopperX,mean(@chopX));
+      @chopperY=(@chopperY,mean(@chopY));
+      @chopperZ=(@chopperZ,mean(@chopZ));
+      @chopperT=(@chopperT,mean(@chopT));
+      @azoff   =(@azoff,   mean(@azo  ));
+      @eloff   =(@eloff,   mean(@elo  ));
+   }
+   $az_after = `prio 50 value -a $antenna -v actual_az_deg`;
+   $el_after = `prio 50 value -a $antenna -v actual_el_deg`;
+   $ut_after = `prio 50 value -a $antenna -v utc_hours`; 
+   $az=($az_before + $az_after)/2;
+   $el=($el_before + $el_after)/2;
+   $ut=($ut_before + $ut_after)/2;
+
+   printf LOGFILE "# command = $command\n";
+   printf LOGFILE "# n   chopX   chopY   chopZ   chopT  azoff  eloff totalpower  ttpr_rms \n";
+	$absmax=0.0; $maxpos=0;
+   for ($pos = 0; $pos < $npos; $pos++) {
+      printf LOGFILE " %2d %7.3f %7.3f %7.3f %7.2f %6.1f %6.1f %9.5f  %9.5f\n",
+         $pos-$number, 
+         $chopperX[$pos], $chopperY[$pos], $chopperZ[$pos], $chopperT[$pos],
+         $azoff[$pos]-$choppingoffset, $eloff[$pos],
+         $totalpower[$pos], $totalpower_err[$pos];
+		if (abs($totalpower[$pos]) > $absmax) {$absmax=abs($totalpower[$pos]); $maxpos=$pos;}
+   }
+
+	if (($maxpos !=0) && ($maxpos != $npos-1)) {
+		if    ($zAxis) {@chopperposition=@chopperZ}
+		elsif ($yAxis) {@chopperposition=@chopperY}
+		elsif ($xAxis) {@chopperposition=@chopperX}
+		elsif ($tilt)  {@chopperposition=@chopperT}
+		@ans=fitfocus(@chopperposition,@totalpower,@totalpower_err);
+		@focus       =(@focus,       $ans[0]);
+		@focus_err   =(@focus_err,   $ans[1]);
+		foreach $_ ( LOGFILE, STDOUT ) {
+		 	printf $_ "# optimum $axis value= %7.3f +- %5.3f \n",$ans[0],$ans[1];
+		}
+   	printf LOGFILE "## %s %5.2f %5.1f %1d %6.1f %4.1f  %-5s %2d  %-8s  %7.3f  %5.3f mm\n",
+             $date, $ut, $freq, $chopping, $az, $el, "chop".$Axis, $npos, $source, 
+				 $ans[0], $ans[1];
+	} else {
+		foreach $_ ( LOGFILE, STDOUT ) {
+		 	print $_ "# maximum abs(total power) observed at the edge. no fitting made. \n";
+		}
+   	printf LOGFILE "## %s %5.2f %5.1f %1d %6.1f %4.1f  %-5s %2d  %-8s  %s \n",
+             $date, $ut, $freq, $chopping, $az, $el, "chop".$Axis, $npos, $source,
+				 'no fit';
+	}
+
+}  
+print "PID=$pid ------------------ \n";
+
+
+if ($chopping) {
+	print " Removing $choppingoffset arcsec from azoff.\n";
+	doCommand("azoff -a $antenna -s $initialAzoff");
+}
+
+
+$repeats=@focus;
+if ($repeats > 1) {
+	@ans=wtaverage(@focus,@focus_err); 	
+	printf "from $repeats measurements; \n";
+	printf " optimum $Axis value= %7.3f +- %5.3f\n",$ans[0],$ans[1]; 
+	$bestfit=sprintf "%7.3f", $ans[0];
+	$bestfit_err=$ans[1];
+} elsif ($repeats == 1) {
+	$bestfit=sprintf "%7.3f", $focus[0];
+	$bestfit_err=$focus_err[0];
+} else {
+	$update = 0;
+}
+
+
+if (($axis ne 'z') && ($repeats >= 1)) {
+	$newoffset=$off_per_mm*($bestfit - $initialValue) +$initialOffset;
+	$newoffset=sprintf "%7.1f", $newoffset;
+	printf " new $aeoff for the optimum chopper$Axis is %7.1f\n", $newoffset;		
+}
+
+
+if ($update) {
+	$limitswitch = 1.5;
+	if (abs($bestfit-$centerValue) > $stepSize*$limitswitch) {
+		print " best fit value too far from the initial/center value.\n";
+		print " cancel -update for safety.\n";
+		print " update manually if you believe the result.\n";
+		$update = 0;
+	} elsif ($bestfit_err > $stepSize/3.0) {
+		print " formal error too large.\n";
+		print " cancel -update for safety.\n";
+		print " update manually if you believe the result.\n";
+		$update = 0;
+	}
+}
+
+
+if ($update) {
+	print "update chopper$Axis\n";
+   doCommand(" positionChopper -a $antenna -$axis $bestfit ");
+	if (!$zAxis) {
+		print "apply pointing compensation\n";
+		doCommand(" $aeoff -a $antenna -s $newoffset");
+	}
+} else {
+	print "go back to the initial position.\n";
+   doCommand(" positionChopper -a $antenna -$axis $initialValue ");
+	if (!$zAxis) {
+		doCommand(" $aeoff -a $antenna -s $initialOffset");
+	}
+}
+
+
+close(LOGFILE);
+use FileHandle;
+STDOUT -> autoflush(1);
+
+unless($silent) {for ($i=0; $i<3;$i++) {print "\a";sleep 1;}}
+print "\n";
+
+#-----------------------------------------------------------------------------#
+sub Bailout()
+{
+print "Interrupted! \n";
+PrintInitialValues();
+print "Trying to restore the initial state ...\n";
+doCommand(" azoff -a $antenna -s $initialAzoff");
+sleep 1;
+doCommand(" eloff -a $antenna -s $initialEloff");
+sleep 1;
+doCommand(" positionChopper -a $antenna -$axis $initialValue ");
+exit(0);
+} 
+
+#-----------------------------------------------------------------------------#
+sub PrintInitialValues {
+	printf "values before starting the script:\n";
+	printf " choperX=%7.3f, Y=%7.3f, Z=%7.3f, T=%7.2f\n",@initialpositions[0,1,2,3];
+	printf " azoff=%7.1f, eloff=%7.1f\n",@initialpositions[4,5];
+}
+
+#-----------------------------------------------------------------------------#
+sub MoveChopper {
+	my $choppermm_formatted;
+   my $command;
+   my $offsetquery;
+   my ($offset, $newoffset);
+   my $wait;
+   my $maxwait=60, $halfwait=30;
+   my $chopval;
+   my $ok;
+   my $meandiff;
+
+
+	$choppermm_formatted=sprintf "%7.3f", $choppermm;
+	$command=sprintf "%-41s", "prio 50 positionChopper -a $antenna -$axis $choppermm_formatted "; 
+   doCommand($command, (!$debug && ($axis eq 'z')) );
+
+
+   if ($axis ne 'z') {
+		$newoffset=$off_per_mm*($choppermm - $initialValue) +$initialOffset;
+		if ($xAxis && $chopping) {$newoffset += $choppingoffset}
+		$newoffset=sprintf "%7.1f",$newoffset;
+		doCommand("prio 50 $aeoff -a $antenna -s $newoffset",1);
+	   $offsetquery="prio 50 value -a $antenna -v $aeoff";
+   }
+
+
+   $ok=0;
+	@lastdiffs=(99999,0,0,0,0);
+	for ($wait = 1; $wait <= $maxwait; $wait++) { 
+		$chopval=querryChopper($axisid);
+		@lastdiffs=(abs($chopval - $choppermm),@lastdiffs);
+		@lastdiffs=@lastdiffs[0,1,2];
+		if (mean(@lastdiffs) <  $stepSize/50) {$ok=1; last;}
+		select undef, undef, undef, $sleep;
+		if ($wait == $halfwait) {
+			if (!$debug && ($axis eq 'z')) {print "\n"} 
+			print " !!! chopper not moving!? reissuing the command \n";
+			doCommand($command, (!$debug && ($axis eq 'z')) );
+			@lastdiffs=(99999,0,0,0,0);
+		}
+   }
+
+	unless ($ok) {
+		print "\n !!!!!!!!!!!!!!!!!!!!!!!! \n";
+		print " chopper$Axis did not reach the command value $choppermm\n";
+		print " within the default waiting period\n";
+		print "aborting $0. Check chopper$Axis and $aeoff before restarting.\n";
+		PrintInitialValues();
+		use FileHandle;STDOUT -> autoflush(1);
+		for ($i=0; $i<7;$i++) {print "\a";sleep 1;}
+		die     " !!!!!!!!!!!!!!!!!!!!!!!! \n";
+   }
+   
+
+   if ($axis ne 'z') {
+      $ok=0;
+      @lastdiffs=(999,0,0,0,0);
+      for ($wait =1; $wait <= $maxwait; $wait++) {
+			$offset=`$offsetquery`; chomp($offset);
+			@lastdiffs=(abs($offset - $newoffset),@lastdiffs);
+			@lastdiffs=@lastdiffs[0,1,2];
+			if (mean(@lastdiffs) < 1) {$ok=1; last;}
+			select undef, undef, undef, $sleep;
+	   }   
+	   unless ($ok) {
+			print "\n !!!!!!!!!!!!!!!!!!!!!!!! \n";
+			print " $aeoff did not reach the command value $newoffset\n";
+			print " within the default waiting period\n";
+			print "aborting $0. Check chopper$Axis and $aeoff before restarting.\n";
+			PrintInitialValues();
+			use FileHandle;STDOUT -> autoflush(1);
+			for ($i=0; $i<7;$i++) {print "\a";sleep 1;}
+			die     " !!!!!!!!!!!!!!!!!!!!!!!! \n";			
+      }
+   }
+   
+}
+
+#-----------------------------------------------------------------------------#
+sub ReadChopper {
+  my $val;
+  my @array;
+
+  $val=`prio 50 value -a $antenna -v chopper_pos_mm_v4`;
+  chomp($val);
+  @array=split(/ /,$val);
+  @chopX=(@chopX,$array[0]);
+  @chopY=(@chopY,$array[1]);
+  @chopZ=(@chopZ,$array[2]);
+  @chopT=(@chopT,$array[3]);
+
+  $val=`prio 50 value -a $antenna -v azoff`;
+  chomp($val);
+  @azo=(@azo,$val);  
+
+  $val=`prio 50 value -a $antenna -v eloff`;
+  chomp($val);
+  @elo=(@elo,$val);
+}
+#-----------------------------------------------------------------------------#
+sub querryChopper {
+  my $val;
+  my @array;
+
+  $val=`prio 50 value -a $antenna -v chopper_pos_mm_v4`;
+  chomp($val);
+  @array=split(/ /,$val);
+  return @array[$_[0]];
+}
+#-----------------------------------------------------------------------------#
+sub doCommand {
+   unless ($_[1]) { 
+      print "$_[0]\n";
+   } else {
+      print "$_[0] ";
+   }
+	system("$_[0]");
+   select undef, undef, undef, 0.2;   
+}
+
+#-----------------------------------------------------------------------------#
+sub mean {
+  my $sum=0; 
+  my $num=@_;
+
+  foreach $_ (@_) { $sum += $_ }
+
+  return $sum/$num;
+}
+
+#-----------------------------------------------------------------------------#
+sub average {    
+  my $sum=0;
+  my $sum2=0;
+  my $num=@_;
+  my ($ave,$ave2);
+
+	foreach $_ (@_) {
+		$sum  += $_;
+		$sum2 += $_**2;
+	 }
+ 
+	$ave =$sum/$num;
+	$ave2=$sum2/$num;
+
+  return ( $ave, sqrt( ($ave2 - $ave**2)/($num-1) ) );
+}
+#-----------------------------------------------------------------------------#
+sub wtaverage {
+	my $ndata=@_/2;
+	my @x=@_[(0      .. $ndata  -1)];
+	my @s=@_[($ndata .. $ndata*2-1)];
+	my ($i,$w);
+	my $sum1=0;
+	my $sum2=0;
+
+	for ($i=0;$i<$ndata;$i++) {
+		$w	= $s[$i]**-2;
+		$sum1 += $x[$i]*$w;
+		$sum2 += $w
+	}
+ 
+	return ($sum1/$sum2, 1.0/sqrt($sum2));
+}
+#-----------------------------------------------------------------------------#
+sub fitfocus () {
+	my $ndata=@_/3;
+	my @x=@_[(0        .. $ndata  -1)];
+   my @y=@_[($ndata   .. $ndata*2-1)];
+   my @s=@_[($ndata*2 .. $ndata*3-1)];
+	my ($i,$j,$max,$norm,@w);
+	my ($focus, $focus_err, $chisq, $red_chisq);
+	my @xorig=@x;
+	my @sorig=@s;
+
+	$norm=0.0;
+   for ($i=0;$i<$ndata;$i++) { if (abs($x[$i]) > $norm) {$norm=abs($x[$i])} }
+   for ($i=0;$i<$ndata;$i++) { $x[$i] /= $norm }
+
+	my @x0 =@x;
+	my	@x1 =@x;
+	my @x2 =@x;
+	my	@x3 =@x;
+	my	@x4 =@x;
+	my	@y1 =@x;
+	my	@xy =@x;
+	my	@x2y=@x;
+	my ($a,$b,$c,$a_e,$b_e,$c_e,$cov_bc);
+
+	for ($i=0;$i<$ndata;$i++) {
+		$s[$i]=$s[$i]**2;
+		$x0[$i] = 1.0             /$s[$i];
+		$x1[$i] = $x[$i]          /$s[$i];
+		$x2[$i] = $x[$i]**2       /$s[$i];
+		$x3[$i] = $x[$i]**3       /$s[$i];
+		$x4[$i] = $x[$i]**4       /$s[$i];
+	   $y1[$i] = $y[$i]          /$s[$i];
+		$xy[$i] = $x[$i]*$y[$i]   /$s[$i];
+		$x2y[$i]= $x[$i]**2*$y[$i]/$s[$i];
+	}
+
+	@w = ( [0.0,0.0,0.0,0.0,1.0,0.0,0.0],
+   	    [0.0,0.0,0.0,0.0,0.0,1.0,0.0],
+   	    [0.0,0.0,0.0,0.0,0.0,0.0,1.0],
+		  );
+
+	$w[0][0]                  =total(@x0);
+	$w[1][0]=$w[0][1]         =total(@x1);
+	$w[2][0]=$w[1][1]=$w[0][2]=total(@x2);
+	$w[2][1]=$w[1][2]         =total(@x3);
+	$w[2][2]                  =total(@x4);
+	$w[0][3]                  =total(@y1);
+	$w[1][3]                  =total(@xy);
+	$w[2][3]                  =total(@x2y);
+
+	for ($i=0;$i<3;$i++) {
+		$max=0;
+		for ($j=0;$j<3;$j++) { 
+			if ( $max < abs($w[$i][$j]) ) { $max = $w[$i][$j] }
+		}
+		for ($j=0;$j<7;$j++) { $w[$i][$j] /= $max }
+	}
+
+	invert(@w);
+
+	$a=$w[0][3];
+	$b=$w[1][3]/$norm;
+	$c=$w[2][3]/$norm**2;
+	$a_e=sqrt($w[0][4]);
+	$b_e=sqrt($w[1][5])/$norm;
+	$c_e=sqrt($w[2][6])/$norm**2;
+	$cov_bc=$w[1][6]/$norm**3;
+
+	$chisq=0.0;
+   for ($i=0;$i<$ndata;$i++) { 
+		$chisq += (	($a+$b*$xorig[$i]+$c*$xorig[$i]**2 - $y[$i])/$sorig[$i] )**2; 
+	}
+	$red_chisq=$chisq/($ndata-3);	
+
+	$focus     = - $b/2.0/$c;
+	$focus_err = abs($focus)*sqrt(($b_e/$b)**2 + ($c_e/$c)**2 - 2.0*$cov_bc/$b/$c);
+	if ($red_chisq > 1.0) { $focus_err *= sqrt($red_chisq) }
+
+	return ($focus, $focus_err);
+}
+
+#-----------------------------------------------------------------------------#
+sub invert()
+{
+	my @w=@_;
+	my $n=3;
+	my $m=7;
+	my ($max,$col,$pivrow,$i,$j,$tmp);
+	my $eps=1.0e-9;
+
+	for ($col=0; $col < $n; $col++) {
+		$max=0.0;
+		for ($i=$col; $i < $n; $i++) {
+			$tmp=abs($w[$i][$col]);
+			if ($tmp > $max) {$max=$tmp;$pivrow=$i;}
+		}
+
+		if ($max < $eps) {die " pivot too small\n"}
+
+		for ($j=0; $j<$m;$j++) {
+			$tmp=$w[$col][$j]; $w[$col][$j]=$w[$pivrow][$j]; $w[$pivrow][$j]=$tmp;
+		}
+		$pivrow=$col;
+
+		$max=$w[$pivrow][$col];
+		for ($j=$col; $j < $m; $j++) { $w[$pivrow][$j] /= $max }
+
+		for ($i=0;$i<$n;$i++) {
+			if ($i != $pivrow) {
+				for ($j=$m-1; $j>=$col; $j--) {
+					$w[$i][$j] -= $w[$i][$col]*$w[$pivrow][$j];
+				}
+			}
+		}
+	}
+
+	return 1;
+}
+
+#-----------------------------------------------------------------------------#
+sub total {    
+  my $sum=0;
+
+  foreach $_ (@_) { $sum += $_ }
+ 
+  return $sum;
+}
+
+#-----------------------------------------------------------------------------#

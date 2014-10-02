@@ -1,0 +1,54 @@
+####################################################################################
+# The Makefile32 of LPT/USB testing application.
+# Author: Matt Longmire, SBIG
+# History:
+# 2008-12-31: updated for 32 and 64 bit Linux by Jan Soldan
+# 2011-09-12: tested by Jan Soldan on 32/64 bit Ubuntu
+####################################################################################
+# Run following commands to produce testapp:
+# make clean -f Makefile32
+# make -f Makefile32 
+# Note: Linker uses shared libraries, so do not forget to put *.so libraries to 
+# the /usr/local/lib directory and setenv LD_LIBRARY_PATH to this path. 
+# See README.txt for details. 
+####################################################################################
+#APP_OUT_DIR = ../32/
+INCLUDE_FITSIO = 1
+APP_OUT_DIR = ./
+APP_NAME    = testsnap
+S_APP       = testsnap.cpp csbigcam.cpp csbigimg.cpp
+O_APP       = testsnap.o csbigcam.o csbigimg.o
+####################################################################################
+APP_SRC    = $(S_APP)
+APP_OBJ    = $(O_APP)
+INCLUDE    = -I . 
+LIBRARY    = -L /usr/local/lib
+APP_CFLAGS = -O2 $(INCLUDE) $(LIBRARY) -Wall
+APP_CC     = g++ -g
+####################################################################################
+all: $(APP_NAME)
+####################################################################################
+# APP_NAME
+####################################################################################
+$(APP_NAME): $(APP_OBJ)
+#	  $(APP_CC) $(APP_CFLAGS) -o $(APP_OUT_DIR)$(APP_NAME) $(APP_OBJ) -lsbigudrv -lcfitsio -lpthread -lm -lz
+	  $(APP_CC) $(APP_CFLAGS) -o $(APP_OUT_DIR)$(APP_NAME) $(APP_OBJ) -lsbigudrv -lcfitsio -lpthread -lm  -lz
+	  chmod a+x $(APP_OUT_DIR)$(APP_NAME)
+
+main.o : main.cpp csbigcam.h csbigimg.h
+	  $(APP_CC) $(APP_CFLAGS) -o main.o -c main.cpp
+
+csbigcam.o : csbigcam.cpp csbigcam.h csbigimg.h
+	  $(APP_CC) $(APP_CFLAGS) -o csbigcam.o -c csbigcam.cpp
+
+csbigimg.o : csbigimg.cpp csbigimg.h
+	  $(APP_CC) $(APP_CFLAGS) -o csbigimg.o -c csbigimg.cpp
+####################################################################################
+clean:
+		rm -f *.o
+		rm -f *.so
+		rm -f *.a
+####################################################################################
+install:
+		cp main /usr/local/bin/snapshot
+####################################################################################

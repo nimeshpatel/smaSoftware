@@ -1,0 +1,106 @@
+#!/usr/local/bin/perl
+# reports lst
+#Nimesh Patel July 95
+
+#$longitude = -4.76625185186; # hours (71d29'37.6s W) Haystack
+$longitude = -10.365168199815; # hours (-155.477522997222 W, pad-1) MaunaKea
+
+sub hms
+{
+$t=$_[0];
+$h=int($t);
+$mf=($t-$h)*60.;
+$m=int($mf);
+$sf=($mf-$m)*60.;
+$s=int($sf);
+$hms=sprintf "%02d:%02d:%02d",$h,$m,$s;
+return $hms;
+}
+
+$seconds=(gmtime)[0]+(gmtime)[1]*60.+(gmtime)[2]*3600.;
+$ut=$seconds/3600.;
+$uthms=hms($ut);
+$d=(gmtime)[3];
+$month=(Jan,Feb,Mar,Apr,May,Jun,July,Aug,Sep,Oct,Nov,Dec)[(gmtime)[4]];
+if((gmtime)[5]>=98) {$year=1900+(gmtime)[5];}
+else {$year=2000+(gmtime)[5];}
+# postponed the year 2000 problem to 2098!
+
+
+$mn=1+(gmtime)[4]; 
+# adding 1 because the array index for month goes from 0 to 11.
+
+# Using Eqn. 12.92-1, p 604 of the Green Book
+# for calculating JD from the given gregorian calendar
+# date in terms of day number, month number and year number.
+# lots of int()s have had to be inserted because  Perl 
+# cannot do integer arithmetic. 
+
+$term1=int((1461*int(($year+4800+int(($mn-14)/12))))/4);  
+$term2=int((367*($mn-2-12*(int(($mn-14)/12))))/12);
+$term3=int((3*int(($year+4900+int(($mn-14)/12))/100))/4);
+$JD=$term1+$term2-$term3+$d-32075;
+
+$TJD=$JD+$seconds/86400.;
+$TJDint=int($TJD);
+print "TJD = $TJDint ";
+print "UT = $uthms ";
+
+$T=($JD-2451545.0)/36525.; 
+# definition.
+
+$epsilon0 = 21.448-46.8150 * $T 
+			- 0.00059 * $T * $T
+				+ 0.001813 * $T * $T * $T;
+#Eqn 3.222-1, p114 of the Green Book
+$epsilon0=$epsilon0/3600.+ 26./60. + 23.;
+#in degrees
+
+$epsilon0=$epsilon0* 0.0174534;
+#in radians
+
+$dnum= $JD-2451545.0;
+
+$radian=4.0*atan2(1,1)/180.;
+
+$angle1=(125.0-0.05295*$dnum)*$radian;
+$angle2=(200.9+1.97129*$dnum)*$radian;
+
+$delta=0.0026 * cos($angle1)+0.0002*cos($angle2);
+
+$epsilon=$epsilon0+$delta;
+
+$Tdu=$dnum/36525.; # No. of Julian centuries
+#print "dnum=$dnum\n";
+#print "Tdu=$Tdu\n";
+$theta=($ut*(1.002737909350795+5.9006e-11*$Tdu-5.9e-15*$Tdu*$Tdu))*3600.; # seconds
+$Tdu2=$Tdu*$Tdu;
+$Tdu3=$Tdu2*$Tdu;
+$gmst0=24110.54841+8640184.812866*$Tdu+0.093104*$Tdu2-6.2e-6*$Tdu3;
+$gmst0=$gmst0/3600.; # hours
+
+$frac=$gmst0/24.;
+$quot=int($frac);
+$gmst0=$gmst0-$quot*24;
+
+if($gmst0 lt 0.){$gmst0=$gmst0+24.;}
+$gmst=($gmst0+$theta/3600.); # hours
+
+$delta_psi=-0.0048*sin($angle1)-0.0004*sin($angle2);
+#Eq 3.225-4, p120 (delta-psi is in degrees)
+
+$eqnequinox=$delta_psi*cos($epsilon*$radian); # degrees
+$eqnequinox=$eqnequinox*6.66666667e-2; # hours
+
+
+$gast=$gmst+$eqnequinox;
+$lst=$gast+$longitude;
+$frac=$lst/24.;
+$quot=int($frac);
+$lst=$lst-$quot*24;
+
+if($lst lt 0.){$lst=$lst+24.;}
+
+#print "gst=$gast\n";
+$lsthms=hms($lst);
+print "LST = $lsthms\n"; 

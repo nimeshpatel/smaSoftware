@@ -1,0 +1,24 @@
+#!/bin/tcsh -vf
+while (1)
+/application/bin/observe -s  3c454.3
+sleep 5
+tsys
+/application/bin/integrate -s 6 -w
+/application/bin/observe -s 2258-279
+sleep 5
+tsys
+/application/bin/integrate -s 12 -w
+/application/bin/observe -s 3c446
+sleep 5
+tsys
+/application/bin/integrate -s 12 -w
+/application/bin/observe -s 2232+117
+sleep 5
+tsys   
+/application/bin/integrate -s 12 -w
+/application/bin/observe -s 0238+166
+sleep 5
+tsys   
+/application/bin/integrate -s 12 -w
+end
+

@@ -1,0 +1,10 @@
+#!/bin/tcsh -vf
+while (1)
+  observe -s titan
+  sleep 2
+  tsys
+  integrate -t 15 -s 12 -w
+  observe -s rleo
+  sleep 2
+  integrate -t 15 -s 12 -w
+end

@@ -1,0 +1,1763 @@
+                    SUMMARY FILE FOR PROJECT: g1ma01  
+
+COVER INFORMATION: 
+
+  Experiment: 1mm Apr 01 2011, 22h30-16h30 UT
+  Exp. Code:  g1ma01  
+  Start Day  91 is Fri   1 Apr 2011   MJD  55652          
+
+  Schedule Version:       5.00
+  Processed by SCHED version:   9.40  Release Jan. 13, 2011.
+
+  PI:       Global Experiment
+
+  Address:  MPIfR (Europe)  Haystack (US)
+            Auf dem Huegel 69 (Europe)  Groton Road (US)
+            53121 Bonn (Europe)  Off Route 40 (US)
+            Germany and US
+
+  Phone:    0049-228-525-295, +1(781)981-5400
+  EMAIL:    tkrichbaum@mpifr-bonn.mpg.de, dole@haystack.mit.edu
+  Fax:
+  Phone during observation:
+
+  Observing mode: 2048-32-2
+
+  Notes:    Bonn c/o W. Alef, Haystack c/o M. Titus
+            modules before 05 UT and Europe 05-08 UT to Bonn
+            modules after 08 UT and US 05-08 to Haystack
+   
+
+
+No cover letter provided.
+
+CORRELATION REQUESTS (Defaults in parentheses):
+
+  Correlator (Required if recording):          BONN
+  Correlator average time (2 sec):               1.000 sec.
+    Alternate average time (for spacecraft).     0.000 sec.
+  Output spectral channels per baseband (16):          64
+     Correlator FFT size (128):                       128
+  Number of antennas to be correlated:                 14
+  Polarization (ON):                           ON
+  Correlator weighting function (UNIFORM):     UNIFORM
+  Distribution tape (DAT):                     DAT
+
+  Source positions from:             STANDARD
+
+  Shipping address for correlator output:
+      Walter Alef
+      Max-Planck-Institut fuer Radioastronomie
+
+      Auf dem Huegel 69
+      D-53121 Bonn, Germany
+  Correlator Notes: 1mm Global Run w. PV+APEX
+
+
+
+
+
+
+
+DERIVED INFORMATION FOR CORRELATION: 
+
+  Elapsed time for project:         17.83 hours.
+  Total time in scheduled scans:    11.33 hours.
+  Total time in recording scans:    11.33 hours.
+  Total number of baseline hours:   92.12    (Recording scans only)
+  Projected maximum data output rate from the correlator:     344.1 kbytes/sec of observe time.
+  Projected correlator output data set size:        5433.3 Mbytes
+  NOTE:  Above numbers assume the same correlator parameters are used for all data.
+    NOTE:  Output data set size large.  Consider requesting high density tapes.
+
+ **** WARNING *****
+      Overlapping scans were detected.  Either there was subarraying
+      or some stations were scheduled separtely from others.
+      If the latter, the output data rates and volume are underestimated
+      because the number of baselines is underestimated.
+
+
+
+
+
+
+STATIONS USED IN SCHEDULE:
+
+   Station  Code   Latitude Longitude Elevation       X            Y            Z       Axis
+                                                                                       Offset
+
+   PICOVEL   Pv   37.06616   3.39261    2922.    5088967.900  -301681.600  3825015.800  0.000
+   APEX      Ap  -23.00578  67.75917    5105.    2225037.185 -5441199.162 -2479303.463  0.000
+   SMTO      Az   32.70161 109.89124    3159.   -1828796.200 -5054406.800  3427865.200  0.000
+   CARMA     Cm   37.23341 118.28338    1188.   -2409585.790 -4478197.550  3838767.460  0.000
+   CSO       Cs   19.80138 155.45550    3763.   -5464074.960 -2495249.116  2148296.845  0.000
+   SMAP      Sm   19.82423 155.47755    4115.   -5464555.493 -2492927.989  2150797.176  0.000
+
+
+   Plate tectonic motion adjustments for MJD  55652
+   Station  Code      Station motions (m/yr)             Adjusted positions 
+                     X       Y       Z     MJD0        X            Y            Z 
+   PICOVEL   Pv   0.0000  0.0000  0.0000  50449   5088967.900  -301681.600  3825015.800
+   APEX      Ap   0.0000  0.0000  0.0000      0   2225037.185 -5441199.162 -2479303.463
+   SMTO      Az   0.0000  0.0000  0.0000  50449  -1828796.200 -5054406.800  3427865.200
+   CARMA     Cm  -0.0162  0.0062 -0.0084  50449  -2409586.021 -4478197.462  3838767.341
+   CSO       Cs   0.0000  0.0000  0.0000  50449  -5464074.960 -2495249.116  2148296.845
+   SMAP      Sm   0.0000  0.0000  0.0000  50449  -5464555.493 -2492927.989  2150797.176
+
+
+
+BASELINE LENGTHS (km)
+
+          Pv    Ap    Az    Cm    Cs    Sm
+
+   Pv      0  8623  8402  8583 10908 10907
+   Ap   8623     0  7174  7894  9445  9447
+   Az   8402  7174     0   915  4626  4627
+   Cm   8583  7894   915     0  4014  4015
+   Cs  10908  9445  4626  4014     0     3
+   Sm  10907  9447  4627  4015     3     0
+
+
+RECORDING SYSTEM AND CALIBRATION INFORMATION:
+
+  DISKS - Stations potentially recording on disks.
+   Station    Drive type   DAR     NBBC    Tsys
+   PICOVEL      MARK5C     RDBE     16     CONT
+   APEX         MARK5C     RDBE     16     CONT
+   SMTO         MARK5C     RDBE     16     CONT
+   CARMA        MARK5C     RDBE     16     CONT
+   CSO          MARK5C     RDBE     16     CONT
+   SMAP         MARK5C     RDBE     16     CONT
+
+
+
+
+EXPERIMENT SUMMARY:
+  Number of input scans:        101
+  Number of scans scheduled:    101
+  Number of stations:             6
+  Number of sources input:       12
+  Number of setup files used:     1
+
+
+ Station summaries (disk stations): 
+  Station  Control   Scans   Scan   Record  Record   Gbytes     Formatter       Sync 
+                            Hours   Hours   Scans              Reconfigures    Hours  
+  PICOVEL    VEX       57    6.38    6.38      57     5925.            0        0.01
+  APEX       VEX       86    9.54    9.54      86     8867.            0        0.02
+  SMTO       VEX       61    7.09    7.09      61     6585.            0        0.02
+  CARMA      VEX       48    5.62    5.62      48     5218.            0        0.01
+  CSO        VEX       42    4.83    4.83      42     4490.            0        0.01
+  SMAP       VEX       40    4.60    4.60      40     4273.            0        0.01
+
+Notes on the station summaries: 
+
+    "Record Scans" are periods of recording with no gap.  The Mark5A disk systems 
+    have a limit of 1024 such scans.  There are often multiple projects on a disk pack.
+    Try to keep above about 6 GB per record scan by using MINPAUSE and PRESTART 
+    to prevent short gaps.  However, also try to prevent record scans of more than
+    an hour to minimize risk to data from playback problems.
+
+    "Sync Hours" is on-source, in-scan time lost during correlation to resyncing
+    recordings.  Resyncs follow tape stoppages and formatter reconfigures.
+
+    For VLBA DAR stations, total reconfigures and reconfigures during recording are shown.
+    Reconfigures during recording can cause slow correlator sync.
+    Any reconfigure can slow sync at JIVE.
+
+
+
+
+
+The following setup groups are the same as group   1 below.
+   3:SMTO   4:CARMA   5:CSO   6:SMAP
+
+
+ Setup file: 1mmRDBE.set
+   Matching groups in 1mm-freq.dat:
+     1mm_pico_mk5    for RDBE
+    ****** Only  480.00 of  512.00 MHz total bandwidth is within the IFs
+           in the setup file before any FREQ or DOPPLER shifts.
+
+   Setup group:    1         Station: PICOVEL           Total bit rate: 2048
+   Format: MARK5B            Bits per sample: 2         Sample rate: 64.000
+   Number of channels: 16    DBE type: RDBE_PFB         Speedup factor:   1.00
+
+   Disk used to record data.
+
+   1st LO= 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00
+           228321.00 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00
+   Net SB=         L         L         L         L         L         L         L         L
+                   L         L         L         L         L         L         L         L
+   Pol.  =      LCP       LCP       LCP       LCP       LCP       LCP       LCP       LCP 
+                LCP       LCP       LCP       LCP       LCP       LCP       LCP       RCP 
+   BBC   =         1         2         3         4         5         6         7         8
+                   9        10        11        12        13        14        15        16
+   BBC SB=         L         L         L         L         L         L         L         L
+                   L         L         L         L         L         L         L         L
+   IF    =        A         A         A         A         A         A         A         A 
+                  A         A         A         A         A         A         A         A 
+
+  The following frequency sets based on this setup were used.
+
+   Frequency Set:   1  Setup file default.
+   LO sum=  229329.00 229297.00 229265.00 229233.00 229201.00 229169.00 229137.00 229105.00
+            229073.00 229041.00 229009.00 228977.00 228945.00 228913.00 228881.00 228881.00
+   BBC fr=    1008.00    976.00    944.00    912.00    880.00    848.00    816.00    784.00
+               752.00    720.00    688.00    656.00    624.00    592.00    560.00    560.00
+   Bandwd=     32.000    32.000    32.000    32.000    32.000    32.000    32.000    32.000
+               32.000    32.000    32.000    32.000    32.000    32.000    32.000    32.000
+
+   Track assignments are: 
+    track1=   2,  4,  6,  8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32
+    barrel=roll_off 
+
+
+ Setup file: 1mmRDBE.set
+   Matching groups in 1mm-freq.dat:
+     1mm_apex_mk5    for RDBE
+    ****** Only  480.00 of  512.00 MHz total bandwidth is within the IFs
+           in the setup file before any FREQ or DOPPLER shifts.
+
+   Setup group:    2         Station: APEX              Total bit rate: 2048
+   Format: MARK5B            Bits per sample: 2         Sample rate: 64.000
+   Number of channels: 16    DBE type: RDBE_PFB         Speedup factor:   1.00
+
+   Disk used to record data.
+
+   1st LO= 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00
+           228321.00 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00
+   Net SB=         L         L         L         L         L         L         L         L
+                   L         L         L         L         L         L         L         L
+   Pol.  =      LCP       LCP       LCP       LCP       LCP       LCP       LCP       LCP 
+                LCP       LCP       LCP       LCP       LCP       LCP       LCP       RCP 
+   BBC   =         1         2         3         4         5         6         7         8
+                   9        10        11        12        13        14        15        16
+   BBC SB=         L         L         L         L         L         L         L         L
+                   L         L         L         L         L         L         L         L
+   IF    =        A         A         A         A         A         A         A         A 
+                  A         A         A         A         A         A         A         A 
+
+  The following frequency sets based on this setup were used.
+
+   Frequency Set:   2  Setup file default.
+   LO sum=  229329.00 229297.00 229265.00 229233.00 229201.00 229169.00 229137.00 229105.00
+            229073.00 229041.00 229009.00 228977.00 228945.00 228913.00 228881.00 228881.00
+   BBC fr=    1008.00    976.00    944.00    912.00    880.00    848.00    816.00    784.00
+               752.00    720.00    688.00    656.00    624.00    592.00    560.00    560.00
+   Bandwd=     32.000    32.000    32.000    32.000    32.000    32.000    32.000    32.000
+               32.000    32.000    32.000    32.000    32.000    32.000    32.000    32.000
+
+   Track assignments are: 
+    track1=   2,  4,  6,  8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32
+    barrel=roll_off 
+
+
+
+ SUMMARY for experiment g1ma01  1mm Apr 01 2011, 22h30-16h30 UT                                         
+     Flags: D=>Down, H=>Below Horizon, R=>Rises, S=>Sets, W=>Slew too long, t=>Tape Chg.
+     Top item is:    Start elevation.
+     Bottom item is: End elevation.
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  91 is Fri   2 Apr 2011   MJD  55652          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    Pv    Ap    Az    Cm    Cs    Sm
+
+
+  54   92 05:15:00 M87           -   ---   ---    57    48    19    19
+       92 05:23:00 -             -   ---   ---    58    50    21    21
+
+  55   92 05:30:00 3C273         -   ---   ---    52    43    19    19
+       92 05:37:00 -             -   ---   ---    53    45    21    21
+
+  56   92 05:45:00 M87           -   ---   ---    62    54    26    26
+       92 05:53:00 -             -   ---   ---    63    55    28    28
+
+  57   92 06:00:00 3C273         -   ---   ---    55    48    26    26
+       92 06:04:00 -             -   ---   ---    56    48    27    27
+
+  58   92 06:12:00 M87           -   ---   ---    66    58    32    32
+       92 06:22:00 -             -   ---   ---    67    59    34    34
+
+  59   92 06:26:00 3C273         -   ---   ---    58    51    32    32
+       92 06:30:00 -             -   ---   ---    58    51    33    33
+
+  60   92 06:38:00 M87           -   ---   ---    68    61    38    38
+       92 06:48:00 -             -   ---   ---    69    62    41    41
+
+  61   92 06:52:00 3C273         -   ---   ---    59    53    38    38
+       92 06:56:00 -             -   ---   ---    59    53    39    39
+
+  62   92 07:04:00 M87           -   ---   ---    70    64    44    44
+       92 07:14:00 -             -   ---   ---    70    64    47    47
+
+  63   92 07:18:00 3C273         -   ---   ---    59    54    44    44
+       92 07:22:00 -             -   ---   ---    59    54    45    45
+
+  64   92 07:30:00 M87           -   ---   ---    69    65    50    50
+       92 07:40:00 -             -   ---   ---    68    65    53    53
+
+
+
+ SUMMARY for experiment g1ma01  1mm Apr 01 2011, 22h30-16h30 UT                                         
+     Flags: D=>Down, H=>Below Horizon, R=>Rises, S=>Sets, W=>Slew too long, t=>Tape Chg.
+     Top item is:    Start elevation.
+     Bottom item is: End elevation.
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  91 is Fri   1 Apr 2011   MJD  55652          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    Pv    Ap    Az    Cm    Cs    Sm
+
+  65   92 07:44:00 3C273         -   ---   ---    58    55    50    50
+       92 07:48:00 1mmRDBE.set   -   ---   ---    58    55    51    51
+
+  66   92 08:00:00 3C279         -   ---    40    51    47    44    44
+       92 08:05:00 -             -   ---    39    51    47    45    45
+
+  67   92 08:13:00 M87           -   ---    23    65    64    61    60
+       92 08:23:00 -             -   ---    21    64    64    63    63
+
+  68   92 08:27:00 3C279         -   ---    34    50    47    49    49
+       92 08:32:00 -             -   ---    33    49    47    50    50
+
+  69   92 08:40:00 1749+096      -    38    54    32    25   ---   ---
+       92 08:50:00 -             -    36    55    34    27   ---   ---
+
+  70   92 09:00:00 1749+096      -    34    56    37    29   ---   ---
+       92 09:10:00 -             -    32    56    39    31   ---   ---
+
+  71   92 09:20:00 3C279         -   ---    22    44    44    58    58
+       92 09:25:00 -             -   ---    21    43    43    59    59
+
+  72   92 09:29:00 M87           -   ---   ---    52    56    77    77
+       92 09:36:00 -             -   ---   ---    51    55    79    79
+
+  73   92 09:40:00 M87           -   ---   ---    50    54    79    79
+       92 09:50:00 -             -   ---   ---    48    52    81    81
+
+  75   92 10:00:00 1633+382      -    23    25    74    69    32    32
+       92 10:10:00 -             -    21    24    76    71    34    34
+
+  76   92 10:20:00 1633+382      -    20    23    78    73    36    36
+       92 10:30:00 -             -    18    22    80    75    38    38
+
+  77   92 10:40:00 1749+096      -   ---    54    56    48    19    19
+       92 10:45:00 -             -   ---    54    57    48    20    20
+
+  78   92 10:49:00 SGRA          -   ---    72    24    17   ---   ---
+       92 10:56:00 -             -   ---    71    25    18   ---   ---
+
+  79   92 11:00:00 1749+096      -   ---    52    59    51    24    24
+       92 11:05:00 -             -   ---    51    60    52    25    25
+
+  80   92 11:09:00 SGRA          -   ---    68    26    19   ---   ---
+       92 11:16:00 -             -   ---    67    26    20   ---   ---
+
+
+
+ SUMMARY for experiment g1ma01  1mm Apr 01 2011, 22h30-16h30 UT                                         
+     Flags: D=>Down, H=>Below Horizon, R=>Rises, S=>Sets, W=>Slew too long, t=>Tape Chg.
+     Top item is:    Start elevation.
+     Bottom item is: End elevation.
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  91 is Fri   1 Apr 2011   MJD  55652          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    Pv    Ap    Az    Cm    Cs    Sm
+
+  81   92 11:20:00 1749+096      -   ---    49    62    54    29    29
+       92 11:25:00 1mmRDBE.set   -   ---    49    63    55    30    30
+
+  82   92 11:29:00 SGRA          -   ---    64    27    21    15   ---
+       92 11:36:00 -             -   ---    62    27    21    16   ---
+
+  83   92 11:43:00 NRAO530       -   ---    55    44    38    29    29
+       92 11:48:00 -             -   ---    54    44    38    30    30
+
+  84   92 11:52:00 SGRA          -   ---    59    28    22    19    19
+       92 12:00:00 -             -   ---    57    28    22    20    20
+
+  85   92 12:07:00 NRAO530       -   ---    50    44    39    34    34
+       92 12:12:00 -             -   ---    49    44    39    35    35
+
+  86   92 12:16:00 SGRA          -   ---    54    28    23    23    23
+       92 12:24:00 -             -   ---    52    28    23    24    24
+
+  87   92 12:31:00 NRAO530       -   ---    44    44    40    38    38
+       92 12:36:00 -             -   ---    43    44    40    39    39
+
+  88   92 12:40:00 SGRA          -   ---    48    28    24    27    27
+       92 12:48:00 -             -   ---    47    28    24    28    28
+
+  89   92 12:55:00 NRAO530       -   ---    39    43    40    43    43
+       92 13:00:00 -             -   ---    38    43    40    44    44
+
+  90   92 13:04:00 SGRA          -   ---    43    28    24    30    30
+       92 13:12:00 -             -   ---    41    27    24    31    31
+
+  91   92 13:19:00 NRAO530       -   ---    33    41    39    47    47
+       92 13:24:00 -             -   ---    32    41    39    48    47
+
+  92   92 13:28:00 SGRA          -   ---    38    26    23    33    33
+gap    92 13:36:00 -             -   ---    36    26    23    34    34
+
+  93   92 13:56:00 1921-293      -   ---    53    28    23   ---   ---
+       92 14:01:00 -             -   ---    52    28    23   ---   ---
+
+  94   92 14:05:00 SGRA          -   ---    30    24    22   ---   ---
+       92 14:13:00 -             -   ---    28    23    21   ---   ---
+
+  95   92 14:20:00 1921-293      -   ---    48    28    23    27    27
+       92 14:25:00 -             -   ---    47    28    23    28    28
+
+  96   92 14:29:00 SGRA          -   ---    25    21    20    39    39
+       92 14:37:00 -             -   ---    23    21    20    40    40
+
+
+
+ SUMMARY for experiment g1ma01  1mm Apr 01 2011, 22h30-16h30 UT                                         
+     Flags: D=>Down, H=>Below Horizon, R=>Rises, S=>Sets, W=>Slew too long, t=>Tape Chg.
+     Top item is:    Start elevation.
+     Bottom item is: End elevation.
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  91 is Fri   1 Apr 2011   MJD  55652          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    Pv    Ap    Az    Cm    Cs    Sm
+
+  97   92 14:44:00 1921-293      -   ---    43    27    24    30    30
+       92 14:49:00 1mmRDBE.set   -   ---    42    27    23    31    31
+
+  98   92 14:53:00 SGRA          -   ---    20    19    18    41    41
+       92 15:01:00 -             -   ---    18    18    18    41    41
+
+  99   92 15:05:00 1921-293      -   ---    38    26    23    33    33
+       92 15:10:00 -             -   ---    37    26    23    34    34
+
+ 100   92 15:25:00 BLLAC         -   ---    21    72    69    32    32
+       92 15:35:00 -             -   ---    20    74    70    34    34
+
+ 101   92 15:40:00 BLLAC         -   ---    20    75    71    35    35
+       92 15:50:00 -             -   ---    19    76    73    37    37
+
+
+
+ SUMMARY for experiment g1ma01  1mm Apr 01 2011, 22h30-16h30 UT                                         
+     Flags: D=>Down, H=>Below Horizon, R=>Rises, S=>Sets, W=>Slew too long, t=>Tape Chg.
+     Top item is:    Seconds antenna is on source before scan start.
+     Bottom item is: Seconds antenna is on source during scan. 0 shown if down, rise, or set
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  91 is Fri   1 Apr 2011   MJD  55652          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    Pv    Ap    Az    Cm    Cs    Sm
+
+   1   91 22:00:00 0727-115      -     0     0   ---   ---   ---   ---
+       91 22:06:40 1mmRDBE.set   -   400   400   ---   ---   ---   ---
+
+   2   91 22:06:50 0727-115      -    -1    -1   ---   ---   ---   ---
+       91 22:13:30 -             -   399   399   ---   ---   ---   ---
+
+   3   91 22:20:00 0727-115      -   378   377   ---   ---   ---   ---
+       91 22:26:40 -             -   400   400   ---   ---   ---   ---
+
+   4   91 22:26:50 0727-115      -    -1    -1   ---   ---   ---   ---
+       91 22:33:30 -             -   399   399   ---   ---   ---   ---
+
+   5   91 22:40:00 OJ287         -   296   322   ---   ---   ---   ---
+       91 22:46:40 -             -   400   400   ---   ---   ---   ---
+
+   6   91 22:46:50 OJ287         -    -1    -1   ---   ---   ---   ---
+       91 22:53:30 -             -   399   399   ---   ---   ---   ---
+
+   7   91 23:00:00 OJ287         -   378   378   ---   ---   ---   ---
+       91 23:06:40 -             -   400   400   ---   ---   ---   ---
+
+   8   91 23:06:50 OJ287         -    -1    -1   ---   ---   ---   ---
+       91 23:13:30 -             -   399   399   ---   ---   ---   ---
+
+   9   91 23:20:00 OJ287         -   378   378   ---   ---   ---   ---
+       91 23:26:40 -             -   400   400   ---   ---   ---   ---
+
+  10   91 23:26:50 OJ287         -    -1    -1   ---   ---   ---   ---
+       91 23:33:30 -             -   399   399   ---   ---   ---   ---
+
+  11   91 23:40:00 OJ287         -   378   378   ---   ---   ---   ---
+       91 23:46:40 -             -   400   400   ---   ---   ---   ---
+
+  12   91 23:46:50 OJ287         -    -1    -1   ---   ---   ---   ---
+       91 23:53:30 -             -   399   399   ---   ---   ---   ---
+
+  13   92 00:00:01 OJ287         -   379   379   ---   ---   ---   ---
+       92 00:06:41 -             -   400   400   ---   ---   ---   ---
+
+  14   92 00:06:51 OJ287         -    -1    -1   ---   ---   ---   ---
+       92 00:13:31 -             -   399   399   ---   ---   ---   ---
+
+  15   92 00:20:00 OJ287         -   377   377   ---   ---   ---   ---
+       92 00:26:40 -             -   400   400   ---   ---   ---   ---
+
+  16   92 00:26:50 OJ287         -    -1    -1   ---   ---   ---   ---
+       92 00:33:30 -             -   399   399   ---   ---   ---   ---
+
+
+
+ SUMMARY for experiment g1ma01  1mm Apr 01 2011, 22h30-16h30 UT                                         
+     Flags: D=>Down, H=>Below Horizon, R=>Rises, S=>Sets, W=>Slew too long, t=>Tape Chg.
+     Top item is:    Seconds antenna is on source before scan start.
+     Bottom item is: Seconds antenna is on source during scan. 0 shown if down, rise, or set
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  91 is Fri   1 Apr 2011   MJD  55652          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    Pv    Ap    Az    Cm    Cs    Sm
+
+  17   92 00:40:00 OJ287         -   378   378   ---   ---   ---   ---
+       92 00:46:40 1mmRDBE.set   -   400   400   ---   ---   ---   ---
+
+  18   92 00:46:50 OJ287         -    -1    -1   ---   ---   ---   ---
+       92 00:53:30 -             -   399   399   ---   ---   ---   ---
+
+  19   92 01:00:01 OJ287         -   379   379   ---   ---   ---   ---
+       92 01:06:41 -             -   400   400   ---   ---   ---   ---
+
+  20   92 01:06:51 OJ287         -    -1    -1   ---   ---   ---   ---
+       92 01:13:31 -             -   399   399   ---   ---   ---   ---
+
+  21   92 01:20:00 3C279         -   210   270   ---   ---   ---   ---
+       92 01:26:40 -             -   400   400   ---   ---   ---   ---
+
+  22   92 01:26:50 3C279         -    -1    -1   ---   ---   ---   ---
+       92 01:33:30 -             -   399   399   ---   ---   ---   ---
+
+  23   92 01:40:00 3C279         -   378   378   ---   ---   ---   ---
+       92 01:46:40 -             -   400   400   ---   ---   ---   ---
+
+  24   92 01:46:50 3C279         -    -1    -1   ---   ---   ---   ---
+       92 01:53:30 -             -   399   399   ---   ---   ---   ---
+
+  25   92 02:00:00 3C279         -   378   378   ---   ---   ---   ---
+       92 02:06:40 -             -   400   400   ---   ---   ---   ---
+
+  26   92 02:06:50 3C279         -    -1    -1   ---   ---   ---   ---
+       92 02:13:30 -             -   399   399   ---   ---   ---   ---
+
+  27   92 02:20:00 1055+018      -   302   309     0   ---   ---   ---
+       92 02:30:00 -             -   600   600   600   ---   ---   ---
+
+  28   92 02:40:00 1055+018      -   588   586   588   ---   ---   ---
+       92 02:50:00 -             -   600   600   600   ---   ---   ---
+
+  29   92 03:00:00 1055+018      -   588   586   588   ---   ---   ---
+       92 03:10:00 -             -   600   600   600   ---   ---   ---
+
+  30   92 03:20:00 3C273         -   546   522   528   ---   ---   ---
+       92 03:25:00 -             -   300   300   300   ---   ---   ---
+
+  31   92 03:28:20 M87           -   161   162   161   ---   ---   ---
+       92 03:35:00 -             -   400   400   400   ---   ---   ---
+
+  32   92 03:40:00 3C273         -   262   262   260   ---   ---   ---
+       92 03:45:00 -             -   300   300   300   ---   ---   ---
+
+
+
+ SUMMARY for experiment g1ma01  1mm Apr 01 2011, 22h30-16h30 UT                                         
+     Flags: D=>Down, H=>Below Horizon, R=>Rises, S=>Sets, W=>Slew too long, t=>Tape Chg.
+     Top item is:    Seconds antenna is on source before scan start.
+     Bottom item is: Seconds antenna is on source during scan. 0 shown if down, rise, or set
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  91 is Fri   1 Apr 2011   MJD  55652          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    Pv    Ap    Az    Cm    Cs    Sm
+
+  33   92 03:48:20 M87           -   162   162   160   ---   ---   ---
+       92 03:55:00 1mmRDBE.set   -   400   400   400   ---   ---   ---
+
+  34   92 04:00:00 3C273         -   262   261   260   ---   ---   ---
+       92 04:05:00 -             -   300   300   300   ---   ---   ---
+
+  35   92 04:08:20 M87           -   162   161   160   ---   ---   ---
+       92 04:15:00 -             -   400   400   400   ---   ---   ---
+
+  36   92 04:20:00 3C279         -   240   248   230   ---   ---   ---
+       92 04:25:00 -             -   300   300   300   ---   ---   ---
+
+  37   92 04:28:20 M87           -   140   150   128   ---   ---   ---
+       92 04:35:00 -             -   400   400   400   ---   ---   ---
+
+  38   92 04:40:00 3C279         -   241   252   229   ---   ---   ---
+       92 04:45:00 -             -   300   300   300   ---   ---   ---
+
+  39   92 04:48:20 M87           -   141   151   127   ---   ---   ---
+       92 04:55:00 -             -   400   400   400   ---   ---   ---
+
+  40   92 05:00:00 NRAO530       -    95   162   ---   ---   ---   ---
+       92 05:05:00 -             -   300   300   ---   ---   ---   ---
+
+  41   92 05:11:00 SGRA          -   308   312   ---   ---   ---   ---
+       92 05:17:00 -             -   360   360   ---   ---   ---   ---
+
+  42   92 05:23:00 NRAO530       -   308   311   ---   ---   ---   ---
+       92 05:28:00 -             -   300   300   ---   ---   ---   ---
+
+  43   92 05:34:00 SGRA          -   309   311   ---   ---   ---   ---
+       92 05:40:00 -             -   360   360   ---   ---   ---   ---
+
+  44   92 05:46:00 NRAO530       -   309   310   ---   ---   ---   ---
+       92 05:51:00 -             -   300   300   ---   ---   ---   ---
+
+  45   92 05:57:00 SGRA          -   309   309   ---   ---   ---   ---
+       92 06:03:00 -             -   360   360   ---   ---   ---   ---
+
+  46   92 06:09:00 NRAO530       -   310   308   ---   ---   ---   ---
+       92 06:14:00 -             -   300   300   ---   ---   ---   ---
+
+  47   92 06:20:00 SGRA          -   311   307   ---   ---   ---   ---
+       92 06:26:00 -             -   360   360   ---   ---   ---   ---
+
+  48   92 06:32:00 1921-293      -   294   309   ---   ---   ---   ---
+       92 06:37:00 -             -   300   300   ---   ---   ---   ---
+
+
+
+ SUMMARY for experiment g1ma01  1mm Apr 01 2011, 22h30-16h30 UT                                         
+     Flags: D=>Down, H=>Below Horizon, R=>Rises, S=>Sets, W=>Slew too long, t=>Tape Chg.
+     Top item is:    Seconds antenna is on source before scan start.
+     Bottom item is: Seconds antenna is on source during scan. 0 shown if down, rise, or set
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  91 is Fri   1 Apr 2011   MJD  55652          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    Pv    Ap    Az    Cm    Cs    Sm
+
+  49   92 06:43:00 SGRA          -   293   308   ---   ---   ---   ---
+       92 06:49:00 1mmRDBE.set   -   360   360   ---   ---   ---   ---
+
+  50   92 06:55:00 1921-293      -   294   309   ---   ---   ---   ---
+       92 07:00:00 -             -   300   300   ---   ---   ---   ---
+
+  51   92 07:06:00 SGRA          -   294   308   ---   ---   ---   ---
+       92 07:12:00 -             -   360   360   ---   ---   ---   ---
+
+  52   92 07:18:00 1921-293      -   295   309   ---   ---   ---   ---
+       92 07:23:00 -             -   300   300   ---   ---   ---   ---
+
+  53   92 05:00:00 3C273         -   ---   ---   258     0     0   ---
+       92 05:07:00 -             -   ---   ---   420   420   420   ---
+
+  54   92 05:15:00 M87           -   ---   ---   438   449   449     0
+       92 05:23:00 -             -   ---   ---   480   480   480   480
+
+  55   92 05:30:00 3C273         -   ---   ---   377   389   389   389
+       92 05:37:00 -             -   ---   ---   420   420   420   420
+
+  56   92 05:45:00 M87           -   ---   ---   437   449   449   449
+       92 05:53:00 -             -   ---   ---   480   480   480   480
+
+  57   92 06:00:00 3C273         -   ---   ---   376   389   388   388
+       92 06:04:00 -             -   ---   ---   240   240   240   240
+
+  58   92 06:12:00 M87           -   ---   ---   434   450   447   447
+       92 06:22:00 -             -   ---   ---   600   600   600   600
+
+  59   92 06:26:00 3C273         -   ---   ---   193   211   206   206
+       92 06:30:00 -             -   ---   ---   240   240   240   240
+
+  60   92 06:38:00 M87           -   ---   ---   432   452   446   446
+       92 06:48:00 -             -   ---   ---   600   600   600   600
+
+  61   92 06:52:00 3C273         -   ---   ---   190   211   204   204
+       92 06:56:00 -             -   ---   ---   240   240   240   240
+
+  62   92 07:04:00 M87           -   ---   ---   430   451   444   444
+       92 07:14:00 -             -   ---   ---   600   600   600   600
+
+  63   92 07:18:00 3C273         -   ---   ---   189   210   202   202
+       92 07:22:00 -             -   ---   ---   240   240   240   240
+
+  64   92 07:30:00 M87           -   ---   ---   430   450   441   441
+       92 07:40:00 -             -   ---   ---   600   600   600   600
+
+
+
+ SUMMARY for experiment g1ma01  1mm Apr 01 2011, 22h30-16h30 UT                                         
+     Flags: D=>Down, H=>Below Horizon, R=>Rises, S=>Sets, W=>Slew too long, t=>Tape Chg.
+     Top item is:    Seconds antenna is on source before scan start.
+     Bottom item is: Seconds antenna is on source during scan. 0 shown if down, rise, or set
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  91 is Fri   1 Apr 2011   MJD  55652          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    Pv    Ap    Az    Cm    Cs    Sm
+
+  65   92 07:44:00 3C273         -   ---   ---   190   209   199   199
+       92 07:48:00 1mmRDBE.set   -   ---   ---   240   240   240   240
+
+  66   92 08:00:00 3C279         -   ---  2008   675   690   690   690
+       92 08:05:00 -             -   ---   300   300   300   300   300
+
+  67   92 08:13:00 M87           -   ---   435   414   435   427   427
+       92 08:23:00 -             -   ---   600   600   600   600   600
+
+  68   92 08:27:00 3C279         -   ---   195   177   196   184   184
+       92 08:32:00 -             -   ---   300   300   300   300   300
+
+  69   92 08:40:00 1749+096      -  4507   340   287   285   ---   ---
+       92 08:50:00 -             -   600   600   600   600   ---   ---
+
+  70   92 09:00:00 1749+096      -   588   587   588   590   ---   ---
+       92 09:10:00 -             -   600   600   600   600   ---   ---
+
+  71   92 09:20:00 3C279         -   ---   470   393   388  2870  2870
+       92 09:25:00 -             -   ---   300   300   300   300   300
+
+  72   92 09:29:00 M87           -   ---   ---   175   184   188   188
+       92 09:36:00 -             -   ---   ---   420   420   420   420
+
+  73   92 09:40:00 M87           -   ---   ---   228   230   230   230
+       92 09:50:00 -             -   ---   ---   600   600   600   600
+
+  74   92 09:40:00 1633+382      -  1701   796   ---   ---   ---   ---
+       92 09:50:00 -             -   600   600   ---   ---   ---   ---
+
+  75   92 10:00:00 1633+382      -   588   588   270   274   415   415
+       92 10:10:00 -             -   600   600   600   600   600   600
+
+  76   92 10:20:00 1633+382      -   588   588   588   590   590   590
+       92 10:30:00 -             -   600   600   600   600   600   600
+
+  77   92 10:40:00 1749+096      -   ---   537   465   514   532   532
+       92 10:45:00 -             -   ---   300   300   300   300   300
+
+  78   92 10:49:00 SGRA          -   ---   123   116   167   ---   ---
+       92 10:56:00 -             -   ---   420   420   420   ---   ---
+
+  79   92 11:00:00 1749+096      -   ---   129   111   165   890   890
+       92 11:05:00 -             -   ---   300   300   300   300   300
+
+  80   92 11:09:00 SGRA          -   ---   133   110   164   ---   ---
+       92 11:16:00 -             -   ---   420   420   420   ---   ---
+
+
+
+ SUMMARY for experiment g1ma01  1mm Apr 01 2011, 22h30-16h30 UT                                         
+     Flags: D=>Down, H=>Below Horizon, R=>Rises, S=>Sets, W=>Slew too long, t=>Tape Chg.
+     Top item is:    Seconds antenna is on source before scan start.
+     Bottom item is: Seconds antenna is on source during scan. 0 shown if down, rise, or set
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  91 is Fri   1 Apr 2011   MJD  55652          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    Pv    Ap    Az    Cm    Cs    Sm
+
+  81   92 11:20:00 1749+096      -   ---   138   106   162   890   890
+       92 11:25:00 1mmRDBE.set   -   ---   300   300   300   300   300
+
+  82   92 11:29:00 SGRA          -   ---   141   105   162   153   ---
+       92 11:36:00 -             -   ---   420   420   420   420   ---
+
+  83   92 11:43:00 NRAO530       -   ---   360   350   378   385  1019
+       92 11:48:00 -             -   ---   300   300   300   300   300
+
+  84   92 11:52:00 SGRA          -   ---   182   170   198   205   205
+       92 12:00:00 -             -   ---   480   480   480   480   480
+
+  85   92 12:07:00 NRAO530       -   ---   364   350   378   385   385
+       92 12:12:00 -             -   ---   300   300   300   300   300
+
+  86   92 12:16:00 SGRA          -   ---   185   171   198   206   206
+       92 12:24:00 -             -   ---   480   480   480   480   480
+
+  87   92 12:31:00 NRAO530       -   ---   367   351   378   385   385
+       92 12:36:00 -             -   ---   300   300   300   300   300
+
+  88   92 12:40:00 SGRA          -   ---   188   172   198   204   204
+       92 12:48:00 -             -   ---   480   480   480   480   480
+
+  89   92 12:55:00 NRAO530       -   ---   369   353   378   383   383
+       92 13:00:00 -             -   ---   300   300   300   300   300
+
+  90   92 13:04:00 SGRA          -   ---   190   174   198   203   203
+       92 13:12:00 -             -   ---   480   480   480   480   480
+
+  91   92 13:19:00 NRAO530       -   ---   371   355   379   382   382
+       92 13:24:00 -             -   ---   300   300   300   300   300
+
+  92   92 13:28:00 SGRA          -   ---   192   176   199   201   201
+gap    92 13:36:00 -             -   ---   480   480   480   480   480
+
+  93   92 13:56:00 1921-293      -   ---  1149  1138  1143   ---   ---
+       92 14:01:00 -             -   ---   300   300   300   ---   ---
+
+  94   92 14:05:00 SGRA          -   ---   188   178   183   ---   ---
+       92 14:13:00 -             -   ---   480   480   480   ---   ---
+
+  95   92 14:20:00 1921-293      -   ---   369   359   364  2594  2594
+       92 14:25:00 -             -   ---   300   300   300   300   300
+
+  96   92 14:29:00 SGRA          -   ---   188   179   183   185   185
+       92 14:37:00 -             -   ---   480   480   480   480   480
+
+
+
+ SUMMARY for experiment g1ma01  1mm Apr 01 2011, 22h30-16h30 UT                                         
+     Flags: D=>Down, H=>Below Horizon, R=>Rises, S=>Sets, W=>Slew too long, t=>Tape Chg.
+     Top item is:    Seconds antenna is on source before scan start.
+     Bottom item is: Seconds antenna is on source during scan. 0 shown if down, rise, or set
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  91 is Fri   1 Apr 2011   MJD  55652          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    Pv    Ap    Az    Cm    Cs    Sm
+
+  97   92 14:44:00 1921-293      -   ---   369   361   364   364   364
+       92 14:49:00 1mmRDBE.set   -   ---   300   300   300   300   300
+
+  98   92 14:53:00 SGRA          -   ---   189   181   184   181   181
+       92 15:01:00 -             -   ---   480   480   480   480   480
+
+  99   92 15:05:00 1921-293      -   ---   189   183   186   180   180
+       92 15:10:00 -             -   ---   300   300   300   300   300
+
+ 100   92 15:25:00 BLLAC         -   ---   776   641   650   694   694
+       92 15:35:00 -             -   ---   600   600   600   600   600
+
+ 101   92 15:40:00 BLLAC         -   ---   289   288   290   290   290
+       92 15:50:00 -             -   ---   600   600   600   600   600
+
+
+
+ SUMMARY for experiment g1ma01  1mm Apr 01 2011, 22h30-16h30 UT                                         
+     Top item is:    Slew time in seconds from previous source.
+     Bottom item is: Seconds recording starts before scan start time.
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  91 is Fri   1 Apr 2011   MJD  55652          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    Pv    Ap    Az    Cm    Cs    Sm
+
+   1   91 22:00:00 0727-115      -     0     0   ---   ---   ---   ---
+       91 22:06:40 1mmRDBE.set   -     0     0   ---   ---   ---   ---
+
+   2   91 22:06:50 0727-115      -    11    11   ---   ---   ---   ---
+       91 22:13:30 -             -     0     0   ---   ---   ---   ---
+
+   3   91 22:20:00 0727-115      -    12    13   ---   ---   ---   ---
+       91 22:26:40 -             -     0     0   ---   ---   ---   ---
+
+   4   91 22:26:50 0727-115      -    11    11   ---   ---   ---   ---
+       91 22:33:30 -             -     0     0   ---   ---   ---   ---
+
+   5   91 22:40:00 OJ287         -    94    68   ---   ---   ---   ---
+       91 22:46:40 -             -     0     0   ---   ---   ---   ---
+
+   6   91 22:46:50 OJ287         -    11    11   ---   ---   ---   ---
+       91 22:53:30 -             -     0     0   ---   ---   ---   ---
+
+   7   91 23:00:00 OJ287         -    12    12   ---   ---   ---   ---
+       91 23:06:40 -             -     0     0   ---   ---   ---   ---
+
+   8   91 23:06:50 OJ287         -    11    11   ---   ---   ---   ---
+       91 23:13:30 -             -     0     0   ---   ---   ---   ---
+
+   9   91 23:20:00 OJ287         -    12    12   ---   ---   ---   ---
+       91 23:26:40 -             -     0     0   ---   ---   ---   ---
+
+  10   91 23:26:50 OJ287         -    11    11   ---   ---   ---   ---
+       91 23:33:30 -             -     0     0   ---   ---   ---   ---
+
+  11   91 23:40:00 OJ287         -    12    12   ---   ---   ---   ---
+       91 23:46:40 -             -     0     0   ---   ---   ---   ---
+
+  12   91 23:46:50 OJ287         -    11    11   ---   ---   ---   ---
+       91 23:53:30 -             -     0     0   ---   ---   ---   ---
+
+  13   92 00:00:01 OJ287         -    12    12   ---   ---   ---   ---
+       92 00:06:41 -             -     0     0   ---   ---   ---   ---
+
+  14   92 00:06:51 OJ287         -    11    11   ---   ---   ---   ---
+       92 00:13:31 -             -     0     0   ---   ---   ---   ---
+
+  15   92 00:20:00 OJ287         -    12    12   ---   ---   ---   ---
+       92 00:26:40 -             -     0     0   ---   ---   ---   ---
+
+  16   92 00:26:50 OJ287         -    11    11   ---   ---   ---   ---
+       92 00:33:30 -             -     0     0   ---   ---   ---   ---
+
+  17   92 00:40:00 OJ287         -    12    12   ---   ---   ---   ---
+       92 00:46:40 -             -     0     0   ---   ---   ---   ---
+
+
+
+ SUMMARY for experiment g1ma01  1mm Apr 01 2011, 22h30-16h30 UT                                         
+     Top item is:    Slew time in seconds from previous source.
+     Bottom item is: Seconds recording starts before scan start time.
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  91 is Fri   1 Apr 2011   MJD  55652          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    Pv    Ap    Az    Cm    Cs    Sm
+
+  18   92 00:46:50 OJ287         -    11    11   ---   ---   ---   ---
+       92 00:53:30 1mmRDBE.set   -     0     0   ---   ---   ---   ---
+
+  19   92 01:00:01 OJ287         -    12    12   ---   ---   ---   ---
+       92 01:06:41 -             -     0     0   ---   ---   ---   ---
+
+  20   92 01:06:51 OJ287         -    11    11   ---   ---   ---   ---
+       92 01:13:31 -             -     0     0   ---   ---   ---   ---
+
+  21   92 01:20:00 3C279         -   179   119   ---   ---   ---   ---
+       92 01:26:40 -             -     0     0   ---   ---   ---   ---
+
+  22   92 01:26:50 3C279         -    11    11   ---   ---   ---   ---
+       92 01:33:30 -             -     0     0   ---   ---   ---   ---
+
+  23   92 01:40:00 3C279         -    12    12   ---   ---   ---   ---
+       92 01:46:40 -             -     0     0   ---   ---   ---   ---
+
+  24   92 01:46:50 3C279         -    11    11   ---   ---   ---   ---
+       92 01:53:30 -             -     0     0   ---   ---   ---   ---
+
+  25   92 02:00:00 3C279         -    12    12   ---   ---   ---   ---
+       92 02:06:40 -             -     0     0   ---   ---   ---   ---
+
+  26   92 02:06:50 3C279         -    11    11   ---   ---   ---   ---
+       92 02:13:30 -             -     0     0   ---   ---   ---   ---
+
+  27   92 02:20:00 1055+018      -    88    81     0   ---   ---   ---
+       92 02:30:00 -             -     0     0     0   ---   ---   ---
+
+  28   92 02:40:00 1055+018      -    12    14    12   ---   ---   ---
+       92 02:50:00 -             -     0     0     0   ---   ---   ---
+
+  29   92 03:00:00 1055+018      -    12    14    12   ---   ---   ---
+       92 03:10:00 -             -     0     0     0   ---   ---   ---
+
+  30   92 03:20:00 3C273         -    54    78    72   ---   ---   ---
+       92 03:25:00 -             -     0     0     0   ---   ---   ---
+
+  31   92 03:28:20 M87           -    39    38    39   ---   ---   ---
+       92 03:35:00 -             -     0     0     0   ---   ---   ---
+
+  32   92 03:40:00 3C273         -    38    38    40   ---   ---   ---
+       92 03:45:00 -             -     0     0     0   ---   ---   ---
+
+  33   92 03:48:20 M87           -    38    38    40   ---   ---   ---
+       92 03:55:00 -             -     0     0     0   ---   ---   ---
+
+  34   92 04:00:00 3C273         -    38    39    40   ---   ---   ---
+       92 04:05:00 -             -     0     0     0   ---   ---   ---
+
+
+
+ SUMMARY for experiment g1ma01  1mm Apr 01 2011, 22h30-16h30 UT                                         
+     Top item is:    Slew time in seconds from previous source.
+     Bottom item is: Seconds recording starts before scan start time.
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  91 is Fri   1 Apr 2011   MJD  55652          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    Pv    Ap    Az    Cm    Cs    Sm
+
+  35   92 04:08:20 M87           -    38    39    40   ---   ---   ---
+       92 04:15:00 1mmRDBE.set   -     0     0     0   ---   ---   ---
+
+  36   92 04:20:00 3C279         -    60    52    70   ---   ---   ---
+       92 04:25:00 -             -     0     0     0   ---   ---   ---
+
+  37   92 04:28:20 M87           -    60    50    72   ---   ---   ---
+       92 04:35:00 -             -     0     0     0   ---   ---   ---
+
+  38   92 04:40:00 3C279         -    59    48    71   ---   ---   ---
+       92 04:45:00 -             -     0     0     0   ---   ---   ---
+
+  39   92 04:48:20 M87           -    59    49    73   ---   ---   ---
+       92 04:55:00 -             -     0     0     0   ---   ---   ---
+
+  40   92 05:00:00 NRAO530       -   205   138   ---   ---   ---   ---
+       92 05:05:00 -             -     0     0   ---   ---   ---   ---
+
+  41   92 05:11:00 SGRA          -    52    48   ---   ---   ---   ---
+       92 05:17:00 -             -     0     0   ---   ---   ---   ---
+
+  42   92 05:23:00 NRAO530       -    52    49   ---   ---   ---   ---
+       92 05:28:00 -             -     0     0   ---   ---   ---   ---
+
+  43   92 05:34:00 SGRA          -    51    49   ---   ---   ---   ---
+       92 05:40:00 -             -     0     0   ---   ---   ---   ---
+
+  44   92 05:46:00 NRAO530       -    51    50   ---   ---   ---   ---
+       92 05:51:00 -             -     0     0   ---   ---   ---   ---
+
+  45   92 05:57:00 SGRA          -    51    51   ---   ---   ---   ---
+       92 06:03:00 -             -     0     0   ---   ---   ---   ---
+
+  46   92 06:09:00 NRAO530       -    50    52   ---   ---   ---   ---
+       92 06:14:00 -             -     0     0   ---   ---   ---   ---
+
+  47   92 06:20:00 SGRA          -    49    53   ---   ---   ---   ---
+       92 06:26:00 -             -     0     0   ---   ---   ---   ---
+
+  48   92 06:32:00 1921-293      -    66    51   ---   ---   ---   ---
+       92 06:37:00 -             -     0     0   ---   ---   ---   ---
+
+  49   92 06:43:00 SGRA          -    67    52   ---   ---   ---   ---
+       92 06:49:00 -             -     0     0   ---   ---   ---   ---
+
+  50   92 06:55:00 1921-293      -    66    51   ---   ---   ---   ---
+       92 07:00:00 -             -     0     0   ---   ---   ---   ---
+
+  51   92 07:06:00 SGRA          -    66    52   ---   ---   ---   ---
+       92 07:12:00 -             -     0     0   ---   ---   ---   ---
+
+
+
+ SUMMARY for experiment g1ma01  1mm Apr 01 2011, 22h30-16h30 UT                                         
+     Top item is:    Slew time in seconds from previous source.
+     Bottom item is: Seconds recording starts before scan start time.
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  91 is Fri   1 Apr 2011   MJD  55652          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    Pv    Ap    Az    Cm    Cs    Sm
+
+  52   92 07:18:00 1921-293      -    65    51   ---   ---   ---   ---
+       92 07:23:00 1mmRDBE.set   -     0     0   ---   ---   ---   ---
+
+  53   92 05:00:00 3C273         -   ---   ---    42     0     0   ---
+       92 05:07:00 -             -   ---   ---     0     0     0   ---
+
+  54   92 05:15:00 M87           -   ---   ---    42    31    31     0
+       92 05:23:00 -             -   ---   ---     0     0     0     0
+
+  55   92 05:30:00 3C273         -   ---   ---    43    31    31    31
+       92 05:37:00 -             -   ---   ---     0     0     0     0
+
+  56   92 05:45:00 M87           -   ---   ---    43    31    31    31
+       92 05:53:00 -             -   ---   ---     0     0     0     0
+
+  57   92 06:00:00 3C273         -   ---   ---    44    31    32    32
+       92 06:04:00 -             -   ---   ---     0     0     0     0
+
+  58   92 06:12:00 M87           -   ---   ---    46    30    33    33
+       92 06:22:00 -             -   ---   ---     0     0     0     0
+
+  59   92 06:26:00 3C273         -   ---   ---    47    29    34    34
+       92 06:30:00 -             -   ---   ---     0     0     0     0
+
+  60   92 06:38:00 M87           -   ---   ---    48    28    34    34
+       92 06:48:00 -             -   ---   ---     0     0     0     0
+
+  61   92 06:52:00 3C273         -   ---   ---    50    29    36    36
+       92 06:56:00 -             -   ---   ---     0     0     0     0
+
+  62   92 07:04:00 M87           -   ---   ---    50    29    36    36
+       92 07:14:00 -             -   ---   ---     0     0     0     0
+
+  63   92 07:18:00 3C273         -   ---   ---    51    30    38    38
+       92 07:22:00 -             -   ---   ---     0     0     0     0
+
+  64   92 07:30:00 M87           -   ---   ---    50    30    39    39
+       92 07:40:00 -             -   ---   ---     0     0     0     0
+
+  65   92 07:44:00 3C273         -   ---   ---    50    31    41    41
+       92 07:48:00 -             -   ---   ---     0     0     0     0
+
+  66   92 08:00:00 3C279         -   ---   212    45    30    30    30
+       92 08:05:00 -             -   ---     0     0     0     0     0
+
+  67   92 08:13:00 M87           -   ---    45    66    45    53    53
+       92 08:23:00 -             -   ---     0     0     0     0     0
+
+  68   92 08:27:00 3C279         -   ---    45    63    44    56    56
+       92 08:32:00 -             -   ---     0     0     0     0     0
+
+
+
+ SUMMARY for experiment g1ma01  1mm Apr 01 2011, 22h30-16h30 UT                                         
+     Top item is:    Slew time in seconds from previous source.
+     Bottom item is: Seconds recording starts before scan start time.
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  91 is Fri   1 Apr 2011   MJD  55652          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    Pv    Ap    Az    Cm    Cs    Sm
+
+  69   92 08:40:00 1749+096      -   113   140   193   195   ---   ---
+       92 08:50:00 1mmRDBE.set   -     0     0     0     0   ---   ---
+
+  70   92 09:00:00 1749+096      -    12    13    12    10   ---   ---
+       92 09:10:00 -             -     0     0     0     0   ---   ---
+
+  71   92 09:20:00 3C279         -   ---   130   207   212    10    10
+       92 09:25:00 -             -   ---     0     0     0     0     0
+
+  72   92 09:29:00 M87           -   ---   ---    65    56    52    52
+       92 09:36:00 -             -   ---   ---     0     0     0     0
+
+  73   92 09:40:00 M87           -   ---   ---    12    10    10    10
+       92 09:50:00 -             -   ---   ---     0     0     0     0
+
+  74   92 09:40:00 1633+382      -    99   104   ---   ---   ---   ---
+       92 09:50:00 -             -     0     0   ---   ---   ---   ---
+
+  75   92 10:00:00 1633+382      -    12    12   330   326   185   185
+       92 10:10:00 -             -     0     0     0     0     0     0
+
+  76   92 10:20:00 1633+382      -    12    12    12    10    10    10
+       92 10:30:00 -             -     0     0     0     0     0     0
+
+  77   92 10:40:00 1749+096      -   ---    63   135    86    68    68
+       92 10:45:00 -             -   ---     0     0     0     0     0
+
+  78   92 10:49:00 SGRA          -   ---   117   124    73   ---   ---
+       92 10:56:00 -             -   ---     0     0     0   ---   ---
+
+  79   92 11:00:00 1749+096      -   ---   111   129    75    10    10
+       92 11:05:00 -             -   ---     0     0     0     0     0
+
+  80   92 11:09:00 SGRA          -   ---   107   130    76   ---   ---
+       92 11:16:00 -             -   ---     0     0     0   ---   ---
+
+  81   92 11:20:00 1749+096      -   ---   102   134    78    10    10
+       92 11:25:00 -             -   ---     0     0     0     0     0
+
+  82   92 11:29:00 SGRA          -   ---    99   135    78    87   ---
+       92 11:36:00 -             -   ---     0     0     0     0   ---
+
+  83   92 11:43:00 NRAO530       -   ---    60    70    42    35    61
+       92 11:48:00 -             -   ---     0     0     0     0     0
+
+  84   92 11:52:00 SGRA          -   ---    58    70    42    35    35
+       92 12:00:00 -             -   ---     0     0     0     0     0
+
+  85   92 12:07:00 NRAO530       -   ---    56    70    42    35    35
+       92 12:12:00 -             -   ---     0     0     0     0     0
+
+
+
+ SUMMARY for experiment g1ma01  1mm Apr 01 2011, 22h30-16h30 UT                                         
+     Top item is:    Slew time in seconds from previous source.
+     Bottom item is: Seconds recording starts before scan start time.
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  91 is Fri   1 Apr 2011   MJD  55652          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    Pv    Ap    Az    Cm    Cs    Sm
+
+  86   92 12:16:00 SGRA          -   ---    55    69    42    34    34
+       92 12:24:00 1mmRDBE.set   -   ---     0     0     0     0     0
+
+  87   92 12:31:00 NRAO530       -   ---    53    69    42    35    35
+       92 12:36:00 -             -   ---     0     0     0     0     0
+
+  88   92 12:40:00 SGRA          -   ---    52    68    42    36    36
+       92 12:48:00 -             -   ---     0     0     0     0     0
+
+  89   92 12:55:00 NRAO530       -   ---    51    67    42    37    37
+       92 13:00:00 -             -   ---     0     0     0     0     0
+
+  90   92 13:04:00 SGRA          -   ---    50    66    42    37    37
+       92 13:12:00 -             -   ---     0     0     0     0     0
+
+  91   92 13:19:00 NRAO530       -   ---    49    65    41    38    38
+       92 13:24:00 -             -   ---     0     0     0     0     0
+
+  92   92 13:28:00 SGRA          -   ---    48    64    41    39    39
+gap    92 13:36:00 -             -   ---     0     0     0     0     0
+
+  93   92 13:56:00 1921-293      -   ---    51    62    57   ---   ---
+       92 14:01:00 -             -   ---     0     0     0   ---   ---
+
+  94   92 14:05:00 SGRA          -   ---    52    62    57   ---   ---
+       92 14:13:00 -             -   ---     0     0     0   ---   ---
+
+  95   92 14:20:00 1921-293      -   ---    51    61    56    46    46
+       92 14:25:00 -             -   ---     0     0     0     0     0
+
+  96   92 14:29:00 SGRA          -   ---    52    61    57    55    55
+       92 14:37:00 -             -   ---     0     0     0     0     0
+
+  97   92 14:44:00 1921-293      -   ---    51    59    56    56    56
+       92 14:49:00 -             -   ---     0     0     0     0     0
+
+  98   92 14:53:00 SGRA          -   ---    51    59    56    59    59
+       92 15:01:00 -             -   ---     0     0     0     0     0
+
+  99   92 15:05:00 1921-293      -   ---    51    57    54    60    60
+       92 15:10:00 -             -   ---     0     0     0     0     0
+
+ 100   92 15:25:00 BLLAC         -   ---   124   259   250   206   206
+       92 15:35:00 -             -   ---     0     0     0     0     0
+
+ 101   92 15:40:00 BLLAC         -   ---    11    12    10    10    10
+       92 15:50:00 -             -   ---     0     0     0     0     0
+
+
+
+ SUMMARY for experiment g1ma01  1mm Apr 01 2011, 22h30-16h30 UT                                         
+     Top item is:    Disk total GBytes at end of scan.
+     Bottom item is: Seconds the correlator is expected to be synced up during the scan.
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  91 is Fri   1 Apr 2011   MJD  55652          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    Pv    Ap    Az    Cm    Cs    Sm
+
+   1   91 22:00:00 0727-115      -   103   103   ---   ---   ---   ---
+       91 22:06:40 1mmRDBE.set   -   399   399   ---   ---   ---   ---
+
+   2   91 22:06:50 0727-115      -   206   206   ---   ---   ---   ---
+       91 22:13:30 -             -   399   399   ---   ---   ---   ---
+
+   3   91 22:20:00 0727-115      -   310   310   ---   ---   ---   ---
+       91 22:26:40 -             -   399   399   ---   ---   ---   ---
+
+   4   91 22:26:50 0727-115      -   413   413   ---   ---   ---   ---
+       91 22:33:30 -             -   399   399   ---   ---   ---   ---
+
+   5   91 22:40:00 OJ287         -   516   516   ---   ---   ---   ---
+       91 22:46:40 -             -   399   399   ---   ---   ---   ---
+
+   6   91 22:46:50 OJ287         -   619   619   ---   ---   ---   ---
+       91 22:53:30 -             -   399   399   ---   ---   ---   ---
+
+   7   91 23:00:00 OJ287         -   723   723   ---   ---   ---   ---
+       91 23:06:40 -             -   399   399   ---   ---   ---   ---
+
+   8   91 23:06:50 OJ287         -   826   826   ---   ---   ---   ---
+       91 23:13:30 -             -   399   399   ---   ---   ---   ---
+
+   9   91 23:20:00 OJ287         -   929   929   ---   ---   ---   ---
+       91 23:26:40 -             -   399   399   ---   ---   ---   ---
+
+  10   91 23:26:50 OJ287         -  1032  1032   ---   ---   ---   ---
+       91 23:33:30 -             -   399   399   ---   ---   ---   ---
+
+  11   91 23:40:00 OJ287         -  1135  1135   ---   ---   ---   ---
+       91 23:46:40 -             -   399   399   ---   ---   ---   ---
+
+  12   91 23:46:50 OJ287         -  1239  1239   ---   ---   ---   ---
+       91 23:53:30 -             -   399   399   ---   ---   ---   ---
+
+  13   92 00:00:01 OJ287         -  1342  1342   ---   ---   ---   ---
+       92 00:06:41 -             -   399   399   ---   ---   ---   ---
+
+  14   92 00:06:51 OJ287         -  1445  1445   ---   ---   ---   ---
+       92 00:13:31 -             -   399   399   ---   ---   ---   ---
+
+  15   92 00:20:00 OJ287         -  1548  1548   ---   ---   ---   ---
+       92 00:26:40 -             -   399   399   ---   ---   ---   ---
+
+  16   92 00:26:50 OJ287         -  1652  1652   ---   ---   ---   ---
+       92 00:33:30 -             -   399   399   ---   ---   ---   ---
+
+  17   92 00:40:00 OJ287         -  1755  1755   ---   ---   ---   ---
+       92 00:46:40 -             -   399   399   ---   ---   ---   ---
+
+
+
+ SUMMARY for experiment g1ma01  1mm Apr 01 2011, 22h30-16h30 UT                                         
+     Top item is:    Disk total GBytes at end of scan.
+     Bottom item is: Seconds the correlator is expected to be synced up during the scan.
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  91 is Fri   1 Apr 2011   MJD  55652          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    Pv    Ap    Az    Cm    Cs    Sm
+
+  18   92 00:46:50 OJ287         -  1858  1858   ---   ---   ---   ---
+       92 00:53:30 1mmRDBE.set   -   399   399   ---   ---   ---   ---
+
+  19   92 01:00:01 OJ287         -  1961  1961   ---   ---   ---   ---
+       92 01:06:41 -             -   399   399   ---   ---   ---   ---
+
+  20   92 01:06:51 OJ287         -  2064  2064   ---   ---   ---   ---
+       92 01:13:31 -             -   399   399   ---   ---   ---   ---
+
+  21   92 01:20:00 3C279         -  2168  2168   ---   ---   ---   ---
+       92 01:26:40 -             -   399   399   ---   ---   ---   ---
+
+  22   92 01:26:50 3C279         -  2271  2271   ---   ---   ---   ---
+       92 01:33:30 -             -   399   399   ---   ---   ---   ---
+
+  23   92 01:40:00 3C279         -  2374  2374   ---   ---   ---   ---
+       92 01:46:40 -             -   399   399   ---   ---   ---   ---
+
+  24   92 01:46:50 3C279         -  2477  2477   ---   ---   ---   ---
+       92 01:53:30 -             -   399   399   ---   ---   ---   ---
+
+  25   92 02:00:00 3C279         -  2580  2580   ---   ---   ---   ---
+       92 02:06:40 -             -   399   399   ---   ---   ---   ---
+
+  26   92 02:06:50 3C279         -  2684  2684   ---   ---   ---   ---
+       92 02:13:30 -             -   399   399   ---   ---   ---   ---
+
+  27   92 02:20:00 1055+018      -  2839  2839   155   ---   ---   ---
+       92 02:30:00 -             -   599   599   599   ---   ---   ---
+
+  28   92 02:40:00 1055+018      -  2993  2993   310   ---   ---   ---
+       92 02:50:00 -             -   599   599   599   ---   ---   ---
+
+  29   92 03:00:00 1055+018      -  3148  3148   464   ---   ---   ---
+       92 03:10:00 -             -   599   599   599   ---   ---   ---
+
+  30   92 03:20:00 3C273         -  3226  3226   542   ---   ---   ---
+       92 03:25:00 -             -   299   299   299   ---   ---   ---
+
+  31   92 03:28:20 M87           -  3329  3329   645   ---   ---   ---
+       92 03:35:00 -             -   399   399   399   ---   ---   ---
+
+  32   92 03:40:00 3C273         -  3406  3406   723   ---   ---   ---
+       92 03:45:00 -             -   299   299   299   ---   ---   ---
+
+  33   92 03:48:20 M87           -  3509  3509   826   ---   ---   ---
+       92 03:55:00 -             -   399   399   399   ---   ---   ---
+
+  34   92 04:00:00 3C273         -  3587  3587   903   ---   ---   ---
+       92 04:05:00 -             -   299   299   299   ---   ---   ---
+
+
+
+ SUMMARY for experiment g1ma01  1mm Apr 01 2011, 22h30-16h30 UT                                         
+     Top item is:    Disk total GBytes at end of scan.
+     Bottom item is: Seconds the correlator is expected to be synced up during the scan.
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  91 is Fri   1 Apr 2011   MJD  55652          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    Pv    Ap    Az    Cm    Cs    Sm
+
+  35   92 04:08:20 M87           -  3690  3690  1006   ---   ---   ---
+       92 04:15:00 1mmRDBE.set   -   399   399   399   ---   ---   ---
+
+  36   92 04:20:00 3C279         -  3768  3768  1084   ---   ---   ---
+       92 04:25:00 -             -   299   299   299   ---   ---   ---
+
+  37   92 04:28:20 M87           -  3871  3871  1187   ---   ---   ---
+       92 04:35:00 -             -   399   399   399   ---   ---   ---
+
+  38   92 04:40:00 3C279         -  3948  3948  1264   ---   ---   ---
+       92 04:45:00 -             -   299   299   299   ---   ---   ---
+
+  39   92 04:48:20 M87           -  4051  4051  1368   ---   ---   ---
+       92 04:55:00 -             -   399   399   399   ---   ---   ---
+
+  40   92 05:00:00 NRAO530       -  4129  4129   ---   ---   ---   ---
+       92 05:05:00 -             -   299   299   ---   ---   ---   ---
+
+  41   92 05:11:00 SGRA          -  4222  4222   ---   ---   ---   ---
+       92 05:17:00 -             -   359   359   ---   ---   ---   ---
+
+  42   92 05:23:00 NRAO530       -  4299  4299   ---   ---   ---   ---
+       92 05:28:00 -             -   299   299   ---   ---   ---   ---
+
+  43   92 05:34:00 SGRA          -  4392  4392   ---   ---   ---   ---
+       92 05:40:00 -             -   359   359   ---   ---   ---   ---
+
+  44   92 05:46:00 NRAO530       -  4469  4469   ---   ---   ---   ---
+       92 05:51:00 -             -   299   299   ---   ---   ---   ---
+
+  45   92 05:57:00 SGRA          -  4562  4562   ---   ---   ---   ---
+       92 06:03:00 -             -   359   359   ---   ---   ---   ---
+
+  46   92 06:09:00 NRAO530       -  4640  4640   ---   ---   ---   ---
+       92 06:14:00 -             -   299   299   ---   ---   ---   ---
+
+  47   92 06:20:00 SGRA          -  4733  4733   ---   ---   ---   ---
+       92 06:26:00 -             -   359   359   ---   ---   ---   ---
+
+  48   92 06:32:00 1921-293      -  4810  4810   ---   ---   ---   ---
+       92 06:37:00 -             -   299   299   ---   ---   ---   ---
+
+  49   92 06:43:00 SGRA          -  4903  4903   ---   ---   ---   ---
+       92 06:49:00 -             -   359   359   ---   ---   ---   ---
+
+  50   92 06:55:00 1921-293      -  4980  4980   ---   ---   ---   ---
+       92 07:00:00 -             -   299   299   ---   ---   ---   ---
+
+  51   92 07:06:00 SGRA          -  5073  5073   ---   ---   ---   ---
+       92 07:12:00 -             -   359   359   ---   ---   ---   ---
+
+
+
+ SUMMARY for experiment g1ma01  1mm Apr 01 2011, 22h30-16h30 UT                                         
+     Top item is:    Disk total GBytes at end of scan.
+     Bottom item is: Seconds the correlator is expected to be synced up during the scan.
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  91 is Fri   1 Apr 2011   MJD  55652          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    Pv    Ap    Az    Cm    Cs    Sm
+
+  52   92 07:18:00 1921-293      -  5151  5151   ---   ---   ---   ---
+       92 07:23:00 1mmRDBE.set   -   299   299   ---   ---   ---   ---
+
+  53   92 05:00:00 3C273         -   ---   ---  1476   108   108   ---
+       92 05:07:00 -             -   ---   ---   419   419   419   ---
+
+  54   92 05:15:00 M87           -   ---   ---  1600   232   232   124
+       92 05:23:00 -             -   ---   ---   479   479   479   479
+
+  55   92 05:30:00 3C273         -   ---   ---  1708   341   341   232
+       92 05:37:00 -             -   ---   ---   419   419   419   419
+
+  56   92 05:45:00 M87           -   ---   ---  1832   464   464   356
+       92 05:53:00 -             -   ---   ---   479   479   479   479
+
+  57   92 06:00:00 3C273         -   ---   ---  1894   526   526   418
+       92 06:04:00 -             -   ---   ---   239   239   239   239
+
+  58   92 06:12:00 M87           -   ---   ---  2049   681   681   573
+       92 06:22:00 -             -   ---   ---   599   599   599   599
+
+  59   92 06:26:00 3C273         -   ---   ---  2111   743   743   635
+       92 06:30:00 -             -   ---   ---   239   239   239   239
+
+  60   92 06:38:00 M87           -   ---   ---  2266   898   898   790
+       92 06:48:00 -             -   ---   ---   599   599   599   599
+
+  61   92 06:52:00 3C273         -   ---   ---  2328   960   960   852
+       92 06:56:00 -             -   ---   ---   239   239   239   239
+
+  62   92 07:04:00 M87           -   ---   ---  2482  1115  1115  1006
+       92 07:14:00 -             -   ---   ---   599   599   599   599
+
+  63   92 07:18:00 3C273         -   ---   ---  2544  1177  1177  1068
+       92 07:22:00 -             -   ---   ---   239   239   239   239
+
+  64   92 07:30:00 M87           -   ---   ---  2699  1332  1332  1223
+       92 07:40:00 -             -   ---   ---   599   599   599   599
+
+  65   92 07:44:00 3C273         -   ---   ---  2761  1393  1393  1285
+       92 07:48:00 -             -   ---   ---   239   239   239   239
+
+  66   92 08:00:00 3C279         -   ---  5228  2839  1471  1471  1362
+       92 08:05:00 -             -   ---   299   299   299   299   299
+
+  67   92 08:13:00 M87           -   ---  5383  2993  1626  1626  1517
+       92 08:23:00 -             -   ---   599   599   599   599   599
+
+  68   92 08:27:00 3C279         -   ---  5460  3071  1703  1703  1595
+       92 08:32:00 -             -   ---   299   299   299   299   299
+
+
+
+ SUMMARY for experiment g1ma01  1mm Apr 01 2011, 22h30-16h30 UT                                         
+     Top item is:    Disk total GBytes at end of scan.
+     Bottom item is: Seconds the correlator is expected to be synced up during the scan.
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  91 is Fri   1 Apr 2011   MJD  55652          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    Pv    Ap    Az    Cm    Cs    Sm
+
+  69   92 08:40:00 1749+096      -  5305  5615  3226  1858   ---   ---
+       92 08:50:00 1mmRDBE.set   -   599   599   599   599   ---   ---
+
+  70   92 09:00:00 1749+096      -  5460  5770  3380  2013   ---   ---
+       92 09:10:00 -             -   599   599   599   599   ---   ---
+
+  71   92 09:20:00 3C279         -   ---  5847  3458  2090  1781  1672
+       92 09:25:00 -             -   ---   299   299   299   299   299
+
+  72   92 09:29:00 M87           -   ---   ---  3566  2199  1889  1781
+       92 09:36:00 -             -   ---   ---   419   419   419   419
+
+  73   92 09:40:00 M87           -   ---   ---  3721  2353  2044  1935
+       92 09:50:00 -             -   ---   ---   599   599   599   599
+
+  74   92 09:40:00 1633+382      -  5615  6002   ---   ---   ---   ---
+       92 09:50:00 -             -   599   599   ---   ---   ---   ---
+
+  75   92 10:00:00 1633+382      -  5770  6157  3876  2508  2199  2090
+       92 10:10:00 -             -   599   599   599   599   599   599
+
+  76   92 10:20:00 1633+382      -  5925  6312  4031  2663  2353  2245
+       92 10:30:00 -             -   599   599   599   599   599   599
+
+  77   92 10:40:00 1749+096      -   ---  6389  4108  2740  2431  2322
+       92 10:45:00 -             -   ---   299   299   299   299   299
+
+  78   92 10:49:00 SGRA          -   ---  6498  4217  2849   ---   ---
+       92 10:56:00 -             -   ---   419   419   419   ---   ---
+
+  79   92 11:00:00 1749+096      -   ---  6575  4294  2926  2508  2400
+       92 11:05:00 -             -   ---   299   299   299   299   299
+
+  80   92 11:09:00 SGRA          -   ---  6683  4402  3035   ---   ---
+       92 11:16:00 -             -   ---   419   419   419   ---   ---
+
+  81   92 11:20:00 1749+096      -   ---  6761  4480  3112  2586  2477
+       92 11:25:00 -             -   ---   299   299   299   299   299
+
+  82   92 11:29:00 SGRA          -   ---  6869  4588  3220  2694   ---
+       92 11:36:00 -             -   ---   419   419   419   419   ---
+
+  83   92 11:43:00 NRAO530       -   ---  6947  4666  3298  2771  2555
+       92 11:48:00 -             -   ---   299   299   299   299   299
+
+  84   92 11:52:00 SGRA          -   ---  7071  4789  3422  2895  2679
+       92 12:00:00 -             -   ---   479   479   479   479   479
+
+  85   92 12:07:00 NRAO530       -   ---  7148  4867  3499  2973  2756
+       92 12:12:00 -             -   ---   299   299   299   299   299
+
+
+
+ SUMMARY for experiment g1ma01  1mm Apr 01 2011, 22h30-16h30 UT                                         
+     Top item is:    Disk total GBytes at end of scan.
+     Bottom item is: Seconds the correlator is expected to be synced up during the scan.
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  91 is Fri   1 Apr 2011   MJD  55652          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    Pv    Ap    Az    Cm    Cs    Sm
+
+  86   92 12:16:00 SGRA          -   ---  7272  4991  3623  3097  2880
+       92 12:24:00 1mmRDBE.set   -   ---   479   479   479   479   479
+
+  87   92 12:31:00 NRAO530       -   ---  7349  5068  3700  3174  2957
+       92 12:36:00 -             -   ---   299   299   299   299   299
+
+  88   92 12:40:00 SGRA          -   ---  7473  5192  3824  3298  3081
+       92 12:48:00 -             -   ---   479   479   479   479   479
+
+  89   92 12:55:00 NRAO530       -   ---  7550  5269  3902  3375  3159
+       92 13:00:00 -             -   ---   299   299   299   299   299
+
+  90   92 13:04:00 SGRA          -   ---  7674  5393  4026  3499  3282
+       92 13:12:00 -             -   ---   479   479   479   479   479
+
+  91   92 13:19:00 NRAO530       -   ---  7752  5471  4103  3577  3360
+       92 13:24:00 -             -   ---   299   299   299   299   299
+
+  92   92 13:28:00 SGRA          -   ---  7876  5594  4227  3700  3484
+gap    92 13:36:00 -             -   ---   479   479   479   479   479
+
+  93   92 13:56:00 1921-293      -   ---  7953  5672  4304   ---   ---
+       92 14:01:00 -             -   ---   299   299   299   ---   ---
+
+  94   92 14:05:00 SGRA          -   ---  8077  5796  4428   ---   ---
+       92 14:13:00 -             -   ---   479   479   479   ---   ---
+
+  95   92 14:20:00 1921-293      -   ---  8154  5873  4506  3778  3561
+       92 14:25:00 -             -   ---   299   299   299   299   299
+
+  96   92 14:29:00 SGRA          -   ---  8278  5997  4629  3902  3685
+       92 14:37:00 -             -   ---   479   479   479   479   479
+
+  97   92 14:44:00 1921-293      -   ---  8356  6074  4707  3979  3762
+       92 14:49:00 -             -   ---   299   299   299   299   299
+
+  98   92 14:53:00 SGRA          -   ---  8479  6198  4831  4103  3886
+       92 15:01:00 -             -   ---   479   479   479   479   479
+
+  99   92 15:05:00 1921-293      -   ---  8557  6276  4908  4180  3964
+       92 15:10:00 -             -   ---   299   299   299   299   299
+
+ 100   92 15:25:00 BLLAC         -   ---  8712  6431  5063  4335  4118
+       92 15:35:00 -             -   ---   599   599   599   599   599
+
+ 101   92 15:40:00 BLLAC         -   ---  8867  6585  5218  4490  4273
+       92 15:50:00 -             -   ---   599   599   599   599   599
+
+
+
+ TIME RANGE OF RECORDINGS and TOTAL BYTES:
+
+                Obs. start time.     Obs. end time.      Total 
+ Station          Day    Time         Day    Time        GBytes
+                     (UT)                 (UT)
+  PICOVEL         91  22:00:00        92  10:30:00       5924.8
+  APEX            91  22:00:00        92  15:50:00       8866.5
+  SMTO            92  02:20:00        92  15:50:00       6585.4
+  CARMA           92  05:00:00        92  15:50:00       5217.7
+  CSO             92  05:00:00        92  15:50:00       4490.0
+  SMAP            92  05:15:00        92  15:50:00       4273.3
+
+ SOURCES USED IN RECORDING SCANS --                         1mm Apr 01 2011, 22h30-16h30 UT
+     Catalog positions marked with *. 
+     Precession of date coordinates is based on stop time of first scan.
+     Names used in schedule marked with *. 
+     Short names used in VLA and SNAP files marked with +. 
+     Observation date used in B1950/J2000 coordinate conversion (PRECDATE):  1979.900
+     No adjustments are made for rates (DRA, DDEC).
+     Scan hours are for recording scans only. 
+     Baseline hours are only counted for scans above horizon at both ends.
+
+   Source                         Source position (RA/Dec)                        Error
+                        (B1950)             (J2000)             (Date)            (mas)
+
+ * SGRA              17 42 29.310026   * 17 45 40.041000     17 46 24.606374       0.00
+                    -28 59 18.53533    *-29 00 28.12000     -29 00 40.73535        0.00
+                     From catalog imbedded in main SCHED input file.
+                        2.017 scan and     11.733 baseline hours in setup: 1mmRDBE.set
+
+ * M87               12 28 17.569198   * 12 30 49.423300     12 31 25.876200       0.00
+                     12 40 01.74818    * 12 23 28.04300      12 19 30.42717        0.00
+                     From catalog imbedded in main SCHED input file.
+                        1.939 scan and     10.633 baseline hours in setup: 1mmRDBE.set
+
+ * 3C279             12 53 35.831233   * 12 56 11.166500     12 56 48.435736       0.00
+                    -05 31 07.99514    *-05 47 21.52400     -05 51 14.63634        0.00
+                     From catalog imbedded in main SCHED input file.
+                        1.083 scan and      3.666 baseline hours in setup: 1mmRDBE.set
+
+   J0730-1141        07 27 58.097814   * 07 30 19.112474     07 30 52.017575       0.00
+ * 0727-115         -11 34 52.58094    *-11 41 12.60050     -11 42 53.32618        0.01
+   J0730-11          /aux/vlb056a/p459kri/sched-9.4/catalogs/sources.vlba
+                     GSFC 2010a astro solution    126232 Observations
+                        0.444 scan and      0.444 baseline hours in setup: 1mmRDBE.set
+
+   J0854+2006        08 51 57.250615   * 08 54 48.874927     08 55 29.298887       0.00
+   0851+202          20 17 58.41745    * 20 06 30.64090      20 03 48.18081        0.01
+   J0854+20          /aux/vlb056a/p459kri/sched-9.4/catalogs/sources.vlba
+ * OJ287             GSFC 2010a astro solution    164475 Observations
+                        1.778 scan and      1.776 baseline hours in setup: 1mmRDBE.set
+
+   J1058+0133        10 55 55.313730   * 10 58 29.605208     10 59 06.458687       0.01
+ * 1055+018          01 50 03.53723    * 01 33 58.82373      01 30 07.18981        0.02
+   J1058+01          /aux/vlb056a/p459kri/sched-9.4/catalogs/sources.vlba
+                     GSFC 2010a astro solution      6263 Observations
+                        0.500 scan and      1.500 baseline hours in setup: 1mmRDBE.set
+
+   J1229+0203        12 26 33.245835   * 12 29 06.699731     12 29 43.508468       1.04
+ * 3C273             02 19 43.30577    * 02 03 08.59827      01 59 10.34804        1.33
+   3C273B            /aux/vlb056a/p459kri/sched-9.4/catalogs/sources.vlba
+   1226+023          GSFC 2010a astro solution     32199 Observations
+   J1229+02             0.817 scan and      3.800 baseline hours in setup: 1mmRDBE.set
+
+   J1635+3808        16 33 30.625097   * 16 35 15.492972     16 35 40.660970       0.01
+   1633+38           38 14 10.08281    * 38 08 04.50058      38 06 24.40755        0.01
+ * 1633+382          /aux/vlb056a/p459kri/sched-9.4/catalogs/sources.vlba
+   J1635+38          GSFC 2010a astro solution     16036 Observations
+                        0.500 scan and      5.167 baseline hours in setup: 1mmRDBE.set
+
+   J1733-1304        17 30 13.535186   * 17 33 02.705784     17 33 42.307524       0.01
+   1730-130         -13 02 45.83971    *-13 04 49.54819     -13 05 20.51740        0.02
+   J1733-13          /aux/vlb056a/p459kri/sched-9.4/catalogs/sources.vlba
+ * NRAO530           GSFC 2010a astro solution     16041 Observations
+                        0.750 scan and      4.500 baseline hours in setup: 1mmRDBE.set
+
+   J1751+0939        17 49 10.387930   * 17 51 32.818573     17 52 06.114947       0.00
+ * 1749+096          09 39 42.82591    * 09 39 00.72846      09 38 41.15936        0.01
+   J1751+09          /aux/vlb056a/p459kri/sched-9.4/catalogs/sources.vlba
+                     GSFC 2010a astro solution    121343 Observations
+                        0.583 scan and      4.500 baseline hours in setup: 1mmRDBE.set
+
+   J1924-2914        19 21 42.234127   * 19 24 51.055954     19 25 34.510133       0.01
+ * 1921-293         -29 20 26.35396    *-29 14 30.12106     -29 13 03.96701        0.01
+   J1924-29          /aux/vlb056a/p459kri/sched-9.4/catalogs/sources.vlba
+                     GSFC 2010a astro solution     40568 Observations
+                        0.583 scan and      3.000 baseline hours in setup: 1mmRDBE.set
+
+   J2202+4216        22 00 39.362504   * 22 02 43.291371     22 03 10.725739       0.01
+ * BLLAC             42 02 08.59078    * 42 16 39.97992      42 19 48.09332        0.01
+   2200+420          /aux/vlb056a/p459kri/sched-9.4/catalogs/sources.vlba
+   J2202+42          GSFC 2010a astro solution     51107 Observations
+   VR422201             0.333 scan and      3.333 baseline hours in setup: 1mmRDBE.set
+
+
+
+  The solar corona can cause unstable phases for sources too close to the Sun.
+  SCHED provides warnings at individual scans for distances less than 10 degrees.
+  The distance from the Sun to each source in this schedule is:
+    Source         Sun distance (deg) 
+   SGRA               105.1
+   M87                162.5
+   3C279              176.9
+   0727-115           102.2
+   OJ287              118.4
+   1055+018           152.8
+   3C273              172.2
+   1633+382           111.5
+   NRAO530            108.4
+   1749+096           102.1
+   1921-293            83.5
+   BLLAC               51.9
+
+  Barry Clark estimates from predictions by Ketan Desai of IPM scattering sizes 
+  that the Sun will cause amplitude reductions on the  longest VLBA baselines 
+  at a solar distance of 60deg F^(-0.6) where F is in GHz. 
+  For common VLBI bands, this is: 
+       327 MHz        117. deg 
+       610 MHz         81. deg 
+       1.6 GHz         45. deg 
+       2.3 GHz         36. deg 
+       5.0 GHz         23. deg 
+       8.4 GHz         17. deg 
+      15.0 GHz         12. deg 
+      22.0 GHz          9. deg 
+      43.0 GHz          6. deg 
+
+
+ Source separations in degrees for pairs closer than  30.00 degrees.
+
+     SGRA          NRAO530        16.1933
+     SGRA          1921-293       21.6193
+     M87           3C279          19.2421
+     M87           1055+018       25.3063
+     M87           3C273          10.3475
+     3C279         3C273          10.3531
+     1055+018      3C273          22.6488
+     NRAO530       1749+096       23.1879
+
+
+
+
+
+ J2000 coordinates formatted for possible transfer to the correlator data base:
+name = 'SGRA'  ra = 17h45m40.041000s  dec = -29d00'28.12000"
+name = 'M87'  ra = 12h30m49.423300s  dec = 12d23'28.04300"
+name = '3C279'  ra = 12h56m11.166500s  dec = -05d47'21.52400"
+name = '0727-115'  ra = 07h30m19.112474s  dec = -11d41'12.60050"
+name = 'OJ287'  ra = 08h54m48.874927s  dec = 20d06'30.64090"
+name = '1055+018'  ra = 10h58m29.605208s  dec = 01d33'58.82373"
+name = '3C273'  ra = 12h29m06.699731s  dec = 02d03'08.59827"
+name = '1633+382'  ra = 16h35m15.492972s  dec = 38d08'04.50058"
+name = 'NRAO530'  ra = 17h33m02.705784s  dec = -13d04'49.54819"
+name = '1749+096'  ra = 17h51m32.818573s  dec = 09d39'00.72846"
+name = '1921-293'  ra = 19h24m51.055954s  dec = -29d14'30.12106"
+name = 'BLLAC'  ra = 22h02m43.291371s  dec = 42d16'39.97992"
+
+
+ Correlation blocks required by setup changes. 
+
+UTTIMERANGE 2011APR01 at 22:00:00 to 2011APR02 at 15:50:00
+
+
+Catalogs: 
+  Station:   1mm-stations.dat
+                 Version:  
+  Location:  1mm-locations.dat
+                 Version:  Not known
+  Frequency: 1mm-freq.dat
+                 Version:  
+  Source:   /aux/vlb056a/p459kri/sched-9.4/catalogs/sources.vlba
+                 Version:  Not given
+  Source2:  NONE
+                 Version:   ---
+
+
+Other external files: 
+  Ephemeris: NONE
+  PEAKFILE:  /aux/vlb056a/p459kri/sched-9.4/catalogs/peak.cmd
+  MSGFILE:   /aux/vlb056a/p459kri/sched-9.4/catalogs/messages.txt
+
+
+Code versions: 
+  Release version:            9.40  Release Jan. 13, 2011.
+  Version of VEX standard:   1.50
+  Version of VEX code:       0.87
+  Version of plot code:      1.06
+  Version of ephemeris code: 1.01
+  Version of PGPLOT:        v5.2.2
+
+This schedule produced on: Fri Apr  1 19:56:55 2011
+

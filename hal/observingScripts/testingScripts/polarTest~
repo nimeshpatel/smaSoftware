@@ -1,0 +1,50 @@
+#!/bin/tcsh -vf
+while (1)
+    observe -s 1733-130
+    rotateWaveplate -L
+    rotateWaveplate -a 2 -R
+    sleep 2
+    tsys
+    integrate -s 6 -w
+    rotateWaveplate -a 2 -L
+    observe -s 1733-130
+    integrate -s 6 -w
+    observe -s I18360 -r 18:38:40.74 -d -05:35:04.2 -e 2000 -v 103.5
+    sleep 3
+    tsys
+    integrate -s 20 -w
+    observe -s 1733-130
+    sleep 3
+    tsys
+    integrate -s 6 -w
+    observe -s I18360 -r 18:38:40.74 -d -05:35:04.2 -e 2000 -v 103.5
+    sleep 3
+    tsys
+    integrate -s 20 -w
+    observe -s 1830+063
+    sleep 3
+    tsys
+    integrate -s 8 -w
+    observe -s 1733-130
+    rotateWaveplate -R
+    sleep 2
+    tsys
+    integrate -s 6 -w
+    observe -s I18360 -r 18:38:40.74 -d -05:35:04.2 -e 2000 -v 103.5
+    sleep 3
+    tsys
+    integrate -s 20 -w
+    observe -s 1733-130
+    sleep 3
+    tsys
+    integrate -s 6 -w
+    observe -s I18360 -r 18:38:40.74 -d -05:35:04.2 -e 2000 -v 103.5
+    sleep 3
+    tsys
+    integrate -s 20 -w
+    observe -s 1830+063
+    sleep 3
+    tsys
+    integrate -s 8 -w
+end
+

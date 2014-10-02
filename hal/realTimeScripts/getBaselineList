@@ -1,0 +1,284 @@
+#!/usr/bin/perl
+# required arguments:  year month day  (YYYY MM DD)
+# queries sybase for the specified date
+$host = $ENV{"HOST"};
+if ($host ne "d2o") {
+  print "You must run this script from d2o.\n";
+  exit;
+}
+$argc = $#ARGV;
+if ($argc < 2) {
+  print "Usage: getBaselineList <year> <month> <day> [dropAnt dropAnt2 ...]\n";
+  print "   up to 4 antennas can be dropped from the output list\n";
+  exit;
+}
+$year = $ARGV[0];
+$startday = 4;
+if ($year < 2003) {
+  printf "Database begins on April %d, 2003\n", $startday;
+  exit;
+}
+if ($year > 2038) {
+  print "Invalid year = $year\n";
+  exit;
+}
+$month = $ARGV[1];
+$day = $ARGV[2];
+$dropAnts = $argc-2;
+#print "argc = $argc\n";
+#print "drop antennas = $dropAnts\n";
+for ($i=3; $i<=$argc; $i++) {
+    $dropAnt[$i-3] = $ARGV[$i];
+    print "dropping antenna = $dropAnt[$i-3]\n";
+}
+if ($year == 2003) {
+  if ($month < 4 || ($month==4 && $day<$startday)) {
+    printf "Database begins on April %d, 2003\n", $startday;
+    exit;
+  }
+} else {
+  if ($month < 1 || $month > 12) {
+    print "Invalid month\n";
+    exit;
+  }
+}
+if ($day < 1 || $day > 31) {
+  print "Invalid day\n";
+  exit;
+}
+$date = $year . "-";
+if ($month < 10) {
+  $date = $date . "0";
+} 
+$date = $date . $month . "-";
+if ($day < 10) {
+  $date = $date . "0";
+} 
+$date = $date . $day;
+
+#print "date = $date\n";
+# yyyy-mm-dd
+if ($year < 2006 || ($year == 2006 && $month < 2) || 
+    ($year==2006 && $month==2 &&  $day < 15)) {
+# Access the old data base with dBValue
+  $usingPadID = 0;
+  print "Accessing the old data base with dBValue\n";
+  for ($antenna=1; $antenna<=8; $antenna++) {
+    $command = "/application/bin/dBValue -T \"$date 12:00:00 $date 12:01:00 60 ";
+    $command = $command . "newdds-hal9000 DSM_DDS_HAL_X_V11_D[" . $antenna . "] ";
+    $command = $command . "newdds-hal9000 DSM_DDS_HAL_Y_V11_D[" . $antenna . "] ";
+    $command = $command . "newdds-hal9000 DSM_DDS_HAL_Z_V11_D[" . $antenna . "] ";
+    $command = $command . "acc" . $antenna . " RM_PAD_ID_B ";
+    $command = $command ."\"";
+    $result = `$command`;
+  }
+  $command = "/application/bin/dBValue -T \"$date 12:00:00 $date 12:01:00 60 ";
+  $lastantenna = 8;
+  for ($antenna=1; $antenna<=$lastantenna; $antenna++) {
+    $command = $command . "newdds-hal9000 DSM_DDS_HAL_X_V11_D[" . $antenna . "] ";
+    $command = $command . "newdds-hal9000 DSM_DDS_HAL_Y_V11_D[" . $antenna . "] ";
+    $command = $command . "newdds-hal9000 DSM_DDS_HAL_Z_V11_D[" . $antenna . "] ";
+    if ($year < 2006 ||  ($year == 2006 && $month < 2) || 
+	($year==2006 && $month==2 &&  $day < 3)) {
+      $usingPadID = 1;
+      $command = $command . "acc" . $antenna . " RM_PAD_ID_B ";
+    }
+  }
+  $command = $command ."\"";
+  $usingOldDatabase = 1;
+} else {
+# Access the new data base with shmValue
+  $usingOldDatabase = 0;
+  $usingPadID = 0;
+  print "Accessing the new data base with shmValue\n";
+  for ($antenna=1; $antenna<=8; $antenna++) {
+    $command = "/application/bin/shmValue -s \"$date 12:00:00\" -e \"$date 12:01:00\" -i 60 ";
+    $command = $command . "-m newdds:hal9000";
+    if ($year==2006 && $month==2 && $day < 29) {
+#      print "Searching for data for antenna $antenna in DSM scalars\n";
+      $command = $command . " DSM_DDS_HAL_X_V11_D[" . $antenna . "] ";
+      $command = $command . " DSM_DDS_HAL_Y_V11_D[" . $antenna . "] ";
+      $command = $command . " DSM_DDS_HAL_Z_V11_D[" . $antenna . "] ";
+    } else {
+#      print "Searching for data for antenna $antenna in DSM structure\n";
+      $command = $command . " DDS_TO_HAL_X:X_V11_D[" . $antenna . "] ";
+      $command = $command . " DDS_TO_HAL_X:Y_V11_D[" . $antenna . "] ";
+      $command = $command . " DDS_TO_HAL_X:Z_V11_D[" . $antenna . "] ";
+#  $command = $command . "-a " . $antenna . " RM_PAD_ID_B ";
+    }
+#    print "Running command = $command\n";
+    $result = `$command`;
+  }
+  $command = "/application/bin/shmValue -s \"$date 12:00:00\" -e \"$date 12:01:00\" -i 60 ";
+  $command = $command . "-m newdds:hal9000";
+  $lastantenna = 8;
+  for ($antenna=1; $antenna<=$lastantenna; $antenna++) {
+    if ($year==2006 && $month==2 && $day < 29) {
+      $command = $command . " DSM_DDS_HAL_X_V11_D[" . $antenna . "] ";
+      $command = $command . " DSM_DDS_HAL_Y_V11_D[" . $antenna . "] ";
+      $command = $command . " DSM_DDS_HAL_Z_V11_D[" . $antenna . "] ";
+    } else {
+      $command = $command . " DDS_TO_HAL_X:X_V11_D[" . $antenna . "] ";
+      $command = $command . " DDS_TO_HAL_X:Y_V11_D[" . $antenna . "] ";
+      $command = $command . " DDS_TO_HAL_X:Z_V11_D[" . $antenna . "] ";
+    }
+  }
+}
+#print "Making final call: Running command = $command\n";
+$result = `$command`;
+@list = split(" ",$result);
+if ($usingPadID == 0) {
+  if ($#list < 3*$lastantenna-1) {
+    print "entries=$#list, result=$result\n";
+    print "Try a different date\n";
+    exit;
+  }
+} else {
+  if ($#list < 4*$lastantenna-1) {
+    print "result=$result\n";
+    print "Try a different date\n";
+    exit;
+  }
+}
+if ($usingPadID == 1) {
+  shift(@list);
+}
+printf "     SMA baseline list for $date at 12:00 UTC (2AM HST)\n";
+printf "     Station coordinates: X Y Z (in meters)\n";
+for ($antenna=1; $antenna<=8; $antenna++) {
+  $u[$antenna] = shift(@list);
+  $v[$antenna] = shift(@list);
+  $w[$antenna] = shift(@list);
+  if ($usingPadID == 1) {
+    $pad[$antenna] = shift(@list);
+    printf "     Ant %d  Pad %2d  %+9.4f  %+9.4f  %+9.4f\n", $antenna, $pad[$antenna],
+      $u[$antenna], $v[$antenna], $w[$antenna];
+  } else {
+    printf "     Ant %d  %+9.4f  %+9.4f  %+9.4f\n", $antenna, 
+      $u[$antenna], $v[$antenna], $w[$antenna];
+  }
+}
+if ($usingPadID == 1) {
+    printf "     Baseline Length(xyz)  Pads\n";
+} else {
+    for ($antenna=1; $antenna<=8; $antenna++) {
+	$command = "/application/bin/shmValue -s \"$date 12:00:00\" -e \"$date 12:01:00\" -i 60 -a $antenna RM_PAD_ID_B ";
+	$result = `$command`;
+	printf "     Ant %d  Pad %d\n", $antenna, $result;
+    }
+    printf "     Baseline Length(xyz)\n";
+}
+for ($a1=1; $a1<=8; $a1++) {
+  for ($a2=$a1+1; $a2<=8; $a2++) {
+    $arg = ($u[$a1]-$u[$a2])**2+($v[$a1]-$v[$a2])**2+($w[$a1]-$w[$a2])**2;
+#    print "arg=$arg\n";
+    if ($arg > 0) {
+      $baselinexyz= $arg**0.5;
+    } else {
+      $baselinexyz= 0.0;
+    }
+    if ($dropAnts > 0) {
+	if ($dropAnt[0] == $a1 || $dropAnt[0] == $a2) {
+	    next;
+	}
+    }
+    if ($dropAnts > 1) {
+	if ($dropAnt[1] == $a1 || $dropAnt[1] == $a2) {
+	    next;
+	}
+    }
+    if ($dropAnts > 2) {
+	if ($dropAnt[2] == $a1 || $dropAnt[2] == $a2) {
+	    next;
+	}
+    }
+    if ($dropAnts > 3) {
+	if ($dropAnt[3] == $a1 || $dropAnt[3] == $a2) {
+	    next;
+	}
+    }
+    if ($usingPadID == 1) {
+      printf "     Ant %d-%d =  %8.4f   %2d-%2d\n",$a1,$a2,$baselinexyz,
+        $pad[$a1],$pad[$a2];
+    } else {
+       printf "     Ant %d-%d =  %8.4f   \n",$a1,$a2,$baselinexyz;
+    }
+  }
+}
+print "These values were the ones used to set the fringe rates.\n";
+#
+# now sort by baseline length
+print "Now here they are again, but sorted by baseline length:\n";
+$numberAntennas = 8;
+for ($i=1; $i<$numberAntennas; $i++) {
+    for ($j=$i+1; $j<=$numberAntennas; $j++) {
+	$k = $i*$numberAntennas+$j;
+	$sortedBaselineA[$k] = $i;
+	$sortedBaselineB[$k] = $j;
+	$sortedBaselineLength[$k] = (($u[$i]-$u[$j])**2+($v[$i]-$v[$j])**2+($w[$i]-$w[$j])**2)**0.5;
+    }
+}
+for ($n=1; $n<($numberAntennas*($numberAntennas-1))/2; $n++) {
+    for ($i=1; $i<$numberAntennas; $i++) {
+	for ($j=$i+1; $j<=$numberAntennas; $j++) {
+	    if ($i==($numberAntennas-1)) {
+		if ($j==$numberAntennas) {
+		    next;
+		}
+	    }
+	    $k = $i*$numberAntennas+$j;
+	    if ($j==$numberAntennas) {
+		$nextk = ($i+1)*$numberAntennas+($i+2);
+	    } else {
+		$nextk = $i*$numberAntennas+$j+1;
+	    }
+	    if ($sortedBaselineLength[$k] > $sortedBaselineLength[$nextk]) {
+		$fswap = $sortedBaselineLength[$k];
+#		print "Moving $fswap from $k ($i,$j) to $nextk ()\n";
+		$sortedBaselineLength[$k] = $sortedBaselineLength[$nextk];
+		$sortedBaselineLength[$nextk] = $fswap;
+		$swap = $sortedBaselineA[$k];
+		$sortedBaselineA[$k] = $sortedBaselineA[$nextk];
+		$sortedBaselineA[$nextk] = $swap;
+		$swap = $sortedBaselineB[$k];
+		$sortedBaselineB[$k] = $sortedBaselineB[$nextk];
+		$sortedBaselineB[$nextk] = $swap;
+	    }
+	}
+    }
+}
+for ($i=1; $i<$numberAntennas; $i++) {
+    for ($j=$i+1; $j<=$numberAntennas; $j++) {
+	$k = $i*$numberAntennas+$j;
+	if ($dropAnts > 0) {
+	    if ($dropAnt[0] == $sortedBaselineA[$k] || $dropAnt[0] == $sortedBaselineB[$k]) {
+		next;
+	    }
+	}
+	if ($dropAnts > 1) {
+	    if ($dropAnt[1] == $sortedBaselineA[$k] || $dropAnt[1] == $sortedBaselineB[$k]) {
+		next;
+	    }
+	}
+	if ($dropAnts > 2) {
+	    if ($dropAnt[2] == $sortedBaselineA[$k] || $dropAnt[2] == $sortedBaselineB[$k]) {
+		next;
+	    }
+	}
+	if ($dropAnts > 3) {
+	    if ($dropAnt[3] == $sortedBaselineA[$k] || $dropAnt[3] == $sortedBaselineB[$k]) {
+		next;
+	    }
+	}
+	if ($usingPadID == 1) {
+	    printf "     Ant %d-%d =   %.4f   %2d-%2d\n", $sortedBaselineA[$k],
+	    $sortedBaselineB[$k], $sortedBaselineLength[$k], 
+	    $pad[$sortedBaselineA[$k]],
+	    $pad[$sortedBaselineB[$k]];
+	} else {
+	    printf "     Ant %d-%d =   %.4f   \n", $sortedBaselineA[$k],
+	    $sortedBaselineB[$k], $sortedBaselineLength[$k];
+	}
+    }
+}
+#

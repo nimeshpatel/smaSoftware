@@ -1,0 +1,28 @@
+#!/bin/tcsh -vf
+#  Test for H2D+ detection capability of SMA
+# SETUP:
+#
+# project -a 4,5 -o Todd -l Cambridge -p SMA -R l,h -C 1..6 -s 1 -d 1 -c tests
+#
+# restartCorrelator -d -s32 -s17:0 -s18:512 -s19:0 -s20:0 -s21:512 -s22:0 -s23:0 -s24:0 -R h -s32 -s17:0 -s18:512 -s19:0 -s20:0 -s21:512 -s22:0 -s23:0 -s24:0
+#
+# observe -s l1251b -r 22:38:49.0 -d 75:11:30 -e 2000 -v -3.5
+#
+# dopplerTrack -r 347.33063 -u -s23 -n -R h -r 372.42134 -u -s18 -n
+#
+#  Note: this puts N2H+(4-3) in s21 and H2D+ in s18
+#   typical Tsys at H2D+ on antenna 5 is 850K at ZA=45, tau=0.085, I=32-40uA
+#
+while (1)
+/application/bin/observe -s 3c84
+sleep 5
+tsys
+/application/bin/integrate -s 15 -w
+/application/bin/observe -s l1251b -r 22:38:49.0 -d 75:11:30 -e 2000 -v -3.5
+sleep 5
+tsys
+/application/bin/integrate -s 15 -w
+end
+
+# lookup -s l1517b -r 04:55:17.6 -d 30:37:54 -v 5.9
+

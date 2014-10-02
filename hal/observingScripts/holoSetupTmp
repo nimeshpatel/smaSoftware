@@ -1,0 +1,6 @@
+opening GPIB device at address = 8....
+write error to dd=8: *IDN?
+Resetting the GPIB bus
+Skipping read due to call_ibwrt() error = -1
+Address 8: error in response to identification query
+Failed

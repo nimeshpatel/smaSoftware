@@ -1,0 +1,40 @@
+#!/bin/tcsh -vf
+# Sets the reset count on all receiver bus microcontrollers to zero.
+# written by Todd Hunter
+#
+foreach antenna (1 2 3 4 5 6 7 8)
+# LO boards
+  foreach board (2 3)
+    tune -a $antenna -c "setmem -a $board 9112 9113 0"
+    sleep 1
+  end
+#
+# optics board
+  tune -a $antenna -c "setmem -a 13 9168 9169 0"
+  sleep 1
+end
+#
+#
+# antenna 2 has a different (older) version of eprom 0x2d on mixer board
+#    it is consistent with sram 0x29 instead of sram 0x2a
+foreach antenna (1   3 4 5 6)
+# mixer board
+  tune -a $antenna -c "setmem -a 10 911c 911d 0"
+  sleep 1
+end
+tune -a 2 -c "setmem -a 10 911e 911f 0"
+sleep 1
+
+# Finally, the 600 GHz LO boards:
+# eprom version 0x51
+foreach antenna (2 3 6)
+  tune -a $antenna -c "setmem -a 6 9112 9113 0"
+  sleep 1
+end
+#
+# eprom version 0x4c
+foreach antenna (1 4 5)
+  tune -a $antenna -c "setmem -a 6 9106 9107 0"
+  sleep 1
+end
+#

@@ -1,0 +1,18 @@
+This document describes the history of beacon coordinates.
+
+/* define bore sight position ant 2 on pad 1 distance: 201.5m */
+#define AZ_BORE2 48.140
+#define EL_BORE2 18.7424
+
+/* define bore sight position ant 3 on pad 4 distance: 218.5 */
+#define AZ_BORE3 53.01944 /* 1.3mm position */
+#define EL_BORE3 17.1878
+/* #define AZ_BORE3 53.2900 3-mm position
+#define EL_BORE3 17.1500 */
+
+/* define bore sight position ant 4 on pad 5 distance: 205.0 */
+#define AZ_BORE4 55.4519   /* x=505 */
+#define EL_BORE4 18.3473 /* y=-900 */
+
+2001/05/15 by Masao
+-------------------------------------------------------------------

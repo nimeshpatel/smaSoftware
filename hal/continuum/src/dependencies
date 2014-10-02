@@ -1,0 +1,6 @@
+recordTilts.o: recordTilts.c /usr/PowerPC/common/include/rm.h \
+ /global/include/dsm.h /usr/PowerPC/common/include/smapopt.h \
+ /usr/PowerPC/common/include/ph.h
+recordContinuum.o: recordContinuum.c /usr/PowerPC/common/include/rm.h \
+ /global/include/dsm.h /usr/PowerPC/common/include/smapopt.h \
+ /usr/PowerPC/common/include/ph.h

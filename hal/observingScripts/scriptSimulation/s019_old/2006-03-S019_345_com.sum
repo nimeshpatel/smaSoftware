@@ -1,0 +1,53 @@
+-------Basic-Info---------------------------- 
+
+PI     : Michael Reid 
+ID     : 2006-03-S019 
+Contact: Michael Reid 
+Title  : The Structure of a Newly-Discovered Protostellar Outflow in IC 348 SW 
+Phone  : (808) 961-2939 
+Home   : (808) 981-5373 
+Email  : mareid@sma.hawaii.edu 
+
+-------Primer-Info--------------------------- 
+
+Array       : compact 
+Frequency   : 345.795990 
+Center Chunk: s3 
+Sideband    : usb 
+Hi.Frequency:  
+Hi.Freq.Chnk: NA 
+Hi.Freq.Sb  : NA 
+Corr. Setup : restartCorrelator -d -s64 -s02:256 -s03:256 -s04:256 -s07:256 -s18:256 -s21:256 -s22:256 -s23:256 
+Integration : 30 
+Vlsr        : 9 
+
+-------Target-Info--------------------------- 
+
+Number of Targets: 7 
+    Target 1: ic348sw_6 (3:43:58.1,+32:02:30.8), nscans = 10 
+    Target 2: ic348sw_7 (3:43:57.6,+32:02:47.8), nscans = 10 
+    Target 3: ic348sw_1 (3:43:57.1,+32:03:04.8), nscans = 10 
+    Target 4: ic348sw_2 (3:43:56.6,+32:03:21.8), nscans = 10 
+    Target 5: ic348sw_3 (3:43:56.1,+32:03:38.8), nscans = 10 
+    Target 6: ic348sw_4 (3:43:55.6,+32:03:56.8), nscans = 10 
+    Target 7: ic348sw_5 (3:43:55.6,+32:04:14.0), nscans = 10 
+
+-------Calibrator-Info----------------------- 
+
+Number of Gain Cals: 2 
+    Gain Cal 1: 3c111, nscans = 10 
+    Gain Cal 2: 3c84, nscans = 10 
+Number of Flux Cals: 1 
+    Flux Cal 1: uranus, nscans = 90 
+Number of Passband Cals: 2 
+    Pass Cal 1: 3c454.3, nscans = 120 
+    Pass Cal 2: 3c279, nscans = 120 
+Transit Source:  
+Pointing pref : None requested 
+
+-------Observing-Loop------------------------ 
+
+Observing loop sequence: 3c111,ic348sw_1,ic348sw_2,ic348sw_6,3c111,ic348sw_3,ic348sw_4,ic348sw_5,ic348sw_7 (one loop takes 45 mins) 
+
+--------------------------------------------- 
+ 

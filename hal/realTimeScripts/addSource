@@ -1,0 +1,46 @@
+#!/usr/local/bin/perl
+#perlscripttoaddasourcetothesmacatalog-nap-8oct98.
+$response=`cp /common/catalogs/sma_catalog /common/catalogs/sma_catalog.BAK`;
+if($response ne ""){print "$response\n";}
+print "Source name (<21 characters, no spaces)=";
+$source_name=<STDIN>; chop($source_name);
+$ra = "somera";
+print "RA (hh:mm:ss.sss)=";
+$ra=<STDIN>; chop($ra);
+($rah,$ram,$ras)=split('\:',$ra);
+$dec="somedec";
+print "DEC (+/-dd:mm:ss.sss)=";
+$dec=<STDIN>; chop($dec);
+($decd,$decm,$decs)=split('\:',$dec);
+while(($epoch ne "1950")&&($epoch ne "2000"))
+{
+print "Enter epoch (1950/2000)=";
+$epoch=<STDIN>; 
+chop($epoch);
+}
+print "proper motion in RA (\"/century) (optional)=";
+$pmra=<STDIN>; chop($pmra);
+if($pmra eq "") {$pmra=0.0;}
+print "proper motion in DEC (\"/century) (optional)=";
+$pmdec=<STDIN>; chop($pmdec);
+if($pmdec eq "") {$pmdec=0.0;}
+print "Velocity (km/s) (optional)=";
+$vel=<STDIN>; chop($vel);
+if ($vel eq "") { $vel=0.0;}
+print "Velocity type (VLSR)(optional)=";
+$veltype=<STDIN>; chop($veltype);
+if ($veltype eq "") { $veltype="UNKNOWN";}
+print "Source of these coordinates (no spaces)(optional)=";
+$coordinates_origin=<STDIN>; chop($coordinates_origin);
+if ($coordinates_origin eq "") {$coordinates_origin="UNKNOWN";}
+$sptype="+++";
+$s=" ";
+($lines,$words,$chars,$filenamej)=`wc sma_catalog`;
+$lines++;
+$entry= $lines.$s.$source_name.$s.$rah.$s.$ram.$s.$ras.$s.$decd.$s.$decm.$s.$decs.$s.$pmra.$s.$pmdec.$s.$epoch.$s.$veltype.$s.$vel.$s.$coordinates_origin.$s.$sptype; 
+print "$entry\n";
+print "Source added to the sma_catalog.\n";
+open(FILE,">>/common/catalogs/sma_catalog");
+print FILE "$entry\n";
+close(FILE);
+`chmod 666 /common/catalogs/sma_catalog`;

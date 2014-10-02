@@ -1,0 +1,25 @@
+#!/bin/perl -w
+if($#ARGV != 0) {
+    printf("usage: rmdiffs filename\n");
+    exit(1);
+}
+$n=-1;
+$sv = 0;
+$sd=0;
+$ssqd=0;
+$c1=0;
+$c2=0;
+while(<>) {
+    ($c) = (split)[4];
+    if($n > 0) {
+	$sv += $c1;
+	$d= $c1 - ($c + $c2)/2;
+	$sd += $d;
+	$ssqd += $d*$d;
+    }
+    $c2=$c1;
+    $c1=$c;
+    $n++;
+}
+printf("Avg %g, Diffs: Avg %g, std dev %g\n", $sv/$n, $sd/$n,
+	sqrt($ssqd/$n - ($sd/$n)**2));

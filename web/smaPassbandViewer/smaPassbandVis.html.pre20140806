@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<head>
+<title>SMA Passband Visualizer</title>
+<!-- Nimesh Patel, npatel[at]cfa.harvard.edu -->
+<!-- Completely re-written Passband Visualizer for SWARM -->
+<!-- Version 2.00 22 July 2014-->
+
+<!-- correlator modes: half ASIC, full ASIC,  half SWARM, full SWARM -->
+
+<script src="jquery-1.11.0.min.js"></script>
+<script src="./flot/excanvas.min.js"></script>
+<script src="./flot/jquery.flot.min.js"></script>
+<script src="./flot/jquery.flot.selection.js"></script>
+<script src="./flot/jquery.flot.navigate.js"></script>
+<script src="numericInput.min.js"></script>
+ 
+<!-- CSS -->
+
+<style type="text/css">
+
+body {
+background-color:#ffffff;
+margin-left:10px;
+font-family: helvetica;
+}
+
+header img {
+float:left;
+}
+header h1 {
+}
+
+.xaxisLabel {
+    left: 0;
+    right:0;
+    bottom: -40px;
+   position: absolute;
+   text-align: center;
+}
+
+#instructions {
+    padding-top: 50px;
+    color:grey;
+    font-size:smaller;
+    margin-left: 2%;
+    margin-right: 5%;
+}
+
+#slabel {
+font-size: x-small;
+text-align:left;
+color:#f04;
+}
+
+#uslabel {
+font-size: x-small;
+text-align:left;
+color:#f04;
+}
+
+#choices {
+font-size: smaller;
+margin-left:10%;
+margin-right:10%;
+}
+</style>
+
+
+<style type="text/css">
+    #usbplot .button {
+        position: absolute;
+        cursor: pointer;
+    }
+    #usbplot div.button {
+        font-size: smaller;
+        color: #999;
+        background-color: #eee;
+        padding: 2px;
+    }
+    .message {
+        padding-left: 50px;
+        font-size: smaller;
+     }
+</style>
+
+<style type="text/css">
+#overview {
+    width: 900px;
+    height: 100px;
+    text-align: center;
+    margin: 0 ;
+    clear: both;
+}
+
+#lsbplot {
+    width: 900px;
+    height: 250px;
+    text-align: center;
+    margin: 0 ;
+    float: left;
+}
+
+#usbplot {
+    width: 900px;
+    height: 250px;
+    text-align: center;
+    margin: 0 ;
+    float: left;
+}
+</style>
+
+
+<style type="text/css">
+#labeler {
+	width: 200px;
+	text-align: left;
+	margin-right: 80px ;
+	float: right;
+}
+</style>
+
+<style type="text/css">
+#loInput {
+	text-align: left;
+	margin: 0 auto;
+}
+#lineInput {
+	text-align: left;
+	margin: 0 auto;
+}
+</style>
+
+<!-- CSS -->
+    <style type="text/css">
+    #lsbplot .button {
+        position: absolute;
+        cursor: pointer;
+    }
+    #lsbplot div.button {
+        font-size: smaller;
+        color: #999;
+        background-color: #eee;
+        padding: 2px;
+    }
+    .message {
+        padding-left: 50px;
+        font-size: smaller;
+    }
+    </style>
+ 
+ </head>
+ 
+ <body>
+<!-- Javascript -->
+
+<script src="13cn.js"></script>
+<script src="cn.js"></script>
+<script src="13co.js"></script>
+<script src="c17o.js"></script>
+<script src="c18o.js"></script>
+<script src="ch3cn.js"></script>
+<script src="ch3oh.js"></script>
+<script src="chunks.js"></script>
+<script src="co.js"></script>
+<script src="cs.js"></script>
+<script src="dcn.js"></script>
+<script src="h213co.js"></script>
+<script src="h2co.js"></script>
+<script src="h2o.js"></script>
+<script src="halpha.js"></script>
+<script src="hc3n.js"></script>
+<script src="hnc.js"></script>
+<script src="n2dplus.js"></script>
+<script src="n2hplus.js"></script>
+<script src="sicc.js"></script>
+<script src="sio.js"></script>
+<script src="sis.js"></script>
+<script src="so.js"></script>
+<script src="so2.js"></script>
+<script src="hdo.js"></script>
+<script src="h13coplus.js"></script>
+<script src="hcoplus.js"></script>
+<script src="h13cn.js"></script>
+<script src="hc15n.js"></script>
+<script src="hcn.js"></script>
+<script src="dcn.js"></script>
+<script src="c17o.js"></script>
+<script src="nh3.js"></script>
+<script src="orionSurvey2.js"></script>
+<script src="ircspectrum.js"></script>
+<script src="trans1mm.js"></script>
+<script src="trans2p5mm.js"></script>
+<script src="trans4mm.js"></script>
+
+
+<script type="text/javascript">
+
+var ifmax = 12.0;
+var ifmin = 4.016;
+var loFreq=225.497;
+var lineFreq = 230.538;
+var chunkWidth = 0.082; 
+var flsbmin=loFreq-ifmax;
+var flsbmax=loFreq-ifmin;
+var fusbmin=loFreq+ifmin;
+var fusbmax=loFreq+ifmax;
+var chunkLabel = new Array();
+var uchunkLabel = new Array();
+var receiver = "rx230";
+var ofmin=180.;
+var ofmax=248.;
+var gunnMult=2.0;
+var PLLharmonic=10.0;
+var fDDS = 0.109;
+var yigSpikestoPlot = [];
+var yigFrequency=0.0;
+var correlatorMode = "4GHzMode";
+
+
+
+var datasets = {
+		  "Atm Trans 1mmPWV": {label: "Atm Trans 1mmPWV",data:trans1mm,
+          		  lines:{show:true},bars:{show:false}
+		        },
+		  "Atm Trans 2.5mmPWV": {label: "Atm Trans 2.5 mm PWV",data:trans2p5mm,
+          		  lines:{show:true},bars:{show:false}
+		        },
+		  "Atm Trans 4mmPWV": {label: "Atm Trans 4mm PWV",data:trans4mm,
+          		  lines:{show:true},bars:{show:false}
+		        },
+		  "Orion survey": {label: "Orion survey",data:orionSurvey,
+          		  lines:{show:true},bars:{show:false}
+		        },
+		  "IRC+10216 survey ": {label: "IRC+10216 survey",data:irc10216Spectrum,
+          		  lines:{show:true},bars:{show:false}
+		        },
+                 "CO": {label: "CO",data:co},
+		 "13CO": {label: "<sup>13</sup>CO", data: _13co},
+		 "C18O": {label: "C<sup>18</sup>O",data: c18o},
+		 "C17O": {label: "C<sup>17</sup>O",data: c17o},
+                 "CH3CN": { label: "CH<sub>3</sub>CN",data:ch3cn },
+                 "CH3OH":   { label: "CH<sub>3</sub>OH",data:ch3oh },
+		 "CN": {label: "CN", data: cn},
+                 "H2CO":    { label: "H<sub>2</sub>CO",data:h2co },
+                 "H2O":    { label: "H<sub>2</sub>O",data:h2o },
+                 "HDO":    { label: "HDO",data:hdo },
+                 "HCO+":    { label: "HCO<sup>+</sup>",data:hcoplus },
+                 "H13CO+":    { label: "H<sup13</sup>CO<sup>+</sup>",data:h13coplus },
+                 "H213CO":    { label: "H<sub>2</sub><sup>13</sup>CO",data:h213co },
+		 "HCN":     { label: "HCN",data:hcn },
+		 "DCN":     { label: "DCN",data:dcn },
+		 "H13CN":     { label: "H<sup>13</sup>CN",data:h13cn },
+		 "HC15N":     { label: "HC<sup>15</sup>N",data:hc15n },
+                 "HC3N":    { label: "HC<sub>3</sub>N",data:hc3n },
+                 "N2H+":   { label: "N<sub>2</sub>H<sup>+</sup>",data:n2hplus },
+                 "N2D+":   { label: "N<sub>2</sub>D<sup>+</sup>",data:n2dplus },
+		 "NH3":    { label: "NH<sub>3</sub>",data:nh3},
+                  "CS":   { label: "CS",data:cs },
+                  "13CS":   { label: "<sup>13</sup>CS",data:cs },
+                  "SiO":  { label: "SiO",data:sio },
+                  "SO":  { label: "SO",data:so },
+                  "SO2":  { label: "SO<sub>2</sub>",data:so2 },
+                  "SiS":  { label: "SiS",data:sis },
+                  "SiCC":  { label: "SiCC",data:sicc }
+		  };
+
+$(document).ready(function(){
+var correlatorMode=$("#correlatorModeSelect").val();
+var receiver=$("#receiverSelect").val();
+var sideband=$("#sidebandSelect").val();
+var s=$("#chunkSelect").val();
+s=parseInt(s);
+
+       $("#correlatorModeSelect").change( function(){
+       correlatorMode=$(this).val();
+       if(correlatorMode=="2GHzMode"){
+       ifmax = 6.0;
+       }
+       if(correlatorMode=="4GHzMode"){
+       ifmax = 7.984; 
+       }
+       if(correlatorMode=="6GHzMode"){
+       ifmax = 12.0; 
+       }
+       if(correlatorMode=="8GHzMode"){
+       ifmax = 12.0;
+       }
+       drawSpectra();
+       });
+
+
+       $("#receiverSelect").change( function(){
+       receiver=$(this).val();
+       if (receiver=="rx230"){
+       gunnMult=2.0;
+       ofmin=180.;
+       ofmax=248.;
+       loFreq=224.;
+       }
+       if (receiver=="rx345"){
+       gunnMult=3.0;
+       ofmin=265.5;
+       ofmax=355.5;
+       loFreq=339.;
+       }
+       if (receiver=="rx400"){
+       gunnMult=4.0;
+       ofmin=324.;
+       ofmax=426.;
+       loFreq=380.;
+       }
+       flsbmin=loFreq - ifmax;
+       flsbmax=loFreq - ifmin;
+       fusbmin=loFreq + ifmin;
+       fusbmax=loFreq + ifmax;
+       drawSpectra();
+       });
+
+
+    // insert checkboxes for each molecular or isotopologue  species to plot
+
+    var i = 0;
+    $.each(datasets, function(key, val) {
+        val.color = i;
+        ++i;
+    });
+
+// 
+    var choiceContainer = $("#choices");
+    var itemPlot=0;
+    $.each(datasets, function(key, val) {
+        if(itemPlot<5){
+        choiceContainer.append('<input type="checkbox" name="' + key +
+                               '"id="id' + key + '">' +
+                               '<label for="id' + key + '">'
+                                + val.label + '   </label>');
+         } else {
+        choiceContainer.append('<input type="checkbox" name="' + key +
+                               '" checked="checked" id="id' + key + '">' +
+                               '<label for="id' + key + '">'
+                                + val.label + '   </label>');
+         }
+    itemPlot++;
+    });
+    choiceContainer.find("input").click(drawSpectra);
+
+function drawSpectra(){
+
+$("#inputLOfreq").numericInput({
+allowFloat: true,
+allowNegative: false
+});
+
+$("#inputLinefreq").numericInput({
+allowFloat: true,
+allowNegative: false
+});
+
+$("#inputPLLharmonic").numericInput({
+allowFloat: false,
+allowNegative: false
+});
+
+if (yigFrequency != 0.0) {
+yigSpikestoPlot=[];
+yigSpikestoPlot.push([loFreq-yigFrequency,0.75]);
+yigSpikestoPlot.push([loFreq+yigFrequency,0.75]);
+}
+
+
+var linesToPlot=[];
+        choiceContainer.find("input:checked").each(function () {
+            var key = $(this).attr("name");
+            if (key && datasets[key])
+                linesToPlot.push(datasets[key]);
+        });
+linesToPlot.push({data:yigSpikestoPlot,label:"YIG spur",color:'#000000'});
+
+
+if (correlatorMode=="8GHzMode") {
+    var options = {
+        series: {
+                   bars: { show: true, barWidth:0.0 },
+		   points: {show: true, radius: 0},
+               },
+       grid: {show: true, hoverable: true,clickable: true,
+       markings: 
+                 function(){
+                 var chunks = [];
+                 chunks.push(
+                 {xaxis: {from:flsbmin, to:flsbmin+2.0},
+                        yaxis: {from: 0.0, to: 1.0},color: '#A0A0A0'}
+                 );
+                 chunks.push(
+                 {xaxis: {from:flsbmin+2.0, to:flsbmin+2*2.0},
+                        yaxis: {from: 0.0, to: 1.0},color: '#909090'}
+                 );
+                 for (var x = 0; x<24; x+=1) {
+                  if (x%2==0) {var colorCode='#e0e0e0';}
+                  else {var colorCode='#d0d0d0';}
+                  chunks.push(
+                  {xaxis: {from:2*2.0+flsbmin+x*chunkWidth, 
+                                  to:2*2.0+flsbmin+(x+1)*chunkWidth}, 
+	         	yaxis: {from: 0.0, to: 1.0},color: colorCode}); 
+                  }
+                 for (var x = 24; x<48; x+=1) {
+                  if (x%2==0) {var colorCode='#e0e0e0';}
+                  else {var colorCode='#d0d0d0';}
+                  chunks.push(
+                  {xaxis: {from:0.032+2*2.0+flsbmin+x*chunkWidth, 
+                                  to:0.032+2*2.0+flsbmin+(x+1)*chunkWidth}, 
+	         	yaxis: {from: 0.0, to: 1.0},color: colorCode}); 
+                  }
+                 return chunks;
+                 }
+       },
+//       selection:{mode:"x"},
+     legend: {
+    show: false,  
+    noColumns: 7,
+    position: "ne" 
+        },
+    pan: {interactive: true},
+    zoom: {interactive: false}, // turn this to true for dblclick/mouseWheel
+    yaxis: {min: -0.1,max:1.2}
+    }; //end of options
+
+
+  var optionsusb = {
+        series: {
+                   bars: { show: true, barWidth:0.0 },
+                   points: {show: true, radius: 0},
+               },
+       grid: {show: true, hoverable: true,clickable: true,
+       markings: 
+                 function(){
+                 var chunks = [];
+
+                 for (var x = 0; x<24; x+=1) {
+                  if (x%2==0) {var colorCode='#d0d0d0';}
+                  else {var colorCode='#e0e0e0';}
+                  chunks.push(
+                  {xaxis: {from:fusbmin+x*chunkWidth, 
+                                  to:fusbmin+(x+1)*chunkWidth}, 
+	         	yaxis: {from: 0.0, to: 1.0},color: colorCode}); 
+                  }
+
+                 for (var x = 24; x<48; x+=1) {
+                  if (x%2==0) {var colorCode='#d0d0d0';}
+                  else {var colorCode='#e0e0e0';}
+                  chunks.push(
+                  {xaxis: {from:0.032+fusbmin+x*chunkWidth, 
+                                  to:0.032+fusbmin+(x+1)*chunkWidth}, 
+	         	yaxis: {from: 0.0, to: 1.0},color: colorCode}); 
+                  }
+
+                 chunks.push(
+                 {xaxis: {from:fusbmin+2*2.0,
+                                  to:fusbmin+2*2.0+2.0},
+                        yaxis: {from: 0.0, to: 1.0},color: '#909090'}
+                 );
+                 chunks.push(
+                 {xaxis: {from:fusbmin+2*2.0+2.0,
+                                  to:fusbmin+2*2.0+2*2.0},
+                        yaxis: {from: 0.0, to: 1.0},color: '#A0A0A0'}
+                 );
+                 return chunks;
+                 }
+               },
+//       selection:{mode:"x"},
+     legend: { container: $("#labeler"),noColumns:3},
+    xaxis:{
+       transform: function(v) {return -v;},
+       inverseTransform: function(v) {return -v;}
+    },
+    pan: {interactive: true},
+    zoom: {interactive: false},
+    yaxis: {min: -0.1,max:1.2}
+    }; //end of optionsusb
+
+}// 8GHzMode option 
+
+if (correlatorMode=="6GHzMode") {
+    var options = {
+        series: {
+                   bars: { show: true, barWidth:0.0 },
+		   points: {show: true, radius: 0},
+               },
+       grid: {show: true, hoverable: true,clickable: true,
+       markings: 
+                 function(){
+                 var chunks = [];
+                 chunks.push(
+                 {xaxis: {from:flsbmin, to:flsbmin+1.0},
+                        yaxis: {from: 0.0, to: 1.0},color: '#A0A0A0'}
+                 );
+                 for (var x = 0; x<24; x+=1) {
+                  if (x%2==0) {var colorCode='#e0e0e0';}
+                  else {var colorCode='#d0d0d0';}
+                  chunks.push(
+                  {xaxis: {from:1.0+flsbmin+x*chunkWidth, 
+                                  to:1.0+flsbmin+(x+1)*chunkWidth}, 
+	         	yaxis: {from: 0.0, to: 1.0},color: colorCode}); 
+                  }
+                 chunks.push(
+                 {xaxis: {from:flsbmin+24*chunkWidth+1.0, 
+                                to:flsbmin+24*chunkWidth+1.0+1.0},
+                        yaxis: {from: 0.0, to: 1.0},color: '#909090'}
+                 );
+                 for (var x = 0; x<24; x+=1) {
+                 if (x%2==0) {var colorCode='#e0e0e0';}
+                  else {var colorCode='#d0d0d0';}
+                  chunks.push(
+                  {xaxis: {from:24*chunkWidth+2.0+2.0+0.016+
+                                       flsbmin+x*chunkWidth, 
+                                  to:24*chunkWidth+2.0+2.0+0.016+flsbmin+(x+1)*chunkWidth}, 
+	         	yaxis: {from: 0.0, to: 1.0},color: colorCode}); 
+                 }
+                 return chunks;
+                 }
+       },
+//       selection:{mode:"x"},
+     legend: {
+    show: false,  
+    noColumns: 7,
+    position: "ne" 
+        },
+    pan: {interactive: true},
+    zoom: {interactive: false},
+    yaxis: {min: -0.1,max:1.2}
+    }; //end of options
+
+
+  var optionsusb = {
+        series: {
+                   bars: { show: true, barWidth:0.0 },
+                   points: {show: true, radius: 0},
+               },
+       grid: {show: true, hoverable: true,clickable: true,
+       markings: 
+                 function(){
+                 var chunks = [];
+
+                 for (var x = 0; x<24; x+=1) {
+                  if (x%2==0) {var colorCode='#d0d0d0';}
+                  else {var colorCode='#e0e0e0';}
+                  chunks.push(
+                  {xaxis: {from:fusbmin+x*chunkWidth, 
+                                  to:fusbmin+(x+1)*chunkWidth}, 
+	         	yaxis: {from: 0.0, to: 1.0},color: colorCode}); 
+                  }
+
+                 chunks.push(
+                 {xaxis: {from:fusbmin+2*2.0,
+                                  to:fusbmin+2*2.0+1.0},
+                        yaxis: {from: 0.0, to: 1.0},color: '#909090'}
+                 );
+
+                 for (var x = 0; x<25; x+=1) {
+                  if (x%2==0) {var colorCode='#d0d0d0';}
+                  else {var colorCode='#e0e0e0';}
+                  chunks.push(
+                  {xaxis: {from:fusbmin+2*2.0+1.0+x*chunkWidth, 
+                                  to:fusbmin+2*2.0+1.0+(x+1)*chunkWidth}, 
+	         	yaxis: {from: 0.0, to: 1.0},color: colorCode}); 
+                  }
+
+                 chunks.push(
+                 {xaxis: {from:fusbmin+2*2.0+1.0+2.0,
+                                  to:fusbmin+2*2.0+1.0+2.0+1.0},
+                        yaxis: {from: 0.0, to: 1.0},color: '#A0A0A0'}
+                 );
+                 return chunks;
+                 }
+               },
+//       selection:{mode:"x"},
+     legend: { container: $("#labeler"),noColumns:3},
+    xaxis:{
+       transform: function(v) {return -v;},
+       inverseTransform: function(v) {return -v;}
+    },
+    pan: {interactive: true},
+    zoom: {interactive: false},
+    yaxis: {min: -0.1,max:1.2}
+    }; //end of optionsusb
+
+}// 6GHzMode option 
+
+if (correlatorMode=="4GHzMode") {
+    var options = {
+        series: {
+                   bars: { show: true, barWidth:0.0 },
+		   points: {show: true, radius: 0},
+               },
+       grid: {show: true, hoverable: true,clickable: true,
+       markings: 
+                 function(){
+                 var chunks = [];
+                 for (var x = 0; x<24; x+=1) {
+                  if (x%2==0) {var colorCode='#e0e0e0';}
+                  else {var colorCode='#d0d0d0';}
+                  chunks.push(
+                  {xaxis: {from:flsbmin+x*chunkWidth, 
+                                  to:flsbmin+(x+1)*chunkWidth}, 
+	         	yaxis: {from: 0.0, to: 1.0},color: colorCode}); 
+                  }
+                 for (var x = 24; x<49; x+=1) {
+                  if (x%2==0) {var colorCode='#e0e0e0';}
+                  else {var colorCode='#d0d0d0';}
+                  chunks.push(
+                  {xaxis: {from:0.032+flsbmin+x*chunkWidth, 
+                                  to:0.032+flsbmin+(x+1)*chunkWidth}, 
+	         	yaxis: {from: 0.0, to: 1.0},color: colorCode}); 
+                  }
+                 return chunks;
+                 }
+       },
+//       selection:{mode:"x"},
+     legend: {
+    show: false,  
+    noColumns: 7,
+    position: "ne" 
+        },
+    pan: {interactive: true},
+    zoom: {interactive: false},
+    yaxis: {min: -0.1,max:1.2}
+    }; //end of options
+
+
+  var optionsusb = {
+        series: {
+                   bars: { show: true, barWidth:0.0 },
+                   points: {show: true, radius: 0},
+               },
+       grid: {show: true, hoverable: true,clickable: true,
+       markings: 
+                 function(){
+                 var chunks = [];
+
+                 for (var x = 0; x<24; x+=1) {
+                  if (x%2==0) {var colorCode='#d0d0d0';}
+                  else {var colorCode='#e0e0e0';}
+                  chunks.push(
+                  {xaxis: {from:fusbmin+x*chunkWidth, 
+                                  to:fusbmin+(x+1)*chunkWidth}, 
+	         	yaxis: {from: 0.0, to: 1.0},color: colorCode}); 
+                  }
+
+                 for (var x = 24; x<49; x+=1) {
+                  if (x%2==0) {var colorCode='#d0d0d0';}
+                  else {var colorCode='#e0e0e0';}
+                  chunks.push(
+                  {xaxis: {from:0.032+fusbmin+x*chunkWidth, 
+                                  to:0.032+fusbmin+(x+1)*chunkWidth}, 
+	         	yaxis: {from: 0.0, to: 1.0},color: colorCode}); 
+                  }
+
+                 return chunks;
+                 }
+               },
+//       selection:{mode:"x"},
+     legend: { container: $("#labeler"),noColumns:3},
+    xaxis:{
+       transform: function(v) {return -v;},
+       inverseTransform: function(v) {return -v;}
+    },
+    pan: {interactive: true},
+    zoom: {interactive: false},
+    yaxis: {min: -0.1,max:1.2}
+    }; //end of optionsusb
+
+}// 4GHzMode option 
+
+if (correlatorMode=="2GHzMode") {
+    var options = {
+        series: {
+                   bars: { show: true, barWidth:0.0 },
+		   points: {show: true, radius: 0},
+               },
+       grid: {show: true, hoverable: true,clickable: true,
+       markings: 
+                 function(){
+                 var chunks = [];
+                 for (var x = 0; x<24; x+=1) {
+                  if (x%2==0) {var colorCode='#e0e0e0';}
+                  else {var colorCode='#d0d0d0';}
+                  chunks.push(
+                  {xaxis: {from:flsbmin+x*chunkWidth, 
+                                  to:flsbmin+(x+1)*chunkWidth}, 
+	         	yaxis: {from: 0.0, to: 1.0},color: colorCode}); 
+                  }
+                 return chunks;
+                 }
+       },
+//       selection:{mode:"x"},
+     legend: {
+    show: false,  
+    noColumns: 7,
+    position: "ne" 
+        },
+    pan: {interactive: true},
+    zoom: {interactive: false},
+    yaxis: {min: -0.1,max:1.2}
+    }; //end of options
+
+
+  var optionsusb = {
+        series: {
+                   bars: { show: true, barWidth:0.0 },
+                   points: {show: true, radius: 0},
+               },
+       grid: {show: true, hoverable: true,clickable: true,
+       markings: 
+                 function(){
+                 var chunks = [];
+
+                 for (var x = 0; x<24; x+=1) {
+                  if (x%2==0) {var colorCode='#d0d0d0';}
+                  else {var colorCode='#e0e0e0';}
+                  chunks.push(
+                  {xaxis: {from:fusbmin+x*chunkWidth, 
+                                  to:fusbmin+(x+1)*chunkWidth}, 
+	         	yaxis: {from: 0.0, to: 1.0},color: colorCode}); 
+                  }
+
+                 return chunks;
+                 }
+               },
+//       selection:{mode:"x"},
+     legend: { container: $("#labeler"),noColumns:3},
+    xaxis:{
+       transform: function(v) {return -v;},
+       inverseTransform: function(v) {return -v;}
+    },
+    pan: {interactive: true},
+    zoom: {interactive: false},
+    yaxis: {min: -0.1,max:1.2}
+    }; //end of optionsusb
+
+}// 2GHzMode option 
+
+
+    var optionsOverview = {
+        series: {
+                   bars: { show: true },
+                   points: {show: true, radius: 0},
+               },
+               bars:{ barWidth:0.0},
+       grid: {
+       show: true, hoverable: true, clickable: true,
+       markings: [{ xaxis: {from:flsbmin, to:flsbmax},color:'#ffff55'},
+                  {xaxis: {from: fusbmin, to: fusbmax},color:'#ffff55'},
+                  {xaxis: {from: loFreq, to: loFreq},color:'#000000'}]
+       },
+//       selection: {mode: "x"},
+     legend: {
+    show: false ,
+    noColumns: 7,
+    position: "ne"
+        },
+	xaxis:{min: ofmin, max: ofmax},
+	yaxis:{min: 0, max: 1}
+    };
+
+function showTooltip(x, y, contents) {
+    $('<div id="tooltip">' + contents + '</div>').css({
+        position: 'absolute',
+        display: 'none',
+        top: y + 5,
+        left: x + 5,
+        border: '1px solid #fdd',
+        padding: '2px',     
+        'background-color': '#fee',
+        opacity: 0.80
+    }).appendTo("body").fadeIn(200);
+}
+   
+    var previousPoint = null;
+    $("#lsbplot").bind("plothover", function (event, pos, item) {
+        $("#x").text(pos.x.toFixed(3));
+        $("#y").text(pos.y.toFixed(3));
+
+        if ($("#enableTooltip:checked").length > 0) {
+            if (item) {
+                if (previousPoint != item.dataIndex) {
+                    previousPoint = item.dataIndex;
+                    
+                    $("#tooltip").remove();
+                    var x = item.datapoint[0].toFixed(3),
+                        y = item.datapoint[1].toFixed(3);
+                    
+                    showTooltip(item.pageX, item.pageY,
+                                item.series.label + " : " + x + " GHz " + "y:"+ y);
+                }
+            }
+            else {
+                $("#tooltip").remove();
+                previousPoint = null;            
+            }
+        }
+    });
+
+    var previousPoint = null;
+    $("#usbplot").bind("plothover", function (event, pos, item) {
+        $("#x").text(pos.x.toFixed(3));
+        $("#y").text(pos.y.toFixed(3));
+
+        if ($("#enableTooltip:checked").length > 0) {
+            if (item) {
+                if (previousPoint != item.dataIndex) {
+                    previousPoint = item.dataIndex;
+                    
+                    $("#tooltip").remove();
+                    var x = item.datapoint[0].toFixed(3),
+                        y = item.datapoint[1].toFixed(3);
+                    
+                    showTooltip(item.pageX, item.pageY,
+                                item.series.label + " : " + x + " GHz " + "y:"+ y);
+                }
+            }
+            else {
+                $("#tooltip").remove();
+                previousPoint = null;            
+            }
+        }
+    });
+
+    var previousPoint = null;
+    $("#overview").bind("plothover", function (event, pos, item) {
+        $("#x").text(pos.x.toFixed(3));
+        $("#y").text(pos.y.toFixed(3));
+
+        if ($("#enableTooltip:checked").length > 0) {
+            if (item) {
+                if (previousPoint != item.dataIndex) {
+                    previousPoint = item.dataIndex;
+                    
+                    $("#tooltip").remove();
+                    var x = item.datapoint[0].toFixed(3),
+                        y = item.datapoint[1].toFixed(3);
+                    
+                    showTooltip(item.pageX, item.pageY,
+                                item.series.label + " : " + x + " GHz");
+                }
+            }
+            else {
+                $("#tooltip").remove();
+                previousPoint = null;            
+            }
+        }
+    });
+
+
+    $("#lsbplot").bind("plotclick", function (event, pos, item) {
+        if (item) {
+//            $("#clickdata").text("You clicked point " + item.dataIndex + " in " + item.series.label + ".");
+//            plot.highlight(item.series, item.datapoint);
+            var x1 = item.datapoint[0]-0.001;
+            var x2 = item.datapoint[0]+0.001;
+            window.open(
+'http://www.cv.nrao.edu/php/splat/c.php?from='+x1+'&to='+x2+'&frequency_units=GHz&displayCDMS=displayCDMS&displayJPL=displayJPL&displaySLAIM=displaySLAIM',"splatalogueResults");
+	   event.preventDefault();
+//           $("#lsbplot").unbind("plotclick");
+        }
+    });
+
+    $("#usbplot").bind("plotclick", function (event, pos, item) {
+        if (item) {
+//            $("#clickdata").text("You clicked point " + item.dataIndex + " in " + item.series.label + ".");
+//            plot.highlight(item.series, item.datapoint);
+            var x1 = item.datapoint[0]-0.001;
+            var x2 = item.datapoint[0]+0.001;
+            window.open(
+'http://www.cv.nrao.edu/php/splat/c.php?from='+x1+'&to='+x2+'&frequency_units=GHz&displayCDMS=displayCDMS&displayJPL=displayJPL&displaySLAIM=displaySLAIM',"splatalogueResults");
+	   event.preventDefault();
+//           $("#usbplot").unbind("plotclick");
+      }
+    });
+
+    var plotlsb = $.plot($("#lsbplot"), 
+    		linesToPlot,
+                $.extend(true,{},options, {
+                                 xaxis: {min: flsbmin, max: flsbmax
+                                 }
+                }));
+
+
+
+    var plotusb = $.plot($("#usbplot"), 
+    		linesToPlot,
+		$.extend(true, {}, optionsusb, {
+		                     xaxis: { min: fusbmin, max: fusbmax
+				      }
+		}));
+
+     var xaxisLabel = $("<div class='axisLabel xaxisLabel'></div>").text(
+         "Frequency (GHz)").appendTo($('#lsbplot'));
+
+    var plotoverview = $.plot($("#overview"),
+                    [
+                    { label: "CH3CN",data:ch3cn },
+                    { label: "CH3OH",data:ch3oh },
+                    { label: "H2CO",data:h2co },
+                    { label: "N2H+",data:n2hplus },
+                    { label: "CS",data:cs },
+                    { label: "SiO",data:sio },
+                    { label: "CO,13CO,C18O",data:co }
+                        ],
+                   $.extend(true,{},optionsOverview,{})
+                  );
+
+    $('<div class="button" style="left:40px;top:5px">zoom in</div>').appendTo('#lsbplot').click(function (e) {
+        e.preventDefault();
+        plotlsb.zoom();
+    });
+    $('<div class="button" style="left:100px;top:5px">zoom out</div>').appendTo('#lsbplot').click(function (e) {
+        e.preventDefault();
+        plotlsb.zoomOut();
+    });
+
+    $('<div class="button" style="left:40px;top:5px">zoom in</div>').appendTo('#usbplot').click(function (e) {
+        e.preventDefault();
+        plotusb.zoom();
+    });
+    $('<div class="button" style="left:100px;top:5px">zoom out</div>').appendTo('#usbplot').click(function (e) {
+        e.preventDefault();
+        plotusb.zoomOut();
+    });
+
+    // labeling the chunk numbers
+    function labelLSBchunks(plotlsb) {
+
+    var o;
+    var s;
+    var axes = plotlsb.getAxes();
+    var xmin = axes.xaxis.min;
+    var ymin = axes.yaxis.min;
+    var ymax = axes.yaxis.max;
+
+    if (correlatorMode=="8GHzMode") {
+
+    for(s=0;s<2;s+=1) {
+    $('#slabel'+s).remove();
+    if((s%2)==0){
+    o = plotlsb.pointOffset({x:((flsbmin+s*2.0)+( flsbmin+(s+1)*2.0))/2., 
+                              y:0.9*(ymax-ymin)+ymin});
+			      } else {
+    o = plotlsb.pointOffset({x:((flsbmin+s*2.0)+( flsbmin+(s+1)*2.0))/2., 
+                              y:0.85*(ymax-ymin)+ymin});
+     }
+    
+    chunkLabel[s]=$('<div id="slabel'+s+'" style= "position:absolute; left:' + o.left + 'px; top:' + o.top + 'px;font-size:xx-small;color:#0000A0">'+ (50-s)+'</div>');
+    $('#lsbplot').append(chunkLabel[s]);
+    }
+
+    for(s=2;s<26;s+=1) {
+
+    // clear previous labels
+    $('#slabel'+s).remove();
+
+    if((s%2)==0){
+    o = plotlsb.pointOffset({x:((flsbmin+0.016+2*2.0+(s-2)*chunkWidth)+(
+                               flsbmin+(s-1)*chunkWidth+0.016+2*2.0))/2., 
+                              y:0.9*(ymax-ymin)+ymin});
+			      } else {
+    o = plotlsb.pointOffset({x:((flsbmin+0.016+2*2.0+(s-2)*chunkWidth)+(
+                               flsbmin+(s-1)*chunkWidth+0.016+2*2.0))/2., 
+                              y:0.85*(ymax-ymin)+ymin});
+      }
+
+    chunkLabel[s]=$('<div id="slabel'+s+'" style= "position:absolute; left:' + o.left + 'px; top:' + o.top + 'px;font-size:xx-small;color:#0000A0">'+ (50-s)+'</div>');
+
+    $('#lsbplot').append(chunkLabel[s]);
+     }
+
+    for(s=26;s<50;s+=1) {
+
+    // clear previous labels
+    $('#slabel'+s).remove();
+
+    if((s%2)==0){
+    o = plotlsb.pointOffset({x:((flsbmin+0.016+0.032+2*2.0+(s-2)*chunkWidth)+(
+                               flsbmin+(s-1)*chunkWidth+0.016+0.032+2*2.0))/2., 
+                              y:0.9*(ymax-ymin)+ymin});
+			      } else {
+    o = plotlsb.pointOffset({x:((flsbmin+0.016+0.032+2*2.0+(s-2)*chunkWidth)+(
+                               flsbmin+(s-1)*chunkWidth+0.016+0.032+2*2.0))/2., 
+                              y:0.85*(ymax-ymin)+ymin});
+    }
+
+    chunkLabel[s]=$('<div id="slabel'+s+'" style= "position:absolute; left:' + o.left + 'px; top:' + o.top + 'px;font-size:xx-small;color:#0000A0">'+ (50-s)+'</div>');
+
+    $('#lsbplot').append(chunkLabel[s]);
+     }
+    } // if block for 8GHzMode
+
+    if (correlatorMode=="6GHzMode") {
+
+    s=0;
+    $('#slabel'+s).remove();
+    o = plotlsb.pointOffset({x:(flsbmin+ (1.0/2.)), y:0.9*(ymax-ymin)+ymin});
+    
+    chunkLabel[s]=$('<div id="slabel'+s+'" style= "position:absolute; left:' + o.left + 'px; top:' + o.top + 'px;font-size:xx-small;color:#0000A0">'+ (50-s)+'</div>');
+    $('#lsbplot').append(chunkLabel[s]);
+
+    for(s=1;s<25;s+=1) {
+
+    // clear previous labels
+    $('#slabel'+s).remove();
+
+    if((s%2)==0){
+    o = plotlsb.pointOffset({x:((flsbmin+1.0+(s-1)*chunkWidth)+(
+                               flsbmin+(s)*chunkWidth+1.0))/2.-chunkWidth/2.0, 
+                              y:0.9*(ymax-ymin)+ymin});
+			      } else {
+    o = plotlsb.pointOffset({x:((flsbmin+1.0+(s-1)*chunkWidth)+(
+                               flsbmin+(s)*chunkWidth+1.0))/2.-chunkWidth/2.0, 
+                              y:0.85*(ymax-ymin)+ymin});
+      }
+
+    chunkLabel[s]=$('<div id="slabel'+s+'" style= "position:absolute; left:' + o.left + 'px; top:' + o.top + 'px;font-size:xx-small;color:#0000A0">'+ (49-s)+'</div>');
+
+    $('#lsbplot').append(chunkLabel[s]);
+     }
+
+    s=26;
+    $('#slabel'+s).remove();
+    o = plotlsb.pointOffset({x:(flsbmin+ 1.0+2.0+(1.0/2.)), y:0.9*(ymax-ymin)+ymin});
+    
+    chunkLabel[s]=$('<div id="slabel'+s+'" style= "position:absolute; left:' + o.left + 'px; top:' + o.top + 'px;font-size:xx-small;color:#0000A0">'+ (49)+'</div>');
+    $('#lsbplot').append(chunkLabel[s]);
+
+    for(s=27;s<51;s+=1) {
+
+    // clear previous labels
+    $('#slabel'+s).remove();
+
+    if((s%2)==0){
+    o = plotlsb.pointOffset({x:((flsbmin+2.0+2*1.0+2.0+(s-27)*chunkWidth)+(
+                               flsbmin+(s-26)*chunkWidth+2.0+2*1.0+2.0))/2.-chunkWidth/2.0, 
+                              y:0.9*(ymax-ymin)+ymin});
+			      } else {
+    o = plotlsb.pointOffset({x:((flsbmin+2.0+2*1.0+2.0+(s-27)*chunkWidth)+(
+                               flsbmin+(s-26)*chunkWidth+2.0+2*1.0+2.0))/2.-chunkWidth/2.0, 
+                              y:0.85*(ymax-ymin)+ymin});
+    }
+
+    chunkLabel[s]=$('<div id="slabel'+s+'" style= "position:absolute; left:' + o.left + 'px; top:' + o.top + 'px;font-size:xx-small;color:#0000A0">'+ (51-s)+'</div>');
+
+    $('#lsbplot').append(chunkLabel[s]);
+     }
+
+    s=52;
+    $('#slabel'+s).remove();
+    o = plotlsb.pointOffset({x:((flsbmin+2.0+2*1.0)+(
+                               flsbmin+2.0+2*1.0+2.0))/2.-0.7, 
+                              y:0.7*(ymax-ymin)+ymin});
+    chunkLabel[s]=$('<div id="slabel'+s+'" style= "position:absolute; left:' + o.left + 'px; top:' + o.top + 'px;font-size:large;color:#FFA500">'+ "2 GHz Coverage Gap" +'</div>');
+    $('#lsbplot').append(chunkLabel[s]);
+   } // if block for 6GHzMode
+
+   if (correlatorMode=="4GHzMode") {
+
+    for(s=2;s<26;s+=1) {
+
+    // clear previous labels
+    $('#slabel'+s).remove();
+
+    if((s%2)==0){
+    o = plotlsb.pointOffset({x:((flsbmin+(s-2)*chunkWidth)+(
+                               flsbmin+(s-1)*chunkWidth))/2., 
+                              y:0.9*(ymax-ymin)+ymin});
+			      } else {
+    o = plotlsb.pointOffset({x:((flsbmin+(s-2)*chunkWidth)+(
+                               flsbmin+(s-1)*chunkWidth))/2., 
+                              y:0.85*(ymax-ymin)+ymin});
+      }
+
+    chunkLabel[s]=$('<div id="slabel'+s+'" style= "position:absolute; left:' + o.left + 'px; top:' + o.top + 'px;font-size:xx-small;color:#0000A0">'+ (50-s)+'</div>');
+
+    $('#lsbplot').append(chunkLabel[s]);
+     }
+
+    for(s=26;s<50;s+=1) {
+
+    // clear previous labels
+    $('#slabel'+s).remove();
+
+    if((s%2)==0){
+    o = plotlsb.pointOffset({x:((flsbmin+0.032+(s-2)*chunkWidth)+(
+                               flsbmin+(s-1)*chunkWidth+0.032))/2., 
+                              y:0.9*(ymax-ymin)+ymin});
+			      } else {
+    o = plotlsb.pointOffset({x:((flsbmin+0.032+(s-2)*chunkWidth)+(
+                               flsbmin+(s-1)*chunkWidth+0.032))/2., 
+                              y:0.85*(ymax-ymin)+ymin});
+    }
+
+    chunkLabel[s]=$('<div id="slabel'+s+'" style= "position:absolute; left:' + o.left + 'px; top:' + o.top + 'px;font-size:xx-small;color:#0000A0">'+ (50-s)+'</div>');
+
+    $('#lsbplot').append(chunkLabel[s]);
+     }
+    } // if block for 4GHzMode
+
+    if (correlatorMode=="2GHzMode") {
+
+    for(s=2;s<26;s+=1) {
+
+    // clear previous labels
+    $('#slabel'+s).remove();
+
+    if((s%2)==0){
+    o = plotlsb.pointOffset({x:((flsbmin+(s-2)*chunkWidth)+(
+                               flsbmin+(s-1)*chunkWidth))/2., 
+                              y:0.9*(ymax-ymin)+ymin});
+			      } else {
+    o = plotlsb.pointOffset({x:((flsbmin+(s-2)*chunkWidth)+(
+                               flsbmin+(s-1)*chunkWidth))/2., 
+                              y:0.85*(ymax-ymin)+ymin});
+      }
+
+    chunkLabel[s]=$('<div id="slabel'+s+'" style= "position:absolute; left:' + o.left + 'px; top:' + o.top + 'px;font-size:xx-small;color:#0000A0">'+ (26-s)+'</div>');
+
+    $('#lsbplot').append(chunkLabel[s]);
+     }
+
+    } // if block for 2GHzMode
+
+   }// labelLSBchunks function
+
+
+    function labelUSBchunks(plotusb) {
+
+    var o;
+    var s;
+    var axes = plotusb.getAxes();
+    var xmin = axes.xaxis.min;
+    var ymin = axes.yaxis.min;
+    var ymax = axes.yaxis.max;
+
+    if (correlatorMode == "8GHzMode") {
+    for(s=0;s<24;s+=1) {
+    $('#uslabel'+s).remove();
+    if((s%2)!=0){
+    o = plotusb.pointOffset({x:((fusbmin+s*chunkWidth)+(fusbmin+(s+1)*chunkWidth))/2., 
+                              y:0.9*(ymax-ymin)+ymin});
+			      } else {
+    o = plotusb.pointOffset({x:((fusbmin+s*chunkWidth)+(fusbmin+(s+1)*chunkWidth))/2., 
+                              y:0.85*(ymax-ymin)+ymin});
+     }
+    
+    uchunkLabel[s]=$('<div id="uslabel'+s+'" style= "position:absolute; left:' + o.left + 'px; top:' + o.top + 'px;font-size:xx-small;color:#0000A0">'+ (s+1)+'</div>');
+    $('#usbplot').append(uchunkLabel[s]);
+    }
+
+    for(s=24;s<48;s+=1) {
+
+    // clear previous labels
+    $('#uslabel'+s).remove();
+
+    if((s%2)!=0){
+    o = plotusb.pointOffset({x:((0.032+fusbmin+s*chunkWidth)+(
+                               fusbmin+(s+1)*chunkWidth+0.032))/2., 
+                              y:0.9*(ymax-ymin)+ymin});
+			      } else {
+    o = plotusb.pointOffset({x:((fusbmin+0.032+s*chunkWidth)+(
+                               fusbmin+(s+1)*chunkWidth+0.032))/2., 
+                              y:0.85*(ymax-ymin)+ymin});
+      }
+
+    uchunkLabel[s]=$('<div id="uslabel'+s+'" style= "position:absolute; left:' + o.left + 'px; top:' + o.top + 'px;font-size:xx-small;color:#0000A0">'+ (s+1)+'</div>');
+
+    $('#usbplot').append(uchunkLabel[s]);
+     }
+
+
+    for(s=0;s<2;s+=1){
+    // clear previous labels
+    $('#uslabel'+s+48).remove();
+
+    if((s%2)!=0) {
+    o = plotusb.pointOffset({x:((fusbmin+0.016+0.032+2*2.0+s*2.0)+(
+                               fusbmin+0.016+0.032+2*2.0+(s+1)*2.0))/2., 
+                              y:0.9*(ymax-ymin)+ymin});
+			      } else {
+    o = plotusb.pointOffset({x:((fusbmin+0.016+0.032+2*2.0+s*2.0)+(
+                               fusbmin+0.016+0.032+2*2.0+(s+1)*2.0))/2., 
+                              y:0.85*(ymax-ymin)+ymin});
+    }
+    uchunkLabel[s+48]=$('<div id="uslabel'+s+48+'" style= "position:absolute; left:' +
+    o.left + 'px; top:' + o.top + 'px;font-size:xx-small;color:#0000A0">'+ (s+49)+'</div>');
+
+
+    $('#usbplot').append(uchunkLabel[s+48]);
+    }
+
+    } // if block for 8GHzMode
+
+    if (correlatorMode == "6GHzMode") {
+    for(s=0;s<24;s+=1) {
+    $('#uslabel'+s).remove();
+    if((s%2)!=0){
+    o = plotusb.pointOffset({x:((fusbmin+s*chunkWidth)+ 
+                                (fusbmin+(s+1)*chunkWidth))/2.,
+                              y:0.9*(ymax-ymin)+ymin});
+			      } else {
+    o = plotusb.pointOffset({x:((fusbmin+s*chunkWidth)+
+                                (fusbmin+(s+1)*chunkWidth))/2.,
+                              y:0.85*(ymax-ymin)+ymin});
+     }
+    
+    uchunkLabel[s]=$('<div id="uslabel'+s+'" style= "position:absolute; left:' + o.left + 'px; top:' + o.top + 'px;font-size:xx-small;color:#0000A0">'+ (s+1)+'</div>');
+    $('#usbplot').append(uchunkLabel[s]);
+    }
+
+    for(s=24;s<48;s+=1) {
+
+    // clear previous labels
+    $('#uslabel'+s).remove();
+
+    if((s%2)!=0){
+    o = plotusb.pointOffset({x:((fusbmin+24*chunkWidth+2.0+0.016+1.0+
+	(s-24)*chunkWidth)+(fusbmin+24*chunkWidth+2.0+0.016+1.0
+	+(s-23)*chunkWidth))/2.+chunkWidth/2, 
+                              y:0.9*(ymax-ymin)+ymin});
+			      } else {
+    o = plotusb.pointOffset({x:((fusbmin+24*chunkWidth+2.0+0.016+1.0+
+	(s-24)*chunkWidth)+(fusbmin+24*chunkWidth+2.0+0.016+1.0
+	+(s-23)*chunkWidth))/2.+chunkWidth/2, 
+                              y:0.85*(ymax-ymin)+ymin});
+      }
+
+    uchunkLabel[s]=$('<div id="uslabel'+s+'" style= "position:absolute; left:' + o.left + 'px; top:' + o.top + 'px;font-size:xx-small;color:#0000A0">'+(s+1)+'</div>');
+
+    $('#usbplot').append(uchunkLabel[s]);
+     }
+
+    s=48;
+    $('#uslabel'+s).remove();
+    o = plotusb.pointOffset({x:((fusbmin+24*chunkWidth+2.0+0.016)+(
+                               fusbmin+24*chunkWidth+2.0+0.016+1.0))/2., 
+                                       y:0.9*(ymax-ymin)+ymin});
+    uchunkLabel[s]=$('<div id="uslabel'+s+'" style= "position:absolute; left:' + o.left + 'px; top:' + o.top + 'px;font-size:xx-small;color:#0000A0">'+49+'</div>');
+    $('#usbplot').append(uchunkLabel[s]);
+
+     s=49;
+
+    // clear previous labels
+    $('#uslabel'+s).remove();
+
+    o = plotusb.pointOffset({x:((fusbmin+48*chunkWidth+2.0+0.016+1.0)+(
+                               fusbmin+48*chunkWidth+2.0+0.016+1.0+1.0))/2., 
+                              y:0.9*(ymax-ymin)+ymin});
+    uchunkLabel[s]=$('<div id="uslabel'+s+'" style= "position:absolute; left:' + o.left + 'px; top:' + o.top + 'px;font-size:xx-small;color:#0000A0">'+50 +'</div>');
+
+    $('#usbplot').append(uchunkLabel[s]);
+
+    s=50;
+    $('#uslabel'+s).remove();
+    o = plotusb.pointOffset({x:((fusbmin+24*chunkWidth)+(
+                               fusbmin+24*chunkWidth+2.0+0.016))/2.+0.76, 
+                              y:0.7*(ymax-ymin)+ymin});
+    uchunkLabel[s]=$('<div id="uslabel'+s+'" style= "position:absolute; left:' + o.left + 'px; top:' + o.top + 'px;font-size:large;color:#FFA500">'+ "2 GHz Coverage Gap" +'</div>');
+    $('#usbplot').append(uchunkLabel[s]);
+
+    } // if block for 6GHzMode
+
+    if (correlatorMode == "4GHzMode") {
+    for(s=0;s<24;s+=1) {
+    $('#uslabel'+s).remove();
+    if((s%2)!=0){
+    o = plotusb.pointOffset({x:((fusbmin+s*chunkWidth)+(fusbmin+(s+1)*chunkWidth))/2., 
+                              y:0.9*(ymax-ymin)+ymin});
+			      } else {
+    o = plotusb.pointOffset({x:((fusbmin+s*chunkWidth)+(fusbmin+(s+1)*chunkWidth))/2., 
+                              y:0.85*(ymax-ymin)+ymin});
+     }
+    
+    uchunkLabel[s]=$('<div id="uslabel'+s+'" style= "position:absolute; left:' + o.left + 'px; top:' + o.top + 'px;font-size:xx-small;color:#0000A0">'+ (s+1)+'</div>');
+    $('#usbplot').append(uchunkLabel[s]);
+    }
+
+    for(s=24;s<48;s+=1) {
+
+    // clear previous labels
+    $('#uslabel'+s).remove();
+
+    if((s%2)!=0){
+    o = plotusb.pointOffset({x:((0.032+fusbmin+s*chunkWidth)+(
+                               fusbmin+(s+1)*chunkWidth+0.032))/2., 
+                              y:0.9*(ymax-ymin)+ymin});
+			      } else {
+    o = plotusb.pointOffset({x:((fusbmin+0.032+s*chunkWidth)+(
+                               fusbmin+(s+1)*chunkWidth+0.032))/2., 
+                              y:0.85*(ymax-ymin)+ymin});
+      }
+
+    uchunkLabel[s]=$('<div id="uslabel'+s+'" style= "position:absolute; left:' + o.left + 'px; top:' + o.top + 'px;font-size:xx-small;color:#0000A0">'+ (s+1)+'</div>');
+
+    $('#usbplot').append(uchunkLabel[s]);
+     }
+
+    } // if block for 4GHzMode
+
+    if (correlatorMode == "2GHzMode") {
+    for(s=0;s<24;s+=1) {
+    $('#uslabel'+s).remove();
+    if((s%2)!=0){
+    o = plotusb.pointOffset({x:((fusbmin+s*chunkWidth)+(fusbmin+(s+1)*chunkWidth))/2., 
+                              y:0.9*(ymax-ymin)+ymin});
+			      } else {
+    o = plotusb.pointOffset({x:((fusbmin+s*chunkWidth)+(fusbmin+(s+1)*chunkWidth))/2., 
+                              y:0.85*(ymax-ymin)+ymin});
+     }
+    
+    uchunkLabel[s]=$('<div id="uslabel'+s+'" style= "position:absolute; left:' + o.left + 'px; top:' + o.top + 'px;font-size:xx-small;color:#0000A0">'+ (s+1)+'</div>');
+    $('#usbplot').append(uchunkLabel[s]);
+    }
+
+    } // if block for 2GHzMode
+   } // function labelUSBchunks
+
+    labelUSBchunks(plotusb);
+
+    $('#usbplot').bind('plotzoom',function(event,plotusb) {
+    labelUSBchunks(plotusb);
+    });
+
+    $('#usbplot').bind('plotpan',function(event,plotusb) {
+    labelUSBchunks(plotusb);
+    });
+
+
+    labelLSBchunks(plotlsb);
+
+    $('#lsbplot').bind('plotzoom',function(event,plotlsb) {
+    labelLSBchunks(plotlsb);
+    });
+
+    $('#lsbplot').bind('plotpan',function(event,plotlsb) {
+    labelLSBchunks(plotlsb);
+    });
+
+} // end of function drawSpectra()
+
+// Plot with default selected and initialized values
+       if(correlatorMode=="2GHzMode"){
+       ifmax = 6.0;
+       }
+       if(correlatorMode=="4GHzMode"){
+       ifmax = 7.984; 
+       }
+       if(correlatorMode=="6GHzMode"){
+       ifmax = 12.0; 
+       }
+       if(correlatorMode=="8GHzMode"){
+       ifmax = 12.0;
+       }
+
+       if (receiver=="rx230"){
+       gunnMult=2.0;
+       ofmin=180.;
+       ofmax=248.;
+       loFreq=224.;
+       }
+       if (receiver=="rx345"){
+       gunnMult=3.0;
+       ofmin=265.5;
+       ofmax=355.5;
+       loFreq=339.;
+       }
+       if (receiver=="rx400"){
+       gunnMult=4.0;
+       ofmin=324.;
+       ofmax=426.;
+       loFreq=380.;
+       }
+       flsbmin=loFreq - ifmax;
+       flsbmax=loFreq - ifmin;
+       fusbmin=loFreq + ifmin;
+       fusbmax=loFreq + ifmax;
+yigFreq();
+drawSpectra();
+defaultPlot();
+
+$("#inputPLLharmonic").keydown(function(e){
+    if(e.keyCode==13){
+    PLLharmonic=parseFloat($(this).val());
+    yigFreq();
+    flsbmin=loFreq - ifmax;
+    flsbmax=loFreq - ifmin;
+    
+    fusbmin=loFreq+ ifmin;
+    fusbmax=loFreq+ifmax;
+    drawSpectra();
+    }
+});
+
+$("#inputLOfreq").keydown(function(e){
+    if(e.keyCode==13){
+
+    loFreq=parseFloat($(this).val());
+
+    flsbmin=loFreq - ifmax;
+    flsbmax=loFreq - ifmin;
+    
+    fusbmin=loFreq+ ifmin;
+    fusbmax=loFreq+ifmax;
+
+    drawSpectra();
+    }
+
+    if(e.keyCode==190){
+
+    loFreq=parseFloat($(this).val());
+    loFreq += 0.1;
+    $('#inputLOfreq').val(loFreq);
+
+    flsbmin=loFreq - ifmax;
+    flsbmax=loFreq - ifmin;
+    
+    fusbmin=loFreq+ ifmin;
+    fusbmax=loFreq+ifmax;
+
+    drawSpectra();
+    }
+
+    if(e.keyCode==188){
+
+    loFreq=parseFloat($(this).val());
+    loFreq -= 0.1;
+    $('#inputLOfreq').val(loFreq);
+
+    flsbmin=loFreq - ifmax;
+    flsbmax=loFreq - ifmin;
+    
+    fusbmin=loFreq+ ifmin;
+    fusbmax=loFreq+ifmax;
+
+    drawSpectra();
+    }
+
+    if(e.keyCode==38){
+
+    loFreq=parseFloat($(this).val());
+    loFreq += 1.0;
+    $('#inputLOfreq').val(loFreq);
+
+    flsbmin=loFreq - ifmax;
+    flsbmax=loFreq - ifmin;
+    
+    fusbmin=loFreq+ ifmin;
+    fusbmax=loFreq+ifmax;
+
+    drawSpectra();
+    }
+
+    if(e.keyCode==40){
+
+    loFreq=parseFloat($(this).val());
+    loFreq -= 1.0;
+    $('#inputLOfreq').val(loFreq);
+
+    flsbmin=loFreq - ifmax;
+    flsbmax=loFreq - ifmin;
+    
+    fusbmin=loFreq+ ifmin;
+    fusbmax=loFreq+ifmax;
+
+    drawSpectra();
+    }
+});
+
+$("#inputLinefreq").keypress(function(e){
+if(e.keyCode==13){
+lineFreq=parseFloat($(this).val());
+var s=$("#chunkSelect").val();
+s=parseInt(s);
+var sideband=$("#sidebandSelect").val();
+
+    if(sideband=="lsb") {
+     if ((s>=1)&&(s<25)) {
+       loFreq = lineFreq + (s-1)*chunkWidth + chunkWidth/2.0 + ifmin;
+       }
+     if ((s>=25)&&(s<49)) {
+       loFreq = lineFreq + (s-1)*chunkWidth + chunkWidth/2.0 + 0.032+ ifmin;
+       }
+     if ((s>=49)&&(s<51)) {
+       loFreq = lineFreq + (s-48)*2.0 + 2.0/2.0 + 0.016+0.032+ 2*ifmin;
+       }
+    }
+
+    if(sideband=="usb") {
+     if ((s>=1)&&(s<25)) {
+       loFreq = lineFreq - (s-1)*chunkWidth - chunkWidth/2.0 - ifmin;
+       }
+     if ((s>=25)&&(s<49)) {
+       loFreq = lineFreq - (s-1)*chunkWidth - chunkWidth/2.0 - 0.032- ifmin;
+       }
+     if ((s>=49)&&(s<51)) {
+       loFreq = lineFreq - (s-48)*2.0 - 2.0/2.0 - 0.016-0.032- 2*ifmin;
+       }
+    }
+
+$('#inputLOfreq').val(loFreq);
+
+
+flsbmin=loFreq - ifmax;
+flsbmax=loFreq - ifmin;
+
+fusbmin=loFreq+ ifmin;
+fusbmax=loFreq+ifmax;
+
+$('#inputPLLharmonic').val(PLLharmonic);
+yigFreq();
+
+drawSpectra();
+
+}
+});
+
+function yigFreq() {
+
+     if(PLLharmonic!=0) {
+     yigFrequency = ((loFreq/gunnMult)-fDDS)/PLLharmonic;
+     } else {
+
+     var bestMRGFrequency = 8.0;
+     PLLharmonic = 22.0
+     yigFrequency = 1.0;
+          while (yigFrequency < bestMRGFrequency) {
+          PLLharmonic = PLLharmonic-2.0;
+          yigFrequency = ((loFreq/gunnMult)-fDDS)/PLLharmonic;
+          }
+     }
+}
+
+var element=document.getElementById("updateplot");
+element.onclick=function(){
+lineFreq=parseFloat($("#inputLinefreq").val());
+var s=$("#chunkSelect").val();
+s=parseInt(s);
+var sideband=$("#sidebandSelect").val();
+
+    if(sideband=="lsb") {
+     if ((s>=1)&&(s<25)) {
+       loFreq = lineFreq + (s-1)*chunkWidth + chunkWidth/2.0 + ifmin;
+       }
+     if ((s>=25)&&(s<49)) {
+       loFreq = lineFreq + (s-1)*chunkWidth + chunkWidth/2.0 + 0.032+ ifmin;
+       }
+     if ((s>=49)&&(s<51)) {
+       loFreq = lineFreq + (s-48)*2.0 + 1.0 + 0.016+0.032+ 2*ifmin;
+       }
+    }
+
+    if(sideband=="usb") {
+     if ((s>=1)&&(s<25)) {
+       loFreq = lineFreq - (s-1)*chunkWidth - chunkWidth/2.0 - ifmin;
+       }
+     if ((s>=25)&&(s<49)) {
+       loFreq = lineFreq - (s-1)*chunkWidth - chunkWidth/2.0 - 0.032- ifmin;
+       }
+     if ((s>=49)&&(s<51)) {
+       loFreq = lineFreq - (s-48)*2.0 - 1.0 - 0.016-0.032- 2*ifmin;
+       }
+    }
+
+$('#inputLOfreq').val(loFreq);
+
+flsbmin=loFreq - ifmax;
+flsbmax=loFreq - ifmin;
+fusbmin=loFreq+ ifmin;
+fusbmax=loFreq+ifmax;
+yigFreq();
+drawSpectra();
+}
+
+function defaultPlot(){
+lineFreq=parseFloat($("#inputLinefreq").val());
+var s=$("#chunkSelect").val();
+s=parseInt(s);
+var sideband=$("#sidebandSelect").val();
+
+    if(sideband=="lsb") {
+     if ((s>=1)&&(s<25)) {
+       loFreq = lineFreq + (s-1)*chunkWidth + chunkWidth/2.0 + ifmin;
+       }
+     if ((s>=25)&&(s<49)) {
+       loFreq = lineFreq + (s-1)*chunkWidth + chunkWidth/2.0 + 0.032+ ifmin;
+       }
+     if ((s>=49)&&(s<51)) {
+       loFreq = lineFreq + (s-48)*2.0 + 1.0 + 0.016+0.032+ 2*ifmin;
+       }
+    }
+
+    if(sideband=="usb") {
+     if ((s>=1)&&(s<25)) {
+       loFreq = lineFreq - (s-1)*chunkWidth - chunkWidth/2.0 - ifmin;
+       }
+     if ((s>=25)&&(s<49)) {
+       loFreq = lineFreq - (s-1)*chunkWidth - chunkWidth/2.0 - 0.032- ifmin;
+       }
+     if ((s>=49)&&(s<51)) {
+       loFreq = lineFreq - (s-48)*2.0 - 1.0 - 0.016-0.032- 2*ifmin;
+       }
+    }
+
+$('#inputLOfreq').val(loFreq);
+
+flsbmin=loFreq - ifmax;
+flsbmax=loFreq - ifmin;
+fusbmin=loFreq+ ifmin;
+fusbmax=loFreq+ifmax;
+yigFreq();
+drawSpectra();
+}
+
+}); //document ready function (MAIN)
+
+//slider example- try for lo freq later
+//<fieldset>
+//    <label for="rangeVal">resolution (dpi):</label>
+//    <input type ="range" max="248" min="185" 
+//     onchange="document.getElementById('rangeValLabel').innerHTML = this.value;"
+//        step="0.1" name="inputLO" id="inputLOfreq" value="200">
+//    </input>
+//    <em id="rangeValLabel" style="font-style: normal;"></em>
+//</fieldset>
+</script>
+ 
+<!-- HTML -->
+<header>
+<h1><img src="/images/logo_small.jpg">SMA Passband Visualizer</h1>
+
+<div id="instructions">Instructions: <p> 
+<ol>
+<li> Select the correlator mode (2/4/6/8 GHz), </li> 
+<li> select the receiver (230/345/400 GHz), </li> 
+<li> select sideband (LSB/USB), </li> 
+<li> select spectral window for the ASIC correlator (S1-S48) to center the line in, 
+and </li> 
+<li> enter the line frequency in GHz. </li> 
+</ol>
+The plots will refresh if you hit enter in the line frequency input window
+(or on clicking the Update Plot button).
+The LO frequency will be updated. (Alternatively, you can also enter the LO
+frequency). 
+<p>
+The top slim figure shows an overview of the full tuning range for
+the selected band. The sidebands are highlighted. Spectral lines
+are shown as vertical  lines (y: 0 to 0.5) with various colors.
+Placing the mouse cursor on the tip of these lines will show the
+molecule name and rest frequency of that line.  Clicking on the tip
+of a line will pop-up a new webpage with link to Splatalogue, with
+details about that line and other lines in nearby frequencies. Plots
+can be zoomed in or out by clicking on zoom buttons on top left
+corner.  The original scale can be reset by either clicking the
+Update Plot button or just hitting enter in the LO frequency or
+line frequency boxes. Spectral plots can also be panned by just
+dragging with the mouse.  Note the 32 MHz gap between spectral windows S24 and S25 in 4 GHz mode, and the 2 GHz wide gap in the 6 GHz mode.
+<p>
+YIG spikes are shown in black, with
+yaxis values of 0.75. The default PLL harmonic is shown for a given
+tuning, but this can be varied to move the YIG spike. The PLL harmonic
+should always be an even integer, in increments of 2,  
+with the highest value of 22. 
+<p> 
+Please send comments
+and bug-reports to Nimesh Patel (npatel[at]cfa.harvard.edu) (Last
+updated: 26 July 2014).  </div> 
+
+</header> 
+<p> 
+
+<div> Select Correlator
+mode: <select id="correlatorModeSelect" name="correlatorModeSelect">
+     <option value="4GHzMode" selected="selected">4 GHz mode
+     (ASIC)</option> <option value="2GHzMode">2 GHz mode (ASIC)</option>
+     <option value="6GHzMode">6 GHz mode (ASIC+SWARM)</option>
+     <option value="8GHzMode">8 GHz mode (ASIC+SWARM)</option>
+</select> </div> <p> <select id="receiverSelect" name="receiverSelect">
+     <option value="rx230" selected="selected">Receiver: 230
+     GHz</option> <option value="rx345">Receiver: 345 GHz</option>
+     <option value="rx400">Receiver: 400 GHz</option>
+</select> <select id="sidebandSelect" name="sidebandSelect">
+     <option value="lsb">LSB</option> <option value="usb"
+     selected="selected">USB</option>
+</select> <select id="chunkSelect" name="chunkSelect">
+     <option value="1">S1</option> <option value="2">S2</option>
+     <option value="3">S3</option> <option value="4">S4</option>
+     <option value="5">S5</option> <option value="6">S6</option>
+     <option value="7">S7</option> <option value="8">S8</option>
+     <option value="9">S9</option> <option value="10">S10</option>
+     <option value="11">S11</option> <option value="12">S12</option>
+     <option value="13" selected="selected">S13</option> <option
+     value="14">S14</option> <option value="15">S15</option> <option
+     value="16">S16</option> <option value="17">S17</option> <option
+     value="18">S18</option> <option value="19">S19</option> <option
+     value="20">S20</option> <option value="21">S21</option> <option
+     value="22">S22</option> <option value="23">S23</option> <option
+     value="24">S24</option> <option value="25">S25</option> <option
+     value="26">S26</option> <option value="27">S27</option> <option
+     value="28">S28</option> <option value="29">S29</option> <option
+     value="30">S30</option> <option value="31">S31</option> <option
+     value="32">S32</option> <option value="33">S33</option> <option
+     value="34">S34</option> <option value="35">S35</option> <option
+     value="36">S36</option> <option value="37">S37</option> <option
+     value="38">S38</option> <option value="39">S39</option> <option
+     value="40">S40</option> <option value="41">S41</option> <option
+     value="42">S42</option> <option value="43">S43</option> <option
+     value="44">S44</option> <option value="45">S45</option> <option
+     value="46">S46</option> <option value="47">S47</option> <option
+     value="48">S48</option> <option value="49">S49</option> <option
+     value="50">S50</option>
+</select> <button id="updateplot">Update Plot</button> <div
+id="lineInput"> Line frequency (GHz):<input id="inputLinefreq"
+name="inputLine" type="text" value="230.538"></input> </div>
+
+<div id="loInput">
+LO frequency (GHz):<input id="inputLOfreq" name="inputLO" type="text"
+value="225.497"></input>
+</div>
+<div id="pllHarmInput">
+PLL harmonic: <input id="inputPLLharmonic" name="inputPLL" type="text"
+value="10"></input>
+</div>
+<div><input id="enableTooltip" type="checkbox" checked>Show molecule ID</div>
+<div id="choices">Show:</div>
+<div id="hoverdata">Cursor frequency (GHz): <span id="x">0</span>. <span
+id="clickdata"></span></div>
+<div id="overview"></div>
+<div id="usbplot"></div>
+<div id="lsbplot"></div>
+<div id="labeler"></div>
+
+</body>
+</html>

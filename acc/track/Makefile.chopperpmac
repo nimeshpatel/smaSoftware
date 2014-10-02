@@ -1,0 +1,12 @@
+CC=gcc
+CFLAGS=-Wall
+IFLAGS=-I$(ACCAPP)/iPOctal232/includeFiles/
+BINDIR=$(ACCBIN)
+
+all: $(BINDIR)/cpmac
+
+$(BINDIR)/cpmac: chopperPmacMain.c chopperPmac.o
+	$(CC) $(CFLAGS) $(IFLAGS) chopperPmacMain.c chopperPmac.o  -o $@
+
+chopperPmac.o: chopperPmac.c
+	$(CC) $(CFLAGS) $(IFLAGS) -c chopperPmac.c

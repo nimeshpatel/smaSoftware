@@ -1,0 +1,5 @@
+#define SUMMARY_FILE_NAME_LEN 80
+extern char summary_file_name[SUMMARY_FILE_NAME_LEN];
+extern int lowfreqflag;
+#define MAX_TOKENS 150
+extern int tokenize(char *input, char *tokenArray[MAX_TOKENS]);

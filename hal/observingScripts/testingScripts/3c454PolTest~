@@ -1,0 +1,17 @@
+#!/bin/tcsh -vf
+while (1)
+  rotateWaveplate -s L
+  rotateWaveplate -a 2 -s R
+  observe -s 1924_RLLLLL -r 19:24:51.0560 -d -29:14:30.1210
+  correlatorResume
+  integrate -s 10 -w
+  tsys
+  rotateWaveplate -a 2 -s L
+  observe -s 1924_LLLLLL -r 19:24:51.0560 -d -29:14:30.1210
+  integrate -s 50 -w
+  correlatorPause
+  sleep 16
+  observe -s 1924_WALSHED -r 19:24:51.0560 -d -29:14:30.1210
+  polarPattern -p 3 -w -c 3
+end
+

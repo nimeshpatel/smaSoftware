@@ -1,0 +1,8 @@
+rsh acc2 '/application/logTilts/programs/collectTiltData &'
+rsh acc3 '/application/logTilts/programs/collectTiltData &'
+rsh acc4 '/application/logTilts/programs/collectTiltData &'
+rsh acc5 '/application/logTilts/programs/collectTiltData &'
+rsh acc6 '/application/logTilts/programs/collectTiltData &'
+rsh acc7 '/application/logTilts/programs/collectTiltData &'
+rsh acc8 '/application/logTilts/programs/collectTiltData &'
+

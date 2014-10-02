@@ -1,0 +1,17 @@
+#!/bin/csh
+rm -f Track.err Track.easy smash list list.sort servo.err servo.easy servo.new
+gstderr -m acc rack > Track.err
+gstderr -m acc ervo > servo.err
+easyread_stderr servo.err > servo.easy
+grep -v rack servo.easy > servo.new
+easyread_stderr Track.err > Track.easy
+if ($HOST == 'hal9000') then
+  grep "`date -u +'%a %b %d'`"  /rootfs/logs/SMAshLog > smash
+else
+  grep "`date -u +'%a %b %d'`"  /usr/lynx/3.1.0/ppc/logs/SMAshLog > smash
+endif
+cat smash Track.easy servo.new > list
+sort list > list.sort
+rm -f Track.err Track.easy smash list servo.err servo.easy servo.new
+echo You can now examine the file: list.sort
+#

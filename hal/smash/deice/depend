@@ -1,0 +1,4 @@
+deice.o: deice.c /usr/PowerPC/common/include/smapopt.h \
+ /usr/PowerPC/common/include/rm.h /usr/PowerPC/common/include/deiced.h
+deicemon.o: deicemon.c /usr/PowerPC/common/include/rm.h \
+ /usr/PowerPC/common/include/deiced.h

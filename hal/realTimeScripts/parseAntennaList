@@ -1,0 +1,21 @@
+#!/usr/bin/perl
+# converts a comma-delimited list into a space-delimited list. - Todd Hunter
+# used by "azelstar"
+@args = split(',',$ARGV[0]);
+for ($i=0; $i<=$#args; $i++) {
+    if ($args[$i] =~ /-h/) {
+	print "Usage: $0 <comma-delimited/ellipsis-delimited list>\n";
+	print "  it will output a space-delimited list, which is useful in scripts\n"; 
+	exit;
+    }
+    if ($args[$i] =~ /../) {
+	($first,$last) = split('\.\.',$args[$i]);
+	for ($j = $first; $j<=$last; $j++) {
+	    print "$j ";
+	}
+    } else {
+	print "$args[$i] ";
+    }
+}
+print "\n";
+#

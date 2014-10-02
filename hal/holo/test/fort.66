@@ -1,0 +1,18 @@
+ Dimension of the phase data file= 128
+ Radius of the first ring of nodes =  0.174999997
+ Radius of the second ring of nodes =  0.973999977
+ Radius of the third ring of nodes =  1.67900002
+ Radius of the fourth ring of nodes =  2.35599995
+ Radius of the fifth ring of nodes =  3.
+ Number of panels in the first ring= 12
+ Number of panels in the second ring= 12
+ Number of panels in the third ring= 24
+ Number of panels in the fourth ring= 24
+ Distance of the screws to panel edge =  0.0500000007
+ Focal length of the primary mirror =  2.51999998
+ Diameter of the primary mirror =  6.
+ Diameter of the secondary mirror =  0.349999994
+ Nyquist sampling rate =  0.75
+ Radial margin on the panel for masking  0.00999999978
+ Theta margin on the panel for masking  0.00400000019
+ Theta offset from elevation axis -0.130899996

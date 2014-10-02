@@ -1,0 +1,129 @@
+        while(fgets(line,sizeof(line),fp_mount_model) != NULL) {
+        line[strlen(line)-1]='\0';
+                if(line[0]!='#') {
+        sscanf(line,"%s %s %s", pointingParameter, opticalValue, radioValue);
+                     if(!strcmp(pointingParameter,"AzDC")) {
+                     azdc=atof(opticalValue);
+                     razdc=atof(radioValue);
+                        numParameters++;
+                     }
+
+                     if(!strcmp(pointingParameter,"AzColl")) {
+                     azcol=atof(opticalValue);
+                     razcol=atof(radioValue);
+                        numParameters++;
+                     }
+
+                     if(!strcmp(pointingParameter,"ElTilt")) {
+                     eltilt=atof(opticalValue);
+                     reltilt=atof(radioValue);
+                        numParameters++;
+                     }
+
+                     if(!strcmp(pointingParameter,"AAzTltSin")) {
+                     aztilt_sin=atof(opticalValue);
+                     raztilt_sin=atof(radioValue);
+                        numParameters++;
+                     }
+
+                     if(!strcmp(pointingParameter,"AAzTltCos")) {
+                     aztilt_cos=atof(opticalValue);
+                     raztilt_cos=atof(radioValue);
+                        numParameters++;
+                     }
+                     if(!strcmp(pointingParameter,"AAzTltSin2")) {
+                     aztilt_sin2=atof(opticalValue);
+                     raztilt_sin2=atof(radioValue);
+                        numParameters++;
+                     }
+                     if(!strcmp(pointingParameter,"AAzTltCos2")) {
+                     aztilt_cos2=atof(opticalValue);
+                     raztilt_cos2=atof(radioValue);
+                        numParameters++;
+                     }
+
+                     if(!strcmp(pointingParameter,"AzEncSin")) {
+                     azenc_sin=atof(opticalValue);
+                     razenc_sin=atof(radioValue);
+                        numParameters++;
+                     }
+                     if(!strcmp(pointingParameter,"AzEncCos")) {
+                     azenc_cos=atof(opticalValue);
+                     razenc_cos=atof(radioValue);
+                        numParameters++;
+                     }
+                     if(!strcmp(pointingParameter,"AzEncSin2")) {
+                     azenc_sin2=atof(opticalValue);
+                     razenc_sin2=atof(radioValue);
+                        numParameters++;
+                     }
+                     if(!strcmp(pointingParameter,"AzEncCos2")) {
+                     azenc_cos2=atof(opticalValue);
+                     razenc_cos2=atof(radioValue);
+                        numParameters++;
+                     }
+                     if(!strcmp(pointingParameter,"AzEncSin3")) {
+                     azenc_sin3=atof(opticalValue);
+                     razenc_sin3=atof(radioValue);
+                        numParameters++;
+                     }
+                     if(!strcmp(pointingParameter,"AzEncCos3")) {
+                     azenc_cos3=atof(opticalValue);
+                     razenc_cos3=atof(radioValue);
+                        numParameters++;
+                     }
+                     if(!strcmp(pointingParameter,"AzRms")) {
+                     azmodelrms=atof(opticalValue);
+                     razmodelrms=atof(radioValue);
+                        numParameters++;
+                     }
+                     if(!strcmp(pointingParameter,"ElDC")) {
+                     eldc=atof(opticalValue);
+                     reldc=atof(radioValue);
+                        numParameters++;
+                     }
+                     if(!strcmp(pointingParameter,"ElSag")) {
+                     elsag=atof(opticalValue);
+                     relsag=atof(radioValue);
+                        numParameters++;
+                     }
+                     if(!strcmp(pointingParameter,"EAzTltSin")) {
+                     eaztilt_sin=atof(opticalValue);
+                     reaztilt_sin=atof(radioValue);
+                        numParameters++;
+                     }
+                     if(!strcmp(pointingParameter,"EAzTltCos")) {
+                     eaztilt_cos=atof(opticalValue);
+                     reaztilt_cos=atof(radioValue);
+                        numParameters++;
+                     }
+                     if(!strcmp(pointingParameter,"EAzTltSin2")) {
+                     eaztilt_sin2=atof(opticalValue);
+                     reaztilt_sin2=atof(radioValue);
+                        numParameters++;
+                     }
+                     if(!strcmp(pointingParameter,"EAzTltCos2")) {
+                     eaztilt_cos2=atof(opticalValue);
+                     reaztilt_cos2=atof(radioValue);
+                        numParameters++;
+                     }
+                     if(!strcmp(pointingParameter,"ElRms")) {
+                     elmodelrms=atof(opticalValue);
+                     relmodelrms=atof(radioValue);
+                        numParameters++;
+                     }
+                     if(!strcmp(pointingParameter,"TiltFlag")) {
+                     defaultTiltFlag=(int)atof(opticalValue);
+                     rdefaultTiltFlag=(int)atof(radioValue);
+		     setTiltflag=defaultTiltFlag;
+                        numParameters++;
+                     }
+                     if(!strcmp(pointingParameter,"Date")) {
+                     strcpy(modeldate,opticalValue);
+                     strcpy(rmodeldate,radioValue);
+                        numParameters++;
+                     }
+
+                }
+
+        }

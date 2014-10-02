@@ -1,0 +1,5 @@
+ssh crate4 c2dc_control -r 3 upper rdatten | awk '{print $7}'
+set atten = `ssh crate4 c2dc_control -r 3 upper rdatten | awk '{print $7+3}'`
+echo $atten
+ssh crate4 c2dc_control -r 3 upper setatten . . $atten .
+ssh crate4 c2dc_control -r 3 upper rdatten | awk '{print $7}'

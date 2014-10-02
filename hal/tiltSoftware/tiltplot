@@ -1,0 +1,78 @@
+#!/usr/local/bin/perl
+$xmin=shift;
+$xmax=shift;
+$ymin=shift;
+$ymax=shift;
+$plotlabel=shift;
+use PGPLOT;
+open(FILE,"fitdata")||die "could not find fitresults file";
+open(FILE2,"fitresults")||die "could not find fitresults file";
+while(<FILE2>){
+($filename, $timestamp,$antenna,$pad,$tiltmeter,$elevation,
+$sunaz,$sunel,$cabintemp,$ambienttemp,$windspeed,$winddirection,
+$tiltmagnitude,$tiltdirection,$dc,$dcerror,$sin,$sinerror, 
+$cos,$coserror,$sin2,$sin2error,$cos2,$cos2error,$sin3,$sin3error,
+$cos3,$cos3error,$rms,$reducedchisquare)=split;
+}
+close(FILE2);
+
+$i=-1;
+while (<FILE>) {
+$i++;
+($az[$i],$t1[$i],$tt[$i],$tr[$i])=split(' ',$_);
+}
+$i++;
+close(FILE);
+
+#&pgbegin(0,"/XSERVE",1,1);
+if($xmin eq "") {
+$xmin=0;$xmax=360;$ymin=-250;$ymax=250;
+}
+
+$cscale=1;
+
+&pgbegin(0,"/XSERVE",1,1);
+&pgsch($cscale);
+&pgenv($xmin,$xmax,$ymin,$ymax,0,0);
+&pglabel("Azimuth(deg)","Tilt(arcseconds)","$plotlabel");
+&pgpoint($i,*az,*t1,1);
+&pgsci(2);
+&pgpoint($i,*az,*tt,1);
+&pgsci(3);
+&pgpoint($i,*az,*tr,1);
+&pgsci(1);
+&pgmove($xmax,$ymin);
+$step=($xmax-$xmin)/70.;
+$string1="file:$filename, tiltmeter:$tiltmeter, datetime:$timestamp, antenna:$antenna, pad:$pad, el:$elevation deg";
+$string2= "SunAz:$sunaz deg, SunEl:$sunel deg, CabinTemp:$cabintemp C, AmbientTemp:$ambienttemp, WindSpeed:$windspeed m/s, WindDir:$winddirection deg(N:0 E:90)";
+$string3= "Coefficients (\"): DC=$dc+/-$dcerror, Sin=$sin+/-$sinerror, Cos=$cos+/-$coserror, Sin2=$sin2+/-$sin2error, Cos2=$cos2+/-$cos2error";
+$string4= "Sin3=$sin3+/-$sin3error, Cos3=$cos3+/-$cos3error, Rms=$rms, ReducedChiSq=$reducedchisquare";
+$string5= "Tilt magnitude=$tiltmagnitude\", direction=$tiltdirection deg";
+&pgsch(0.5);
+&pgptxt($xmax+$step,$ymin,90.,0.,$string1);
+&pgptxt($xmax+2.*$step,$ymin,90.,0.,$string2);
+&pgptxt($xmax+3.*$step,$ymin,90.,0.,$string3);
+&pgptxt($xmax+4.*$step,$ymin,90.,0.,$string4);
+&pgptxt($xmax+5.*$step,$ymin,90.,0.,$string5);
+&pgsch(0.5);
+&pgend;
+
+
+#now for pgplot.ps:
+&pgbegin(0,"pgplot.ps/cps",1,1);
+&pgsci(1); &pgscf(1); &pgsch(1.1);
+&pgenv($xmin,$xmax,$ymin,$ymax,0,0);
+&pglabel("Azimuth(deg)","Tilt(arcseconds)","$plotlabel");
+&pgpoint($i,*az,*t1,1);
+&pgsci(2);
+&pgpoint($i,*az,*tt,1);
+&pgsci(3);
+&pgpoint($i,*az,*tr,1);
+&pgsci(1);
+&pgsch(0.5);
+&pgptxt($xmax+$step,$ymin,90.,0.,$string1);
+&pgptxt($xmax+2.*$step,$ymin,90.,0.,$string2);
+&pgptxt($xmax+3.*$step,$ymin,90.,0.,$string3);
+&pgptxt($xmax+4.*$step,$ymin,90.,0.,$string4);
+&pgptxt($xmax+5.*$step,$ymin,90.,0.,$string5);
+&pgend;

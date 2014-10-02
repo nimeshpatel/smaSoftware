@@ -1,0 +1,410 @@
+#!/usr/bin/perl -w
+#
+# NAME:
+#	dscan
+#
+# PURPOSE:
+#	discrete rscan
+# 
+# REVISION HISTORY: 
+#	2003 May 07  Created by Kazushi Sakamoto
+#  2003 NOV 04  updated by KS
+#--
+
+#constants
+#$RADEG=180.0/3.1415926;
+$DTOR =3.1415926/180.0;
+
+$inttime_default   =  2;
+$sleep = 1.5;       # sleep between successive value commands
+$extrasleep = 3.2;  # sleep after az/eloff change
+$stepSize_default  = 8;
+$nstep_default = 15; $ntotal_default=2*$nstep_default+1;
+$repeat_default = 1;
+
+
+#-----------------------------------------------------------------------------#
+sub Usage()
+{
+my @cmd=split(/\//,$0);
+
+print "Usage: $cmd[@cmd-1] -phi 45 -a 4 -c 0 -s $stepSize_default -n $nstep_default -i $inttime_default -r 2 [-logall -help]\n";
+print "  -phi scan direction in degree, measured from positive az. \n";
+print "       -phi 0 is azscan, 90 is elscan. \n";
+print "  -a   [required] antenna number \n";
+print "  -c   center offset value in arcsec (default=current value) \n";
+print "  -s   step size in arcsec (default=$stepSize_default). negative means reverse scan\n";
+print "  -n   number of steps on each side of the center. (default=$nstep_default, total $ntotal_default points)\n";
+print "       total power is measureed at the follwoing offset positions;\n";
+print "       center-step*n,center-step*(n-1), ..., center+step*n.\n";
+print "  -i   integration time in seconds on each chopper position. (default=$inttime_default)\n";
+print "  -r   number of repeats of the chopper scans. (default=$repeat_default)\n";
+print "  -u   read total power from upper freq band. default=lower freq band (230/345)\n";
+print "  -chan [optional] specify channel of total_power [1-6]. ignored when chopping\n";
+print "  -sync use syncdet output.\n";
+print "  -logall  log all integrations without averaging \n";
+print "  -donotlog do not write a log file. useful for tests.\n";
+print "  -freq   (optional) manually set LO freq in GHz\n";
+print "  -help    print this help\n";
+}
+
+#-----------------------------------------------------------------------------#
+#------------------------------   M  A  I  N   -------------------------------#
+
+$pid=$$;
+$SIG{INT}=\&Bailout;   
+if($#ARGV==-1){&Usage;die;}
+
+use Getopt::Long;
+GetOptions("a=i"    => \$antenna,
+           "c:i"    => \$centerValue,
+           "s:i"    => \$stepSize,
+           "n:i"    => \$number,
+           "i:i"    => \$integration,
+           "r:i"    => \$repeats,
+			  "u"      => \$upperfreq,
+           "phi:f"  => \$phi,
+           "logall" => \$logall,
+			  "donotlog" => \$donotlog,
+			  "chan:i" => \$channel,
+			  "sync"   => \$sync,
+           "help"   => \$help,
+           "debug"  => \$debug,
+           "freq:f" => \$freq);
+
+if (!defined($freq)) {
+   $freq=`getLOfreq`; chomp($freq);
+   $freq=$freq/1.0e9;
+}
+if    ($freq lt 200) {$band='unknown'}
+elsif ($freq lt 300) {$band='230'; $stepSize_default=8;}
+elsif ($freq lt 400) {$band='350'; $stepSize_default=6;}
+elsif ($freq lt 600) {$band='unknown'}
+elsif ($freq lt 750) {$band='650'}
+elsif ($freq lt 900) {$band='800'}
+else                 {$band='unknown'}
+if ($debug) {print "band=$band\n"}
+if ($band eq 'unknown') {die "unknown observing band\n"}
+
+
+if($help)					{&Usage;die;}
+if(!defined($antenna))	{&Usage;die;}
+if(!defined($stepSize))		{$stepSize=$stepSize_default}
+if(!defined($number))		{$number=$nstep_default}
+if(!defined($integration))	{$integration=$inttime_default}
+if(!defined($repeats))		{$repeats=$repeat_default}
+if(!defined($centerValue))	{$centerValue=0}
+if(!defined($phi))			{$phi=0}
+if    ($phi ==  0)	{$azscan=1}
+elsif ($phi == 90)	{$elscan=1}
+else						{$noaznoel=1; $extrasleep=$extrasleep/1.5;}
+$phistring=sprintf "%4d", $phi;
+$sinphi=sin($phi*$DTOR);
+$cosphi=cos($phi*$DTOR);
+
+
+@cmd=split(/\//,$0);
+$command="$cmd[@cmd-1] -a $antenna -phi $phistring -c $centerValue -s $stepSize -n $number ";
+$command=$command."-i $integration -r $repeats ";
+if ($upperfreq) {$command=$command."-u "}
+if ($logall)    {$command=$command."-logall "}
+if ($debug)     {$command=$command."-debug "}
+print "$command \n";
+
+
+@chopX=(); @chopY=(); @chopZ=(); @chopT=(); @azo=(); @elo=();     
+ReadChopper();
+@initialpositions=($chopX[0],$chopY[0],$chopZ[0],$chopT[0],$azo[0],$elo[0]);
+PrintInitialValues();
+$initAzoff=(sprintf "%7.1f",$azo[0])+0; 
+$initEloff=(sprintf "%7.1f",$elo[0])+0; 
+
+
+@offsetvalues=();
+@azoffvalues=();
+@eloffvalues=();
+for ($n=-$number ; $n <= $number ; $n++) {
+   $offset=$centerValue + $n*$stepSize;
+	@offsetvalues=(@offsetvalues, $offset);
+	@azoffvalues =(@azoffvalues,  $offset*$cosphi + $initAzoff);
+	@eloffvalues =(@eloffvalues,  $offset*$sinphi + $initEloff);
+} 
+if ($debug) {
+	print "offset values to be used = @offsetvalues \n";
+	print "azoff values to be used = @azoffvalues \n";
+	print "eloff values to be used = @eloffvalues \n";
+}	
+$npos=@azoffvalues;
+
+
+$source=`value -a $antenna -v source`; chomp($source);
+$source =~ s/\s+//g;
+if ($debug) {print "source=$source\n"}
+
+
+$date=`/bin/date +"%Y-%m-%d"`; chomp($date);
+if ($debug) {print "date = $date\n"}
+$filename="/data/engineering/dscan/ant$antenna.$band.$date.dscan";
+if ($donotlog) {$filename='/dev/null'}
+if ( open(LOGFILE,">>$filename") ) {
+   print "log file $filename has been opened\n";
+} else {
+   die "Error! Can't open/create $filename\n";
+}
+
+use FileHandle;
+LOGFILE -> autoflush(1);  
+
+
+if ($upperfreq) 	{$rm_variable="cont2_det1"} 
+else 					{$rm_variable="cont1_det1"} 
+if (defined($channel)) {
+	if 		($channel==1) {$rm_variable='total_power_volts'}
+	elsif	($channel==2) {$rm_variable='total_power_volts2'}
+	elsif	($channel==3) {$rm_variable='cont1_det1'}
+	elsif	($channel==4) {$rm_variable='cont2_det1'}
+	elsif	($channel==5) {$rm_variable='cont1_det2'}
+	elsif	($channel==6) {$rm_variable='cont2_det2'}
+	else					 {die "Error! unknown channel\n"}
+}
+if ($sync)			{$rm_variable='syncdet_channels_v2'}
+print "rm_variable=$rm_variable\n";
+
+
+for($rep = 1; $rep <= $repeats; $rep++) {
+   print "PID=$pid --- rep= $rep / $repeats --- \n";
+   @totalpower=();
+   @totalpower_err=();
+	@azoff=();
+	@eloff=();
+   $az_before = `value -a $antenna -v actual_az_deg`;
+   $el_before = `value -a $antenna -v actual_el_deg`;
+   $ut_before = `value -a $antenna -v utc_hours`; 
+   for($pos=0; $pos < $npos; $pos++) {
+      MoveOffset();
+		if ($pos==0) {select undef, undef, undef, 2.0}  
+                                                      
+		if (!$logall) {
+			$sum      =0.0;
+      	$squaresum=0.0;
+		}
+
+		@azof=();
+		@elof=();			
+      for($intg = 0; $intg < $integration; $intg++) {
+
+			$volts =`prio 50 value -a $antenna -v $rm_variable`; chomp($volts);
+			if ($sync) {
+				@array=split(/ /,$volts);
+				if ($upperfreq) {$volts=$array[1]} else {$volts=$array[0]}
+			}
+			$azo   =`prio 50 value -a $antenna -v azoff`; chomp($azo);
+			$elo   =`prio 50 value -a $antenna -v eloff`; chomp($elo);
+			if ($debug) {
+				printf "%2d %2d %1d %5.1f %5.1f %5.1f %5.1f $5.1f %9.5f \n",
+				$rep,$pos,$intg,$offsetvalues[$pos],$azoffvalues[$pos],$azo,
+				$eloffvalues[$pos],$elo,$volts;
+			}
+			unless ($logall) {
+	         $sum      =$sum       +$volts;
+	         $squaresum=$squaresum +$volts*$volts;
+			} else {
+		      @totalpower=(@totalpower, $volts);
+			}
+		   @azof     =(@azof,      $azo);
+		   @elof     =(@elof,      $elo);
+
+	      select undef, undef, undef, $sleep;
+      }
+
+		unless ($logall) {
+	      $mean=$sum/$integration;
+	      $stddev= sqrt( ($squaresum -$mean*$mean*$integration)/($integration-1) );
+	      if ($debug) {print "mean=$mean , stddev=$stddev\n"}
+	      $mean_err=$stddev/sqrt($integration);
+	      printf " =>  total_power= %9.5f +- %9.5f\n",$mean,$mean_err;
+	      @totalpower    =(@totalpower,    $mean    );
+	      @totalpower_err=(@totalpower_err,$mean_err);
+			@azoff = (@azoff, mean(@azof));
+			@eloff = (@eloff, mean(@elof));
+		} else {
+		   @azoff = (@azoff,      @azof);
+		   @eloff = (@eloff,      @elof);
+		}
+   }
+   $az_after = `value -a $antenna -v actual_az_deg`;
+   $el_after = `value -a $antenna -v actual_el_deg`;
+   $ut_after = `value -a $antenna -v utc_hours`; 
+   $az=($az_before + $az_after)/2;
+   $el=($el_before + $el_after)/2;
+   $ut=($ut_before + $ut_after)/2;
+
+
+   printf LOGFILE "# command = $command\n";
+   printf LOGFILE "# %s %5.2f %6.1f %6.1f %5.1f  %5d %5d %5d %6d %6.1f %6.1f %s\n",
+                   $date,$ut,$az,$el,$freq, @initialpositions,$source;
+	unless ($logall) {
+	   printf LOGFILE "#  n  offset  azoff  eloff  totalpower  ttpr_rms \n";
+	   for ($pos = 0; $pos < $npos; $pos++) {
+	      printf LOGFILE " %3d  %6.1f %6.1f %6.1f %9.5f  %9.5f\n",
+	         $pos-$number, $offsetvalues[$pos], $azoff[$pos], $eloff[$pos],
+	         $totalpower[$pos], $totalpower_err[$pos];
+	   }
+	} else {
+	   printf LOGFILE "#  n offset  azoff  eloff totalpower \n";
+		$k=0;
+	   for ($pos = 0; $pos < $npos; $pos++) {
+			for ($intg = 0; $intg < $integration; $intg++) {
+		      printf LOGFILE " %3d %6.1f %6.1f %6.1f %9.5f\n",
+		         $pos-$number, $offsetvalues[$pos], $azoff[$k], $eloff[$k],
+		         $totalpower[$k];
+				$k++;
+			}
+	   }
+	} 
+
+
+}	
+
+
+print "PID=$pid ------------------ \n";
+close(LOGFILE);
+STDOUT -> autoflush(1);
+for ($i=0; $i<3;$i++) {print "\a";sleep 1;}
+
+
+Bailout(0);
+
+
+print "\n";
+
+
+#-----------------------------------------------------------------------------#
+sub Bailout 
+{
+if ($_[0] eq 1) {print "Interrupted! \n"}
+PrintInitialValues();
+print "Trying to restore the initial state ...\n";
+doCommand("prio 50 azoff -a $antenna -s $initAzoff");
+sleep 1;
+doCommand("prio 50 eloff -a $antenna -s $initEloff");
+exit(0);
+} 
+
+#-----------------------------------------------------------------------------#
+sub MoveOffset {
+
+   my $azcmd;
+   my $elcmd;
+
+   unless ($elscan) {
+	   $azcmd=sprintf "%-22s %6.1f  ", "prio 50 azoff -a $antenna -s ",$azoffvalues[$pos];
+		doCommand($azcmd,1);
+		select undef, undef, undef, $extrasleep;
+	}
+	if ($noaznoel && !$logall) {print "\n"}
+   unless ($azscan) {
+		$elcmd=sprintf "%-22s %6.1f  ", "prio 50 eloff -a $antenna -s ",$eloffvalues[$pos];
+		doCommand($elcmd,!$logall);
+		select undef, undef, undef, $extrasleep;
+	}
+
+
+}
+
+#-----------------------------------------------------------------------------#
+sub PrintInitialValues {
+	printf "parameters before starting the script:\n";
+	printf " choperX=%7.3f, Y=%7.3f, Z=%7.3f, T=%7.2f, ",@initialpositions[0,1,2,3];
+	printf " azoff=%7.1f, eloff=%7.1f\n",@initialpositions[4,5];
+}
+
+#-----------------------------------------------------------------------------#
+sub ReadChopper {
+  my $val;
+  my @array;
+
+  $val=`prio 50 value -a $antenna -v chopper_pos_mm_v4`;
+  chomp($val);
+  @array=split(/ /,$val);
+  @chopX=(@chopX,$array[0]);
+  @chopY=(@chopY,$array[1]);
+  @chopZ=(@chopZ,$array[2]);
+  @chopT=(@chopT,$array[3]);
+
+  $val=`prio 50 value -a $antenna -v azoff`;
+  chomp($val);
+  @azo=(@azo,$val);  
+
+  $val=`prio 50 value -a $antenna -v eloff`;
+  chomp($val);
+  @elo=(@elo,$val);
+}
+
+#-----------------------------------------------------------------------------#
+sub doCommand {
+   unless ($_[1]) { 
+      print "$_[0]\n";        
+   } else {
+      print "$_[0] ";         
+   }
+   system("$_[0]");           
+   select undef, undef, undef, 0.2;		  
+}
+
+#-----------------------------------------------------------------------------#
+sub mean {
+  my $sum=0;    
+  my $num=@_;  
+
+  foreach $_ (@_) { $sum += $_ }
+
+  return $sum/$num;
+}
+
+#-----------------------------------------------------------------------------#
+sub average {    
+  my $sum=0; 
+  my $sum2=0;
+  my $num=@_;
+  my ($ave,$ave2);
+
+	foreach $_ (@_) {
+		$sum  += $_;
+		$sum2 += $_**2;
+	 }
+ 
+	$ave =$sum/$num;
+	$ave2=$sum2/$num;
+
+  return ( $ave, sqrt( ($ave2 - $ave**2)/($num-1) ) );
+}
+
+#-----------------------------------------------------------------------------#
+sub wtaverage {
+	my $ndata=@_/2;   
+	my @x=@_[(0      .. $ndata  -1)];
+	my @s=@_[($ndata .. $ndata*2-1)];
+	my ($i,$w);
+	my $sum1=0;    
+	my $sum2=0;
+
+	for ($i=0;$i<$ndata;$i++) {
+		$w	= $s[$i]**-2;
+		$sum1 += $x[$i]*$w;
+		$sum2 += $w
+	}
+ 
+	return ($sum1/$sum2, 1.0/sqrt($sum2));
+}
+#-----------------------------------------------------------------------------#
+sub total {    
+  my $sum=0;  
+
+  foreach $_ (@_) { $sum += $_ }
+ 
+  return $sum;
+}
+
+#-----------------------------------------------------------------------------#
+

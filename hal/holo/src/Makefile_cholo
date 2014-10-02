@@ -1,0 +1,27 @@
+BINROOT = ../test
+BIN = $(BINROOT)/
+INC = ../includeFiles
+RPC = ../rpcFiles
+LIB = ../../lib
+PINC = $(HALAPP)/smapopt
+ALLDEPS = ./Makefile_cholo
+SLA = $(COMMONLIB)
+CINC = $(COMMONINC)
+RINC = $(COMMON)/reflmem/api/
+RLIB = $(COMMON)/reflmem/api/rm.o
+GINC = /global/include
+AINC = $(HALAPP)/include
+ALL: $(BINROOT) $(BIN) $(BIN)cholo_new_1
+
+$(BINROOT):
+	mkdir $(BINROOT)
+
+$(BIN):
+	mkdir $(BIN)
+
+$(BIN)cholo_new_1: cholo_new_1.c $(ALLDEPS)
+	gcc -g -g -o cholo_new_1 -I$(GINC) -I$(INC) -I$(CINC) -I$(PINC) \
+	-I$(RINC) -I$(AINC) cholo_new_1.c  $(COMMONLIB)/commonLib \
+	$(PINC)/libsmapopt.a  -mthreads $(COMMONLIB)/libdsm.a \
+	$(LIB)/crateLib $(COMMONLIB)/commonLib $(COMMONLIB)/ph.o \
+	$(RLIB) -lrpc -lnetinet

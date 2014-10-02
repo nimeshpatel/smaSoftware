@@ -1,0 +1,504 @@
+/***************************************************************
+*
+* project.c
+* 
+* SMAsh command for creating a project definition
+* NAP 
+* 2 January 2001
+* modified on 14 June 2001 for logging the command
+* and for specifying which antennas are to be included
+* in the interferometer.
+*
+* 8 April 2003
+* Lots of changes.
+* SMAPopt compliant, hence scriptable.
+* Added several new command-line switches.
+*
+****************************************************************/
+
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <smapopt.h>
+#include <time.h>
+#include "rm.h"
+#include "dsm.h"
+#include "smapopt.h"
+
+#define PI_STRING_SIZE 30
+#define DESC_STRING_SIZE 256
+#define ANT_ARRAY_SZ (sizeof(antennaArray)/sizeof(antennaArray[0]))
+#define CRATES_ARRAY_SZ (sizeof(crateArray)/sizeof(crateArray[0]))
+
+extern void sendHUPToCorrelator();
+
+void main(int argc, char**argv)  
+{
+	FILE *fp_projectID,*fpAntennaFile,*fpCrateFile;
+	char c;
+	int antennaArray[SMAPOPT_MAX_ANTENNAS+1],antennas[SMAPOPT_MAX_ANTENNAS+1];
+	char projectPI[RM_ARRAY_SIZE * PI_STRING_SIZE],
+		projectDescription[RM_ARRAY_SIZE * DESC_STRING_SIZE];
+	char dsmProjectPI[30],dsmProjectDescription[256], scriptFilename[256];
+	char *_projectPI;
+	char *_projectDescription;
+	char *_scriptFilename;
+	char *_comment,*_observer,*_operatingLocation;
+	char comment[256],observer[30],operatingLocation[256];
+	int iant,numberOfAnts=0;	
+	short antennaStatus;
+	int dsm_status,rm_status,antlist[RM_ARRAY_SIZE];
+	int projectID[RM_ARRAY_SIZE],currentProjectID;
+	int i,status;
+	int errorInSwitch;
+	struct timeval tv;
+	struct timezone tz;
+	int seconds;
+	int scriptPID, scriptPIDFlag=0, scriptFilenameFlag=0;
+	int cratesFlag=0,numberOfCrates=0,icrate,crateArray[SMAPOPT_MAX_CRATES+1];
+	int crates[SMAPOPT_MAX_CRATES+1];
+
+	int corrDataType=1;
+	
+	smapoptContext optCon;
+	
+	struct  smapoptOption optionsTable[] = {
+                {"antennas",'a',SMAPOPT_ARG_ANTENNAS,antennaArray,'a',
+                "a comma-separated list of antennas"},
+                {"Crates",'C',SMAPOPT_ARG_CRATES,crateArray,'C',
+                "a comma-separated list of correlator crates"},
+                {"status",'s',SMAPOPT_ARG_INT,&status,'s',
+                "status: integer 1: interferometry, 2: holography, 3: pointing, 
+			4: engineering, 0: idle, -1: lockout"},
+                {"DataType",'D',SMAPOPT_ARG_INT,&corrDataType,'D',
+                "an integer characterizing the correlator data type: 
+		 1(default): science, 2: engineering, 3: holography, 
+		 4: pointing and 0: junk"},
+                {"pi",'p',SMAPOPT_ARG_STRING,&_projectPI,'p',
+                "Name of PI (enclose in double quotes if giving full name)"},
+                {"observer",'o',SMAPOPT_ARG_STRING,&_observer,'o',
+                "Name of collaborator/co-observer (enclose in double quotes if giving full name)"},
+                {"location",'l',SMAPOPT_ARG_STRING,&_operatingLocation,'l',
+                "operating location (Summit, Hilo, Cambridge, Taipei)"},
+                {"description",'d',SMAPOPT_ARG_STRING,&_projectDescription,'d',
+                "brief description of project"},
+                {"comment",'c',SMAPOPT_ARG_STRING,&_comment,'c',
+                "Comment (e.g., phone number where observer can be reached)"},
+                {"filename",'f',SMAPOPT_ARG_STRING,&_scriptFilename,'f',
+                "Filename of observing script (with full path)"},
+                {"idprocess",'i',SMAPOPT_ARG_INT,&scriptPID,'i',
+                "PID of observing script"},
+                {"verbose",'v',SMAPOPT_ARG_NONE,0,'v',
+                "verbose flag (for some mostly useless feedback)"},
+                {"revise",'r',SMAPOPT_ARG_NONE,0,'r',
+                "revise existing project (using additional input parameters)"},
+                SMAPOPT_AUTOHELP
+                {NULL,'\0',0,NULL,0},
+                "This command initiates an observing run on the SMA. \n
+		--help gives a detailed usage.\n"
+        };
+/*
+		-r (optional) - to revise existing project- will not generate \n
+				a new project id.\n
+		-a a comma separated list of antennas to include in the project\n
+			or to revise the status\n
+		-s status - an integer specifying how the antenna is to be used\n
+			in the project: -1: lockout, 0: idle, 1: inteferometry\n
+			2: holography, 3: pointing, 4: engineering.\n"
+*/
+
+	int antennaFlag=0, statusFlag=0, reviseFlag=0;
+	int verboseFlag=0,corrDataFlag=0;
+	int piFlag=0,observerFlag=0,commentFlag=0;
+	int locationFlag=0,descriptionFlag=0;
+	int antennaLockOutStatus, antennaGiven,jant;
+	short dummyShort;
+
+
+	/* END of variables declarations */
+
+	optCon = smapoptGetContext("projectCommand", argc, argv, optionsTable,
+                        SMAPOPT_CONTEXT_EXPLAIN);
+
+        while ((c = smapoptGetNextOpt(optCon)) >= 0) {
+
+                switch(c) {
+
+                case 'a' :
+                antennaFlag=1;
+                break;
+
+                case 'C' :
+                cratesFlag=1;
+                break;
+
+                case 'r':
+                reviseFlag=1;
+                break;
+
+                case 'v':
+                verboseFlag=1;
+                break;
+
+                case 's':
+                statusFlag=1;
+                break;
+
+		case 'D':
+		corrDataFlag=1;
+		break;
+
+		case 'p':
+		piFlag=1;
+		break;
+
+		case 'o':
+		observerFlag=1;
+		break;
+
+		case 'l':
+		locationFlag=1;
+		break;
+
+		case 'd':
+		descriptionFlag=1;
+		break;
+
+		case 'c':
+		commentFlag=1;
+		break;
+
+		case 'f':
+		scriptFilenameFlag=1;
+		break;
+
+		case 'i':
+		scriptPIDFlag=1;
+		break;
+
+                }
+        }
+
+/* check whether the input switches are in correct combinations:
+if revise flag is set- 
+	any of these are OK in any combination:
+		pi, observer, location, description, comment.
+	but, if antenna flag is given, status should also be set.
+if revise flag is not set- then it must be a new project, and the following
+	are required to be set:
+	antenna AND status,
+	pi, location and description.
+	Comment and observer are optional..
+*/
+
+	errorInSwitch=0;
+
+	if((antennaFlag==1)||(statusFlag==1)) {
+	if(!((antennaFlag==1)&&(statusFlag==1)))  errorInSwitch=1;
+	}
+
+	if(reviseFlag==0) {
+	if(!(antennaFlag&&statusFlag&&piFlag&&locationFlag&&descriptionFlag)) 
+			errorInSwitch=1;
+	} 
+
+	if(errorInSwitch==1) {
+	printf("Some required input parameters are missing. Please type project --help
+	for correct usage and reissue the project command.\n");
+	exit(-1);
+	}
+
+
+
+        /* initializing ref. mem. and dsm */
+        rm_status=rm_open(antlist);
+        if(rm_status != RM_SUCCESS) {
+                rm_error_message(rm_status,"rm_open()");
+                exit(1);
+        }
+
+	dsm_status = dsm_open();
+	if(dsm_status != DSM_SUCCESS) {
+	  dsm_error_message(dsm_status, "dsm_open");
+	  exit(-1);
+	}
+
+	if(antennaFlag==1) {
+		numberOfAnts=0;
+		 for(iant=1;iant<ANT_ARRAY_SZ;iant++) {
+       	            if(antennaArray[iant]==1) {
+       	            antennas[numberOfAnts]=iant;
+       	            numberOfAnts++;
+       	            }
+       		 }
+	}
+
+
+	if(cratesFlag==1) {
+  	fpCrateFile= fopen("/global/projects/cratesInArray","w");
+		numberOfCrates=0;
+		 for(icrate=1;icrate<CRATES_ARRAY_SZ;icrate++) {
+       	            if(crateArray[icrate]==1) {
+			fprintf(fpCrateFile,"%d ",icrate);
+       	            numberOfCrates++;
+       	            }
+       		 }
+	fclose(fpCrateFile);
+	}
+
+
+	if((antennaFlag==1) && (reviseFlag!=1)) {
+	
+#if 0
+	/* check if any of the requested antennas are used for engineering tests 
+		or have been locked-out */
+	antennaLockOutStatus=0;	
+	for(iant=0;iant<numberOfAnts;iant++) {
+	rm_status=rm_read(antennas[iant],"RM_ANTENNA_STATUS_S", &antennaStatus);
+
+
+		if (antennaStatus==-1) {
+		printf("Antenna %d is locked out!\n",antennas[iant]);
+		fprintf(stderr,"Antenna %d is locked out!\n",antennas[iant]);
+		antennaLockOutStatus=-1;	
+		}
+		if (antennaStatus==4) {
+		printf("Antenna %d is busy with an engineering test.\n",antennas[iant]);
+	fprintf(stderr,"Antenna %d is busy with an engineering test.\n",antennas[iant]);
+		antennaLockOutStatus=4;	
+		}
+	}
+	if((antennaLockOutStatus==-1)&&(antennaLockOutStatus==4)) {
+	printf("Some of the requested antennas were not available. 
+	Please re-issue the project command with a revised list of antennas.\n");
+	fprintf(stderr,
+		"Some of the requested antennas were not available. 
+	       Please re-issue the project command with a revised list of antennas.\n");
+	exit(-1);
+	}
+#endif
+
+
+	fpAntennaFile= fopen("/global/projects/antennasInArray","w");
+		for(iant=0;iant<numberOfAnts;iant++) {
+		fprintf(fpAntennaFile,"%d ",antennas[iant]);
+		dummyShort=(short)status;
+		rm_status=rm_write(antennas[iant],"RM_ANTENNA_STATUS_S", &dummyShort);
+        	}
+	fclose(fpAntennaFile);
+
+
+	/* update the project ID if this is a new interferometry project*/
+	if(status==1) {
+
+		fp_projectID = fopen("/application/bin/project.id","r+");
+		if(fp_projectID==NULL) {
+		fprintf(stderr,"Failed to open the project.id file.\n");
+		exit(-1);
+		}
+
+	fscanf(fp_projectID,"%d",&currentProjectID);
+	for(i=0;i<RM_ARRAY_SIZE;i++) projectID[i] = currentProjectID + 1;
+	rewind(fp_projectID);
+	fprintf(fp_projectID,"%d",projectID[0]);
+    	if(verboseFlag==1) printf("projectID=%d\n",projectID[0]);
+    	fclose(fp_projectID);
+	rm_status|=rm_write(RM_ANT_ALL,"RM_PROJECT_ID_L", &projectID);
+	dsm_status = dsm_write("m5","DSM_AS_PROJECT_ID_L",&projectID);
+	if(dsm_status != DSM_SUCCESS) {
+                dsm_error_message(dsm_status,"dsm_write() projectID");
+		exit(1);
+		}
+
+	/* write the starting time of the project in dsm for
+	   keeping track of how stale this project becomes if it
+	   is not ended by the endProject command by a careless observer */
+
+	gettimeofday(&tv,&tz);
+	seconds = tv.tv_sec;
+	dsm_status=dsm_write("m5","DSM_AS_PROJECT_STARTTIME_L",&seconds);
+	if(dsm_status != DSM_SUCCESS) {
+                dsm_error_message(dsm_status,"dsm_write() startTime");
+		exit(1);
+		}
+		
+	    } /* if status =1 (interferometry) */ 
+
+	} /* if this is a new project */
+
+
+
+
+printf("reviseFlag=%d antennaFlag=%d status=%d numberOfAnts=%d\n",
+	reviseFlag,antennaFlag,status,numberOfAnts);
+	if ((reviseFlag==1)&&(antennaFlag==1)) {
+		if(status==1) {
+		   fpAntennaFile= fopen("/global/projects/antennasInArray","w");
+		   for(iant=0;iant<numberOfAnts;iant++) {
+		   fprintf(fpAntennaFile,"%d ",antennas[iant]);
+		   dummyShort=(short)status;
+	rm_status=rm_write(antennas[iant],"RM_ANTENNA_STATUS_S", &dummyShort);
+        	   }
+		   fclose(fpAntennaFile);
+		}/* if status is set to 1 (interferometry)*/
+
+		else {
+
+		   fpAntennaFile= fopen("/global/projects/antennasInArray","w");
+
+/*
+For antennas 1 to 8,
+	check current status in RM.
+	if currentstatus is 1 and this is not one of the given antennas,
+		write this antenna number into the file. 
+*/
+		        for(iant=1;iant<=8;iant++) {
+			i=0;
+		        antennaGiven=0;
+			while(antlist[i] != RM_ANT_LIST_END)
+			 if(iant == antlist[i++]) {
+		         rm_read(iant,"RM_ANTENNA_STATUS_S", &antennaStatus);
+			   for(jant=0;jant<numberOfAnts;jant++) {
+			   if(iant==antennas[jant]) antennaGiven=1;
+			   }
+			   if((antennaStatus==1)&&(antennaGiven==0)) {
+		   	   fprintf(fpAntennaFile,"%d ",iant);
+			   }
+			 }
+			}
+		   fclose(fpAntennaFile);
+
+
+/*
+For all given antennas, write given status in RM.
+*/
+	
+			for(jant=0;jant<numberOfAnts;jant++) {
+			dummyShort=(short)status;
+			rm_status=rm_write(antennas[jant],
+				"RM_ANTENNA_STATUS_S", &dummyShort);
+			}
+		 
+		}/* if status is other than for interferometry */
+	}
+	
+		
+	if(piFlag==1) {
+	strcpy(dsmProjectPI,_projectPI);
+	if(verboseFlag==1) printf("project pi = %s\n",_projectPI);
+	for(i=0;i<RM_ARRAY_SIZE;i++) strcpy(projectPI +i*PI_STRING_SIZE,_projectPI);
+	rm_status=rm_write(RM_ANT_ALL,"RM_PROJECT_PI_C30", projectPI);
+	dsm_status=dsm_write("m5","DSM_AS_PROJECT_PI_C30", dsmProjectPI);
+	if(dsm_status != DSM_SUCCESS) {
+                dsm_error_message(dsm_status,"dsm_write() projectPI");
+		exit(1);
+		}
+
+	}
+
+	if(descriptionFlag==1) {
+	strcpy(dsmProjectDescription,_projectDescription);
+	if(verboseFlag==1) printf("project description = %s\n",_projectDescription);
+	for(i=0;i<RM_ARRAY_SIZE;i++) strcpy(projectDescription+i*DESC_STRING_SIZE,_projectDescription);
+	rm_status|=rm_write(RM_ANT_ALL,"RM_PROJECT_DESCRIPTION_C256",
+				projectDescription);
+	dsm_status=dsm_write("m5","DSM_AS_PROJECT_DESCRIPTION_C256",
+				dsmProjectDescription);
+	if(dsm_status != DSM_SUCCESS) {
+                dsm_error_message(dsm_status,"dsm_write() projectDescription");
+		exit(1);
+	        }
+	}
+
+	if(observerFlag==1) {
+	strcpy(observer,_observer);
+	if(verboseFlag==1) printf("observer = %s\n",_observer);
+	dsm_status=dsm_write("m5","DSM_AS_PROJECT_OBSERVER_C30",observer);
+	if(dsm_status != DSM_SUCCESS) {
+                dsm_error_message(dsm_status,"dsm_write() observer");
+		exit(1);
+		}
+	}
+
+	if(locationFlag==1) {
+	strcpy(operatingLocation,_operatingLocation);
+	if (verboseFlag==1) printf("location = %s\n",_operatingLocation);
+	dsm_status=dsm_write("m5","DSM_AS_PROJECT_OPERATINGLOCATION_C256",
+				operatingLocation);
+	if(dsm_status != DSM_SUCCESS) {
+                dsm_error_message(dsm_status,"dsm_write() operatingLocation");
+		exit(1);
+		}
+	}
+
+	if(commentFlag==1) {
+	strcpy(comment,_comment);
+	if(verboseFlag==1) printf("comment = %s\n",_comment);
+	dsm_status=dsm_write("m5","DSM_AS_PROJECT_COMMENT_C256",comment);
+	if(dsm_status != DSM_SUCCESS) {
+                dsm_error_message(dsm_status,"dsm_write() comment");
+		exit(1);
+		}
+	}
+
+	if(scriptFilenameFlag==1) {
+	strcpy(scriptFilename,_scriptFilename);
+	if(verboseFlag==1) printf("script filename= %s\n",_scriptFilename);
+	dsm_status=dsm_write("m5","DSM_AS_PROJECT_SCRIPT_FILENAME_C256",scriptFilename);
+	if(dsm_status != DSM_SUCCESS) {
+                dsm_error_message(dsm_status,"dsm_write() scriptFilename");
+		exit(1);
+		}
+	} else {
+	for(i=0;i<DESC_STRING_SIZE-1;i++) scriptFilename[i]=' ';
+	scriptFilename[DESC_STRING_SIZE-1]='\0';
+	dsm_status=dsm_write("m5","DSM_AS_PROJECT_SCRIPT_FILENAME_C256",scriptFilename);
+	if(dsm_status != DSM_SUCCESS) {
+                dsm_error_message(dsm_status,"dsm_write() scriptFilename");
+		exit(1);
+		}
+	}
+
+	if(scriptPIDFlag==1) {
+	if(verboseFlag==1) printf("script PID= %d\n",scriptPID);
+	dsm_status=dsm_write("m5","DSM_AS_PROJECT_SCRIPT_PID_L",&scriptPID);
+	if(dsm_status != DSM_SUCCESS) {
+                dsm_error_message(dsm_status,"dsm_write() comment");
+		exit(1);
+		}
+	} else {
+	scriptPID=0;
+	dsm_status=dsm_write("m5","DSM_AS_PROJECT_SCRIPT_PID_L",&scriptPID);
+	if(dsm_status != DSM_SUCCESS) {
+                dsm_error_message(dsm_status,"dsm_write() comment");
+		exit(1);
+		}
+	}
+
+	if(corrDataFlag==1) {
+	if(verboseFlag==1) printf("correlator Data Type Flag= %d\n",corrDataType);
+	dsm_status=dsm_write("m5","DSM_AS_CORRDATATYPE_L",&corrDataType);
+	if(dsm_status != DSM_SUCCESS) {
+                dsm_error_message(dsm_status,"dsm_write() datatype");
+		exit(1);
+		}
+	} else {
+	corrDataType=1;
+	dsm_status=dsm_write("m5","DSM_AS_CORRDATATYPE_L",&corrDataType);
+	if(dsm_status != DSM_SUCCESS) {
+                dsm_error_message(dsm_status,"dsm_write() comment");
+		exit(1);
+		}
+	}
+	
+
+
+/* send HUP to correlator software to inform change of antennas in array */
+	
+	if((reviseFlag!=1)&&(status==1)) sendHUPToCorrelator();
+
+}

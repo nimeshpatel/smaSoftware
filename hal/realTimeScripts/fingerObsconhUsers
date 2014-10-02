@@ -1,0 +1,8 @@
+#!/bin/csh -f
+while ( 1 ) 
+  date -u +%Y" "%j" "%H" "%M" "%S > /global/obsconh.users
+  /usr/bin/finger | grep -v Login | grep -v ":0 " | grep -v \( >> /global/obsconh.users
+  /usr/bin/finger | grep \(:0.0 | grep -v Login >> /global/obsconh.users
+  sleep 60
+end
+#

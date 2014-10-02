@@ -1,0 +1,2000 @@
+Wed Jan 12 10:34:16 2005 (brownd): antennaWait -a 1,6 -s hip11784 -e 2 
+Wed Jan 12 10:34:25 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 10:34:25 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 10:34:40 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:34:43 2005 (brownd): optical 
+Wed Jan 12 10:34:45 2005 (brownd): observe -s hip11840 
+Wed Jan 12 10:34:46 2005 (brownd): antennaWait -a 1,6 -s hip11840 -e 2 
+Wed Jan 12 10:34:51 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 10:34:52 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 10:35:11 2005 (brownd): optical 
+Wed Jan 12 10:35:14 2005 (brownd): observe -s hip10340 
+Wed Jan 12 10:35:14 2005 (brownd): antennaWait -a 1,6 -s hip10340 -e 2 
+Wed Jan 12 10:35:17 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:35:24 2005 (brownd): /application/bin/snapshot -a 1,6 -s 200 -c 
+Wed Jan 12 10:35:25 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 200 -c 
+Wed Jan 12 10:35:44 2005 (brownd): optical 
+Wed Jan 12 10:35:46 2005 (brownd): observe -s hip11313 
+Wed Jan 12 10:35:46 2005 (brownd): antennaWait -a 1,6 -s hip11313 -e 2 
+Wed Jan 12 10:35:53 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:35:56 2005 (brownd): /application/bin/snapshot -a 1,6 -s 200 -c 
+Wed Jan 12 10:35:56 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 200 -c 
+Wed Jan 12 10:36:15 2005 (brownd): optical 
+Wed Jan 12 10:36:17 2005 (brownd): observe -s hip8362 
+Wed Jan 12 10:36:17 2005 (brownd): antennaWait -a 1,6 -s hip8362 -e 2 
+Wed Jan 12 10:36:26 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 10:36:26 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 10:36:28 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:36:47 2005 (brownd): optical 
+Wed Jan 12 10:36:49 2005 (brownd): observe -s hip11767 
+Wed Jan 12 10:36:49 2005 (brownd): antennaWait -a 1,6 -s hip11767 -e 2 
+Wed Jan 12 10:37:04 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:37:37 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:38:10 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:38:24 2005 (brownd): /application/bin/snapshot -a 1,6 -s 50 -c 
+Wed Jan 12 10:38:25 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 50 -c 
+Wed Jan 12 10:38:31 2005 (brownd): standby -a 6 
+Wed Jan 12 10:38:35 2005 (brownd): resume -a 6 
+Wed Jan 12 10:38:43 2005 (brownd): optical 
+Wed Jan 12 10:38:45 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:38:46 2005 (brownd): observe -s hip65536 
+Wed Jan 12 10:38:46 2005 (brownd): antennaWait -a 1,6 -s hip65536 -e 2 
+Wed Jan 12 10:39:01 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 10:39:01 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 10:39:19 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:39:23 2005 (brownd): optical 
+Wed Jan 12 10:39:25 2005 (brownd): observe -s hip66435 
+Wed Jan 12 10:39:25 2005 (brownd): antennaWait -a 1,6 -s hip66435 -e 2 
+Wed Jan 12 10:39:32 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 10:39:33 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 10:39:56 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:39:56 2005 (brownd): optical 
+Wed Jan 12 10:39:59 2005 (brownd): observe -s hip63916 
+Wed Jan 12 10:39:59 2005 (brownd): antennaWait -a 1,6 -s hip63916 -e 2 
+Wed Jan 12 10:40:14 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 10:40:14 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 10:40:30 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:40:37 2005 (brownd): optical 
+Wed Jan 12 10:40:39 2005 (brownd): observe -s hip61571 
+Wed Jan 12 10:40:40 2005 (brownd): antennaWait -a 1,6 -s hip61571 -e 2 
+Wed Jan 12 10:40:54 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 10:40:55 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 10:41:07 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:41:17 2005 (brownd): optical 
+Wed Jan 12 10:41:19 2005 (brownd): observe -s hip62356 
+Wed Jan 12 10:41:19 2005 (brownd): antennaWait -a 1,6 -s hip62356 -e 2 
+Wed Jan 12 10:41:26 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 10:41:27 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 10:41:44 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:41:49 2005 (brownd): optical 
+Wed Jan 12 10:41:52 2005 (brownd): observe -s hip61103 
+Wed Jan 12 10:41:52 2005 (brownd): antennaWait -a 1,6 -s hip61103 -e 2 
+Wed Jan 12 10:42:02 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 10:42:03 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 10:42:21 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:42:23 2005 (brownd): optical 
+Wed Jan 12 10:42:25 2005 (brownd): observe -s hip58576 
+Wed Jan 12 10:42:26 2005 (brownd): antennaWait -a 1,6 -s hip58576 -e 2 
+Wed Jan 12 10:42:40 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 10:42:41 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 10:42:54 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:43:02 2005 (brownd): optical 
+Wed Jan 12 10:43:04 2005 (brownd): observe -s hip49844 
+Wed Jan 12 10:43:05 2005 (brownd): antennaWait -a 1,6 -s hip49844 -e 2 
+Wed Jan 12 10:43:22 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 10:43:23 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 10:43:31 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:43:43 2005 (brownd): optical 
+Wed Jan 12 10:43:45 2005 (brownd): observe -s hip50103 
+Wed Jan 12 10:43:46 2005 (brownd): antennaWait -a 1,6 -s hip50103 -e 2 
+Wed Jan 12 10:43:52 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 10:43:53 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 10:44:08 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:44:12 2005 (brownd): optical 
+Wed Jan 12 10:44:14 2005 (brownd): observe -s hip50799 
+Wed Jan 12 10:44:14 2005 (brownd): antennaWait -a 1,6 -s hip50799 -e 2 
+Wed Jan 12 10:44:20 2005 (brownd): /application/bin/snapshot -a 1,6 -s 200 -c 
+Wed Jan 12 10:44:21 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 200 -c 
+Wed Jan 12 10:44:40 2005 (brownd): optical 
+Wed Jan 12 10:44:42 2005 (brownd): observe -s hip48287 
+Wed Jan 12 10:44:42 2005 (brownd): antennaWait -a 1,6 -s hip48287 -e 2 
+Wed Jan 12 10:44:44 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:44:53 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 10:44:54 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 10:45:13 2005 (brownd): optical 
+Wed Jan 12 10:45:15 2005 (brownd): observe -s hip48348 
+Wed Jan 12 10:45:15 2005 (brownd): antennaWait -a 1,6 -s hip48348 -e 2 
+Wed Jan 12 10:45:20 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:45:21 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 10:45:22 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 10:45:44 2005 (brownd): optical 
+Wed Jan 12 10:45:46 2005 (brownd): observe -s hip44511 
+Wed Jan 12 10:45:47 2005 (brownd): antennaWait -a 1,6 -s hip44511 -e 2 
+Wed Jan 12 10:45:57 2005 (brownd): /application/bin/snapshot -a 1,6 -s 100 -c 
+Wed Jan 12 10:45:58 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:45:58 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 100 -c 
+Wed Jan 12 10:46:17 2005 (brownd): optical 
+Wed Jan 12 10:46:20 2005 (brownd): observe -s hip38267 
+Wed Jan 12 10:46:20 2005 (brownd): antennaWait -a 1,6 -s hip38267 -e 2 
+Wed Jan 12 10:46:29 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 10:46:30 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 10:46:33 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:46:49 2005 (brownd): optical 
+Wed Jan 12 10:46:52 2005 (brownd): observe -s hip32494 
+Wed Jan 12 10:46:52 2005 (brownd): antennaWait -a 1,6 -s hip32494 -e 2 
+Wed Jan 12 10:47:01 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 10:47:02 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 10:47:08 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:47:21 2005 (brownd): optical 
+Wed Jan 12 10:47:23 2005 (brownd): observe -s hip32768 
+Wed Jan 12 10:47:24 2005 (brownd): antennaWait -a 1,6 -s hip32768 -e 2 
+Wed Jan 12 10:47:29 2005 (brownd): /application/bin/snapshot -a 1,6 -s 100 -c 
+Wed Jan 12 10:47:30 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 100 -c 
+Wed Jan 12 10:47:45 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:47:49 2005 (brownd): optical 
+Wed Jan 12 10:47:52 2005 (brownd): observe -s hip33357 
+Wed Jan 12 10:47:52 2005 (brownd): antennaWait -a 1,6 -s hip33357 -e 2 
+Wed Jan 12 10:48:01 2005 (brownd): /application/bin/snapshot -a 1,6 -s 200 -c 
+Wed Jan 12 10:48:02 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 200 -c 
+Wed Jan 12 10:48:21 2005 (brownd): optical 
+Wed Jan 12 10:48:23 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:48:23 2005 (brownd): observe -s hip25194 
+Wed Jan 12 10:48:24 2005 (brownd): antennaWait -a 1,6 -s hip25194 -e 2 
+Wed Jan 12 10:48:37 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 10:48:38 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 10:48:56 2005 (brownd): optical 
+Wed Jan 12 10:48:58 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:48:59 2005 (brownd): observe -s hip25993 
+Wed Jan 12 10:48:59 2005 (brownd): antennaWait -a 1,6 -s hip25993 -e 2 
+Wed Jan 12 10:49:04 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 10:49:05 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 10:49:26 2005 (brownd): /application/bin/azelstar -e 70 -w 5 -n 3 -d ccw -c 
+Wed Jan 12 10:49:28 2005 (brownd): optical 
+Wed Jan 12 10:49:30 2005 (brownd): observe -s hip34987 
+Wed Jan 12 10:49:31 2005 (brownd): antennaWait -a 1,6 -s hip34987 -e 2 
+Wed Jan 12 10:49:34 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:50:01 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 10:50:01 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 10:50:07 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:50:22 2005 (brownd): optical 
+Wed Jan 12 10:50:24 2005 (brownd): observe -s hip38962 
+Wed Jan 12 10:50:25 2005 (brownd): antennaWait -a 1,6 -s hip38962 -e 2 
+Wed Jan 12 10:50:38 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 10:50:39 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 10:50:45 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:50:58 2005 (brownd): optical 
+Wed Jan 12 10:51:00 2005 (brownd): observe -s hip39211 
+Wed Jan 12 10:51:00 2005 (brownd): antennaWait -a 1,6 -s hip39211 -e 2 
+Wed Jan 12 10:51:10 2005 (brownd): /application/bin/snapshot -a 1,6 -s 200 -c 
+Wed Jan 12 10:51:11 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 200 -c 
+Wed Jan 12 10:51:20 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:51:30 2005 (brownd): optical 
+Wed Jan 12 10:51:32 2005 (brownd): observe -s hip41299 
+Wed Jan 12 10:51:32 2005 (brownd): antennaWait -a 1,6 -s hip41299 -e 2 
+Wed Jan 12 10:51:43 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 10:51:43 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 10:51:56 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:52:03 2005 (brownd): optical 
+Wed Jan 12 10:52:05 2005 (brownd): observe -s hip42402 
+Wed Jan 12 10:52:06 2005 (brownd): antennaWait -a 1,6 -s hip42402 -e 2 
+Wed Jan 12 10:52:16 2005 (brownd): /application/bin/snapshot -a 1,6 -s 200 -c 
+Wed Jan 12 10:52:17 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 200 -c 
+Wed Jan 12 10:52:31 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:52:38 2005 (brownd): optical 
+Wed Jan 12 10:52:40 2005 (brownd): observe -s hip44406 
+Wed Jan 12 10:52:41 2005 (brownd): antennaWait -a 1,6 -s hip44406 -e 2 
+Wed Jan 12 10:52:55 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 10:52:56 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 10:53:10 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:53:14 2005 (brownd): optical 
+Wed Jan 12 10:53:16 2005 (brownd): observe -s hip44659 
+Wed Jan 12 10:53:16 2005 (brownd): antennaWait -a 1,6 -s hip44659 -e 2 
+Wed Jan 12 10:53:26 2005 (brownd): /application/bin/snapshot -a 1,6 -s 200 -c 
+Wed Jan 12 10:53:27 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 200 -c 
+Wed Jan 12 10:53:46 2005 (brownd): optical 
+Wed Jan 12 10:53:46 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:53:48 2005 (brownd): observe -s hip44406 
+Wed Jan 12 10:53:48 2005 (brownd): antennaWait -a 1,6 -s hip44406 -e 2 
+Wed Jan 12 10:53:58 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 10:53:59 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 10:54:18 2005 (brownd): optical 
+Wed Jan 12 10:54:20 2005 (brownd): observe -s hip45410 
+Wed Jan 12 10:54:20 2005 (brownd): antennaWait -a 1,6 -s hip45410 -e 2 
+Wed Jan 12 10:54:22 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:54:34 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 10:54:34 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 10:54:54 2005 (brownd): optical 
+Wed Jan 12 10:54:56 2005 (brownd): observe -s hip47189 
+Wed Jan 12 10:54:56 2005 (brownd): antennaWait -a 1,6 -s hip47189 -e 2 
+Wed Jan 12 10:54:57 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:55:06 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 10:55:07 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 10:55:26 2005 (brownd): optical 
+Wed Jan 12 10:55:28 2005 (brownd): observe -s hip46750 
+Wed Jan 12 10:55:29 2005 (brownd): antennaWait -a 1,6 -s hip46750 -e 2 
+Wed Jan 12 10:55:33 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:55:42 2005 (brownd): /application/bin/snapshot -a 1,6 -s 200 -c 
+Wed Jan 12 10:55:43 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 200 -c 
+Wed Jan 12 10:56:02 2005 (brownd): optical 
+Wed Jan 12 10:56:04 2005 (brownd): observe -s hip46146 
+Wed Jan 12 10:56:04 2005 (brownd): antennaWait -a 1,6 -s hip46146 -e 2 
+Wed Jan 12 10:56:08 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:56:14 2005 (brownd): /application/bin/snapshot -a 1,6 -s 200 -c 
+Wed Jan 12 10:56:14 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 200 -c 
+Wed Jan 12 10:56:32 2005 (brownd): optical 
+Wed Jan 12 10:56:34 2005 (brownd): observe -s hip46750 
+Wed Jan 12 10:56:35 2005 (brownd): antennaWait -a 1,6 -s hip46750 -e 2 
+Wed Jan 12 10:56:43 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:56:44 2005 (brownd): /application/bin/snapshot -a 1,6 -s 200 -c 
+Wed Jan 12 10:56:45 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 200 -c 
+Wed Jan 12 10:57:03 2005 (brownd): optical 
+Wed Jan 12 10:57:06 2005 (brownd): observe -s hip46146 
+Wed Jan 12 10:57:06 2005 (brownd): antennaWait -a 1,6 -s hip46146 -e 2 
+Wed Jan 12 10:57:15 2005 (brownd): /application/bin/snapshot -a 1,6 -s 200 -c 
+Wed Jan 12 10:57:16 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 200 -c 
+Wed Jan 12 10:57:19 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:57:36 2005 (brownd): optical 
+Wed Jan 12 10:57:38 2005 (brownd): observe -s hip45058 
+Wed Jan 12 10:57:38 2005 (brownd): antennaWait -a 1,6 -s hip45058 -e 2 
+Wed Jan 12 10:57:48 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 10:57:49 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 10:57:54 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:58:10 2005 (brownd): optical 
+Wed Jan 12 10:58:12 2005 (brownd): observe -s hip41935 
+Wed Jan 12 10:58:13 2005 (brownd): antennaWait -a 1,6 -s hip41935 -e 2 
+Wed Jan 12 10:58:26 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 10:58:27 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 10:58:32 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:58:47 2005 (brownd): optical 
+Wed Jan 12 10:58:49 2005 (brownd): observe -s hip41935 
+Wed Jan 12 10:58:49 2005 (brownd): antennaWait -a 1,6 -s hip41935 -e 2 
+Wed Jan 12 10:58:54 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 10:58:54 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 10:59:10 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:59:15 2005 (brownd): optical 
+Wed Jan 12 10:59:17 2005 (brownd): observe -s hip37369 
+Wed Jan 12 10:59:17 2005 (brownd): antennaWait -a 1,6 -s hip37369 -e 2 
+Wed Jan 12 10:59:32 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 10:59:32 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 10:59:45 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 10:59:51 2005 (brownd): optical 
+Wed Jan 12 10:59:54 2005 (brownd): observe -s hip37946 
+Wed Jan 12 10:59:54 2005 (brownd): antennaWait -a 1,6 -s hip37946 -e 2 
+Wed Jan 12 11:00:03 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:00:04 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:00:22 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:00:24 2005 (brownd): optical 
+Wed Jan 12 11:00:26 2005 (brownd): observe -s hip35710 
+Wed Jan 12 11:00:26 2005 (brownd): antennaWait -a 1,6 -s hip35710 -e 2 
+Wed Jan 12 11:00:36 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:00:36 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:00:55 2005 (brownd): optical 
+Wed Jan 12 11:00:57 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:00:58 2005 (brownd): observe -s hip35907 
+Wed Jan 12 11:00:58 2005 (brownd): antennaWait -a 1,6 -s hip35907 -e 2 
+Wed Jan 12 11:01:08 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:01:09 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:01:28 2005 (brownd): optical 
+Wed Jan 12 11:01:30 2005 (brownd): observe -s hip37369 
+Wed Jan 12 11:01:30 2005 (brownd): antennaWait -a 1,6 -s hip37369 -e 2 
+Wed Jan 12 11:01:33 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:01:40 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:01:41 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:02:00 2005 (brownd): optical 
+Wed Jan 12 11:02:02 2005 (brownd): observe -s hip35710 
+Wed Jan 12 11:02:03 2005 (brownd): antennaWait -a 1,6 -s hip35710 -e 2 
+Wed Jan 12 11:02:08 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:02:12 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:02:13 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:02:32 2005 (brownd): optical 
+Wed Jan 12 11:02:35 2005 (brownd): observe -s hip34358 
+Wed Jan 12 11:02:35 2005 (brownd): antennaWait -a 1,6 -s hip34358 -e 2 
+Wed Jan 12 11:02:44 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:02:44 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:02:45 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:03:05 2005 (brownd): optical 
+Wed Jan 12 11:03:07 2005 (brownd): observe -s hip32740 
+Wed Jan 12 11:03:07 2005 (brownd): antennaWait -a 1,6 -s hip32740 -e 2 
+Wed Jan 12 11:03:17 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:03:17 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:03:19 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:03:36 2005 (brownd): optical 
+Wed Jan 12 11:03:38 2005 (brownd): observe -s hip34358 
+Wed Jan 12 11:03:39 2005 (brownd): antennaWait -a 1,6 -s hip34358 -e 2 
+Wed Jan 12 11:03:49 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:03:50 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:03:55 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:04:10 2005 (brownd): optical 
+Wed Jan 12 11:04:12 2005 (brownd): observe -s hip32311 
+Wed Jan 12 11:04:12 2005 (brownd): antennaWait -a 1,6 -s hip32311 -e 2 
+Wed Jan 12 11:04:26 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:04:26 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:04:32 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:04:36 2005 (brownd): deice -h 
+Wed Jan 12 11:04:46 2005 (brownd): optical 
+Wed Jan 12 11:04:49 2005 (brownd): observe -s hip32968 
+Wed Jan 12 11:04:49 2005 (brownd): antennaWait -a 1,6 -s hip32968 -e 2 
+Wed Jan 12 11:05:00 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:05:01 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:05:09 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:05:21 2005 (brownd): optical 
+Wed Jan 12 11:05:23 2005 (brownd): observe -s hip32968 
+Wed Jan 12 11:05:23 2005 (brownd): antennaWait -a 1,6 -s hip32968 -e 2 
+Wed Jan 12 11:05:28 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:05:28 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:05:47 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:05:49 2005 (brownd): optical 
+Wed Jan 12 11:05:51 2005 (brownd): observe -s hip32249 
+Wed Jan 12 11:05:51 2005 (brownd): antennaWait -a 1,6 -s hip32249 -e 2 
+Wed Jan 12 11:06:06 2005 (brownd): /application/bin/snapshot -a 1,6 -s 200 -c 
+Wed Jan 12 11:06:06 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 200 -c 
+Wed Jan 12 11:06:23 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:06:24 2005 (brownd): optical 
+Wed Jan 12 11:06:27 2005 (brownd): observe -s hip32814 
+Wed Jan 12 11:06:27 2005 (brownd): antennaWait -a 1,6 -s hip32814 -e 2 
+Wed Jan 12 11:06:33 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:06:34 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:06:53 2005 (brownd): deice -a 2 0 
+Wed Jan 12 11:06:53 2005 (brownd): optical 
+Wed Jan 12 11:06:55 2005 (brownd): observe -s hip33715 
+Wed Jan 12 11:06:56 2005 (brownd): antennaWait -a 1,6 -s hip33715 -e 2 
+Wed Jan 12 11:07:01 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:07:05 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:07:06 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:07:25 2005 (brownd): optical 
+Wed Jan 12 11:07:28 2005 (brownd): observe -s hip32814 
+Wed Jan 12 11:07:28 2005 (brownd): antennaWait -a 1,6 -s hip32814 -e 2 
+Wed Jan 12 11:07:36 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:07:38 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:07:38 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:07:58 2005 (brownd): optical 
+Wed Jan 12 11:08:00 2005 (brownd): observe -s hip34033 
+Wed Jan 12 11:08:00 2005 (brownd): antennaWait -a 1,6 -s hip34033 -e 2 
+Wed Jan 12 11:08:11 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:08:12 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:08:12 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:08:31 2005 (brownd): optical 
+Wed Jan 12 11:08:33 2005 (brownd): observe -s hip34055 
+Wed Jan 12 11:08:33 2005 (brownd): antennaWait -a 1,6 -s hip34055 -e 2 
+Wed Jan 12 11:08:43 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:08:44 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:08:47 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:09:04 2005 (brownd): optical 
+Wed Jan 12 11:09:05 2005 (brownd): observe -s hip34033 
+Wed Jan 12 11:09:05 2005 (brownd): antennaWait -a 1,6 -s hip34033 -e 2 
+Wed Jan 12 11:09:15 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:09:15 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:09:22 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:09:34 2005 (brownd): optical 
+Wed Jan 12 11:09:36 2005 (brownd): observe -s hip34215 
+Wed Jan 12 11:09:37 2005 (brownd): antennaWait -a 1,6 -s hip34215 -e 2 
+Wed Jan 12 11:09:46 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:09:47 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:10:00 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:10:06 2005 (brownd): optical 
+Wed Jan 12 11:10:08 2005 (brownd): observe -s hip34387 
+Wed Jan 12 11:10:09 2005 (brownd): antennaWait -a 1,6 -s hip34387 -e 2 
+Wed Jan 12 11:10:18 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:10:19 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:10:37 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:10:38 2005 (brownd): optical 
+Wed Jan 12 11:10:41 2005 (brownd): observe -s hip34387 
+Wed Jan 12 11:10:41 2005 (brownd): antennaWait -a 1,6 -s hip34387 -e 2 
+Wed Jan 12 11:10:45 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:10:46 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:11:06 2005 (brownd): optical 
+Wed Jan 12 11:11:08 2005 (brownd): observe -s hip35120 
+Wed Jan 12 11:11:08 2005 (brownd): antennaWait -a 1,6 -s hip35120 -e 2 
+Wed Jan 12 11:11:13 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:11:18 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:11:19 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:11:40 2005 (brownd): /application/bin/azelstar -z 0 -d up -w 5 -n 1 -c 
+Wed Jan 12 11:11:43 2005 (brownd): optical 
+Wed Jan 12 11:11:45 2005 (brownd): observe -s hip37391 
+Wed Jan 12 11:11:45 2005 (brownd): antennaWait -a 1,6 -s hip37391 -e 2 
+Wed Jan 12 11:11:48 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:12:21 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:12:24 2005 (brownd): /application/bin/snapshot -a 1,6 -s 200 -c 
+Wed Jan 12 11:12:25 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 200 -c 
+Wed Jan 12 11:12:43 2005 (brownd): optical 
+Wed Jan 12 11:12:45 2005 (brownd): observe -s hip36547 
+Wed Jan 12 11:12:46 2005 (brownd): antennaWait -a 1,6 -s hip36547 -e 2 
+Wed Jan 12 11:12:55 2005 (brownd): /application/bin/snapshot -a 1,6 -s 200 -c 
+Wed Jan 12 11:12:56 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 200 -c 
+Wed Jan 12 11:12:57 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:13:15 2005 (brownd): optical 
+Wed Jan 12 11:13:17 2005 (brownd): observe -s hip39117 
+Wed Jan 12 11:13:17 2005 (brownd): antennaWait -a 1,6 -s hip39117 -e 2 
+Wed Jan 12 11:13:27 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:13:28 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:13:32 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:13:47 2005 (brownd): optical 
+Wed Jan 12 11:13:49 2005 (brownd): observe -s hip42527 
+Wed Jan 12 11:13:49 2005 (brownd): antennaWait -a 1,6 -s hip42527 -e 2 
+Wed Jan 12 11:14:00 2005 (brownd): /application/bin/snapshot -a 1,6 -s 200 -c 
+Wed Jan 12 11:14:01 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 200 -c 
+Wed Jan 12 11:14:10 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:14:21 2005 (brownd): optical 
+Wed Jan 12 11:14:23 2005 (brownd): observe -s hip39995 
+Wed Jan 12 11:14:23 2005 (brownd): antennaWait -a 1,6 -s hip39995 -e 2 
+Wed Jan 12 11:14:33 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:14:34 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:14:48 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:14:54 2005 (brownd): optical 
+Wed Jan 12 11:14:57 2005 (brownd): observe -s hip41075 
+Wed Jan 12 11:14:57 2005 (brownd): antennaWait -a 1,6 -s hip41075 -e 2 
+Wed Jan 12 11:15:12 2005 (brownd): /application/bin/snapshot -a 1,6 -s 200 -c 
+Wed Jan 12 11:15:12 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 200 -c 
+Wed Jan 12 11:15:24 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:15:32 2005 (brownd): optical 
+Wed Jan 12 11:15:34 2005 (brownd): observe -s hip41935 
+Wed Jan 12 11:15:34 2005 (brownd): antennaWait -a 1,6 -s hip41935 -e 2 
+Wed Jan 12 11:15:44 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:15:45 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:16:00 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:16:06 2005 (brownd): /application/bin/azelstar -z 30 -d down -w 5 -n 1 -c 
+Wed Jan 12 11:16:11 2005 (brownd): optical 
+Wed Jan 12 11:16:14 2005 (brownd): observe -s hip50546 
+Wed Jan 12 11:16:14 2005 (brownd): antennaWait -a 1,6 -s hip50546 -e 2 
+Wed Jan 12 11:16:28 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:16:28 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:16:37 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:16:47 2005 (brownd): optical 
+Wed Jan 12 11:16:49 2005 (brownd): observe -s hip52136 
+Wed Jan 12 11:16:49 2005 (brownd): antennaWait -a 1,6 -s hip52136 -e 2 
+Wed Jan 12 11:16:59 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:17:00 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:17:14 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:17:19 2005 (brownd): optical 
+Wed Jan 12 11:17:21 2005 (brownd): observe -s hip53043 
+Wed Jan 12 11:17:22 2005 (brownd): antennaWait -a 1,6 -s hip53043 -e 2 
+Wed Jan 12 11:17:31 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:17:32 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:17:51 2005 (brownd): optical 
+Wed Jan 12 11:17:52 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:17:54 2005 (brownd): observe -s hip55797 
+Wed Jan 12 11:17:54 2005 (brownd): antennaWait -a 1,6 -s hip55797 -e 2 
+Wed Jan 12 11:18:04 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:18:04 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:18:24 2005 (brownd): optical 
+Wed Jan 12 11:18:26 2005 (brownd): observe -s hip60212 
+Wed Jan 12 11:18:26 2005 (brownd): antennaWait -a 1,6 -s hip60212 -e 2 
+Wed Jan 12 11:18:27 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:18:37 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:18:38 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:19:00 2005 (brownd): /application/bin/azelstar -z 60 -d up -w 5 -n 1 -c 
+Wed Jan 12 11:19:02 2005 (brownd): optical 
+Wed Jan 12 11:19:02 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:19:04 2005 (brownd): observe -s hip67384 
+Wed Jan 12 11:19:05 2005 (brownd): antennaWait -a 1,6 -s hip67384 -e 2 
+Wed Jan 12 11:19:19 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:19:20 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:19:36 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:19:40 2005 (brownd): optical 
+Wed Jan 12 11:19:42 2005 (brownd): observe -s hip64927 
+Wed Jan 12 11:19:42 2005 (brownd): antennaWait -a 1,6 -s hip64927 -e 2 
+Wed Jan 12 11:19:53 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:19:53 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:20:13 2005 (brownd): optical 
+Wed Jan 12 11:20:13 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:20:15 2005 (brownd): observe -s hip64212 
+Wed Jan 12 11:20:16 2005 (brownd): antennaWait -a 1,6 -s hip64212 -e 2 
+Wed Jan 12 11:20:26 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:20:27 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:20:46 2005 (brownd): optical 
+Wed Jan 12 11:20:49 2005 (brownd): observe -s hip61309 
+Wed Jan 12 11:20:49 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:20:49 2005 (brownd): antennaWait -a 1,6 -s hip61309 -e 2 
+Wed Jan 12 11:21:00 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:21:00 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:21:20 2005 (brownd): optical 
+Wed Jan 12 11:21:22 2005 (brownd): observe -s hip59856 
+Wed Jan 12 11:21:22 2005 (brownd): antennaWait -a 1,6 -s hip59856 -e 2 
+Wed Jan 12 11:21:24 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:21:28 2005 (brownd): /application/bin/snapshot -a 1,6 -s 200 -c 
+Wed Jan 12 11:21:29 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 200 -c 
+Wed Jan 12 11:21:48 2005 (brownd): optical 
+Wed Jan 12 11:21:51 2005 (brownd): observe -s hip58460 
+Wed Jan 12 11:21:51 2005 (brownd): antennaWait -a 1,6 -s hip58460 -e 2 
+Wed Jan 12 11:21:59 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:22:00 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:22:01 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:22:21 2005 (brownd): optical 
+Wed Jan 12 11:22:23 2005 (brownd): observe -s hip55219 
+Wed Jan 12 11:22:23 2005 (brownd): antennaWait -a 1,6 -s hip55219 -e 2 
+Wed Jan 12 11:22:34 2005 (brownd): /application/bin/snapshot -a 1,6 -s 100 -c 
+Wed Jan 12 11:22:35 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 100 -c 
+Wed Jan 12 11:22:35 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:22:54 2005 (brownd): optical 
+Wed Jan 12 11:22:57 2005 (brownd): observe -s hip53426 
+Wed Jan 12 11:22:57 2005 (brownd): antennaWait -a 1,6 -s hip53426 -e 2 
+Wed Jan 12 11:23:06 2005 (brownd): /application/bin/snapshot -a 1,6 -s 200 -c 
+Wed Jan 12 11:23:07 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 200 -c 
+Wed Jan 12 11:23:10 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:23:26 2005 (brownd): optical 
+Wed Jan 12 11:23:28 2005 (brownd): observe -s hip52366 
+Wed Jan 12 11:23:29 2005 (brownd): antennaWait -a 1,6 -s hip52366 -e 2 
+Wed Jan 12 11:23:35 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:23:36 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:23:49 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:23:58 2005 (brownd): optical 
+Wed Jan 12 11:24:00 2005 (brownd): observe -s hip46146 
+Wed Jan 12 11:24:01 2005 (brownd): antennaWait -a 1,6 -s hip46146 -e 2 
+Wed Jan 12 11:24:14 2005 (brownd): /application/bin/snapshot -a 1,6 -s 200 -c 
+Wed Jan 12 11:24:15 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 200 -c 
+Wed Jan 12 11:24:25 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:24:35 2005 (brownd): /application/bin/azelstar -z 90 -d down -w 5 -n 1 -c 
+Wed Jan 12 11:24:39 2005 (brownd): optical 
+Wed Jan 12 11:24:41 2005 (brownd): observe -s hip47189 
+Wed Jan 12 11:24:41 2005 (brownd): antennaWait -a 1,6 -s hip47189 -e 2 
+Wed Jan 12 11:25:00 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:25:01 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:25:01 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:25:22 2005 (brownd): optical 
+Wed Jan 12 11:25:24 2005 (brownd): observe -s hip50583 
+Wed Jan 12 11:25:25 2005 (brownd): antennaWait -a 1,6 -s hip50583 -e 2 
+Wed Jan 12 11:25:35 2005 (brownd): /application/bin/snapshot -a 1,6 -s 50 -c 
+Wed Jan 12 11:25:36 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 50 -c 
+Wed Jan 12 11:25:37 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:25:55 2005 (brownd): optical 
+Wed Jan 12 11:25:58 2005 (brownd): observe -s hip52686 
+Wed Jan 12 11:25:58 2005 (brownd): antennaWait -a 1,6 -s hip52686 -e 2 
+Wed Jan 12 11:26:09 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:26:09 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:26:12 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:26:29 2005 (brownd): optical 
+Wed Jan 12 11:26:31 2005 (brownd): observe -s hip55016 
+Wed Jan 12 11:26:31 2005 (brownd): antennaWait -a 1,6 -s hip55016 -e 2 
+Wed Jan 12 11:26:42 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:26:43 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:26:48 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:27:03 2005 (brownd): optical 
+Wed Jan 12 11:27:05 2005 (brownd): observe -s hip56080 
+Wed Jan 12 11:27:05 2005 (brownd): antennaWait -a 1,6 -s hip56080 -e 2 
+Wed Jan 12 11:27:15 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:27:16 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:27:25 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:27:37 2005 (brownd): optical 
+Wed Jan 12 11:27:39 2005 (brownd): observe -s hip62325 
+Wed Jan 12 11:27:40 2005 (brownd): antennaWait -a 1,6 -s hip62325 -e 2 
+Wed Jan 12 11:27:57 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:27:58 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:28:02 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:28:18 2005 (brownd): optical 
+Wed Jan 12 11:28:21 2005 (brownd): observe -s hip64179 
+Wed Jan 12 11:28:21 2005 (brownd): antennaWait -a 1,6 -s hip64179 -e 2 
+Wed Jan 12 11:28:31 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:28:32 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:28:40 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:28:53 2005 (brownd): /application/bin/azelstar -z 120 -d up -w 5 -n 1 -c 
+Wed Jan 12 11:28:58 2005 (brownd): optical 
+Wed Jan 12 11:29:00 2005 (brownd): observe -s hip55687 
+Wed Jan 12 11:29:01 2005 (brownd): antennaWait -a 1,6 -s hip55687 -e 2 
+Wed Jan 12 11:29:17 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:29:19 2005 (brownd): /application/bin/snapshot -a 1,6 -s 200 -c 
+Wed Jan 12 11:29:20 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 200 -c 
+Wed Jan 12 11:29:39 2005 (brownd): optical 
+Wed Jan 12 11:29:41 2005 (brownd): observe -s hip53035 
+Wed Jan 12 11:29:42 2005 (brownd): antennaWait -a 1,6 -s hip53035 -e 2 
+Wed Jan 12 11:29:51 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:29:52 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:29:53 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:30:11 2005 (brownd): optical 
+Wed Jan 12 11:30:14 2005 (brownd): observe -s hip52863 
+Wed Jan 12 11:30:14 2005 (brownd): antennaWait -a 1,6 -s hip52863 -e 2 
+Wed Jan 12 11:30:20 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:30:21 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:30:28 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:30:42 2005 (brownd): optical 
+Wed Jan 12 11:30:44 2005 (brownd): observe -s hip50027 
+Wed Jan 12 11:30:44 2005 (brownd): antennaWait -a 1,6 -s hip50027 -e 2 
+Wed Jan 12 11:30:55 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:30:56 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:31:06 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:31:15 2005 (brownd): optical 
+Wed Jan 12 11:31:17 2005 (brownd): observe -s hip47943 
+Wed Jan 12 11:31:18 2005 (brownd): antennaWait -a 1,6 -s hip47943 -e 2 
+Wed Jan 12 11:31:27 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:31:28 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:31:42 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:31:47 2005 (brownd): optical 
+Wed Jan 12 11:31:49 2005 (brownd): observe -s hip46771 
+Wed Jan 12 11:31:49 2005 (brownd): antennaWait -a 1,6 -s hip46771 -e 2 
+Wed Jan 12 11:32:00 2005 (brownd): /application/bin/snapshot -a 1,6 -s 200 -c 
+Wed Jan 12 11:32:01 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 200 -c 
+Wed Jan 12 11:32:19 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:32:19 2005 (brownd): optical 
+Wed Jan 12 11:32:22 2005 (brownd): observe -s hip45410 
+Wed Jan 12 11:32:22 2005 (brownd): antennaWait -a 1,6 -s hip45410 -e 2 
+Wed Jan 12 11:32:32 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:32:32 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:32:52 2005 (brownd): /application/bin/azelstar -z 150 -d down -w 5 -n 1 -c 
+Wed Jan 12 11:32:54 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:32:55 2005 (brownd): optical 
+Wed Jan 12 11:32:58 2005 (brownd): observe -s hip43851 
+Wed Jan 12 11:32:58 2005 (brownd): antennaWait -a 1,6 -s hip43851 -e 2 
+Wed Jan 12 11:33:13 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:33:13 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:33:29 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:33:33 2005 (brownd): optical 
+Wed Jan 12 11:33:35 2005 (brownd): observe -s hip44659 
+Wed Jan 12 11:33:36 2005 (brownd): antennaWait -a 1,6 -s hip44659 -e 2 
+Wed Jan 12 11:33:45 2005 (brownd): /application/bin/snapshot -a 1,6 -s 200 -c 
+Wed Jan 12 11:33:46 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 200 -c 
+Wed Jan 12 11:34:05 2005 (brownd): optical 
+Wed Jan 12 11:34:07 2005 (brownd): observe -s hip46288 
+Wed Jan 12 11:34:07 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:34:07 2005 (brownd): antennaWait -a 1,6 -s hip46288 -e 2 
+Wed Jan 12 11:34:17 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:34:18 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:34:36 2005 (brownd): optical 
+Wed Jan 12 11:34:38 2005 (brownd): observe -s hip46221 
+Wed Jan 12 11:34:39 2005 (brownd): antennaWait -a 1,6 -s hip46221 -e 2 
+Wed Jan 12 11:34:42 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:34:48 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:34:49 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:35:10 2005 (brownd): optical 
+Wed Jan 12 11:35:12 2005 (brownd): observe -s hip48615 
+Wed Jan 12 11:35:12 2005 (brownd): antennaWait -a 1,6 -s hip48615 -e 2 
+Wed Jan 12 11:35:18 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:35:27 2005 (brownd): /application/bin/snapshot -a 1,6 -s 200 -c 
+Wed Jan 12 11:35:28 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 200 -c 
+Wed Jan 12 11:35:47 2005 (brownd): optical 
+Wed Jan 12 11:35:49 2005 (brownd): observe -s hip51718 
+Wed Jan 12 11:35:49 2005 (brownd): antennaWait -a 1,6 -s hip51718 -e 2 
+Wed Jan 12 11:35:53 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:36:00 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:36:01 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:36:20 2005 (brownd): optical 
+Wed Jan 12 11:36:23 2005 (brownd): observe -s hip51364 
+Wed Jan 12 11:36:23 2005 (brownd): antennaWait -a 1,6 -s hip51364 -e 2 
+Wed Jan 12 11:36:28 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:36:32 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:36:33 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:36:53 2005 (brownd): optical 
+Wed Jan 12 11:36:55 2005 (brownd): observe -s hip53502 
+Wed Jan 12 11:36:56 2005 (brownd): antennaWait -a 1,6 -s hip53502 -e 2 
+Wed Jan 12 11:37:03 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:37:06 2005 (brownd): /application/bin/snapshot -a 1,6 -s 200 -c 
+Wed Jan 12 11:37:07 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 200 -c 
+Wed Jan 12 11:37:27 2005 (brownd): optical 
+Wed Jan 12 11:37:29 2005 (brownd): observe -s hip54811 
+Wed Jan 12 11:37:29 2005 (brownd): antennaWait -a 1,6 -s hip54811 -e 2 
+Wed Jan 12 11:37:39 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:37:40 2005 (brownd): /application/bin/snapshot -a 1,6 -s 400 -c 
+Wed Jan 12 11:37:40 2005 (brownd): c90cmd -a 1,6 -c snapshot -e 400 -c 
+Wed Jan 12 11:38:00 2005 (brownd): /application/bin/azelstar -z 180 -d up -w 5 -n 1 -c 
+Wed Jan 12 11:38:09 2005 (brownd): stow 
+Wed Jan 12 11:38:14 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:38:47 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:38:55 2005 (brownd): el -d 20 
+Wed Jan 12 11:39:20 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:39:22 2005 (brownd): standby 
+Wed Jan 12 11:39:54 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:39:58 2005 (brownd): endProject.
+Wed Jan 12 11:40:27 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:41:00 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:41:33 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:42:07 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:42:40 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:43:13 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:43:46 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:44:19 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:44:52 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:45:26 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:45:59 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:46:32 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:47:05 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:47:38 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:48:11 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:48:45 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:49:18 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:49:51 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:50:24 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:50:57 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:51:30 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:52:04 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:52:37 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:53:10 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:53:43 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:54:16 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:54:49 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:55:23 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:55:56 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:56:29 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:57:02 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:57:35 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:58:08 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:58:42 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:59:15 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 11:59:48 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:00:21 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:00:54 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:01:27 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:02:01 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:02:34 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:03:07 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:03:40 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:04:13 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:04:46 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:05:19 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:05:53 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:06:26 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:06:59 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:07:32 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:08:05 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:08:38 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:09:12 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:09:45 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:10:18 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:10:51 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:11:24 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:11:57 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:12:31 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:13:04 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:13:37 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:14:10 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:14:43 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:15:16 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:15:50 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:16:23 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:16:56 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:17:29 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:18:02 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:18:35 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:19:09 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:19:42 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:20:15 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:20:48 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:21:21 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:21:54 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:22:28 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:23:01 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:23:34 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:24:07 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:24:40 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:25:13 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:25:47 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:26:20 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:26:53 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:27:26 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:27:59 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:28:32 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:29:06 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:29:39 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:30:12 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:30:45 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:31:18 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:31:51 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:32:25 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:32:58 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:33:31 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:34:04 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:34:37 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:35:10 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:35:44 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:36:17 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:36:50 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:37:23 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:37:56 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:38:30 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:39:03 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:39:36 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:40:09 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:40:42 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:41:16 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:41:49 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:42:22 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:42:55 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:43:28 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:44:01 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:44:35 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:45:08 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:45:41 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:46:14 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:46:47 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:47:20 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:47:54 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:48:27 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:49:00 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:49:33 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:50:06 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:50:39 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:51:13 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:51:46 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:52:19 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:52:52 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:53:25 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:53:58 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:54:32 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:55:05 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:55:38 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:56:11 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:56:44 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:57:17 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:57:51 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:58:24 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:58:57 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 12:59:30 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:00:03 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:00:36 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:01:09 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:01:43 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:02:16 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:02:49 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:03:22 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:03:55 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:04:28 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:05:02 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:05:35 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:06:08 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:06:41 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:07:14 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:07:48 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:08:21 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:08:54 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:09:27 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:10:00 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:10:33 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:11:07 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:11:40 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:12:13 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:12:46 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:13:19 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:13:52 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:14:26 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:14:59 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:15:32 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:16:05 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:16:38 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:17:11 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:17:45 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:18:18 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:18:51 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:19:24 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:19:57 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:20:30 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:21:04 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:21:37 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:22:10 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:22:43 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:23:16 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:23:49 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:24:23 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:24:56 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:25:29 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:26:02 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:26:35 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:27:08 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:27:42 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:28:15 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:28:48 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:29:21 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:29:54 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:30:27 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:31:01 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:31:34 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:32:07 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:32:40 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:33:13 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:33:46 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:34:20 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:34:53 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:35:26 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:35:59 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:36:32 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:37:06 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:37:39 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:38:12 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:38:45 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:39:18 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:39:51 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:40:25 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:40:58 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:41:31 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:42:04 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:42:37 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:43:10 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:43:44 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:44:17 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:44:50 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:45:23 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:45:56 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:46:29 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:47:03 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:47:36 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:48:09 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:48:42 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:49:15 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:49:48 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:50:22 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:50:55 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:51:28 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:52:01 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:52:34 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:53:07 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:53:41 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:54:14 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:54:47 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:55:20 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:55:53 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:56:26 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:57:00 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:57:33 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:58:06 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:58:39 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:59:12 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 13:59:45 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:00:19 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:00:52 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:01:25 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:01:58 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:02:31 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:03:04 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:03:38 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:04:11 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:04:44 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:05:17 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:05:50 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:06:23 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:06:57 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:07:30 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:08:03 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:08:36 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:09:09 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:09:42 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:10:16 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:10:49 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:11:22 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:11:55 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:12:28 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:13:02 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:13:35 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:14:08 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:14:41 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:15:14 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:15:47 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:16:21 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:16:54 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:17:27 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:18:00 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:18:34 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:19:07 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:19:40 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:20:13 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:20:46 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:21:19 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:21:53 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:22:26 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:22:59 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:23:32 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:24:05 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:24:38 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:25:12 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:25:43 2005 (root): monitor 
+Wed Jan 12 14:25:44 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:26:18 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:26:51 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:27:24 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:27:57 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:28:30 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:29:03 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:29:37 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:30:10 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:30:43 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:31:16 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:31:49 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:32:22 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:32:56 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:33:29 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:34:02 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:34:35 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:35:08 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:35:41 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:36:15 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:36:48 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:37:21 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:37:54 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:38:27 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:39:00 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:39:34 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:40:07 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:40:40 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:41:13 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:41:46 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:42:20 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:42:53 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:43:26 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:43:59 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:44:32 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:45:05 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:45:39 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:46:12 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:46:45 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:47:18 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:47:51 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:48:24 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:48:58 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:49:31 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:50:04 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:50:37 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:51:10 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:51:43 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 14:52:17 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 15:29:46 2005 (brownd): monitor 
+Wed Jan 12 15:53:41 2005 (rwilson): /application/bin/killdaemon hal logger URG
+Wed Jan 12 15:53:52 2005 (rwilson): /application/bin/killdaemon acc logger URG
+Wed Jan 12 15:54:47 2005 (root): /application/bin/raoff -a 1..8 -s 0 
+Wed Jan 12 15:54:47 2005 (root): /application/bin/decoff -a 1..8 -s 0 
+Wed Jan 12 15:54:47 2005 (root): /application/bin/standby -a 1..8 
+Wed Jan 12 15:54:48 2005 (root): /application/bin/stow -a 1..8 
+Wed Jan 12 15:54:50 2005 (root): /application/bin/focusCurveOn -a1..8 
+Wed Jan 12 15:54:50 2005 (root): /application/bin/tol -c off -a 1..8 
+Wed Jan 12 15:55:08 2005 (rwilson): monitor 
+Wed Jan 12 15:55:10 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 15:55:16 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 15:55:22 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 15:55:27 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 15:55:32 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 15:55:37 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 15:55:42 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 15:55:47 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 15:55:52 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 15:55:57 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 15:56:02 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 15:56:08 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 15:56:13 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 15:56:18 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 15:56:23 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 15:56:28 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 15:57:03 2005 (rwilson): monitor 
+Wed Jan 12 15:57:06 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 15:57:41 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 15:58:15 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 15:58:50 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 15:58:59 2005 (root): monitor 
+Wed Jan 12 15:59:15 2005 (rwilson): deice 2 
+Wed Jan 12 15:59:20 2005 (rwilson): monitor 
+Wed Jan 12 15:59:24 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:00:00 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:00:31 2005 (rwilson): deice 0 
+Wed Jan 12 16:00:34 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:00:46 2005 (rwilson): deice -a2 5 
+Wed Jan 12 16:00:53 2005 (rwilson): monitor 
+Wed Jan 12 16:01:08 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:01:43 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:02:20 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:02:55 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:03:29 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:04:03 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:04:38 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:05:13 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:05:32 2005 (rwilson): deice -a2 0 
+Wed Jan 12 16:05:47 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:05:55 2005 (rwilson): initChopper -a1..8 
+Wed Jan 12 16:06:22 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:12:25 2005 (root): halRemoteReset 
+Wed Jan 12 16:13:27 2005 (root): /application/bin/raoff -a 1..8 -s 0 
+Wed Jan 12 16:13:27 2005 (root): /application/bin/decoff -a 1..8 -s 0 
+Wed Jan 12 16:13:27 2005 (root): /application/bin/standby -a 1..8 
+Wed Jan 12 16:13:27 2005 (root): /application/bin/stow -a 1..8 
+Wed Jan 12 16:13:30 2005 (root): /application/bin/focusCurveOn -a1..8 
+Wed Jan 12 16:13:30 2005 (root): /application/bin/tol -c off -a 1..8 
+Wed Jan 12 16:13:58 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:14:10 2005 (root): monitor 
+Wed Jan 12 16:14:34 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:14:58 2005 (root): deice 0 
+Wed Jan 12 16:15:08 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:15:43 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:16:17 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:16:53 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:16:53 2005 (root): monitor 
+Wed Jan 12 16:17:14 2005 (rwilson): initChopper -a4,6 
+Wed Jan 12 16:17:27 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:18:03 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:18:36 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:19:11 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:19:46 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:20:20 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:20:44 2005 (rwilson): farChopper -a6 
+Wed Jan 12 16:20:55 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:21:29 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:22:04 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:22:39 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:23:13 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:23:17 2005 (rwilson): initChopper -a1..8 
+Wed Jan 12 16:23:48 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:24:24 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:24:59 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:25:34 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:26:54 2005 (root): /application/bin/raoff -a 1..8 -s 0 
+Wed Jan 12 16:26:55 2005 (root): /application/bin/decoff -a 1..8 -s 0 
+Wed Jan 12 16:26:55 2005 (root): /application/bin/standby -a 1..8 
+Wed Jan 12 16:26:55 2005 (root): /application/bin/stow -a 1..8 
+Wed Jan 12 16:26:57 2005 (root): /application/bin/focusCurveOn -a1..8 
+Wed Jan 12 16:26:57 2005 (root): /application/bin/tol -c off -a 1..8 
+Wed Jan 12 16:27:25 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:28:03 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:28:39 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:29:13 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:29:48 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:30:22 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:30:57 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:31:31 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:32:06 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:32:42 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:33:16 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:33:51 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:34:25 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:35:00 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:35:34 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:36:08 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:36:43 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:37:18 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:37:53 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:38:28 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:39:03 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:39:38 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:40:54 2005 (root): /application/bin/raoff -a 1..8 -s 0 
+Wed Jan 12 16:40:55 2005 (root): /application/bin/decoff -a 1..8 -s 0 
+Wed Jan 12 16:40:55 2005 (root): /application/bin/standby -a 1..8 
+Wed Jan 12 16:40:55 2005 (root): /application/bin/stow -a 1..8 
+Wed Jan 12 16:40:57 2005 (root): /application/bin/focusCurveOn -a1..8 
+Wed Jan 12 16:40:57 2005 (root): /application/bin/tol -c off -a 1..8 
+Wed Jan 12 16:41:25 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:42:56 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:43:31 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:44:05 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:44:40 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:45:14 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:45:50 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:46:24 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:46:59 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:47:33 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:48:07 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:48:42 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:49:16 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:49:52 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:50:26 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:51:01 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:51:35 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:52:10 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:52:45 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:53:21 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:53:56 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:55:01 2005 (root): /application/bin/raoff -a 1..8 -s 0 
+Wed Jan 12 16:55:01 2005 (root): /application/bin/decoff -a 1..8 -s 0 
+Wed Jan 12 16:55:01 2005 (root): /application/bin/standby -a 1..8 
+Wed Jan 12 16:55:01 2005 (root): /application/bin/stow -a 1..8 
+Wed Jan 12 16:55:03 2005 (root): /application/bin/focusCurveOn -a1..8 
+Wed Jan 12 16:55:04 2005 (root): /application/bin/tol -c off -a 1..8 
+Wed Jan 12 16:55:32 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:56:08 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:56:43 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:57:17 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:57:52 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:58:26 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:58:41 2005 (ckatz): /application/bin/monitor 
+Wed Jan 12 16:59:01 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 16:59:35 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:00:10 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:00:45 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:01:20 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:01:55 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:02:30 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:03:04 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:03:39 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:04:13 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:04:48 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:05:22 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:05:58 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:06:00 2005 (rwilson): monitor 
+Wed Jan 12 17:06:32 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:07:08 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:07:43 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:21:40 2005 (rwilson): halRemoteReset 
+Wed Jan 12 17:22:41 2005 (root): /application/bin/raoff -a 1..8 -s 0 
+Wed Jan 12 17:22:42 2005 (root): /application/bin/decoff -a 1..8 -s 0 
+Wed Jan 12 17:22:42 2005 (root): /application/bin/standby -a 1..8 
+Wed Jan 12 17:22:42 2005 (root): /application/bin/stow -a 1..8 
+Wed Jan 12 17:22:44 2005 (root): /application/bin/focusCurveOn -a1..8 
+Wed Jan 12 17:22:44 2005 (root): /application/bin/tol -c off -a 1..8 
+Wed Jan 12 17:23:12 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:23:48 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:24:23 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:24:58 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:25:32 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:26:06 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:26:41 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:27:15 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:27:51 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:28:25 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:29:00 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:29:35 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:30:09 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:30:44 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:31:18 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:31:22 2005 (rwilson): monitor -h 
+Wed Jan 12 17:31:36 2005 (rwilson): monitor --help 
+Wed Jan 12 17:31:54 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:32:28 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:33:03 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:33:38 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:34:13 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:34:48 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:35:55 2005 (root): /application/bin/raoff -a 1..8 -s 0 
+Wed Jan 12 17:35:55 2005 (root): /application/bin/decoff -a 1..8 -s 0 
+Wed Jan 12 17:35:56 2005 (root): /application/bin/standby -a 1..8 
+Wed Jan 12 17:35:56 2005 (root): /application/bin/stow -a 1..8 
+Wed Jan 12 17:35:58 2005 (root): /application/bin/focusCurveOn -a1..8 
+Wed Jan 12 17:35:58 2005 (root): /application/bin/tol -c off -a 1..8 
+Wed Jan 12 17:36:26 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:37:58 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:38:35 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:39:09 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:39:44 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:40:18 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:40:54 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:41:28 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:42:04 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:42:39 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:43:13 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:43:49 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:44:23 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:44:58 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:45:20 2005 (rwilson): monitor -h 
+Wed Jan 12 17:45:31 2005 (rwilson): monitor --help 
+Wed Jan 12 17:45:32 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:45:50 2005 (rwilson): monitor -c 
+Wed Jan 12 17:46:06 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:46:41 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:47:16 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:47:52 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:48:27 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 17:53:22 2005 (ckatz): /application/bin/halRemoteReset 
+Wed Jan 12 17:58:54 2005 (ckatz): /application/bin/halRemoteReset 
+Wed Jan 12 17:59:56 2005 (root): /application/bin/raoff -a 1..8 -s 0 
+Wed Jan 12 17:59:56 2005 (root): /application/bin/decoff -a 1..8 -s 0 
+Wed Jan 12 17:59:56 2005 (root): /application/bin/standby -a 1..8 
+Wed Jan 12 17:59:56 2005 (root): /application/bin/stow -a 1..8 
+Wed Jan 12 17:59:58 2005 (root): /application/bin/focusCurveOn -a1..8 
+Wed Jan 12 17:59:58 2005 (root): /application/bin/tol -c off -a 1..8 
+Wed Jan 12 18:00:26 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 18:01:05 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 18:01:40 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 18:02:14 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 18:02:49 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 18:03:26 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 18:04:01 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 18:04:35 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 18:05:09 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 18:05:44 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 18:06:19 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 18:06:55 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 18:07:29 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 18:08:03 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 18:08:38 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 18:09:12 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 18:09:25 2005 (ckatz): /application/bin/monitor 
+Wed Jan 12 18:09:47 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 18:10:21 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 18:10:56 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 18:11:32 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 18:12:07 2005 (root): /application/bin/monitor -d 300 -c 
+Wed Jan 12 18:12:09 2005 (tksridha): monitor 
+Wed Jan 12 18:14:51 2005 (root): /application/bin/raoff -a 1..8 -s 0 
+Wed Jan 12 18:14:52 2005 (root): /application/bin/decoff -a 1..8 -s 0 
+Wed Jan 12 18:14:52 2005 (root): /application/bin/standby -a 1..8 
+Wed Jan 12 18:14:52 2005 (root): /application/bin/stow -a 1..8 
+Wed Jan 12 18:14:54 2005 (root): /application/bin/focusCurveOn -a1..8 
+Wed Jan 12 18:14:54 2005 (root): /application/bin/tol -c off -a 1..8 
+Wed Jan 12 18:16:31 2005 (ckatz): /application/bin/monitor 
+Wed Jan 12 18:48:57 2005 (rtm): /application/bin/killdaemon all logger restart
+Wed Jan 12 18:54:22 2005 (root): monitor 
+Wed Jan 12 20:24:42 2005 (aschinck): monitor 
+Wed Jan 12 20:31:49 2005 (aschinck): deice -a4 6 
+Wed Jan 12 20:33:53 2005 (root): deice -a4 6 
+Wed Jan 12 21:15:09 2005 (bchitwood): monitor 
+Wed Jan 12 21:15:30 2005 (bchitwood): monitor 
+Wed Jan 12 21:15:55 2005 (bchitwood): monitor 
+Wed Jan 12 21:16:08 2005 (bchitwood): monitor 
+Wed Jan 12 21:16:23 2005 (bchitwood): monitor 
+Wed Jan 12 21:29:48 2005 (root): monitor 
+Wed Jan 12 21:41:59 2005 (root): az -a 1 -d 330 
+Wed Jan 12 21:42:10 2005 (root): resume -a 1 
+Wed Jan 12 21:42:35 2005 (root): az -a 1 -d 310 
+Wed Jan 12 21:42:51 2005 (root): standby -a 1 
+Wed Jan 12 21:44:57 2005 (root): az -a 4 -d 330 
+Wed Jan 12 21:45:00 2005 (root): resume -a 4 
+Wed Jan 12 21:45:26 2005 (root): az -a 4 -d 310 
+Wed Jan 12 21:45:41 2005 (root): standby -a 4 
+Wed Jan 12 21:46:35 2005 (root): monitor 
+Wed Jan 12 21:47:12 2005 (root): az -a 6 -d 330 
+Wed Jan 12 21:47:18 2005 (root): resume -a 6 
+Wed Jan 12 21:47:44 2005 (root): az -a 6 -d 310 
+Wed Jan 12 21:47:58 2005 (root): standby -a 6 
+Wed Jan 12 21:48:07 2005 (root): az -a 7 -d 330 
+Wed Jan 12 21:48:11 2005 (root): resume -a 7 
+Wed Jan 12 21:48:38 2005 (root): az -a 7 -d 310 
+Wed Jan 12 21:48:57 2005 (root): az -a 7 -d 350 
+Wed Jan 12 21:49:04 2005 (root): standby -a 7 
+Wed Jan 12 21:59:19 2005 (aschinck): monitor 
+Wed Jan 12 22:01:02 2005 (root): az -a 2 -d 330 
+Wed Jan 12 22:01:09 2005 (root): resume -a 2 
+Wed Jan 12 22:01:30 2005 (aschinck): deice -a1 1 
+Wed Jan 12 22:01:33 2005 (root): az -a 2 -d 310 
+Wed Jan 12 22:01:43 2005 (aschinck): deice -a4 1 
+Wed Jan 12 22:01:49 2005 (root): standby -a 2 
+Wed Jan 12 22:01:53 2005 (aschinck): deice -a6 5 
+Wed Jan 12 22:03:04 2005 (brownd): monitor 
+Wed Jan 12 22:03:07 2005 (aschinck): deice 3 
+Wed Jan 12 22:05:32 2005 (brownd): monitor 
+Wed Jan 12 22:46:43 2005 (aschinck): monitor 
+Wed Jan 12 23:19:21 2005 (rwilson): initChopper -a4 
+Wed Jan 12 23:22:35 2005 (root): monitor 
+Wed Jan 12 23:23:07 2005 (rwilson): initChopper -a1..8 
+Wed Jan 12 23:26:10 2005 (rwilson): initChopper -a6 
+Wed Jan 12 23:30:14 2005 (hbeuther): monitor 
+Wed Jan 12 23:31:25 2005 (root): monitor 
+Wed Jan 12 23:31:55 2005 (aschinck): deice -a8 5 
+Wed Jan 12 23:32:53 2005 (root): az -a 3 -d 330 
+Wed Jan 12 23:32:57 2005 (root): resume -a 3 
+Wed Jan 12 23:33:23 2005 (root): az -a 3 -d 310 
+Wed Jan 12 23:33:36 2005 (root): standby -a 3 
+Wed Jan 12 23:38:27 2005 (brownd): stripchart -h 
+Wed Jan 12 23:38:34 2005 (brownd): stripchart --help 
+Wed Jan 12 23:51:36 2005 (aschinck): deice -a8 3 
+Wed Jan 12 23:52:16 2005 (root): monitor 
+Thu Jan 13 00:00:26 2005 (root): monitor 
+Thu Jan 13 00:13:24 2005 (gpetitpa): monitor 
+Thu Jan 13 00:15:48 2005 (gpetitpa): monitor 
+Thu Jan 13 00:18:33 2005 (root): monitor 
+Thu Jan 13 00:22:04 2005 (root): initChopper -a 6 
+Thu Jan 13 00:24:35 2005 (root): initChopper -a 1 
+Thu Jan 13 00:26:29 2005 (root): initChopper -a 3 
+Thu Jan 13 00:28:23 2005 (root): openM3 -a 6 
+Thu Jan 13 00:28:44 2005 (root): closeM3 -a 6 
+Thu Jan 13 00:29:20 2005 (root): openM3 -a 6 
+Thu Jan 13 00:30:05 2005 (root): openM3 -a 1 
+Thu Jan 13 00:30:29 2005 (dkubo): monitor 
+Thu Jan 13 00:31:07 2005 (root): tune -a 1 -c interpolater -f 230 -r 0 -s 
+Thu Jan 13 00:31:17 2005 (root): tune -a 6 -c interpolater -f 230 -r 0 -s 
+Thu Jan 13 00:31:35 2005 (root): tune -a 6 -c vbias0 0 
+Thu Jan 13 00:31:52 2005 (root): tune -a 6 -c activate -l 0 
+Thu Jan 13 00:32:01 2005 (root): tune -a 6 -c interpolater -f 230 -r 0 -s 
+Thu Jan 13 00:32:12 2005 (root): tsys -a 1 
+Thu Jan 13 00:32:25 2005 (root): tsys -a 6 
+Thu Jan 13 00:33:32 2005 (root): openM3 -a 3 
+Thu Jan 13 00:34:13 2005 (root): tsys -a 3 
+Thu Jan 13 00:35:50 2005 (dkubo): monitor 
+Thu Jan 13 00:42:35 2005 (root): openM3 -a 4 
+Thu Jan 13 00:45:46 2005 (root): initChopper -a 4 
+Thu Jan 13 00:48:59 2005 (root): tsys -a 4 
+Thu Jan 13 00:49:27 2005 (root): tune -a 4 -c activate -l 0 -g 
+Thu Jan 13 00:49:53 2005 (root): tsys -a 4 
+Thu Jan 13 00:57:01 2005 (gpetitpa): monitor 
+Thu Jan 13 01:09:48 2005 (root): monitor 
+Thu Jan 13 01:10:52 2005 (root): az -a 2 -d 10 
+Thu Jan 13 01:10:55 2005 (root): resume -a 2 
+Thu Jan 13 01:11:43 2005 (root): standby -a 2 
+Thu Jan 13 01:23:45 2005 (jmaute): monitor 
+Thu Jan 13 01:38:17 2005 (root): monitor 
+Thu Jan 13 01:39:38 2005 (root): az -a 8 -d 10 
+Thu Jan 13 01:39:41 2005 (root): resume -a 8 
+Thu Jan 13 01:40:12 2005 (root): standby -a 8 
+Thu Jan 13 01:40:20 2005 (root): az -a 7 -d 10 
+Thu Jan 13 01:40:35 2005 (root): resume -a 7 
+Thu Jan 13 01:41:09 2005 (root): standby -a 7 
+Thu Jan 13 01:42:47 2005 (aschinck): monitor 
+Thu Jan 13 01:45:38 2005 (dfong): monitor 
+Thu Jan 13 02:03:27 2005 (dkubo): monitor 
+Thu Jan 13 02:13:33 2005 (root): az -a 1 -d 10 
+Thu Jan 13 02:13:38 2005 (root): resume -a 1 
+Thu Jan 13 02:14:11 2005 (root): az -a 3 -d 10 
+Thu Jan 13 02:14:17 2005 (root): resume -a 3 
+Thu Jan 13 02:14:38 2005 (root): az -a 4 -d 10 
+Thu Jan 13 02:14:45 2005 (root): resume -a 4 
+Thu Jan 13 02:14:54 2005 (root): standby -a 1 
+Thu Jan 13 02:15:01 2005 (root): standby -a 3 
+Thu Jan 13 02:15:27 2005 (root): az -a 6 -d 10 
+Thu Jan 13 02:16:11 2005 (root): resume -a 6 
+Thu Jan 13 02:16:43 2005 (root): standby -a 6 
+Thu Jan 13 02:16:50 2005 (root): standby -a 4 
+Thu Jan 13 02:16:52 2005 (root): standby -a 3 
+Thu Jan 13 02:16:55 2005 (root): standby -a 1 
+Thu Jan 13 02:17:01 2005 (root): closeM3 -a 1 
+Thu Jan 13 02:17:08 2005 (root): closeM3 -a 3 
+Thu Jan 13 02:17:18 2005 (root): closeM3 -a 4 
+Thu Jan 13 02:18:32 2005 (root): closeM3 -a 6 
+Thu Jan 13 02:40:14 2005 (gpetitpa): monitor 
+Thu Jan 13 02:41:07 2005 (root): monitor 
+Thu Jan 13 02:41:37 2005 (gpetitpa): project -a 1,3,4,6 -s 1 -o Glen -l Hilo ops -p SMA -d priming -C 1..12 
+Thu Jan 13 02:43:36 2005 (gpetitpa): restartCorrelator -d -s32 
+Thu Jan 13 02:47:28 2005 (gpetitpa): restartCorrelator --help 
+Thu Jan 13 02:48:01 2005 (gpetitpa): restartCorrelator -c 7 -s 32 
+Thu Jan 13 02:49:27 2005 (gpetitpa): restartCorrelator -d -s32 
+Thu Jan 13 02:53:09 2005 (gpetitpa): restartCorrelator -c 6 -s32 
+Thu Jan 13 02:57:11 2005 (gpetitpa): project -r -a 1,3,4,6 -s 1 -o Glen -l Hilo ops -p SMA -d priming -C 1..6 
+Thu Jan 13 02:59:26 2005 (gpetitpa): dopplerTrack -t co2-1 -u -s12 
+Thu Jan 13 02:59:39 2005 (daemon): setLO: sending "tune -f0 225.56 -h0 16" to acc1
+Thu Jan 13 02:59:39 2005 (daemon): setLO: sending "tune -f0 225.56 -h0 16" to acc3
+Thu Jan 13 02:59:39 2005 (daemon): setLO: sending "tune -f0 225.56 -h0 16" to acc4
+Thu Jan 13 02:59:39 2005 (daemon): setLO: sending "tune -f0 225.56 -h0 16" to acc6
+Thu Jan 13 03:01:36 2005 (gpetitpa): setFeedOffset -f 230 
+Thu Jan 13 03:02:22 2005 (root): tune -a 6 -c opt curr -t 
+Thu Jan 13 03:02:30 2005 (gpetitpa): openM3 
+Thu Jan 13 03:02:52 2005 (root): monitor 
+Thu Jan 13 03:02:53 2005 (root): tune -a 3 -c opt curr -t 
+Thu Jan 13 03:02:56 2005 (gpetitpa): tsys 
+Thu Jan 13 03:04:45 2005 (dfong): deice --help 
+Thu Jan 13 03:04:52 2005 (dfong): deice 0 
+Thu Jan 13 03:05:57 2005 (gpetitpa): tune -a 4 -c opt curr -t 
+Thu Jan 13 03:06:20 2005 (gpetitpa): tsys 
+Thu Jan 13 03:07:12 2005 (gpetitpa): standby 
+Thu Jan 13 03:08:06 2005 (gpetitpa): observe -s uranus 
+Thu Jan 13 03:09:43 2005 (root): monitor 
+Thu Jan 13 03:10:07 2005 (gpetitpa): resume 
+Thu Jan 13 03:11:25 2005 (gpetitpa): setIFLevels -v 
+Thu Jan 13 03:26:52 2005 (hbeuther): monitor 
+Thu Jan 13 03:26:56 2005 (root): setMRG -R h -f 8.4 
+Thu Jan 13 03:30:07 2005 (gpetitpa): monitor 
+Thu Jan 13 03:39:05 2005 (gpetitpa): deice --help 
+Thu Jan 13 03:39:16 2005 (gpetitpa): deice 2 
+Thu Jan 13 03:41:36 2005 (gpetitpa): deice 0 
+Thu Jan 13 03:49:22 2005 (gpetitpa): setChunkPhaseOffsets --help 
+Thu Jan 13 03:57:20 2005 (gpetitpa): observe -s 3c454 
+Thu Jan 13 03:57:33 2005 (gpetitpa): resume 
+Thu Jan 13 03:58:07 2005 (gpetitpa): observe -s 3c454.3 
+Thu Jan 13 03:59:09 2005 (hbeuther): monitor 
+Thu Jan 13 03:59:24 2005 (gpetitpa): setIFLevels -v 
+Thu Jan 13 04:01:10 2005 (gpetitpa): setChunkPhaseOffsets 
+Thu Jan 13 04:01:35 2005 (gpetitpa): setChunkPhaseOffsets --help 
+Thu Jan 13 04:08:06 2005 (hbeuther): project -r -o Shige & Henrik -l @ summit 
+Thu Jan 13 04:08:17 2005 (hbeuther): project -r -o Shige & Henrik -l summit 
+Thu Jan 13 04:17:26 2005 (hbeuther): project -r -i 74 -f ./sideband.pl 
+Thu Jan 13 04:17:28 2005 (hbeuther): radio 
+Thu Jan 13 04:17:33 2005 (hbeuther): integrate -t 30 
+Thu Jan 13 04:17:35 2005 (hbeuther): lookup -s 0423-013 
+Thu Jan 13 04:17:36 2005 (hbeuther): observe -s 0423-013 
+Thu Jan 13 04:17:43 2005 (hbeuther): tsys 
+Thu Jan 13 04:17:54 2005 (hbeuther): integrate -s 20 -t 30 -w 
+Thu Jan 13 04:22:53 2005 (stakakuwa): observe -s 3c454.3 
+Thu Jan 13 04:22:53 2005 (stakakuwa): tsys 
+Thu Jan 13 04:23:03 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 04:26:01 2005 (hbeuther): observe -a 1 -s 3c454.3 
+Thu Jan 13 04:26:49 2005 (hbeuther): observe -a 3 -s 3c454.3 
+Thu Jan 13 04:26:58 2005 (hbeuther): observe -a 4 -s 3c454.3 
+Thu Jan 13 04:27:32 2005 (gpetitpa): monitor 
+Thu Jan 13 04:28:03 2005 (hbeuther): integrate -s 10 -t 60 
+Thu Jan 13 04:37:16 2005 (stakakuwa): observe -s 0234+285 
+Thu Jan 13 04:37:17 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 04:42:50 2005 (stakakuwa): monitor 
+Thu Jan 13 04:43:11 2005 (hbeuther): monitor 
+Thu Jan 13 04:47:10 2005 (stakakuwa): observe -s 3c84 
+Thu Jan 13 04:47:10 2005 (stakakuwa): tsys 
+Thu Jan 13 04:47:21 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 04:50:50 2005 (hbeuther): observe -s 3c84 
+Thu Jan 13 04:51:19 2005 (hbeuther): integrate -s 10 
+Thu Jan 13 05:00:08 2005 (root): monitor 
+Thu Jan 13 05:01:01 2005 (stakakuwa): observe -s 0420-014 
+Thu Jan 13 05:01:02 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 05:01:17 2005 (root): monitor 
+Thu Jan 13 05:03:47 2005 (root): monitor 
+Thu Jan 13 05:05:58 2005 (root): monitor 
+Thu Jan 13 05:10:55 2005 (stakakuwa): observe -s 3c454.3 
+Thu Jan 13 05:10:55 2005 (stakakuwa): tsys 
+Thu Jan 13 05:11:05 2005 (hbeuther): monitor 
+Thu Jan 13 05:11:06 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 05:13:46 2005 (root): monitor 
+Thu Jan 13 05:14:29 2005 (hbeuther): monitor 
+Thu Jan 13 05:15:01 2005 (hbeuther): monitor 
+Thu Jan 13 05:17:20 2005 (hbeuther): monitor 
+Thu Jan 13 05:25:47 2005 (root): monitor 
+Thu Jan 13 05:26:42 2005 (stakakuwa): monitor 
+Thu Jan 13 05:27:20 2005 (stakakuwa): monitor 
+Thu Jan 13 05:28:16 2005 (stakakuwa): observe -s 3c454.3 
+Thu Jan 13 05:28:16 2005 (stakakuwa): tsys 
+Thu Jan 13 05:28:26 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 05:34:37 2005 (stakakuwa): monitor 
+Thu Jan 13 05:37:38 2005 (stakakuwa): observe -s 0234+285 
+Thu Jan 13 05:37:38 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 05:47:31 2005 (stakakuwa): observe -s 3c84 
+Thu Jan 13 05:47:32 2005 (stakakuwa): tsys 
+Thu Jan 13 05:47:42 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 05:51:14 2005 (stakakuwa): observe -s 3c84 
+Thu Jan 13 05:51:37 2005 (stakakuwa): integrate -s 10 
+Thu Jan 13 05:52:43 2005 (stakakuwa): monitor 
+Thu Jan 13 05:55:54 2005 (stakakuwa): observe -s 3c454.3 
+Thu Jan 13 05:55:56 2005 (stakakuwa): tsys 
+Thu Jan 13 05:56:07 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 05:56:11 2005 (stakakuwa): integrate -s 0 
+Thu Jan 13 05:56:26 2005 (stakakuwa): observe -s 0234+285 
+Thu Jan 13 05:56:28 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 05:56:32 2005 (stakakuwa): integrate -s 0 
+Thu Jan 13 05:57:14 2005 (stakakuwa): standby -a 6 
+Thu Jan 13 05:57:17 2005 (stakakuwa): resume -a 6 
+Thu Jan 13 05:57:25 2005 (stakakuwa): observe -s 3c84 
+Thu Jan 13 05:57:27 2005 (stakakuwa): tsys 
+Thu Jan 13 05:57:38 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 06:07:19 2005 (stakakuwa): observe -s 0420-014 
+Thu Jan 13 06:07:21 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 06:17:12 2005 (stakakuwa): observe -s 0521-365 
+Thu Jan 13 06:17:15 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 06:27:06 2005 (stakakuwa): observe -s 3c454.3 
+Thu Jan 13 06:27:08 2005 (stakakuwa): tsys 
+Thu Jan 13 06:27:18 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 06:32:00 2005 (root): monitor 
+Thu Jan 13 06:37:00 2005 (stakakuwa): observe -s 0234+285 
+Thu Jan 13 06:37:02 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 06:44:33 2005 (root): monitor 
+Thu Jan 13 06:46:53 2005 (stakakuwa): observe -s 3c84 
+Thu Jan 13 06:46:56 2005 (stakakuwa): tsys 
+Thu Jan 13 06:47:06 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 06:56:47 2005 (stakakuwa): observe -s 0420-014 
+Thu Jan 13 06:56:49 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 07:06:41 2005 (stakakuwa): observe -s 0521-365 
+Thu Jan 13 07:06:43 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 07:16:34 2005 (stakakuwa): observe -s 3c454.3 
+Thu Jan 13 07:16:37 2005 (stakakuwa): tsys 
+Thu Jan 13 07:16:47 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 07:17:16 2005 (stakakuwa): integrate -s 0 
+Thu Jan 13 07:18:37 2005 (stakakuwa): observe -s 0234+285 
+Thu Jan 13 07:18:39 2005 (stakakuwa): tsys 
+Thu Jan 13 07:18:49 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 07:28:27 2005 (stakakuwa): observe -s 3c84 
+Thu Jan 13 07:28:29 2005 (stakakuwa): tsys 
+Thu Jan 13 07:28:39 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 07:38:20 2005 (stakakuwa): observe -s 0420-014 
+Thu Jan 13 07:38:23 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 07:48:14 2005 (stakakuwa): observe -s 0521-365 
+Thu Jan 13 07:48:16 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 07:58:08 2005 (stakakuwa): observe -s 0234+285 
+Thu Jan 13 07:58:10 2005 (stakakuwa): tsys 
+Thu Jan 13 07:58:20 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 08:00:20 2005 (root): newFile 
+Thu Jan 13 08:00:30 2005 (root): observe -s saturn 
+Thu Jan 13 08:03:37 2005 (root): integrate -s32 
+Thu Jan 13 08:03:47 2005 (root): restartCorrelator -s32 
+Thu Jan 13 08:05:05 2005 (root): restartCorrelator -s32 
+Thu Jan 13 08:05:58 2005 (homin): ./monitor 
+Thu Jan 13 08:09:14 2005 (root): restartCorrelator -s32 
+Thu Jan 13 08:10:45 2005 (root): restartCorrelator -s32 -c6 
+Thu Jan 13 08:11:21 2005 (root): correlatorPause 
+Thu Jan 13 08:11:28 2005 (root): correlatorResume 
+Thu Jan 13 08:11:49 2005 (root): restartCorrelator -s32 
+Thu Jan 13 08:13:28 2005 (root): correlatorPause 
+Thu Jan 13 08:13:32 2005 (root): correlatorResume 
+Thu Jan 13 08:13:53 2005 (root): restartCorrelator -s32 -c3,6 
+Thu Jan 13 08:20:47 2005 (root): restartCorrelator -s32 
+Thu Jan 13 08:23:05 2005 (root): restartCorrelator -s32 -c2,5 
+Thu Jan 13 08:27:58 2005 (root): restartCorrelator -s32 
+Thu Jan 13 08:29:36 2005 (root): restartCorrelator -s32 -c2 
+Thu Jan 13 08:32:53 2005 (root): restartCorrelator -s32 
+Thu Jan 13 08:35:19 2005 (root): restartCorrelator -s32 -c2,3,4 
+Thu Jan 13 08:37:58 2005 (root): tune -a 4 -c tune 112.78 
+Thu Jan 13 08:42:29 2005 (root): observe -s 0420-014 
+Thu Jan 13 08:47:57 2005 (root): restartCorrelator -s32 
+Thu Jan 13 08:51:31 2005 (root): restartCorrelator -s32 
+Thu Jan 13 08:53:25 2005 (root): restartCorrelator -s32 -c4 
+Thu Jan 13 08:54:47 2005 (root): restartCorrelator -s32 -d 
+Thu Jan 13 08:57:33 2005 (root): tune -a 4 -c tune 112.78 
+Thu Jan 13 09:00:01 2005 (root): setChunkPhaseOffsets -l 
+Thu Jan 13 09:03:27 2005 (root): integrate -t 60 
+Thu Jan 13 09:04:06 2005 (root): newFile 
+Thu Jan 13 09:05:16 2005 (root): setChunkPhaseOffsets -l 
+Thu Jan 13 09:07:25 2005 (root): newFile 
+Thu Jan 13 09:14:52 2005 (stakakuwa): observe -s 3c111 
+Thu Jan 13 09:14:54 2005 (stakakuwa): tsys 
+Thu Jan 13 09:15:05 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 09:20:49 2005 (homin): ./tune -a 8 -c help 
+Thu Jan 13 09:21:06 2005 (homin): ./tune -a 8 -c opt help 
+Thu Jan 13 09:21:31 2005 (homin): ./tune -a 8 -c opt bfield -h 
+Thu Jan 13 09:22:05 2005 (homin): ./tune -a 8 -c opt bfield help 
+Thu Jan 13 09:22:16 2005 (homin): ./tune -a 8 -c opt bfield -help 
+Thu Jan 13 09:24:22 2005 (stakakuwa): observe -s 0854+201 
+Thu Jan 13 09:24:24 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 09:27:19 2005 (homin): ./monitor 
+Thu Jan 13 09:34:16 2005 (stakakuwa): observe -s 0234+285 
+Thu Jan 13 09:34:18 2005 (stakakuwa): tsys 
+Thu Jan 13 09:34:28 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 09:44:09 2005 (stakakuwa): observe -s 3c84 
+Thu Jan 13 09:44:11 2005 (stakakuwa): tsys 
+Thu Jan 13 09:44:22 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 09:54:03 2005 (stakakuwa): observe -s 0420-014 
+Thu Jan 13 09:54:05 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 10:03:57 2005 (stakakuwa): observe -s 0521-365 
+Thu Jan 13 10:03:59 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 10:13:50 2005 (stakakuwa): observe -s 3c111 
+Thu Jan 13 10:13:52 2005 (stakakuwa): tsys 
+Thu Jan 13 10:14:03 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 10:23:44 2005 (stakakuwa): observe -s 0854+201 
+Thu Jan 13 10:23:46 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 10:33:37 2005 (stakakuwa): observe -s 0234+285 
+Thu Jan 13 10:33:40 2005 (stakakuwa): tsys 
+Thu Jan 13 10:33:50 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 10:43:27 2005 (root): monitor 
+Thu Jan 13 10:43:31 2005 (stakakuwa): observe -s 3c84 
+Thu Jan 13 10:43:33 2005 (stakakuwa): tsys 
+Thu Jan 13 10:43:43 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 10:53:25 2005 (stakakuwa): observe -s 0420-014 
+Thu Jan 13 10:53:27 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 11:03:19 2005 (stakakuwa): observe -s 0521-365 
+Thu Jan 13 11:03:21 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 11:13:12 2005 (stakakuwa): observe -s 3c111 
+Thu Jan 13 11:13:14 2005 (stakakuwa): tsys 
+Thu Jan 13 11:13:25 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 11:23:06 2005 (stakakuwa): observe -s 0854+201 
+Thu Jan 13 11:23:08 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 11:25:44 2005 (stakakuwa): integrate -s 0 
+Thu Jan 13 11:26:04 2005 (stakakuwa): observe -s 0234+285 
+Thu Jan 13 11:26:06 2005 (stakakuwa): tsys 
+Thu Jan 13 11:26:16 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 11:26:19 2005 (stakakuwa): integrate -s 0 
+Thu Jan 13 11:26:32 2005 (stakakuwa): observe -s saturn 
+Thu Jan 13 11:27:03 2005 (stakakuwa): observe -s 3c84 
+Thu Jan 13 11:27:05 2005 (stakakuwa): tsys 
+Thu Jan 13 11:27:16 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 11:28:39 2005 (stakakuwa): standby -a 6 
+Thu Jan 13 11:28:43 2005 (stakakuwa): resume -a 6 
+Thu Jan 13 11:36:57 2005 (stakakuwa): observe -s 0420-014 
+Thu Jan 13 11:37:00 2005 (stakakuwa): observe -s 3c111 
+Thu Jan 13 11:37:03 2005 (stakakuwa): tsys 
+Thu Jan 13 11:37:07 2005 (stakakuwa): integrate -s 0 
+Thu Jan 13 11:37:13 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 11:37:17 2005 (stakakuwa): integrate -s 0 
+Thu Jan 13 11:37:56 2005 (stakakuwa): observe -s 0420-014 
+Thu Jan 13 11:37:56 2005 (stakakuwa): tsys 
+Thu Jan 13 11:38:09 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 11:47:50 2005 (stakakuwa): observe -s 3c273 
+Thu Jan 13 11:47:52 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 11:57:10 2005 (stakakuwa): initChopper 
+Thu Jan 13 11:57:44 2005 (stakakuwa): observe -s 1055+018 
+Thu Jan 13 11:57:46 2005 (stakakuwa): tsys 
+Thu Jan 13 11:57:56 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 12:07:37 2005 (stakakuwa): observe -s 3c279 
+Thu Jan 13 12:07:40 2005 (stakakuwa): integrate -s 10 -t 60 -w 
+Thu Jan 13 12:10:11 2005 (tksridha): monitor 
+Thu Jan 13 12:19:46 2005 (tksridha): /application/bin/setMRG -f 8.10653957035714 -a 4 
+Thu Jan 13 12:20:55 2005 (tksridha): /application/bin/setMRG -f 7.418157 -a 4 
+Thu Jan 13 12:21:17 2005 (tksridha): /application/bin/setMRG -f 7.418157 -a 6 
+Thu Jan 13 12:21:50 2005 (tksridha): tune -a 4 -c tune 237 
+Thu Jan 13 12:22:22 2005 (tksridha): holon -a 4 -r 6 -f 232.4 -m 96 -s 400 
+Thu Jan 13 12:22:24 2005 (tksridha): azoff -a 4 -s 0 
+Thu Jan 13 12:22:24 2005 (tksridha): eloff -a 4 -s 0 
+Thu Jan 13 12:22:24 2005 (tksridha): azel -a 6 -z 48.360001 -e 18.735001 
+Thu Jan 13 12:22:25 2005 (tksridha): azel -a 4 -z 49.750000 -e 11.747000 
+Thu Jan 13 12:22:26 2005 (tksridha): offsetUnit -a 4 -s -400 
+Thu Jan 13 12:22:28 2005 (tksridha): resume -a 4 
+Thu Jan 13 12:23:01 2005 (tksridha): resume -a 4,6 
+Thu Jan 13 12:23:36 2005 (tksridha): stow 
+Thu Jan 13 12:24:23 2005 (tksridha): endProject.
+Thu Jan 13 12:24:36 2005 (tksridha): project --help 
+Thu Jan 13 12:25:29 2005 (tksridha): project -a 4,6 -s 1 -D 3 -p TK -o TK -l Cambridge:5-7090 -d holo 
+Thu Jan 13 12:26:51 2005 (tksridha): holon -a 4 -r 6 -f 232.4 -m 96 -s 400 
+Thu Jan 13 12:26:53 2005 (tksridha): azoff -a 4 -s 0 
+Thu Jan 13 12:26:53 2005 (tksridha): eloff -a 4 -s 0 
+Thu Jan 13 12:26:54 2005 (tksridha): azel -a 6 -z 48.360001 -e 18.735001 
+Thu Jan 13 12:26:54 2005 (tksridha): azel -a 4 -z 49.750000 -e 11.747000 
+Thu Jan 13 12:26:55 2005 (tksridha): offsetUnit -a 4 -s -400 
+Thu Jan 13 12:26:57 2005 (tksridha): resume -a 4 
+Thu Jan 13 12:27:32 2005 (tksridha): tune -a 6 -c tune 237 
+Thu Jan 13 12:27:41 2005 (tksridha): resume 
+Thu Jan 13 12:29:24 2005 (tksridha): tune -a 4 -c a 2000 
+Thu Jan 13 12:29:30 2005 (tksridha): tune -a 4 -c a 5000 
+Thu Jan 13 12:29:40 2005 (tksridha): tune -a 4 -c a 3000 
+Thu Jan 13 12:29:55 2005 (tksridha): tune -a 6 -c a 9000 
+Thu Jan 13 12:30:04 2005 (tksridha): tune -a 6 -c a 12000 
+Thu Jan 13 12:30:10 2005 (tksridha): tune -a 6 -c a 11000 
+Thu Jan 13 12:30:17 2005 (tksridha): tune -a 6 -c a 10000 
+Thu Jan 13 12:30:25 2005 (tksridha): openM3 
+Thu Jan 13 12:32:20 2005 (tksridha): focusCurveOff 
+Thu Jan 13 12:32:53 2005 (root): monitor 
+Thu Jan 13 12:33:10 2005 (tksridha): positionChopper -a 4 -c -x 380 -y -957 -z 47000 
+Thu Jan 13 12:34:45 2005 (tksridha): resume -a 6 
+Thu Jan 13 12:37:25 2005 (tksridha): positionChopper -a 6 -c -x 78 -y -2851 -z 79000 
+Thu Jan 13 12:39:46 2005 (tksridha): /application/bin/setMRG -f 8.10653957035714 -a 6 
+Thu Jan 13 12:43:11 2005 (root): setMRG -f 8.10653957035714 
+Thu Jan 13 12:43:15 2005 (root): monitor 
+Thu Jan 13 12:44:56 2005 (root): setMRG -f 8.10653957035714 
+Thu Jan 13 12:46:52 2005 (root): setMRG -f 8.10653957035714 
+Thu Jan 13 12:47:53 2005 (root): setMRG -f 8.10653957035714 
+Thu Jan 13 12:49:49 2005 (tksridha): tune -a 6 -c tune 227 -h0 14 
+Thu Jan 13 12:51:19 2005 (tksridha): resume -a 6 
+Thu Jan 13 12:51:49 2005 (tksridha): setIFLevels 
+Thu Jan 13 12:54:21 2005 (tksridha): /application/bin/setMRG -f 8.10653957035714 -a 6 
+Thu Jan 13 12:54:47 2005 (tksridha): tune -a 6 -c tune 227 -h0 14 
+Thu Jan 13 12:57:57 2005 (tksridha): /application/bin/setMRG -f 7.4181578125 -a 6 
+Thu Jan 13 12:58:33 2005 (tksridha): tune -a 6 -c tune 237 
+Thu Jan 13 13:00:23 2005 (tksridha): resume -a 6 
+Thu Jan 13 13:02:00 2005 (tksridha): /application/bin/setMRG -f 7.4181578125 -a 4 
+Thu Jan 13 13:02:19 2005 (tksridha): tune -a 4 -c tune 237 
+Thu Jan 13 13:03:59 2005 (tksridha): /application/bin/setMRG -f 7.4181578125 -a 6 
+Thu Jan 13 13:04:16 2005 (tksridha): tune -a 6 -c tune 237 
+Thu Jan 13 13:14:25 2005 (tksridha): /application/bin/setMRG -f 7.4181578125 -a 6 
+Thu Jan 13 13:14:51 2005 (tksridha): tune -a 6 -c tune 237 
+Thu Jan 13 13:15:09 2005 (tksridha): resume -a 6 
+Thu Jan 13 13:17:08 2005 (tksridha): homeChopper -a 6 
+Thu Jan 13 13:20:29 2005 (tksridha): /application/bin/setMRG -f 7.41815765625 -a 6 
+Thu Jan 13 13:20:52 2005 (tksridha): resume -a 6 
+Thu Jan 13 13:21:16 2005 (tksridha): /application/bin/setMRG -f 7.4181575 -a 6 
+Thu Jan 13 13:21:54 2005 (tksridha): /application/bin/setMRG -f 8.10653957035714 -a 6 
+Thu Jan 13 13:22:21 2005 (tksridha): tune -a 6 -c tune 227 
+Thu Jan 13 13:23:37 2005 (tksridha): tune -a 6 -c tune 227 -h0 14 
+Thu Jan 13 13:27:17 2005 (tksridha): resume -a 6 
+Thu Jan 13 13:27:53 2005 (tksridha): tune -a 6 -c tune 227 
+Thu Jan 13 13:28:55 2005 (tksridha): tune -a 6 -c tune 227 -h0 14 
+Thu Jan 13 13:36:52 2005 (tksridha): resume -a 6 
+Thu Jan 13 13:38:33 2005 (tksridha): /application/bin/setMRG -f 7.418157 -a 6 
+Thu Jan 13 13:38:49 2005 (tksridha): /application/bin/setMRG -f 7.418157 -a 4 
+Thu Jan 13 13:39:09 2005 (tksridha): tune -a 6 -c tune 237 
+Thu Jan 13 13:43:47 2005 (tksridha): /application/bin/setMRG -f 7.418157 -a 6 
+Thu Jan 13 13:44:11 2005 (tksridha): tune -a 6 -c tune 237 
+Thu Jan 13 13:46:40 2005 (tksridha): /application/bin/setMRG -f 7.418157 -a 4 
+Thu Jan 13 13:47:02 2005 (tksridha): /application/bin/setMRG -f 7.418157 -a 6 
+Thu Jan 13 13:47:21 2005 (tksridha): tune -a 4 -c tune 237 
+Thu Jan 13 13:49:58 2005 (tksridha): integrate -t 60 
+Thu Jan 13 13:51:36 2005 (tksridha): integrate 
+Thu Jan 13 13:51:44 2005 (tksridha): integrate --h 
+Thu Jan 13 13:51:47 2005 (tksridha): integrate -h 
+Thu Jan 13 13:51:50 2005 (tksridha): integrate -help 
+Thu Jan 13 13:51:53 2005 (tksridha): integrate --help 
+Thu Jan 13 13:56:43 2005 (tksridha): setIFLevels 
+Thu Jan 13 13:58:06 2005 (tksridha): resetChopper -a 6 
+Thu Jan 13 13:59:31 2005 (tksridha): focusCurveOn -a 6 
+Thu Jan 13 13:59:44 2005 (tksridha): initChopper -a 6 
+Thu Jan 13 14:00:52 2005 (tksridha): resume 
+Thu Jan 13 14:02:01 2005 (tksridha): integrate -t 20 
+Thu Jan 13 14:03:57 2005 (tksridha): project --help 
+Thu Jan 13 14:04:33 2005 (tksridha): project -r -D 1 
+Thu Jan 13 14:04:51 2005 (tksridha): project -r -D 2 
+Thu Jan 13 14:05:40 2005 (tksridha): focusCurveOff -a 6 
+Thu Jan 13 14:06:04 2005 (tksridha): positionChopper -a 6 -c -x 78 -y -2852 -z 79000 
+Thu Jan 13 14:06:33 2005 (tksridha): resume -a 6 
+Thu Jan 13 14:07:04 2005 (tksridha): tsys -a 6 
+Thu Jan 13 14:13:49 2005 (tksridha): restartCorrelator 
+Thu Jan 13 14:16:28 2005 (tksridha): setIFLevels 
+Thu Jan 13 14:19:23 2005 (tksridha): resume 
+Thu Jan 13 14:21:15 2005 (tksridha): observe -s saturn 
+Thu Jan 13 14:21:38 2005 (tksridha): focusCurveOn 
+Thu Jan 13 14:21:52 2005 (tksridha): initChopper 
+Thu Jan 13 14:24:22 2005 (tksridha): setIFLevels 
+Thu Jan 13 14:25:16 2005 (tksridha): dopplerTrack --help 
+Thu Jan 13 14:26:00 2005 (tksridha): dopplerTrack -r 232.4 
+Thu Jan 13 14:26:11 2005 (daemon): setLO: sending "tune -f0 237.40 -h0 16" to acc4
+Thu Jan 13 14:26:11 2005 (daemon): setLO: sending "tune -f0 237.40 -h0 16" to acc6
+Thu Jan 13 14:28:28 2005 (tksridha): tune -a 4 -c tune 237 
+Thu Jan 13 14:30:14 2005 (tksridha): tune -a 4 -c tune 237 
+Thu Jan 13 14:34:05 2005 (tksridha): dopplerTrack -r 232.4 
+Thu Jan 13 14:34:16 2005 (daemon): setLO: sending "tune -f0 237.40 -h0 16" to acc4
+Thu Jan 13 14:34:16 2005 (daemon): setLO: sending "tune -f0 237.40 -h0 16" to acc6
+Thu Jan 13 14:37:59 2005 (tksridha): project --help 
+Thu Jan 13 14:38:31 2005 (tksridha): project -r -C 1,2,3,4,5,6 
+Thu Jan 13 14:39:38 2005 (tksridha): initChopper -a 6 
+Thu Jan 13 14:40:20 2005 (tksridha): tune -a 4 -c tune 237.4 
+Thu Jan 13 14:42:13 2005 (tksridha): /application/bin/setMRG -f 7.418157 -a 6 
+Thu Jan 13 14:43:46 2005 (tksridha): monitor 
+Thu Jan 13 14:44:06 2005 (tksridha): monitor 
+Thu Jan 13 14:45:23 2005 (tksridha): monitor 
+Thu Jan 13 14:45:40 2005 (tksridha): monitor 
+Thu Jan 13 14:49:05 2005 (ckatz): /application/bin/monitor 
+Thu Jan 13 14:49:20 2005 (ckatz): /application/bin/monitor 
+Thu Jan 13 14:49:23 2005 (ckatz): /application/bin/monitor 
+Thu Jan 13 15:00:40 2005 (tksridha): monitor 
+Thu Jan 13 15:03:28 2005 (tksridha): stow 
+Thu Jan 13 15:03:35 2005 (tksridha): resume 
+Thu Jan 13 15:06:35 2005 (root): /application/bin/raoff -a 1..8 -s 0 
+Thu Jan 13 15:06:35 2005 (root): /application/bin/decoff -a 1..8 -s 0 
+Thu Jan 13 15:06:35 2005 (root): /application/bin/standby -a 1..8 
+Thu Jan 13 15:06:35 2005 (root): /application/bin/stow -a 1..8 
+Thu Jan 13 15:06:35 2005 (root): /application/bin/focusCurveOn -a1..8 
+Thu Jan 13 15:06:36 2005 (root): /application/bin/tol -c off -a 1..8 
+Thu Jan 13 15:08:11 2005 (tksridha): monitor 
+Thu Jan 13 15:10:50 2005 (tksridha): /application/bin/halRemoteReset 
+Thu Jan 13 15:17:25 2005 (tksridha): /application/bin/halRemoteReset 
+Thu Jan 13 15:18:28 2005 (root): /application/bin/raoff -a 1..8 -s 0 
+Thu Jan 13 15:18:28 2005 (root): /application/bin/decoff -a 1..8 -s 0 
+Thu Jan 13 15:18:28 2005 (root): /application/bin/standby -a 1..8 
+Thu Jan 13 15:18:29 2005 (root): /application/bin/stow -a 1..8 
+Thu Jan 13 15:18:29 2005 (root): /application/bin/focusCurveOn -a1..8 
+Thu Jan 13 15:18:29 2005 (root): /application/bin/tol -c off -a 1..8 
+Thu Jan 13 15:21:38 2005 (root): /application/bin/raoff -a 1..8 -s 0 
+Thu Jan 13 15:21:38 2005 (root): /application/bin/decoff -a 1..8 -s 0 
+Thu Jan 13 15:21:38 2005 (root): /application/bin/standby -a 1..8 
+Thu Jan 13 15:21:38 2005 (root): /application/bin/stow -a 1..8 
+Thu Jan 13 15:21:38 2005 (root): /application/bin/focusCurveOn -a1..8 
+Thu Jan 13 15:21:38 2005 (root): /application/bin/tol -c off -a 1..8 
+Thu Jan 13 15:22:09 2005 (tksridha): monitor 
+Thu Jan 13 15:24:50 2005 (root): /application/bin/raoff -a 1..8 -s 0 
+Thu Jan 13 15:24:50 2005 (root): /application/bin/decoff -a 1..8 -s 0 
+Thu Jan 13 15:24:51 2005 (root): /application/bin/standby -a 1..8 
+Thu Jan 13 15:24:51 2005 (root): /application/bin/stow -a 1..8 
+Thu Jan 13 15:24:51 2005 (root): /application/bin/focusCurveOn -a1..8 
+Thu Jan 13 15:24:51 2005 (root): /application/bin/tol -c off -a 1..8 
+Thu Jan 13 15:26:20 2005 (tksridha): monitor 
+Thu Jan 13 15:28:03 2005 (root): /application/bin/raoff -a 1..8 -s 0 
+Thu Jan 13 15:28:03 2005 (root): /application/bin/decoff -a 1..8 -s 0 
+Thu Jan 13 15:28:04 2005 (root): /application/bin/standby -a 1..8 
+Thu Jan 13 15:28:04 2005 (root): /application/bin/stow -a 1..8 
+Thu Jan 13 15:28:04 2005 (root): /application/bin/focusCurveOn -a1..8 
+Thu Jan 13 15:28:04 2005 (root): /application/bin/tol -c off -a 1..8 
+Thu Jan 13 15:31:14 2005 (root): /application/bin/raoff -a 1..8 -s 0 
+Thu Jan 13 15:31:14 2005 (root): /application/bin/decoff -a 1..8 -s 0 
+Thu Jan 13 15:31:14 2005 (root): /application/bin/standby -a 1..8 
+Thu Jan 13 15:31:15 2005 (root): /application/bin/stow -a 1..8 
+Thu Jan 13 15:31:15 2005 (root): /application/bin/focusCurveOn -a1..8 
+Thu Jan 13 15:31:15 2005 (root): /application/bin/tol -c off -a 1..8 
+Thu Jan 13 15:35:26 2005 (root): /application/bin/raoff -a 1..8 -s 0 
+Thu Jan 13 15:35:26 2005 (root): /application/bin/decoff -a 1..8 -s 0 
+Thu Jan 13 15:35:26 2005 (root): /application/bin/standby -a 1..8 
+Thu Jan 13 15:35:26 2005 (root): /application/bin/stow -a 1..8 
+Thu Jan 13 15:35:26 2005 (root): /application/bin/focusCurveOn -a1..8 
+Thu Jan 13 15:35:26 2005 (root): /application/bin/tol -c off -a 1..8 
+Thu Jan 13 15:35:27 2005 (tksridha): acc6:/common/bin/killdaemon servo QUIT
+Thu Jan 13 15:39:34 2005 (root): /application/bin/raoff -a 1..8 -s 0 
+Thu Jan 13 15:39:34 2005 (root): /application/bin/decoff -a 1..8 -s 0 
+Thu Jan 13 15:39:34 2005 (root): /application/bin/standby -a 1..8 
+Thu Jan 13 15:39:34 2005 (root): /application/bin/stow -a 1..8 
+Thu Jan 13 15:39:34 2005 (root): /application/bin/focusCurveOn -a1..8 
+Thu Jan 13 15:39:34 2005 (root): /application/bin/tol -c off -a 1..8 
+Thu Jan 13 15:42:46 2005 (root): /application/bin/raoff -a 1..8 -s 0 
+Thu Jan 13 15:42:46 2005 (root): /application/bin/decoff -a 1..8 -s 0 
+Thu Jan 13 15:42:46 2005 (root): /application/bin/standby -a 1..8 
+Thu Jan 13 15:42:46 2005 (root): /application/bin/stow -a 1..8 
+Thu Jan 13 15:42:46 2005 (root): /application/bin/focusCurveOn -a1..8 
+Thu Jan 13 15:42:46 2005 (root): /application/bin/tol -c off -a 1..8 
+Thu Jan 13 15:46:52 2005 (thunter): halRemoteReset 
+Thu Jan 13 15:48:16 2005 (thunter): halRemoteReset 
+Thu Jan 13 15:49:19 2005 (root): /application/bin/raoff -a 1..8 -s 0 
+Thu Jan 13 15:49:20 2005 (root): /application/bin/decoff -a 1..8 -s 0 
+Thu Jan 13 15:49:20 2005 (root): /application/bin/standby -a 1..8 
+Thu Jan 13 15:49:20 2005 (root): /application/bin/stow -a 1..8 
+Thu Jan 13 15:49:22 2005 (root): /application/bin/focusCurveOn -a1..8 
+Thu Jan 13 15:49:22 2005 (root): /application/bin/tol -c off -a 1..8 
+Thu Jan 13 15:51:12 2005 (tksridha): monitor 
+Thu Jan 13 15:52:00 2005 (thunter): accRemoteReset -a 6 
+Thu Jan 13 15:52:24 2005 (thunter): resume -a 4 
+Thu Jan 13 15:53:19 2005 (tksridha): holon -a 6 -r 4 -f 232.4 -m 96 -s 400 
+Thu Jan 13 15:53:20 2005 (tksridha): azoff -a 6 -s 0 
+Thu Jan 13 15:53:21 2005 (tksridha): eloff -a 6 -s 0 
+Thu Jan 13 15:53:21 2005 (tksridha): azel -a 4 -z 49.750000 -e 11.747000 
+Thu Jan 13 15:53:22 2005 (tksridha): azel -a 6 -z 48.360001 -e 18.735001 
+Thu Jan 13 15:53:23 2005 (tksridha): offsetUnit -a 6 -s -400 
+Thu Jan 13 15:53:25 2005 (tksridha): resume -a 6 
+Thu Jan 13 15:53:33 2005 (tksridha): resume -a 4 
+Thu Jan 13 15:53:37 2005 (tksridha): resume -a 6 
+Thu Jan 13 15:54:16 2005 (tksridha): monitor 
+Thu Jan 13 15:58:15 2005 (tksridha): /application/bin/setMRG -f 8.10653957035714 -a 6 
+Thu Jan 13 15:58:32 2005 (tksridha): /application/bin/setMRG -f 8.10653957035714 -a 4 
+Thu Jan 13 15:59:23 2005 (thunter): resume -a 6 
+Thu Jan 13 15:59:33 2005 (tksridha): tune -c tune 227 -h0 14 
+Thu Jan 13 15:59:46 2005 (thunter): az -a 6 -d 50 
+Thu Jan 13 15:59:50 2005 (thunter): el -a 6 -d 19 
+Thu Jan 13 16:01:22 2005 (thunter): openM3 -a 4,6 
+Thu Jan 13 16:01:49 2005 (tksridha): holon -a 4 -r 6 0f 232.4 -m 96 -s 400 
+Thu Jan 13 16:01:56 2005 (tksridha): holon -a 4 -r 6 -f 232.4 -m 96 -s 400 
+Thu Jan 13 16:01:57 2005 (tksridha): azoff -a 4 -s 0 
+Thu Jan 13 16:01:58 2005 (tksridha): eloff -a 4 -s 0 
+Thu Jan 13 16:01:58 2005 (tksridha): azel -a 6 -z 48.360001 -e 18.735001 
+Thu Jan 13 16:01:59 2005 (tksridha): azel -a 4 -z 49.750000 -e 11.747000 
+Thu Jan 13 16:02:00 2005 (tksridha): offsetUnit -a 4 -s -400 
+Thu Jan 13 16:02:02 2005 (tksridha): resume -a 4 
+Thu Jan 13 16:02:06 2005 (tksridha): resume 
+Thu Jan 13 16:02:34 2005 (thunter): tune -a 4 -c za 
+Thu Jan 13 16:02:48 2005 (thunter): tune -a 4 -c opt mult in 
+Thu Jan 13 16:03:03 2005 (thunter): tune -a 4 -c opt mult out 
+Thu Jan 13 16:03:19 2005 (tksridha): initChopper 
+Thu Jan 13 16:03:41 2005 (thunter): tune -a 4 -c opt mult in 
+Thu Jan 13 16:04:04 2005 (thunter): tune -a 4 -c pos 
+Thu Jan 13 16:04:09 2005 (thunter): tune -a 4 -c interpolate 113.5 
+Thu Jan 13 16:04:31 2005 (thunter): tune -a 4 -c opt pow 
+Thu Jan 13 16:05:08 2005 (thunter): tune -a 4 -c rfpower -d 
+Thu Jan 13 16:05:25 2005 (thunter): tune -a 4 -c rfpower 6 
+Thu Jan 13 16:05:30 2005 (thunter): tune -a 4 -c opt tun 
+Thu Jan 13 16:05:52 2005 (thunter): tune -a 4 -c a 3000 
+Thu Jan 13 16:05:59 2005 (thunter): tune -a 4 -c opt mult out 
+Thu Jan 13 16:06:45 2005 (tksridha): positionChopper -a 6 -c -x 78 -y -2851 -z 79000 
+Thu Jan 13 16:07:26 2005 (thunter): tune -a 4 -c opt curr -c 25 
+Thu Jan 13 16:07:45 2005 (tksridha): positionChopper -a 6 -c -x 78 -y -2851 -z 79000 
+Thu Jan 13 16:07:53 2005 (thunter): tune -a 4 -c opt mult in 
+Thu Jan 13 16:08:18 2005 (tksridha): focusCurveOff -a 6 
+Thu Jan 13 16:09:01 2005 (tksridha): focusCurveOff -a 4 
+Thu Jan 13 16:10:27 2005 (tksridha): positionChopper -a 4 -c -x 379 -y -958 -z 46500 
+Thu Jan 13 16:10:55 2005 (tksridha): setIFLevels 
+Thu Jan 13 16:14:18 2005 (tksridha): observe -s saturn 
+Thu Jan 13 16:14:27 2005 (thunter): lookup -s saturn 
+Thu Jan 13 16:14:36 2005 (thunter): lookup -s jupiter 
+Thu Jan 13 16:14:41 2005 (tksridha): observe -s jupiter 
+Thu Jan 13 16:14:47 2005 (tksridha): resume 
+Thu Jan 13 16:17:45 2005 (tksridha): dopplerTrack -n -r 232.4 -u -b 4 -c 1 
+Thu Jan 13 16:18:01 2005 (tksridha): resume 
+Thu Jan 13 16:18:23 2005 (thunter): tune -a 4 -c rfpower 7 
+Thu Jan 13 16:18:31 2005 (thunter): tune -a 4 -c opt tun 
+Thu Jan 13 16:19:27 2005 (thunter): tune -a 4 -c rfpower -d 
+Thu Jan 13 16:19:48 2005 (thunter): lockYIG -a 6 
+Thu Jan 13 16:20:16 2005 (thunter): tune -a 4 -c rfpower 6 
+Thu Jan 13 16:20:22 2005 (thunter): tune -a 4 -c pll bl 
+Thu Jan 13 16:20:33 2005 (tksridha): dopplerTrack -n -r 232.4 -u -b 4 -c 2 
+Thu Jan 13 16:20:48 2005 (thunter): tune -a 4 -c rfpower 6 
+Thu Jan 13 16:20:54 2005 (thunter): tune -a 4 -c opt tun 
+Thu Jan 13 16:21:08 2005 (thunter): tune -a 4 -c t joy 
+Thu Jan 13 16:22:00 2005 (thunter): tune -a 4 -c t 5800 
+Thu Jan 13 16:22:09 2005 (thunter): tune -a 4 -c opt tun 
+Thu Jan 13 16:23:00 2005 (thunter): lockYIG -a 6 
+Thu Jan 13 16:23:34 2005 (tksridha): dopplerTrack -n -r 232.4 -l -b 4 -c 2 
+Thu Jan 13 16:24:01 2005 (tksridha): dopplerTrack -r 232.4 -l -b 4 -c 2 
+Thu Jan 13 16:24:11 2005 (daemon): setLO: sending "tune -f0 237.63 -h0 16" to acc4
+Thu Jan 13 16:24:11 2005 (daemon): setLO: sending "tune -f0 237.63 -h0 16" to acc6
+Thu Jan 13 16:25:10 2005 (tksridha): resume -a 4 
+Thu Jan 13 16:25:39 2005 (tksridha): standby -a 4 
+Thu Jan 13 16:25:50 2005 (thunter): acc4:/common/bin/killdaemon tune6 QUIT
+Thu Jan 13 16:25:52 2005 (tksridha): resume -a 4 
+Thu Jan 13 16:28:35 2005 (tksridha): setIFLevels 
+Thu Jan 13 16:28:36 2005 (thunter): acc4:/common/bin/killdaemon tune6 restart
+Thu Jan 13 16:29:27 2005 (tksridha): setIFLevels -v 
+Thu Jan 13 16:30:57 2005 (tksridha): focusCurveOn 
+Thu Jan 13 16:31:24 2005 (tksridha): initChopper 
+Thu Jan 13 16:32:48 2005 (tksridha): endProject.
+Thu Jan 13 16:33:01 2005 (tksridha): project --help 
+Thu Jan 13 16:34:09 2005 (tksridha): project -a 4,6 -C 1,2,3,4,5,6 -s 1 -D 2 -p TK -o TK -l Cambrdige:5-7090 -d holo 
+Thu Jan 13 16:37:12 2005 (tksridha): integrate -t 20 
+Thu Jan 13 16:38:41 2005 (tksridha): restartCorrelator 
+Thu Jan 13 16:41:38 2005 (tksridha): dopplerTrack -n -r 232.4 -l -b 4 -c 2 
+Thu Jan 13 16:42:31 2005 (tksridha): dopplerTrack -r 232.4 -l -b 4 -c 2 
+Thu Jan 13 16:42:42 2005 (daemon): setLO: sending "tune -f0 237.63 -h0 16" to acc4
+Thu Jan 13 16:42:42 2005 (daemon): setLO: sending "tune -f0 237.63 -h0 16" to acc6
+Thu Jan 13 16:45:31 2005 (tksridha): setIFLevels 
+Thu Jan 13 16:46:06 2005 (thunter): tune -a 4 -c opt curr -c 25 
+Thu Jan 13 16:46:52 2005 (tksridha): setIFLevels -v 
+Thu Jan 13 16:49:39 2005 (tksridha): observe -s ganymede 
+Thu Jan 13 16:52:29 2005 (tksridha): restartCorrelator -d 
+Thu Jan 13 16:54:17 2005 (tksridha): observe -s callisto 
+Thu Jan 13 16:55:34 2005 (tksridha): setIFLevels -v 
+Thu Jan 13 16:57:30 2005 (tksridha): tsys 
+Thu Jan 13 17:01:11 2005 (tksridha): project -r -a 1,4,6 
+Thu Jan 13 17:01:21 2005 (thunter): resume -a 1 
+Thu Jan 13 17:01:24 2005 (tksridha): project -r -a 1,4,6 -s 1 
+Thu Jan 13 17:01:33 2005 (thunter): observe -a 1 -s callisto 
+Thu Jan 13 17:01:48 2005 (tksridha): restartCorrelator -d 
+Thu Jan 13 17:02:05 2005 (thunter): openM3 -a 1 
+Thu Jan 13 17:02:45 2005 (thunter): initChopper -a 1 
+Thu Jan 13 17:03:15 2005 (tksridha): dopplerTrack -r 232.4 -l -b 4 -c 2 
+Thu Jan 13 17:03:28 2005 (daemon): setLO: sending "tune -f0 237.62 -h0 16" to acc1
+Thu Jan 13 17:03:28 2005 (daemon): setLO: sending "tune -f0 237.62 -h0 16" to acc4
+Thu Jan 13 17:03:28 2005 (daemon): setLO: sending "tune -f0 237.62 -h0 16" to acc6
+Thu Jan 13 17:04:34 2005 (thunter): tune -a 1 -c opt curr -c 20 
+Thu Jan 13 17:04:53 2005 (thunter): tune -a 1 -c opt mult out 
+Thu Jan 13 17:04:59 2005 (thunter): tune -a 1 -c opt mult in 
+Thu Jan 13 17:05:09 2005 (thunter): tune -a 1 -c opt pow 
+Thu Jan 13 17:05:26 2005 (tksridha): setIFLevels -v 
+Thu Jan 13 17:07:02 2005 (thunter): tune -a 4 -c gain 80 
+Thu Jan 13 17:07:03 2005 (tksridha): tsys -a 1 
+Thu Jan 13 17:07:08 2005 (thunter): tune -a 4 -c gain 140 
+Thu Jan 13 17:07:14 2005 (thunter): tune -a 4 -c gain 160 
+Thu Jan 13 17:07:19 2005 (thunter): tune -a 4 -c gain 180 
+Thu Jan 13 17:10:16 2005 (tksridha): newFile 
+Thu Jan 13 17:19:03 2005 (tksridha): observe -s mars 
+Thu Jan 13 17:22:10 2005 (tksridha): integrate -t 20 
+Thu Jan 13 17:22:25 2005 (tksridha): integrate -t 20 
+Thu Jan 13 17:23:28 2005 (tksridha): restartCorrelator -d 
+Thu Jan 13 17:27:28 2005 (tksridha): newFile 
+Thu Jan 13 17:31:59 2005 (rwilson): monitor 
+Thu Jan 13 17:33:18 2005 (tksridha): restartCorrelator -c 3 
+Thu Jan 13 17:34:49 2005 (root): monitor 
+Thu Jan 13 17:52:50 2005 (tksridha): standby 
+Thu Jan 13 17:53:09 2005 (tksridha): /application/bin/killdaemon newdds dDSServer QUIT
+Thu Jan 13 17:53:32 2005 (tksridha): monitor 
+Thu Jan 13 17:54:12 2005 (tksridha): restartCorrelator -d 
+Thu Jan 13 17:55:21 2005 (tksridha): newFile 
+Thu Jan 13 17:55:28 2005 (tksridha): resume 
+Thu Jan 13 17:56:35 2005 (tksridha): restartCorrelator -d 
+Thu Jan 13 17:59:49 2005 (tksridha): restartCorrelator -c 3,4 
+Thu Jan 13 18:00:28 2005 (tksridha): restartCorrelator -c 4 
+Thu Jan 13 18:02:06 2005 (tksridha): newFile 
+Thu Jan 13 18:03:19 2005 (tksridha): observe -s callisto 
+Thu Jan 13 18:04:35 2005 (tksridha): newFile 
+Thu Jan 13 18:05:02 2005 (tksridha): resume -a 3 
+Thu Jan 13 18:06:56 2005 (tksridha): endProject.
+Thu Jan 13 18:07:44 2005 (tksridha): project -a 1,4,6 -s 1 -p TK -o TK -l Cambridge:5-7090 -C 1,2,3,4,5,6 
+Thu Jan 13 18:07:51 2005 (tksridha): project -a 1,4,6 -s 1 -p TK -o TK -l Cambridge:5-7090 -C 1,2,3,4,5,6 -d Holotests 
+Thu Jan 13 18:07:59 2005 (tksridha): newFile 
+Thu Jan 13 18:08:49 2005 (tksridha): newFile --help 

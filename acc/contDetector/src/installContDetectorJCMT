@@ -1,0 +1,75 @@
+#!/bin/tcsh -f
+
+set driver   = "contDetector.obj"
+set devinfo  = "contDetectorInfo"
+set nodename = "/dev/contDetector0"
+set devname  = "contDetector"
+set mkInfoCmd = "mkcontDetectorInfo"
+
+# see if the device is installed; if so, uninstall it
+set dev = `devices | grep $devname`
+if( "a$dev" != "a" ) then
+    set dn=$dev[1]
+    echo Uninstalling device $dn
+    devinstall -u -c $dn
+endif
+
+# make sure it actually got uninstalled
+set dev = `devices | grep $devname`
+if( "a$dev" != "a" ) then
+    echo Could not uninstall device $dn
+    exit 0
+endif 
+unset dn
+
+# see if the driver is installed (normally it will be if the device was,
+# but check anyway)
+set dr = `drivers | grep $driver`
+if( "a$dr" != "a" ) then
+    set dn=$dr[1]
+    echo Uninstalling driver $dn
+    drinstall -u $dn
+endif
+
+# make sure it actually got uninstalled
+set dr = `drivers | grep $driver`
+if( "a$dr" != "a" ) then
+    echo Could not uninstall driver $dn
+    exit 0
+endif
+
+unset dn
+
+if( "$1" == "u" || "$1" == "-u" ) exit 0
+
+unset dev
+unset dr
+
+# install the driver
+echo -n "Installing driver $driver ... "
+set dr = `drinstall -c $driver`
+if( "a$dr" == "a" ) then
+    echo Driver not installed
+    exit 0
+endif
+echo driver number $dr[2]
+
+# install the device
+echo Creating device info file $devinfo
+	./$mkInfoCmd > $devinfo
+
+echo -n "Installing device $devinfo ... "
+set dev = `devinstall -c -d $dr[2] $devinfo`
+if( "a$dev" == "a" ) then
+    echo "Device not installed; uninstalling driver $driver ($dr[2])"
+    drinstall -u $dr[2]
+    exit 0
+endif    
+echo device number $dev[3]
+
+# create the node if needed
+if(! -e $nodename ) then
+    echo "Making node $nodename with major number $dev[3]"
+    mknod $nodename c $dev[3] 0
+    chmod 666 $nodename
+endif

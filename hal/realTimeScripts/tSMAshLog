@@ -1,0 +1,2000 @@
+Tue Oct 10 12:17:53 2006 (maria): el -a 1,2,3,4,5,6,8 -d 60.81 
+Tue Oct 10 12:17:56 2006 (maria): antennaWait -a 1,2,3,4,5,6,8 -e 
+Tue Oct 10 12:18:39 2006 (maria): el -a 1,2,3,4,5,6,8 -d 41.81 
+Tue Oct 10 12:18:41 2006 (maria): antennaWait -a 1,2,3,4,5,6,8 -e 
+Tue Oct 10 12:19:23 2006 (maria): el -a 1,2,3,4,5,6,8 -d 30 
+Tue Oct 10 12:19:25 2006 (maria): antennaWait -a 1,2,3,4,5,6,8 -e 
+Tue Oct 10 12:20:04 2006 (maria): el -a 1,2,3,4,5,6,8 -d 23.58 
+Tue Oct 10 12:20:06 2006 (maria): antennaWait -a 1,2,3,4,5,6,8 -e 
+Tue Oct 10 12:20:42 2006 (maria): el -a 1,2,3,4,5,6,8 -d 19.47 
+Tue Oct 10 12:20:44 2006 (maria): antennaWait -a 1,2,3,4,5,6,8 -e 
+Tue Oct 10 12:21:19 2006 (maria): el -a 1,2,3,4,5,6,8 -d 16.6 
+Tue Oct 10 12:21:21 2006 (maria): antennaWait -a 1,2,3,4,5,6,8 -e 
+Tue Oct 10 12:21:57 2006 (maria): writeDSM -m hal9000 -n 230 -v DSM_HAL_HAL_NIGHTLY_POINTING_S 
+Tue Oct 10 12:22:49 2006 (maria): project -r -i 170 -f ./2006-03-A003_230_ext.pl 
+Tue Oct 10 12:22:51 2006 (maria): radio 
+Tue Oct 10 12:22:52 2006 (maria): integrate -t 30 
+Tue Oct 10 12:22:54 2006 (maria): project -r -p Shin-Yi Lin -d A003 -i 170 
+Tue Oct 10 12:22:56 2006 (maria): lookup -s elias3-1 -r 04:18:40.61 -d +28:19:15.52 -e 2000 -v 8.2 
+Tue Oct 10 12:22:56 2006 (maria): lookup -s 0418+380 
+Tue Oct 10 12:22:57 2006 (maria): lookup -s 0418+380 
+Tue Oct 10 12:22:57 2006 (maria): observe -s 0418+380 
+Tue Oct 10 12:22:59 2006 (maria): tsys 
+Tue Oct 10 12:23:12 2006 (maria): integrate -s 10 -w 
+Tue Oct 10 12:28:36 2006 (maria): lookup -s 0418+380 
+Tue Oct 10 12:28:36 2006 (maria): lookup -s elias3-1 -r 04:18:40.61 -d +28:19:15.52 -e 2000 -v 8.2 
+Tue Oct 10 12:28:37 2006 (maria): observe -s elias3-1 -r 04:18:40.61 -d +28:19:15.52 -e 2000 -v 8.2 
+Tue Oct 10 12:28:38 2006 (maria): tsys 
+Tue Oct 10 12:28:51 2006 (maria): integrate -s 40 -w 
+Tue Oct 10 12:48:53 2006 (maria): lookup -s 0418+380 
+Tue Oct 10 12:48:53 2006 (maria): observe -s 0418+380 
+Tue Oct 10 12:48:54 2006 (maria): tsys 
+Tue Oct 10 12:49:07 2006 (maria): integrate -s 10 -w 
+Tue Oct 10 12:54:19 2006 (maria): lookup -s 0418+380 
+Tue Oct 10 12:54:20 2006 (maria): lookup -s elias3-1 -r 04:18:40.61 -d +28:19:15.52 -e 2000 -v 8.2 
+Tue Oct 10 12:54:20 2006 (maria): observe -s elias3-1 -r 04:18:40.61 -d +28:19:15.52 -e 2000 -v 8.2 
+Tue Oct 10 12:54:21 2006 (maria): tsys 
+Tue Oct 10 12:54:34 2006 (maria): integrate -s 40 -w 
+Tue Oct 10 13:14:36 2006 (maria): lookup -s 0418+380 
+Tue Oct 10 13:14:37 2006 (maria): observe -s 0418+380 
+Tue Oct 10 13:14:38 2006 (maria): tsys 
+Tue Oct 10 13:14:51 2006 (maria): integrate -s 10 -w 
+Tue Oct 10 13:20:03 2006 (maria): lookup -s 0418+380 
+Tue Oct 10 13:20:03 2006 (maria): lookup -s elias3-1 -r 04:18:40.61 -d +28:19:15.52 -e 2000 -v 8.2 
+Tue Oct 10 13:20:04 2006 (maria): lookup -s 0418+380 
+Tue Oct 10 13:20:04 2006 (maria): observe -s 0418+380 
+Tue Oct 10 13:20:06 2006 (maria): tsys 
+Tue Oct 10 13:20:18 2006 (maria): integrate -s 10 -w 
+Tue Oct 10 13:23:23 2006 (maria): monitor 
+Tue Oct 10 13:25:29 2006 (maria): lookup -s 0418+380 
+Tue Oct 10 13:25:30 2006 (maria): lookup -s elias3-1 -r 04:18:40.61 -d +28:19:15.52 -e 2000 -v 8.2 
+Tue Oct 10 13:25:31 2006 (maria): lookup -s 0418+380 
+Tue Oct 10 13:25:31 2006 (maria): observe -s 0418+380 
+Tue Oct 10 13:25:32 2006 (maria): tsys 
+Tue Oct 10 13:25:45 2006 (maria): integrate -s 10 -w 
+Tue Oct 10 13:30:56 2006 (maria): lookup -s 0418+380 
+Tue Oct 10 13:30:56 2006 (maria): lookup -s elias3-1 -r 04:18:40.61 -d +28:19:15.52 -e 2000 -v 8.2 
+Tue Oct 10 13:30:57 2006 (maria): lookup -s 0418+380 
+Tue Oct 10 13:30:57 2006 (maria): observe -s 0418+380 
+Tue Oct 10 13:30:59 2006 (maria): tsys 
+Tue Oct 10 13:31:11 2006 (maria): integrate -s 10 -w 
+Tue Oct 10 13:33:31 2006 (root): monitor 
+Tue Oct 10 13:36:22 2006 (maria): lookup -s 0418+380 
+Tue Oct 10 13:36:23 2006 (maria): lookup -s elias3-1 -r 04:18:40.61 -d +28:19:15.52 -e 2000 -v 8.2 
+Tue Oct 10 13:36:24 2006 (maria): lookup -s 0418+380 
+Tue Oct 10 13:36:24 2006 (maria): observe -s 0418+380 
+Tue Oct 10 13:36:25 2006 (maria): tsys 
+Tue Oct 10 13:36:38 2006 (maria): integrate -s 10 -w 
+Tue Oct 10 13:41:49 2006 (maria): lookup -s 0418+380 
+Tue Oct 10 13:41:49 2006 (maria): lookup -s elias3-1 -r 04:18:40.61 -d +28:19:15.52 -e 2000 -v 8.2 
+Tue Oct 10 13:41:50 2006 (maria): observe -s elias3-1 -r 04:18:40.61 -d +28:19:15.52 -e 2000 -v 8.2 
+Tue Oct 10 13:41:51 2006 (maria): tsys 
+Tue Oct 10 13:42:02 2006 (root): monitor 
+Tue Oct 10 13:42:04 2006 (maria): integrate -s 40 -w 
+Tue Oct 10 14:02:06 2006 (maria): lookup -s 0418+380 
+Tue Oct 10 14:02:06 2006 (maria): observe -s 0418+380 
+Tue Oct 10 14:02:07 2006 (maria): tsys 
+Tue Oct 10 14:02:21 2006 (maria): integrate -s 10 -w 
+Tue Oct 10 14:04:25 2006 (nimesh): monitor 
+Tue Oct 10 14:07:32 2006 (maria): lookup -s 0418+380 
+Tue Oct 10 14:07:33 2006 (maria): lookup -s elias3-1 -r 04:18:40.61 -d +28:19:15.52 -e 2000 -v 8.2 
+Tue Oct 10 14:07:34 2006 (maria): observe -s elias3-1 -r 04:18:40.61 -d +28:19:15.52 -e 2000 -v 8.2 
+Tue Oct 10 14:07:35 2006 (maria): tsys 
+Tue Oct 10 14:07:50 2006 (maria): integrate -s 40 -w 
+Tue Oct 10 14:27:49 2006 (maria): lookup -s 0418+380 
+Tue Oct 10 14:27:50 2006 (maria): observe -s 0418+380 
+Tue Oct 10 14:27:51 2006 (maria): tsys 
+Tue Oct 10 14:28:04 2006 (maria): integrate -s 10 -w 
+Tue Oct 10 14:33:16 2006 (maria): lookup -s 0418+380 
+Tue Oct 10 14:33:17 2006 (maria): lookup -s elias3-1 -r 04:18:40.61 -d +28:19:15.52 -e 2000 -v 8.2 
+Tue Oct 10 14:33:17 2006 (maria): observe -s elias3-1 -r 04:18:40.61 -d +28:19:15.52 -e 2000 -v 8.2 
+Tue Oct 10 14:33:18 2006 (maria): tsys 
+Tue Oct 10 14:33:31 2006 (maria): integrate -s 40 -w 
+Tue Oct 10 14:38:49 2006 (root): monitor 
+Tue Oct 10 14:53:33 2006 (maria): lookup -s 0418+380 
+Tue Oct 10 14:53:34 2006 (maria): observe -s 0418+380 
+Tue Oct 10 14:53:35 2006 (maria): tsys 
+Tue Oct 10 14:53:48 2006 (maria): integrate -s 10 -w 
+Tue Oct 10 14:58:59 2006 (maria): lookup -s 0418+380 
+Tue Oct 10 14:59:00 2006 (maria): lookup -s elias3-1 -r 04:18:40.61 -d +28:19:15.52 -e 2000 -v 8.2 
+Tue Oct 10 14:59:00 2006 (maria): observe -s elias3-1 -r 04:18:40.61 -d +28:19:15.52 -e 2000 -v 8.2 
+Tue Oct 10 14:59:02 2006 (maria): tsys 
+Tue Oct 10 14:59:15 2006 (maria): integrate -s 40 -w 
+Tue Oct 10 15:19:16 2006 (maria): lookup -s 0418+380 
+Tue Oct 10 15:19:17 2006 (maria): observe -s 0418+380 
+Tue Oct 10 15:19:18 2006 (maria): tsys 
+Tue Oct 10 15:19:31 2006 (maria): integrate -s 10 -w 
+Tue Oct 10 15:24:43 2006 (maria): lookup -s 0418+380 
+Tue Oct 10 15:24:44 2006 (maria): lookup -s elias3-1 -r 04:18:40.61 -d +28:19:15.52 -e 2000 -v 8.2 
+Tue Oct 10 15:24:44 2006 (maria): observe -s elias3-1 -r 04:18:40.61 -d +28:19:15.52 -e 2000 -v 8.2 
+Tue Oct 10 15:24:45 2006 (maria): tsys 
+Tue Oct 10 15:24:58 2006 (maria): integrate -s 40 -w 
+Tue Oct 10 15:45:00 2006 (maria): lookup -s 0418+380 
+Tue Oct 10 15:45:00 2006 (maria): observe -s 0418+380 
+Tue Oct 10 15:45:01 2006 (maria): tsys 
+Tue Oct 10 15:45:15 2006 (maria): integrate -s 10 -w 
+Tue Oct 10 15:50:26 2006 (maria): lookup -s 0418+380 
+Tue Oct 10 15:50:27 2006 (maria): lookup -s elias3-1 -r 04:18:40.61 -d +28:19:15.52 -e 2000 -v 8.2 
+Tue Oct 10 15:50:27 2006 (maria): observe -s elias3-1 -r 04:18:40.61 -d +28:19:15.52 -e 2000 -v 8.2 
+Tue Oct 10 15:50:29 2006 (maria): tsys 
+Tue Oct 10 15:50:42 2006 (maria): integrate -s 40 -w 
+Tue Oct 10 16:03:59 2006 (tksridha): monitor 
+Tue Oct 10 16:10:44 2006 (maria): lookup -s 0418+380 
+Tue Oct 10 16:10:44 2006 (maria): observe -s 0418+380 
+Tue Oct 10 16:10:45 2006 (maria): tsys 
+Tue Oct 10 16:10:58 2006 (maria): integrate -s 10 -w 
+Tue Oct 10 16:16:10 2006 (maria): lookup -s 0418+380 
+Tue Oct 10 16:16:11 2006 (maria): lookup -s elias3-1 -r 04:18:40.61 -d +28:19:15.52 -e 2000 -v 8.2 
+Tue Oct 10 16:16:11 2006 (maria): observe -s elias3-1 -r 04:18:40.61 -d +28:19:15.52 -e 2000 -v 8.2 
+Tue Oct 10 16:16:12 2006 (maria): tsys 
+Tue Oct 10 16:16:25 2006 (maria): integrate -s 40 -w 
+Tue Oct 10 16:36:27 2006 (maria): lookup -s 0418+380 
+Tue Oct 10 16:36:27 2006 (maria): observe -s 0418+380 
+Tue Oct 10 16:36:29 2006 (maria): tsys 
+Tue Oct 10 16:36:42 2006 (maria): integrate -s 10 -w 
+Tue Oct 10 16:41:53 2006 (maria): lookup -s 0418+380 
+Tue Oct 10 16:41:54 2006 (maria): lookup -s elias3-1 -r 04:18:40.61 -d +28:19:15.52 -e 2000 -v 8.2 
+Tue Oct 10 16:41:54 2006 (maria): observe -s elias3-1 -r 04:18:40.61 -d +28:19:15.52 -e 2000 -v 8.2 
+Tue Oct 10 16:41:55 2006 (maria): tsys 
+Tue Oct 10 16:42:09 2006 (maria): integrate -s 40 -w 
+Tue Oct 10 17:02:10 2006 (maria): lookup -s 0418+380 
+Tue Oct 10 17:02:11 2006 (maria): observe -s 0418+380 
+Tue Oct 10 17:02:12 2006 (maria): tsys 
+Tue Oct 10 17:02:25 2006 (maria): integrate -s 10 -w 
+Tue Oct 10 17:07:37 2006 (maria): lookup -s 0418+380 
+Tue Oct 10 17:07:38 2006 (maria): lookup -s elias3-1 -r 04:18:40.61 -d +28:19:15.52 -e 2000 -v 8.2 
+Tue Oct 10 17:07:38 2006 (maria): observe -s elias3-1 -r 04:18:40.61 -d +28:19:15.52 -e 2000 -v 8.2 
+Tue Oct 10 17:07:39 2006 (maria): tsys 
+Tue Oct 10 17:07:52 2006 (maria): integrate -s 40 -w 
+Tue Oct 10 17:13:58 2006 (root): monitor 
+Tue Oct 10 17:27:54 2006 (maria): lookup -s 0418+380 
+Tue Oct 10 17:27:54 2006 (maria): observe -s 0418+380 
+Tue Oct 10 17:27:55 2006 (maria): tsys 
+Tue Oct 10 17:28:08 2006 (maria): integrate -s 10 -w 
+Tue Oct 10 17:33:20 2006 (maria): lookup -s 0418+380 
+Tue Oct 10 17:33:21 2006 (maria): lookup -s elias3-1 -r 04:18:40.61 -d +28:19:15.52 -e 2000 -v 8.2 
+Tue Oct 10 17:33:21 2006 (maria): observe -s elias3-1 -r 04:18:40.61 -d +28:19:15.52 -e 2000 -v 8.2 
+Tue Oct 10 17:33:22 2006 (maria): tsys 
+Tue Oct 10 17:33:35 2006 (maria): integrate -s 40 -w 
+Tue Oct 10 17:53:38 2006 (maria): lookup -s 0418+380 
+Tue Oct 10 17:53:38 2006 (maria): observe -s 0418+380 
+Tue Oct 10 17:53:39 2006 (maria): tsys 
+Tue Oct 10 17:53:52 2006 (maria): integrate -s 10 -w 
+Tue Oct 10 17:59:04 2006 (maria): lookup -s 0418+380 
+Tue Oct 10 17:59:04 2006 (maria): lookup -s elias3-1 -r 04:18:40.61 -d +28:19:15.52 -e 2000 -v 8.2 
+Tue Oct 10 17:59:05 2006 (maria): observe -s elias3-1 -r 04:18:40.61 -d +28:19:15.52 -e 2000 -v 8.2 
+Tue Oct 10 17:59:06 2006 (maria): tsys 
+Tue Oct 10 17:59:19 2006 (maria): integrate -s 40 -w 
+Tue Oct 10 18:00:02 2006 (nimesh): monitor 
+Tue Oct 10 18:08:37 2006 (root): monitor 
+Tue Oct 10 18:10:11 2006 (root): monitor 
+Tue Oct 10 18:19:21 2006 (maria): lookup -s 0418+380 
+Tue Oct 10 18:19:21 2006 (maria): observe -s 0418+380 
+Tue Oct 10 18:19:23 2006 (maria): tsys 
+Tue Oct 10 18:19:36 2006 (maria): integrate -s 10 -w 
+Tue Oct 10 18:24:47 2006 (maria): lookup -s 0418+380 
+Tue Oct 10 18:24:48 2006 (maria): lookup -s elias3-1 -r 04:18:40.61 -d +28:19:15.52 -e 2000 -v 8.2 
+Tue Oct 10 18:24:49 2006 (maria): observe -s elias3-1 -r 04:18:40.61 -d +28:19:15.52 -e 2000 -v 8.2 
+Tue Oct 10 18:24:50 2006 (maria): tsys 
+Tue Oct 10 18:25:03 2006 (maria): integrate -s 40 -w 
+Tue Oct 10 18:47:03 2006 (maria): lookup -s 0418+380 
+Tue Oct 10 18:47:04 2006 (maria): observe -s 0418+380 
+Tue Oct 10 18:47:05 2006 (maria): tsys 
+Tue Oct 10 18:47:18 2006 (maria): integrate -s 10 -w 
+Tue Oct 10 18:52:30 2006 (maria): lookup -s 0418+380 
+Tue Oct 10 18:52:31 2006 (maria): lookup -s 0418+380 
+Tue Oct 10 18:52:31 2006 (maria): observe -s 0418+380 
+Tue Oct 10 18:52:32 2006 (maria): tsys 
+Tue Oct 10 18:52:45 2006 (maria): integrate -s 10 -w 
+Tue Oct 10 18:57:56 2006 (maria): lookup -s uranus 
+Tue Oct 10 18:57:57 2006 (maria): lookup -s 2232+117 
+Tue Oct 10 18:57:58 2006 (maria): lookup -s titan 
+Tue Oct 10 18:58:39 2006 (maria): project -r -i 199 -f ./endObs.pl 
+Tue Oct 10 18:58:40 2006 (maria): tune -q -c hotload in 
+Tue Oct 10 18:58:46 2006 (maria): integrate -n -i -p 
+Tue Oct 10 18:58:47 2006 (maria): azel -z0 -e80 
+Tue Oct 10 18:58:49 2006 (maria): antennaWait 
+Tue Oct 10 18:59:29 2006 (maria): .//dip 
+Tue Oct 10 18:59:29 2006 (maria): openM3 -a 1,2,3,4,5,6,8 
+Tue Oct 10 18:59:32 2006 (maria): el -d 80 -a 1,2,3,4,5,6,8 
+Tue Oct 10 18:59:36 2006 (maria): resume -a 1,2,3,4,5,6,8 
+Tue Oct 10 18:59:44 2006 (maria): tune -a 1 -c hotload in 
+Tue Oct 10 18:59:45 2006 (maria): tune -a 2 -c hotload in 
+Tue Oct 10 18:59:45 2006 (maria): tune -a 3 -c hotload in 
+Tue Oct 10 18:59:45 2006 (maria): tune -a 4 -c hotload in 
+Tue Oct 10 18:59:46 2006 (maria): tune -a 5 -c hotload in 
+Tue Oct 10 18:59:46 2006 (maria): tune -a 6 -c hotload in 
+Tue Oct 10 18:59:47 2006 (maria): tune -a 8 -c hotload in 
+Tue Oct 10 18:59:53 2006 (maria): tune -a 1 -c hotload out 
+Tue Oct 10 18:59:56 2006 (maria): tune -a 2 -c hotload out 
+Tue Oct 10 19:00:00 2006 (maria): tune -a 3 -c hotload out 
+Tue Oct 10 19:00:04 2006 (maria): tune -a 4 -c hotload out 
+Tue Oct 10 19:00:08 2006 (maria): tune -a 5 -c hotload out 
+Tue Oct 10 19:00:12 2006 (maria): tune -a 6 -c hotload out 
+Tue Oct 10 19:00:16 2006 (maria): tune -a 8 -c hotload out 
+Tue Oct 10 19:00:25 2006 (maria): resume -a 1 
+Tue Oct 10 19:00:25 2006 (maria): resume -a 2 
+Tue Oct 10 19:00:25 2006 (maria): resume -a 3 
+Tue Oct 10 19:00:25 2006 (maria): resume -a 4 
+Tue Oct 10 19:00:26 2006 (maria): resume -a 5 
+Tue Oct 10 19:00:26 2006 (maria): resume -a 6 
+Tue Oct 10 19:00:26 2006 (maria): resume -a 8 
+Tue Oct 10 19:00:26 2006 (maria): el -a 1,2,3,4,5,6,8 -d 80 
+Tue Oct 10 19:00:28 2006 (maria): antennaWait -a 1,2,3,4,5,6,8 -e 
+Tue Oct 10 19:01:03 2006 (maria): el -a 1,2,3,4,5,6,8 -d 60.81 
+Tue Oct 10 19:01:06 2006 (maria): antennaWait -a 1,2,3,4,5,6,8 -e 
+Tue Oct 10 19:01:52 2006 (maria): el -a 1,2,3,4,5,6,8 -d 41.81 
+Tue Oct 10 19:01:54 2006 (maria): antennaWait -a 1,2,3,4,5,6,8 -e 
+Tue Oct 10 19:02:34 2006 (root): monitor 
+Tue Oct 10 19:02:39 2006 (maria): el -a 1,2,3,4,5,6,8 -d 30 
+Tue Oct 10 19:02:41 2006 (maria): antennaWait -a 1,2,3,4,5,6,8 -e 
+Tue Oct 10 19:03:22 2006 (maria): el -a 1,2,3,4,5,6,8 -d 23.58 
+Tue Oct 10 19:03:24 2006 (maria): antennaWait -a 1,2,3,4,5,6,8 -e 
+Tue Oct 10 19:04:04 2006 (maria): el -a 1,2,3,4,5,6,8 -d 19.47 
+Tue Oct 10 19:04:06 2006 (maria): antennaWait -a 1,2,3,4,5,6,8 -e 
+Tue Oct 10 19:04:44 2006 (maria): el -a 1,2,3,4,5,6,8 -d 16.6 
+Tue Oct 10 19:04:46 2006 (maria): antennaWait -a 1,2,3,4,5,6,8 -e 
+Tue Oct 10 19:05:24 2006 (maria): azel -z10 -e45 
+Tue Oct 10 19:05:32 2006 (maria): setIFLevels -1 -D 
+Tue Oct 10 19:05:33 2006 (maria): tune -q -c hotload out 
+Tue Oct 10 19:05:45 2006 (maria): integrate -t 2.58 -P 
+Tue Oct 10 19:07:56 2006 (maria): tune -q -c hotload in 
+Tue Oct 10 19:10:18 2006 (maria): tune -q -c hotload out 
+Tue Oct 10 19:10:22 2006 (maria): tune -q -c activate -w 
+Tue Oct 10 19:10:25 2006 (maria): tune -q -c vbias0 10 
+Tue Oct 10 19:10:27 2006 (maria): tune -q -c vbias1 10 
+Tue Oct 10 19:10:29 2006 (maria): tune -q -c hotload in 
+Tue Oct 10 19:12:52 2006 (maria): tune -q -c activate -r 
+Tue Oct 10 19:12:54 2006 (maria): tune -q -c iv0 
+Tue Oct 10 19:13:29 2006 (maria): closeM3 
+Tue Oct 10 19:14:15 2006 (maria): endProject.
+Tue Oct 10 19:14:19 2006 (root): project -p eSMA -o Taco -l Cambridge -s 1 -a 1,2,3,4,5,6,8,9,10 -R l -C 1,7 -d eSMA Tests 
+Tue Oct 10 19:14:29 2006 (root): standby 
+Tue Oct 10 19:14:43 2006 (root): lookup -s mwc349 
+Tue Oct 10 19:15:47 2006 (root): observe -s MWC349 -r 20:32:45.500 -d 40:39:37.000 
+Tue Oct 10 19:16:08 2006 (root): monitor 
+Tue Oct 10 19:16:49 2006 (root): dopplerTrack -t h30alpha -n -u -g9:3 -g10:3 
+Tue Oct 10 19:18:35 2006 (rtm): /application/bin/killdaemon acc antIFServer restart
+Tue Oct 10 19:18:54 2006 (root): lockYIG -a 1 
+Tue Oct 10 19:19:03 2006 (root): lockYIG -a 2 
+Tue Oct 10 19:19:12 2006 (root): lockYIG -a 3 
+Tue Oct 10 19:19:18 2006 (root): lockYIG -a 4 
+Tue Oct 10 19:19:24 2006 (root): lockYIG -a 5 
+Tue Oct 10 19:19:32 2006 (root): lockYIG -a 6 
+Tue Oct 10 19:19:40 2006 (root): lockYIG -a 6 
+Tue Oct 10 19:20:01 2006 (rtm): /application/bin/killdaemon acc6 tune6 restart
+Tue Oct 10 19:20:07 2006 (root): lockYIG -a 6 
+Tue Oct 10 19:20:20 2006 (root): lockYIG -a 8 
+Tue Oct 10 19:20:35 2006 (root): lockYIG -a 9 
+Tue Oct 10 19:20:52 2006 (root): lockYIG -a 10 
+Tue Oct 10 19:22:56 2006 (root): dopplerTrack -t h30alpha -u -g9:3 -g10:3 
+Tue Oct 10 19:23:45 2006 (daemon): setLO: sending "tune -f0 226.90 -h0 16" to acc1
+Tue Oct 10 19:23:45 2006 (daemon): setLO: sending "tune -f0 226.90 -h0 16" to acc2
+Tue Oct 10 19:23:45 2006 (daemon): setLO: sending "tune -f0 226.90 -h0 16" to acc3
+Tue Oct 10 19:23:45 2006 (daemon): setLO: sending "tune -f0 226.90 -h0 16" to acc4
+Tue Oct 10 19:23:45 2006 (daemon): setLO: sending "tune -f0 226.90 -h0 16" to acc5
+Tue Oct 10 19:23:45 2006 (daemon): setLO: sending "tune -f0 226.90 -h0 16" to acc6
+Tue Oct 10 19:23:45 2006 (daemon): setLO: sending "tune -f0 226.90 -h0 16" to acc8
+Tue Oct 10 19:23:45 2006 (daemon): setLO: sending "tune -f0 226.90 -h0 10" to acc9
+Tue Oct 10 19:23:45 2006 (daemon): setLO: sending "tune -f0 226.90 -h0 10" to acc10
+Tue Oct 10 19:37:41 2006 (rtm): /application/bin/killdaemon acc6 tune6 restart
+Tue Oct 10 19:37:52 2006 (rtm): /application/bin/killdaemon acc antIFServer restart
+Tue Oct 10 19:38:10 2006 (root): lockYIG -a 1,2,3,4,5,6,8 
+Tue Oct 10 19:38:14 2006 (root): lockYIG -a 1 
+Tue Oct 10 19:38:23 2006 (root): lockYIG -a 2 
+Tue Oct 10 19:38:29 2006 (root): lockYIG -a 3 
+Tue Oct 10 19:38:42 2006 (root): lockYIG -a 4 
+Tue Oct 10 19:38:54 2006 (root): lockYIG -a 5 
+Tue Oct 10 19:39:01 2006 (root): lockYIG -a 6 
+Tue Oct 10 19:39:09 2006 (root): lockYIG -a 8 
+Tue Oct 10 19:40:48 2006 (root): lockYIG -a 9 
+Tue Oct 10 19:41:05 2006 (root): lockYIG -a 10 
+Tue Oct 10 19:41:47 2006 (root): lockYIG -a 9 
+Tue Oct 10 19:52:44 2006 (bchitwood): monitor 
+Tue Oct 10 19:54:10 2006 (root): dopplerTrack -t h30alpha -u -g9:3 -g10:3 -n 
+Tue Oct 10 19:56:12 2006 (root): dopplerTrack -t h30alpha -u -g3 -n 
+Tue Oct 10 20:00:56 2006 (rtm): /application/bin/killdaemon m5 setMRGServer restart
+Tue Oct 10 20:01:08 2006 (root): dopplerTrack -t h30alpha -u -g3 -n 
+Tue Oct 10 20:02:00 2006 (root): dopplerTrack -t h30alpha -u -g9:3 -g10:3 -n 
+Tue Oct 10 20:02:53 2006 (rtm): /application/bin/killdaemon acc1 antIFServer restart
+Tue Oct 10 20:02:57 2006 (rtm): /application/bin/killdaemon acc2 antIFServer restart
+Tue Oct 10 20:03:00 2006 (rtm): /application/bin/killdaemon acc3 antIFServer restart
+Tue Oct 10 20:03:03 2006 (rtm): /application/bin/killdaemon acc4 antIFServer restart
+Tue Oct 10 20:03:07 2006 (rtm): /application/bin/killdaemon acc5 antIFServer restart
+Tue Oct 10 20:03:10 2006 (rtm): /application/bin/killdaemon acc6 antIFServer restart
+Tue Oct 10 20:03:13 2006 (rtm): /application/bin/killdaemon acc8 antIFServer restart
+Tue Oct 10 20:03:18 2006 (root): lockYIG -a 1 
+Tue Oct 10 20:03:27 2006 (root): lockYIG -a 2 
+Tue Oct 10 20:03:34 2006 (root): lockYIG -a 3 
+Tue Oct 10 20:03:40 2006 (root): lockYIG -a 
+Tue Oct 10 20:03:43 2006 (root): lockYIG -a 4 
+Tue Oct 10 20:03:50 2006 (root): lockYIG -a 5 
+Tue Oct 10 20:04:15 2006 (rtm): /application/bin/killdaemon acc5 antIFServer restart
+Tue Oct 10 20:04:17 2006 (root): lockYIG -a 6 
+Tue Oct 10 20:04:32 2006 (root): lockYIG -a 5 
+Tue Oct 10 20:05:54 2006 (root): dopplerTrack -t h30alpha -u -g9:3 -g10:3 -h14 -h9:12 -h10:12 -n 
+Tue Oct 10 20:06:21 2006 (bchitwood): monitor 
+Tue Oct 10 20:07:25 2006 (root): dopplerTrack -t h30alpha -u -g3 -h12 -n 
+Tue Oct 10 20:08:46 2006 (root): monitor 
+Tue Oct 10 20:09:11 2006 (root): dopplerTrack -t h30alpha -u -g9:3 -g10:3 -h14 -h9:12 -h10:12 -n 
+Tue Oct 10 20:10:13 2006 (rtm): /application/bin/killdaemon acc1 antIFServer restart
+Tue Oct 10 20:10:22 2006 (root): monitor 
+Tue Oct 10 20:10:33 2006 (root): monitor 
+Tue Oct 10 20:10:48 2006 (root): lockYIG -a 1 
+Tue Oct 10 20:11:06 2006 (rtm): /application/bin/killdaemon acc2 antIFServer restart
+Tue Oct 10 20:11:10 2006 (root): lockYIG -a 2 
+Tue Oct 10 20:11:23 2006 (rtm): /application/bin/killdaemon acc3 antIFServer restart
+Tue Oct 10 20:11:28 2006 (root): lockYIG -a 3 
+Tue Oct 10 20:11:44 2006 (rtm): /application/bin/killdaemon acc4 antIFServer restart
+Tue Oct 10 20:11:50 2006 (root): lockYIG -a 4 
+Tue Oct 10 20:12:01 2006 (rtm): /application/bin/killdaemon acc5 antIFServer restart
+Tue Oct 10 20:12:07 2006 (root): lockYIG -a 5 
+Tue Oct 10 20:12:21 2006 (rtm): /application/bin/killdaemon acc6 antIFServer restart
+Tue Oct 10 20:12:23 2006 (root): lockYIG -a 6 
+Tue Oct 10 20:12:31 2006 (root): lockYIG -a 6 
+Tue Oct 10 20:12:42 2006 (rtm): /application/bin/killdaemon acc8 antIFServer restart
+Tue Oct 10 20:12:49 2006 (root): lockYIG -a 8 
+Tue Oct 10 20:13:28 2006 (root): lockYIG -a 9 
+Tue Oct 10 20:19:51 2006 (root): dopplerTrack -t h30alpha -u -g3 -h12 -n 
+Tue Oct 10 20:26:42 2006 (root): monitor 
+Tue Oct 10 20:34:38 2006 (root): monitor 
+Tue Oct 10 20:35:12 2006 (root): monitor 
+Tue Oct 10 20:35:47 2006 (root): monitor 
+Tue Oct 10 21:18:19 2006 (dkubo): monitor 
+Tue Oct 10 21:18:45 2006 (dkubo): monitor 
+Tue Oct 10 21:21:12 2006 (mkrips): monitor 
+Tue Oct 10 22:42:35 2006 (root): monitor 
+Tue Oct 10 22:59:48 2006 (shostler): monitor 
+Tue Oct 10 23:02:18 2006 (root): newFile 
+Tue Oct 10 23:08:42 2006 (root): dopplerTrack -t h30alpha -u -g3 -h12 -n 
+Tue Oct 10 23:12:05 2006 (rtm): /application/bin/killdaemon m5 setMRGServer restart
+Tue Oct 10 23:13:00 2006 (root): dopplerTrack -t h30alpha -u -g9:3 -g10:3 -h14 -h9:12 -h10:12 -n 
+Tue Oct 10 23:22:57 2006 (root): tune -a 10 -c v 
+Tue Oct 10 23:23:02 2006 (root): tune -a 10 -c pll 
+Tue Oct 10 23:23:30 2006 (root): tune -a 10 -c vm 
+Tue Oct 10 23:23:41 2006 (root): tune -a 10 -c gunn on 
+Tue Oct 10 23:23:45 2006 (root): tune -a 10 -c v 
+Tue Oct 10 23:24:05 2006 (root): tune -a 10 -c gunn off 
+Tue Oct 10 23:24:09 2006 (root): tune -a 10 -c gunn on 
+Tue Oct 10 23:24:16 2006 (root): tune -a 10 -c pll on 
+Tue Oct 10 23:24:20 2006 (root): tune -a 10 -c v 
+Tue Oct 10 23:25:45 2006 (root): tune -a 10 -c rfpower 
+Tue Oct 10 23:26:21 2006 (root): monitor 
+Tue Oct 10 23:26:43 2006 (root): monitor 
+Tue Oct 10 23:27:00 2006 (root): tune -a 10 -c rm on 
+Tue Oct 10 23:27:19 2006 (root): setIFLevels -2 
+Tue Oct 10 23:27:29 2006 (root): tune -a 10 -c rfpower 18 
+Tue Oct 10 23:27:33 2006 (root): tune -a 10 -c v 
+Tue Oct 10 23:27:35 2006 (root): tune -a 10 -c rfpower 15 
+Tue Oct 10 23:27:37 2006 (root): tune -a 10 -c v 
+Tue Oct 10 23:27:41 2006 (root): tune -a 10 -c rfpower 10 
+Tue Oct 10 23:27:43 2006 (root): tune -a 10 -c v 
+Tue Oct 10 23:28:09 2006 (pyamaguc): monitor 
+Tue Oct 10 23:28:10 2006 (root): setIFLevels -2 
+Tue Oct 10 23:28:45 2006 (root): tune -a 10 -c rfpower 20 
+Tue Oct 10 23:29:06 2006 (root): tune -a 10 -c v 
+Tue Oct 10 23:29:46 2006 (root): tune -a 10 -c rfpower -y 1 15 
+Tue Oct 10 23:29:49 2006 (root): tune -a 10 -c v 
+Tue Oct 10 23:30:04 2006 (root): tune -a 10 -c rm 
+Tue Oct 10 23:30:11 2006 (root): monitor 
+Tue Oct 10 23:30:33 2006 (root): tune -a 10 -c activate -l 2 
+Tue Oct 10 23:30:41 2006 (root): tune -a 10 -c activate -l 0 
+Tue Oct 10 23:31:15 2006 (root): tune -a 10 -c network 
+Tue Oct 10 23:31:23 2006 (root): tune -a 10 -c v 
+Tue Oct 10 23:31:27 2006 (root): tune -a 10 -c activate -l 2 
+Tue Oct 10 23:31:29 2006 (root): tune -a 10 -c v 
+Tue Oct 10 23:31:33 2006 (root): tune -a 10 -c gunn on 
+Tue Oct 10 23:31:34 2006 (root): tune -a 10 -c v 
+Tue Oct 10 23:31:40 2006 (root): tune -a 10 -c pll on 
+Tue Oct 10 23:31:41 2006 (root): tune -a 10 -c v 
+Tue Oct 10 23:34:20 2006 (root): monitor 
+Tue Oct 10 23:34:35 2006 (root): tune -a 1 -c tune 226.9 
+Tue Oct 10 23:35:13 2006 (pyamaguc): monitor 
+Tue Oct 10 23:39:26 2006 (root): tune -a 1 -c v 
+Tue Oct 10 23:39:34 2006 (root): tune -a 10 -c v 
+Tue Oct 10 23:40:42 2006 (root): tune -a 10 -c v 
+Tue Oct 10 23:40:57 2006 (root): tune -a 10 -c v 
+Tue Oct 10 23:41:22 2006 (root): restartCorrelator -d 
+Tue Oct 10 23:42:51 2006 (root): restartCorrelator -d -s12:128 -s13:128 
+Tue Oct 10 23:51:28 2006 (root): tune -a 10 -c v 
+Tue Oct 10 23:51:39 2006 (root): tune -a 10 -c pll blink 
+Tue Oct 10 23:51:42 2006 (root): tune -a 10 -c v 
+Tue Oct 10 23:51:48 2006 (root): tune -a 10 -c checklock 
+Tue Oct 10 23:53:46 2006 (root): tune -a 2 -c tune 226.9 
+Tue Oct 10 23:57:05 2006 (root): tune -a 3 -c tune 226.9 
+Tue Oct 10 23:58:29 2006 (root): tune -a 4 -c tune 226.9 
+Wed Oct 11 00:00:42 2006 (root): tune -a 5 -c tune 226.9 
+Wed Oct 11 00:00:52 2006 (root): tune -a 6 -c tune 226.9 
+Wed Oct 11 00:04:06 2006 (root): tune -a 8 -c tune 226.9 
+Wed Oct 11 00:07:49 2006 (root): tune -a 2 -c rfpower 6 
+Wed Oct 11 00:08:42 2006 (root): tune -a 1 -c opt curr -t 
+Wed Oct 11 00:08:57 2006 (root): tune -a 1 -c opt curr -c 20 
+Wed Oct 11 00:09:11 2006 (root): tune -a 1 -c opt curr -c 21 
+Wed Oct 11 00:10:47 2006 (hshinnaga): monitor 
+Wed Oct 11 00:15:01 2006 (pyamaguc): monitor 
+Wed Oct 11 00:15:25 2006 (hshinnaga): monitor 
+Wed Oct 11 00:16:32 2006 (root): monitor 
+Wed Oct 11 00:43:06 2006 (root): dopplerTrack -t h30alpha -u -g3 -h12 -n -s6 
+Wed Oct 11 00:43:49 2006 (root): tune -a 2 -c grid -B 
+Wed Oct 11 00:44:01 2006 (root): tune -a 2 -c grid -r 0 -m 
+Wed Oct 11 00:44:23 2006 (root): dopplerTrack -t h30alpha -s6 -u -g9:3 -g10:3 -h14 -h9:12 -h10:12 -n 
+Wed Oct 11 00:44:30 2006 (root): tune -a 2 -c grid -q 
+Wed Oct 11 00:45:32 2006 (root): tune -a 2 -c grid -B 
+Wed Oct 11 00:45:43 2006 (root): tune -a 2 -c grid -r 2 -m 
+Wed Oct 11 00:46:04 2006 (root): tune -a 2 -c grid -r 0 -m 
+Wed Oct 11 00:47:41 2006 (root): tune -a 10 -c v 
+Wed Oct 11 00:49:00 2006 (root): tune -a 9 -c v 
+Wed Oct 11 00:51:35 2006 (root): tune -a 10 -c v 
+Wed Oct 11 00:51:45 2006 (root): tune -a 10 -c v 
+Wed Oct 11 00:51:48 2006 (root): tune -a 10 -c v 
+Wed Oct 11 00:51:52 2006 (root): tune -a 10 -c v 
+Wed Oct 11 00:52:00 2006 (root): tune -a 10 -c pll blink 
+Wed Oct 11 00:52:02 2006 (root): tune -a 10 -c v 
+Wed Oct 11 00:52:13 2006 (root): tune -a 10 -c v 
+Wed Oct 11 00:52:15 2006 (root): tune -a 10 -c v 
+Wed Oct 11 00:52:20 2006 (root): tune -a 10 -c v 
+Wed Oct 11 00:52:26 2006 (root): tune -a 10 -c v 
+Wed Oct 11 00:52:28 2006 (root): tune -a 10 -c v 
+Wed Oct 11 00:52:39 2006 (root): restartCorrelator -d -s6:128 
+Wed Oct 11 00:54:07 2006 (root): tune -a 2 -c tune 227.437 
+Wed Oct 11 00:54:43 2006 (dkubo): monitor 
+Wed Oct 11 00:54:45 2006 (root): tune -a 1 -c tune 227.437 
+Wed Oct 11 00:57:00 2006 (root): tune -a 3 -c tune 227.437 
+Wed Oct 11 00:57:23 2006 (root): tune -a 4 -c tune 227.437 
+Wed Oct 11 01:03:37 2006 (root): monitor 
+Wed Oct 11 01:03:48 2006 (root): setIFLevels -2 
+Wed Oct 11 01:04:31 2006 (root): tune -a 4 -c tune 227.437 
+Wed Oct 11 01:04:31 2006 (root): openM3 
+Wed Oct 11 01:04:33 2006 (pyamaguc): monitor 
+Wed Oct 11 01:04:35 2006 (root): tune -a 5 -c tune 227.437 
+Wed Oct 11 01:04:46 2006 (pyamaguc): setIFLevels --help 
+Wed Oct 11 01:07:18 2006 (root): tune -a 6 -c tune 227.437 
+Wed Oct 11 01:08:05 2006 (root): tune -a 4 -c t joy 
+Wed Oct 11 01:09:40 2006 (root): tune -a 4 -c rfpower 18 
+Wed Oct 11 01:09:49 2006 (root): tune -a 4 -c j joy 
+Wed Oct 11 01:09:54 2006 (root): tune -a 4 -c t joy 
+Wed Oct 11 01:12:52 2006 (pyamaguc): setIFLevels -R h -a 9 -1 -v 
+Wed Oct 11 01:13:20 2006 (root): tune -a 4 -c t joy 
+Wed Oct 11 01:16:11 2006 (root): dopplerTrack -s6 -t h30alpha -u -g3 -h12 -n 
+Wed Oct 11 01:17:23 2006 (root): dopplerTrack -s6 -t h30alpha -u -g3 -h12 -n 
+Wed Oct 11 01:18:57 2006 (rtm): /application/bin/killdaemon m5 smainit HUP
+Wed Oct 11 01:19:17 2006 (rtm): /application/bin/killdaemon hal9000 setLO restart
+Wed Oct 11 01:19:21 2006 (root): standby 
+Wed Oct 11 01:20:17 2006 (root): observe -s MWC349 -r 20:32:45.500 -d 40:39:37.000 
+Wed Oct 11 01:20:50 2006 (root): dopplerTrack -s6 -t h30alpha -u -g3 -h12 -n 
+Wed Oct 11 01:22:05 2006 (root): monitor 
+Wed Oct 11 01:22:41 2006 (root): dopplerTrack -s6 -t co2-1 -u 
+Wed Oct 11 01:22:59 2006 (daemon): setLO: sending "tune -f0 226.07 -h0 16" to acc1
+Wed Oct 11 01:22:59 2006 (daemon): setLO: sending "tune -f0 226.07 -h0 16" to acc2
+Wed Oct 11 01:22:59 2006 (daemon): setLO: sending "tune -f0 226.07 -h0 16" to acc3
+Wed Oct 11 01:22:59 2006 (daemon): setLO: sending "tune -f0 226.07 -h0 16" to acc4
+Wed Oct 11 01:22:59 2006 (daemon): setLO: sending "tune -f0 226.07 -h0 16" to acc5
+Wed Oct 11 01:22:59 2006 (daemon): setLO: sending "tune -f0 226.07 -h0 16" to acc6
+Wed Oct 11 01:22:59 2006 (daemon): setLO: sending "tune -f0 226.07 -h0 16" to acc9
+Wed Oct 11 01:22:59 2006 (daemon): setLO: sending "tune -f0 226.07 -h0 16" to acc10
+Wed Oct 11 01:24:56 2006 (root): dopplerTrack -s6 -t co2-1 -u -n 
+Wed Oct 11 01:25:32 2006 (rtm): /application/bin/killdaemon hal9000 setLO restart
+Wed Oct 11 01:27:04 2006 (rtm): /application/bin/killdaemon corcon corr_minitor HUP
+Wed Oct 11 01:27:11 2006 (root): dopplerTrack -s6 -t co2-1 -u -n 
+Wed Oct 11 01:28:55 2006 (rtm): /application/bin/killdaemon crate1 logger URG
+Wed Oct 11 01:29:06 2006 (rtm): /application/bin/killdaemon crate2 logger URG
+Wed Oct 11 01:29:17 2006 (rtm): /application/bin/killdaemon crate3 logger URG
+Wed Oct 11 01:29:28 2006 (rtm): /application/bin/killdaemon crate4 logger URG
+Wed Oct 11 01:29:38 2006 (rtm): /application/bin/killdaemon crate5 logger URG
+Wed Oct 11 01:29:49 2006 (rtm): /application/bin/killdaemon crate6 logger URG
+Wed Oct 11 01:30:00 2006 (rtm): /application/bin/killdaemon crate7 logger URG
+Wed Oct 11 01:30:11 2006 (rtm): /application/bin/killdaemon crate8 logger URG
+Wed Oct 11 01:30:21 2006 (rtm): /application/bin/killdaemon crate9 logger URG
+Wed Oct 11 01:30:32 2006 (rtm): /application/bin/killdaemon crate10 logger URG
+Wed Oct 11 01:30:43 2006 (rtm): /application/bin/killdaemon crate11 logger URG
+Wed Oct 11 01:30:53 2006 (rtm): /application/bin/killdaemon crate12 logger URG
+Wed Oct 11 01:31:09 2006 (pyamaguc): /application/bin/killdaemon corcon corr_monitor HUP
+Wed Oct 11 01:41:08 2006 (rtm): /application/bin/killdaemon crate1 logger URG
+Wed Oct 11 01:41:19 2006 (rtm): /application/bin/killdaemon crate2 logger URG
+Wed Oct 11 01:41:30 2006 (rtm): /application/bin/killdaemon crate3 logger URG
+Wed Oct 11 01:41:41 2006 (rtm): /application/bin/killdaemon crate4 logger URG
+Wed Oct 11 01:41:52 2006 (rtm): /application/bin/killdaemon crate5 logger URG
+Wed Oct 11 01:41:59 2006 (root): dopplerTrack -s6 -t h30alpha -u -g3 -h12 -n 
+Wed Oct 11 01:42:02 2006 (rtm): /application/bin/killdaemon crate6 logger URG
+Wed Oct 11 01:42:13 2006 (rtm): /application/bin/killdaemon crate7 logger URG
+Wed Oct 11 01:42:24 2006 (rtm): /application/bin/killdaemon crate8 logger URG
+Wed Oct 11 01:42:35 2006 (rtm): /application/bin/killdaemon crate9 logger URG
+Wed Oct 11 01:42:45 2006 (rtm): /application/bin/killdaemon crate10 logger URG
+Wed Oct 11 01:42:52 2006 (root): dopplerTrack -t h30alpha -s6 -u -g9:3 -g10:3 -h14 -h9:12 -h10:12 -n 
+Wed Oct 11 01:42:56 2006 (rtm): /application/bin/killdaemon crate11 logger URG
+Wed Oct 11 01:43:07 2006 (rtm): /application/bin/killdaemon crate12 logger URG
+Wed Oct 11 01:45:45 2006 (root): resume -a 1,2,3,4,5,6 
+Wed Oct 11 01:46:24 2006 (root): tune -a 1 -c tune 227.437 
+Wed Oct 11 01:47:40 2006 (pyamaguc): setIFLevels -R h -a 9 -1 -v 
+Wed Oct 11 01:48:36 2006 (root): tune -a 2 -c tune 227.437 
+Wed Oct 11 01:48:54 2006 (root): tune -a 3 -c tune 227.437 
+Wed Oct 11 01:51:44 2006 (root): tune -a 5 -c tune 227.437 
+Wed Oct 11 01:52:01 2006 (root): tune -a 6 -c tune 227.437 
+Wed Oct 11 01:54:54 2006 (root): tune -a 4 -c t joy 
+Wed Oct 11 01:55:39 2006 (root): tune -a 4 -c rfpower 18 
+Wed Oct 11 01:55:44 2006 (root): tune -a 4 -c rfpower 17 
+Wed Oct 11 01:55:49 2006 (root): tune -a 4 -c rfpower 14 
+Wed Oct 11 01:55:59 2006 (root): tune -a 4 -c rfpower 13 
+Wed Oct 11 01:56:13 2006 (root): tune -a 2 -c rfpower 7 
+Wed Oct 11 01:56:17 2006 (root): tune -a 2 -c rfpower 6 
+Wed Oct 11 01:56:34 2006 (root): tune -a 4 -c opt curr -t 
+Wed Oct 11 01:57:01 2006 (root): tune -a 3 -c rfpower 14 
+Wed Oct 11 01:57:06 2006 (root): tune -a 3 -c rfpower 18 
+Wed Oct 11 01:57:11 2006 (root): tune -a 3 -c t joy 
+Wed Oct 11 01:58:58 2006 (root): correlatorPause 
+Wed Oct 11 01:59:04 2006 (root): correlatorResume 
+Wed Oct 11 01:59:27 2006 (root): tune -a 10 -c v 
+Wed Oct 11 01:59:32 2006 (root): setIFLevels -2 
+Wed Oct 11 02:01:01 2006 (ebrassfi): monitor 
+Wed Oct 11 02:03:30 2006 (root): tune -a 10 -c v 
+Wed Oct 11 02:04:05 2006 (root): observe -s jupiter 
+Wed Oct 11 02:04:19 2006 (root): tune -a 10 -c v 
+Wed Oct 11 02:05:38 2006 (rtm): /application/bin/killdaemon hal9000 statusServer restart
+Wed Oct 11 02:06:00 2006 (root): tune -a 3 -c rfpower 17 
+Wed Oct 11 02:06:03 2006 (root): tune -a 3 -c rfpower 15 
+Wed Oct 11 02:06:09 2006 (root): tune -a 3 -c cb 0 
+Wed Oct 11 02:06:12 2006 (root): setIFLevels 
+Wed Oct 11 02:06:31 2006 (root): lockYIG -a 5 
+Wed Oct 11 02:20:18 2006 (gpetitpa): monitor 
+Wed Oct 11 02:21:42 2006 (hshinnaga): monitor 
+Wed Oct 11 02:28:17 2006 (root): setIFLevels -2 
+Wed Oct 11 02:28:47 2006 (root): correlatorPause 
+Wed Oct 11 02:28:51 2006 (root): correlatorResume 
+Wed Oct 11 02:31:38 2006 (tbourke): monitor 
+Wed Oct 11 02:33:55 2006 (thunter): airadam -a 6 -c v 
+Wed Oct 11 02:34:11 2006 (thunter): /application/bin/killdaemon acc6 airservo restart
+Wed Oct 11 02:34:21 2006 (thunter): airadam -a 6 -c v 
+Wed Oct 11 02:39:44 2006 (thunter): /application/bin/killdaemon acc6 airservo restart
+Wed Oct 11 02:40:05 2006 (root): observe -s MWC349 -r 20:32:45.500 -d 40:39:37.000 
+Wed Oct 11 02:45:34 2006 (root): tsys -a1,2,3,4,5,6 
+Wed Oct 11 02:48:06 2006 (thunter): airadam -a 6 -c v 
+Wed Oct 11 02:48:27 2006 (root): observe -s MWC349 -r 20:32:45.440 -d 40:39:36.800 
+Wed Oct 11 02:52:36 2006 (root): setIFLevels -2 
+Wed Oct 11 02:55:36 2006 (pyamaguc): monitor 
+Wed Oct 11 02:56:22 2006 (ebrassfi): monitor 
+Wed Oct 11 02:56:53 2006 (root): observe -s sgrb2 -r 17:47:19.789 -d -28:22:18.290 
+Wed Oct 11 02:59:18 2006 (root): observe -s jupiter 
+Wed Oct 11 03:01:10 2006 (root): observe -s neptune 
+Wed Oct 11 03:07:21 2006 (root): observe -s MWC349 -r 20:32:45.440 -d 40:39:36.800 
+Wed Oct 11 03:14:28 2006 (root): tune -a 10 checklock 
+Wed Oct 11 03:14:56 2006 (thunter): tune -a 10 -c v 
+Wed Oct 11 03:16:06 2006 (thunter): tune -a 9 -c v 
+Wed Oct 11 03:16:11 2006 (thunter): tune -a 9 -c network 
+Wed Oct 11 03:16:18 2006 (thunter): tune -a 9 -c network probe 
+Wed Oct 11 03:16:21 2006 (jcmt): monitor 
+Wed Oct 11 03:17:42 2006 (thunter): tune -a 10 -c active 
+Wed Oct 11 03:20:46 2006 (root): setIFLevels -2 
+Wed Oct 11 03:25:29 2006 (thunter): tune -a 10 -c v 
+Wed Oct 11 03:27:32 2006 (rrao): tune -a 4 -c interpolater -f 226 -r 0 
+Wed Oct 11 03:27:50 2006 (rrao): tune -a 4 -c vbias0 2.4 
+Wed Oct 11 03:28:25 2006 (rrao): tsys -a 4 
+Wed Oct 11 03:29:44 2006 (rrao): tune -a 4 -c iv0 
+Wed Oct 11 03:32:04 2006 (root): monitor 
+Wed Oct 11 03:41:10 2006 (thunter): readDSM -h 
+Wed Oct 11 03:41:51 2006 (thunter): readDSM -m newdds -t dds_to_hal -s u_v11_d 
+Wed Oct 11 03:41:58 2006 (thunter): readDSM -m newdds -t dds_to_hal+x -s u_v11_d 
+Wed Oct 11 03:42:01 2006 (thunter): readDSM -m newdds -t dds_to_hal_x -s u_v11_d 
+Wed Oct 11 03:42:14 2006 (thunter): readDSM -m newdds -v dds_to_hal_x -s u_v11_d 
+Wed Oct 11 03:42:41 2006 (root): monitor 
+Wed Oct 11 03:43:10 2006 (root): setIFLevels -2 
+Wed Oct 11 03:43:44 2006 (root): monitor 
+Wed Oct 11 03:43:58 2006 (root): monitor 
+Wed Oct 11 03:44:49 2006 (root): monitor 
+Wed Oct 11 03:46:31 2006 (root): monitor 
+Wed Oct 11 03:47:14 2006 (root): monitor 
+Wed Oct 11 03:48:05 2006 (root): monitor 
+Wed Oct 11 03:48:17 2006 (root): monitor 
+Wed Oct 11 03:49:54 2006 (root): monitor 
+Wed Oct 11 03:52:50 2006 (root): monitor 
+Wed Oct 11 03:56:13 2006 (root): monitor 
+Wed Oct 11 04:06:29 2006 (ebrassfi): monitor 
+Wed Oct 11 04:06:57 2006 (ebrassfi): monitor 
+Wed Oct 11 04:18:18 2006 (ebrassfi): monitor 
+Wed Oct 11 04:21:25 2006 (cso): monitor 
+Wed Oct 11 04:24:38 2006 (ramiro): monitor 
+Wed Oct 11 04:24:54 2006 (root): monitor 
+Wed Oct 11 04:25:23 2006 (root): monitor 
+Wed Oct 11 04:32:02 2006 (thunter): tune -a 9 -c v 
+Wed Oct 11 04:39:01 2006 (thunter): acc9:/common/bin/killdaemon tune6 QUIT
+Wed Oct 11 04:39:46 2006 (thunter): readDSM -m newdds -t dds_to_hal+x -s u_v11_dexexit 
+Wed Oct 11 05:17:19 2006 (root): setIFLevels -2 
+Wed Oct 11 05:25:29 2006 (ebrassfi): monitor 
+Wed Oct 11 05:30:39 2006 (root): monitor 
+Wed Oct 11 05:38:36 2006 (hshinnaga): monitor 
+Wed Oct 11 05:43:17 2006 (root): dopplerTrack --help 
+Wed Oct 11 05:43:31 2006 (root): monitor 
+Wed Oct 11 05:54:58 2006 (root): setIFLevels -2 
+Wed Oct 11 06:05:01 2006 (root): setIFLevels -2 
+Wed Oct 11 06:11:45 2006 (thunter): tune -a 9 -c v 
+Wed Oct 11 06:11:50 2006 (thunter): tune -a 9 -c network probe 
+Wed Oct 11 06:12:00 2006 (thunter): tune -a 9 -c network probe 
+Wed Oct 11 06:12:14 2006 (thunter): acc9:/common/bin/killdaemon tune6 QUIT
+Wed Oct 11 06:14:11 2006 (root): setIFLevels -2 
+Wed Oct 11 06:19:04 2006 (hshinnaga): monitor 
+Wed Oct 11 06:19:24 2006 (hshinnaga): monitor 
+Wed Oct 11 06:20:13 2006 (hshinnaga): monitor 
+Wed Oct 11 06:20:52 2006 (root): setIFLevels -2 
+Wed Oct 11 06:26:15 2006 (root): setIFLevels -2 
+Wed Oct 11 06:26:16 2006 (thunter): lockYIG -a 9 
+Wed Oct 11 06:26:46 2006 (root): setIFLevels -2 
+Wed Oct 11 06:30:33 2006 (root): tune -a 1 -c hotload in 
+Wed Oct 11 06:31:32 2006 (root): tune -a 1 -c hotload out 
+Wed Oct 11 06:44:19 2006 (root): newFile 
+Wed Oct 11 06:45:59 2006 (root): point --help 
+Wed Oct 11 06:47:40 2006 (root): point -l -t -Q -a1,2,3,4,5,6 -b 2 -c 2 -C 50 -S u -w 50 -r 2 -i 45 
+Wed Oct 11 06:50:34 2006 (ebrassfi): point --help 
+Wed Oct 11 06:52:12 2006 (ebrassfi): monitor 
+		Repetition 1:
+		Ant 1	AzOff =  -7.7	ElOff =   6.8	deltaAz =  -7.0	deltaEl =   3.2
+		Ant 2	AzOff =  -0.9	ElOff =   1.5	deltaAz =   1.0	deltaEl =   2.9
+		Ant 3	AzOff =  -1.0	ElOff =  -3.9	deltaAz =  -0.1	deltaEl =  -0.9
+		Ant 4	AzOff =  -6.0	ElOff =   2.7	deltaAz =   3.9	deltaEl =   4.5
+		Ant 5	AzOff =  -4.1	ElOff =  -1.9	deltaAz =  -3.8	deltaEl =  -1.4
+		Ant 6	AzOff =  -1.4	ElOff =   1.9	deltaAz =  -4.5	deltaEl =  -5.2
+		Repetition 2:
+		Ant 1	AzOff =  -8.9	ElOff =   7.4	deltaAz =  -8.2	deltaEl =   3.8
+		Ant 2	AzOff =  -2.4	ElOff =   2.2	deltaAz =  -0.6	deltaEl =   3.6
+		Ant 3	AzOff =   0.2	ElOff =  -3.3	deltaAz =   1.1	deltaEl =  -0.3
+		Ant 4	AzOff =  -5.4	ElOff =   0.3	deltaAz =   4.5	deltaEl =   2.1
+		Ant 5	AzOff =  -1.3	ElOff =  -3.7	deltaAz =  -1.0	deltaEl =  -3.3
+		Ant 6	AzOff =  -4.8	ElOff =   8.2	deltaAz =  -7.9	deltaEl =   1.0
+		Average:
+		Ant 1	AzOff =  -8.3	ElOff =   7.1	deltaAz =  -7.6	deltaEl =   3.5
+		Ant 2	AzOff =  -1.7	ElOff =   1.8	deltaAz =   0.2	deltaEl =   3.3
+		Ant 3	AzOff =  -0.4	ElOff =  -3.6	deltaAz =   0.5	deltaEl =  -0.6
+		Ant 4	AzOff =  -5.7	ElOff =   1.5	deltaAz =   4.2	deltaEl =   3.3
+		Ant 5	AzOff =  -2.7	ElOff =  -2.8	deltaAz =  -2.4	deltaEl =  -2.3
+		Ant 6	AzOff =  -3.1	ElOff =   5.0	deltaAz =  -6.2	deltaEl =  -2.1
+Wed Oct 11 06:57:24 2006 (cso): monitor 
+Wed Oct 11 06:58:56 2006 (thunter): acc9:/common/bin/killdaemon tune6 restart
+Wed Oct 11 06:59:11 2006 (thunter): tune -a 9 -c checklock 
+Wed Oct 11 07:03:17 2006 (thunter): tune -a 9 -c checklock 
+Wed Oct 11 07:03:21 2006 (root): setIFLevels -2 
+Wed Oct 11 07:05:05 2006 (thunter): tune -a 9 -c checklock 
+Wed Oct 11 07:05:12 2006 (root): lockYIG --help 
+Wed Oct 11 07:05:13 2006 (thunter): tune -a 9 -c v 
+Wed Oct 11 07:05:18 2006 (thunter): tune -a 9 -c threshold 
+Wed Oct 11 07:05:28 2006 (thunter): tune -a 9 -c checklock 
+Wed Oct 11 07:05:32 2006 (thunter): tune -a 9 -c checklock 
+Wed Oct 11 07:05:42 2006 (thunter): tune -a 9 -c checklock 
+Wed Oct 11 07:06:20 2006 (root): lockYIG -a 9 -f 6.308619 
+Wed Oct 11 07:08:37 2006 (thunter): tune -a 9 -c rfpower 8 
+Wed Oct 11 07:08:46 2006 (thunter): tune -a 9 -c rfpower 8 -y 0 
+Wed Oct 11 07:08:52 2006 (thunter): tune -a 9 -c rfpower 6 -y 0 
+Wed Oct 11 07:09:02 2006 (thunter): tune -a 9 -c rfpower -v .4 -y 0 
+Wed Oct 11 07:09:18 2006 (thunter): tune -a 9 -c checklock 
+Wed Oct 11 07:09:35 2006 (thunter): tune -a 9 -c rfpower -v .3 -y 0 
+Wed Oct 11 07:09:41 2006 (thunter): tune -a 9 -c rfpower -v .25 -y 0 
+Wed Oct 11 07:09:46 2006 (thunter): tune -a 9 -c rfpower -v .2 -y 0 
+Wed Oct 11 07:11:43 2006 (cso): monitor 
+Wed Oct 11 07:19:30 2006 (aschinck): monitor 
+Wed Oct 11 07:35:26 2006 (root): setIFLevels -2 
+Wed Oct 11 07:36:02 2006 (pyamaguc): monitor 
+Wed Oct 11 07:38:40 2006 (root): integrate -t 300 
+Wed Oct 11 08:00:06 2006 (root): setIFLevels 
+Wed Oct 11 08:05:30 2006 (ebrassfi): lockYIG -a 5 
+Wed Oct 11 08:05:34 2006 (hshinnaga): monitor 
+Wed Oct 11 08:06:12 2006 (hshinnaga): monitor 
+Wed Oct 11 08:06:29 2006 (hshinnaga): monitor 
+Wed Oct 11 08:08:34 2006 (ebrassfi): setIFLevels -a 5 
+Wed Oct 11 08:09:36 2006 (root): setIFLevels 
+Wed Oct 11 08:09:49 2006 (ebrassfi): lockYIG -a 5 
+Wed Oct 11 08:10:43 2006 (root): setIFLevels -R h 
+Wed Oct 11 08:11:52 2006 (root): setIFLevels -R l 
+Wed Oct 11 08:12:48 2006 (ebrassfi): lockYIG -a 5 
+Wed Oct 11 08:12:58 2006 (root): lockYIG -a 10 -f 6.308619 
+Wed Oct 11 08:14:02 2006 (ebrassfi): setIFLevels -a 5 
+Wed Oct 11 08:15:22 2006 (ebrassfi): lockYIG -a 5 
+Wed Oct 11 08:20:08 2006 (root): setIFLevels --help 
+Wed Oct 11 08:20:19 2006 (root): setIFLevels -c -s 
+Wed Oct 11 08:23:45 2006 (ebrassfi): setIFLevels --help 
+Wed Oct 11 08:27:54 2006 (root): lockYIG -a 10 -f 6.308619 
+Wed Oct 11 08:28:17 2006 (root): setIFLevels -c -s 
+Wed Oct 11 08:29:41 2006 (root): lockYIG -a 10 -f 6.308619 
+Wed Oct 11 08:29:54 2006 (root): setIFLevels -c -s 
+Wed Oct 11 08:33:39 2006 (root): lockYIG -a 10 -f 6.308619 
+Wed Oct 11 08:34:09 2006 (root): setIFLevels -c -s 
+Wed Oct 11 08:35:33 2006 (root): lockYIG -a 10 -f 6.308619 
+Wed Oct 11 08:35:47 2006 (root): setIFLevels -c -s 
+Wed Oct 11 08:36:57 2006 (root): lockYIG -a 10 -f 6.308619 
+Wed Oct 11 08:37:16 2006 (root): setIFLevels -c -s 
+Wed Oct 11 08:41:56 2006 (ebrassfi): lockYIG --help 
+Wed Oct 11 08:42:26 2006 (root): lockYIG -a 10 -f 6.308619 
+Wed Oct 11 08:42:42 2006 (root): lockYIG -a 5 
+Wed Oct 11 08:51:11 2006 (root): lockYIG -a 10 -f 6.308619 
+Wed Oct 11 08:52:05 2006 (root): setIFLevels -c -s -R l 
+Wed Oct 11 08:52:47 2006 (root): lockYIG -a 5 
+Wed Oct 11 08:53:12 2006 (root): setIFLevels -R l 
+Wed Oct 11 08:54:16 2006 (root): lockYIG -a 5 
+Wed Oct 11 09:01:24 2006 (root): lockYIG -a 10 -f 6.308619 
+Wed Oct 11 09:07:17 2006 (root): monitor 
+Wed Oct 11 09:49:56 2006 (root): restartCorrelator -d -s128 
+Wed Oct 11 09:52:27 2006 (root): integrate -t 30 
+Wed Oct 11 09:53:26 2006 (ebrassfi): lookup -s MWC349 
+Wed Oct 11 09:57:00 2006 (root): setIFLevels -2 
+Wed Oct 11 10:03:19 2006 (root): setIFLevels -2 
+Wed Oct 11 10:07:10 2006 (ebrassfi): observe --help 
+Wed Oct 11 10:07:19 2006 (root): observe -s 3c84 
+Wed Oct 11 10:14:11 2006 (root): integrate -t 10 
+Wed Oct 11 10:16:33 2006 (root): integrate -t 300 
+Wed Oct 11 10:18:30 2006 (root): setChunkPhaseOffsets -u 
+Wed Oct 11 10:18:37 2006 (root): integrate -t 30 
+Wed Oct 11 10:22:55 2006 (root): restartCorrelator -d -s128 
+Wed Oct 11 10:25:02 2006 (rtm): /application/bin/killdaemon newdds dDSServer quit
+Wed Oct 11 10:25:08 2006 (rtm): /application/bin/killdaemon newdds dDSServer QUIT
+Wed Oct 11 10:25:20 2006 (rtm): /application/bin/killdaemon crate int_server QUIT
+Wed Oct 11 10:28:56 2006 (root): setIFLevels -2 
+Wed Oct 11 10:29:40 2006 (root): integrate -t 300 
+Wed Oct 11 10:29:47 2006 (root): setChunkPhaseOffsets -u 
+Wed Oct 11 10:30:05 2006 (root): setChunkPhaseOffsets -u 
+Wed Oct 11 10:31:57 2006 (root): integrate -t 30 
+Wed Oct 11 10:43:10 2006 (nimesh): monitor 
+Wed Oct 11 10:46:04 2006 (nimesh): monitor 
+Wed Oct 11 10:48:21 2006 (root): monitor 
+Wed Oct 11 11:06:51 2006 (root): point -a 1,2,3,4,5,6 -l -t -Q -r 2 -i 45 
+		Repetition 1:
+		Ant 1	AzOff =  -1.9	ElOff =   9.2	deltaAz =   6.4	deltaEl =   2.1
+		Ant 2	AzOff =   3.5	ElOff =   1.4	deltaAz =   5.1	deltaEl =  -0.4
+		Ant 3	AzOff =  -2.5	ElOff =  -2.4	deltaAz =  -2.0	deltaEl =   1.2
+		Ant 4	AzOff =  -9.0	ElOff =   0.2	deltaAz =  -3.3	deltaEl =  -1.3
+		Ant 5	AzOff =   2.7	ElOff =  -1.7	deltaAz =   5.5	deltaEl =   1.1
+		Ant 6	AzOff =   6.1	ElOff =   4.9	deltaAz =   9.1	deltaEl =  -0.1
+		Repetition 2:
+		Ant 1	AzOff =  -1.8	ElOff =   7.6	deltaAz =   6.5	deltaEl =   0.5
+		Ant 2	AzOff =  -1.3	ElOff =   0.5	deltaAz =   0.3	deltaEl =  -1.3
+		Ant 3	AzOff =  -5.7	ElOff =  -3.5	deltaAz =  -5.3	deltaEl =   0.1
+		Ant 4	AzOff =  -5.3	ElOff =  -1.1	deltaAz =   0.4	deltaEl =  -2.6
+		Ant 5	AzOff =   2.2	ElOff =  -0.6	deltaAz =   5.0	deltaEl =   2.2
+		Ant 6	AzOff =   8.9	ElOff =   8.6	deltaAz =  12.0	deltaEl =   3.6
+		Average:
+		Ant 1	AzOff =  -1.9	ElOff =   8.4	deltaAz =   6.4	deltaEl =   1.3
+		Ant 2	AzOff =   1.1	ElOff =   1.0	deltaAz =   2.7	deltaEl =  -0.9
+		Ant 3	AzOff =  -4.1	ElOff =  -3.0	deltaAz =  -3.7	deltaEl =   0.7
+		Ant 4	AzOff =  -7.1	ElOff =  -0.4	deltaAz =  -1.5	deltaEl =  -2.0
+		Ant 5	AzOff =   2.5	ElOff =  -1.2	deltaAz =   5.2	deltaEl =   1.7
+		Ant 6	AzOff =   7.5	ElOff =   6.8	deltaAz =  10.6	deltaEl =   1.7
+Wed Oct 11 11:52:01 2006 (dtafoya): monitor 
+Wed Oct 11 11:59:12 2006 (root): endProject.
+Wed Oct 11 11:59:54 2006 (root): project -o Erin -p SMA -d Flux Track -s 1 -a 1,2,3,4,5,6,8 -C 1..12 -R l -l Summit 
+Wed Oct 11 11:59:59 2006 (root): openM3 
+Wed Oct 11 12:00:13 2006 (root): observe -s 3c84 
+Wed Oct 11 12:00:20 2006 (root): resume 
+Wed Oct 11 12:00:39 2006 (root): dopplerTrack -t co2-1 -s12 -u 
+Wed Oct 11 12:01:00 2006 (daemon): setLO: sending "tune -f0 225.59 -h0 16" to acc1
+Wed Oct 11 12:01:00 2006 (daemon): setLO: sending "tune -f0 225.59 -h0 16" to acc2
+Wed Oct 11 12:01:00 2006 (daemon): setLO: sending "tune -f0 225.59 -h0 16" to acc3
+Wed Oct 11 12:01:00 2006 (daemon): setLO: sending "tune -f0 225.59 -h0 16" to acc4
+Wed Oct 11 12:01:00 2006 (daemon): setLO: sending "tune -f0 225.59 -h0 16" to acc5
+Wed Oct 11 12:01:00 2006 (daemon): setLO: sending "tune -f0 225.59 -h0 16" to acc6
+Wed Oct 11 12:01:00 2006 (daemon): setLO: sending "tune -f0 225.59 -h0 16" to acc8
+Wed Oct 11 12:03:00 2006 (dtafoya): monitor 
+Wed Oct 11 12:07:19 2006 (root): tune -a 2 -c rfpower 18 
+Wed Oct 11 12:07:26 2006 (root): tune -a 2 -c t joy 
+Wed Oct 11 12:08:22 2006 (root): tune -a 2 -c cb0 
+Wed Oct 11 12:08:43 2006 (root): tune -a 2 -c t joy 
+Wed Oct 11 12:09:18 2006 (root): tune -a 2 -c cb0 
+Wed Oct 11 12:09:26 2006 (root): restartCorrelator -d 
+Wed Oct 11 12:09:35 2006 (root): tune -a 3 -c rfpower 18 
+Wed Oct 11 12:09:41 2006 (root): tune -a 3 -c t joy 
+Wed Oct 11 12:10:27 2006 (root): tune -a 3 -c cb0 
+Wed Oct 11 12:10:36 2006 (root): tune -a 3 -c opt current -t 
+Wed Oct 11 12:11:04 2006 (root): tune -a 8 -c rfpower 18 
+Wed Oct 11 12:11:11 2006 (root): tune -a 8 -c t joy 
+Wed Oct 11 12:11:48 2006 (root): tune -a 8 -c cb0 
+Wed Oct 11 12:11:57 2006 (root): tune -a 8 -c opt current -t 
+Wed Oct 11 12:12:05 2006 (root): tune -a 2 -c opt current -t 
+Wed Oct 11 12:12:17 2006 (root): tsys 
+Wed Oct 11 12:12:58 2006 (root): restartCorrelator -c3,7,9 
+Wed Oct 11 12:14:04 2006 (root): restartCorrelator -c7,9 
+Wed Oct 11 12:15:05 2006 (root): restartCorrelator -d 
+Wed Oct 11 12:17:12 2006 (root): restartCorrelator -c1,7 
+Wed Oct 11 12:18:11 2006 (rtm): /application/bin/killdaemon crate1 logger URG
+Wed Oct 11 12:18:22 2006 (rtm): /application/bin/killdaemon crate2 logger URG
+Wed Oct 11 12:18:32 2006 (rtm): /application/bin/killdaemon crate3 logger URG
+Wed Oct 11 12:18:43 2006 (rtm): /application/bin/killdaemon crate4 logger URG
+Wed Oct 11 12:18:53 2006 (rtm): /application/bin/killdaemon crate5 logger URG
+Wed Oct 11 12:19:04 2006 (rtm): /application/bin/killdaemon crate6 logger URG
+Wed Oct 11 12:19:14 2006 (rtm): /application/bin/killdaemon crate7 logger URG
+Wed Oct 11 12:19:24 2006 (rtm): /application/bin/killdaemon crate8 logger URG
+Wed Oct 11 12:19:35 2006 (rtm): /application/bin/killdaemon crate9 logger URG
+Wed Oct 11 12:19:45 2006 (rtm): /application/bin/killdaemon crate10 logger URG
+Wed Oct 11 12:19:55 2006 (rtm): /application/bin/killdaemon crate11 logger URG
+Wed Oct 11 12:20:06 2006 (rtm): /application/bin/killdaemon crate12 logger URG
+Wed Oct 11 12:22:32 2006 (root): restartCorrelator -d 
+Wed Oct 11 12:23:32 2006 (root): restartCorrelator -d 
+Wed Oct 11 12:26:00 2006 (root): restartCorrelator -c7 
+Wed Oct 11 12:29:32 2006 (root): restartCorrelator -d 
+Wed Oct 11 12:32:11 2006 (root): setIFLevels -2 
+Wed Oct 11 12:32:25 2006 (root): setIFLevels 
+Wed Oct 11 12:34:17 2006 (root): setChunkPhaseOffsets -u 
+Wed Oct 11 12:34:57 2006 (root): newFile 
+Wed Oct 11 12:37:32 2006 (ebrassfi): monitor 
+Wed Oct 11 12:41:10 2006 (dtafoya): project -r -o Daniel&Ramiro -l Cambridge M342 
+Wed Oct 11 12:42:33 2006 (dtafoya): project -r -i 15 -f .//nflux_new_test.pl 
+Wed Oct 11 12:42:35 2006 (dtafoya): project -r -i 15 -f .//nflux_new_test.pl 
+Wed Oct 11 12:42:38 2006 (dtafoya): radio 
+Wed Oct 11 12:42:39 2006 (dtafoya): stopChopping 
+Wed Oct 11 12:42:40 2006 (dtafoya): integrate -t 30 
+Wed Oct 11 12:42:42 2006 (dtafoya): lookup -s 3c84 
+Wed Oct 11 12:42:43 2006 (dtafoya): lookup -s uranus 
+Wed Oct 11 12:42:43 2006 (dtafoya): lookup -s neptune 
+Wed Oct 11 12:42:44 2006 (dtafoya): lookup -s callisto 
+Wed Oct 11 12:42:45 2006 (dtafoya): lookup -s ganymede 
+Wed Oct 11 12:42:45 2006 (dtafoya): lookup -s 3c84 
+Wed Oct 11 12:42:46 2006 (dtafoya): observe -s 3c84 
+Wed Oct 11 12:42:53 2006 (dtafoya): tsys 
+Wed Oct 11 12:43:06 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 12:44:46 2006 (root): monitor 
+Wed Oct 11 12:47:07 2006 (dtafoya): lookup -s 0115-014 
+Wed Oct 11 12:47:08 2006 (dtafoya): observe -s 0115-014 
+Wed Oct 11 12:47:15 2006 (dtafoya): tsys 
+Wed Oct 11 12:47:28 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 12:48:13 2006 (dtafoya): lookup -s 0014+612 
+Wed Oct 11 12:48:13 2006 (dtafoya): observe -s 0014+612 
+Wed Oct 11 12:48:21 2006 (dtafoya): tsys 
+Wed Oct 11 12:48:34 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 12:52:48 2006 (dtafoya): lookup -s 3c111 
+Wed Oct 11 12:52:48 2006 (dtafoya): observe -s 3c111 
+Wed Oct 11 12:52:55 2006 (dtafoya): tsys 
+Wed Oct 11 12:53:08 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 12:56:56 2006 (dtafoya): lookup -s 3c84 
+Wed Oct 11 12:56:56 2006 (dtafoya): observe -s 3c84 
+Wed Oct 11 12:57:03 2006 (dtafoya): tsys 
+Wed Oct 11 12:57:16 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 13:01:03 2006 (dtafoya): lookup -s 0313+413 
+Wed Oct 11 13:01:04 2006 (dtafoya): observe -s 0313+413 
+Wed Oct 11 13:01:11 2006 (dtafoya): tsys 
+Wed Oct 11 13:01:24 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 13:05:11 2006 (dtafoya): lookup -s 0457-234 
+Wed Oct 11 13:05:12 2006 (dtafoya): observe -s 0457-234 
+Wed Oct 11 13:05:19 2006 (dtafoya): tsys 
+Wed Oct 11 13:05:32 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 13:09:50 2006 (dtafoya): lookup -s 0532+075 
+Wed Oct 11 13:09:50 2006 (dtafoya): observe -s 0532+075 
+Wed Oct 11 13:09:58 2006 (dtafoya): tsys 
+Wed Oct 11 13:10:11 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 13:13:58 2006 (dtafoya): lookup -s 3c84 
+Wed Oct 11 13:13:58 2006 (dtafoya): observe -s 3c84 
+Wed Oct 11 13:14:05 2006 (dtafoya): tsys 
+Wed Oct 11 13:14:19 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 13:18:21 2006 (ebrassfi): monitor 
+Wed Oct 11 13:18:36 2006 (dtafoya): lookup -s 0217+738 
+Wed Oct 11 13:18:37 2006 (dtafoya): observe -s 0217+738 
+Wed Oct 11 13:18:44 2006 (dtafoya): tsys 
+Wed Oct 11 13:18:57 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 13:23:46 2006 (dtafoya): lookup -s 0237+288 
+Wed Oct 11 13:23:46 2006 (dtafoya): observe -s 0237+288 
+Wed Oct 11 13:23:54 2006 (dtafoya): tsys 
+Wed Oct 11 13:24:07 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 13:27:21 2006 (dtafoya): lookup -s 3c84 
+Wed Oct 11 13:27:54 2006 (dtafoya): lookup -s 0424-379 
+Wed Oct 11 13:27:54 2006 (dtafoya): observe -s 0424-379 
+Wed Oct 11 13:28:02 2006 (dtafoya): tsys 
+Wed Oct 11 13:28:15 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 13:33:04 2006 (dtafoya): lookup -s 3c84 
+Wed Oct 11 13:33:04 2006 (dtafoya): observe -s 3c84 
+Wed Oct 11 13:33:12 2006 (dtafoya): tsys 
+Wed Oct 11 13:33:25 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 13:37:42 2006 (dtafoya): lookup -s 0808-078 
+Wed Oct 11 13:37:43 2006 (dtafoya): observe -s 0808-078 
+Wed Oct 11 13:37:50 2006 (dtafoya): tsys 
+Wed Oct 11 13:38:03 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 13:42:21 2006 (dtafoya): lookup -s 0530+135 
+Wed Oct 11 13:42:22 2006 (dtafoya): observe -s 0530+135 
+Wed Oct 11 13:42:29 2006 (dtafoya): tsys 
+Wed Oct 11 13:42:42 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 13:46:29 2006 (dtafoya): lookup -s 0609-157 
+Wed Oct 11 13:46:29 2006 (dtafoya): observe -s 0609-157 
+Wed Oct 11 13:46:37 2006 (dtafoya): tsys 
+Wed Oct 11 13:46:50 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 13:50:37 2006 (dtafoya): lookup -s 3c84 
+Wed Oct 11 13:50:37 2006 (dtafoya): observe -s 3c84 
+Wed Oct 11 13:50:45 2006 (dtafoya): tsys 
+Wed Oct 11 13:50:58 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 13:55:16 2006 (dtafoya): lookup -s 0739+016 
+Wed Oct 11 13:55:16 2006 (dtafoya): observe -s 0739+016 
+Wed Oct 11 13:55:23 2006 (dtafoya): tsys 
+Wed Oct 11 13:55:36 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 13:59:54 2006 (dtafoya): lookup -s 0241-082 
+Wed Oct 11 13:59:55 2006 (dtafoya): observe -s 0241-082 
+Wed Oct 11 14:00:02 2006 (dtafoya): tsys 
+Wed Oct 11 14:00:15 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 14:04:33 2006 (dtafoya): lookup -s 0521-365 
+Wed Oct 11 14:04:33 2006 (dtafoya): observe -s 0521-365 
+Wed Oct 11 14:04:41 2006 (dtafoya): tsys 
+Wed Oct 11 14:04:54 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 14:08:41 2006 (dtafoya): lookup -s 3c84 
+Wed Oct 11 14:08:41 2006 (dtafoya): observe -s 3c84 
+Wed Oct 11 14:08:49 2006 (dtafoya): tsys 
+Wed Oct 11 14:09:02 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 14:22:52 2006 (dtafoya): accRemoteReset -a 8 
+Wed Oct 11 14:23:26 2006 (dtafoya): standby -a 8 
+Wed Oct 11 14:23:38 2006 (dtafoya): resume -a 8 
+Wed Oct 11 14:25:29 2006 (dtafoya): monitor 
+Wed Oct 11 14:25:36 2006 (dtafoya): resume -a 8 
+Wed Oct 11 14:26:28 2006 (dtafoya): observe -s 3c84 -a 8 
+Wed Oct 11 14:27:47 2006 (dtafoya): lookup -s 0310+382 
+Wed Oct 11 14:27:47 2006 (dtafoya): observe -s 0310+382 
+Wed Oct 11 14:27:55 2006 (dtafoya): tsys 
+Wed Oct 11 14:28:08 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 14:31:55 2006 (dtafoya): lookup -s 0831+044 
+Wed Oct 11 14:31:55 2006 (dtafoya): observe -s 0831+044 
+Wed Oct 11 14:32:02 2006 (dtafoya): tsys 
+Wed Oct 11 14:32:15 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 14:36:33 2006 (dtafoya): lookup -s 0132-169 
+Wed Oct 11 14:36:34 2006 (dtafoya): lookup -s 3c84 
+Wed Oct 11 14:36:34 2006 (dtafoya): observe -s 3c84 
+Wed Oct 11 14:36:42 2006 (dtafoya): tsys 
+Wed Oct 11 14:36:55 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 14:41:12 2006 (dtafoya): lookup -s 0721+713 
+Wed Oct 11 14:41:12 2006 (dtafoya): observe -s 0721+713 
+Wed Oct 11 14:41:20 2006 (dtafoya): tsys 
+Wed Oct 11 14:41:33 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 14:46:22 2006 (dtafoya): lookup -s 0903+468 
+Wed Oct 11 14:46:22 2006 (dtafoya): observe -s 0903+468 
+Wed Oct 11 14:46:30 2006 (dtafoya): tsys 
+Wed Oct 11 14:46:43 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 14:50:30 2006 (dtafoya): lookup -s 0538-440 
+Wed Oct 11 14:50:30 2006 (dtafoya): observe -s 0538-440 
+Wed Oct 11 14:50:37 2006 (dtafoya): tsys 
+Wed Oct 11 14:50:51 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 14:55:09 2006 (dtafoya): lookup -s 3c84 
+Wed Oct 11 14:55:09 2006 (dtafoya): observe -s 3c84 
+Wed Oct 11 14:55:16 2006 (dtafoya): tsys 
+Wed Oct 11 14:55:29 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 14:59:47 2006 (dtafoya): lookup -s 0244+624 
+Wed Oct 11 14:59:48 2006 (dtafoya): observe -s 0244+624 
+Wed Oct 11 14:59:55 2006 (dtafoya): tsys 
+Wed Oct 11 15:00:08 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 15:03:55 2006 (dtafoya): lookup -s 0509+056 
+Wed Oct 11 15:03:55 2006 (dtafoya): observe -s 0509+056 
+Wed Oct 11 15:04:03 2006 (dtafoya): tsys 
+Wed Oct 11 15:04:15 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 15:08:34 2006 (dtafoya): lookup -s 0841+708 
+Wed Oct 11 15:08:34 2006 (dtafoya): observe -s 0841+708 
+Wed Oct 11 15:08:42 2006 (dtafoya): tsys 
+Wed Oct 11 15:08:54 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 15:13:13 2006 (dtafoya): lookup -s 3c84 
+Wed Oct 11 15:13:13 2006 (dtafoya): observe -s 3c84 
+Wed Oct 11 15:13:20 2006 (dtafoya): tsys 
+Wed Oct 11 15:13:34 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 15:17:21 2006 (dtafoya): lookup -s 0410+769 
+Wed Oct 11 15:17:21 2006 (dtafoya): observe -s 0410+769 
+Wed Oct 11 15:17:28 2006 (dtafoya): tsys 
+Wed Oct 11 15:17:41 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 15:21:28 2006 (dtafoya): lookup -s 0442-002 
+Wed Oct 11 15:21:28 2006 (dtafoya): observe -s 0442-002 
+Wed Oct 11 15:21:36 2006 (dtafoya): tsys 
+Wed Oct 11 15:21:49 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 15:22:55 2006 (thunter): tune -a 9 -c checklock -p 
+Wed Oct 11 15:23:41 2006 (thunter): acc9:/common/bin/killdaemon tune6 QUIT
+Wed Oct 11 15:24:27 2006 (thunter): /application/bin/killdaemon acc9 tune6 restart
+Wed Oct 11 15:26:07 2006 (dtafoya): lookup -s 0309+104 
+Wed Oct 11 15:26:07 2006 (dtafoya): observe -s 0309+104 
+Wed Oct 11 15:26:15 2006 (dtafoya): tsys 
+Wed Oct 11 15:26:27 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 15:30:15 2006 (dtafoya): lookup -s 3c84 
+Wed Oct 11 15:30:15 2006 (dtafoya): observe -s 3c84 
+Wed Oct 11 15:30:22 2006 (dtafoya): tsys 
+Wed Oct 11 15:30:35 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 15:34:22 2006 (dtafoya): lookup -s 3c120 
+Wed Oct 11 15:34:23 2006 (dtafoya): observe -s 3c120 
+Wed Oct 11 15:34:30 2006 (dtafoya): tsys 
+Wed Oct 11 15:34:43 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 15:38:30 2006 (dtafoya): lookup -s 0325+469 
+Wed Oct 11 15:38:31 2006 (dtafoya): observe -s 0325+469 
+Wed Oct 11 15:38:38 2006 (dtafoya): tsys 
+Wed Oct 11 15:38:51 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 15:42:38 2006 (dtafoya): lookup -s 0824+558 
+Wed Oct 11 15:42:38 2006 (dtafoya): observe -s 0824+558 
+Wed Oct 11 15:42:46 2006 (dtafoya): tsys 
+Wed Oct 11 15:42:59 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 15:46:46 2006 (dtafoya): lookup -s 3c84 
+Wed Oct 11 15:46:46 2006 (dtafoya): observe -s 3c84 
+Wed Oct 11 15:46:54 2006 (dtafoya): tsys 
+Wed Oct 11 15:47:07 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 15:50:54 2006 (dtafoya): lookup -s 0423-013 
+Wed Oct 11 15:50:54 2006 (dtafoya): observe -s 0423-013 
+Wed Oct 11 15:51:01 2006 (dtafoya): tsys 
+Wed Oct 11 15:51:15 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 15:55:01 2006 (dtafoya): lookup -s 0401+042 
+Wed Oct 11 15:55:02 2006 (dtafoya): observe -s 0401+042 
+Wed Oct 11 15:55:09 2006 (dtafoya): tsys 
+Wed Oct 11 15:55:22 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 15:57:35 2006 (dtafoya): lookup -s 3c84 
+Wed Oct 11 15:59:09 2006 (dtafoya): lookup -s 0650-166 
+Wed Oct 11 15:59:09 2006 (dtafoya): observe -s 0650-166 
+Wed Oct 11 15:59:17 2006 (dtafoya): tsys 
+Wed Oct 11 15:59:30 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 16:04:19 2006 (dtafoya): lookup -s 3c84 
+Wed Oct 11 16:04:19 2006 (dtafoya): observe -s 3c84 
+Wed Oct 11 16:04:27 2006 (dtafoya): tsys 
+Wed Oct 11 16:04:40 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 16:08:58 2006 (dtafoya): lookup -s 0336+323 
+Wed Oct 11 16:08:58 2006 (dtafoya): observe -s 0336+323 
+Wed Oct 11 16:09:05 2006 (dtafoya): tsys 
+Wed Oct 11 16:09:18 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 16:13:06 2006 (dtafoya): lookup -s 0405-131 
+Wed Oct 11 16:13:06 2006 (dtafoya): observe -s 0405-131 
+Wed Oct 11 16:13:13 2006 (dtafoya): tsys 
+Wed Oct 11 16:13:26 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 16:17:44 2006 (dtafoya): lookup -s 0958+474 
+Wed Oct 11 16:17:44 2006 (dtafoya): observe -s 0958+474 
+Wed Oct 11 16:17:52 2006 (dtafoya): tsys 
+Wed Oct 11 16:18:05 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 16:22:23 2006 (dtafoya): lookup -s 3c84 
+Wed Oct 11 16:22:23 2006 (dtafoya): observe -s 3c84 
+Wed Oct 11 16:22:31 2006 (dtafoya): tsys 
+Wed Oct 11 16:22:44 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 16:26:31 2006 (dtafoya): lookup -s 0422+023 
+Wed Oct 11 16:26:31 2006 (dtafoya): observe -s 0422+023 
+Wed Oct 11 16:26:38 2006 (dtafoya): tsys 
+Wed Oct 11 16:26:52 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 16:31:10 2006 (dtafoya): lookup -s 0423+418 
+Wed Oct 11 16:31:10 2006 (dtafoya): observe -s 0423+418 
+Wed Oct 11 16:31:17 2006 (dtafoya): tsys 
+Wed Oct 11 16:31:30 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 16:35:17 2006 (dtafoya): lookup -s 0607-085 
+Wed Oct 11 16:35:18 2006 (dtafoya): observe -s 0607-085 
+Wed Oct 11 16:35:25 2006 (dtafoya): tsys 
+Wed Oct 11 16:35:38 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 16:39:25 2006 (dtafoya): lookup -s 3c84 
+Wed Oct 11 16:39:26 2006 (dtafoya): observe -s 3c84 
+Wed Oct 11 16:39:33 2006 (dtafoya): tsys 
+Wed Oct 11 16:39:46 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 16:43:33 2006 (dtafoya): lookup -s 0710+475 
+Wed Oct 11 16:43:33 2006 (dtafoya): observe -s 0710+475 
+Wed Oct 11 16:43:41 2006 (dtafoya): tsys 
+Wed Oct 11 16:43:54 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 16:47:41 2006 (dtafoya): lookup -s 0830+241 
+Wed Oct 11 16:47:41 2006 (dtafoya): observe -s 0830+241 
+Wed Oct 11 16:47:48 2006 (dtafoya): tsys 
+Wed Oct 11 16:48:01 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 16:51:48 2006 (dtafoya): lookup -s 0717+456 
+Wed Oct 11 16:51:49 2006 (dtafoya): observe -s 0717+456 
+Wed Oct 11 16:51:56 2006 (dtafoya): tsys 
+Wed Oct 11 16:52:09 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 16:55:56 2006 (dtafoya): lookup -s 3c84 
+Wed Oct 11 16:55:57 2006 (dtafoya): observe -s 3c84 
+Wed Oct 11 16:56:04 2006 (dtafoya): tsys 
+Wed Oct 11 16:56:17 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 17:00:04 2006 (dtafoya): lookup -s 1044+809 
+Wed Oct 11 17:00:04 2006 (dtafoya): observe -s 1044+809 
+Wed Oct 11 17:00:12 2006 (dtafoya): tsys 
+Wed Oct 11 17:00:25 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 17:02:54 2006 (dtafoya): lookup -s 3c84 
+Wed Oct 11 17:04:12 2006 (dtafoya): lookup -s 0958+655 
+Wed Oct 11 17:04:12 2006 (dtafoya): observe -s 0958+655 
+Wed Oct 11 17:04:20 2006 (dtafoya): tsys 
+Wed Oct 11 17:04:32 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 17:08:20 2006 (dtafoya): lookup -s 0957+553 
+Wed Oct 11 17:08:20 2006 (dtafoya): observe -s 0957+553 
+Wed Oct 11 17:08:27 2006 (dtafoya): tsys 
+Wed Oct 11 17:08:40 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 17:12:28 2006 (dtafoya): lookup -s 3c84 
+Wed Oct 11 17:12:28 2006 (dtafoya): observe -s 3c84 
+Wed Oct 11 17:12:35 2006 (dtafoya): tsys 
+Wed Oct 11 17:12:48 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 17:16:35 2006 (dtafoya): lookup -s 0956+252 
+Wed Oct 11 17:16:36 2006 (dtafoya): observe -s 0956+252 
+Wed Oct 11 17:16:43 2006 (dtafoya): tsys 
+Wed Oct 11 17:16:56 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 17:19:53 2006 (dtafoya): monitor 
+Wed Oct 11 17:21:14 2006 (dtafoya): lookup -s 0750+125 
+Wed Oct 11 17:21:14 2006 (dtafoya): observe -s 0750+125 
+Wed Oct 11 17:21:21 2006 (dtafoya): tsys 
+Wed Oct 11 17:21:34 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 17:25:53 2006 (dtafoya): lookup -s 1118+125 
+Wed Oct 11 17:25:53 2006 (dtafoya): observe -s 1118+125 
+Wed Oct 11 17:26:00 2006 (dtafoya): tsys 
+Wed Oct 11 17:26:14 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 17:29:24 2006 (dtafoya): lookup -s 3c84 
+Wed Oct 11 17:31:03 2006 (dtafoya): lookup -s 3c84 
+Wed Oct 11 17:31:03 2006 (dtafoya): lookup -s 3c84 
+Wed Oct 11 17:31:03 2006 (dtafoya): observe -s 3c84 
+Wed Oct 11 17:31:11 2006 (dtafoya): tsys 
+Wed Oct 11 17:31:24 2006 (dtafoya): integrate -s 7 -t 30 -w 
+Wed Oct 11 17:36:12 2006 (dtafoya): lookup -s uranus 
+Wed Oct 11 17:36:13 2006 (dtafoya): lookup -s callisto 
+Wed Oct 11 17:36:13 2006 (dtafoya): lookup -s ganymede 
+Wed Oct 11 17:37:14 2006 (dtafoya): observe -s titan 
+Wed Oct 11 17:54:49 2006 (pyamaguc): monitor 
+Wed Oct 11 17:56:07 2006 (dtafoya): monitor 
+Wed Oct 11 18:15:21 2006 (dtafoya): stow 
+Wed Oct 11 18:16:05 2006 (dtafoya): openM3 
+Wed Oct 11 18:16:34 2006 (dtafoya): project -r -i 65 -f /application/bin/endObs.pl 
+Wed Oct 11 18:16:36 2006 (dtafoya): tune -q -c hotload in 
+Wed Oct 11 18:16:41 2006 (dtafoya): integrate -n -i -p 
+Wed Oct 11 18:16:42 2006 (dtafoya): azel -z0 -e80 
+Wed Oct 11 18:16:44 2006 (dtafoya): antennaWait 
+Wed Oct 11 18:17:10 2006 (dtafoya): /application/bin/dip 
+Wed Oct 11 18:17:10 2006 (dtafoya): openM3 -a 1,2,3,4,5,6,8 
+Wed Oct 11 18:17:13 2006 (dtafoya): el -d 80 -a 1,2,3,4,5,6,8 
+Wed Oct 11 18:17:16 2006 (dtafoya): resume -a 1,2,3,4,5,6,8 
+Wed Oct 11 18:17:25 2006 (dtafoya): tune -a 1,2,3,4,5,6,8 -c hotload in 
+Wed Oct 11 18:17:31 2006 (dtafoya): tune -a 1 -c hotload out 
+Wed Oct 11 18:17:34 2006 (dtafoya): tune -a 2 -c hotload out 
+Wed Oct 11 18:17:37 2006 (dtafoya): tune -a 3 -c hotload out 
+Wed Oct 11 18:17:40 2006 (dtafoya): tune -a 4 -c hotload out 
+Wed Oct 11 18:17:44 2006 (dtafoya): tune -a 5 -c hotload out 
+Wed Oct 11 18:17:47 2006 (dtafoya): tune -a 6 -c hotload out 
+Wed Oct 11 18:17:52 2006 (dtafoya): tune -a 8 -c hotload out 
+Wed Oct 11 18:18:00 2006 (dtafoya): resume -a 1 
+Wed Oct 11 18:18:00 2006 (dtafoya): resume -a 2 
+Wed Oct 11 18:18:00 2006 (dtafoya): resume -a 3 
+Wed Oct 11 18:18:00 2006 (dtafoya): resume -a 4 
+Wed Oct 11 18:18:00 2006 (dtafoya): resume -a 5 
+Wed Oct 11 18:18:01 2006 (dtafoya): resume -a 6 
+Wed Oct 11 18:18:01 2006 (dtafoya): resume -a 8 
+Wed Oct 11 18:18:01 2006 (dtafoya): el -a 1,2,3,4,5,6,8 -d 80 
+Wed Oct 11 18:18:03 2006 (dtafoya): antennaWait -a 1,2,3,4,5,6,8 -e 
+Wed Oct 11 18:18:36 2006 (dtafoya): el -a 1,2,3,4,5,6,8 -d 60.81 
+Wed Oct 11 18:18:38 2006 (dtafoya): antennaWait -a 1,2,3,4,5,6,8 -e 
+Wed Oct 11 18:19:23 2006 (dtafoya): el -a 1,2,3,4,5,6,8 -d 41.81 
+Wed Oct 11 18:19:25 2006 (dtafoya): antennaWait -a 1,2,3,4,5,6,8 -e 
+Wed Oct 11 18:20:07 2006 (dtafoya): el -a 1,2,3,4,5,6,8 -d 30 
+Wed Oct 11 18:20:09 2006 (dtafoya): antennaWait -a 1,2,3,4,5,6,8 -e 
+Wed Oct 11 18:20:48 2006 (dtafoya): el -a 1,2,3,4,5,6,8 -d 23.58 
+Wed Oct 11 18:20:50 2006 (dtafoya): antennaWait -a 1,2,3,4,5,6,8 -e 
+Wed Oct 11 18:21:27 2006 (dtafoya): el -a 1,2,3,4,5,6,8 -d 19.47 
+Wed Oct 11 18:21:29 2006 (dtafoya): antennaWait -a 1,2,3,4,5,6,8 -e 
+Wed Oct 11 18:22:03 2006 (dtafoya): el -a 1,2,3,4,5,6,8 -d 16.6 
+Wed Oct 11 18:22:05 2006 (dtafoya): antennaWait -a 1,2,3,4,5,6,8 -e 
+Wed Oct 11 18:22:41 2006 (dtafoya): azel -z10 -e45 
+Wed Oct 11 18:22:48 2006 (dtafoya): setIFLevels -1 -D 
+Wed Oct 11 18:22:49 2006 (dtafoya): tune -q -c hotload out 
+Wed Oct 11 18:23:01 2006 (dtafoya): integrate -t 2.58 -P 
+Wed Oct 11 18:25:11 2006 (dtafoya): tune -q -c hotload in 
+Wed Oct 11 18:27:34 2006 (dtafoya): tune -q -c hotload out 
+Wed Oct 11 18:27:40 2006 (dtafoya): tune -q -c activate -w 
+Wed Oct 11 18:27:42 2006 (dtafoya): tune -q -c vbias0 10 
+Wed Oct 11 18:27:44 2006 (dtafoya): tune -q -c vbias1 10 
+Wed Oct 11 18:27:46 2006 (dtafoya): tune -q -c hotload in 
+Wed Oct 11 18:30:09 2006 (dtafoya): tune -q -c activate -r 
+Wed Oct 11 18:30:11 2006 (dtafoya): tune -q -c iv0 
+Wed Oct 11 18:30:47 2006 (dtafoya): closeM3 
+Wed Oct 11 18:31:25 2006 (dtafoya): endProject.
+Wed Oct 11 18:47:38 2006 (root): monitor 
+Wed Oct 11 18:50:22 2006 (root): monitor 
+Wed Oct 11 18:51:22 2006 (root): project -p eSMA -o Taco -s 1 -a 1,2,3,4,5,6,9,10 -d eSMA-related tests -l Cambridge Ctrl Rm -R l -C 1..6 
+Wed Oct 11 18:51:27 2006 (root): standby 
+Wed Oct 11 18:52:49 2006 (root): observe -s MWC349 -r 20:32:45.500 -d 40:39:37.000 
+Wed Oct 11 18:53:10 2006 (root): dopplerTrack -t h30alpha -s6 -u 
+Wed Oct 11 18:53:30 2006 (daemon): setLO: sending "tune -f0 227.44 -h0 16" to acc1
+Wed Oct 11 18:53:30 2006 (daemon): setLO: sending "tune -f0 227.44 -h0 16" to acc2
+Wed Oct 11 18:53:30 2006 (daemon): setLO: sending "tune -f0 227.44 -h0 16" to acc3
+Wed Oct 11 18:53:30 2006 (daemon): setLO: sending "tune -f0 227.44 -h0 16" to acc4
+Wed Oct 11 18:53:30 2006 (daemon): setLO: sending "tune -f0 227.44 -h0 16" to acc5
+Wed Oct 11 18:53:30 2006 (daemon): setLO: sending "tune -f0 227.44 -h0 16" to acc6
+Wed Oct 11 18:53:30 2006 (daemon): setLO: sending "tune -f0 227.44 -h0 16" to acc9
+Wed Oct 11 18:53:30 2006 (daemon): setLO: sending "tune -f0 227.44 -h0 16" to acc10
+Wed Oct 11 18:57:02 2006 (root): observe -s saturn 
+Wed Oct 11 18:57:36 2006 (root): resume 
+Wed Oct 11 18:57:46 2006 (root): openM3 
+Wed Oct 11 19:04:22 2006 (root): tune -a 3 -c rfpower 18 
+Wed Oct 11 19:04:30 2006 (root): tune -a 3 -c t joy 
+Wed Oct 11 19:05:16 2006 (bchitwood): monitor 
+Wed Oct 11 19:05:36 2006 (root): tune -a 3 -c cb0 
+Wed Oct 11 19:05:45 2006 (root): tune -a 4 -c rfpower 18 
+Wed Oct 11 19:05:53 2006 (root): tune -a 4 -c t joy 
+Wed Oct 11 19:06:39 2006 (root): tune -a 4 -c cb0 
+Wed Oct 11 19:06:47 2006 (root): tune -a 4 -c opt current -t 
+Wed Oct 11 19:06:59 2006 (root): tune -a 6 -c rfpower 18 
+Wed Oct 11 19:07:11 2006 (root): tune -a 6 -c t joy 
+Wed Oct 11 19:08:26 2006 (root): tune -a 6 -c zt 
+Wed Oct 11 19:08:38 2006 (root): tune -a 6 -c interpolate -g 113.72 
+Wed Oct 11 19:08:44 2006 (root): tune -a 6 -c t joy 
+Wed Oct 11 19:09:03 2006 (root): tune -a 6 -c cb0 
+Wed Oct 11 19:09:10 2006 (root): tsys 
+Wed Oct 11 19:09:52 2006 (shostler): monitor 
+Wed Oct 11 19:10:24 2006 (root): tune -a 6 -v vbias0 2.58 
+Wed Oct 11 19:10:31 2006 (root): tune -a 6 -c vbias0 2.58 
+Wed Oct 11 19:10:46 2006 (root): tune -a 6 -c a 0 
+Wed Oct 11 19:10:59 2006 (root): tune -a 6 -c opt current -t 
+Wed Oct 11 19:11:31 2006 (root): tsys 
+Wed Oct 11 19:14:46 2006 (root): restartCorrelator -d 
+Wed Oct 11 19:15:12 2006 (root): restartCorrelator -d -s128 
+Wed Oct 11 19:22:08 2006 (bchitwood): monitor 
+Wed Oct 11 19:40:53 2006 (root): setIFLevels 
+Wed Oct 11 19:49:50 2006 (root): setIFLevels -2 
+Wed Oct 11 19:54:00 2006 (root): setIFLevels -2 
+Wed Oct 11 19:56:49 2006 (root): setIFLevels -2 
+Wed Oct 11 19:59:32 2006 (root): setIFLevels -2 
+Wed Oct 11 20:00:26 2006 (root): integrate -t 300 
+Wed Oct 11 20:06:02 2006 (root): lockYIG -a 5 
+Wed Oct 11 20:06:29 2006 (root): project -s 1 -a 8 
+Wed Oct 11 20:06:34 2006 (root): project -s 1 -a 8 -r 
+Wed Oct 11 20:06:51 2006 (root): project -s 1 -a 8,9,10 -r 
+Wed Oct 11 20:07:36 2006 (root): observe -s MWC349 -r 20:32:45.500 -d 40:39:37.000 
+Wed Oct 11 20:07:42 2006 (root): observe -s saturn 
+Wed Oct 11 20:07:48 2006 (root): openM3 
+Wed Oct 11 20:08:00 2006 (root): lockYIG -a 8 
+Wed Oct 11 20:09:02 2006 (root): tune -a 8 -c interpolate -g 113.72 
+Wed Oct 11 20:09:32 2006 (root): tune -a 8 -c rfpower 18 
+Wed Oct 11 20:09:39 2006 (root): tune -a 8 -c t joy 
+Wed Oct 11 20:10:18 2006 (root): tune -a 8 -c cb0 
+Wed Oct 11 20:10:30 2006 (root): tune -a 8 -c rfpower -d 
+Wed Oct 11 20:10:36 2006 (root): resume -a 8 
+Wed Oct 11 20:10:42 2006 (root): tsys -a 8 
+Wed Oct 11 20:11:24 2006 (root): tune -a 8 -c vbias0 2.7 
+Wed Oct 11 20:11:37 2006 (root): tune -a 8 -c a 0 
+Wed Oct 11 20:11:51 2006 (root): tune -a 8 -c opt current -t 
+Wed Oct 11 20:12:51 2006 (root): tsys 
+Wed Oct 11 20:15:23 2006 (root): integrate -t 30 
+Wed Oct 11 20:45:20 2006 (root): setIFLevels -2 
+Wed Oct 11 20:53:56 2006 (bchitwood): monitor 
+Wed Oct 11 21:06:57 2006 (root): setIFLevels -2 
+Wed Oct 11 21:09:55 2006 (root): stow 
+Wed Oct 11 21:10:58 2006 (root): endProject.
+Wed Oct 11 21:11:55 2006 (root): standby -a 1,2,3,4,5,6,8 
+Wed Oct 11 21:11:57 2006 (root): monitor 
+Wed Oct 11 21:28:34 2006 (thunter): /application/bin/killdaemon acc tune6 restart
+Wed Oct 11 22:52:25 2006 (root): monitor 
+Wed Oct 11 22:52:54 2006 (root): monitor 
+Wed Oct 11 23:50:03 2006 (gpetitpa): monitor 
+Wed Oct 11 23:56:22 2006 (adiven): stow -a1 
+Wed Oct 11 23:56:29 2006 (adiven): resume -a1 
+Wed Oct 11 23:59:13 2006 (adiven): standby -a1 
+Thu Oct 12 01:37:26 2006 (root): monitor 
+Thu Oct 12 01:39:57 2006 (root): project -p eSMA -d Exciting multiobservatory action! -s 1 -a 1,2,3,4,5,6,8,9,10 -l Cambridge -R l -C 2,8 
+Thu Oct 12 01:40:18 2006 (root): standby 
+Thu Oct 12 01:46:00 2006 (root): observe -s MWC349 -r 20:32:45.5 -d 40:39:37.0 
+Thu Oct 12 01:46:17 2006 (root): openM3 
+Thu Oct 12 01:47:20 2006 (gpetitpa): monitor 
+Thu Oct 12 01:47:41 2006 (root): dopplerTrack -t h30alpha -s6 -u -g9:3 -g10:3 -h14 -h9:12 -h10:12 -n 
+Thu Oct 12 01:52:24 2006 (root): dopplerTrack -t h30alpha -s6 -u -g9:3 -g10:3 -h14 -h9:12 -h10:12 -G 
+Thu Oct 12 01:53:36 2006 (daemon): setLO: sending "tune -f0 113.72 -h0 14" to acc1
+Thu Oct 12 01:53:36 2006 (daemon): setLO: sending "tune -f0 113.72 -h0 14" to acc2
+Thu Oct 12 01:53:36 2006 (daemon): setLO: sending "tune -f0 113.72 -h0 14" to acc3
+Thu Oct 12 01:53:36 2006 (daemon): setLO: sending "tune -f0 113.72 -h0 14" to acc4
+Thu Oct 12 01:53:36 2006 (daemon): setLO: sending "tune -f0 113.72 -h0 14" to acc5
+Thu Oct 12 01:53:36 2006 (daemon): setLO: sending "tune -f0 113.72 -h0 14" to acc6
+Thu Oct 12 01:53:36 2006 (daemon): setLO: sending "tune -f0 113.72 -h0 14" to acc8
+Thu Oct 12 01:53:36 2006 (daemon): setLO: sending "tune -f0  75.81 -h0 12" to acc9
+Thu Oct 12 01:53:37 2006 (daemon): setLO: sending "tune -f0  75.81 -h0 12" to acc10
+Thu Oct 12 01:56:40 2006 (root): monitor 
+Thu Oct 12 01:57:14 2006 (root): lockYIG -a 9 -f 6.308615295 
+Thu Oct 12 01:57:29 2006 (root): lockYIG -a 10 -f 6.308615295 
+Thu Oct 12 01:58:23 2006 (root): resume 
+Thu Oct 12 02:00:01 2006 (root): tune -a 3 -c rfpower 18 
+Thu Oct 12 02:00:16 2006 (root): tune -a 1 -c opt current -t 
+Thu Oct 12 02:00:28 2006 (root): tune -a 3 -c t joy 
+Thu Oct 12 02:01:26 2006 (root): tune -a 2 -c opt current -t 
+Thu Oct 12 02:01:49 2006 (root): tune -a 4 -c opt current -t 
+Thu Oct 12 02:02:13 2006 (root): tune -a 3 -c cb0 
+Thu Oct 12 02:02:26 2006 (root): tune -a 3 -c opt current -t 
+Thu Oct 12 02:02:26 2006 (root): monitor 
+Thu Oct 12 02:02:43 2006 (root): tune -a 8 -c rfpower 18 
+Thu Oct 12 02:02:49 2006 (root): tune -a 8 -c t joy 
+Thu Oct 12 02:04:09 2006 (root): tune -a 8 -c cb0 
+Thu Oct 12 02:04:29 2006 (brownd): project -r -o Commodore Taco 
+Thu Oct 12 02:04:33 2006 (root): tune -a 8 -c opt current -t 
+Thu Oct 12 02:04:48 2006 (root): tune -a 6 -c opt current -t 
+Thu Oct 12 02:05:09 2006 (root): tsys 
+Thu Oct 12 02:06:24 2006 (root): monitor 
+Thu Oct 12 02:11:40 2006 (root): tune -a 10 -c checklock 
+Thu Oct 12 02:11:58 2006 (root): tune -a 10 -c v 
+Thu Oct 12 02:15:09 2006 (jcmt): monitor 
+Thu Oct 12 02:15:12 2006 (hshinnaga): monitor 
+Thu Oct 12 02:22:33 2006 (cso): monitor 
+Thu Oct 12 02:23:30 2006 (cso): monitor 
+Thu Oct 12 02:23:47 2006 (cso): monitor 
+Thu Oct 12 02:24:36 2006 (root): tune -a 10 -c v 
+Thu Oct 12 02:24:51 2006 (root): tune -a 10 -c checklock 
+Thu Oct 12 02:25:11 2006 (gpetitpa): monitor 
+Thu Oct 12 02:26:47 2006 (thunter): tune -a 10 -c e1 
+Thu Oct 12 02:26:51 2006 (root): lockYIG -a 10 -f 6.308615295 
+Thu Oct 12 02:27:35 2006 (thunter): tune -a 10 -c table 
+Thu Oct 12 02:27:47 2006 (thunter): tune -a 10 -c active 
+Thu Oct 12 02:27:59 2006 (cso): tune -a 9 -v 0 -y 0 -c rfpower 
+Thu Oct 12 02:28:30 2006 (hshinnaga): monitor 
+Thu Oct 12 02:29:47 2006 (root): setIFLevels 
+Thu Oct 12 02:32:25 2006 (root): lockYIG -a 5 
+Thu Oct 12 02:33:21 2006 (root): point --help 
+Thu Oct 12 02:33:58 2006 (root): newFile 
+Thu Oct 12 02:34:23 2006 (root): point -a 1,2,3,4,5,6,8 -b 2 -c 2 -C 50 -S u -w 50 -l -t -Q 
+Thu Oct 12 02:35:17 2006 (hshinnaga): monitor 
+Thu Oct 12 02:39:49 2006 (cso): tune -a 9 -c rfpower -y 0 -v 0 
+		Repetition 1:
+		Ant 1	AzOff = -11.7	ElOff =  10.8	deltaAz =  -9.8	deltaEl =   2.4
+		Ant 2	AzOff =  -6.1	ElOff =  11.1	deltaAz =  -7.2	deltaEl =  10.1
+		Ant 3	AzOff =  -5.3	ElOff = -23.6	deltaAz =  -1.2	deltaEl = -20.7
+		Ant 4	AzOff =  -8.2	ElOff =  12.9	deltaAz =  -1.1	deltaEl =  13.4
+		Ant 5	AzOff = -16.2	ElOff =   7.5	deltaAz = -18.7	deltaEl =   8.6
+		Ant 6	AzOff =   1.6	ElOff =   7.9	deltaAz =  -5.9	deltaEl =   1.1
+		Ant 8	AzOff = -10.7	ElOff =  22.8	deltaAz =  -9.6	deltaEl =  19.3
+Thu Oct 12 02:40:22 2006 (gpetitpa): monitor 
+Thu Oct 12 02:41:10 2006 (cso): tune -a 9 -c rfpower -y 0 -v 0 
+Thu Oct 12 02:45:06 2006 (root): point -a 1,2,3,4,5,6,8 -b 2 -c 2 -C 50 -S u -w 50 -l -t -Q -k -r 2 
+Thu Oct 12 02:45:48 2006 (cso): tune --help 
+Thu Oct 12 02:47:25 2006 (cso): tune -a 9 -c rfpower -x 6 -y 0 -v 0 
+Thu Oct 12 02:49:38 2006 (cso): tune -a 9 -c rfpower -y 0 -v 0 
+Thu Oct 12 02:51:49 2006 (cso): tune -a 9 -c network probe 
+Thu Oct 12 02:52:29 2006 (thunter): tune -a 9 -c network 
+Thu Oct 12 02:52:36 2006 (thunter): tune -a 9 -c network probe 
+Thu Oct 12 02:53:15 2006 (cso): tune -a 9 -c network probe 
+Thu Oct 12 02:53:16 2006 (thunter): tune -a 9 -c changelanes 
+Thu Oct 12 02:53:55 2006 (thunter): tune -a 9 -c network probe 
+Thu Oct 12 02:53:56 2006 (root): monitor 
+Thu Oct 12 02:54:15 2006 (cso): tune -a 9 -c network probe 
+Thu Oct 12 02:54:49 2006 (cso): tune -a 9 -c network probe 
+Thu Oct 12 02:55:58 2006 (cso): tune -a 9 -c rfpower -y 0 -v 0 
+Thu Oct 12 02:56:10 2006 (cso): tune -a 9 -c rfpower -y 0 -v 0 
+		Repetition 1:
+		Ant 1	AzOff =   0.3	ElOff =  16.3	deltaAz =   2.1	deltaEl =   7.9
+		Ant 2	AzOff =  -1.9	ElOff =   7.5	deltaAz =  -3.0	deltaEl =   6.6
+		Ant 3	AzOff =  -0.7	ElOff =  -5.3	deltaAz =   3.4	deltaEl =  -2.4
+		Ant 4	AzOff = -11.4	ElOff =   9.9	deltaAz =  -4.2	deltaEl =  10.3
+		Ant 5	AzOff =   0.5	ElOff =   8.4	deltaAz =  -2.0	deltaEl =   9.6
+		Ant 6	AzOff =   1.3	ElOff =   8.5	deltaAz =  -6.2	deltaEl =   1.7
+		Ant 8	AzOff =  -7.1	ElOff =  22.4	deltaAz =  -6.0	deltaEl =  18.9
+		Repetition 2:
+		Ant 1	AzOff =  -0.8	ElOff =  17.8	deltaAz =   1.1	deltaEl =   9.4
+		Ant 2	AzOff =  -3.1	ElOff =   6.9	deltaAz =  -4.2	deltaEl =   5.9
+		Ant 3	AzOff =  -2.8	ElOff =  -7.8	deltaAz =   1.3	deltaEl =  -4.8
+		Ant 4	AzOff =  -4.2	ElOff =  13.0	deltaAz =   3.0	deltaEl =  13.4
+		Ant 5	AzOff =  -2.9	ElOff =   4.6	deltaAz =  -5.4	deltaEl =   5.8
+		Ant 6	AzOff =   2.5	ElOff =   9.6	deltaAz =  -5.0	deltaEl =   2.8
+		Ant 8	AzOff =  -6.1	ElOff =  22.5	deltaAz =  -5.0	deltaEl =  19.0
+		Average:
+		Ant 1	AzOff =  -0.3	ElOff =  17.0	deltaAz =   1.6	deltaEl =   8.7
+		Ant 2	AzOff =  -2.5	ElOff =   7.2	deltaAz =  -3.6	deltaEl =   6.2
+		Ant 3	AzOff =  -1.8	ElOff =  -6.6	deltaAz =   2.3	deltaEl =  -3.6
+		Ant 4	AzOff =  -7.8	ElOff =  11.4	deltaAz =  -0.6	deltaEl =  11.9
+		Ant 5	AzOff =  -1.2	ElOff =   6.5	deltaAz =  -3.7	deltaEl =   7.7
+		Ant 6	AzOff =   1.9	ElOff =   9.0	deltaAz =  -5.6	deltaEl =   2.3
+		Ant 8	AzOff =  -6.6	ElOff =  22.4	deltaAz =  -5.5	deltaEl =  18.9
+Thu Oct 12 02:57:02 2006 (cso): monitor 
+Thu Oct 12 02:57:34 2006 (root): point -a 1,2,3,4,5,6,8 -b 2 -c 2 -C 50 -S u -w 50 -l -t -Q -k -r 2 
+Thu Oct 12 02:57:57 2006 (root): tune -a 3 -c vbias0 2.6 
+Thu Oct 12 02:57:58 2006 (thunter): tune -a 9 -c eprom 
+Thu Oct 12 02:58:06 2006 (root): tune -a 3 -c opt curr -t 
+Thu Oct 12 02:58:19 2006 (thunter): tune -a 9 -c slave 6 
+Thu Oct 12 02:58:22 2006 (thunter): tune -a 9 -c eprom 
+Thu Oct 12 02:58:31 2006 (root): tune -a 3 -c iv0 
+Thu Oct 12 02:58:40 2006 (thunter): tune -a 9 -c e1 
+Thu Oct 12 02:58:53 2006 (thunter): tune -a 9 -c eprom 
+Thu Oct 12 02:59:16 2006 (root): tune -a 3 -c ob0 -v 0.2 -s 
+Thu Oct 12 03:00:15 2006 (thunter): tune -a 9 -c rm on 
+Thu Oct 12 03:00:21 2006 (thunter): tune -a 9 -c rm -h 
+Thu Oct 12 03:00:31 2006 (thunter): tune -a 9 -c rm on 6 
+Thu Oct 12 03:00:41 2006 (thunter): tune -a 9 -c active 
+Thu Oct 12 03:01:29 2006 (thunter): tune -a 9 -c threads 
+Thu Oct 12 03:01:49 2006 (thunter): tune -a 9 -c activate -l 0 
+Thu Oct 12 03:02:05 2006 (thunter): tune -a 9 -c threads 
+Thu Oct 12 03:02:14 2006 (thunter): tune -a 9 -c rm off 
+Thu Oct 12 03:02:17 2006 (thunter): tune -a 9 -c rm on 
+Thu Oct 12 03:02:22 2006 (gpetitpa): ivplot8 
+Thu Oct 12 03:02:37 2006 (thunter): tune -a 9 -c pll on 
+Thu Oct 12 03:02:44 2006 (thunter): tune -a 9 -c pll on 
+Thu Oct 12 03:02:55 2006 (thunter): tune -a 9 -c ipclear 
+Thu Oct 12 03:03:05 2006 (thunter): tune -a 9 -c sb u 
+Thu Oct 12 03:03:08 2006 (root): tune -a 3 -c iv0 
+Thu Oct 12 03:03:28 2006 (root): integrate -t 30 
+Thu Oct 12 03:03:36 2006 (thunter): tune -a 9 -c pll -a 6 on 
+Thu Oct 12 03:03:49 2006 (thunter): tune -a 9 -c e1 
+Thu Oct 12 03:03:57 2006 (thunter): tune -a 9 -c eprom 
+Thu Oct 12 03:03:57 2006 (root): tune -a 3 -c bfield0 200 
+Thu Oct 12 03:04:07 2006 (root): tune -a 3 -c bfield0 190 
+Thu Oct 12 03:04:08 2006 (thunter): tune -a 9 -c eprom 
+Thu Oct 12 03:04:10 2006 (root): tune -a 3 -c iv0 
+Thu Oct 12 03:04:57 2006 (root): tune -a 3 -c bfield0 230 
+Thu Oct 12 03:04:59 2006 (root): tune -a 3 -c iv0 
+Thu Oct 12 03:05:06 2006 (root): lockYIG -a 9 -f 6.308615295 
+Thu Oct 12 03:05:28 2006 (thunter): tune -a 9 -c eprom 
+Thu Oct 12 03:05:29 2006 (gpetitpa): tune -a 6 -c iv0 
+Thu Oct 12 03:05:32 2006 (root): tune -a 3 -c vbias0 2.42 
+Thu Oct 12 03:05:36 2006 (root): tune -a 3 -c vbias0 2.41 
+Thu Oct 12 03:05:39 2006 (thunter): tune -a 9 -c e1 
+Thu Oct 12 03:05:44 2006 (thunter): tune -a 9 -c eprom 
+Thu Oct 12 03:05:48 2006 (thunter): tune -a 9 -c pll on 
+Thu Oct 12 03:05:53 2006 (root): tsys --a 3 
+Thu Oct 12 03:05:57 2006 (root): tsys -a 3 
+Thu Oct 12 03:05:58 2006 (thunter): tune -a 9 -c sb u 
+Thu Oct 12 03:06:13 2006 (thunter): tune -a 9 -c sb u 
+Thu Oct 12 03:06:39 2006 (gpetitpa): tune -a 6 -c vbias0 2.4 
+Thu Oct 12 03:06:41 2006 (gpetitpa): tune -a 6 -c iv0 
+Thu Oct 12 03:07:41 2006 (gpetitpa): tsys -a 6 
+Thu Oct 12 03:07:42 2006 (thunter): tune -a 9 -c table 
+Thu Oct 12 03:07:48 2006 (thunter): tune -a 9 -c table 
+Thu Oct 12 03:07:51 2006 (thunter): tune -a 9 -c table 
+Thu Oct 12 03:07:55 2006 (thunter): tune -a 9 -c table 
+Thu Oct 12 03:08:04 2006 (ebrassfi): monitor 
+Thu Oct 12 03:08:14 2006 (gpetitpa): tune -a 6 -c vbias0 2.5 
+Thu Oct 12 03:08:15 2006 (gpetitpa): tsys -a 6 
+Thu Oct 12 03:08:35 2006 (root): tune -a 3 -c vbias0 2.38 
+Thu Oct 12 03:08:42 2006 (gpetitpa): ivplot8 
+Thu Oct 12 03:10:33 2006 (root): azoff -s 0 
+Thu Oct 12 03:10:37 2006 (root): eloff -s 0 
+Thu Oct 12 03:11:41 2006 (thunter): tune -a 9 -c gain 
+Thu Oct 12 03:11:48 2006 (thunter): tune -a 9 -c gain 128 
+Thu Oct 12 03:12:02 2006 (gpetitpa): tune -a 8 -c iv0 
+Thu Oct 12 03:12:36 2006 (root): tune -a 1,2,4,5 -c hostload out 
+Thu Oct 12 03:12:42 2006 (root): tune -a 1,2,4,5 -c hotload out 
+Thu Oct 12 03:13:24 2006 (gpetitpa): tune -a 8 -c ob0 
+Thu Oct 12 03:14:11 2006 (root): integrate -t 120 
+Thu Oct 12 03:14:42 2006 (gpetitpa): tune -a 8 -c iv0 -o 
+Thu Oct 12 03:15:51 2006 (gpetitpa): tune -a 8 -c iv0 -v 0.8 
+Thu Oct 12 03:17:02 2006 (gpetitpa): tune -a 8 -c ob0 -v 0.2 -s 
+Thu Oct 12 03:18:22 2006 (gpetitpa): tune -a 8 -c iv0 -o 
+Thu Oct 12 03:19:14 2006 (gpetitpa): tsys -a 8 
+Thu Oct 12 03:19:51 2006 (root): integrate -t 30 
+Thu Oct 12 03:24:49 2006 (root): point -a 1,2,3,4,5,6,8 -b 2 -c 2 -C 50 -S u -w 50 -l -t -Q -k -r 2 
+Thu Oct 12 03:29:57 2006 (root): cursesmonitor/monitor 
+Thu Oct 12 03:33:47 2006 (root): cursesmonitor/monitor 
+Thu Oct 12 03:34:10 2006 (root): monitor 
+Thu Oct 12 03:35:51 2006 (thunter): tune -a 9 -c network probe 
+		Repetition 1:
+		Ant 1	AzOff =  -3.4	ElOff =  12.2	deltaAz =  -3.4	deltaEl =  12.2
+		Ant 2	AzOff =  -5.0	ElOff =   6.9	deltaAz =  -5.0	deltaEl =   6.9
+		Ant 3	AzOff =  -9.2	ElOff =  -1.3	deltaAz =  -9.2	deltaEl =  -1.3
+		Ant 4	AzOff =  -9.8	ElOff =   9.8	deltaAz =  -9.8	deltaEl =   9.8
+		Ant 5	AzOff =  -0.5	ElOff =   6.0	deltaAz =  -0.5	deltaEl =   6.0
+		Ant 6	AzOff =   0.5	ElOff =   8.3	deltaAz =   0.5	deltaEl =   8.3
+		Ant 8	AzOff =  -6.4	ElOff =  19.5	deltaAz =  -6.4	deltaEl =  19.5
+		Repetition 2:
+		Ant 1	AzOff =  -1.9	ElOff =  16.1	deltaAz =  -1.9	deltaEl =  16.1
+		Ant 2	AzOff =   1.3	ElOff =   3.5	deltaAz =   1.3	deltaEl =   3.5
+		Ant 3	AzOff =  -4.8	ElOff =  -1.2	deltaAz =  -4.8	deltaEl =  -1.2
+		Ant 4	AzOff =  -8.5	ElOff =   6.7	deltaAz =  -8.5	deltaEl =   6.7
+		Ant 5	AzOff =  -2.6	ElOff =   6.7	deltaAz =  -2.6	deltaEl =   6.7
+		Ant 6	AzOff =  -3.4	ElOff =   7.5	deltaAz =  -3.4	deltaEl =   7.5
+		Ant 8	AzOff =  -2.5	ElOff =  18.8	deltaAz =  -2.5	deltaEl =  18.8
+		Average:
+		Ant 1	AzOff =  -2.7	ElOff =  14.1	deltaAz =  -2.7	deltaEl =  14.1
+		Ant 2	AzOff =  -1.9	ElOff =   5.2	deltaAz =  -1.9	deltaEl =   5.2
+		Ant 3	AzOff =  -7.0	ElOff =  -1.2	deltaAz =  -7.0	deltaEl =  -1.2
+		Ant 4	AzOff =  -9.2	ElOff =   8.2	deltaAz =  -9.2	deltaEl =   8.2
+		Ant 5	AzOff =  -1.6	ElOff =   6.3	deltaAz =  -1.6	deltaEl =   6.3
+		Ant 6	AzOff =  -1.4	ElOff =   7.9	deltaAz =  -1.4	deltaEl =   7.9
+		Ant 8	AzOff =  -4.4	ElOff =  19.1	deltaAz =  -4.4	deltaEl =  19.1
+Thu Oct 12 03:36:45 2006 (root): setIFLevels -2 
+Thu Oct 12 03:37:13 2006 (thunter): tune -a 9 -c v 
+Thu Oct 12 03:37:17 2006 (thunter): tune -a 9 -c network probe 
+Thu Oct 12 03:37:47 2006 (cso): monitor 
+Thu Oct 12 03:41:39 2006 (thunter): tune -a 9 -c network probe 
+Thu Oct 12 03:48:35 2006 (root): setIFLevels -2 
+Thu Oct 12 03:54:22 2006 (ebrassfi): monitor 
+Thu Oct 12 03:54:46 2006 (ebrassfi): monitor 
+Thu Oct 12 03:55:11 2006 (root): point -a 1,2,3,4,5,6,8 -b 2 -c 2 -C 50 -S u -w 50 -l -t -Q -k -r 2 
+Thu Oct 12 03:56:09 2006 (thunter): tune -a 9 -c network probe 
+Thu Oct 12 03:56:24 2006 (pyamaguc): monitor 
+Thu Oct 12 03:59:14 2006 (dkubo): monitor 
+Thu Oct 12 03:59:34 2006 (dkubo): monitor 
+Thu Oct 12 04:00:36 2006 (thunter): tune -a 10 -c v 
+Thu Oct 12 04:00:39 2006 (thunter): tune -a 10 -c rm on 
+Thu Oct 12 04:00:52 2006 (thunter): tune -a 10 -c rm off 
+Thu Oct 12 04:00:55 2006 (thunter): tune -a 10 -c rm on 
+Thu Oct 12 04:01:11 2006 (thunter): tune -a 10 -c active 
+Thu Oct 12 04:02:09 2006 (thunter): tune -a 10 -c table 
+		Repetition 1:
+		Ant 1	AzOff =  -5.2	ElOff =  13.7	deltaAz =  -2.5	deltaEl =  -0.4
+		Ant 2	AzOff =  -3.6	ElOff =   1.3	deltaAz =  -1.7	deltaEl =  -3.9
+		Ant 3	AzOff =  -8.6	ElOff =  -3.8	deltaAz =  -1.6	deltaEl =  -2.6
+		Ant 4	AzOff = -12.8	ElOff =   5.4	deltaAz =  -3.6	deltaEl =  -2.9
+		Ant 5	AzOff =  -2.0	ElOff =   3.1	deltaAz =  -0.4	deltaEl =  -3.3
+		Ant 6	AzOff =  -2.1	ElOff =  10.3	deltaAz =  -0.7	deltaEl =   2.4
+		Ant 8	AzOff =  -6.6	ElOff =  16.0	deltaAz =  -2.2	deltaEl =  -3.2
+		Repetition 2:
+		Ant 1	AzOff =  -6.0	ElOff =  11.5	deltaAz =  -3.4	deltaEl =  -2.6
+		Ant 2	AzOff =  -1.6	ElOff =   3.2	deltaAz =   0.3	deltaEl =  -2.0
+		Ant 3	AzOff =  -5.0	ElOff =  -5.0	deltaAz =   2.0	deltaEl =  -3.8
+		Ant 4	AzOff = -12.2	ElOff =   2.8	deltaAz =  -3.1	deltaEl =  -5.5
+		Ant 5	AzOff =  -4.0	ElOff =   4.1	deltaAz =  -2.5	deltaEl =  -2.3
+		Ant 6	AzOff =  -1.7	ElOff =   8.8	deltaAz =  -0.3	deltaEl =   0.9
+		Ant 8	AzOff =  -9.8	ElOff =  17.4	deltaAz =  -5.4	deltaEl =  -1.7
+		Average:
+		Ant 1	AzOff =  -5.6	ElOff =  12.6	deltaAz =  -3.0	deltaEl =  -1.5
+		Ant 2	AzOff =  -2.6	ElOff =   2.3	deltaAz =  -0.7	deltaEl =  -2.9
+		Ant 3	AzOff =  -6.8	ElOff =  -4.4	deltaAz =   0.2	deltaEl =  -3.2
+		Ant 4	AzOff = -12.5	ElOff =   4.1	deltaAz =  -3.3	deltaEl =  -4.2
+		Ant 5	AzOff =  -3.0	ElOff =   3.6	deltaAz =  -1.5	deltaEl =  -2.8
+		Ant 6	AzOff =  -1.9	ElOff =   9.5	deltaAz =  -0.5	deltaEl =   1.7
+		Ant 8	AzOff =  -8.2	ElOff =  16.7	deltaAz =  -3.8	deltaEl =  -2.5
+Thu Oct 12 04:07:30 2006 (root): point -a 1,2,3,4,5,6,8 -b 2 -c 2 -C 50 -S u -w 50 -l -t -Q -k -r 2 -i 60 
+Thu Oct 12 04:08:41 2006 (root): tune -a 10 -c checklock 
+Thu Oct 12 04:08:48 2006 (root): tune -a 10 -c v 
+Thu Oct 12 04:11:34 2006 (ebrassfi): monitor 
+Thu Oct 12 04:12:15 2006 (root): tune -a 10 -c v 
+		Repetition 1:
+		Ant 1	AzOff =  -5.2	ElOff =  11.7	deltaAz =   0.4	deltaEl =  -0.9
+		Ant 2	AzOff =  -1.0	ElOff =   3.2	deltaAz =   1.6	deltaEl =   0.9
+		Ant 3	AzOff =  -8.7	ElOff =  -3.2	deltaAz =  -1.9	deltaEl =   1.2
+		Ant 4	AzOff = -12.6	ElOff =   3.9	deltaAz =  -0.1	deltaEl =  -0.2
+		Ant 5	AzOff =  -2.9	ElOff =   5.4	deltaAz =   0.1	deltaEl =   1.9
+		Ant 6	AzOff =  -0.8	ElOff =   7.7	deltaAz =   1.2	deltaEl =  -1.9
+		Ant 8	AzOff =  -9.9	ElOff =  15.7	deltaAz =  -1.7	deltaEl =  -1.0
+		Repetition 2:
+		Ant 1	AzOff =  -3.1	ElOff =  10.3	deltaAz =   2.5	deltaEl =  -2.4
+		Ant 2	AzOff =  -3.6	ElOff =   1.0	deltaAz =  -1.0	deltaEl =  -1.2
+		Ant 3	AzOff =  -8.4	ElOff =  -4.4	deltaAz =  -1.6	deltaEl =   0.0
+		Ant 4	AzOff = -12.8	ElOff =   3.3	deltaAz =  -0.3	deltaEl =  -0.7
+		Ant 5	AzOff =  -1.5	ElOff =   1.2	deltaAz =   1.5	deltaEl =  -2.4
+		Ant 6	AzOff =   0.5	ElOff =   7.5	deltaAz =   2.5	deltaEl =  -2.1
+		Ant 8	AzOff =  -8.7	ElOff =  15.3	deltaAz =  -0.5	deltaEl =  -1.4
+		Average:
+		Ant 1	AzOff =  -4.2	ElOff =  11.0	deltaAz =   1.5	deltaEl =  -1.6
+		Ant 2	AzOff =  -2.3	ElOff =   2.1	deltaAz =   0.3	deltaEl =  -0.2
+		Ant 3	AzOff =  -8.6	ElOff =  -3.8	deltaAz =  -1.8	deltaEl =   0.6
+		Ant 4	AzOff = -12.7	ElOff =   3.6	deltaAz =  -0.2	deltaEl =  -0.5
+		Ant 5	AzOff =  -2.2	ElOff =   3.3	deltaAz =   0.8	deltaEl =  -0.3
+		Ant 6	AzOff =  -0.1	ElOff =   7.6	deltaAz =   1.8	deltaEl =  -2.0
+		Ant 8	AzOff =  -9.3	ElOff =  15.5	deltaAz =  -1.1	deltaEl =  -1.2
+Thu Oct 12 04:22:28 2006 (root): point -a 1,2,3,4,5,6,8 -b 2 -c 2 -C 50 -S u -w 50 -l -t -Q -k -r 3 -i 60 
+		Repetition 1:
+		Ant 1	AzOff =  -6.2	ElOff =   9.6	deltaAz =  -2.0	deltaEl =  -1.4
+		Ant 2	AzOff =  -0.7	ElOff =   1.1	deltaAz =   1.6	deltaEl =  -1.0
+		Ant 3	AzOff =  -7.1	ElOff =  -4.3	deltaAz =   1.4	deltaEl =  -0.5
+		Ant 4	AzOff = -16.6	ElOff =   2.9	deltaAz =  -3.9	deltaEl =  -0.7
+		Ant 5	AzOff =  -4.3	ElOff =   3.1	deltaAz =  -2.1	deltaEl =  -0.2
+		Ant 6	AzOff =  -1.4	ElOff =   6.7	deltaAz =  -1.3	deltaEl =  -0.9
+		Ant 8	AzOff =  -6.0	ElOff =  11.5	deltaAz =   3.3	deltaEl =  -4.0
+		Repetition 2:
+		Ant 1	AzOff =  -7.1	ElOff =  10.8	deltaAz =  -2.9	deltaEl =  -0.2
+		Ant 2	AzOff =  -2.9	ElOff =  -0.0	deltaAz =  -0.7	deltaEl =  -2.1
+		Ant 3	AzOff =  -6.9	ElOff =  -4.9	deltaAz =   1.7	deltaEl =  -1.1
+		Ant 4	AzOff = -16.7	ElOff =   0.3	deltaAz =  -3.9	deltaEl =  -3.4
+		Ant 5	AzOff =  -3.9	ElOff =   0.0	deltaAz =  -1.7	deltaEl =  -3.3
+		Ant 6	AzOff =  -0.8	ElOff =   6.8	deltaAz =  -0.7	deltaEl =  -0.8
+		Ant 8	AzOff =  -7.5	ElOff =  12.6	deltaAz =   1.8	deltaEl =  -2.9
+		Repetition 3:
+		Ant 1	AzOff =  -5.1	ElOff =  10.1	deltaAz =  -0.9	deltaEl =  -0.9
+		Ant 2	AzOff =  -5.1	ElOff =  -0.0	deltaAz =  -2.8	deltaEl =  -2.1
+		Ant 3	AzOff = -10.5	ElOff =  -3.9	deltaAz =  -1.9	deltaEl =  -0.1
+		Ant 4	AzOff = -17.4	ElOff =   1.9	deltaAz =  -4.7	deltaEl =  -1.8
+		Ant 5	AzOff =  -6.0	ElOff =   0.5	deltaAz =  -3.7	deltaEl =  -2.8
+		Ant 6	AzOff =  -5.7	ElOff =   6.7	deltaAz =  -5.6	deltaEl =  -0.9
+		Ant 8	AzOff =  -7.7	ElOff =  10.4	deltaAz =   1.6	deltaEl =  -5.2
+		Average:
+		Ant 1	AzOff =  -6.1	ElOff =  10.2	deltaAz =  -2.0	deltaEl =  -0.8
+		Ant 2	AzOff =  -2.9	ElOff =   0.4	deltaAz =  -0.6	deltaEl =  -1.7
+		Ant 3	AzOff =  -8.2	ElOff =  -4.4	deltaAz =   0.4	deltaEl =  -0.6
+		Ant 4	AzOff = -16.9	ElOff =   1.7	deltaAz =  -4.2	deltaEl =  -1.9
+		Ant 5	AzOff =  -4.7	ElOff =   1.2	deltaAz =  -2.5	deltaEl =  -2.1
+		Ant 6	AzOff =  -2.6	ElOff =   6.7	deltaAz =  -2.5	deltaEl =  -0.8
+		Ant 8	AzOff =  -7.1	ElOff =  11.5	deltaAz =   2.2	deltaEl =  -4.0
+Thu Oct 12 04:44:36 2006 (root): tune -a 10 -c v 
+Thu Oct 12 04:45:29 2006 (ebrassfi): monitor 
+Thu Oct 12 04:45:44 2006 (ebrassfi): monitor 
+Thu Oct 12 04:47:33 2006 (jcmt): tune -a 10 -c v 
+Thu Oct 12 04:49:25 2006 (jcmt): tune -a 10 -c v 
+Thu Oct 12 04:49:27 2006 (jcmt): tune -a 10 -c v 
+Thu Oct 12 04:49:28 2006 (jcmt): tune -a 10 -c v 
+Thu Oct 12 04:49:30 2006 (jcmt): tune -a 10 -c v 
+Thu Oct 12 04:49:31 2006 (jcmt): tune -a 10 -c v 
+Thu Oct 12 04:49:32 2006 (jcmt): tune -a 10 -c v 
+Thu Oct 12 04:49:34 2006 (jcmt): tune -a 10 -c v 
+Thu Oct 12 04:49:36 2006 (jcmt): tune -a 10 -c v 
+Thu Oct 12 04:49:38 2006 (jcmt): tune -a 10 -c v 
+Thu Oct 12 04:49:44 2006 (jcmt): tune -a 10 -c v 
+Thu Oct 12 04:49:47 2006 (jcmt): tune -a 10 -c v 
+Thu Oct 12 04:49:49 2006 (jcmt): tune -a 10 -c v 
+Thu Oct 12 04:49:53 2006 (jcmt): tune -a 10 -c v 
+Thu Oct 12 04:49:55 2006 (jcmt): tune -a 10 -c v 
+Thu Oct 12 04:49:59 2006 (jcmt): tune -a 10 -c v 
+Thu Oct 12 04:50:07 2006 (jcmt): tune -a 10 -c v 
+Thu Oct 12 04:50:11 2006 (jcmt): tune -a 10 -c v 
+Thu Oct 12 04:50:15 2006 (jcmt): tune -a 10 -c v 
+Thu Oct 12 04:53:34 2006 (jcmt): tune -a 10 -c v 
+Thu Oct 12 04:53:49 2006 (jcmt): tune -a 10 -c v 
+Thu Oct 12 04:57:01 2006 (jcmt): tune -a 10 -c v 
+Thu Oct 12 05:01:56 2006 (root): setIFLevels -2 
+Thu Oct 12 05:06:31 2006 (ysu): monitor 
+Thu Oct 12 05:07:29 2006 (root): setIFLevels -2 
+Thu Oct 12 05:08:21 2006 (root): setIFLevels -2 
+Thu Oct 12 05:14:33 2006 (root): newFile 
+Thu Oct 12 05:28:07 2006 (jcmt): tune -a 10 -c v 
+Thu Oct 12 05:30:42 2006 (rtm): /application/bin/killdaemon hal9000 statusServer HUP
+Thu Oct 12 05:31:53 2006 (root): tune -a 10 -c v 
+Thu Oct 12 05:35:40 2006 (root): tune -a 10 -c v 
+Thu Oct 12 05:45:55 2006 (root): monitor 
+Thu Oct 12 06:29:55 2006 (root): tune -a 9 -c v 
+Thu Oct 12 06:34:04 2006 (cso): monitor 
+Thu Oct 12 07:07:07 2006 (root): integrate -n -i 
+Thu Oct 12 07:07:20 2006 (root): closeM3 
+Thu Oct 12 07:12:59 2006 (hshinnaga): monitor 
+Thu Oct 12 07:22:37 2006 (pyamaguc): monitor 
+Thu Oct 12 07:30:15 2006 (mareid): monitor 
+Thu Oct 12 07:30:30 2006 (mareid): monitor 
+Thu Oct 12 07:50:44 2006 (gpetitpa): monitor 
+Thu Oct 12 08:08:09 2006 (hshinnaga): monitor 
+Thu Oct 12 08:10:40 2006 (hshinnaga): monitor 
+Thu Oct 12 08:12:16 2006 (hshinnaga): monitor 
+Thu Oct 12 08:15:14 2006 (hshinnaga): monitor 
+Thu Oct 12 08:16:46 2006 (hshinnaga): monitor 
+Thu Oct 12 08:19:15 2006 (hshinnaga): monitor 
+Thu Oct 12 08:21:10 2006 (hshinnaga): monitor 
+Thu Oct 12 09:08:18 2006 (root): newFile 
+Thu Oct 12 09:20:53 2006 (root): restartCorrelator -d 
+Thu Oct 12 09:22:36 2006 (rtm): /application/bin/killdaemon crate int_server QUIT
+Thu Oct 12 09:28:47 2006 (root): monitor 
+Thu Oct 12 09:29:50 2006 (root): monitor 
+Thu Oct 12 09:36:29 2006 (rtm): /application/bin/killdaemon crate1 logger URG
+Thu Oct 12 09:36:39 2006 (rtm): /application/bin/killdaemon crate2 logger URG
+Thu Oct 12 09:36:50 2006 (rtm): /application/bin/killdaemon crate3 logger URG
+Thu Oct 12 09:37:01 2006 (rtm): /application/bin/killdaemon crate4 logger URG
+Thu Oct 12 09:37:11 2006 (rtm): /application/bin/killdaemon crate5 logger URG
+Thu Oct 12 09:37:22 2006 (rtm): /application/bin/killdaemon crate6 logger URG
+Thu Oct 12 09:37:33 2006 (rtm): /application/bin/killdaemon crate7 logger URG
+Thu Oct 12 09:37:43 2006 (rtm): /application/bin/killdaemon crate8 logger URG
+Thu Oct 12 09:37:54 2006 (rtm): /application/bin/killdaemon crate9 logger URG
+Thu Oct 12 09:38:04 2006 (rtm): /application/bin/killdaemon crate10 logger URG
+Thu Oct 12 09:38:15 2006 (rtm): /application/bin/killdaemon crate11 logger URG
+Thu Oct 12 09:38:26 2006 (rtm): /application/bin/killdaemon crate12 logger URG
+Thu Oct 12 09:39:23 2006 (ebrassfi): monitor 
+Thu Oct 12 09:40:00 2006 (rtm): /application/bin/killdaemon crate int_server QUIT
+Thu Oct 12 09:48:17 2006 (root): standby 
+Thu Oct 12 10:28:00 2006 (root): setIFLevels -2 
+Thu Oct 12 10:29:55 2006 (root): openM3 
+Thu Oct 12 10:29:58 2006 (hshinnaga): monitor 
+Thu Oct 12 10:30:06 2006 (root): observe -s 3c84 
+Thu Oct 12 10:30:09 2006 (root): resume 
+Thu Oct 12 10:30:13 2006 (hshinnaga): monitor 
+Thu Oct 12 10:31:43 2006 (root): setIFLevels -2 
+Thu Oct 12 10:34:19 2006 (root): observe -a 9 -s 3c84 
+Thu Oct 12 10:35:08 2006 (root): setIFLevels -2 
+Thu Oct 12 10:38:08 2006 (jcmt): monitor 
+Thu Oct 12 10:38:19 2006 (root): setIFLevels 
+Thu Oct 12 10:39:55 2006 (jcmt): tune -a 10 -c v 
+Thu Oct 12 10:39:58 2006 (root): monitor 
+Thu Oct 12 10:40:03 2006 (root): lockYIG -a 10 -f 6.308615295 
+Thu Oct 12 10:40:05 2006 (hshinnaga): monitor 
+Thu Oct 12 10:40:22 2006 (jcmt): tune -a 10 -c v 
+Thu Oct 12 10:41:35 2006 (root): setIFLevels -2 
+Thu Oct 12 10:45:14 2006 (root): correlatorPause 
+Thu Oct 12 10:45:21 2006 (root): correlatorResume 
+Thu Oct 12 10:51:02 2006 (root): point -a 1,2,3,4,5,6,8 -b 2 -c 2 -C 50 -S u -w 50 -l -t -Q -r 2 
+		Repetition 1:
+		Ant 1	AzOff = -12.9	ElOff =   6.1	deltaAz =  -6.8	deltaEl =  -4.0
+		Ant 2	AzOff =   1.6	ElOff =  -4.6	deltaAz =   4.5	deltaEl =  -5.0
+		Ant 3	AzOff =  -9.2	ElOff =   0.4	deltaAz =  -1.0	deltaEl =   4.8
+		Ant 4	AzOff =  -9.1	ElOff =   4.2	deltaAz =   7.8	deltaEl =   2.5
+		Ant 5	AzOff =  -8.3	ElOff =  -6.2	deltaAz =  -3.5	deltaEl =  -7.4
+		Ant 6	AzOff =  13.1	ElOff =   5.0	deltaAz =  15.8	deltaEl =  -1.7
+		Ant 8	AzOff =   0.5	ElOff =  10.2	deltaAz =   7.5	deltaEl =  -1.3
+		Repetition 2:
+		Ant 1	AzOff =  -2.2	ElOff =  11.0	deltaAz =   3.9	deltaEl =   0.9
+		Ant 2	AzOff =  -0.6	ElOff =  -7.9	deltaAz =   2.3	deltaEl =  -8.2
+		Ant 3	AzOff = -15.8	ElOff =  -0.9	deltaAz =  -7.7	deltaEl =   3.5
+		Ant 4	AzOff = -20.2	ElOff =   0.4	deltaAz =  -3.3	deltaEl =  -1.3
+		Ant 5	AzOff =  -7.4	ElOff =   1.0	deltaAz =  -2.7	deltaEl =  -0.2
+		Ant 6	AzOff =   3.1	ElOff =   3.0	deltaAz =   5.8	deltaEl =  -3.7
+		Ant 8	AzOff =  -4.7	ElOff =  -2.8	deltaAz =   2.4	deltaEl = -14.3
+		Average:
+		Ant 1	AzOff =  -7.6	ElOff =   8.6	deltaAz =  -1.4	deltaEl =  -1.6
+		Ant 2	AzOff =   0.5	ElOff =  -6.2	deltaAz =   3.4	deltaEl =  -6.6
+		Ant 3	AzOff = -12.5	ElOff =  -0.2	deltaAz =  -4.4	deltaEl =   4.2
+		Ant 4	AzOff = -14.6	ElOff =   2.3	deltaAz =   2.2	deltaEl =   0.6
+		Ant 5	AzOff =  -7.8	ElOff =  -2.6	deltaAz =  -3.1	deltaEl =  -3.8
+		Ant 6	AzOff =   8.1	ElOff =   4.0	deltaAz =  10.8	deltaEl =  -2.7
+		Ant 8	AzOff =  -2.1	ElOff =   3.7	deltaAz =   5.0	deltaEl =  -7.8
+Thu Oct 12 11:04:27 2006 (cso): monitor 
+Thu Oct 12 11:15:07 2006 (root): integrate -t 300 
+Thu Oct 12 11:15:21 2006 (root): integrate -t 60 
+Thu Oct 12 11:21:15 2006 (root): integrate -n -p 
+Thu Oct 12 11:21:25 2006 (root): integrate -p 
+Thu Oct 12 11:22:04 2006 (root): newFile 
+Thu Oct 12 11:22:14 2006 (root): point -a 1,2,3,4,5,6,8 -b 2 -c 2 -C 50 -S u -w 50 -l -t -Q -r 2 -k 
+Thu Oct 12 11:28:55 2006 (root): point -a 1,2,3,4,5,6,8 -l -k -t -r 2 -Q 
+Thu Oct 12 11:29:06 2006 (root): azoff -s 0 
+Thu Oct 12 11:29:09 2006 (root): eloff -s 0 
+Thu Oct 12 11:29:11 2006 (root): point -a 1,2,3,4,5,6,8 -l -k -t -r 2 -Q 
+Thu Oct 12 11:29:46 2006 (ebrassfi): point --help 
+Thu Oct 12 11:40:10 2006 (maria): monitor 
+Thu Oct 12 11:40:42 2006 (root): lookup -s 0537-441 
+Thu Oct 12 11:40:57 2006 (root): lookup -s 3c84 
+Thu Oct 12 11:41:02 2006 (root): monitor 
+		Repetition 1:
+		Ant 1	AzOff =  -7.0	ElOff =   5.5	deltaAz =  -7.0	deltaEl =   5.5
+		Ant 2	AzOff =   1.1	ElOff =  -3.5	deltaAz =   1.1	deltaEl =  -3.5
+		Ant 3	AzOff =  -7.0	ElOff =  -4.9	deltaAz =  -7.0	deltaEl =  -4.9
+		Ant 4	AzOff = -12.7	ElOff =  -4.4	deltaAz = -12.7	deltaEl =  -4.4
+		Ant 5	AzOff =  -3.6	ElOff =  -1.7	deltaAz =  -3.6	deltaEl =  -1.7
+		Ant 6	AzOff =   2.9	ElOff =   3.7	deltaAz =   2.9	deltaEl =   3.7
+		Ant 8	AzOff =  -5.5	ElOff =   0.3	deltaAz =  -5.5	deltaEl =   0.3
+		Repetition 2:
+		Ant 1	AzOff =  -8.3	ElOff =   6.7	deltaAz =  -8.3	deltaEl =   6.7
+		Ant 2	AzOff =  -2.6	ElOff =  -4.4	deltaAz =  -2.6	deltaEl =  -4.4
+		Ant 3	AzOff =  -6.4	ElOff =  -5.9	deltaAz =  -6.4	deltaEl =  -5.9
+		Ant 4	AzOff = -15.7	ElOff =  -7.3	deltaAz = -15.7	deltaEl =  -7.3
+		Ant 5	AzOff =  -4.7	ElOff =  -1.4	deltaAz =  -4.7	deltaEl =  -1.4
+		Ant 6	AzOff =   0.9	ElOff =   5.1	deltaAz =   0.9	deltaEl =   5.1
+		Ant 8	AzOff =  -6.2	ElOff =  -0.2	deltaAz =  -6.2	deltaEl =  -0.2
+		Average:
+		Ant 1	AzOff =  -7.7	ElOff =   6.1	deltaAz =  -7.7	deltaEl =   6.1
+		Ant 2	AzOff =  -0.8	ElOff =  -4.0	deltaAz =  -0.8	deltaEl =  -4.0
+		Ant 3	AzOff =  -6.7	ElOff =  -5.4	deltaAz =  -6.7	deltaEl =  -5.4
+		Ant 4	AzOff = -14.2	ElOff =  -5.8	deltaAz = -14.2	deltaEl =  -5.8
+		Ant 5	AzOff =  -4.1	ElOff =  -1.5	deltaAz =  -4.1	deltaEl =  -1.5
+		Ant 6	AzOff =   1.9	ElOff =   4.4	deltaAz =   1.9	deltaEl =   4.4
+		Ant 8	AzOff =  -5.8	ElOff =   0.0	deltaAz =  -5.8	deltaEl =   0.0
+Thu Oct 12 11:43:07 2006 (maria): monitor 
+Thu Oct 12 11:43:33 2006 (root): integrate -t 30 
+Thu Oct 12 11:45:11 2006 (maria): monitor 
+Thu Oct 12 11:46:57 2006 (root): lockYIG -a 5 
+Thu Oct 12 11:47:59 2006 (maria): monitor 
+Thu Oct 12 11:59:02 2006 (maria): monitor 
+Thu Oct 12 12:01:30 2006 (maria): monitor 
+Thu Oct 12 12:02:15 2006 (root): correlatorPause 
+Thu Oct 12 12:02:21 2006 (root): correlatorResume 
+Thu Oct 12 12:02:28 2006 (root): setIFLevels -2 
+Thu Oct 12 12:06:11 2006 (root): integrate -t 120 
+Thu Oct 12 12:06:22 2006 (maria): monitor 
+Thu Oct 12 12:09:20 2006 (root): observe -s bnkl1 
+Thu Oct 12 12:10:10 2006 (root): integrate -t 30 
+Thu Oct 12 12:15:03 2006 (root): observe -s 3c84 
+Thu Oct 12 12:21:18 2006 (root): tune -s 6 -c hotload in 
+Thu Oct 12 12:21:51 2006 (root): tune -s 6 -c hotload out 
+Thu Oct 12 12:22:07 2006 (root): tune -s 6 -c hotload in 
+Thu Oct 12 12:22:22 2006 (root): tune -s 6 -c hotload out 
+Thu Oct 12 12:22:50 2006 (rtm): /application/bin/killdaemon m5 c1DCIFserver restart
+Thu Oct 12 12:23:07 2006 (rtm): /application/bin/killdaemon m5 c1DCIFServer restart
+Thu Oct 12 12:23:50 2006 (root): tune -a 6 -c hotload in 
+Thu Oct 12 12:23:58 2006 (root): tune -a 6 -c hotload out 
+Thu Oct 12 12:24:27 2006 (root): tune -a 3 -c hotload in 
+Thu Oct 12 12:24:36 2006 (root): tune -a 3 -c hotload out 
+Thu Oct 12 12:27:11 2006 (root): setIFLevels -R h 
+Thu Oct 12 12:29:38 2006 (root): tune -a 4 -c gunn1 off 
+Thu Oct 12 12:29:44 2006 (root): tune -a 4 -c gunn1 on 
+Thu Oct 12 12:35:00 2006 (root): lockYIG -a 10 -f 6.308615295 
+Thu Oct 12 12:35:05 2006 (root): monitor 
+Thu Oct 12 12:38:39 2006 (root): tune -a 10 -c checklock 
+Thu Oct 12 12:39:00 2006 (root): tune -a 10 -c gunn off 
+Thu Oct 12 12:39:21 2006 (root): tune -a 10 -c checklock 
+Thu Oct 12 12:39:29 2006 (root): tune -a 10 -c gunn on 
+Thu Oct 12 12:40:07 2006 (root): tune -a 10 -c checklock 
+Thu Oct 12 12:41:21 2006 (root): integrate -t 120 
+Thu Oct 12 12:42:21 2006 (jcmt): tune -a 10 -c v 
+Thu Oct 12 12:42:29 2006 (root): monitor 
+Thu Oct 12 12:42:44 2006 (root): setChunkPhaseOffsets -u 
+Thu Oct 12 12:43:06 2006 (root): integrate -t 30 
+Thu Oct 12 12:44:32 2006 (root): integrate -t 120 
+Thu Oct 12 12:48:15 2006 (root): restartCorrelator -d 
+Thu Oct 12 12:49:32 2006 (rtm): /application/bin/killdaemon crate int_server restart
+Thu Oct 12 12:50:08 2006 (rtm): /application/bin/killdaemon crate int_server restart
+Thu Oct 12 12:50:13 2006 (rtm): /application/bin/killdaemon crate int_server QUIT
+Thu Oct 12 12:50:16 2006 (rtm): /application/bin/killdaemon crate int_server QUIT
+Thu Oct 12 12:50:20 2006 (rtm): /application/bin/killdaemon crate int_server QUIT
+Thu Oct 12 12:51:18 2006 (maria): monitor 
+Thu Oct 12 12:57:18 2006 (root): setIFLevels -2 
+Thu Oct 12 12:59:15 2006 (root): newFile 
+Thu Oct 12 13:10:45 2006 (rtm): /application/bin/killdaemon crate int_server QUIT
+Thu Oct 12 13:11:24 2006 (rtm): crate7:/common/bin/killdaemon int_server QUIT
+Thu Oct 12 13:12:54 2006 (rtm): crate8:/common/bin/killdaemon int_server QUIT
+Thu Oct 12 13:12:55 2006 (rtm): crate10:/common/bin/killdaemon int_server QUIT
+Thu Oct 12 13:12:56 2006 (rtm): crate9:/common/bin/killdaemon int_server QUIT
+Thu Oct 12 13:12:56 2006 (rtm): crate11:/common/bin/killdaemon int_server QUIT
+Thu Oct 12 13:12:57 2006 (rtm): crate12:/common/bin/killdaemon int_server QUIT
+Thu Oct 12 13:15:03 2006 (root): setIFLevels -2 
+Thu Oct 12 13:18:11 2006 (rtm): crate7:/common/bin/killdaemon int_server QUIT
+Thu Oct 12 13:19:24 2006 (jcmt): monitor 
+Thu Oct 12 13:20:19 2006 (rtm): crate8:/common/bin/killdaemon int_server QUIT
+Thu Oct 12 13:20:20 2006 (rtm): crate10:/common/bin/killdaemon int_server QUIT
+Thu Oct 12 13:20:20 2006 (rtm): crate9:/common/bin/killdaemon int_server QUIT
+Thu Oct 12 13:20:21 2006 (rtm): crate11:/common/bin/killdaemon int_server QUIT
+Thu Oct 12 13:20:22 2006 (rtm): crate12:/common/bin/killdaemon int_server QUIT
+Thu Oct 12 13:20:35 2006 (rtm): crate10:/common/bin/killdaemon int_server QUIT
+Thu Oct 12 13:22:22 2006 (root): setIFLevels -2 
+Thu Oct 12 13:25:25 2006 (cso): monitor 
+Thu Oct 12 14:41:47 2006 (maria): monitor 
+Thu Oct 12 14:46:53 2006 (root): monitor 
+Thu Oct 12 14:47:41 2006 (maria): monitor 
+Thu Oct 12 14:50:44 2006 (maria): lookup -s uranus 
+Thu Oct 12 14:50:55 2006 (maria): lookup -s saturn 
+Thu Oct 12 14:59:48 2006 (root): newFile 
+Thu Oct 12 15:00:33 2006 (root): endProject.
+Thu Oct 12 15:01:44 2006 (root): project -p SMA -o Maria -C 1..12 -R l -l Cambridge Ctrl Rm -d Flux track -s 1 -a 1,2,3,4,5,6,8 
+Thu Oct 12 15:02:36 2006 (root): dopplerTrack -G -t h30alpha -s6 -u -h14 
+Thu Oct 12 15:02:57 2006 (daemon): setLO: sending "tune -f0 113.72 -h0 14" to acc1
+Thu Oct 12 15:02:57 2006 (daemon): setLO: sending "tune -f0 113.72 -h0 14" to acc2
+Thu Oct 12 15:02:57 2006 (daemon): setLO: sending "tune -f0 113.72 -h0 14" to acc3
+Thu Oct 12 15:02:57 2006 (daemon): setLO: sending "tune -f0 113.72 -h0 14" to acc4
+Thu Oct 12 15:02:57 2006 (daemon): setLO: sending "tune -f0 113.72 -h0 14" to acc5
+Thu Oct 12 15:02:57 2006 (daemon): setLO: sending "tune -f0 113.72 -h0 14" to acc6
+Thu Oct 12 15:02:57 2006 (daemon): setLO: sending "tune -f0 113.72 -h0 14" to acc8
+Thu Oct 12 15:07:29 2006 (root): restartCorrelator -d 
+Thu Oct 12 15:07:54 2006 (root): tune -a 3 -c rfpower 18 
+Thu Oct 12 15:08:01 2006 (root): tune -a 3 -c t joy 
+Thu Oct 12 15:08:37 2006 (root): tune -a 3 -czt 
+Thu Oct 12 15:08:39 2006 (root): tune -a 3 -c zt 
+Thu Oct 12 15:09:00 2006 (root): tune -a 3 -c interpolate -g 113.72 
+Thu Oct 12 15:09:06 2006 (root): tune -a 3 -c t joy 
+Thu Oct 12 15:10:24 2006 (root): tune -a 8 -c rfpower 18 
+Thu Oct 12 15:10:29 2006 (root): tune -a 8 -c t joy 
+Thu Oct 12 15:11:10 2006 (root): tune -a 8 -c rfpower -d 
+Thu Oct 12 15:11:17 2006 (root): tune -a 8 -c cb0 
+Thu Oct 12 15:11:26 2006 (root): tsys 
+Thu Oct 12 15:12:03 2006 (root): setIFLevels -2 
+Thu Oct 12 15:12:48 2006 (root): setIFLevels 
+Thu Oct 12 15:15:35 2006 (maria): project -r -i 160 -f ./nflux_new_test.pl 
+Thu Oct 12 15:15:36 2006 (maria): project -r -i 160 -f ./nflux_new_test.pl 
+Thu Oct 12 15:15:39 2006 (maria): radio 
+Thu Oct 12 15:15:40 2006 (maria): stopChopping 
+Thu Oct 12 15:15:41 2006 (maria): integrate -t 30 
+Thu Oct 12 15:15:43 2006 (maria): lookup -s 3c84 
+Thu Oct 12 15:15:44 2006 (maria): lookup -s uranus 
+Thu Oct 12 15:15:44 2006 (maria): lookup -s neptune 
+Thu Oct 12 15:15:45 2006 (maria): lookup -s callisto 
+Thu Oct 12 15:15:45 2006 (maria): lookup -s ganymede 
+Thu Oct 12 15:15:46 2006 (maria): lookup -s 3c84 
+Thu Oct 12 15:15:46 2006 (maria): observe -s 3c84 
+Thu Oct 12 15:15:54 2006 (maria): tsys 
+Thu Oct 12 15:16:07 2006 (maria): integrate -s 7 -t 30 -w 
+Thu Oct 12 15:19:53 2006 (maria): lookup -s 0405-131 
+Thu Oct 12 15:19:54 2006 (maria): observe -s 0405-131 
+Thu Oct 12 15:20:01 2006 (maria): tsys 
+Thu Oct 12 15:20:14 2006 (maria): integrate -s 7 -t 30 -w 
+Thu Oct 12 15:24:01 2006 (maria): lookup -s 0650-166 
+Thu Oct 12 15:24:02 2006 (maria): observe -s 0650-166 
+Thu Oct 12 15:24:09 2006 (maria): tsys 
+Thu Oct 12 15:24:22 2006 (maria): integrate -s 7 -t 30 -w 
+Thu Oct 12 15:29:11 2006 (maria): lookup -s 0824+392 
+Thu Oct 12 15:29:11 2006 (maria): observe -s 0824+392 
+Thu Oct 12 15:29:19 2006 (maria): tsys 
+Thu Oct 12 15:29:32 2006 (maria): integrate -s 7 -t 30 -w 
+Thu Oct 12 15:33:50 2006 (maria): lookup -s 3c84 
+Thu Oct 12 15:33:50 2006 (maria): observe -s 3c84 
+Thu Oct 12 15:33:57 2006 (maria): tsys 
+Thu Oct 12 15:34:11 2006 (maria): integrate -s 7 -t 30 -w 
+Thu Oct 12 15:37:58 2006 (maria): lookup -s 0957+553 
+Thu Oct 12 15:37:58 2006 (maria): observe -s 0957+553 
+Thu Oct 12 15:38:05 2006 (maria): tsys 
+Thu Oct 12 15:38:18 2006 (maria): integrate -s 7 -t 30 -w 
+Thu Oct 12 15:39:26 2006 (maria): tsys -a 4 
+Thu Oct 12 15:43:07 2006 (maria): lookup -s 0449+635 
+Thu Oct 12 15:43:08 2006 (maria): observe -s 0449+635 
+Thu Oct 12 15:43:15 2006 (maria): tsys 
+Thu Oct 12 15:43:29 2006 (maria): integrate -s 7 -t 30 -w 
+Thu Oct 12 15:47:15 2006 (maria): lookup -s 0750+125 
+Thu Oct 12 15:47:15 2006 (maria): observe -s 0750+125 
+Thu Oct 12 15:47:23 2006 (maria): tsys 
+Thu Oct 12 15:47:36 2006 (maria): integrate -s 7 -t 30 -w 
+Thu Oct 12 15:51:54 2006 (maria): lookup -s 3c84 
+Thu Oct 12 15:51:54 2006 (maria): observe -s 3c84 
+Thu Oct 12 15:52:02 2006 (maria): tsys 
+Thu Oct 12 15:52:15 2006 (maria): integrate -s 7 -t 30 -w 
+Thu Oct 12 15:56:33 2006 (maria): lookup -s 0818+423 
+Thu Oct 12 15:56:33 2006 (maria): observe -s 0818+423 
+Thu Oct 12 15:56:40 2006 (maria): tsys 
+Thu Oct 12 15:56:56 2006 (maria): integrate -s 7 -t 30 -w 
+Thu Oct 12 16:01:42 2006 (maria): lookup -s 0903+468 
+Thu Oct 12 16:01:43 2006 (maria): observe -s 0903+468 
+Thu Oct 12 16:01:50 2006 (maria): tsys 
+Thu Oct 12 16:02:04 2006 (maria): integrate -s 7 -t 30 -w 
+Thu Oct 12 16:05:50 2006 (maria): lookup -s 0831+044 
+Thu Oct 12 16:05:50 2006 (maria): observe -s 0831+044 
+Thu Oct 12 16:05:58 2006 (maria): tsys 
+Thu Oct 12 16:06:11 2006 (maria): integrate -s 7 -t 30 -w 
+Thu Oct 12 16:09:58 2006 (maria): lookup -s 3c84 
+Thu Oct 12 16:09:58 2006 (maria): observe -s 3c84 
+Thu Oct 12 16:10:06 2006 (maria): tsys 
+Thu Oct 12 16:10:20 2006 (maria): integrate -s 7 -t 30 -w 
+Thu Oct 12 16:14:37 2006 (maria): lookup -s 0354+467 
+Thu Oct 12 16:14:37 2006 (maria): observe -s 0354+467 
+Thu Oct 12 16:14:44 2006 (maria): tsys 
+Thu Oct 12 16:14:57 2006 (maria): integrate -s 7 -t 30 -w 
+Thu Oct 12 16:18:44 2006 (maria): lookup -s 0424+006 
+Thu Oct 12 16:18:45 2006 (maria): observe -s 0424+006 
+Thu Oct 12 16:18:52 2006 (maria): tsys 
+Thu Oct 12 16:19:06 2006 (maria): integrate -s 7 -t 30 -w 
+Thu Oct 12 16:22:52 2006 (maria): lookup -s 0502+061 
+Thu Oct 12 16:22:52 2006 (maria): observe -s 0502+061 
+Thu Oct 12 16:23:00 2006 (maria): tsys 
+Thu Oct 12 16:23:14 2006 (maria): integrate -s 7 -t 30 -w 
+Thu Oct 12 16:27:00 2006 (maria): lookup -s 3c84 
+Thu Oct 12 16:27:01 2006 (maria): observe -s 3c84 
+Thu Oct 12 16:27:08 2006 (maria): tsys 
+Thu Oct 12 16:27:20 2006 (maria): integrate -s 7 -t 30 -w 
+Thu Oct 12 16:31:08 2006 (maria): lookup -s 3c147 
+Thu Oct 12 16:31:08 2006 (maria): observe -s 3c147 
+Thu Oct 12 16:31:16 2006 (maria): tsys 
+Thu Oct 12 16:31:28 2006 (maria): integrate -s 7 -t 30 -w 
+Thu Oct 12 16:35:16 2006 (maria): lookup -s 0339-017 
+Thu Oct 12 16:35:16 2006 (maria): observe -s 0339-017 
+Thu Oct 12 16:35:23 2006 (maria): tsys 
+Thu Oct 12 16:35:38 2006 (maria): integrate -s 7 -t 30 -w 
+Thu Oct 12 16:39:24 2006 (maria): lookup -s 0646+448 
+Thu Oct 12 16:39:24 2006 (maria): observe -s 0646+448 
+Thu Oct 12 16:39:31 2006 (maria): tsys 
+Thu Oct 12 16:39:44 2006 (maria): integrate -s 7 -t 30 -w 
+Thu Oct 12 16:43:31 2006 (maria): lookup -s 3c84 
+Thu Oct 12 16:43:32 2006 (maria): observe -s 3c84 
+Thu Oct 12 16:43:39 2006 (maria): tsys 
+Thu Oct 12 16:43:54 2006 (maria): integrate -s 7 -t 30 -w 
+Thu Oct 12 16:47:39 2006 (maria): lookup -s 0733+503 
+Thu Oct 12 16:47:39 2006 (maria): observe -s 0733+503 
+Thu Oct 12 16:47:47 2006 (maria): tsys 
+Thu Oct 12 16:48:02 2006 (maria): integrate -s 7 -t 30 -w 
+Thu Oct 12 16:52:49 2006 (maria): lookup -s 0410+769 
+Thu Oct 12 16:52:49 2006 (maria): observe -s 0410+769 
+Thu Oct 12 16:52:56 2006 (maria): tsys 
+Thu Oct 12 16:53:11 2006 (maria): integrate -s 7 -t 30 -w 
+Thu Oct 12 16:56:57 2006 (maria): lookup -s 0533+483 
+Thu Oct 12 16:56:57 2006 (maria): observe -s 0533+483 
+Thu Oct 12 16:57:04 2006 (maria): tsys 
+Thu Oct 12 16:57:19 2006 (maria): integrate -s 7 -t 30 -w 
+Thu Oct 12 17:01:05 2006 (maria): lookup -s 3c84 
+Thu Oct 12 17:01:05 2006 (maria): observe -s 3c84 
+Thu Oct 12 17:01:12 2006 (maria): tsys 
+Thu Oct 12 17:01:27 2006 (maria): integrate -s 7 -t 30 -w 
+Thu Oct 12 17:05:12 2006 (maria): lookup -s 0501-019 
+Thu Oct 12 17:05:12 2006 (maria): observe -s 0501-019 
+Thu Oct 12 17:05:20 2006 (maria): tsys 
+Thu Oct 12 17:05:35 2006 (maria): integrate -s 7 -t 30 -w 
+Thu Oct 12 17:09:20 2006 (maria): lookup -s 0823+223 
+Thu Oct 12 17:09:20 2006 (maria): lookup -s 0502+416 
+Thu Oct 12 17:09:21 2006 (maria): observe -s 0502+416 
+Thu Oct 12 17:09:28 2006 (maria): tsys 
+Thu Oct 12 17:09:43 2006 (maria): integrate -s 7 -t 30 -w 
+Thu Oct 12 17:13:28 2006 (maria): lookup -s 3c84 
+Thu Oct 12 17:13:28 2006 (maria): lookup -s 3c84 
+Thu Oct 12 17:13:29 2006 (maria): observe -s 3c84 
+Thu Oct 12 17:13:36 2006 (maria): tsys 
+Thu Oct 12 17:13:51 2006 (maria): integrate -s 7 -t 30 -w 
+Thu Oct 12 17:15:44 2006 (maria): lookup -s titan 
+Thu Oct 12 17:17:36 2006 (maria): lookup -s uranus 
+Thu Oct 12 17:17:36 2006 (maria): lookup -s callisto 
+Thu Oct 12 17:17:37 2006 (maria): lookup -s ganymede 
+Thu Oct 12 17:20:35 2006 (maria): observe -s titan 
+Thu Oct 12 17:20:56 2006 (maria): tsys 
+Thu Oct 12 17:21:37 2006 (maria): integrate -s 40 -t 30 -w 
+Thu Oct 12 17:56:52 2006 (maria): project -r -i 191 -f ./endObs.pl 
+Thu Oct 12 17:56:54 2006 (maria): tune -q -c hotload in 
+Thu Oct 12 17:57:00 2006 (maria): integrate -n -i -p 
+Thu Oct 12 17:57:01 2006 (maria): azel -z0 -e80 
+Thu Oct 12 17:57:02 2006 (maria): antennaWait 
+Thu Oct 12 17:57:42 2006 (maria): .//dip 
+Thu Oct 12 17:57:42 2006 (maria): openM3 -a 1,2,3,4,5,6,8 
+Thu Oct 12 17:57:45 2006 (maria): el -d 80 -a 1,2,3,4,5,6,8 
+Thu Oct 12 17:57:48 2006 (maria): resume -a 1,2,3,4,5,6,8 
+Thu Oct 12 17:57:56 2006 (maria): tune -a 1 -c hotload in 
+Thu Oct 12 17:57:57 2006 (maria): tune -a 2 -c hotload in 
+Thu Oct 12 17:57:57 2006 (maria): tune -a 3 -c hotload in 
+Thu Oct 12 17:57:58 2006 (maria): tune -a 4 -c hotload in 
+Thu Oct 12 17:57:59 2006 (maria): tune -a 5 -c hotload in 
+Thu Oct 12 17:57:59 2006 (maria): tune -a 6 -c hotload in 
+Thu Oct 12 17:57:59 2006 (maria): tune -a 8 -c hotload in 
+Thu Oct 12 17:58:11 2006 (maria): tune -a 1 -c hotload out 
+Thu Oct 12 17:58:14 2006 (maria): tune -a 2 -c hotload out 
+Thu Oct 12 17:58:17 2006 (maria): tune -a 3 -c hotload out 
+Thu Oct 12 17:58:20 2006 (maria): tune -a 4 -c hotload out 
+Thu Oct 12 17:58:23 2006 (maria): tune -a 5 -c hotload out 
+Thu Oct 12 17:58:27 2006 (maria): tune -a 6 -c hotload out 
+Thu Oct 12 17:58:31 2006 (maria): tune -a 8 -c hotload out 
+Thu Oct 12 17:58:39 2006 (maria): resume -a 1 
+Thu Oct 12 17:58:40 2006 (maria): resume -a 2 
+Thu Oct 12 17:58:40 2006 (maria): resume -a 3 
+Thu Oct 12 17:58:40 2006 (maria): resume -a 4 
+Thu Oct 12 17:58:40 2006 (maria): resume -a 5 
+Thu Oct 12 17:58:40 2006 (maria): resume -a 6 
+Thu Oct 12 17:58:40 2006 (maria): resume -a 8 
+Thu Oct 12 17:58:40 2006 (maria): el -a 1,2,3,4,5,6,8 -d 80 
+Thu Oct 12 17:58:43 2006 (maria): antennaWait -a 1,2,3,4,5,6,8 -e 
+Thu Oct 12 17:59:15 2006 (maria): el -a 1,2,3,4,5,6,8 -d 60.81 
+Thu Oct 12 17:59:17 2006 (maria): antennaWait -a 1,2,3,4,5,6,8 -e 
+Thu Oct 12 18:00:01 2006 (maria): el -a 1,2,3,4,5,6,8 -d 41.81 
+Thu Oct 12 18:00:03 2006 (maria): antennaWait -a 1,2,3,4,5,6,8 -e 
+Thu Oct 12 18:00:05 2006 (pyamaguc): monitor 
+Thu Oct 12 18:00:45 2006 (maria): el -a 1,2,3,4,5,6,8 -d 30 
+Thu Oct 12 18:00:47 2006 (maria): antennaWait -a 1,2,3,4,5,6,8 -e 
+Thu Oct 12 18:01:26 2006 (maria): el -a 1,2,3,4,5,6,8 -d 23.58 
+Thu Oct 12 18:01:28 2006 (maria): antennaWait -a 1,2,3,4,5,6,8 -e 
+Thu Oct 12 18:02:04 2006 (maria): el -a 1,2,3,4,5,6,8 -d 19.47 
+Thu Oct 12 18:02:06 2006 (maria): antennaWait -a 1,2,3,4,5,6,8 -e 
+Thu Oct 12 18:02:41 2006 (maria): el -a 1,2,3,4,5,6,8 -d 16.6 
+Thu Oct 12 18:02:43 2006 (maria): antennaWait -a 1,2,3,4,5,6,8 -e 
+Thu Oct 12 18:03:18 2006 (maria): azel -z10 -e45 
+Thu Oct 12 18:03:25 2006 (maria): setIFLevels -1 -D 
+Thu Oct 12 18:03:27 2006 (maria): tune -q -c hotload out 
+Thu Oct 12 18:03:42 2006 (maria): integrate -t 2.58 -P 
+Thu Oct 12 18:06:28 2006 (maria): tune -q -c hotload in 
+Thu Oct 12 18:06:51 2006 (root): monitor 
+Thu Oct 12 18:09:25 2006 (maria): tune -q -c hotload out 
+Thu Oct 12 18:09:31 2006 (maria): tune -q -c activate -w 
+Thu Oct 12 18:09:33 2006 (maria): tune -q -c vbias0 10 
+Thu Oct 12 18:09:35 2006 (maria): tune -q -c vbias1 10 
+Thu Oct 12 18:09:38 2006 (maria): tune -q -c hotload in 
+Thu Oct 12 18:12:37 2006 (maria): tune -q -c activate -r 
+Thu Oct 12 18:12:39 2006 (maria): tune -q -c iv0 
+Thu Oct 12 18:13:15 2006 (maria): closeM3 
+Thu Oct 12 18:13:46 2006 (maria): endProject.

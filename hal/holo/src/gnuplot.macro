@@ -1,0 +1,6 @@
+
+T=1
+loop=1
+plot '13Nov03_ant8_2.vvmdat' u ($0):($9) with linespoints
+pause T
+if (loop==1) reread

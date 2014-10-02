@@ -1,0 +1,18 @@
+contDetector.o: contDetector.c ../include/contDetector.h \
+ ../include/contDetectordrvr.h
+mkcontDetectorInfo.o: mkcontDetectorInfo.c ../include/contDetector.h \
+ ../include/contDetectordrvr.h
+syncdet2.o: syncdet2.c /usr/PowerPC/common/include/rm.h \
+ /global/include/dsm.h /usr/PowerPC/common/include/tsshm.h \
+ /usr/PowerPC/common/include/smadaemon.h ../include/contDetector.h \
+ /usr/PowerPC/common/include/syncclock32.h \
+ /usr/PowerPC/common/include/vme_sg_simple.h \
+ /usr/PowerPC/common/include/stderrUtilities.h
+setcdmode.o: setcdmode.c /usr/PowerPC/common/include/smapopt.h \
+ /global/include/dsm.h /usr/PowerPC/common/include/commonLib.h
+testCD.o: testCD.c ../include/contDetector.h \
+ ../include/contDetectordrvr.h /usr/PowerPC/common/include/rm.h \
+ /usr/PowerPC/common/include/patchPanelBits.h
+testIP.o: testIP.c ../include/contDetector.h \
+ ../include/contDetectordrvr.h
+testUD.o: testUD.c /usr/PowerPC/common/include/patchPanelBits.h

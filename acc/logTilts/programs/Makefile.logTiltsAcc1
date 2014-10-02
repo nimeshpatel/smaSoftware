@@ -1,0 +1,13 @@
+RM = $(COMMON)/reflmem/api
+BIN = ../../bin
+
+all: $(BIN) $(BIN)/logTilts $(BIN)/logTiltsAcc1
+
+$(BIN):
+	mkdir $(BIN)
+
+$(BIN)/logTilts: logTilts.c Makefile
+	gcc -o $(BIN)/logTilts -I$(RM) logTilts.c $(RM)/rm.o
+
+$(BIN)/logTiltsAcc1: logTiltsAcc1.c Makefile
+	gcc -o $(BIN)/logTiltsAcc1 -I$(RM) logTiltsAcc1.c $(RM)/rm.o

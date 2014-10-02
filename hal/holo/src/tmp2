@@ -1,0 +1,7 @@
+/* #define AZ_BORE8 60.032 */
+/* #define EL_BORE8 15.983 */
+/* 10 Jun 04; antenna went to hangar, had some Rx work done anad back on Pad 9 */
+/* New bore sight position was determined, below: */
+#define AZ_BORE8 60.038
+#define EL_BORE8 16.006
+

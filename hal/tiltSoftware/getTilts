@@ -1,0 +1,90 @@
+#!/usr/local/bin/perl
+sub Usage()
+{
+print "Usage: getTilts -a 2 -p 1 -t 1 -n\n";
+print "Usage: getTilts --antenna 2 --pad 1 --tiltmeter 2  --heading --numbers_only\n";
+}
+
+use Getopt::Long;
+GetOptions('antenna=i'=>\$antenna,'pad=i'=>\$pad,'tiltmeter=i'=>\$tiltmeter,'heading'=>\$heading,'numbers_only'=>\$numbers_only);
+if (($pad<1)&&($pad>24))
+{
+&Usage;
+die "Antenna number should be 2,3 or 4.\npad should be between >=1 and <=24.\n";
+}
+
+use DBI;
+my $dbh = DBI->connect ("dbi:Sybase:server=SMASY","npatel","npatel","Sybase")
+or die "Could not connect. $DBI::errstr\n";
+$sth=$dbh->prepare("
+select * from stars..tilts
+where antenna=$antenna and pad=$pad and tiltmeterno=$tiltmeter
+");
+if($heading==1) {
+    print "filename tiltmeterNo antenna pad month day year time slewdirection sunaz sunel el ambientTemp cabinTemp windSpeed windDir tiltMagnitude tiltDirection dc dcerror sin sinerror cos coserror sin2 sin2error cos2 cos2error sin3 sin3error cos3 cos3error rms reducedChiSq observer comment sybaseTimeStamp\n";
+}
+$sth->execute;
+while($row=$sth->fetchrow_arrayref) { 
+    if ($numbers_only==0) {
+	print "@$row\n"; 
+    } else {
+	($filename,$tiltmeterNo,$antenna,$pad,$datestamp,$slewdirection,
+	 $sunaz,$sunel,$el,$ambientTemp,$cabinTemp,$windSpeed,$windDir,$tiltMagnitude,
+	 $tiltDirection,$dc,$dcerror,$sin,$sinerror,$cos,$coserror,$sin2,$sin2error,
+	 $cos2,$cos2error,$sin3,$sin3error,$cos3,$cos3error,$rms,$reducedChiSq,$observer,
+	 $comment,$sybaseTimeStamp) = @$row;
+        ($month,$day,$year,$time) = split(" ",$datestamp);
+	if ($slewdirection eq "cw") {
+	    $dir = 1;
+	} elsif ($slewdirection eq "ccw") {
+	    $dir = -1;
+	} else {
+	    $dir = 0;
+	}
+	if ($month eq "Jan") {
+	    $mon = 1;
+	} elsif ($month eq "Feb") {
+	    $mon = 2;
+	} elsif ($month eq "Mar") {
+	    $mon = 3;
+	} elsif ($month eq "Apr") {
+	    $mon = 4;
+	} elsif ($month eq "May") {
+	    $mon = 5;
+	} elsif ($month eq "Jun") {
+	    $mon = 6;
+	} elsif ($month eq "Jul") {
+	    $mon = 7;
+	} elsif ($month eq "Aug") {
+	    $mon = 8;
+	} elsif ($month eq "Sep") {
+	    $mon = 9;
+	} elsif ($month eq "Oct") {
+	    $mon = 10;
+	} elsif ($month eq "Nov") {
+	    $mon = 11;
+	} elsif ($month eq "Dec") {
+	    $mon = 12;
+	} else {
+	    $mon = 0;
+	}
+	chop($time);
+	chop($time);
+	($hour,$minute) = split(":",$time);
+	$hrs = $hour+$minute/60.;
+        $yearstamp = $year+$mon/100 + $day/10000 + $hrs/1000000;
+# get rid of NaN's
+	if ($cabinTemp != $cabinTemp) {
+	    $cabinTemp = 0;
+	}
+	printf "%.7f %d %d %2d %02d %02d %4d %.2f %+d %3d %3d %2d %+5.1f %+5.1f %4.1f %3.0f %6.1f %3.0f %7.3f %7.3f %7.4f %7.4f %7.4f %7.4f %7.4f %7.4f %7.4f %7.4f %7.4f %7.4f %7.4f %7.4f %6.3f %6.3f\n",
+$yearstamp, $tiltmeterNo, $antenna, $pad, $mon, $day, $year, $hrs, $dir, $sunaz, $sunel, 
+$el, $ambientTemp, $cabinTemp, $windSpeed, $windDir, $tiltMagnitude, $tiltDirection, $dc, $dcerror,
+$sin, $sinerror, $cos,  $coserror, $sin2, $sin2error, $cos2, $cos2error, $sin3,
+$sin3error, $cos3, $cos3error, $rms, $reducedChiSq;
+    }
+
+}
+$sth->finish;
+$dbh->disconnect;
+exit;

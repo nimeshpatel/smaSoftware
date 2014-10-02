@@ -1,0 +1,822 @@
+                    SUMMARY FILE FOR PROJECT: mar24c  
+
+COVER INFORMATION: 
+
+  Experiment: Phased-array testing
+  Exp. Code:  mar24c  
+  Start Day  83 is Thu  24 Mar 2011   MJD  55644          
+
+  Schedule Version:       3.00
+  Processed by SCHED version:   9.40  Release Jan. 13, 2011.
+
+  PI:       Jonathan Weintroub
+
+  Address:  Harvard-Smithsonian CfA
+            60 Garden St
+            Cambridge, MA 02138
+            USA
+
+  Phone:    (617) 495-7319
+  EMAIL:    jweintro@cfa.harvard.edu
+  Fax:
+  Phone during observation:
+
+  Observing mode: 230GHz (2 Gb/s)
+
+  Notes:
+   
+   
+   
+
+
+No cover letter provided.
+
+CORRELATION REQUESTS (Defaults in parentheses):
+
+  Correlator (Required if recording):          HAYSTACK
+  Correlator average time (2 sec):               2.000 sec.
+    Alternate average time (for spacecraft).     0.000 sec.
+  Output spectral channels per baseband (16):          16
+     Correlator FFT size (128):                       128
+  Number of antennas to be correlated:                  3
+  Polarization (ON):                           OFF
+  Correlator weighting function (UNIFORM):     UNIFORM
+  Distribution tape (DAT):                     DAT
+
+  Source positions from:
+  FROM SCHEDULE
+  Shipping address for correlator output:
+      down the hall
+
+
+
+
+  Correlator Notes: Oh, there will be special requirements
+
+
+
+
+
+
+
+DERIVED INFORMATION FOR CORRELATION: 
+
+  Elapsed time for project:          6.88 hours.
+  Total time in scheduled scans:     2.03 hours.
+  Total time in recording scans:     2.03 hours.
+  Total number of baseline hours:   12.20    (Recording scans only)
+  Projected maximum data output rate from the correlator:       6.1 kbytes/sec of observe time.
+  Projected correlator output data set size:          45.0 Mbytes
+  NOTE:  Above numbers assume the same correlator parameters are used for all data.
+
+
+
+STATIONS USED IN SCHEDULE:
+
+   Station  Code   Latitude Longitude Elevation       X            Y            Z       Axis
+                                                                                       Offset
+
+   SMAP      SP   19.82423 155.47755    4115.   -5464555.493 -2492927.989  2150797.176  0.000
+   SMAC      SC   19.82423 155.47755    4115.   -5464555.493 -2492927.989  2150797.176  0.000
+   SMTO      AZ   32.70161 109.89124    3159.   -1828796.200 -5054406.800  3427865.200  0.000
+
+
+   Plate tectonic motion adjustments for MJD  55644
+   Station  Code      Station motions (m/yr)             Adjusted positions 
+                     X       Y       Z     MJD0        X            Y            Z 
+   SMAP      SP   0.0000  0.0000  0.0000  50449  -5464555.493 -2492927.989  2150797.176
+   SMAC      SC   0.0000  0.0000  0.0000  50449  -5464555.493 -2492927.989  2150797.176
+   SMTO      AZ   0.0000  0.0000  0.0000  50449  -1828796.200 -5054406.800  3427865.200
+
+
+
+BASELINE LENGTHS (km)
+
+          SP    SC    AZ
+
+   SP      0     0  4627
+   SC      0     0  4627
+   AZ   4627  4627     0
+
+
+RECORDING SYSTEM AND CALIBRATION INFORMATION:
+
+  DISKS - Stations potentially recording on disks.
+   Station    Drive type   DAR     NBBC    Tsys
+   SMAP         MARK5C     RDBE     16     CONT
+   SMAC         MARK5C     RDBE     16     CONT
+   SMTO         MARK5C     RDBE     16     CONT
+
+
+
+
+EXPERIMENT SUMMARY:
+  Number of input scans:         65
+  Number of scans scheduled:     65
+  Number of stations:             3
+  Number of sources input:        8
+  Number of setup files used:     3
+
+
+ Station summaries (disk stations): 
+  Station  Control   Scans   Scan   Record  Record   Gbytes     Formatter       Sync 
+                            Hours   Hours   Scans              Reconfigures    Hours  
+  SMAP       VEX       65    2.03    2.03      65     1889.            0        0.02
+  SMAC       VEX       65    2.03    2.03      65     1889.            0        0.02
+  SMTO       VEX       65    2.03    2.03      65     1889.            0        0.02
+
+Notes on the station summaries: 
+
+    "Record Scans" are periods of recording with no gap.  The Mark5A disk systems 
+    have a limit of 1024 such scans.  There are often multiple projects on a disk pack.
+    Try to keep above about 6 GB per record scan by using MINPAUSE and PRESTART 
+    to prevent short gaps.  However, also try to prevent record scans of more than
+    an hour to minimize risk to data from playback problems.
+
+    "Sync Hours" is on-source, in-scan time lost during correlation to resyncing
+    recordings.  Resyncs follow tape stoppages and formatter reconfigures.
+
+    For VLBA DAR stations, total reconfigures and reconfigures during recording are shown.
+    Reconfigures during recording can cause slow correlator sync.
+    Any reconfigure can slow sync at JIVE.
+
+
+
+
+
+The following setup groups are the same as group   1 below.
+   3:SMTO
+
+
+ Setup file: 1mmRDBE.set
+   Matching groups in 1mm-freq.dat:
+     1mm_sma_mk5c    RDBE not real
+    ****** Only  480.00 of  512.00 MHz total bandwidth is within the IFs
+           in the setup file before any FREQ or DOPPLER shifts.
+
+   Setup group:    1         Station: SMAP              Total bit rate: 2048
+   Format: MARK5B            Bits per sample: 2         Sample rate: 64.000
+   Number of channels: 16    DBE type: RDBE_PFB         Speedup factor:   1.00
+
+   Disk used to record data.
+
+   1st LO= 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00
+           228321.00 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00
+   Net SB=         L         L         L         L         L         L         L         L
+                   L         L         L         L         L         L         L         L
+   Pol.  =      LCP       LCP       LCP       LCP       LCP       LCP       LCP       LCP 
+                LCP       LCP       LCP       LCP       LCP       LCP       LCP       RCP 
+   BBC   =         1         2         3         4         5         6         7         8
+                   9        10        11        12        13        14        15        16
+   BBC SB=         L         L         L         L         L         L         L         L
+                   L         L         L         L         L         L         L         L
+   IF    =        A         A         A         A         A         A         A         A 
+                  A         A         A         A         A         A         A         A 
+
+  The following frequency sets based on this setup were used.
+
+   Frequency Set:   1  Setup file default.
+   LO sum=  229329.00 229297.00 229265.00 229233.00 229201.00 229169.00 229137.00 229105.00
+            229073.00 229041.00 229009.00 228977.00 228945.00 228913.00 228881.00 228881.00
+   BBC fr=    1008.00    976.00    944.00    912.00    880.00    848.00    816.00    784.00
+               752.00    720.00    688.00    656.00    624.00    592.00    560.00    560.00
+   Bandwd=     32.000    32.000    32.000    32.000    32.000    32.000    32.000    32.000
+               32.000    32.000    32.000    32.000    32.000    32.000    32.000    32.000
+
+   Track assignments are: 
+    track1=   2,  4,  6,  8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32
+    barrel=roll_off 
+
+
+ Setup file: 1mmRDBE.set
+ --- WARNING ---  This group does not match an entry in the frequency catalog.
+                  This might be ok because the catalog is not complete.
+                  But be very careful to be sure that the setup is correct.
+
+   Setup group:    2         Station: SMAC              Total bit rate: 2048
+   Format: MARK5B            Bits per sample: 2         Sample rate: 64.000
+   Number of channels: 16    DBE type: RDBE_PFB         Speedup factor:   1.00
+
+   Disk used to record data.
+
+   1st LO= 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00
+           228321.00 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00
+   Net SB=         L         L         L         L         L         L         L         L
+                   L         L         L         L         L         L         L         L
+   Pol.  =      LCP       LCP       LCP       LCP       LCP       LCP       LCP       LCP 
+                LCP       LCP       LCP       LCP       LCP       LCP       LCP       RCP 
+   BBC   =         1         2         3         4         5         6         7         8
+                   9        10        11        12        13        14        15        16
+   BBC SB=         L         L         L         L         L         L         L         L
+                   L         L         L         L         L         L         L         L
+   IF    =        A         A         A         A         A         A         A         A 
+                  A         A         A         A         A         A         A         A 
+
+  The following frequency sets based on this setup were used.
+
+   Frequency Set:   2  Setup file default.
+   LO sum=  229329.00 229297.00 229265.00 229233.00 229201.00 229169.00 229137.00 229105.00
+            229073.00 229041.00 229009.00 228977.00 228945.00 228913.00 228881.00 228881.00
+   BBC fr=    1008.00    976.00    944.00    912.00    880.00    848.00    816.00    784.00
+               752.00    720.00    688.00    656.00    624.00    592.00    560.00    560.00
+   Bandwd=     32.000    32.000    32.000    32.000    32.000    32.000    32.000    32.000
+               32.000    32.000    32.000    32.000    32.000    32.000    32.000    32.000
+
+   Track assignments are: 
+    track1=   2,  4,  6,  8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32
+    barrel=roll_off 
+
+
+ SUMMARY for experiment mar24c  Phased-array testing                                                    
+     Flags: D=>Down, H=>Below Horizon, R=>Rises, S=>Sets, W=>Slew too long, t=>Tape Chg.
+     Top item is:    Start elevation.
+     Bottom item is: End elevation.
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  83 is Thu  31 Mar 2011   MJD  55644          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    SP    SC    AZ
+
+   1   83 00:00:00 3C279         -    36    36    51
+PS01   83 00:02:00 1mmRDBE.set   -    37    37    51
+
+   2   83 00:04:00 3C279         -    37    37    51
+PS02   83 00:06:00 -             -    37    37    51
+
+   3   83 00:08:00 3C279         -    38    38    51
+PS03   83 00:10:00 -             -    38    38    51
+
+   4   83 00:12:00 3C279         -    39    39    51
+PS04   83 00:14:00 -             -    39    39    51
+
+   5   83 00:16:00 3C279         -    40    40    51
+PS05   83 00:18:00 -             -    40    40    51
+
+   6   83 00:20:00 3C279         -    40    40    51
+PS06   83 00:22:00 -             -    41    41    51
+
+   7   83 00:24:00 3C279         -    41    41    51
+PS07   83 00:26:00 -             -    42    42    51
+
+   8   83 00:28:00 3C279         -    42    42    51
+PS08   83 00:30:00 -             -    42    42    51
+
+   9   83 00:33:00 3C279         -    43    43    51
+PS09   83 00:35:00 -             -    43    43    51
+
+  10   83 00:37:00 3C279         -    44    44    51
+PS10   83 00:39:00 -             -    44    44    51
+
+  11   83 00:41:00 3C279         -    45    45    51
+PS11   83 00:43:00 -             -    45    45    51
+
+  12   83 00:45:15 3C279         -    46    46    51
+PS12   83 00:45:30 -             -    46    46    50
+
+  13   83 00:45:45 3C279         -    46    46    50
+PS13   83 00:46:00 -             -    47    47    50
+
+  14   83 00:46:15 3C279         -    47    47    50
+PS14   83 00:46:30 -             -    47    47    50
+
+  15   83 00:46:45 3C279         -    48    48    50
+PS15   83 00:47:00 -             -    48    48    50
+
+  16   83 00:47:15 3C279         -    52    52    48
+SD01   83 00:47:30 -             -    52    52    48
+
+
+
+ SUMMARY for experiment mar24c  Phased-array testing                                                    
+     Flags: D=>Down, H=>Below Horizon, R=>Rises, S=>Sets, W=>Slew too long, t=>Tape Chg.
+     Top item is:    Start elevation.
+     Bottom item is: End elevation.
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  83 is Thu  24 Mar 2011   MJD  55644          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    SP    SC    AZ
+
+  17   83 00:47:45 3C279         -    53    53    48
+SD02   83 00:48:00 1mmRDBE.set   -    53    53    48
+
+  18   83 00:48:15 3C279         -    54    54    47
+SD03   83 00:48:30 -             -    54    54    47
+
+  39   83 00:48:45 3C273         -    71    71    31
+FSW1   83 00:49:00 -             -    70    70    31
+
+  40   83 00:49:15 M87           -    79    79    37
+FSW2   83 00:49:30 -             -    79    79    36
+
+  41   83 00:49:45 3C273         -    70    70    29
+FSW3   83 00:50:00 -             -    69    69    29
+
+  42   83 00:50:15 M87           -    77    77    35
+FSW4   83 00:50:30 -             -    77    77    34
+
+  43   83 00:50:45 3C273         -    68    68    27
+FSW5   83 00:51:00 -             -    68    68    27
+
+  44   83 00:51:15 M87           -    75    75    33
+FSW6   83 00:51:30 -             -    75    75    32
+
+  45   83 00:51:45 3C273         -    67    67    26
+FSW7   83 00:52:00 -             -    67    67    25
+
+  46   83 00:52:15 M87           -    74    74    31
+FSW8   83 00:52:30 -             -    73    73    31
+
+  47   83 00:52:45 3C279         -    62    62    25
+FSW9   83 00:53:00 -             -    62    62    24
+
+  48   83 00:53:15 M87           -    71    71    29
+FSWA   83 00:53:30 -             -    71    71    29
+
+
+
+ SUMMARY for experiment mar24c  Phased-array testing                                                    
+     Flags: D=>Down, H=>Below Horizon, R=>Rises, S=>Sets, W=>Slew too long, t=>Tape Chg.
+     Top item is:    Start elevation.
+     Bottom item is: End elevation.
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  83 is Thu  24 Mar 2011   MJD  55644          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    SP    SC    AZ
+
+  49   83 12:03:00 3C279         -    61    61    23
+FSWB   83 12:05:00 1mmRDBE.set   -    61    61    22
+
+  50   83 12:08:00 M87           -    69    69    27
+FSWC   83 12:10:00 -             -    69    69    26
+
+  51   83 12:30:00 1633+382      -    54    54    80
+CAL1   83 12:32:00 -             -    55    55    80
+
+  52   83 12:42:00 3C345         -    55    55    78
+CAL2   83 12:44:00 -             -    55    55    78
+
+  53   83 13:05:00 1749+096      -    45    45    67
+CAL3   83 13:07:00 -             -    45    45    67
+
+  54   83 13:17:00 NRAO530       -    40    40    44
+CAL4   83 13:19:00 -             -    41    41    44
+
+  55   83 13:29:00 1749+096      -    51    51    66
+CAL5   83 13:31:00 -             -    51    51    66
+
+  56   83 13:41:00 NRAO530       -    44    44    42
+CAL6   83 13:43:00 -             -    45    45    42
+
+  57   83 14:03:00 NRAO530       -    48    48    41
+SD01   83 14:04:30 -             -    48    48    41
+
+  58   83 14:07:30 NRAO530       -    49    49    40
+SD02   83 14:09:00 -             -    49    49    40
+
+  59   83 14:12:00 NRAO530       -    49    49    40
+SD03   83 14:13:30 -             -    50    50    40
+
+  60   83 14:16:30 NRAO530       -    50    50    39
+SD04   83 14:18:00 -             -    50    50    39
+
+  61   83 14:21:00 NRAO530       -    51    51    39
+SD05   83 14:22:30 -             -    51    51    39
+
+  62   83 14:25:30 NRAO530       -    51    51    38
+SD06   83 14:27:00 -             -    51    51    38
+
+  63   83 14:30:00 NRAO530       -    52    52    38
+SD07   83 14:31:30 -             -    52    52    38
+
+  64   83 14:34:30 NRAO530       -    52    52    37
+SD08   83 14:36:00 -             -    53    53    37
+
+
+
+ SUMMARY for experiment mar24c  Phased-array testing                                                    
+     Flags: D=>Down, H=>Below Horizon, R=>Rises, S=>Sets, W=>Slew too long, t=>Tape Chg.
+     Top item is:    Start elevation.
+     Bottom item is: End elevation.
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  83 is Thu  24 Mar 2011   MJD  55644          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    SP    SC    AZ
+
+  65   83 14:51:00 1921-293      -    26    26    28
+CAL7   83 14:53:00 1mmRDBE.set   -    26    26    28
+
+
+
+ SUMMARY for experiment mar24c  Phased-array testing                                                    
+     Flags: D=>Down, H=>Below Horizon, R=>Rises, S=>Sets, W=>Slew too long, t=>Tape Chg.
+     Top item is:    Start azimuth.
+     Bottom item is: End azimuth.
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  83 is Thu  24 Mar 2011   MJD  55644          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    SP    SC    AZ
+
+   1   83 08:00:00 3C279         -   113   113   176
+PS01   83 08:02:00 1mmRDBE.set   -   114   114   177
+
+   2   83 08:04:00 3C279         -   114   114   177
+PS02   83 08:06:00 -             -   114   114   178
+
+   3   83 08:08:00 3C279         -   115   115   179
+PS03   83 08:10:00 -             -   115   115   180
+
+   4   83 08:12:00 3C279         -   115   115   181
+PS04   83 08:14:00 -             -   116   116   181
+
+   5   83 08:16:00 3C279         -   116   116   182
+PS05   83 08:18:00 -             -   116   116   183
+
+   6   83 08:20:00 3C279         -   117   117   184
+PS06   83 08:22:00 -             -   117   117   185
+
+   7   83 08:24:00 3C279         -   117   117   185
+PS07   83 08:26:00 -             -   118   118   186
+
+   8   83 08:28:00 3C279         -   118   118   187
+PS08   83 08:30:00 -             -   118   118   188
+
+   9   83 08:33:00 3C279         -   119   119   189
+PS09   83 08:35:00 -             -   119   119   190
+
+  10   83 08:37:00 3C279         -   120   120   191
+PS10   83 08:39:00 -             -   120   120   191
+
+  11   83 08:41:00 3C279         -   121   121   192
+PS11   83 08:43:00 -             -   121   121   193
+
+  12   83 08:45:00 3C279         -   121   121   194
+PS12   83 08:47:00 -             -   122   122   194
+
+  13   83 08:49:00 3C279         -   122   122   195
+PS13   83 08:51:00 -             -   123   123   196
+
+  14   83 08:53:00 3C279         -   123   123   197
+PS14   83 08:55:00 -             -   124   124   197
+
+  15   83 08:57:00 3C279         -   124   124   198
+PS15   83 08:59:00 -             -   125   125   199
+
+  16   83 09:19:00 3C279         -   130   130   206
+SD01   83 09:20:30 -             -   130   130   207
+
+
+
+ SUMMARY for experiment mar24c  Phased-array testing                                                    
+     Flags: D=>Down, H=>Below Horizon, R=>Rises, S=>Sets, W=>Slew too long, t=>Tape Chg.
+     Top item is:    Start azimuth.
+     Bottom item is: End azimuth.
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  83 is Thu  24 Mar 2011   MJD  55644          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    SP    SC    AZ
+
+  17   83 09:23:30 3C279         -   131   131   208
+SD02   83 09:25:00 1mmRDBE.set   -   131   131   208
+
+  18   83 09:28:00 3C279         -   132   132   209
+SD03   83 09:29:30 -             -   133   133   210
+
+  19   83 09:32:30 3C279         -   134   134   211
+SD04   83 09:34:00 -             -   134   134   211
+
+  20   83 09:37:00 3C279         -   135   135   212
+SD05   83 09:38:30 -             -   136   136   213
+
+  21   83 09:41:30 3C279         -   137   137   214
+SD06   83 09:43:00 -             -   137   137   214
+
+  22   83 09:46:00 3C279         -   138   138   215
+SD07   83 09:47:30 -             -   139   139   215
+
+  23   83 09:50:30 3C279         -   140   140   216
+SD08   83 09:52:00 -             -   140   140   217
+
+  24   83 10:12:00 3C279         -   148   148   223
+PS01   83 10:14:00 -             -   149   149   223
+
+  25   83 10:16:00 3C279         -   150   150   224
+PS02   83 10:18:00 -             -   151   151   224
+
+  26   83 10:20:00 3C279         -   152   152   225
+PS03   83 10:22:00 -             -   153   153   225
+
+  27   83 10:24:00 3C279         -   154   154   226
+PS04   83 10:26:00 -             -   155   155   226
+
+  28   83 10:28:00 3C279         -   156   156   227
+PS05   83 10:30:00 -             -   157   157   227
+
+  29   83 10:32:00 3C279         -   158   158   228
+PS06   83 10:34:00 -             -   159   159   228
+
+  30   83 10:36:00 3C279         -   160   160   229
+PS07   83 10:38:00 -             -   161   161   229
+
+  31   83 10:40:00 3C279         -   162   162   230
+PS08   83 10:42:00 -             -   163   163   230
+
+  32   83 10:45:00 3C279         -   165   165   231
+PS09   83 10:47:00 -             -   166   166   231
+
+
+
+ SUMMARY for experiment mar24c  Phased-array testing                                                    
+     Flags: D=>Down, H=>Below Horizon, R=>Rises, S=>Sets, W=>Slew too long, t=>Tape Chg.
+     Top item is:    Start azimuth.
+     Bottom item is: End azimuth.
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  83 is Thu  24 Mar 2011   MJD  55644          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    SP    SC    AZ
+
+  33   83 10:49:00 3C279         -   167   167   232
+PS10   83 10:51:00 1mmRDBE.set   -   168   168   232
+
+  34   83 10:53:00 3C279         -   169   169   233
+PS11   83 10:55:00 -             -   170   170   233
+
+  35   83 10:57:00 3C279         -   171   171   234
+PS12   83 10:59:00 -             -   172   172   234
+
+  36   83 11:01:00 3C279         -   173   173   235
+PS13   83 11:03:00 -             -   175   175   235
+
+  37   83 11:05:00 3C279         -   176   176   235
+PS14   83 11:07:00 -             -   177   177   236
+
+  38   83 11:09:00 3C279         -   178   178   236
+PS15   83 11:11:00 -             -   179   179   237
+
+  39   83 11:16:00 3C273         -   204   204   250
+FSW1   83 11:18:00 -             -   205   205   250
+
+  40   83 11:21:00 M87           -   229   229   261
+FSW2   83 11:23:00 -             -   230   230   261
+
+  41   83 11:26:00 3C273         -   210   210   252
+FSW3   83 11:28:00 -             -   212   212   252
+
+  42   83 11:31:00 M87           -   236   236   262
+FSW4   83 11:33:00 -             -   238   238   263
+
+  43   83 11:36:00 3C273         -   216   216   253
+FSW5   83 11:38:00 -             -   217   217   254
+
+  44   83 11:40:00 M87           -   242   242   264
+FSW6   83 11:42:00 -             -   243   243   264
+
+  45   83 11:44:00 3C273         -   221   221   255
+FSW7   83 11:46:00 -             -   222   222   255
+
+  46   83 11:48:00 M87           -   245   245   265
+FSW8   83 11:50:00 -             -   246   246   265
+
+  47   83 11:53:00 3C279         -   202   202   245
+FSW9   83 11:55:00 -             -   203   203   245
+
+  48   83 11:58:00 M87           -   249   249   266
+FSWA   83 12:00:00 -             -   250   250   267
+
+
+
+ SUMMARY for experiment mar24c  Phased-array testing                                                    
+     Flags: D=>Down, H=>Below Horizon, R=>Rises, S=>Sets, W=>Slew too long, t=>Tape Chg.
+     Top item is:    Start azimuth.
+     Bottom item is: End azimuth.
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  83 is Thu  24 Mar 2011   MJD  55644          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    SP    SC    AZ
+
+  49   83 12:03:00 3C279         -   207   207   246
+FSWB   83 12:05:00 1mmRDBE.set   -   208   208   247
+
+  50   83 12:08:00 M87           -   252   252   268
+FSWC   83 12:10:00 -             -   253   253   268
+
+  51   83 12:30:00 1633+382      -   411   411   306
+CAL1   83 12:32:00 -             -   411   411   305
+
+  52   83 12:42:00 3C345         -   408   408   311
+CAL2   83 12:44:00 -             -   408   408   310
+
+  53   83 13:05:00 1749+096      -    96    96   180
+CAL3   83 13:07:00 -             -    96    96   181
+
+  54   83 13:17:00 NRAO530       -   128   128   190
+CAL4   83 13:19:00 -             -   129   129   191
+
+  55   83 13:29:00 1749+096      -    99    99   195
+CAL5   83 13:31:00 -             -    99    99   196
+
+  56   83 13:41:00 NRAO530       -   134   134   198
+CAL6   83 13:43:00 -             -   134   134   199
+
+  57   83 14:03:00 NRAO530       -   140   140   205
+SD01   83 14:04:30 -             -   140   140   205
+
+  58   83 14:07:30 NRAO530       -   141   141   206
+SD02   83 14:09:00 -             -   141   141   207
+
+  59   83 14:12:00 NRAO530       -   142   142   208
+SD03   83 14:13:30 -             -   143   143   208
+
+  60   83 14:16:30 NRAO530       -   144   144   209
+SD04   83 14:18:00 -             -   144   144   209
+
+  61   83 14:21:00 NRAO530       -   145   145   210
+SD05   83 14:22:30 -             -   145   145   211
+
+  62   83 14:25:30 NRAO530       -   146   146   211
+SD06   83 14:27:00 -             -   147   147   212
+
+  63   83 14:30:00 NRAO530       -   148   148   213
+SD07   83 14:31:30 -             -   148   148   213
+
+  64   83 14:34:30 NRAO530       -   149   149   214
+SD08   83 14:36:00 -             -   150   150   214
+
+
+
+ SUMMARY for experiment mar24c  Phased-array testing                                                    
+     Flags: D=>Down, H=>Below Horizon, R=>Rises, S=>Sets, W=>Slew too long, t=>Tape Chg.
+     Top item is:    Start azimuth.
+     Bottom item is: End azimuth.
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  83 is Thu  24 Mar 2011   MJD  55644          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    SP    SC    AZ
+
+  65   83 14:51:00 1921-293      -   139   139   183
+CAL7   83 14:53:00 1mmRDBE.set   -   139   139   184
+
+
+
+ TIME RANGE OF RECORDINGS and TOTAL BYTES:
+
+                Obs. start time.     Obs. end time.      Total 
+ Station          Day    Time         Day    Time        GBytes
+                     (UT)                 (UT)
+  SMAP            83  08:00:00        83  14:53:00       1888.9
+  SMAC            83  08:00:00        83  14:53:00       1888.9
+  SMTO            83  08:00:00        83  14:53:00       1888.9
+
+ SOURCES USED IN RECORDING SCANS --                         Phased-array testing
+     Catalog positions marked with *. 
+     Precession of date coordinates is based on stop time of first scan.
+     Names used in schedule marked with *. 
+     Short names used in VLA and SNAP files marked with +. 
+     Observation date used in B1950/J2000 coordinate conversion (PRECDATE):  1979.900
+     No adjustments are made for rates (DRA, DDEC).
+     Scan hours are for recording scans only. 
+     Baseline hours are only counted for scans above horizon at both ends.
+
+   Source                         Source position (RA/Dec)                        Error
+                        (B1950)             (J2000)             (Date)            (mas)
+
+ * M87               12 28 17.569198   * 12 30 49.423300     12 31 25.816349       0.00
+                     12 40 01.74818    * 12 23 28.04300      12 19 29.99538        0.00
+                     From catalog imbedded in main SCHED input file.
+                        0.200 scan and      0.600 baseline hours in setup: 1mmRDBE.set
+
+   J1229+0203        12 26 33.245835   * 12 29 06.699731     12 29 43.450376       1.04
+ * 3C273             02 19 43.30577    * 02 03 08.59827      01 59 10.45558        1.33
+   3C273B            /home/vfish/sched_9.4/catalogs/sources.vlba
+   1226+023          GSFC 2010a astro solution     32199 Observations
+   J1229+02             0.133 scan and      0.400 baseline hours in setup: 1mmRDBE.set
+
+   J1256-0547        12 53 35.831298   * 12 56 11.166566     12 56 48.353572       0.78
+ * 3C279            -05 31 07.99587    *-05 47 21.52473     -05 51 14.11705        0.94
+   1253-055          /home/vfish/sched_9.4/catalogs/sources.vlba
+   J1256-05          GSFC 2010a astro solution      7575 Observations
+                        1.267 scan and      3.800 baseline hours in setup: 1mmRDBE.set
+
+   J1635+3808        16 33 30.625097   * 16 35 15.492972     16 35 40.394261       0.01
+   1633+38           38 14 10.08281    * 38 08 04.50058      38 06 23.60067        0.01
+ * 1633+382          /home/vfish/sched_9.4/catalogs/sources.vlba
+   J1635+38          GSFC 2010a astro solution     16036 Observations
+                        0.033 scan and      0.100 baseline hours in setup: 1mmRDBE.set
+
+   J1642+3948        16 41 17.606228   * 16 42 58.809965     16 43 22.828486       0.81
+ * 3C345             39 54 10.81494    * 39 48 36.99400      39 47 03.01533        0.54
+   1641+399          /home/vfish/sched_9.4/catalogs/sources.vlba
+   J1642+39          GSFC 2010a astro solution     52595 Observations
+                        0.033 scan and      0.100 baseline hours in setup: 1mmRDBE.set
+
+   J1733-1304        17 30 13.535186   * 17 33 02.705784     17 33 42.044126       0.01
+   1730-130         -13 02 45.83971    *-13 04 49.54819     -13 05 20.40532        0.02
+   J1733-13          /home/vfish/sched_9.4/catalogs/sources.vlba
+ * NRAO530           GSFC 2010a astro solution     16041 Observations
+                        0.267 scan and      0.800 baseline hours in setup: 1mmRDBE.set
+
+   J1751+0939        17 49 10.387930   * 17 51 32.818573     17 52 05.860384       0.00
+ * 1749+096          09 39 42.82591    * 09 39 00.72846      09 38 41.00555        0.01
+   J1751+09          /home/vfish/sched_9.4/catalogs/sources.vlba
+                     GSFC 2010a astro solution    121343 Observations
+                        0.067 scan and      0.200 baseline hours in setup: 1mmRDBE.set
+
+   J1924-2914        19 21 42.234127   * 19 24 51.055954     19 25 34.216564       0.01
+ * 1921-293         -29 20 26.35396    *-29 14 30.12106     -29 13 04.55068        0.01
+   J1924-29          /home/vfish/sched_9.4/catalogs/sources.vlba
+                     GSFC 2010a astro solution     40568 Observations
+                        0.033 scan and      0.100 baseline hours in setup: 1mmRDBE.set
+
+
+
+  The solar corona can cause unstable phases for sources too close to the Sun.
+  SCHED provides warnings at individual scans for distances less than 10 degrees.
+  The distance from the Sun to each source in this schedule is:
+    Source         Sun distance (deg) 
+   M87                165.5
+   3C273              174.6
+   3C279              168.1
+   1633+382           108.0
+   3C345              106.1
+   NRAO530             99.8
+   1749+096            94.9
+   1921-293            74.9
+
+  Barry Clark estimates from predictions by Ketan Desai of IPM scattering sizes 
+  that the Sun will cause amplitude reductions on the  longest VLBA baselines 
+  at a solar distance of 60deg F^(-0.6) where F is in GHz. 
+  For common VLBI bands, this is: 
+       327 MHz        117. deg 
+       610 MHz         81. deg 
+       1.6 GHz         45. deg 
+       2.3 GHz         36. deg 
+       5.0 GHz         23. deg 
+       8.4 GHz         17. deg 
+      15.0 GHz         12. deg 
+      22.0 GHz          9. deg 
+      43.0 GHz          6. deg 
+
+
+ Source separations in degrees for pairs closer than  30.00 degrees.
+
+     M87           3C273          10.3474
+     M87           3C279          19.2419
+     3C273         3C279          10.3529
+     1633+382      3C345           2.2493
+     NRAO530       1749+096       23.1879
+
+
+
+
+
+ J2000 coordinates formatted for possible transfer to the correlator data base:
+name = 'M87'  ra = 12h30m49.423300s  dec = 12d23'28.04300"
+name = '3C273'  ra = 12h29m06.699731s  dec = 02d03'08.59827"
+name = '3C279'  ra = 12h56m11.166566s  dec = -05d47'21.52473"
+name = '1633+382'  ra = 16h35m15.492972s  dec = 38d08'04.50058"
+name = '3C345'  ra = 16h42m58.809965s  dec = 39d48'36.99400"
+name = 'NRAO530'  ra = 17h33m02.705784s  dec = -13d04'49.54819"
+name = '1749+096'  ra = 17h51m32.818573s  dec = 09d39'00.72846"
+name = '1921-293'  ra = 19h24m51.055954s  dec = -29d14'30.12106"
+
+
+ Correlation blocks required by setup changes. 
+
+UTTIMERANGE 2011MAR24 at 08:00:00 to 2011MAR24 at 14:53:00
+
+
+Catalogs: 
+  Station:   1mm-stations-vfish.dat
+                 Version:  
+  Location:  1mm-locations.dat
+                 Version:  Not known
+  Frequency: 1mm-freq.dat
+                 Version:  
+  Source:   /home/vfish/sched_9.4/catalogs/sources.vlba
+                 Version:  Not given
+  Source2:  NONE
+                 Version:   ---
+
+
+Other external files: 
+  Ephemeris: NONE
+  PEAKFILE:  /home/vfish/sched_9.4/catalogs/peak.cmd
+  MSGFILE:   /home/vfish/sched_9.4/catalogs/messages.txt
+
+
+Code versions: 
+  Release version:            9.40  Release Jan. 13, 2011.
+  Version of VEX standard:   1.50
+  Version of VEX code:       0.87
+  Version of plot code:      1.06
+  Version of ephemeris code: 1.01
+  Version of PGPLOT:        v5.2.2
+
+This schedule produced on: Wed Mar 23 22:10:10 2011

@@ -1,0 +1,321 @@
+#!/usr/local/bin/perl
+# a script to retrieve stars for optical pointing.
+# nap 1 aug 99
+# updated for Antenna 4
+# satoki 10 sep 00
+# trh 29 MAR 2001:  can now send all antennas to the star
+# nap 22 apr 2001: added signal handler for ctrl-c
+# satoki 26 apr 2001: wait for a few seconds to track the star with stable
+# - return to continue, q to quit, on quitting put back
+# - radio flag for refraction.
+# 18 Jul 01, ks: add -n option that limits the number of stars to be observed.
+# 7 nov 01, nap; added creation of antenna-list according to antennas 
+# specified in the project command. If antenna number switch is missing
+# the project specified antennas will be used. (Earlier version: all 
+# antennas were used.
+# 16nov01, nap; added loops for az-circles and el-strips. 
+# 17 May 2002, nap; added acc6- c90 commands.
+# 05 Nov 2002, nap; added acc1- c90 commands.
+
+#Initializations
+$azloop=0; #loop condition flags
+$elloop=0;
+$myPID = $$; #to get the process id of this script during runtime
+$|=1; 		#to always flush stdout
+$latitude=19.8241666667; # pad-1 from taco's padLocations file.
+$MINMAG=2.;	# magnitude limits for star selections
+$MAXMAG=9.0;
+$pi=4.0*atan2(1.0,1.0);
+$radian=$pi/180.;
+
+$SIG{INT}=\&Pause;  #signal handling for ctrl-c.
+
+sub Usage() {
+    print "Usage: azelstar [-a 3] [-x 4] -z <azimuth> -e <elevation> -w <full-width> -n <nmax> -d <up/down/cw/ccw>\n azelstar [--antenna 3] --zimuth 180. --elevation 45 --width 10 [--nmax 5] [--xclude 4] [-r 20-75]\n";
+    print "(if -a is not specified, all antennas will move to the star simultanesously, except the one xcluded).\n";
+    print "If the azimuth is not specified, a full circle of data will be acquired in clockwise or counter-clockwise directions at the specified elevation.\n";
+    print "If the elevation is not specified, an el. strip of data will be
+acquired in up or down direction as specified.\n";
+}
+
+@antennalist = ();
+
+use Getopt::Long;
+$antpick = 0;
+$xclude = 0;
+$nmax = 0;
+GetOptions('antenna=i'=>\$antpick,'elevation=f'=>\$elevation,'zimuth=f'=>\$azimuth,'width=f'=>\$width,'nmax=i'=>\$nmax,'xclude=i'=>\$xclude,'direction=s'=>\$direction,'range=s'=>\$range);
+
+
+#find the antennas specified in the project command.
+if($antpick!=0){push(@antennalist,$antpick);} else {
+  for($i=1;$i<8;$i++) {
+    $antenna_status=`value -a $i -v antenna_status`;
+    if ($antenna_status==1) { push(@antennalist,$i); }
+  }
+}
+
+
+#read in the hipparcos catalog
+open(HIPCAT,"/common/catalogs/hipcat")||die"Could not open hipparcos catalog.\n";
+@hipcat=<HIPCAT>;
+close(HIPCAT);
+
+#if az OR el are left out in command line arguments, do a loop
+#in the variable that is left out.
+if($elevation eq ""){$azloop=1;}
+if($azimuth eq ""){$elloop=1;}
+
+if(($azloop==0)&&($elloop==0)){getStars($azimuth,$elevation);}
+else{
+    if($azloop==1){
+	if(($direction ne "up")&&($direction ne "down")){Usage(); exit;}
+    }
+    if($elloop==1){
+	if(($direction ne "cw")&&($direction ne "ccw")){Usage(); exit;}
+    }
+}
+
+if($elloop==1) {
+
+    if($range eq "") {
+	$azmincw=-140; $azmaxcw=220;
+	$azminccw=-150; $azmaxccw=210;
+    } else {
+	($enteredmin,$enteredmax)=split('-',$range);
+	$azmincw=$enteredmin; $azmaxcw=$enteredmax;
+	$azminccw=$enteredmin; $azmaxccw=$enteredmax;
+    }
+    
+    if($direction eq "cw") {
+	for($iaz=$azmincw; $iaz<$azmaxcw;$iaz=$iaz+10)
+	{$azimuth=$iaz;getStars();}
+    }
+    if($direction eq "ccw") {
+	for($iaz=$azmaxccw; $iaz>$azminccw;$iaz=$iaz-10)
+	{$azimuth=$iaz;getStars();}
+    }
+}
+if($azloop==1) {
+    if($range eq "") {
+	$elminup=18; $elmaxup=83;
+	$elmindown=17; $elmaxdown=83;
+    } else {
+	($enteredmin,$enteredmax)=split('-',$range);
+	$elminup=$enteredmin; $elmaxup=$enteredmax;
+	$elmindown=$enteredmin; $elmaxdown=$enteredmax;
+    }
+    if($direction eq "up") {
+	for($iel=$elminup;$iel<$elmaxup;$iel=$iel+5)
+	{$elevation=$iel;getStars();}
+    }
+    if($direction eq "down") {
+	for($iel=$elmaxdown;$iel>$elmindown;$iel=$iel-5)
+	{$elevation=$iel;getStars();}
+    }
+}
+
+sub getStars() {
+    $lststring=`lst`;
+    ($junk,$junk,$junk,$junk,$junk,$junk,$junk,$junk,$lst)=split(' ',$lststring);
+    
+    ($lsth,$lstm,$lsts)=split('\:',$lst);
+    $lst=($lsth+$lstm/60.)*0.26179939; # convert hours to radians
+    $minmag=$MINMAG;
+    $maxmag=$MAXMAG;
+    $az=$azimuth*$radian;
+    $el=$elevation*$radian;
+    $width_radian=$width*$radian/2.;
+    
+    $phi=$radian*$latitude;
+    $cosphi=cos($phi);
+    $sinphi=sin($phi);
+    
+#calculate declination from elevation and latitude.
+    $sintheta=sin($el)*$sinphi+cos($el)*cos($az)*$cosphi;
+    $costheta=(1.0-$sintheta*$sintheta)**0.5;
+    $dec=atan2($sintheta,$costheta);
+    $dummy=$dec/$radian;
+    
+#calculate hour angle from elevation, azimuth and latitude.
+    $sinh=-cos($el)*sin($az);
+    $cosh=sin($el)*$cosphi-cos($el)*cos($az)*$sinphi;
+    if ($cosh == 0.) {
+	$h=0.;
+    } else {
+	$h=atan2($sinh,$cosh);
+    }
+    
+    
+#calculate right ascension and get limits in RA and DEC.
+    $RA=$lst-$h;
+    
+    if ($RA < 0.) {$RA=$RA+2.*$pi;}
+    if ($RA > 2.*$pi) {$RA=$RA-2.*$pi;}
+    
+    $RA1=$RA-$width_radian/cos($dec); 
+    $RA2=$RA+$width_radian/cos($dec);
+#if ($RA1 < 0.) {$RA1=$RA1+2.*$pi;}
+#if ($RA1 > 2.*$pi) {$RA1=$RA1-2.*$pi;}
+#if ($RA2 < 0.) {$RA2=$RA2+2.*$pi;}
+#if ($RA2 > 2.*$pi) {$RA2=$RA2-2.*$pi;}
+    $DEC1=$dec-$width_radian;
+    $DEC2=$dec+$width_radian;
+    
+    $ra1=$RA1/$radian;
+    $ra2=$RA2/$radian;
+    $dec1=$DEC1/$radian;
+    $dec2=$DEC2/$radian;
+    
+    $j=0;
+    for($i=0;$i<$#hipcat;$i++) {
+	# ($jj,$source,$rah,$ram,$ras,$decd,$decm,$decs,$jj,$jj,$jj,$jj,$mv,$jj,$sptype) = split(' ',$hipcat[$i]);
+	($source,$rah,$ram,$ras,$decd,$decm,$decs,$mv,$sptype) = split(' ',$hipcat[$i]);
+	$catra=$rah+$ram/60.+$ras/3600.;
+	$catra=$catra*$radian*15.;
+	if($decd<0.){$decsign=-1;}
+	if($decd>=0.){$decsign=1;}
+	$catdec=abs($decd)+$decm/60.+$decs/3600.;
+	$catdec=$catdec*$radian;
+	if($decsign==-1) {$catdec=-$catdec;}
+	
+	if (($catra>=$RA1) && ($catra<=$RA2) && ($catdec>=$DEC1) && ($catdec<=$DEC2)
+	    && ($mv>=$minmag) && ($mv<=$maxmag)) {
+	    $_=$sptype;
+#	if((/^M/)||(/^K/)||(/^G/))
+	    if ((/^M/)||(/^K/)) {
+		$mysources[$j]=$source;
+		$mysptype[$j]=$sptype;
+		$mymag[$j]=$mv;
+		$j++;
+	    }
+	}
+    }
+    print "azelstar: pid=$myPID>\nFound $j stars.";
+    if($j==0) {
+#`radio`;
+	return;}
+    if(($nmax>0)&&($j>$nmax)) {
+	$j=$nmax;
+	print " observe the first $nmax of them.";
+    }
+    print "\n\n";
+    
+#
+# here is the main 'for' loop over all the stars found
+#
+    for($i=0; $i<$j; $i++) {
+	$no = $i+1;
+	print "azelstar: pid=$myPID> $no/$j\) $mysources[$i] is a $mymag[$i] magnitude and $mysptype[$i] type star...\n";
+###
+### Comment out these 3 lines (and another 2 lines below) if you want to
+###   do the automatic optical pointing
+###
+#print "...do you want to observe it? [y/n]\n";
+#$answer=<STDIN>;
+#chop($answer);
+###
+### If you comment out above 3 lines (and another 2 lines below),
+###   alive this line. 
+	$answer = "y";
+###
+	if($answer eq "y") {
+	    if(($mymag[$i]>0)&&($mymag[$i]<=2.0)){$integrationtime=50;}
+	    if(($mymag[$i]>2.0)&&($mymag[$i]<=4.0)){$integrationtime=100;}
+	    if(($mymag[$i]>4.0)&&($mymag[$i]<=5.0)){$integrationtime=200;}
+	    if(($mymag[$i]>5.0)&&($mymag[$i]<=6.0)){$integrationtime=400;}
+	    if(($mymag[$i]>6.0)&&($mymag[$i]<=7.0)){$integrationtime=600;}
+	    if(($mymag[$i]>7.0)&&($mymag[$i]<=8.0)){$integrationtime=1000;}
+	    if(($mymag[$i]>8.0)&&($mymag[$i]<=9.0)){$integrationtime=2000;}
+	    foreach $ant (@antennalist) {
+		`optical -a $ant`;
+		sleep 1;
+		$response=`integrationTime -a $ant -s $integrationtime`;
+		sleep 1;
+		printf "Sending antenna %d to %s\n", $ant, $mysources[$i];
+		$response=`observe -a $ant -s $mysources[$i]`;
+		sleep 3;
+	    }
+# added the following wait condition for antenna to reach the 
+# source within a certain tracking tolerance before acquiring
+# the image.
+	    print "azelstar: pid=$myPID> Waiting for antennas ";
+	    foreach $ant (@antennalist) {
+		printf "%d ", $ant;
+	    }
+	    print "to reach the star\n";
+	    @antennasAcquired = ();
+	    while ($#antennasAcquired < $#antennalist) {
+# compute the difference in the two lists (from page 106 of Perl cookbook)
+		@union = @isect = @diff = ();
+		%union = %isect = ();
+		%count = ();  
+		foreach $e (@antennalist, @antennasAcquired) {
+		    $count{$e}++;
+		}
+		foreach $e (keys %count) {
+		    push @union, $e;
+		    if ($count{$e} == 2) {
+			push @isect, $e; 
+		    } else {
+			push @diff, $e; 
+		    }
+		}
+# check to see if any of the remaining antennas have stopped
+		$trackingTolerance=1.0;
+		foreach $ant (@diff) {
+		    $taz=`value -a $ant -v az_tracking_error`;
+		    $tel=`value -a $ant -v el_tracking_error`;
+		    $trackingError=($taz*$taz+$tel*$tel)**0.5;
+		    if ($trackingError<$trackingTolerance) {
+			sleep 2;
+			if ($trackingError<$trackingTolerance) {
+			    sleep 2;
+			    if ($trackingError<$trackingTolerance) {
+				push @antennasAcquired, $ant;
+				printf "azelstar: pid=$myPID> Antenna %d has acquired the star, taking image..\n",$ant;
+				sleep 20;
+#changed the above sleep from 6 to 20 on 17sep2002.
+				
+				
+				$result=`snapshot -a $ant -s $integrationtime`;
+				print "snapshot result = $result\n";
+				
+			    }
+			}
+		    } else {
+			printf "azelstar: pid=$myPID> Antenna %d tracking error = %.1f\n",$ant,$trackingError;
+			sleep 1 ;
+		    }
+		}
+	    }  # end of 'while' loop 
+	    sleep 4;
+###
+### Another 2 lines to comment out for the automatic optical pointing
+###
+#	print "Please hit return to continue.\n";
+#	$pause=<STDIN>;
+###
+	} # end of 'if $answer == y'
+    } # end of the main 'for' loop over all the stars found
+
+} #subroutine getStars.
+
+# put back radio flag for all antennas
+print "Exiting azelstar. Please remember to give the radio command if you are done with optical pointing.\n";
+print "";
+print "";
+#`ssh root\@128.171.116.125 "play /usr/local/soundServer/sounds/StarTrek/Boatswain_Whistle.WAV"`;
+#
+#playSound -f /usr/local/soundServer/sounds/StarTrek/Boatswain_Whistle.WAV`;
+
+sub Pause()
+{
+    print "azelstar: pid=$myPID> Hit enter to continue, q to quit.";
+    $kbd=<STDIN>;
+    chop($kbd);
+    print "Entered:$kbd";
+    if($kbd eq "q") {
+	die "Bye. Please remember to give the radio command if done with optical pointing.\n";
+    }
+}

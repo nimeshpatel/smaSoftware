@@ -1,0 +1,12 @@
+CC = gcc -I$(GLOBALINC)
+BIN = $(HALBIN)/recordTilts
+LIBSMAPOPT=../../smapopt/libsmapopt.a
+VPATH=$(COMMONINC)
+
+all: $(BIN)
+
+recordTilts.o: recordTilts.c 
+	$(CC) -g -Wall -I$(COMMONINC) recordTilts.c -c
+
+$(HALBIN)/recordTilts: recordTilts.o $(COMMONLIB)/rm.o $(COMMONLIB)/libdsm.a /usr/PowerPC/applications/hal/pointingHeaders/ph.o
+	$(CC) -g -o $@ $^ $(LIBSMAPOPT) -lrpc -lnetinet -mthreads

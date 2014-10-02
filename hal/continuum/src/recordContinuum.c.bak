@@ -1,0 +1,585 @@
+#include <stdio.h>
+#include <unistd.h>
+#include <time.h>
+#include <pthread.h>
+#include <signal.h>
+#include <string.h>
+#include "rm.h"
+#include "dsm.h"
+#include "smapopt.h"
+#include "ph.h"
+
+#define ANT_ARRAY_SZ (sizeof(antennaArray)/sizeof(antennaArray[0]))
+
+void signalHandler(int signum);
+void *antennaThread(void *antennas);
+
+int fileWriteFlag=1;
+int quitFlag=0;
+pthread_t antennaThreadTID[10];
+pthread_attr_t *attr;
+char *scantype = "noscan";
+int port,chopflag=0;
+
+/*
+char scantype[30];
+*/
+
+
+int main(int argc, char **argv)
+{
+	int i;
+	int iant,numberOfAnts,antennaArray[SMAPOPT_MAX_ANTENNAS+1];
+	int ant_num,antennas[SMAPOPT_MAX_ANTENNAS+1];
+	char c;
+	int gotport=0,gotantennas=0,gotscantype=0,gotchopflag=0;
+	int rm_status, antlist[RM_ARRAY_SIZE];/*variables for encoderClient*/
+	smapoptContext optCon;
+	struct sigaction action, old_action; int sigactionInt;
+	struct  smapoptOption optionsTable[] = {
+		{"antennas",'a',SMAPOPT_ARG_ANTENNAS,antennaArray,'a',
+		"a comma-separated list of antennas"},
+		{"chopflag",'c',SMAPOPT_ARG_INT,&chopflag,'c',
+		"chopflag: integer 0-no chopping, 1-chopping (optional)"},
+		{"port",'p',SMAPOPT_ARG_INT,&port,'p',
+		"optional port number for continuum channel to use (1 or 2)"},
+		{"scantype",'s',SMAPOPT_ARG_STRING,&scantype,'s',
+		"scantype string: azscan/elscan, default is noscan."},
+		SMAPOPT_AUTOHELP
+		{NULL,'\0',0,NULL,0},
+		"This program records the continuum detector voltage into \n
+	         an ascii file with UTC time-stamp and other antenna info.\n
+		 Some garbage for now."
+	};
+
+	optCon = smapoptGetContext("chartu", argc, argv, optionsTable,
+			SMAPOPT_CONTEXT_EXPLAIN);
+
+
+	while ((c = smapoptGetNextOpt(optCon)) >= 0) { 
+
+		switch(c) {
+
+		case 's' :
+		gotscantype=1;		
+		break;
+
+		case 'c':
+		gotchopflag=1;
+		break;
+
+		case 'a':
+		gotantennas=1;
+		break;
+
+		case 'p':
+		gotport=1;
+		break;
+
+		}
+	}
+	if(gotchopflag==0) chopflag=-1;
+	if(gotport==0) port=1;
+	else {
+		if((port<1)||(port>2)) {
+		printf("Invalid continuum detector port number. Should be either 1 or 2.\n");
+		exit(-1);
+		}
+	}
+
+	numberOfAnts=0;
+	for(iant=1;iant<ANT_ARRAY_SZ;iant++) {
+		if(antennaArray[iant]==1) {
+		antennas[numberOfAnts]=iant;
+		numberOfAnts++;
+		}
+	}	
+
+
+	 /* signal handler for control C */
+	  action.sa_flags=0;
+	  sigemptyset(&action.sa_mask);
+	  action.sa_handler = signalHandler;
+	  sigactionInt = sigaction(SIGUSR1,&action, &old_action);
+
+	/* initializing ref. mem. */
+	rm_status=rm_open(antlist);
+	if(rm_status != RM_SUCCESS) {
+		rm_error_message(rm_status,"rm_open()");
+		exit(1);
+	}
+
+	
+	for (iant=0; iant<numberOfAnts; iant++) {
+	if (pthread_create(&antennaThreadTID[iant], attr, antennaThread,
+			     (void *) &antennas[iant]) == -1) {
+	    perror("pthread_create antennaThread");
+	}
+	}
+
+	while(quitFlag==0) {
+	sleep(1);
+	}
+
+	for (iant=0; iant<numberOfAnts; iant++) 
+		pthread_detach(&antennaThreadTID[iant]);
+	
+	
+	/* close ref. mem. */
+	rm_status=rm_close(); 
+	if(rm_status != RM_SUCCESS) {
+		rm_error_message(rm_status,"rm_close()");
+		exit(1);
+	}
+
+}
+
+void *antennaThread(void *antenna) {
+	FILE *fp1,*fp2,*fp3,*fp4,*fp5,*fp6,*fp7,*fp8;
+	char filename[120];
+	char copycommand[200];
+	int i,iavg,integration,rm_status,ant_num;
+	short dummyShort;
+	float Azoff_avg,Eloff_avg,Az_avg,El_avg,Azerr_avg,Elerr_avg,Azmod_avg,Elmod_avg,Data_avg;
+	float az_deg,el_deg,az_err,el_err,az_mod,el_mod;
+	float Utc_avg,utc_hours;
+	double output, az_off, el_off;
+	time_t new_time,old_time,cur_time;
+	char *curtim,source[40],timestamp[50];
+	struct tm *Time;
+	struct ph p;
+	int flag;
+
+
+	ant_num = *((int *)antenna);
+
+	rm_status=rm_read(ant_num,"RM_CCD_INTEGRATION_SEC_S",&dummyShort);
+	if(rm_status != RM_SUCCESS) {
+	rm_error_message(rm_status,"rm_read()");
+	exit(1);
+	}
+
+/*
+	integration = (int)dummyShort;
+	if(integration<1000) integration=1;
+	else integration /= 1000;
+*/
+		integration = 1;
+
+		new_time=time(NULL);
+		Time=localtime(&new_time);
+		strftime(timestamp,100,"%d%b%y_%H%M%S",Time);
+		sprintf(filename,"/data/engineering/rpoint/ant%d/ant%d.%s.%s.rpoint", 
+				ant_num,ant_num,scantype,timestamp);
+
+
+		if(ant_num==1) {
+	 	if ((fp1=fopen(filename,"w"))==NULL){
+                        fprintf(stderr,"cannot open data file:%s\n",filename);
+                        exit(1);
+                       } 
+		}
+		if(ant_num==2) {
+	 	if ((fp2=fopen(filename,"w"))==NULL){
+                        fprintf(stderr,"cannot open data file:%s\n",filename);
+                        exit(1);
+                       } 
+		}
+		if(ant_num==3) {
+	 	if ((fp3=fopen(filename,"w"))==NULL){
+                        fprintf(stderr,"cannot open data file:%s\n",filename);
+                        exit(1);
+                       } 
+		}
+		if(ant_num==4) {
+	 	if ((fp4=fopen(filename,"w"))==NULL){
+                        fprintf(stderr,"cannot open data file:%s\n",filename);
+                        exit(1);
+                       } 
+		}
+		if(ant_num==5) {
+	 	if ((fp5=fopen(filename,"w"))==NULL){
+                        fprintf(stderr,"cannot open data file:%s\n",filename);
+                        exit(1);
+                       } 
+		}
+		if(ant_num==6) {
+	 	if ((fp6=fopen(filename,"w"))==NULL){
+                        fprintf(stderr,"cannot open data file:%s\n",filename);
+                        exit(1);
+                       } 
+		}
+		if(ant_num==7) {
+	 	if ((fp7=fopen(filename,"w"))==NULL){
+                        fprintf(stderr,"cannot open data file:%s\n",filename);
+                        exit(1);
+                       } 
+		}
+		if(ant_num==8) {
+	 	if ((fp8=fopen(filename,"w"))==NULL){
+                        fprintf(stderr,"cannot open data file:%s\n",filename);
+                        exit(1);
+                       } 
+		}
+
+		
+		if(!(strcmp(scantype,"azscan"))) flag=1;
+		if(!(strcmp(scantype,"elscan"))) flag=0;
+		if(!(strcmp(scantype,"noscan"))) flag=-1;
+
+		p = readHeader(ant_num,0);
+
+		if(ant_num==1) {
+		fprintf(fp1,"# %d %d\n",flag,chopflag);
+		printHeader(fp1,p);
+		}
+		if(ant_num==2) {
+		fprintf(fp2,"# %d %d\n",flag,chopflag);
+		printHeader(fp2,p);
+		}
+		if(ant_num==3) {
+		fprintf(fp3,"# %d %d\n",flag,chopflag);
+		printHeader(fp3,p);
+		}
+		if(ant_num==4) {
+		fprintf(fp4,"# %d %d\n",flag,chopflag);
+		printHeader(fp4,p);
+		}
+		if(ant_num==5) {
+		fprintf(fp5,"# %d %d\n",flag,chopflag);
+		printHeader(fp5,p);
+		}
+		if(ant_num==6) {
+		fprintf(fp6,"# %d %d\n",flag,chopflag);
+		printHeader(fp6,p);
+		}
+		if(ant_num==7) {
+		fprintf(fp7,"# %d %d\n",flag,chopflag);
+		printHeader(fp7,p);
+		}
+		if(ant_num==8) {
+		fprintf(fp8,"# %d %d\n",flag,chopflag);
+		printHeader(fp8,p);
+		}
+
+	while(1) {
+
+		i=0;
+
+		while(fileWriteFlag==1){
+
+			Az_avg=0;El_avg=0;Azerr_avg=0;Elerr_avg=0;iavg=1; Utc_avg=0.;
+			Azoff_avg=0;Eloff_avg=0;Azmod_avg;Elmod_avg=0;
+			old_time=time(NULL);new_time=time(NULL);
+
+				rm_status=rm_read(ant_num,"RM_SOURCE_C34",&source);
+				if(rm_status != RM_SUCCESS) {
+				rm_error_message(rm_status,"error reading RM_SOURCE_C34");
+				exit(1);
+				}
+
+			while((new_time-old_time)<integration){
+
+				rm_status=rm_read(ant_num,"RM_UTC_HOURS_F",&utc_hours);
+		   		if(rm_status != RM_SUCCESS) {
+				rm_error_message(rm_status,"error reading RM_UTC_HOURS_F");
+		   		exit(1);
+				}
+				rm_status=rm_read(ant_num,"RM_ACTUAL_AZ_DEG_F",&az_deg);
+		   		if(rm_status != RM_SUCCESS) {
+				rm_error_message(rm_status,"rm_read()");
+		   		exit(1);
+				}
+		   		rm_status=rm_read(ant_num,"RM_ACTUAL_EL_DEG_F",&el_deg);
+				if(rm_status != RM_SUCCESS) {
+		   		rm_error_message(rm_status,"rm_read()");
+				exit(1);
+		   		}
+				rm_status=rm_read(ant_num,"RM_AZ_TRACKING_ERROR_F",&az_err);
+	   			if(rm_status != RM_SUCCESS) {
+				rm_error_message(rm_status,"rm_read()");
+	   			exit(1);
+				}
+		   		rm_status=rm_read(ant_num,"RM_EL_TRACKING_ERROR_F",&el_err);
+				if(rm_status != RM_SUCCESS) {
+		   		rm_error_message(rm_status,"rm_read()");
+				exit(1);
+	   			}
+				rm_status=rm_read(ant_num,"RM_PMDAZ_F",&az_mod);
+	   			if(rm_status != RM_SUCCESS) {
+				rm_error_message(rm_status,"rm_read()");
+				exit(1);
+				}
+				rm_status=rm_read(ant_num,"RM_PMDEL_F",&el_mod);
+				if(rm_status != RM_SUCCESS) {
+				rm_error_message(rm_status,"rm_read()");
+				exit(1);
+				}
+				rm_status=rm_read(ant_num,"RM_CHART_AZOFF_ARCSEC_D",&az_off);
+				if(rm_status != RM_SUCCESS) {
+				rm_error_message(rm_status,"rm_read()");
+				exit(1);
+				}
+				rm_status=rm_read(ant_num,"RM_CHART_ELOFF_ARCSEC_D",&el_off);
+				if(rm_status != RM_SUCCESS) {
+				rm_error_message(rm_status,"rm_read()");
+				exit(1);
+				}
+				if(chopflag==1) rm_status=rm_read(ant_num,"RM_CHART_SYNCDET_VOLTS_D",&output);
+				else rm_status=rm_read(ant_num,"RM_CHART_TOTAL_POWER_VOLTS_D",&output);
+				if(rm_status != RM_SUCCESS) {
+				rm_error_message(rm_status,"rm_read()");
+				exit(1);
+				}
+				Utc_avg=((iavg-1)*Utc_avg+utc_hours)/iavg;
+				Az_avg=((iavg-1)*Az_avg+az_deg)/iavg;
+				El_avg=((iavg-1)*El_avg+el_deg)/iavg;
+				Azoff_avg=((iavg-1)*Azoff_avg+az_off)/iavg;
+				Eloff_avg=((iavg-1)*Eloff_avg+el_off)/iavg;
+				Azerr_avg=((iavg-1)*Azerr_avg+az_err)/iavg;
+				Elerr_avg=((iavg-1)*Elerr_avg+el_err)/iavg;
+				Azmod_avg=((iavg-1)*Azmod_avg+az_mod)/iavg;
+				Elmod_avg=((iavg-1)*Elmod_avg+el_mod)/iavg;
+				Data_avg=((iavg-1)*Data_avg+output)/iavg;
+				usleep(10000);
+				iavg++;
+				new_time=time(NULL);
+			}
+
+			if(ant_num==1) {
+			fprintf(fp1,"%10.6f %10.4f %10.4f %+6.2f %+6.2f %9.4f %9.4f %4.1f %9.2f %9.2f\n",
+			Utc_avg,Az_avg,El_avg,Azoff_avg,Eloff_avg,Data_avg,Azerr_avg,Elerr_avg,Azmod_avg,Elmod_avg);
+			fflush(fp1);
+			}
+			if(ant_num==2) {
+			fprintf(fp2,"%10.6f %10.4f %10.4f %+6.2f %+6.2f %9.4f %9.4f %4.1f %9.2f %9.2f\n",
+			Utc_avg,Az_avg,El_avg,Azoff_avg,Eloff_avg,Data_avg,Azerr_avg,Elerr_avg,Azmod_avg,Elmod_avg);
+			fflush(fp2);
+			}
+			if(ant_num==3) {
+			fprintf(fp3,"%10.6f %10.4f %10.4f %+6.2f %+6.2f %9.4f %9.4f %4.1f %9.2f %9.2f\n",
+			Utc_avg,Az_avg,El_avg,Azoff_avg,Eloff_avg,Data_avg,Azerr_avg,Elerr_avg,Azmod_avg,Elmod_avg);
+			fflush(fp3);
+			}
+			if(ant_num==4) {
+			fprintf(fp4,"%10.6f %10.4f %10.4f %+6.2f %+6.2f %9.4f %9.4f %4.1f %9.2f %9.2f\n",
+			Utc_avg,Az_avg,El_avg,Azoff_avg,Eloff_avg,Data_avg,Azerr_avg,Elerr_avg,Azmod_avg,Elmod_avg);
+			fflush(fp4);
+			}
+			if(ant_num==5) {
+			fprintf(fp5,"%10.6f %10.4f %10.4f %+6.2f %+6.2f %9.4f %9.4f %4.1f %9.2f %9.2f\n",
+			Utc_avg,Az_avg,El_avg,Azoff_avg,Eloff_avg,Data_avg,Azerr_avg,Elerr_avg,Azmod_avg,Elmod_avg);
+			fflush(fp5);
+			}
+			if(ant_num==6) {
+			fprintf(fp6,"%10.6f %10.4f %10.4f %+6.2f %+6.2f %9.4f %9.4f %4.1f %9.2f %9.2f\n",
+			Utc_avg,Az_avg,El_avg,Azoff_avg,Eloff_avg,Data_avg,Azerr_avg,Elerr_avg,Azmod_avg,Elmod_avg);
+			fflush(fp6);
+			}
+			if(ant_num==7) {
+			fprintf(fp7,"%10.6f %10.4f %10.4f %+6.2f %+6.2f %9.4f %9.4f %4.1f %9.2f %9.2f\n",
+			Utc_avg,Az_avg,El_avg,Azoff_avg,Eloff_avg,Data_avg,Azerr_avg,Elerr_avg,Azmod_avg,Elmod_avg);
+			fflush(fp7);
+			}
+			if(ant_num==8) {
+			fprintf(fp8,"%10.6f %10.4f %10.4f %+6.2f %+6.2f %9.4f %9.4f %4.1f %9.2f %9.2f\n",
+			Utc_avg,Az_avg,El_avg,Azoff_avg,Eloff_avg,Data_avg,Azerr_avg,Elerr_avg,Azmod_avg,Elmod_avg);
+			fflush(fp8);
+			}
+
+			i++;
+
+			} /* end while save flag is on */
+
+		if(fileWriteFlag==0) {
+		p = readHeader(ant_num,0);
+		if(ant_num==1) {
+		printHeader(fp1,p);
+		fflush(fp1);
+		fclose(fp1);
+		}
+		if(ant_num==2) {
+		printHeader(fp2,p);
+		fflush(fp2);
+		fclose(fp2);
+		}
+		if(ant_num==3) {
+		printHeader(fp3,p);
+		fflush(fp3);
+		fclose(fp3);
+		}
+		if(ant_num==4) {
+		printHeader(fp4,p);
+		fflush(fp4);
+		fclose(fp4);
+		}
+		if(ant_num==5) {
+		printHeader(fp5,p);
+		fflush(fp5);
+		fclose(fp5);
+		}
+		if(ant_num==6) {
+		printHeader(fp6,p);
+		fflush(fp6);
+		fclose(fp6);
+		}
+		if(ant_num==7) {
+		printHeader(fp7,p);
+		fflush(fp7);
+		fclose(fp7);
+		}
+		if(ant_num==8) {
+		printHeader(fp8,p);
+		fflush(fp8);
+		fclose(fp8);
+		}
+		quitFlag=1;
+		sprintf(copycommand,"cp %s /data/engineering/rpoint/ant%d/tmp.dat",
+			filename,ant_num);
+		system(copycommand);
+		sleep(1);
+		break;
+		}
+		
+
+		cur_time=time(NULL);
+		curtim=ctime(&cur_time);
+		sleep(1);
+	} /* end while */
+}
+
+void signalHandler(int signum)
+{
+  fileWriteFlag=0;
+}
+
+void printHeader(FILE *fp,struct ph p) {
+fprintf(fp,"# %d %s %s %f %f %f %f %f %f %f %d %f %f %f ",
+p.project_id,         
+p.project_pi,     
+p.source,
+p.ra_app_hr,
+p.ra_cat_hours,
+p.raoff_arcsec,
+p.dec_app_deg,
+p.dec_cat_deg,
+p.decoff_arcsec,
+p.epoch,
+p.sveltype,
+p.svel_kmps,  
+p.planet_diameter_arcsec,    
+p.planet_distance_au); 
+
+fprintf(fp,"%f %f %f %f %f %f %d %d %f %f %f ",
+p.tjd,
+p.utc_hours,
+p.lst_hours,
+p.hour_angle_hr,
+p.latitude_deg,
+p.longitude_deg,
+p.gps_lock_status,   
+p.gps_satellites,     
+p.polar_dx_arcsec,   
+p.polar_dy_arcsec,    
+p.polar_dut_sec);
+
+fprintf(fp,"%f %f %f %f %f %f %f %f %f %d %f %d %f %d ",
+p.sun_az_deg,
+p.sun_el_deg,
+p.weather_humidity,
+p.weather_mbar,  
+p.weather_temp,       
+p.weather_winddir, 
+p.weather_windspeed,
+p.cso_225ghz_tau,  
+p.cso_225ghz_tau_rms,
+p.cso_225ghz_tau_tstamp,
+p.refraction_arcsec,
+p.refraction_radio_flag,
+p.cabin_temperature,
+p.cabin_temperature_timestamp);
+ 
+
+fprintf(fp,"%f %f %f %f %f %f %f %f %f %f ",
+p.commanded_az_deg,   
+p.commanded_el_deg,
+p.actual_az_deg,
+p.actual_el_deg,
+p.az_tracking_error,
+p.el_tracking_error,
+p.azoff,
+p.eloff,
+p.encoder_az,
+p.encoder_el);
+
+fprintf(fp,"%f %f %f %f %f %f %f %f %f %f %f %f %f %f %f %f %f %f %d ",
+p.pmdaz,
+p.pmdel,
+p.azdc_arcsec,     
+p.azcollimation_arcsec,
+p.azelaxistilt_arcsec,    
+p.azaztiltsin_arcsec,
+p.azaztiltsin2_arcsec,
+p.azaztiltcos_arcsec,
+p.azaztiltcos2_arcsec,
+p.azrms_arcsec,
+p.eldc_arcsec,
+p.elsag_arcsec,
+p.elaztiltsin_arcsec,
+p.elaztiltsin2_arcsec, 
+p.elaztiltcos_arcsec,
+p.elaztiltcos2_arcsec,
+p.elrms_arcsec,
+p.pad_az_offset_deg,  
+p.pad_id);       
+
+fprintf(fp,"%f %d %f %f %f %f %f %f %f ",
+p.chopper_angle,   
+p.chopper_status,
+p.chopper_tilt_counts,
+p.chopper_x_counts,
+p.chopper_x_mm,      
+p.chopper_y_counts,
+p.chopper_y_mm,      
+p.chopper_z_counts,     
+p.chopper_z_mm);     
+
+fprintf(fp,"%f %f %f %f %f %f %f %f %f %d %d ",
+p.tilt_volts_v4,    
+p.tiltx_arcsec,
+p.tiltx_dc_arcsec,
+p.tilty_arcsec,       
+p.tilty_dc_arcsec, 
+p.tilt1_lo_xelev_temperature,
+p.tilt2_lo_pelev_temperature,
+p.tilt3_hi_xelev_temperature,
+p.tilt4_hi_pelev_temperature,
+p.tilt_temperature_timestamp,
+p.tilt_timestamp);
+
+if(p.refraction_radio_flag==1)
+fprintf(fp,"0 0 0 --- 0.0 0.0 0.0 0 0.0 ");
+if(p.refraction_radio_flag==0)
+fprintf(fp,"%d %d %d %s %f %f %f %d %f ",
+p.ccd_integration_sec,
+p.ccd_bias_counts,
+p.ccd_gain_counts,
+p.spectral_type,
+p.visual_magnitude,
+p.guidescope_tubetemp, 
+p.guidescope_tubehumidity,
+p.ccd_focus,
+p.ccd_focusmil);
+
+fprintf(fp,"%d %d %d %d %d %f %f %f %d %f \n",
+p.receiver,    
+p.wire_grid_encoder_position,
+p.wire_grid_receiver_location,
+p.phase_lock,
+p.phase_lock_timestamp,
+p.last_gunn_freq_v8, 
+p.tsys,
+p.restFrequency,
+p.sideband,
+p.mRGFreq);      
+}

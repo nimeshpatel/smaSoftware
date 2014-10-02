@@ -1,0 +1,1058 @@
+initializing.....
+Not running on hal9000, entering simulation mode.
+nants = 8
+radio
+	10/02/2014 05:45:00 --> 10/02/2014 05:45:00  ---- radio
+integrate -t 30
+	10/02/2014 05:45:00 --> 10/02/2014 05:45:00  ---- integrate -t 30
+project -r -p 'Jun Yi Koay' -d '2014A-S013'
+	10/02/2014 05:45:00 --> 10/02/2014 05:45:00  ---- project -r -p 'Jun Yi Koay' -d '2014A-S013'
+----- initialization done, starting script -----
+----- initial flux and bandpass calibration -----
+radecoff -r 0 -d 0
+	10/02/2014 05:45:00 --> 10/02/2014 05:45:00  ---- radecoff -r 0 -d 0
+Checking elevation of Bandpass Cal 3C454.3...
+LST [hr]=  20.14
+lookup time: 10 2 2014 5:45
+3C454.3 is at 49.9669 degrees elevation
+
+###########################
+# BANDPASS Calibration    #
+###########################
+
+----  Observing bpass0. ----
+
+LST [hr]=  20.14
+lookup time: 10 2 2014 5:45
+3C454.3 is at 49.9669 degrees elevation
+observe -s 3C454.3 -t bandpass
+	10/02/2014 05:45:00 --> 10/02/2014 05:45:10  ---- observe -s 3C454.3 -t bandpass
+tsys
+integrate -s 10 -t 30 -w
+	10/02/2014 05:45:10 --> 10/02/2014 05:50:10  ---- integrate -s 10 -t 30 -w
+Finished 10/120 on 3C454.3.
+LST [hr]=  20.23
+lookup time: 10 2 2014 5:50
+3C454.3 is at 51.1456 degrees elevation
+observe -s 3C454.3 -t bandpass
+	10/02/2014 05:50:10 --> 10/02/2014 05:50:20  ---- observe -s 3C454.3 -t bandpass
+integrate -s 10 -t 30 -w
+	10/02/2014 05:50:20 --> 10/02/2014 05:55:20  ---- integrate -s 10 -t 30 -w
+Finished 20/120 on 3C454.3.
+LST [hr]=  20.32
+lookup time: 10 2 2014 5:55
+3C454.3 is at 52.3244 degrees elevation
+observe -s 3C454.3 -t bandpass
+	10/02/2014 05:55:20 --> 10/02/2014 05:55:30  ---- observe -s 3C454.3 -t bandpass
+integrate -s 10 -t 30 -w
+	10/02/2014 05:55:30 --> 10/02/2014 06:00:30  ---- integrate -s 10 -t 30 -w
+Finished 30/120 on 3C454.3.
+LST [hr]=  20.40
+lookup time: 10 2 2014 6:0
+3C454.3 is at 53.5034 degrees elevation
+observe -s 3C454.3 -t bandpass
+	10/02/2014 06:00:30 --> 10/02/2014 06:00:40  ---- observe -s 3C454.3 -t bandpass
+integrate -s 10 -t 30 -w
+	10/02/2014 06:00:40 --> 10/02/2014 06:05:40  ---- integrate -s 10 -t 30 -w
+Finished 40/120 on 3C454.3.
+LST [hr]=  20.49
+lookup time: 10 2 2014 6:5
+3C454.3 is at 54.6825 degrees elevation
+observe -s 3C454.3 -t bandpass
+	10/02/2014 06:05:40 --> 10/02/2014 06:05:50  ---- observe -s 3C454.3 -t bandpass
+integrate -s 10 -t 30 -w
+	10/02/2014 06:05:50 --> 10/02/2014 06:10:50  ---- integrate -s 10 -t 30 -w
+Finished 50/120 on 3C454.3.
+LST [hr]=  20.57
+lookup time: 10 2 2014 6:10
+3C454.3 is at 55.8616 degrees elevation
+observe -s 3C454.3 -t bandpass
+	10/02/2014 06:10:50 --> 10/02/2014 06:11:00  ---- observe -s 3C454.3 -t bandpass
+integrate -s 10 -t 30 -w
+	10/02/2014 06:11:00 --> 10/02/2014 06:16:00  ---- integrate -s 10 -t 30 -w
+Finished 60/120 on 3C454.3.
+LST [hr]=  20.66
+lookup time: 10 2 2014 6:16
+3C454.3 is at 57.2765 degrees elevation
+observe -s 3C454.3 -t bandpass
+	10/02/2014 06:16:00 --> 10/02/2014 06:16:10  ---- observe -s 3C454.3 -t bandpass
+integrate -s 10 -t 30 -w
+	10/02/2014 06:16:10 --> 10/02/2014 06:21:10  ---- integrate -s 10 -t 30 -w
+Finished 70/120 on 3C454.3.
+LST [hr]=  20.75
+lookup time: 10 2 2014 6:21
+3C454.3 is at 58.4555 degrees elevation
+observe -s 3C454.3 -t bandpass
+	10/02/2014 06:21:10 --> 10/02/2014 06:21:20  ---- observe -s 3C454.3 -t bandpass
+integrate -s 10 -t 30 -w
+	10/02/2014 06:21:20 --> 10/02/2014 06:26:20  ---- integrate -s 10 -t 30 -w
+Finished 80/120 on 3C454.3.
+LST [hr]=  20.83
+lookup time: 10 2 2014 6:26
+3C454.3 is at 59.6344 degrees elevation
+observe -s 3C454.3 -t bandpass
+	10/02/2014 06:26:20 --> 10/02/2014 06:26:30  ---- observe -s 3C454.3 -t bandpass
+integrate -s 10 -t 30 -w
+	10/02/2014 06:26:30 --> 10/02/2014 06:31:30  ---- integrate -s 10 -t 30 -w
+Finished 90/120 on 3C454.3.
+LST [hr]=  20.92
+lookup time: 10 2 2014 6:31
+3C454.3 is at 60.8129 degrees elevation
+observe -s 3C454.3 -t bandpass
+	10/02/2014 06:31:30 --> 10/02/2014 06:31:40  ---- observe -s 3C454.3 -t bandpass
+integrate -s 10 -t 30 -w
+	10/02/2014 06:31:40 --> 10/02/2014 06:36:40  ---- integrate -s 10 -t 30 -w
+Finished 100/120 on 3C454.3.
+LST [hr]=  21.01
+lookup time: 10 2 2014 6:36
+3C454.3 is at 61.9911 degrees elevation
+observe -s 3C454.3 -t bandpass
+	10/02/2014 06:36:40 --> 10/02/2014 06:36:50  ---- observe -s 3C454.3 -t bandpass
+integrate -s 10 -t 30 -w
+	10/02/2014 06:36:50 --> 10/02/2014 06:41:50  ---- integrate -s 10 -t 30 -w
+Finished 110/120 on 3C454.3.
+LST [hr]=  21.09
+lookup time: 10 2 2014 6:41
+3C454.3 is at 63.1687 degrees elevation
+observe -s 3C454.3 -t bandpass
+	10/02/2014 06:41:50 --> 10/02/2014 06:42:00  ---- observe -s 3C454.3 -t bandpass
+integrate -s 10 -t 30 -w
+	10/02/2014 06:42:00 --> 10/02/2014 06:47:00  ---- integrate -s 10 -t 30 -w
+Finished 120/120 on 3C454.3.
+radecoff -r 0 -d 0
+	10/02/2014 06:47:00 --> 10/02/2014 06:47:00  ---- radecoff -r 0 -d 0
+Checking elevation of Bandpass Cal 3C84...
+LST [hr]=  21.18
+lookup time: 10 2 2014 6:47
+3C84 is at 10.8339 degrees elevation
+too low, skipping.
+radecoff -r 0 -d 0
+	10/02/2014 06:47:00 --> 10/02/2014 06:47:00  ---- radecoff -r 0 -d 0
+Checking elevation of Flux Cal Neptune...
+LST [hr]=  21.18
+lookup time: 10 2 2014 6:47
+Neptune is at 53.9179 degrees elevation
+
+#######################
+# FLUX Calibration    #
+#######################
+
+---- Observing flux0. ----
+
+LST [hr]=  21.18
+lookup time: 10 2 2014 6:47
+Neptune is at 53.9179 degrees elevation
+observe -s Neptune -t flux
+	10/02/2014 06:47:00 --> 10/02/2014 06:47:10  ---- observe -s Neptune -t flux
+tsys
+integrate -s 10 -t 30 -w
+	10/02/2014 06:47:10 --> 10/02/2014 06:52:10  ---- integrate -s 10 -t 30 -w
+Finished 10/20 on Neptune.
+LST [hr]=  21.27
+lookup time: 10 2 2014 6:52
+Neptune is at 54.5844 degrees elevation
+observe -s Neptune -t flux
+	10/02/2014 06:52:10 --> 10/02/2014 06:52:20  ---- observe -s Neptune -t flux
+integrate -s 10 -t 30 -w
+	10/02/2014 06:52:20 --> 10/02/2014 06:57:20  ---- integrate -s 10 -t 30 -w
+Finished 20/20 on Neptune.
+radecoff -r 0 -d 0
+	10/02/2014 06:57:20 --> 10/02/2014 06:57:20  ---- radecoff -r 0 -d 0
+Checking elevation of Flux Cal Uranus...
+LST [hr]=  21.35
+lookup time: 10 2 2014 6:57
+Uranus is at 35.3986 degrees elevation
+
+#######################
+# FLUX Calibration    #
+#######################
+
+---- Observing flux1. ----
+
+LST [hr]=  21.35
+lookup time: 10 2 2014 6:57
+Uranus is at 35.3986 degrees elevation
+observe -s Uranus -t flux
+	10/02/2014 06:57:20 --> 10/02/2014 06:57:30  ---- observe -s Uranus -t flux
+tsys
+integrate -s 10 -t 30 -w
+	10/02/2014 06:57:30 --> 10/02/2014 07:02:30  ---- integrate -s 10 -t 30 -w
+Finished 10/20 on Uranus.
+LST [hr]=  21.44
+lookup time: 10 2 2014 7:2
+Uranus is at 36.5657 degrees elevation
+observe -s Uranus -t flux
+	10/02/2014 07:02:30 --> 10/02/2014 07:02:40  ---- observe -s Uranus -t flux
+integrate -s 10 -t 30 -w
+	10/02/2014 07:02:40 --> 10/02/2014 07:07:40  ---- integrate -s 10 -t 30 -w
+Finished 20/20 on Uranus.
+----- main science target observe loop -----
+
+#############
+# Main Loop #
+#############
+Loop No.= 1
+LST [hr]=  21.52
+
+###########################
+# Initial Elevation Check #
+###########################
+
+Checking the elevation of the targets!
+Mrk590 is at 17.5378 degrees elevation
+lookup time: 10 2 2014 7:7
+0224+069 is at 17.2869 degrees elevation
+
+---- Observing Gain Calibrator (Loop = 1) ----
+lookup time: 10 2 2014 7:7
+0224+069 is at 17.2869 degrees elevation
+observe -s 0224+069 -R 0 -D 0
+	10/02/2014 07:07:40 --> 10/02/2014 07:07:50  ---- observe -s 0224+069 -R 0 -D 0
+tsys
+integrate -s 4 -t 30 -w
+	10/02/2014 07:07:50 --> 10/02/2014 07:09:50  ---- integrate -s 4 -t 30 -w
+LST [hr]=  21.56
+
+---- Observing Target Source (Loop = 1) ----
+
+Mrk590 is at 18.0072 degrees elevation
+observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+	10/02/2014 07:09:50 --> 10/02/2014 07:10:00  ---- observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+tsys
+integrate -s 30 -t 30 -w
+	10/02/2014 07:10:00 --> 10/02/2014 07:25:00  ---- integrate -s 30 -t 30 -w
+Loop No.= 2
+LST [hr]=  21.81
+
+---- Observing Gain Calibrator (Loop = 2) ----
+lookup time: 10 2 2014 7:25
+0224+069 is at 21.5314 degrees elevation
+observe -s 0224+069 -R 0 -D 0
+	10/02/2014 07:25:00 --> 10/02/2014 07:25:10  ---- observe -s 0224+069 -R 0 -D 0
+tsys
+integrate -s 4 -t 30 -w
+	10/02/2014 07:25:10 --> 10/02/2014 07:27:10  ---- integrate -s 4 -t 30 -w
+LST [hr]=  21.85
+
+---- Observing Target Source (Loop = 2) ----
+
+Mrk590 is at 22.2234 degrees elevation
+observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+	10/02/2014 07:27:10 --> 10/02/2014 07:27:20  ---- observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+tsys
+integrate -s 30 -t 30 -w
+	10/02/2014 07:27:20 --> 10/02/2014 07:42:20  ---- integrate -s 30 -t 30 -w
+Loop No.= 3
+LST [hr]=  22.10
+
+---- Observing Gain Calibrator (Loop = 3) ----
+lookup time: 10 2 2014 7:42
+0224+069 is at 25.5399 degrees elevation
+observe -s 0224+069 -R 0 -D 0
+	10/02/2014 07:42:20 --> 10/02/2014 07:42:30  ---- observe -s 0224+069 -R 0 -D 0
+tsys
+integrate -s 4 -t 30 -w
+	10/02/2014 07:42:30 --> 10/02/2014 07:44:30  ---- integrate -s 4 -t 30 -w
+LST [hr]=  22.14
+
+---- Observing Target Source (Loop = 3) ----
+
+Mrk590 is at 26.1899 degrees elevation
+observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+	10/02/2014 07:44:30 --> 10/02/2014 07:44:40  ---- observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+tsys
+integrate -s 30 -t 30 -w
+	10/02/2014 07:44:40 --> 10/02/2014 07:59:40  ---- integrate -s 30 -t 30 -w
+Loop No.= 4
+LST [hr]=  22.39
+
+---- Observing Gain Calibrator (Loop = 4) ----
+lookup time: 10 2 2014 7:59
+0224+069 is at 29.5455 degrees elevation
+observe -s 0224+069 -R 0 -D 0
+	10/02/2014 07:59:40 --> 10/02/2014 07:59:50  ---- observe -s 0224+069 -R 0 -D 0
+tsys
+integrate -s 4 -t 30 -w
+	10/02/2014 07:59:50 --> 10/02/2014 08:01:50  ---- integrate -s 4 -t 30 -w
+LST [hr]=  22.43
+
+---- Observing Target Source (Loop = 4) ----
+
+Mrk590 is at 30.1366 degrees elevation
+observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+	10/02/2014 08:01:50 --> 10/02/2014 08:02:00  ---- observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+tsys
+integrate -s 30 -t 30 -w
+	10/02/2014 08:02:00 --> 10/02/2014 08:17:00  ---- integrate -s 30 -t 30 -w
+Loop No.= 5
+LST [hr]=  22.68
+
+---- Observing Gain Calibrator (Loop = 5) ----
+lookup time: 10 2 2014 8:17
+0224+069 is at 33.7802 degrees elevation
+observe -s 0224+069 -R 0 -D 0
+	10/02/2014 08:17:00 --> 10/02/2014 08:17:10  ---- observe -s 0224+069 -R 0 -D 0
+tsys
+integrate -s 4 -t 30 -w
+	10/02/2014 08:17:10 --> 10/02/2014 08:19:10  ---- integrate -s 4 -t 30 -w
+LST [hr]=  22.72
+
+---- Observing Target Source (Loop = 5) ----
+
+Mrk590 is at 34.2876 degrees elevation
+observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+	10/02/2014 08:19:10 --> 10/02/2014 08:19:20  ---- observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+tsys
+integrate -s 30 -t 30 -w
+	10/02/2014 08:19:20 --> 10/02/2014 08:34:20  ---- integrate -s 30 -t 30 -w
+Loop No.= 6
+LST [hr]=  22.97
+
+---- Observing Gain Calibrator (Loop = 6) ----
+lookup time: 10 2 2014 8:34
+0224+069 is at 37.7694 degrees elevation
+observe -s 0224+069 -R 0 -D 0
+	10/02/2014 08:34:20 --> 10/02/2014 08:34:30  ---- observe -s 0224+069 -R 0 -D 0
+tsys
+integrate -s 4 -t 30 -w
+	10/02/2014 08:34:30 --> 10/02/2014 08:36:30  ---- integrate -s 4 -t 30 -w
+LST [hr]=  23.01
+
+---- Observing Target Source (Loop = 6) ----
+
+Mrk590 is at 38.1741 degrees elevation
+observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+	10/02/2014 08:36:30 --> 10/02/2014 08:36:40  ---- observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+tsys
+integrate -s 30 -t 30 -w
+	10/02/2014 08:36:40 --> 10/02/2014 08:51:40  ---- integrate -s 30 -t 30 -w
+Loop No.= 7
+LST [hr]=  23.26
+
+---- Observing Gain Calibrator (Loop = 7) ----
+lookup time: 10 2 2014 8:51
+0224+069 is at 41.7442 degrees elevation
+observe -s 0224+069 -R 0 -D 0
+	10/02/2014 08:51:40 --> 10/02/2014 08:51:50  ---- observe -s 0224+069 -R 0 -D 0
+tsys
+integrate -s 4 -t 30 -w
+	10/02/2014 08:51:50 --> 10/02/2014 08:53:50  ---- integrate -s 4 -t 30 -w
+LST [hr]=  23.30
+
+---- Observing Target Source (Loop = 7) ----
+
+Mrk590 is at 42.0184 degrees elevation
+observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+	10/02/2014 08:53:50 --> 10/02/2014 08:54:00  ---- observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+tsys
+integrate -s 30 -t 30 -w
+	10/02/2014 08:54:00 --> 10/02/2014 09:09:00  ---- integrate -s 30 -t 30 -w
+Loop No.= 8
+LST [hr]=  23.55
+
+---- Observing Gain Calibrator (Loop = 8) ----
+lookup time: 10 2 2014 9:9
+0224+069 is at 45.9305 degrees elevation
+observe -s 0224+069 -R 0 -D 0
+	10/02/2014 09:09:00 --> 10/02/2014 09:09:10  ---- observe -s 0224+069 -R 0 -D 0
+tsys
+integrate -s 4 -t 30 -w
+	10/02/2014 09:09:10 --> 10/02/2014 09:11:10  ---- integrate -s 4 -t 30 -w
+LST [hr]=  23.59
+
+---- Observing Target Source (Loop = 8) ----
+
+Mrk590 is at 46.0293 degrees elevation
+observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+	10/02/2014 09:11:10 --> 10/02/2014 09:11:20  ---- observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+tsys
+integrate -s 30 -t 30 -w
+	10/02/2014 09:11:20 --> 10/02/2014 09:26:20  ---- integrate -s 30 -t 30 -w
+Loop No.= 9
+LST [hr]=  23.84
+
+---- Observing Gain Calibrator (Loop = 9) ----
+lookup time: 10 2 2014 9:26
+0224+069 is at 49.8547 degrees elevation
+observe -s 0224+069 -R 0 -D 0
+	10/02/2014 09:26:20 --> 10/02/2014 09:26:30  ---- observe -s 0224+069 -R 0 -D 0
+tsys
+integrate -s 4 -t 30 -w
+	10/02/2014 09:26:30 --> 10/02/2014 09:28:30  ---- integrate -s 4 -t 30 -w
+LST [hr]=  23.88
+
+---- Observing Target Source (Loop = 9) ----
+
+Mrk590 is at 49.7435 degrees elevation
+observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+	10/02/2014 09:28:30 --> 10/02/2014 09:28:40  ---- observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+tsys
+integrate -s 30 -t 30 -w
+	10/02/2014 09:28:40 --> 10/02/2014 09:43:40  ---- integrate -s 30 -t 30 -w
+Loop No.= 10
+LST [hr]=   0.13
+
+---- Observing Gain Calibrator (Loop = 10) ----
+lookup time: 10 2 2014 9:43
+0224+069 is at 53.7389 degrees elevation
+observe -s 0224+069 -R 0 -D 0
+	10/02/2014 09:43:40 --> 10/02/2014 09:43:50  ---- observe -s 0224+069 -R 0 -D 0
+tsys
+integrate -s 4 -t 30 -w
+	10/02/2014 09:43:50 --> 10/02/2014 09:45:50  ---- integrate -s 4 -t 30 -w
+LST [hr]=   0.17
+
+---- Observing Target Source (Loop = 10) ----
+
+Mrk590 is at 53.3630 degrees elevation
+observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+	10/02/2014 09:45:50 --> 10/02/2014 09:46:00  ---- observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+tsys
+integrate -s 30 -t 30 -w
+	10/02/2014 09:46:00 --> 10/02/2014 10:01:00  ---- integrate -s 30 -t 30 -w
+Loop No.= 11
+LST [hr]=   0.42
+
+---- Observing Gain Calibrator (Loop = 11) ----
+lookup time: 10 2 2014 10:1
+0224+069 is at 57.7901 degrees elevation
+observe -s 0224+069 -R 0 -D 0
+	10/02/2014 10:01:00 --> 10/02/2014 10:01:10  ---- observe -s 0224+069 -R 0 -D 0
+tsys
+integrate -s 4 -t 30 -w
+	10/02/2014 10:01:10 --> 10/02/2014 10:03:10  ---- integrate -s 4 -t 30 -w
+LST [hr]=   0.46
+
+---- Observing Target Source (Loop = 11) ----
+
+Mrk590 is at 57.0562 degrees elevation
+observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+	10/02/2014 10:03:10 --> 10/02/2014 10:03:20  ---- observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+tsys
+integrate -s 30 -t 30 -w
+	10/02/2014 10:03:20 --> 10/02/2014 10:18:20  ---- integrate -s 30 -t 30 -w
+Loop No.= 12
+LST [hr]=   0.71
+
+---- Observing Gain Calibrator (Loop = 12) ----
+lookup time: 10 2 2014 10:18
+0224+069 is at 61.5325 degrees elevation
+observe -s 0224+069 -R 0 -D 0
+	10/02/2014 10:18:20 --> 10/02/2014 10:18:30  ---- observe -s 0224+069 -R 0 -D 0
+tsys
+integrate -s 4 -t 30 -w
+	10/02/2014 10:18:30 --> 10/02/2014 10:20:30  ---- integrate -s 4 -t 30 -w
+LST [hr]=   0.75
+
+---- Observing Target Source (Loop = 12) ----
+
+Mrk590 is at 60.3645 degrees elevation
+observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+	10/02/2014 10:20:30 --> 10/02/2014 10:20:40  ---- observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+tsys
+integrate -s 30 -t 30 -w
+	10/02/2014 10:20:40 --> 10/02/2014 10:35:40  ---- integrate -s 30 -t 30 -w
+Loop No.= 13
+LST [hr]=   1.00
+
+---- Observing Gain Calibrator (Loop = 13) ----
+lookup time: 10 2 2014 10:35
+0224+069 is at 65.1544 degrees elevation
+observe -s 0224+069 -R 0 -D 0
+	10/02/2014 10:35:40 --> 10/02/2014 10:35:50  ---- observe -s 0224+069 -R 0 -D 0
+tsys
+integrate -s 4 -t 30 -w
+	10/02/2014 10:35:50 --> 10/02/2014 10:37:50  ---- integrate -s 4 -t 30 -w
+LST [hr]=   1.04
+
+---- Observing Target Source (Loop = 13) ----
+
+Mrk590 is at 63.4306 degrees elevation
+observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+	10/02/2014 10:37:50 --> 10/02/2014 10:38:00  ---- observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+tsys
+integrate -s 30 -t 30 -w
+	10/02/2014 10:38:00 --> 10/02/2014 10:53:00  ---- integrate -s 30 -t 30 -w
+Loop No.= 14
+LST [hr]=   1.29
+
+---- Observing Gain Calibrator (Loop = 14) ----
+lookup time: 10 2 2014 10:53
+0224+069 is at 68.7876 degrees elevation
+observe -s 0224+069 -R 0 -D 0
+	10/02/2014 10:53:00 --> 10/02/2014 10:53:10  ---- observe -s 0224+069 -R 0 -D 0
+tsys
+integrate -s 4 -t 30 -w
+	10/02/2014 10:53:10 --> 10/02/2014 10:55:10  ---- integrate -s 4 -t 30 -w
+LST [hr]=   1.33
+
+---- Observing Target Source (Loop = 14) ----
+
+Mrk590 is at 66.3078 degrees elevation
+observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+	10/02/2014 10:55:10 --> 10/02/2014 10:55:20  ---- observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+tsys
+integrate -s 30 -t 30 -w
+	10/02/2014 10:55:20 --> 10/02/2014 11:10:20  ---- integrate -s 30 -t 30 -w
+Loop No.= 15
+LST [hr]=   1.58
+
+---- Observing Gain Calibrator (Loop = 15) ----
+lookup time: 10 2 2014 11:10
+0224+069 is at 71.9162 degrees elevation
+observe -s 0224+069 -R 0 -D 0
+	10/02/2014 11:10:20 --> 10/02/2014 11:10:30  ---- observe -s 0224+069 -R 0 -D 0
+tsys
+integrate -s 4 -t 30 -w
+	10/02/2014 11:10:30 --> 10/02/2014 11:12:30  ---- integrate -s 4 -t 30 -w
+LST [hr]=   1.62
+
+---- Observing Target Source (Loop = 15) ----
+
+Mrk590 is at 68.5402 degrees elevation
+observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+	10/02/2014 11:12:30 --> 10/02/2014 11:12:40  ---- observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+tsys
+integrate -s 30 -t 30 -w
+	10/02/2014 11:12:40 --> 10/02/2014 11:27:40  ---- integrate -s 30 -t 30 -w
+Loop No.= 16
+LST [hr]=   1.87
+
+---- Observing Gain Calibrator (Loop = 16) ----
+lookup time: 10 2 2014 11:27
+0224+069 is at 74.5653 degrees elevation
+observe -s 0224+069 -R 0 -D 0
+	10/02/2014 11:27:40 --> 10/02/2014 11:27:50  ---- observe -s 0224+069 -R 0 -D 0
+tsys
+integrate -s 4 -t 30 -w
+	10/02/2014 11:27:50 --> 10/02/2014 11:29:50  ---- integrate -s 4 -t 30 -w
+LST [hr]=   1.91
+
+---- Observing Target Source (Loop = 16) ----
+
+Mrk590 is at 70.1378 degrees elevation
+observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+	10/02/2014 11:29:50 --> 10/02/2014 11:30:00  ---- observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+tsys
+integrate -s 30 -t 30 -w
+	10/02/2014 11:30:00 --> 10/02/2014 11:45:00  ---- integrate -s 30 -t 30 -w
+Loop No.= 17
+LST [hr]=   2.16
+
+---- Observing Gain Calibrator (Loop = 17) ----
+lookup time: 10 2 2014 11:45
+0224+069 is at 76.5295 degrees elevation
+observe -s 0224+069 -R 0 -D 0
+	10/02/2014 11:45:00 --> 10/02/2014 11:45:10  ---- observe -s 0224+069 -R 0 -D 0
+tsys
+integrate -s 4 -t 30 -w
+	10/02/2014 11:45:10 --> 10/02/2014 11:47:10  ---- integrate -s 4 -t 30 -w
+LST [hr]=   2.20
+
+---- Observing Target Source (Loop = 17) ----
+
+Mrk590 is at 70.9598 degrees elevation
+observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+	10/02/2014 11:47:10 --> 10/02/2014 11:47:20  ---- observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+tsys
+integrate -s 30 -t 30 -w
+	10/02/2014 11:47:20 --> 10/02/2014 12:02:20  ---- integrate -s 30 -t 30 -w
+Loop No.= 18
+LST [hr]=   2.45
+
+---- Observing Gain Calibrator (Loop = 18) ----
+lookup time: 10 2 2014 12:2
+0224+069 is at 77.2319 degrees elevation
+observe -s 0224+069 -R 0 -D 0
+	10/02/2014 12:02:20 --> 10/02/2014 12:02:30  ---- observe -s 0224+069 -R 0 -D 0
+tsys
+integrate -s 4 -t 30 -w
+	10/02/2014 12:02:30 --> 10/02/2014 12:04:30  ---- integrate -s 4 -t 30 -w
+LST [hr]=   2.48
+
+---- Observing Target Source (Loop = 18) ----
+
+Mrk590 is at 70.8127 degrees elevation
+observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+	10/02/2014 12:04:30 --> 10/02/2014 12:04:40  ---- observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+tsys
+integrate -s 30 -t 30 -w
+	10/02/2014 12:04:40 --> 10/02/2014 12:19:40  ---- integrate -s 30 -t 30 -w
+Loop No.= 19
+LST [hr]=   2.74
+
+---- Observing Gain Calibrator (Loop = 19) ----
+lookup time: 10 2 2014 12:19
+0224+069 is at 76.6288 degrees elevation
+observe -s 0224+069 -R 0 -D 0
+	10/02/2014 12:19:40 --> 10/02/2014 12:19:50  ---- observe -s 0224+069 -R 0 -D 0
+tsys
+integrate -s 4 -t 30 -w
+	10/02/2014 12:19:50 --> 10/02/2014 12:21:50  ---- integrate -s 4 -t 30 -w
+LST [hr]=   2.77
+
+---- Observing Target Source (Loop = 19) ----
+
+Mrk590 is at 69.7868 degrees elevation
+observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+	10/02/2014 12:21:50 --> 10/02/2014 12:22:00  ---- observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+tsys
+integrate -s 30 -t 30 -w
+	10/02/2014 12:22:00 --> 10/02/2014 12:37:00  ---- integrate -s 30 -t 30 -w
+Loop No.= 20
+LST [hr]=   3.03
+
+---- Observing Gain Calibrator (Loop = 20) ----
+lookup time: 10 2 2014 12:37
+0224+069 is at 74.7441 degrees elevation
+observe -s 0224+069 -R 0 -D 0
+	10/02/2014 12:37:00 --> 10/02/2014 12:37:10  ---- observe -s 0224+069 -R 0 -D 0
+tsys
+integrate -s 4 -t 30 -w
+	10/02/2014 12:37:10 --> 10/02/2014 12:39:10  ---- integrate -s 4 -t 30 -w
+LST [hr]=   3.06
+
+---- Observing Target Source (Loop = 20) ----
+
+Mrk590 is at 67.8800 degrees elevation
+observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+	10/02/2014 12:39:10 --> 10/02/2014 12:39:20  ---- observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+tsys
+integrate -s 30 -t 30 -w
+	10/02/2014 12:39:20 --> 10/02/2014 12:54:20  ---- integrate -s 30 -t 30 -w
+Loop No.= 21
+LST [hr]=   3.32
+
+---- Observing Gain Calibrator (Loop = 21) ----
+lookup time: 10 2 2014 12:54
+0224+069 is at 72.1429 degrees elevation
+observe -s 0224+069 -R 0 -D 0
+	10/02/2014 12:54:20 --> 10/02/2014 12:54:30  ---- observe -s 0224+069 -R 0 -D 0
+tsys
+integrate -s 4 -t 30 -w
+	10/02/2014 12:54:30 --> 10/02/2014 12:56:30  ---- integrate -s 4 -t 30 -w
+LST [hr]=   3.35
+
+---- Observing Target Source (Loop = 21) ----
+
+Mrk590 is at 65.4781 degrees elevation
+observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+	10/02/2014 12:56:30 --> 10/02/2014 12:56:40  ---- observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+tsys
+integrate -s 30 -t 30 -w
+	10/02/2014 12:56:40 --> 10/02/2014 13:11:40  ---- integrate -s 30 -t 30 -w
+Loop No.= 22
+LST [hr]=   3.61
+
+---- Observing Gain Calibrator (Loop = 22) ----
+lookup time: 10 2 2014 13:11
+0224+069 is at 69.0439 degrees elevation
+observe -s 0224+069 -R 0 -D 0
+	10/02/2014 13:11:40 --> 10/02/2014 13:11:50  ---- observe -s 0224+069 -R 0 -D 0
+tsys
+integrate -s 4 -t 30 -w
+	10/02/2014 13:11:50 --> 10/02/2014 13:13:50  ---- integrate -s 4 -t 30 -w
+LST [hr]=   3.64
+
+---- Observing Target Source (Loop = 22) ----
+
+Mrk590 is at 62.6484 degrees elevation
+observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+	10/02/2014 13:13:50 --> 10/02/2014 13:14:00  ---- observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+tsys
+integrate -s 30 -t 30 -w
+	10/02/2014 13:14:00 --> 10/02/2014 13:29:00  ---- integrate -s 30 -t 30 -w
+Loop No.= 23
+LST [hr]=   3.90
+
+---- Observing Gain Calibrator (Loop = 23) ----
+lookup time: 10 2 2014 13:29
+0224+069 is at 65.4300 degrees elevation
+observe -s 0224+069 -R 0 -D 0
+	10/02/2014 13:29:00 --> 10/02/2014 13:29:10  ---- observe -s 0224+069 -R 0 -D 0
+tsys
+integrate -s 4 -t 30 -w
+	10/02/2014 13:29:10 --> 10/02/2014 13:31:10  ---- integrate -s 4 -t 30 -w
+LST [hr]=   3.93
+
+---- Observing Target Source (Loop = 23) ----
+
+Mrk590 is at 59.3182 degrees elevation
+observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+	10/02/2014 13:31:10 --> 10/02/2014 13:31:20  ---- observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+tsys
+integrate -s 30 -t 30 -w
+	10/02/2014 13:31:20 --> 10/02/2014 13:46:20  ---- integrate -s 30 -t 30 -w
+Loop No.= 24
+LST [hr]=   4.19
+
+---- Observing Gain Calibrator (Loop = 24) ----
+lookup time: 10 2 2014 13:46
+0224+069 is at 61.8198 degrees elevation
+observe -s 0224+069 -R 0 -D 0
+	10/02/2014 13:46:20 --> 10/02/2014 13:46:30  ---- observe -s 0224+069 -R 0 -D 0
+tsys
+integrate -s 4 -t 30 -w
+	10/02/2014 13:46:30 --> 10/02/2014 13:48:30  ---- integrate -s 4 -t 30 -w
+LST [hr]=   4.22
+
+---- Observing Target Source (Loop = 24) ----
+
+Mrk590 is at 55.9470 degrees elevation
+observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+	10/02/2014 13:48:30 --> 10/02/2014 13:48:40  ---- observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+tsys
+integrate -s 30 -t 30 -w
+	10/02/2014 13:48:40 --> 10/02/2014 14:03:40  ---- integrate -s 30 -t 30 -w
+Loop No.= 25
+LST [hr]=   4.48
+
+---- Observing Gain Calibrator (Loop = 25) ----
+lookup time: 10 2 2014 14:3
+0224+069 is at 58.0851 degrees elevation
+observe -s 0224+069 -R 0 -D 0
+	10/02/2014 14:03:40 --> 10/02/2014 14:03:50  ---- observe -s 0224+069 -R 0 -D 0
+tsys
+integrate -s 4 -t 30 -w
+	10/02/2014 14:03:50 --> 10/02/2014 14:05:50  ---- integrate -s 4 -t 30 -w
+LST [hr]=   4.51
+
+---- Observing Target Source (Loop = 25) ----
+
+Mrk590 is at 52.4171 degrees elevation
+observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+	10/02/2014 14:05:50 --> 10/02/2014 14:06:00  ---- observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+tsys
+integrate -s 30 -t 30 -w
+	10/02/2014 14:06:00 --> 10/02/2014 14:21:00  ---- integrate -s 30 -t 30 -w
+Loop No.= 26
+LST [hr]=   4.77
+
+---- Observing Gain Calibrator (Loop = 26) ----
+lookup time: 10 2 2014 14:21
+0224+069 is at 54.0395 degrees elevation
+observe -s 0224+069 -R 0 -D 0
+	10/02/2014 14:21:00 --> 10/02/2014 14:21:10  ---- observe -s 0224+069 -R 0 -D 0
+tsys
+integrate -s 4 -t 30 -w
+	10/02/2014 14:21:10 --> 10/02/2014 14:23:10  ---- integrate -s 4 -t 30 -w
+LST [hr]=   4.80
+
+---- Observing Target Source (Loop = 26) ----
+
+Mrk590 is at 48.5523 degrees elevation
+observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+	10/02/2014 14:23:10 --> 10/02/2014 14:23:20  ---- observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+tsys
+integrate -s 30 -t 30 -w
+	10/02/2014 14:23:20 --> 10/02/2014 14:38:20  ---- integrate -s 30 -t 30 -w
+Loop No.= 27
+LST [hr]=   5.06
+
+---- Observing Gain Calibrator (Loop = 27) ----
+lookup time: 10 2 2014 14:38
+0224+069 is at 50.1590 degrees elevation
+observe -s 0224+069 -R 0 -D 0
+	10/02/2014 14:38:20 --> 10/02/2014 14:38:30  ---- observe -s 0224+069 -R 0 -D 0
+tsys
+integrate -s 4 -t 30 -w
+	10/02/2014 14:38:30 --> 10/02/2014 14:40:30  ---- integrate -s 4 -t 30 -w
+LST [hr]=   5.09
+
+---- Observing Target Source (Loop = 27) ----
+
+Mrk590 is at 44.8126 degrees elevation
+observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+	10/02/2014 14:40:30 --> 10/02/2014 14:40:40  ---- observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+tsys
+integrate -s 30 -t 30 -w
+	10/02/2014 14:40:40 --> 10/02/2014 14:55:40  ---- integrate -s 30 -t 30 -w
+Loop No.= 28
+LST [hr]=   5.35
+
+---- Observing Gain Calibrator (Loop = 28) ----
+lookup time: 10 2 2014 14:55
+0224+069 is at 46.2375 degrees elevation
+observe -s 0224+069 -R 0 -D 0
+	10/02/2014 14:55:40 --> 10/02/2014 14:55:50  ---- observe -s 0224+069 -R 0 -D 0
+tsys
+integrate -s 4 -t 30 -w
+	10/02/2014 14:55:50 --> 10/02/2014 14:57:50  ---- integrate -s 4 -t 30 -w
+LST [hr]=   5.38
+
+---- Observing Target Source (Loop = 28) ----
+
+Mrk590 is at 41.0069 degrees elevation
+observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+	10/02/2014 14:57:50 --> 10/02/2014 14:58:00  ---- observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+tsys
+integrate -s 30 -t 30 -w
+	10/02/2014 14:58:00 --> 10/02/2014 15:13:00  ---- integrate -s 30 -t 30 -w
+Loop No.= 29
+LST [hr]=   5.64
+
+---- Observing Gain Calibrator (Loop = 29) ----
+lookup time: 10 2 2014 15:13
+0224+069 is at 42.0532 degrees elevation
+observe -s 0224+069 -R 0 -D 0
+	10/02/2014 15:13:00 --> 10/02/2014 15:13:10  ---- observe -s 0224+069 -R 0 -D 0
+tsys
+integrate -s 4 -t 30 -w
+	10/02/2014 15:13:10 --> 10/02/2014 15:15:10  ---- integrate -s 4 -t 30 -w
+LST [hr]=   5.67
+
+---- Observing Target Source (Loop = 29) ----
+
+Mrk590 is at 36.9222 degrees elevation
+observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+	10/02/2014 15:15:10 --> 10/02/2014 15:15:20  ---- observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+tsys
+integrate -s 30 -t 30 -w
+	10/02/2014 15:15:20 --> 10/02/2014 15:30:20  ---- integrate -s 30 -t 30 -w
+Loop No.= 30
+LST [hr]=   5.92
+
+---- Observing Gain Calibrator (Loop = 30) ----
+lookup time: 10 2 2014 15:30
+0224+069 is at 38.0798 degrees elevation
+observe -s 0224+069 -R 0 -D 0
+	10/02/2014 15:30:20 --> 10/02/2014 15:30:30  ---- observe -s 0224+069 -R 0 -D 0
+tsys
+integrate -s 4 -t 30 -w
+	10/02/2014 15:30:30 --> 10/02/2014 15:32:30  ---- integrate -s 4 -t 30 -w
+LST [hr]=   5.96
+
+---- Observing Target Source (Loop = 30) ----
+
+Mrk590 is at 33.0241 degrees elevation
+observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+	10/02/2014 15:32:30 --> 10/02/2014 15:32:40  ---- observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+tsys
+integrate -s 30 -t 30 -w
+	10/02/2014 15:32:40 --> 10/02/2014 15:47:40  ---- integrate -s 30 -t 30 -w
+Loop No.= 31
+LST [hr]=   6.21
+
+---- Observing Gain Calibrator (Loop = 31) ----
+lookup time: 10 2 2014 15:47
+0224+069 is at 34.0915 degrees elevation
+observe -s 0224+069 -R 0 -D 0
+	10/02/2014 15:47:40 --> 10/02/2014 15:47:50  ---- observe -s 0224+069 -R 0 -D 0
+tsys
+integrate -s 4 -t 30 -w
+	10/02/2014 15:47:50 --> 10/02/2014 15:49:50  ---- integrate -s 4 -t 30 -w
+LST [hr]=   6.25
+
+---- Observing Target Source (Loop = 31) ----
+
+Mrk590 is at 29.0955 degrees elevation
+observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+	10/02/2014 15:49:50 --> 10/02/2014 15:50:00  ---- observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+tsys
+integrate -s 30 -t 30 -w
+	10/02/2014 15:50:00 --> 10/02/2014 16:05:00  ---- integrate -s 30 -t 30 -w
+Loop No.= 32
+LST [hr]=   6.50
+
+---- Observing Gain Calibrator (Loop = 32) ----
+lookup time: 10 2 2014 16:5
+0224+069 is at 29.8575 degrees elevation
+observe -s 0224+069 -R 0 -D 0
+	10/02/2014 16:05:00 --> 10/02/2014 16:05:10  ---- observe -s 0224+069 -R 0 -D 0
+tsys
+integrate -s 4 -t 30 -w
+	10/02/2014 16:05:10 --> 10/02/2014 16:07:10  ---- integrate -s 4 -t 30 -w
+LST [hr]=   6.54
+
+---- Observing Target Source (Loop = 32) ----
+
+Mrk590 is at 24.9099 degrees elevation
+observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+	10/02/2014 16:07:10 --> 10/02/2014 16:07:20  ---- observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+tsys
+integrate -s 30 -t 30 -w
+	10/02/2014 16:07:20 --> 10/02/2014 16:22:20  ---- integrate -s 30 -t 30 -w
+Loop No.= 33
+LST [hr]=   6.79
+
+---- Observing Gain Calibrator (Loop = 33) ----
+lookup time: 10 2 2014 16:22
+0224+069 is at 25.8522 degrees elevation
+observe -s 0224+069 -R 0 -D 0
+	10/02/2014 16:22:20 --> 10/02/2014 16:22:30  ---- observe -s 0224+069 -R 0 -D 0
+tsys
+integrate -s 4 -t 30 -w
+	10/02/2014 16:22:30 --> 10/02/2014 16:24:30  ---- integrate -s 4 -t 30 -w
+LST [hr]=   6.83
+
+---- Observing Target Source (Loop = 33) ----
+
+Mrk590 is at 20.9381 degrees elevation
+observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+	10/02/2014 16:24:30 --> 10/02/2014 16:24:40  ---- observe -s Mrk590 -r 02:14:33.562 -d -00:46:00.09 -e 2000 -v 0 -R 0 -D 0
+tsys
+integrate -s 30 -t 30 -w
+	10/02/2014 16:24:40 --> 10/02/2014 16:39:40  ---- integrate -s 30 -t 30 -w
+Loop No.= 34
+LST [hr]=   7.08
+
+---- Observing Gain Calibrator (Loop = 34) ----
+lookup time: 10 2 2014 16:39
+0224+069 is at 21.8438 degrees elevation
+observe -s 0224+069 -R 0 -D 0
+	10/02/2014 16:39:40 --> 10/02/2014 16:39:50  ---- observe -s 0224+069 -R 0 -D 0
+tsys
+integrate -s 4 -t 30 -w
+	10/02/2014 16:39:50 --> 10/02/2014 16:41:50  ---- integrate -s 4 -t 30 -w
+LST [hr]=   7.12
+
+---- Observing Target Source (Loop = 34) ----
+
+Mrk590 is at 16.9523 degrees elevation
+Checking the elevation of the targets!
+Mrk590 is at 16.9523 degrees elevation
+All target sources too low.
+
+##########################
+# Final Gain Calibration #
+##########################
+
+lookup time: 10 2 2014 16:41
+0224+069 is at 21.3721 degrees elevation
+The current calibrator was just observed, skipping to the next source.
+##########################
+# End of Observing Loop  #
+##########################
+----- final flux and bandpass calibration -----
+radecoff -r 0 -d 0
+	10/02/2014 16:41:50 --> 10/02/2014 16:41:50  ---- radecoff -r 0 -d 0
+Checking elevation of Flux Cal Neptune...
+LST [hr]=   7.12
+lookup time: 10 2 2014 16:41
+Neptune is at -39.7117 degrees elevation
+too low, skipping.
+radecoff -r 0 -d 0
+	10/02/2014 16:41:50 --> 10/02/2014 16:41:50  ---- radecoff -r 0 -d 0
+Checking elevation of Flux Cal Uranus...
+LST [hr]=   7.12
+lookup time: 10 2 2014 16:41
+Uranus is at -0.3783 degrees elevation
+too low, skipping.
+radecoff -r 0 -d 0
+	10/02/2014 16:41:50 --> 10/02/2014 16:41:50  ---- radecoff -r 0 -d 0
+Checking elevation of Bandpass Cal 3C454.3...
+LST [hr]=   7.12
+lookup time: 10 2 2014 16:41
+3C454.3 is at -22.9166 degrees elevation
+too low, skipping.
+radecoff -r 0 -d 0
+	10/02/2014 16:41:50 --> 10/02/2014 16:41:50  ---- radecoff -r 0 -d 0
+Checking elevation of Bandpass Cal 3C84...
+LST [hr]=   7.12
+lookup time: 10 2 2014 16:41
+3C84 is at 38.2955 degrees elevation
+
+###########################
+# BANDPASS Calibration    #
+###########################
+
+----  Observing bpass1. ----
+
+LST [hr]=   7.12
+lookup time: 10 2 2014 16:41
+3C84 is at 38.2955 degrees elevation
+observe -s 3C84 -t bandpass
+	10/02/2014 16:41:50 --> 10/02/2014 16:42:00  ---- observe -s 3C84 -t bandpass
+tsys
+integrate -s 10 -t 30 -w
+	10/02/2014 16:42:00 --> 10/02/2014 16:47:00  ---- integrate -s 10 -t 30 -w
+Finished 10/120 on 3C84.
+LST [hr]=   7.21
+lookup time: 10 2 2014 16:47
+3C84 is at 37.1773 degrees elevation
+observe -s 3C84 -t bandpass
+	10/02/2014 16:47:00 --> 10/02/2014 16:47:10  ---- observe -s 3C84 -t bandpass
+integrate -s 10 -t 30 -w
+	10/02/2014 16:47:10 --> 10/02/2014 16:52:10  ---- integrate -s 10 -t 30 -w
+Finished 20/120 on 3C84.
+LST [hr]=   7.29
+lookup time: 10 2 2014 16:52
+3C84 is at 36.2438 degrees elevation
+observe -s 3C84 -t bandpass
+	10/02/2014 16:52:10 --> 10/02/2014 16:52:20  ---- observe -s 3C84 -t bandpass
+integrate -s 10 -t 30 -w
+	10/02/2014 16:52:20 --> 10/02/2014 16:57:20  ---- integrate -s 10 -t 30 -w
+Finished 30/120 on 3C84.
+LST [hr]=   7.38
+lookup time: 10 2 2014 16:57
+3C84 is at 35.3090 degrees elevation
+observe -s 3C84 -t bandpass
+	10/02/2014 16:57:20 --> 10/02/2014 16:57:30  ---- observe -s 3C84 -t bandpass
+integrate -s 10 -t 30 -w
+	10/02/2014 16:57:30 --> 10/02/2014 17:02:30  ---- integrate -s 10 -t 30 -w
+Finished 40/120 on 3C84.
+LST [hr]=   7.47
+lookup time: 10 2 2014 17:2
+3C84 is at 34.3731 degrees elevation
+observe -s 3C84 -t bandpass
+	10/02/2014 17:02:30 --> 10/02/2014 17:02:40  ---- observe -s 3C84 -t bandpass
+integrate -s 10 -t 30 -w
+	10/02/2014 17:02:40 --> 10/02/2014 17:07:40  ---- integrate -s 10 -t 30 -w
+Finished 50/120 on 3C84.
+LST [hr]=   7.55
+lookup time: 10 2 2014 17:7
+3C84 is at 33.4364 degrees elevation
+observe -s 3C84 -t bandpass
+	10/02/2014 17:07:40 --> 10/02/2014 17:07:50  ---- observe -s 3C84 -t bandpass
+integrate -s 10 -t 30 -w
+	10/02/2014 17:07:50 --> 10/02/2014 17:12:50  ---- integrate -s 10 -t 30 -w
+Finished 60/120 on 3C84.
+LST [hr]=   7.64
+lookup time: 10 2 2014 17:12
+3C84 is at 32.4991 degrees elevation
+observe -s 3C84 -t bandpass
+	10/02/2014 17:12:50 --> 10/02/2014 17:13:00  ---- observe -s 3C84 -t bandpass
+integrate -s 10 -t 30 -w
+	10/02/2014 17:13:00 --> 10/02/2014 17:18:00  ---- integrate -s 10 -t 30 -w
+Finished 70/120 on 3C84.
+LST [hr]=   7.72
+lookup time: 10 2 2014 17:18
+3C84 is at 31.3739 degrees elevation
+observe -s 3C84 -t bandpass
+	10/02/2014 17:18:00 --> 10/02/2014 17:18:10  ---- observe -s 3C84 -t bandpass
+integrate -s 10 -t 30 -w
+	10/02/2014 17:18:10 --> 10/02/2014 17:23:10  ---- integrate -s 10 -t 30 -w
+Finished 80/120 on 3C84.
+LST [hr]=   7.81
+lookup time: 10 2 2014 17:23
+3C84 is at 30.4361 degrees elevation
+observe -s 3C84 -t bandpass
+	10/02/2014 17:23:10 --> 10/02/2014 17:23:20  ---- observe -s 3C84 -t bandpass
+integrate -s 10 -t 30 -w
+	10/02/2014 17:23:20 --> 10/02/2014 17:28:20  ---- integrate -s 10 -t 30 -w
+Finished 90/120 on 3C84.
+LST [hr]=   7.90
+lookup time: 10 2 2014 17:28
+3C84 is at 29.4983 degrees elevation
+observe -s 3C84 -t bandpass
+	10/02/2014 17:28:20 --> 10/02/2014 17:28:30  ---- observe -s 3C84 -t bandpass
+integrate -s 10 -t 30 -w
+	10/02/2014 17:28:30 --> 10/02/2014 17:33:30  ---- integrate -s 10 -t 30 -w
+Finished 100/120 on 3C84.
+LST [hr]=   7.98
+lookup time: 10 2 2014 17:33
+3C84 is at 28.5608 degrees elevation
+observe -s 3C84 -t bandpass
+	10/02/2014 17:33:30 --> 10/02/2014 17:33:40  ---- observe -s 3C84 -t bandpass
+integrate -s 10 -t 30 -w
+	10/02/2014 17:33:40 --> 10/02/2014 17:38:40  ---- integrate -s 10 -t 30 -w
+Finished 110/120 on 3C84.
+LST [hr]=   8.07
+lookup time: 10 2 2014 17:38
+3C84 is at 27.6237 degrees elevation
+observe -s 3C84 -t bandpass
+	10/02/2014 17:38:40 --> 10/02/2014 17:38:50  ---- observe -s 3C84 -t bandpass
+integrate -s 10 -t 30 -w
+	10/02/2014 17:38:50 --> 10/02/2014 17:43:50  ---- integrate -s 10 -t 30 -w
+Finished 120/120 on 3C84.
+----- Congratulations!  This is the end of the script.  -----

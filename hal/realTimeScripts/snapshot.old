@@ -1,0 +1,125 @@
+#!/usr/local/bin/perl
+# 3 Jun 2003 NaP
+# Revised snapshot for the new guidescopes. 
+#
+# 11 Feb 2004 NaP
+# Revised for centroiding and fitsio on hal9000
+# only image display on smadata now. New format file
+# is written out for pointing data using pointingHeader ph.o
+
+use Getopt::Long;
+$Getopt::Long::autoabbrev=1;
+
+$xmin = 250;
+$xmax = 430;
+$ymin = 180;
+$ymax = 300;
+
+sub Usage(){
+    printf "Usage: snapshot -a 4 -s 200 [-x $xmin -u $ymin -y $xmax -v $ymax]\n";
+}
+
+GetOptions('antenna=i'=>\$antennaNumber,
+	   'seconds=i'=>\$exposure,
+	   'xmin=i'=>\$xmin,
+	   'ymin=i'=>\$ymin,
+	   'umax=i'=>\$xmax,
+	   'vmax=i'=>\$ymax,
+	   'help'=>\$helpFlag,
+	   'debug'=>\$verboseFlag);
+
+if ($helpFlag) {
+    &Usage;
+    exit(0);
+}
+
+if (!$exposure) {
+  &Usage;
+  die "Please specify exposure time using -s (in msec).\n";
+}
+
+@antennalist = ();
+
+# if no antenna is specified, get the antennas from project command.
+if($antennaNumber!=0) {
+    push(@antennalist,$antennaNumber);
+} else {
+    for($i=1;$i<8;$i++) {
+	$antenna_status=`value -a $i -v antenna_status`;
+	if ($antenna_status==1) { 
+	    push(@antennalist,$i); 
+	}       
+    }
+}
+
+foreach $antenna (@antennalist) {
+# the same commands now work on all the antennas 1..8
+    if ($antenna == 5) {
+	$isitc90 = 1;
+    } else {
+	$isitc90 = 0;
+    }
+# snapshotCommand is needed for Track to write into RM star-info for 
+# pointing and fits-image header.
+    $response=`snapshotCommand -a $antenna`;
+    if ($verboseFlag) {
+	print "$response\n";
+    }
+    $response=`c90cmd -a $antenna -c "snapshot -e $exposure"`;
+    if ($verboseFlag) {
+	print "$response\n";
+    }
+    ($machine,$error) = split(' ',$response);
+    if ($error == 'RPC:') {
+	printf "Error! The server 'c90control' is probably not running on %s.\n", $machine;
+    } else {
+	($junk,$filename) = split(/file=/,$response);
+	chomp($filename);
+	print "oldfilename=$filename\n";
+	printf "Filename (with mostly empty header) = %s\n",$filename;
+	$response = `c90header -a $antenna -f $filename`;
+	print "response = $response\n";
+	($newfilename,$header) = split(/\n/,$response);
+	print "newfilename=$newfilename\n";
+#	$newfilenamewithspaces=$newfilename;
+#	$newfilename=~s/ //g;
+#	`mv $newfilenamewithspaces $newfilename`;
+#	printf "New Filename (with full header) = %s\n",$newfilename;
+#	printf "Header = %s\n",$header;
+# now call fits2fit, it creates a file called fit.data in the present directory
+	printf "calling: fits2fit $newfilename $xmin $xmax $ymin $ymax\n";
+	if(($antenna==7)||($antenna==8)) {
+	    $response=`fits2fitASIAA $newfilename $xmin $xmax $ymin $ymax`;
+	} else {
+	    $response=`fits2fit $newfilename $xmin $xmax $ymin $ymax`;
+	}
+#        printf "fits2fit response = %s\n", $response;
+# now call centroid
+	$response=`centroid`;
+	printf "centroid response = %s\n", $response;
+	($xpix,$ypix,$azoff,$eloff,$azwidth,$elwidth,$azofferr,$elofferr,
+	 $azwidtherr,$elwidtherr,$rms) = split(/ /,$response);
+	($sec,$min,$hr,$mday,$mon,$year,$wday,$yday,$isdst) = gmtime(time());
+	$year -= 100;
+	$year += 2000;
+	$mon += 1;
+	$logfile = sprintf("/data/engineering/opoint/ant%d/%04d%02d%02d",
+			   $antenna,$year,$mon,$mday);
+	$catlogfile = sprintf(">>%s",$logfile);
+	open(FILE,$catlogfile) || die "Failed to open file = $logfile\n";
+	chmod(0666,$logfile);
+	$bias = 0;
+	$gain = 0;
+	print "Writing to logfile = $logfile\n";
+	print "header,$azoff, $eloff, $azofferr,$elofferr,$bias,$gain\n";
+	printf FILE "%soptical: %f %f %d,%f,%f,%f,%f,%d,%d\n",
+	$header, $xpix,$ypix,$isitc90, $azoff, $eloff, $azofferr,$elofferr,
+	$bias,$gain;
+	close(FILE);
+	$response = `wc $logfile`;
+#    print "Response from wc command = $response\n";
+	($lines,$words,$bytes) = split(' ',$response);
+	print "There are now $lines stars in the log file.\n";
+    }
+}
+

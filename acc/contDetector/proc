@@ -1,0 +1,28 @@
+#!/bin/perl -w
+$oldTime = 0;
+$t1=$t3=1;
+while(<>) {
+    if($oldTime == 0) {
+        ($oldTime, $oldState) = split;
+    } else {
+        ($time, $state) = split;
+#	printf "%10.6f %10.6f %1d\n", $time, $time - $oldTime, $state;
+	if($state == 6) {
+	    $state = 4;
+	}
+	if($state == 4) {
+	    $t4 = $time - $oldTime;
+	    if($t1 != 0) {
+		printf "%8.6f %8.6f %8.6f %8.6f\n", $t1, $t2, $t3, $t4;
+	    }
+	} elsif($state == 2) {
+	    $t2 = $time - $oldTime;
+	}  elsif($state == 0 && $oldState == 4) {
+	    $t1 = $time - $oldTime;
+	}  elsif($state == 0 && $oldState == 2) {
+	    $t3 = $time - $oldTime;
+	}
+	$oldTime = $time;
+	$oldState = $state;
+    }
+}

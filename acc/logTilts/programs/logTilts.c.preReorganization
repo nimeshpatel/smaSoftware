@@ -1,0 +1,208 @@
+/*     logTilts.c                                                           */
+/*     First version Feb. 13, 2000                                          */
+/*                                                                          */
+/*    This program merely reads the tilt meters, and either writes them to  */
+/* Reflective Memory.   The raw A/D values are converted to volts before    */
+/* they are written to RM.                                                  */
+/*                                                                          */
+/*    Over time, this program has been modified to read other quantities    */
+/* via the Xycom A-D board, and even some analog voltages on other A-D      */
+/* boards that only need to be flushed into reflective memory at fairly     */
+/* slow rates.                                                              */
+/*                                                                          */
+
+#include <sys/file.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/types.h>
+#include <fcntl.h>
+#include "rm.h"
+
+#define N_TILTS 4
+#define N_BOXCAR_SAMPLES 25
+
+int main(int argc, char **argv)
+{
+  int i, fD[N_TILTS+3], oFD, nRead, status;
+  int xtraFD[3];
+  int useXYCom;
+  int useXtraXYComChannels = 1; /* Record channels 16, 17 and 18 too */
+  int boxcarPtr = 0;
+  short data;
+  float oneValue;
+  unsigned loopCount = 0;
+  int antList[RM_ARRAY_SIZE];
+  float xtraFData[4], fData[N_TILTS+3], fSecond, totalPowerBoxcar;
+  float smoothedTilts[N_TILTS];
+  float boxcarData[N_BOXCAR_SAMPLES][N_TILTS];
+  char nodeName[80];
+  int debugMessagesOn;
+  double voltage;
+  long longvalue;
+  float celsius;
+  FILE *configFile;
+
+  if (argc > 1)
+    debugMessagesOn = 1;
+  else
+    debugMessagesOn = 0;
+
+  for (i = 0; i < N_TILTS; i++) {
+    int ii;
+
+    for (ii = 0; ii < N_BOXCAR_SAMPLES; ii++)
+      boxcarData[ii][i] = 0.0;
+  }
+  totalPowerBoxcar = 0.0;
+
+  configFile = fopen("/instance/configFiles/useXYComForTilts", "r");
+  if (configFile == NULL) {
+    perror("/instance/configFiles/useXYComForTilts");
+    fprintf(stderr, "Configuration file not found - aborting\n");
+    exit(-1);
+  }
+  fscanf(configFile, "%d", &useXYCom);
+  fclose(configFile);
+  if (debugMessagesOn)
+    if (useXYCom)
+      printf("I'll use the XYCom A/D\n");
+    else
+      printf("I will NOT use the XYCom A/D\n");
+
+  if (useXYCom) {
+    /*
+      Open all A/D channels:
+      Note - the way the Xycom device driver is written, each channel on the A-D
+      has a separate pseudofile in the /dev directory, named /dev/xVME564-n,
+      where n is the channel number.
+    */
+    for (i = 0; i <= (N_TILTS+2); i++) {
+      sprintf(nodeName, "/dev/xVME564-%d", i);
+      fD[i] = open(nodeName, O_RDONLY);
+      if (fD[i] < 0) {
+	perror("Open");
+	exit(-1);
+      }
+    }
+    if (useXtraXYComChannels) {
+      xtraFD[0] = open("/dev/xVME564-16", O_RDONLY);
+      xtraFD[1] = open("/dev/xVME564-17", O_RDONLY);
+      xtraFD[2] = open("/dev/xVME564-18", O_RDONLY);
+    }
+  } else {
+    sprintf(nodeName, "/dev/iPOptoAD16_6000", i);
+    oFD = open(nodeName, O_RDONLY);
+    if (oFD < 0) {
+      perror("Open");
+      exit(-1);
+    }
+  }
+  /* Initialize Reflective memory driver */
+  status = rm_open(antList);
+  if (status != RM_SUCCESS) {
+    rm_error_message(status, "rm_open()");
+    exit(-1);
+  }
+
+  /* Loop forever read'n and write'n tilts */
+  while (1) {
+    loopCount += 1;
+    if (useXYCom) {
+      for (i = 0; i <= (N_TILTS+2); i++) {
+	nRead = read(fD[i], (char *)(&data), 2);
+	if (nRead != 2)
+	  fprintf(stderr, "logTilts: Got %d bytes on channel %d instead of 2\n",
+		  nRead, i);
+	else {
+	  fData[i] = ((float)data)*10.0/32768.0;
+	  if (i < N_TILTS) {
+	    boxcarData[boxcarPtr][i] = fData[i];
+	  }
+	}
+      }
+      if (useXtraXYComChannels) {
+	for (i = 0; i < 3; i++)
+	  if (xtraFD[i] >= 0) {
+	    nRead = read(xtraFD[i], (char *)(&data), 2);
+	    if (nRead != 2)
+	      fprintf(stderr, "logTilts: Got %d bytes on xtra channel %d instead of 2\n",
+		      nRead, i);
+	    else {
+	      xtraFData[i] = ((float)data)*10.0/32768.0;
+	    }
+	  }
+	status = rm_write(RM_ANT_0, "RM_TILT_XTRA_TESTPOINTS_V4_F", &xtraFData);
+	if (status != RM_SUCCESS) {
+	  rm_error_message(status, "rm_write(RM_TILT_XTRA_TESTPOINTS_V4_F)");
+	  exit(-1);
+	}
+      }
+    } else {
+      for (i = 0; i <= (N_TILTS+1); i++) {
+	*((int *)&oneValue) = i;
+	nRead = read(oFD, (char *)(&oneValue), 4);
+	if (nRead != 4)
+	  fprintf(stderr, "logTilts: Got %d bytes on channel %d instead of 4\n",
+		  nRead, i);
+	fData[i] = -oneValue;
+	if (i < N_TILTS) {
+	  boxcarData[boxcarPtr][i] = fData[i];
+	}
+      }
+    }
+    boxcarPtr++;
+    if (boxcarPtr >= N_BOXCAR_SAMPLES)
+      boxcarPtr = 0;
+    if (!(loopCount % 10)) {
+      for (i = 0; i < N_TILTS; i++) {
+	int ii;
+	
+	smoothedTilts[i] = 0.0;
+	for (ii = 0; ii < N_BOXCAR_SAMPLES; ii++)
+	  smoothedTilts[i] += boxcarData[ii][i];
+	smoothedTilts[i] /= (float)N_BOXCAR_SAMPLES;
+      }
+      if (debugMessagesOn)
+	printf(
+	       "Writing Tilts: %5.2f %5.2f %5.2f %5.2f TP 1: %5.2f TP 2: %5.2f TP 3: %5.2f\n",
+	       smoothedTilts[0], smoothedTilts[1], smoothedTilts[2], smoothedTilts[3], fData[4], fData[5],
+	       fSecond);
+      status = rm_write(RM_ANT_0, "RM_TILT_VOLTS_V4_F", smoothedTilts);
+      if (status != RM_SUCCESS) {
+	rm_error_message(status, "rm_write(TILT_VOLTS_V4_F)");
+	exit(-1);
+      }
+      status = rm_read(RM_ANT_0, "RM_UNIX_TIME_L", &longvalue); 
+      if (status != RM_SUCCESS) {
+	rm_error_message(status, "rm_read(UNIX_TIME_L)");
+	exit(-1);
+      }
+      status = rm_write(RM_ANT_0, "RM_TILT_TIMESTAMP_L", &longvalue);
+      if (status != RM_SUCCESS) {
+	rm_error_message(status, "rm_write(TILT_TIMESTAMP_L)");
+	exit(-1);
+      }
+      celsius = fData[N_TILTS+2]*100;
+      status = rm_write(RM_ANT_0, "RM_TILT3_HI_XELEV_TEMPERATURE_F", &celsius);
+      if (status != RM_SUCCESS) {
+	rm_error_message(status, "rm_write()");
+	exit(-1);
+      }
+    }
+    usleep(10000);
+  }
+  
+  /* Should never get here; why do I bother? */
+  
+  /* Close A/D files */
+  for (i = 0; i < (N_TILTS+3); i++)
+    close(fD[i]);
+  
+  /* Shut down RM */
+  status = rm_close();
+  if (status != RM_SUCCESS) {
+    rm_error_message(status, "rm_close()");
+    exit(-1);
+  }
+  exit(0);  
+}

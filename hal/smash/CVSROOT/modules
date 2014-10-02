@@ -1,0 +1,490 @@
+# Three different line formats are valid:
+#	key	-a    aliases...
+#	key [options] directory
+#	key [options] directory files...
+#
+# Where "options" are composed of:
+#	-i prog		Run "prog" on "cvs commit" from top-level of module.
+#	-o prog		Run "prog" on "cvs checkout" of module.
+#	-e prog		Run "prog" on "cvs export" of module.
+#	-t prog		Run "prog" on "cvs rtag" of module.
+#	-u prog		Run "prog" on "cvs update" of module.
+#	-d dir		Place module in directory "dir" instead of module name.
+#	-l		Top-level directory only -- do not recurse.
+#
+# NOTE:  If you change any of the "Run" options above, you'll have to
+# release and re-checkout any working directories of these modules.
+#
+# And "directory" is a path to a directory relative to $CVSROOT.
+#
+# The "-a" option specifies an alias.  An alias is interpreted as if
+# everything on the right of the "-a" had been typed on the command line.
+#
+# You can encode a module within a module by using the special '&'
+# character to interpose another module into the current module.  This
+# can be useful for creating a module that consists of many directories
+# spread out over the entire source repository.
+
+#                  G L O B A L
+globalrpc -d rpcFiles online/lynxOS/global/rpcFiles
+
+
+#                     D O C U M E N T A T I O N
+
+manual smamanual
+
+#                     S M A S H   C O M M A N D S
+
+# Antenna commands
+smashAnts online/smash/antennas
+realTimeScripts online/lynxOS/applications/hal/realTimeScripts
+
+# SMASH commands controlling the SMA/MIT Correlator:
+correlatorSMASH online/smash/correlator
+
+#             M O D U L E S   F O R   S H A R E D   F I L E S
+
+# Physical and Astronomical constants:
+astrophys -d sharedHeaders online/sharedFiles/headers astrophys.h
+
+# Files describing array geometry, antenna location, reference position, etc:
+configFiles -d configFiles online/sharedFiles/configurationFiles
+
+# Layout of variables in Reflective Memory (OBSOLETE!):
+reflectiveMemory online/sharedFiles/reflectiveMemory
+
+
+#    N O R M A L   M O D U L E S   L I S T E D   A L P H A B E T I C A L L Y
+
+
+#      L Y N X O S   S Y S T E M   F I L E S
+
+# etcetera directory
+lynxOSetc -d etc online/lynxOS/etc
+
+#      C O M M O N   L Y N X O S   C O D E
+
+# Master Makefile and rc files for code shared among all PPCs
+commonMain -d main online/lynxOS/common/main
+
+# Configuration Files
+commonConfig -d configFiles online/lynxOS/common/configFiles
+
+# Common header files
+commonInclude -d include online/lynxOS/common/include
+
+# Useful functions
+commonFunctions -d functions online/lynxOS/common/functions
+
+# Utilities
+commonUtility -d utility online/lynxOS/common/utility
+
+# PPC watchdog timer
+watchdog online/lynxOS/common/watchdog
+
+# Code to redirect sdterr to log file
+stderr online/lynxOS/common/stderr
+
+# IF/LO power level server (runs on m5 and antennas)
+iFServer online/lynxOS/common/iFServer
+
+# reflective memory driver
+reflmem online/lynxOS/common/reflmem
+
+# dish thermometer definitions
+thermometry online/lynxOS/common/thermometry
+
+# simplified version of Truetime VME-SG2 driver
+vme_sg_simple online/lynxOS/common/vme_sg_simple
+
+# distributed shared memory system
+dsm online/lynxOS/global/dsm
+
+# Program to run daemons in the sma LynxOS computers
+smainit online/lynxOS/common/smainit
+
+# Driver of an exclusive open device to assure no more than one
+# instance of each program type
+exclusive online/lynxOS/common/exclusive
+
+# Program for monitoring PowerPC chip temperatures
+ppcTemp online/lynxOS/common/ppcTemp
+
+# Program to take a censu of the IP Modules on a system
+iPCensus online/lynxOS/common/iPCensus
+
+# Standalone mail sending function for LynxOS
+mailsend online/lynxOS/common/mailsend
+
+# list-open-files utility
+lsof online/lynxOS/common/lsof
+
+#      A N T E N N A   C O M P U T E R   L Y N X O S   C O D E
+
+# Master Makefile and rc files for "acc" class PPCs
+accMain -d main online/lynxOS/applications/acc/main
+
+# Nimesh's antenna tracking code
+tracker online/lynxOS/applications/acc/tracker
+
+# Device driver for XVME-564 analog input board
+xVME564 -d xVME564 online/lynxOS/applications/acc/xVME564
+
+# Device driver for high-speed serial (for servo)
+iPOctalPlus422 -d iPOctalPlus422 online/lynxOS/applications/acc/iPOctalPlus422
+
+# Device driver for bc336 IRIG-B card
+contDetector -d contDetector online/lynxOS/applications/acc/contDetector
+
+# Device driver for continuum detector using Acromag iP480 counter
+bc336 -d bc336 online/lynxOS/applications/acc/contDetector
+
+# LynxOS driver for UniDAC_SU IP (not ported to PPC yet)
+iPDAC_SU online/lynxOS/applications/acc/iPDAC_SU
+
+# LynxOS driver for Opto24IO IP
+iPOpto24IO online/lynxOS/applications/acc/iPOpto24IO
+
+# PPC LynxOS driver for IEEE 488 (GPIB):
+iP488 online/lynxOS/applications/acc/iP488
+
+# PPC LynxOS driver for IP Octal 232
+iPOctal232 online/lynxOS/applications/acc/iPOctal232
+
+# PPC LynxOS driver for IP Octal 485
+iPOctal485 online/lynxOS/applications/acc/iPOctal485
+
+# PPC LynxOS driver for IP Opto A/D 16
+iPOptoAD16 online/lynxOS/applications/acc/iPOptoAD16
+
+# PPC LynxOS driver for IP Opto D/A 16
+iPOptoDA16 online/lynxOS/applications/acc/iPOptoDA16
+
+# LynxOS driver for plain vanilla UniDig IP (not ported to PPC yet)
+iPUniDig online/lynxOS/applications/acc/iPUniDig
+
+# PPC LynxOS driver for iPUniDig-E
+iPUniDig_E online/lynxOS/applications/acc/iPUniDig_E
+
+# PPC LynxOS driver for iPUniDig-D
+iPUniDig_D online/lynxOS/applications/acc/iPUniDig_D
+
+# YIG tuning code for antenna computer:
+accYIG -d accYIG online/lynxOS/applications/acc/accYIG &astrophys &configFiles
+
+# Tilt meter logging code
+logTilts -d logTilts online/lynxOS/applications/acc/logTilts
+
+# Obsolete YIG tuning code which may still be of interest:
+yIGTune online/lynxOS/applications/acc/yIGTune
+
+# Server for OVRO-style displays of antenna info:
+antOVROServer online/lynxOS/applications/acc/antOVROServer
+
+# Code to monitor cryostat temperature and pressure
+cryoCode online/lynxOS/applications/acc/cryoCode
+
+# Development area for the new digital velocity servo board, including code
+# for the embedded microcontroller and the Palm pilot
+newServo online/lynxOS/applications/acc/newServo
+
+# Development area for the receiver HEMT stabilization servo
+themtServo online/lynxOS/applications/acc/themtServo
+# Data analysis code for themt data
+sppIDL online/lynxOS/applications/storage/sppIDL
+
+# code to tune the SIS receivers and LO chains, and move mirrors.
+# also contains GPIB code to talk to most test equipment in the Rx lab
+rxCode online/lynxOS/applications/acc/rxCode
+
+# contains linux drivers for Electrim CCD and for the PC104 Linux machine with
+# its associated I/O devices
+optelCode online/linux/optelCode
+
+soundServer online/linux/soundServer
+
+# non-servo-related palm pilot code (for mixer & optics boards)
+palmCode online/lynxOS/applications/acc/palmCode
+
+# development for the program servo which does command shaping and
+# the position loops for the drive system
+servo online/lynxOS/applications/acc/servo
+
+# Driver for the Heidenhain RCN823 encoders using their EnDat
+# interface.
+endat online/lynxOS/applications/acc/endat
+
+# Driver for the ACC encoders interfaced through a Unidig-D and John's
+# custom interface.
+iPEncoder online/lynxOS/applications/acc/iPEncoder
+
+#Daemon for running the deice system on each antenna
+deiced online/lynxOS/applications/acc/deiced
+
+#SMASH control for deiced and monitor
+deice online/lynxOS/applications/hal/smash/deice
+
+#SMASH control for antennaWait
+smashUtilities online/lynxOS/applications/hal/smash/utilities
+
+# SMAsh commands for the choppers
+smashChopper online/lynxOS/applications/hal/smash/chopper
+tekxterm online/lynxOS/applications/hal/smash/tekxterm
+
+
+# Script input version of the program servo which does command shaping and
+# the position loops for the drive system
+tservo online/lynxOS/applications/acc/tservo
+
+# Software for the waveplate positioner computers
+wvpltCode online/linux/wvpltCode
+
+# reads the water vapor radiometers over a serial port
+wvmtake online/lynxOS/applications/acc/wvmtake
+
+#      B L O C K S   C O M P U T E R   L Y N X O S   C O D E
+
+# Master Makefile and rc files for "blocks" class PPCs
+blocksMain -d main online/lynxOS/applications/blocks/main
+
+# Code to control the 1st and 2nd correlator downconverter synthsizers:
+blocksCode -d code online/lynxOS/applications/blocks/code
+
+# New home of setMRG server code, etc
+setMRGServer -d loCode online/lynxOS/applications/blocks/loCode
+
+#      C O R R E L A T O R   C O M P U T E R   L Y N X O S   C O D E
+
+# Master Makefile and rc files for "crate" class PPCs
+crateMain -d main online/lynxOS/applications/crate/main
+
+# Correlator code which runs on the crate-controller (PPC LynxOS): OBSOLETE!
+crate online/lynxOS/applications/crate
+
+# Correlator code which runs on the crate-controller (PPC LynxOS):
+corr online/lynxOS/applications/corr
+
+# Correlator IRIG driver
+vme_sg online/lynxOS/applications/crate/vme_sg
+
+# Thermistor reading
+thermistor online/lynxOS/applications/crate/thermistor
+
+#      C O R C O N   L Y N X O S   C O D E
+
+# Master Makefile and rc files for "corcon" class PPC
+corconMain -d main online/lynxOS/applications/corcon/main
+
+checkCrateTemperatures online/lynxOS/applications/corcon/checkCrateTemperatures
+
+corr_monitor online/lynxOS/applications/corcon/corr_monitor
+
+corcon online/lynxOS/applications/corcon/
+
+corconDrivers -d drivers online/lynxOS/applications/corcon/drivers
+
+crate_power_mon online/lynxOS/applications/corcon/drivers/crate_power_mon
+
+
+#      C O R R E L A T O R   D S P   C O D E
+
+# Code for the TMS320C40 DSPs on the correlator boards:
+dSPCode online/correlator/dSPCode
+
+
+#      C O R R E L A T O R   M I C R O C O N T R O L L E R   C O D E
+
+# Microprocessor code for the Receiver Board's serial interface
+# 1999aug31 MRD added
+rb online/correlator/rb
+
+# Microprocessor code for the Correlator 2nd Down Converter's controller
+# 1999aug31 MRD added
+2nd online/correlator/2nd
+
+# Firmware for the correlator second downconverter; this code replaces
+# that in the "2nd" module
+c2dc online/correlator/c2dc
+
+#      C O R R E L A T O R   M I S C   C O D E
+
+# Code to help out with various correlator related functions
+# 1999aug31 MRD added
+crate_misc -d misc online/lynxOS/applications/crate/misc
+
+
+#      D D S   C O M P U T E R   L Y N X O S   C O D E
+
+# Master Makefile and rc files for "dds" class PPCs
+ddsMain -d main online/lynxOS/applications/dds/main
+
+# Code to control DDS synthesizers:
+dDS -d dDS online/lynxOS/applications/dds/dDS &astrophys &configFiles
+
+# PPC LynxOS driver for iPUniDig-I
+iPUniDig_I online/lynxOS/applications/dds/iPUniDig_I
+
+#      H A L   L Y N X O S   C O D E
+
+# Parser for SMAsh commands
+smapopt online/lynxOS/applications/hal/smapopt
+
+# remote antenna reset line
+accRemoteReset online/lynxOS/applications/hal/accRemoteReset
+
+#weather server
+weather online/lynxOS/applications/hal/weather
+
+# Master Makefile and rc files for "hal" class PPCs
+halMain -d main online/lynxOS/applications/hal/main
+
+#Coordinate server code
+coordinates online/lynxOS/applications/hal/coordinates
+
+# Code to calculate solar avoidance region
+solar online/lynxOS/applications/hal/solar
+
+track online/lynxOS/applications/acc/track
+continuum online/lynxOS/applications/hal/continuum
+
+# Code to calculate the frequencies for the various synthesizers:
+loReference -d loReference online/lynxOS/applications/hal/loReference
+
+# Code to gather correlator status on hal, for use by DERS:
+crateToDERS -d crateToDERS online/lynxOS/applications/hal/crateToDERS
+
+# Timoc correlator control (including device driver)
+spect online/lynxOS/applications/hal/spect
+
+# Position Server for to pass onsource/offsource/other info to MIT correlator
+positionServer online/lynxOS/applications/hal/positionServer
+
+# code to load unix time into reflective memory on hal for timestamp purposes
+timeStampCode online/lynxOS/applications/hal/timeStampCode
+
+# hal end of corr_monitor system
+corr_monitor_hal online/lynxOS/applications/hal/corr_monitor
+
+#      M R G   L Y N X O S   C O D E
+
+# Master Makefile and rc files for "mrg" class PPCs
+mrgMain -d main online/lynxOS/applications/mrg/main
+
+DERS online/hal/DERS
+
+driver_test online/test
+
+# Cheezy real-time correlator display:
+pgplotServer online/correlator/solaris/pgplot
+
+# And its successor (equally cheezy):
+
+chunkPlotter online/solaris/chunkPlotter
+
+# And its less cheezy successor
+
+corrPlotter online/solaris/corrPlotter
+
+pmac online/antennas/pmac
+
+servo_model online/test/servo
+
+spectmon online/spectmon
+
+sybase online/sybase
+
+# Code to translate raw correlator dump files to CLASS FITS format
+toFITS online/correlator/solaris/toFITS &astrophys
+
+xyc_564 online/drivers/xyc_564
+
+monitors online/OVROmonitor
+
+# Transporter Control
+xporter online/transporter
+
+# chart smadata part
+chart.smadata online/chart.smadata
+
+# chart smadata part
+chart.hal9000 online/chart.hal9000
+
+# encoderServer
+encoderServer online/lynxOS/applications/acc/encoderServer
+
+# ant1Track
+ant1Track online/lynxOS/applications/acc/ant1Track
+
+# ant4Track
+ant4Track online/lynxOS/applications/acc/ant4Track
+
+# ant2ant3track
+ant2ant3track online/lynxOS/applications/acc/ant2ant3track
+
+# electrim
+electrim online/linux/optelCode/electrim
+
+# optel4
+optel4 online/linux/optelCode/optel4
+
+# optel2and3
+optel2and3 online/miscellaneous/lynx2.4.0/optel2and3
+
+# ccdImageAnalysis
+ccdImageAnalysis offline/opticalPointing/ccdImageAnalysis
+tiltSoftware offline/tiltSoftware
+dBValueScripts offline/dBValueScripts
+
+# tool for plotting IF band with spectral lines and opacity
+smadsbplot offline/smadsbplot
+
+# orrery
+
+orrery offline/orrery
+
+# pointingModelAnalysis
+pointingModelAnalysis offline/pointingModelAnalysis
+
+# scripts for interferometric observations
+scripts online/lynxOS/applications/hal/scripts
+
+# curses monitor
+cursesmonitor online/cursesmonitor
+
+#      S T O R A G E   L Y N X O S   C O D E
+
+# Master Makefile and rc files for "storage" class PPCs
+storageMain -d main online/lynxOS/applications/storage/main
+
+# dataCatcher, writes visibilities, headers in MIR format,
+#              works with crates and mir_server on hal
+dataCatcher online/lynxOS/applications/storage/dataCatcher
+
+# mir_server, assembles info from various computers, delivers to
+#             dataCatcher, optical pointing, and DDS server
+mir_server  online/lynxOS/applications/hal/mir_server   
+
+
+#	O F F L I N E   D A T A   C A L I B R A T I O N
+# mir, Caltech/SMA MIR calibration and display package
+mir  offline/mir
+
+#	ONLINE SYNCDET
+syncdet online/syncdet
+
+#       L O G G E R
+# This module is a bit odd, because it contains both LynxOS and Solaris
+# source code
+logger online/logger
+
+# 	ONLINE CHOPPER
+chopper online/lynxOS/applications/acc/chopper
+chopperPmac online/antennas/pmac/chopperPmac
+
+# 	pointing Header object module
+pointingHeaders online/pointingHeaders
+
+#    L I N U X   M O D U L E S
+
+# Universe chip PCI_VME bridge device driver
+universe online/linux/common/universe

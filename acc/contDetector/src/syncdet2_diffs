@@ -1,0 +1,113 @@
+Index: syncdet2.c
+===================================================================
+RCS file: /usr/CVS/online/lynxOS/applications/acc/contDetector/src/syncdet2.c,v
+retrieving revision 1.25
+diff -r1.25 syncdet2.c
+2a3,5
+> 
+> Some changes made to allow the code to run on acc9 and acc10, which
+> do not have the full hardware complement.   RTM 03/26/08
+150,151d152
+< int oldDay = -1;
+< int unixTime0Today;
+153a155,156
+> int oldDay = -1;
+> int unixTime0Today;
+339a343
+> #if DO_CHOPPER_TIMING
+343a348
+> #endif /*DO_CHOPPER_TIMING */
+353d357
+< 
+413c417
+<                 &CheckDeadThread, (void *) 0)) < 0) {
+---
+> 		 &CheckDeadThread, (void *) 0)) < 0) {
+415c419
+<             "- %s\n", strerror(status));
+---
+> 	      "- %s\n", strerror(status));
+418c422
+<                 (void *) 0)) < 0) {
+---
+> 		 (void *) 0)) < 0) {
+420c424
+<             "- %s\n", strerror(status));
+---
+> 	      "- %s\n", strerror(status));
+422a427
+> 
+455c460
+<         ioctl(cdfd, CONTDET_SETMODE, &cdIoctlArg);
+---
+> 	ioctl(cdfd, CONTDET_SETMODE, &cdIoctlArg);
+489a495,498
+>         if(oldDay != sctime.yday) {
+>           GetUnixT0Today();
+>         }
+> 	unixTime = unixTime0Today + sDay;
+495a505
+>         rm_read(RM_ANT_0, "RM_UNIX_TIME_L", &unixTime);
+502a513
+>       rm_read(RM_ANT_0, "RM_UNIX_TIME_L", &unixTime);
+504c515
+<     if(choppingFlag != 0) {
+---
+>     if ((choppingFlag != 0) && (antenna < 9)) {
+566,568d576
+<         if(oldDay != sctime.yday) {
+<           GetUnixT0Today();
+<         }
+660a669
+> #if 0
+661a671
+> #endif
+721d730
+< #if 1
+724d732
+< #endif
+748d755
+< #if 1
+751d757
+< #endif
+772a779
+> #if 0
+773a781,783
+> #else
+> 	  if(shortInPosCount > 0) shortInPosCount--;
+> #endif
+885a896
+> #if 0
+886a898
+> #endif
+892c904,906
+<       i = ((curMsec+500)/1000) % 60;
+---
+>       /* Record the samples on the half second and set the timestamp to
+>        * to the time of the first sample. */
+>       i = ((curMsec+30500)/1000) % 60;
+895a910,911
+> 	int unixTimeAtStart;
+> 
+897a914
+> 	unixTimeAtStart = unixTime - 59;
+899c916
+<                     "RM_SYNCDET2_1SEC_SAMPLES_TIMESTAMP_L", &unixTime);
+---
+>                     "RM_SYNCDET2_1SEC_SAMPLES_TIMESTAMP_L", &unixTimeAtStart);
+1045a1063
+> #endif /* DO_CHOPPER_TIMING */
+1057d1074
+< #endif /* DO_CHOPPER_TIMING */
+1323,1324c1340,1341
+<                   " failed status %d sem %d\n",
+<                   myCdIoctlArg.mode, myCdIoctlArg.intTime);
+---
+> 		    " failed status %d sem %d\n",
+> 		    myCdIoctlArg.mode, myCdIoctlArg.intTime);
+1330,1331c1347,1348
+<                   " semaphore released\n",
+<                   myCdIoctlArg.mode, myCdIoctlArg.intTime);
+---
+> 		    " semaphore released\n",
+> 		    myCdIoctlArg.mode, myCdIoctlArg.intTime);

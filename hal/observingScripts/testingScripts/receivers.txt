@@ -1,0 +1,6 @@
+#any line with a hash in is treated as a comment
+name code high#
+230  A1	  0
+345  B1	  0
+400  C	  1
+600  E	  1

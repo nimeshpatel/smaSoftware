@@ -1,0 +1,87 @@
+pl v
+fitlin v
+fitlin x v
+pl var
+list set
+pl D_v
+print {var_a}
+pl D_a
+pl D_v
+print {a}
+print D_v
+print {D_v}
+help print
+print t.txt {D_v}
+quit
+data t1
+read { h 1 v 6}
+set x=(h-h[0])*3600
+pl v
+data t1
+read { ms 13 v 6}
+set x=ms/1000
+pl t1
+pl v
+read { ms 13 v 6}
+set x=ms/1000
+pl v
+set x=(ms - ms[0])/1000
+pl v
+quit
+data t1
+read {ms 13 v 6 }
+set x=(ms - ms[0])/1000
+pl v
+quit
+data t1
+read {ms 13 v 6 }
+set x=(ms - ms[0])/1000
+pl v
+read {ms 13 v 6 }
+set x=(ms - ms[0])/1000
+pl v
+read {ms 13 v 6 }
+set x=(ms - ms[0])/1000
+pl v
+print {ms[0]}
+read {ms 13 v 6 }
+set x=(ms - ms[0])/1000
+pl v
+plf r3var.ps
+pl v
+ylabel Ant3 lo rx output
+xlabel time (sec.)
+quit
+data vanestab1
+read {x 1 r 5 }
+pl r
+quit
+data vanestab1
+read {x 1 r 5 }
+pl r
+data longstab
+read {x 1 r 5 }
+pl r
+plf longstab.ps
+pl r
+quit
+data a3stab1
+read {x 1 r 5 }
+pl r
+data a4stab1
+read {x 1 r 5 }
+pl r
+quit
+data a3_345stab2
+read {x 1 r 5 }
+pl r
+data a3_345stab2
+read {x 1 r 5 }
+pl r
+read {x 1 r 5 }
+pl r
+read {x 1 r 5 }
+pl r
+read {x 1 r 5 }
+pl r
+quit

@@ -1,0 +1,33 @@
+#!/usr/bin/perl
+# perl script SMAsh command for specifying optical mode for refraction
+
+sub Usage() {
+  print "Usage: optical [-a 4..6]\n";
+  print "Omit the antenna flag to give the command to all the antennas in the project.\n";
+}
+ 
+use Getopt::Long;
+use FileHandle;
+$Getopt::Long::autoabbrev=1;
+GetOptions('antenna=s'=>\$antennaString);
+$spaceDelimited = `parseAntennaList $antennaString`;
+@antennalist = sort(split(' ',$spaceDelimited));
+$numberAntennas = $#antennalist+1;
+printf "number of antennas = %d\n", $numberAntennas;
+if ($numberAntennas == 0) {
+# no antenna was specified, so do them all
+    for ($i=1;$i<=8;$i++) {
+	$antenna_status=`value -a $i -v antenna_status`;
+	if ($antenna_status==1) { 
+	    push(@antennalist,$i); 
+	}       
+    }
+}
+
+foreach $antennaNumber (@antennalist) {
+    print "Setting antenna $antennaNumber to optical mode\n";
+    $response=`trackCommand -a $antennaNumber -c 4`;
+    if ($response ne "") {
+	print "$response\n";
+    }
+}

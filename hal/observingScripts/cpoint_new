@@ -1,0 +1,659 @@
+#!/usr/local/bin/perl
+# 11 Jul 2005 NAP
+# a version of rscan that does online fitting and application of
+# pointing offsets from continuum scans. 
+#
+# for historical comments on the parent script, please see rscan
+
+# differences from rscan:
+# - only one pair of scans is made, and always a pair, az followed by el scan.
+# - the option for ports to select continuum channels is frozen to 7,8
+#   to use syncdet2's continuum channels (thus, syncdet2 needs to be running).
+# - scans are always made in the same direction. 
+
+# this is needed for spawning and killing recordContinuum
+
+#I've lost track of what cpoint version I'm on, but this one is up to date with all the updates through fast file finding.
+#New in this version: cpoint no longers needs any arrguments to run, see the help and documentation for more information.
+#I've also reenstated the sleep statements that were taken out months ago to combat the az offsets not always updating.
+#-REH 1/16/09
+
+#Fixed to work properly with projectLockout  -REH 11/5/09
+#I added a few new options to reduce the number of different cpoint scripts.  -REH 10/22/10
+
+use IPC::Open2;
+
+#Initialization
+$unixtime = 0;
+$azminoffset=-110.;
+$azmaxoffset=110.;
+$elminoffset=-110.;
+$elmaxoffset=110.;
+$beamthrow=-45.;
+$offsetUnit=2.0;
+$azoffsetUnit=0.0;
+$eloffsetUnit=0.0;
+$pid=$$;
+$antennawaitarcsec=4.0;
+print "process id = $pid\n";
+#interrupt
+$SIG{INT}=\&Pause;
+use Getopt::Long;
+$Getopt::Long::autoabbrev=1;
+$ports = "7,8";
+$times=1;
+$directions="";
+$updateOffsets = 0;
+
+sub Usage(){
+printf "cpoint can now be run without any options.  In this state it behaves like 
+these options were given: -s (current source) -c -u l -q.
+options:
+-s (give cpoint a source, otherwise it will use the current source)
+-c or -p (chopping or positional, use one or the other, it defaults to -c)
+-u (l, h or n,  update the offsets for lows, highs, or nothing, defaults to the lows)
+-q (ask before implementing offsets, default is on)
+-a (antenna list)
+-b (az starting offset, default: %d)
+-e (az ending offset, default: %d)
+-i (el starting offset, default: %d)
+-f (el ending offset, default: %d)
+-w (antennaWait in arcsec, default: %d)
+-o (az and el increment, default: %d)
+-x (az increment, overwrites -o, default: %d)
+-y (el increment, overwrites -o, default: %d)
+-t (do not issue tsys before the scans, used if one of the hotloads isn't working)\n
+If one wishes cpoint to automatically accept the offsets without it asking
+use -u (l or h).",$azminoffset,$azmaxoffset,$elminoffset,$elmaxoffset,$antennawaitarcsec,$offsetUnit,$azoffsetUnit,$eloffsetUnit;
+
+}
+#main start
+
+foreach $i ( @ARGV ) {
+    $args = $args . $i . " ";
+}
+
+GetOptions('antenna=s'=>\$antString,'source=s'=>\$source,'position','chop','query','offsetunit=i'=>\$offsetUnit,'beginazoff=i'=>\$beginazoff,'endazoff=i'=>\$endazoff,'initialeloff=i'=>\$Begineloff,'finaleloff=i'=>\$Endeloff,'x=f'=>\$azoffsetUnit,'y=f'=>\$eloffsetUnit,'w=f'=>\$antennawaitarcsec,'updatestring=s'=>\$updateOffsetsRx,'tsys','help',);
+
+if ($opt_help) {
+    &Usage; die "\n";
+}
+
+#print "azoffsetUnit = $azoffsetUnit\n";
+#print "eloffsetUnit = $eloffsetUnit\n";
+
+if ($beginazoff ne "") { 
+    $azminoffset = $beginazoff;
+}
+if ($endazoff ne "") { 
+    $azmaxoffset = $endazoff;
+}
+if ($Begineloff ne "") { 
+    $elminoffset = $Begineloff;
+}
+if ($Endeloff ne "") { 
+    $elmaxoffset = $Endeloff;
+}
+
+
+
+if ($offsetUnit < 0 || ($offsetUnit==0 && $azoffsetUnit==0 && $eloffsetUnit==0)) {
+    &Usage;
+    die "offsetUnit (i.e the scan rate in arcsec/sec) should be an integer > 0.\n";
+}
+
+open(logfile,">>/rootfs/logs/SMAshLog");
+$line = `date -u +"%a %b %d %X %Y"`;
+chop($line);
+$user = $ENV{"USER"};
+printf logfile "%s ($user): $0 %s\n", $line, $args;
+close(logfile);
+
+@antennalist = ();
+
+$offsetCheckIterations = 5;
+
+# if no antenna is specified, get the antennas from project command.
+print "antString = $antString\n";
+$spaceDelimited = `parseAntennaList $antString`;
+@antennalist = sort(split(' ',$spaceDelimited));
+#print "@antennalist\n";
+$numberAntennas = $#antennalist+1;
+printf "number of antennas = %d\n", $numberAntennas;
+if ($numberAntennas == 0) {
+    print "Did not see -a, will search the project\n";
+    for ($i=1; $i<=8; $i++) {
+	$antenna_status=`value -a $i -v antenna_status`;
+	if ($antenna_status==1) { 
+	    push(@antennalist,$i); 
+	}       
+    }
+    $spaceDelimited = `getAntList`;
+    if($spaceDelimited == '')
+    {
+	die "projectLockout is in effect, please use -a\n";
+    }
+}
+# now compare the antenna list with the project list
+print "Comparing antenna list with the current project\n";
+for ($i=1; $i<=10; $i++) {
+    $antenna_status=`value -a $i -v antenna_status`;
+    if ($antenna_status==1) { 
+	push(@projectlist,$i); 
+    }       
+}
+if ($#projectlist == $#antennalist) {
+    $match = 1;
+    for ($i=1; $i<10; $i++) {
+	if ($projectlist[$i] != $antennalist[$i]) {
+	    $match = 0;
+	}
+    }
+    if ($match == 1) {
+	print "The specified antennas match those in the project.  Ignoring the -a option.\n";
+	$numberAntennas = 0;
+	$spaceDelimited = `getAntList`;
+    } else {
+	print "The specified antennas do not match those in the project.  Using the -a option.\n";
+    }
+}
+
+$commalist = `commaAntennaList "$spaceDelimited"`;
+chop($commalist);
+#print "commalist = $commalist\n";
+print "antenna list = @antennalist \n";
+#$sourceLabel = $source;
+#$sourceLabel =~ s/ /_/g;
+
+#  This needs to be changed to readDSM of DSM_PROJECT_PI
+#$picheck=`value -a $antennalist[0] -v project_pi`;
+#$a = index $picheck, ",";
+#if ($a != -1) {
+#    die "You cannot have commas in the Project PI field when using rscan\n";
+#}
+
+
+
+foreach $antenna (@antennalist)
+{
+    if($antenna < 1 || $antenna > 8)
+    {
+	die "Only antennas 1 - 8 can be used for cpoint";
+    }
+}
+
+#check if update flag was set for updating pointing offsets
+#This now assumes -u l and -q if neither is used.  It still works correctly if one or both show up. -RH
+if ($updateOffsetsRx ne "")  
+{
+   if(($updateOffsetsRx ne "l")&&($updateOffsetsRx ne "h")&&($updateOffsetsRx ne "n")) 
+   {
+       &Usage; die "For update offset option give either l or h.\n";
+   }
+   if(($updateOffsetsRx eq "l")||($updateOffsetsRx eq "h"))
+   {
+       $updateOffsets=1;
+   }
+   if($updateOffsetsRx eq "n")
+   {
+       $updateOffsetsRx = "";
+       $updateOffsets = 0;
+   }
+} 
+elsif(!$opt_query)
+{
+    $updateOffsetsRx = "l";
+    $updateOffsets = 1;
+    $opt_query = "1";
+}
+
+#check if q option was given- in that case, make sure u was also given.
+if ($opt_query) { 
+    if ($updateOffsets==0) { 
+	die "Please specify with -u l/h which receiver to use for updating offsets\nDon't use -q with -u n.\n";
+    }
+}
+
+
+
+#determine scan type
+#this was changed to default to -c.  It still accepts -c and -p, but not both (as it did before).  -RH
+if($opt_chop && $opt_position) 
+{
+    {&Usage;die "Please specify ONE scan type (either -p or -c)\n";}
+}
+elsif ($opt_position) 
+{
+    $chopflg = 0;
+} 
+elsif ($opt_chop) 
+{
+    $chopflg = 1;
+} 
+
+else
+{
+    $chopflg = 1;
+}	
+
+
+sub writeData() {
+    $antString="";
+    $firstant=0;
+    foreach $antenna (@antennalist) {
+	if ($firstant==0) {
+	    $antString=$antenna;
+	} else {
+	    $antString.=",$antenna";
+	}
+	$firstant++;
+    } # forloop for all antennas
+# no need to remove old files because recordContinuum will remove it before dieing
+#    `rm -f /tmp/killrecordContinuum.*`;
+#    print "Calling value -a $antennalist[0] -v unix_time\n";
+    $unixtime=`value -a $antennalist[0] -v unix_time`;
+    $command="/application/bin/recordContinuum -a $antString -c $chopflg -s $scantype -p $ports -u $unixtime";  
+    $rcpid=open2(*RH,*WH,"$command");
+    print "$command pid=$rcpid\n";
+}
+
+sub Pause() {
+    print "cpoint interrupted ";
+    sleep 1;
+    foreach $antenna (@antennalist) {
+	`prio 50 stopScan -a $antenna`;
+	do {
+	    sleep 1;
+	    $mode=`value -a $antenna -v smash_track_command`;
+	    chomp($mode);
+	} while ($mode ne "z");
+	sleep 1;
+	`azoff -a $antenna -s $azoff_0[$antenna]`;
+	sleep 1;
+	`eloff -a $antenna -s $eloff_0[$antenna]`;
+    } # for all antennas
+    print "interrupted; end\n";
+    `touch /tmp/killrecordContinuum.$unixtime`;
+    `chmod 666 /tmp/killrecordContinuum.$unixtime`;
+    waitpid $rcpid, 0;
+#    kill USR1 => $rcpid;
+
+# stop Chopping if chop_flag was set.
+	if($chopflg==1) {`stopChopping -a $antenna`;}
+
+    exit(0);
+}
+
+
+print "process id = $pid ";
+$offsetUnit=abs($offsetUnit);
+($day,$month,$year)=(localtime)[3,4,5];
+$dataFileNameLow=sprintf("%04d%02d%02d.low.cpoint",$year+1900,$month+1,$day);
+$dataFileNameHigh=sprintf("%04d%02d%02d.high.cpoint",$year+1900,$month+1,$day);
+#this section was copied from writeData, so that $antString will have the antenna list, before chopping is started
+$antString="";
+$firstant=0;
+foreach $antenna (@antennalist) {
+    if ($firstant==0) {
+	$antString=$antenna;
+    } else {
+	$antString.=",$antenna";
+    }
+    $firstant++;
+} # forloop for all antennas
+#end copied section
+if($chopflg==1) {
+	print "chopping requested... starting chopper.\n";
+	`startChopping -a $antString`;
+	}
+if(!$source)
+{
+    print "No source given, using current source.\n";
+    foreach $antenna (@antennalist)
+    {
+	$source = `shmValue -a $antenna rm_source_c34`;
+	if($source ne "")
+	{
+	    last;
+	}
+    }
+}
+print "Using $source as the source.\n";
+tpScan("az",$azminoffset,$azmaxoffset);
+sleep 1;
+tpScan("el",$elminoffset,$elmaxoffset);
+
+if($chopflg==1) {
+	print "chopping requested... stopping chopper.\n";
+	`stopChopping -a $antString`;
+	}
+    
+
+print "";
+# `playSound -f /homes/smauser/sounds/StarTrek/Boatswain_Whistle.WAV`;
+
+# added on March 24, 2006
+print "Starting readAndWriteLastCpoint\n";
+$result = `readAndWriteLastCpoint -a $commalist -u $updateOffsetsRx`;  
+
+sleep 1;
+
+#main end
+
+
+# subroutine total power scan forward
+sub tpScan {
+#Initializations
+    my $azel=shift @_;
+    my $relativeminoffset=shift @_;
+    my $relativemaxoffset=shift @_;
+    
+#debug 
+    print "antennas to be used...\n";
+    foreach $antenna (@antennalist) {
+	print "$antenna ";
+    }
+    print "\n";
+    print "ports to use = $ports\n";
+    if ($numberAntennas == 0) {
+	print "giving the offsetUnit to all antennas: offsetUnit -s $offsetUnit\n";
+	`offsetUnit -s $offsetUnit`;
+	sleep 1;
+	`radio`;
+	sleep 2;
+	print "giving the observe command to all antennas\n";
+	`observe -s $source`;
+	print "running antennaWait -e $antennawaitarcsec\n";
+	`antennaWait -e $antennawaitarcsec`;
+    } else {
+	`offsetUnit -a $antString -s $offsetUnit`;
+	sleep 2;
+	print "giving the observe command\n";
+	`observe -a $antString -s $source`;
+	sleep 2;
+	`radio -a $antString`;
+	sleep 2;
+	print "running antennaWait -a $antString -e $antennawaitarcsec\n";
+	`antennaWait -a $antString -e $antennawaitarcsec`;
+    }
+    foreach $antenna (@antennalist) {
+# need to reset these values each time since you are doing a "+=" later on
+	$minoffset = $relativeminoffset;
+	$maxoffset = $relativemaxoffset;
+	$azoff_0[$antenna]=`prio 50 value -a $antenna -v azoff`;
+	chomp($azoff_0[$antenna]);
+	$eloff_0[$antenna]=`prio 50 value -a $antenna -v eloff`;
+	chomp($eloff_0[$antenna]);
+#debug
+	print "azoff_0[$antenna]=$azoff_0[$antenna], eloff_0[$antenna]=$eloff_0[$antenna]\n";
+	
+#set up for azscan
+	if($azel eq "az") {
+	    $offset="azoff";
+	    $scantype="azscan";
+	    $minoffset+=$azoff_0[$antenna]; 
+	    $maxoffset+=$azoff_0[$antenna];
+	    `eloff -a $antenna -s $eloff_0[$antenna]`;
+	    sleep 1;
+# in case the observer has requested different speeds in the two axes
+	    if ($azoffsetUnit != 0) {
+		$azoffsetUnit = abs($azoffsetUnit);
+		print "giving the azoffsetUnit to antenna $antenna: offsetUnit -a $antenna -s $azoffsetUnit\n";
+		`offsetUnit -a $antenna -s $azoffsetUnit`;
+		sleep 1;
+	    } else {
+		print "azoffsetUnit is zero ($azoffsetUnit)\n";
+	    }
+	}
+
+#set up for elscan
+	if($azel eq "el") {
+	    $offset="eloff";
+	    $scantype="elscan";
+	    $minoffset+=$eloff_0[$antenna]; 
+	    $maxoffset+=$eloff_0[$antenna]; 
+	    if($chopflg==0) {
+		`azoff -a $antenna -s $azoff_0[$antenna]`;
+		sleep 1;
+	    }
+	    if($chopflg==1) {
+		$poslobe=$azoff_0[$antenna]+$beamthrow;
+		`azoff -a $antenna -s $poslobe`;
+		sleep 1;
+	    }
+# in case the observer has requested different speeds in the two axes
+	    if ($eloffsetUnit != 0) {
+		$eloffsetUnit = abs($eloffsetUnit);
+		print "giving the eloffsetUnit to antenna $antenna: offsetUnit -a $antenna -s $eloffsetUnit\n";
+		`offsetUnit -a $antenna -s $eloffsetUnit`;
+		sleep 1;
+	    } else {
+		print "eloffsetUnit is zero ($eloffsetUnit)\n";
+	    }
+	}
+	print "azel = $azel\n";
+	print "giving the $offset command to antenna $antenna\n";
+	`$offset -a $antenna -s $minoffset`;
+
+        $totalMinOffset[$antenna] = $minoffset;
+        $totalMaxOffset[$antenna] = $maxoffset;
+
+    } # for all antennas
+
+    if ($numberAntennas == 0) {
+        print "running antennaWait -e $antennawaitarcsec\n";
+        `antennaWait -e $antennawaitarcsec`;
+    } else {
+        print "running antennaWait -a $antString -e $antennawaitarcsec\n";
+        `antennaWait -a $antString -e $antennawaitarcsec`;
+    }
+#sleep 1;
+
+#start scan
+    
+    if ($numberAntennas == 0) 
+    {
+	if(!$opt_tsys)
+	{
+	    `tsys`;
+	}
+	`$scantype`;
+    } 
+    else 
+    {
+	if(!$opt_tsys)
+	{
+	    `tsys -a $antString`;
+	}
+	`$scantype -a $antString`;
+    } # for all antennas
+
+#take data until all antennas have completed the scan
+
+    writeData();
+
+    $scansCompleted=0;
+    sleep 4;
+    print "Waiting for $scantype to be completed\n";
+    foreach $antenna (@antennalist) { 
+	$offset_check = `prio 50 value -a $antenna -v $offset`;
+	while ($offset_check<$totalMaxOffset[$antenna]) 
+	{
+	    $offset_check = `prio 50 value -a $antenna -v $offset`;
+	    #print "$offset_check\n";
+	    #writeData();
+	    sleep 1;  # do not delete this sleep
+	}
+	print "Antenna $antenna $scantype is completed\n";
+    }
+    $scansCompleted=1;
+    if($scansCompleted==1) {
+#	`touch /tmp/killrecordContinuum`;
+	chmod 0666,  '/tmp/killrecordContinuum';  #investigate this, chmod doesn't work on hal
+	`touch /tmp/killrecordContinuum.$unixtime`;
+	chmod 0666, '/tmp/killrecordContinuum.$unixtime';
+	waitpid $rcpid, 0;
+#	kill USR1 => $rcpid;
+    }
+    print "Scans completed\n";
+    if ($numberAntennas == 0) {
+#	print "Running stopScan on all antennas\n";
+	`prio 50 stopScan`;
+	sleep 1;
+    } else {
+       `prio 50 stopScan -a $antString`;
+       sleep 1;
+    }
+    foreach $antenna (@antennalist) {
+	`eloff -a $antenna -s $eloff_0[$antenna]`;
+	sleep 1;
+	`azoff -a $antenna -s $azoff_0[$antenna]`;
+	sleep 1;
+
+	if($azel eq "az") {
+	$scanFileName=fitScanNewFile($antenna);
+	$headerLine[$antenna]=`ph $antenna $scanFileName`;
+	$headerLine[$antenna] =~ s/,$//; # get rid of last comma
+#	print "Starting the az fit\n";
+	$azfitResultsLow=`fitScan -L -f $scanFileName`;
+	($peakLow,$widthLow,$azoffLow[$antenna],$azofferrLow[$antenna])=split(' ',$azfitResultsLow);
+#	print "fitting results for low freq receiver: $azfitResultsLow\n";
+
+	    $azfitResultsHigh=`fitScan -H -f $scanFileName`;                             
+	    ($peakHigh,$widthHigh,$azoffHigh[$antenna],$azofferrHigh[$antenna])=split(' ',$azfitResultsHigh);
+#	    print "fitting results for high freq receiver: $azfitResultsLow\n";
+	
+    }
+
+
+	if($azel eq "el") {
+	    $scanFileName=fitScanNewFile($antenna);
+	    chomp($headerLine[$antenna]);
+	    $finalHeaderLine[$antenna]=$headerLine[$antenna]." $scanFileName,";
+#	    print "Starting the el fit\n";
+	    $elfitResultsLow=`fitScan -L -f $scanFileName`;
+	    ($peakLow,$widthLow,$eloffLow[$antenna],$elofferrLow[$antenna])=split(' ',$elfitResultsLow);
+#	    print "fitting results for low freq receiver: $elfitResultsLow\n";
+	    $finalLineLow[$antenna]=$finalHeaderLine[$antenna]."$azoffLow[$antenna],$azofferrLow[$antenna],$eloffLow[$antenna],$elofferrLow[$antenna]";
+		$elfitResultsHigh=`fitScan -H -f $scanFileName`;                         
+		($peakHigh,$widthHigh,$eloffHigh[$antenna],$elofferrHigh[$antenna])=split(' ',$elfitResultsHigh);
+#		print "fitting results for high freq receiver: $elfitResultsHigh\n";
+		$finalLineHigh[$antenna]=$finalHeaderLine[$antenna]."$azoffHigh[$antenna],$azofferrHigh[$antenna],$eloffHigh[$antenna],$elofferrHigh[$antenna]";  
+	    open(FILE,">>/data/engineering/cpoint/ant$antenna/$dataFileNameLow")||
+		print "Could not open /data/engineering/cpoint/ant$antenna/$dataFileNameLow\n";
+	    chmod 0666, '/data/engineering/cpoint/ant$antenna/$dataFileNameLow';
+	    printf FILE "$finalLineLow[$antenna]\n";
+	    close(FILE);
+	    open(FILE,">>/data/engineering/cpoint/ant$antenna/$dataFileNameHigh")||              
+		print "Could not open /data/engineering/cpoint/ant$antenna/$dataFileNameHigh\n";
+	    chmod 0666, '/data/engineering/cpoint/ant$antenna/$dataFileNameHigh';
+	    printf FILE "$finalLineHigh[$antenna]\n";
+	    close(FILE);
+	    
+	    $user = `whoami`;
+	    if($user eq "root\n")
+	    {
+		`chmod 0666 /data/engineering/cpoint/ant$antenna/$dataFileNameLow`;
+		`chmod 0666 /data/engineering/cpoint/ant$antenna/$dataFileNameHigh`;
+		
+	    }
+#	print "--------- Antenna: $antenna -------------------------\n";
+#	print "Results for antenna: $antenna\n";
+	    print "Ant $antenna (low): azoff = $azoffLow[$antenna]\"   eloff = $eloffLow[$antenna]\"   ";
+	    if($updateOffsetsRx eq "l")
+	    {
+		$daz = sprintf "%.2f", $azoffLow[$antenna]-$azoff_0[$antenna];
+		$del = sprintf "%.2f", $eloffLow[$antenna]-$eloff_0[$antenna];
+		print "dAz = $daz\"   dEl = $del\" \n";
+	    }
+	    else
+	    {
+		print "\n";
+	    }
+		print "      (high): azoff = $azoffHigh[$antenna]\"   eloff = $eloffHigh[$antenna]\"   ";
+		if($updateOffsetsRx eq "h")
+		{
+		    $daz = sprintf "%.2f", $azoffHigh[$antenna]-$azoff_0[$antenna];
+		    $del = sprintf "%.2f", $eloffHigh[$antenna]-$eloff_0[$antenna];
+		    print "dAz = $daz\"   dEl = $del\" \n";
+		}
+		else
+		{
+		    print "\n";
+		}
+#	print "Final High Results: $finalLineHigh[$antenna]\n";
+#	print "--------------------------- -------------------------\n";
+	    
+	    # updating offsets if requested
+	    if($updateOffsets==1) {
+		
+		if($opt_query) {
+		    print "Update offsets for antenna: $antenna? (y/n): ";
+		    $updateAnswer=<stdin>;
+		    chomp($updateAnswer);
+		    
+		    if($updateAnswer eq "y") {
+			
+			if($updateOffsetsRx eq "l") {
+			    `azoff -a $antenna -s $azoffLow[$antenna]`;
+			    `shmWrite -mobscon "DSM_CPT_AZOFF_ARCSEC_V11_D[$antenna] $azoffLow[$antenna]"`;
+			    sleep 1;
+			    `eloff -a $antenna -s $eloffLow[$antenna]`;
+			    `shmWrite -mobscon "DSM_CPT_ELOFF_ARCSEC_V11_D[$antenna] $eloffLow[$antenna]"`;
+			    sleep 1;
+			}
+			
+			if($updateOffsetsRx eq "h") {
+			    `azoff -a $antenna -s $azoffHigh[$antenna]`;
+			    `shmWrite -mobscon "DSM_CPT_AZOFF_ARCSEC_V11_D[$antenna] $azoffLow[$antenna]"`;
+			    sleep 1;
+			    `eloff -a $antenna -s $eloffHigh[$antenna]`;
+			    `shmWrite -mobscon "DSM_CPT_ELOFF_ARCSEC_V11_D[$antenna] $eloffLow[$antenna]"`;
+			    sleep 1;
+			}
+			
+		    } # apply offsets if y
+		    
+		} else {
+		    
+		    if($updateOffsetsRx eq "l") {
+			`azoff -a $antenna -s $azoffLow[$antenna]`;
+			`shmWrite -mobscon "DSM_CPT_AZOFF_ARCSEC_V11_D[$antenna] $azoffLow[$antenna]"`;
+			sleep 1;
+			`eloff -a $antenna -s $eloffLow[$antenna]`;
+			 #y on the plan page for record-keeping purposes.
+			    `shmWrite -mobscon "DSM_CPT_ELOFF_ARCSEC_V11_D[$antenna] $eloffLow[$antenna]"`;
+			sleep 1;
+		    }
+		    
+		    if($updateOffsetsRx eq "h") {
+			`azoff -a $antenna -s $azoffHigh[$antenna]`;
+			`shmWrite -mobscon "DSM_CPT_AZOFF_ARCSEC_V11_D[$antenna] $azoffLow[$antenna]"`;
+			sleep 1;
+			`eloff -a $antenna -s $eloffHigh[$antenna]`;
+			`shmWrite -mobscon "DSM_CPT_ELOFF_ARCSEC_V11_D[$antenna] $eloffLow[$antenna]"`;
+			sleep 1;
+		    }
+		    
+		}
+		
+	    }
+	}
+    }
+}
+
+#this function was modified to use the temporary file in the rpoint directory, rather then find the name
+#of the permanent file (since it is a copy of the temp file).  - RH 1/9/09
+sub fitScanNewFile($antenna) {  
+my $antenna=shift;
+my $path="/data/engineering/rpoint/ant$antenna";
+if($updateOffsetsRx eq "h")
+{
+    $filename = $path . "/tmp.dat.highfreq";
+}
+else
+{
+    $filename = $path . "/tmp.dat.lowfreq";  
+}
+return $filename;
+}

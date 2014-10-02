@@ -1,0 +1,90 @@
+void CheckTrCmds(void) {
+    double azStopPosn, elStopPosn;
+    int tmpEl, tmpElVel, tmpAz, tmpAzVel;
+
+    if(tsshm->msecCmd != tsshm->msecAccept) {
+	trAzRaw = tsshm->az;
+	trElRaw = tsshm->el;
+	if(tsshm->az != tsshm->az || tsshm->azVel != tsshm->azVel ||
+		tsshm->el != tsshm->el || tsshm->elVel != tsshm->elVel) {
+	    if(azState > STOPPING) {
+		azState = STOPPING;
+		beepCnt = 2;
+	    }
+	    if(elState > STOPPING) {
+		elState = STOPPING;
+		beepCnt = 2;
+	    }
+	    if(beepCnt == 2) {
+		sendOpMessage(OPMSG_SEVERE, 19, 60, "Received NaN from Track");
+		ErrPrintf("Track sent NaN az %.4f azVel %.4f el %.4f elVel "
+		    "%.4f\n", tsshm->az/(double)MAS, tsshm->azVel/(double)MAS,
+		    tsshm->el/(double)MAS, tsshm->elVel/(double)MAS);
+	    }
+	    trAzVelRaw = tsshm->azVel;
+	    trElVelRaw = tsshm->elVel;
+	    tsshm->msecAccept = tsshm->msecCmd;
+	    return;
+	}
+	tmpAz = tsshm->az;
+	trAzVelRaw = tsshm->azVel;
+	if(fabs(tsshm->azVel) > trAzVmax) {
+	    if(trAzVelBad == 0 ) {
+		trAzVelBad = 1;
+	    } else {
+		tmpAzVel = 0;
+	    }
+	} else {
+	    tmpAzVel = tsshm->azVel;
+	    trAzVelBad = 0;
+	}
+	if(abs(tmpAzVel) < AZ_VCRIT) {
+	    azStopPosn =  tmpAz + tmpAzVel * (AZ_MIN_HTIME/1000.);
+	} else {
+	    azStopPosn =  tmpAz + tmpAzVel * ((double)abs(tmpAzVel)) *
+		    ((AZ_MIN_HTIME/1000.) / AZ_VCRIT);
+	}
+	if(azStopPosn > tsshm->cwLimit || tmpAz > tsshm->cwLimit) {
+	    tmpAz = tsshm->cwLimit;
+	    tmpAzVel = 0;
+	} else if(azStopPosn < tsshm->ccwLimit || tmpAz < tsshm->ccwLimit) {
+	    tmpAz = tsshm->ccwLimit;
+	    tmpAzVel = 0;
+	}
+
+	tmpEl = tsshm->el;
+	trElVelRaw = tsshm->elVel;
+	if(fabs(tsshm->elVel) > trElVmax) {
+	    if(trElVelBad == 0 ) {
+		trElVelBad = 1;
+	    } else {
+		tmpElVel = 0;
+	    }
+	} else {
+	    tmpElVel = tsshm->elVel;
+	    trElVelBad = 0;
+	}
+
+	/* Make sure that we can stop before hitting an upper or lower limit */
+	if(abs(tmpElVel) < EL_VCRIT) {
+	    elStopPosn =  tmpEl + tmpElVel * (EL_MIN_HTIME/1000.);
+	} else {
+	    elStopPosn =  tmpEl + tmpElVel * ((double)abs(tmpElVel)) *
+		    ((EL_MIN_HTIME/1000.) / EL_VCRIT);
+	}
+	if(elStopPosn > tsshm->upperLimit || tmpEl > tsshm->upperLimit) {
+	    tmpEl = tsshm->upperLimit;
+	    tmpElVel = 0;
+	} else if(elStopPosn < tsshm->lowerLimit || tmpEl < tsshm->lowerLimit) {
+	    tmpEl = tsshm->lowerLimit;
+	    tmpElVel = 0;
+	}
+	trMsecCmd = tsshm->msecCmd;
+	/* Now check for sun avoidance */
+	trAz = tmpAz;
+	trAzVel = tmpAzVel;
+	trEl = tmpEl;
+	trElVel = tmpElVel;
+	tsshm->msecAccept = tsshm->msecCmd;
+    }
+}

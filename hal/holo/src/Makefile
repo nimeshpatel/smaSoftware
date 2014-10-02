@@ -1,0 +1,34 @@
+CC = gcc 
+CFLAGS = -c -g -Wall
+BIN=holon holo3 holonv
+LIBSMAPOPT=../../smapopt/libsmapopt.a
+
+all: $(BIN)
+
+holon: holon.o ttsubs.o $(COMMONLIB)/encoderClient.o ../includeFiles/holo.h
+	$(CC) -g -o holon holon.o ttsubs.o $(COMMONLIB)/encoderClient.o -I$(COMMONINC) $(COMMONLIB)/rm.o -I../includeFiles $(LIBSMAPOPT)
+
+#holonv: holonv.o $(COMMONLIB)/encoderClient.o ../includeFiles/holo.h
+#	$(CC) -g -o holonv holonv.o $(COMMONLIB)/encoderClient.o -I$(COMMONINC) $(COMMONLIB)/rm.o
+
+#holo3: holo3.o $(COMMONLIB)/encoderClient.o ../includeFiles/holo.h
+#	$(CC) -o holo3 holo3.o $(COMMONLIB)/encoderClient.o -I$(COMMONINC) $(COMMONLIB)/rm.o
+
+holon.o: holon.c ../includeFiles/holo.h
+	$(CC) $(CFLAGS) holon.c -c -I$(COMMONINC)  -I../includeFiles
+
+ttsubs.o: ttsubs.c 
+	$(CC) $(CFLAGS) ttsubs.c -c -I$(COMMONINC)  
+
+#holonv.o: holonv.c 
+#	$(CC) holonv.c -c -I$(COMMONINC) 
+
+#holo3.o: holo3.c 
+#	$(CC) -g holo3.c -c -I$(COMMONINC) 
+
+#encoderClient.o: encoderClient.c 
+#	$(CC) $(CFLAGS) -o encoderClient.o encoderClient.c -I$(COMMONINC)
+ 
+clean cleanup:
+	rm -f *.o 
+#	cp holon /application/bin/.

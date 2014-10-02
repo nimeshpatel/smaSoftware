@@ -1,0 +1,272 @@
+#!/usr/local/bin/perl
+# usage: holoSetup a1 a2 a3 
+# TK Sep 2008
+if( $#ARGV < 0 ) {die "Usage: holoSetup a1 a2 a3(ref) entry\n"; }
+$a1=shift;
+$a2=shift;
+$a3=shift;
+$entry=shift;
+print "Setting up for holography with \n antennas $a1 and $a2 as scanning antennas and \n antenna  $a3 as reference antenna\n";
+$crate_1 = "crate4";
+$crate_2 = "crate4";
+$crate_3 = "crate4";
+if ($a1 >= 7) {$crate_1="crate10";} 
+if ($a2 >= 7) {$crate_2="crate10";}
+if ($a3 >= 7) {$crate_3="crate10";}
+print "MAKE NECESSARY ANNOUNCEMENTS FOR ANTENNA MOVES \n";
+print "hit return to continue AFTER ANNOUNCEMENT/SAFETY CHECK \n";
+$answer=<STDIN>;
+goto $entry;
+START:
+#`holonDual -a $a1 -d $a2 -r $a3 -f 232.4 -m 96 -s 400`;
+# disable focusCurve
+# positionChopper
+# find bore-sight and chopper positions
+# `beacon $a1 $a2 $a3`;
+# move $a1 to beacon
+# `beacon1`;
+# move $a2 to beacon
+# `beacon2`;
+# move $a3 to beacon
+# `beaconR`;
+`disableDrivesTimeout`;
+`focusCurveOn`;
+sleep(60);
+`farChopper`;
+sleep(30);
+print "Finding bore-sight and near field chopper positions\n";
+`padidtest $a1 $a2 $a3`;
+sleep(10);
+`resume`;
+print "Moving to bore-sight and near-field chopper positions\n";
+`boreChopper $a1 $a2 $a3`;
+# exit;
+CHOOSERX:
+print "Select 230 Rx\n";
+# `tune -c "activate -l 0 -h 5 -g"`;
+# 2 Rx mode
+`tune -c "activate -g -l 0 -h 5 -b lowRx4to6 -u highRx4to6"`;
+# IF1 going to both channels
+# `restartCorrelator -s15:1024`;
+`restartCorrelator -R l -s15:512 -R h -s15:512`;
+#`tune -c activate -g -l 0 -h 5 -b lowRx4to6 -u lowRx4to6`;
+print "clean up newdds; restart dDSServer....\n";
+#`touch /global/killnewdds`;
+#print "Wait for newdds to come back ....\n";
+#while ((split('/',(split(' ',(`ping -c 5 newdds`)[9]))[3]))[1] >= 0.225 ) {print "."; sleep(0.5);}
+# the same effect as rebootong newdds is achieved by:
+`ssh newdds "\\rm /etc/initialized"`;
+#`ssh newdds touch /etc/initialized`;
+`killdaemon newdds dDSServer restart`;
+print "Issue dopplerTrack ....\n";
+`dopplerTrack -r 232.4171705 -s15 -l -h16 -n`;
+print "setMRG for beacon ....\n";
+#`setMRG -f 7.418158552`;
+`setMRG -f 7.418158700`;
+`lockYIG -a $a1,$a2,$a3`;
+`openM3`;
+#exit;
+TUNE:
+print "tune the LOs ....\n";
+`tune -c 'tune 237.6'`;
+print "tune up and optimize Rxs as needed and restart holoSetup with
+HOLOSWITCH as entry point\n"; 
+exit;
+HOLOSWITCH:
+print "\n setting up holo switch 1 ....\n";
+$answer	= `ssh corcon ~jtest/holo_switch/bin/set_holo_switch 1 $a1 $a3`;
+print "\n setting up holo switch 2 ....\n";
+$answer	= `ssh corcon ~jtest/holo_switch/bin/set_holo_switch 2 $a2 $a3`;
+print "\n checking holo switch ....\n";
+$answer	= `ssh corcon ~jtest/holo_switch/bin/read_holo_switch`;
+print "$answer";
+#exit;
+VVM1:
+print "\n checking VVM lock .... \n \n";
+open(VVM,"| vectorvoltmeter2 > holoSetupTmp");
+print(VVM "ib 8 STAT:OPER:COND?\n");
+print(VVM "ibr 8\n");
+print(VVM "ib 9 STAT:OPER:COND?\n");
+print(VVM "ibr 9\n");
+close(VVM);
+$lock1=4 & (split(' ',`tail -2 holoSetupTmp | head -1`))[6];
+$lock2=4 & (split(' ',`tail -6 holoSetupTmp | head -1`))[6];
+print "lock1 = $lock1; lock 2 = $lock2\n";
+if ($lock1 == 0) {print "VVM1 in lock \n"} else {print "VVM1 not in lock\n"};
+if ($lock2 == 0) {print "VVM2 in lock \n"} else {print "VVM2 not in lock\n"};
+if ($lock1 != 0 | $lock2 != 0) {print "VVM not in lock; exiting ...\n"; goto EXIT; };
+#exit;
+LEVELS:
+print "setIFLevels ....\n";
+$|;
+`setIFLevels -s -v`;
+print "Setting IF2 block4 anneunations to 30dB .....\n";
+`ssh crate4 c2dc_control -r 1 lower setatten . 30 . .`;
+`ssh crate4 c2dc_control -r 2 lower setatten . 30 . .`;
+`ssh crate4 c2dc_control -r 3 lower setatten . 30 . .`;
+`ssh crate4 c2dc_control -r 4 lower setatten . 30 . .`;
+`ssh crate4 c2dc_control -r 5 lower setatten . 30 . .`;
+`ssh crate4 c2dc_control -r 6 lower setatten . 30 . .`;
+`ssh crate10 c2dc_control -r 7 lower setatten . 30 . .`;
+`ssh crate10 c2dc_control -r 8 lower setatten . 30 . .`;
+print "\nReading IF2 block4 anneunations .....\n";
+$answer=`ssh crate4 c2dc_control -r 1 lower rdatten`;
+print "$answer";
+$answer=`ssh crate4 c2dc_control -r 2 lower rdatten`;
+print "$answer";
+$answer=`ssh crate4 c2dc_control -r 3 lower rdatten`;
+print "$answer";
+$answer=`ssh crate4 c2dc_control -r 4 lower rdatten`;
+print "$answer";
+$answer=`ssh crate4 c2dc_control -r 5 lower rdatten`;
+print "$answer";
+$answer=`ssh crate4 c2dc_control -r 6 lower rdatten`;
+print "$answer";
+$answer=`ssh crate10 c2dc_control -r 7 lower rdatten`;
+print "$answer";
+$answer=`ssh crate10 c2dc_control -r 8 lower rdatten`;
+print "$answer";
+
+SET:
+print "Reading and setting IF1 block4 anneunations .....\n";
+$answer=(split(' ', `ssh $crate_1 "c2dc_control -r $a1 upper rdatten"`))[6];
+print "$answer";
+$new_atten=$answer+3;
+print " ; setting attenution 3 dB higher at $new_atten\n";
+`ssh $crate_1 "c2dc_control -r $a1 upper setatten . $new_atten  . ."`;
+$answer=(split(' ', `ssh $crate_2 c2dc_control -r $a2 upper rdatten`))[6];
+print "$answer";
+$new_atten=$answer+3;
+print " ; setting attenution 3 dB higher at $new_atten\n";
+`ssh $crate_2 c2dc_control -r $a2 upper setatten . $new_atten  . .`;
+$answer=(split(' ', `ssh $crate_1 c2dc_control -r $a1 upper rdatten`))[6];
+print "$answer";
+$new_atten=$answer+3;
+print " ; setting attenution 3 dB higher at $new_atten\n";
+`ssh $crate_3 c2dc_control -r $a3 upper setatten . $new_atten  . .`;
+print "\n\n Set up vvm gains using:\n";
+print "VVM2Test a1 a2 aref VVM1 to set up vvm gains\n";
+print "if successful complete set up using:\n";
+print "holoSetup a1 a2 aref FINAL \n";
+exit;
+VVM2:
+#open(VVM,"| vectorvoltmeter2 > /dev/null");
+open(VVM, "| vectorvoltmeter2 > holoSetupTmp");
+print(VVM "vv1\n");
+print(VVM "key preset\n");
+print(VVM "dan on\n");
+print(VVM "key b\n");
+print(VVM "ib 8 FREQ:BAND 12\n");
+print(VVM "vv2\n");
+print(VVM "key preset\n");
+print(VVM "dan on\n");
+print(VVM "key b\n");
+print(VVM "ib 9 FREQ:BAND 12\n");
+print(VVM "vv1\n");
+close(VVM);
+sleep(5);
+print "setting VVM1 gain\n";
+$old=1;
+$new=40000;
+$ratio=3.2;
+while ($ratio <= 3.5 ) {
+open(VVM, "| vectorvoltmeter2 > holoSetupTmp");
+$old=(split(' ', ((`vvm_both_tt "/dev/null/" 1 1 1 1`)[1])))[7];
+print "$old\n";
+print "key up\n";
+print(VVM "vv1\n");
+$|;
+sleep(2);
+print(VVM "key up\n");
+$|;
+close(VVM);
+sleep(2);
+$new=(split(' ', ((`vvm_both_tt "/dev/null/" 1 1 1 1`)[1])))[7];
+print "$new\n";
+$ratio=$new/$old;
+print "$old, $new, $ratio\n";
+}
+print "found highest gain step; going two steps lower\n";
+open(VVM, "| vectorvoltmeter2 > holoSetupTmp");
+print(VVM "vv1\n");
+sleep(2);
+print(VVM "key down\n");
+$|;
+sleep(2);
+print(VVM "key down\n");
+$|;
+close(VVM);
+$new=(split(' ', ((`vvm_both_tt "/dev/null/" 1 1 1 1`)[1])))[7];
+print "counts: $new\n";
+print "\n";
+$|;
+print "setting VVM2 gain\n";
+$old=1;
+$new=40000;
+$ratio=3.2;
+while ($ratio <= 3.5 ) {
+open(VVM, "| vectorvoltmeter2 > holoSetupTmp");
+$old=(split(' ', ((`vvm_both_tt "/dev/null/" 1 1 1 1`)[1])))[9];
+print "$old\n";
+print "key up\n";
+print(VVM "vv2\n");
+$|;
+sleep(2);
+print(VVM "key up\n");
+$|;
+close(VVM);
+sleep(2);
+$new=(split(' ', ((`vvm_both_tt "/dev/null/" 1 1 1 1`)[1])))[9];
+$ratio=$new/$old;
+print "$old, $new, $ratio\n";
+}
+print "found highest gain step; going two steps lower\n";
+open(VVM, "| vectorvoltmeter2 > holoSetupTmp");
+print(VVM "vv2\n");
+sleep(2);
+print(VVM "key down\n");
+$|;
+sleep(2);
+print(VVM "key down\n");
+$|;
+close(VVM);
+$new=(split(' ', ((`vvm_both_tt "/dev/null/" 1 1 1 1`)[1])))[9];
+print "counts: $new\n";
+
+FINAL:
+print "Stop the correlator (intergation server)\n";
+`killdaemon $crate_1 int_server QUIT`;
+`killdaemon $crate_2 int_server QUIT`;
+`killdaemon $crate_3 int_server QUIT`;
+
+#print "Disabling secondary phase rotators\n";
+#$answer=`ssh $crate_1 c2dc_control -r $a1 upper prdis`;
+#$answer=`ssh $crate_2 c2dc_control -r $a2 upper prdis`;
+#$answer=`ssh $crate_3 c2dc_control -r $a3 upper prdis`;
+
+print "set secondary phase rotation rate to 0\n";
+$answer=`ssh $crate_1 c2dc_control -r $a1 upper setrates now . 0 . .`;
+$answer=`ssh $crate_2 c2dc_control -r $a2 upper setrates now . 0 . .`;
+$answer=`ssh $crate_3 c2dc_control -r $a3 upper setrates now . 0 . .`;
+print "Disabling ALC .....\n";
+`setIFLevels -D -1`;
+
+print "Check if encoderServer is running ..... and if not start it ...\n";
+$answer=`ssh acc$a1 "ps -ax | grep encod"`;
+if($answer !=~ /encod/) {`ssh acc$a1 "encoderServer >& /dev/null &"`;}
+$answer=`ssh acc$a2 "ps -ax | grep encod"`;
+if($answer !=~ /encod/) {`ssh acc$a2 "encoderServer >& /dev/null &"`;}
+$answer=`ssh acc$a3 "ps -ax | grep encod"`;
+if($answer !=~ /encod/) {`ssh acc$a3 "encoderServer >& /dev/null &"`;}
+
+print "Taking stability data; file: /data/engineering/holo/ant$a1/test.stab \n";
+`vvm_both_tt /data/engineering/holo/ant$a1/test.stab $a1 2000 1 1`;
+#print "plotting stability data\n";
+#`gnuplot @plotStability.gnuplot`;
+
+EXIT:
+#`enableDrivesTimeout`;
+print "!!!!! THE DRIVE TIME OUTS ARE DISABLED !!!!!";
+print "!!!!! REMEMBER TO ENABLE WHEN YOU ARE DONE !!!!";
+print "exiting ....\n";
+exit;

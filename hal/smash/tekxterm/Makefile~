@@ -1,0 +1,23 @@
+CC=gcc -Wall
+
+all: testtek $(HALBIN)/stripchart # $(ACCBIN)/stripchart
+VPATH=$(COMMONLIB)
+
+testtek: testtek.o tek_driv.o
+	$(CC) $^ -o $@
+
+testtek.o: testtek.c tek_driv.h
+	$(CC) -c $< -o $@
+
+$(HALBIN)/stripchart: stripchart.o tek_driv.o rm.o
+	$(CC) -L$(COMMONLIB) -lm $^ -lsmapopt -o $@
+
+#$(ACCBIN)/stripchart: stripchart.o tek_driv.o rm.o
+#	$(CC) -L$(COMMONLIB) -lm $^ -lsmapopt -o $@
+
+stripchart.o: stripchart.c tek_driv.h
+	$(CC) -I$(COMMONINC) -c $< -o $@
+
+tek_driv.o: tek_driv.c tek_driv.h
+	$(CC) -c $< -o $@
+#

@@ -1,0 +1,21 @@
+RM = $(COMMON)/reflmem/api
+BIN = ../../bin
+INSTANCE1BIN = ../../../../instances/acc/1/bin
+
+all: $(BIN) $(BIN)/logTilts $(BIN)/logTiltsAcc4 $(BIN)/logTilts_acc7 \
+ $(INSTANCE1BIN)/logTiltsAcc1
+
+$(BIN):
+	mkdir $(BIN)
+
+$(BIN)/logTilts: logTilts.c Makefile
+	gcc -o $(BIN)/logTilts -I$(RM) logTilts.c $(RM)/rm.o
+
+$(BIN)/logTiltsAcc4: logTiltsAcc4.c Makefile
+	gcc -o $(BIN)/logTiltsAcc4 -I$(RM) logTiltsAcc4.c $(RM)/rm.o
+
+$(INSTANCE1BIN)/logTiltsAcc1: logTiltsAcc1.c Makefile
+	gcc -o $(INSTANCE1BIN)/logTiltsAcc1 -I$(RM) logTiltsAcc1.c $(RM)/rm.o
+
+$(BIN)/logTilts_acc7: logTilts_acc7.c Makefile
+	gcc -o $(BIN)/logTilts_acc7 -I$(RM) logTilts_acc7.c $(RM)/rm.o

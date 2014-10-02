@@ -1,0 +1,2221 @@
+initializing.....
+Not running on hal9000, entering simulation mode.
+Script: ../2006-09-S042-Arp299_228_com.pl.
+	03/07/2007 05:00:00 --> 03/07/2007 05:00:00  ---- radio
+	03/07/2007 05:00:00 --> 03/07/2007 05:00:00  ---- integrate -t 30
+	03/07/2007 05:00:00 --> 03/07/2007 05:00:00  ---- project -r -p 'Chris Wilson' -d '2006-09-S042-Arp299' -i 20816
+----- initialization done, starting script -----
+
+#################################
+# FLUX and BANDPASS Calibration #
+#################################
+
+LST [hr]=   5.64
+source name = callisto 
+lookup time: 3 7 2007 5:0
+callisto is at -83.3 degrees elevation
+LST [hr]=   5.64
+source name = 3c273 
+lookup time: 3 7 2007 5:0
+3c273 is at -11.8 degrees elevation
+LST [hr]=   5.64
+source name = 1924-292 
+lookup time: 3 7 2007 5:0
+1924-292 is at -63.6 degrees elevation
+
+###########################
+# Initial Elevation Check #
+###########################
+
+LST [hr]=   5.64
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 17.7 degrees elevation
+LST [hr]=   5.64
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 17.7 degrees elevation
+---- Target source is available. ----
+LST [hr]=   5.64
+source name = 1150+497 
+lookup time: 3 7 2007 5:0
+1150+497 is at 12.2 degrees elevation
+LST [hr]=   5.64
+source name = 0954+658 
+lookup time: 3 7 2007 5:0
+0954+658 is at 27.9 degrees elevation
+LST [hr]=   5.64
+source name = 1044+719 
+lookup time: 3 7 2007 5:0
+1044+719 is at 22.5 degrees elevation
+---- At least one calibrator is available. ----
+
+#############
+# Main Loop #
+#############
+
+LST [hr]=   5.64
+Loop No.= 1
+
+---- Observing Gain Calibrator (Loop = 1) ----
+
+LST [hr]=   5.64
+source name = 0954+658 
+lookup time: 3 7 2007 5:0
+0954+658 is at 27.9 degrees elevation
+	03/07/2007 05:00:00 --> 03/07/2007 05:00:10  ---- observe -s 0954+658
+	03/07/2007 05:00:10 --> 03/07/2007 05:00:21  ---- tsys
+	03/07/2007 05:00:21 --> 03/07/2007 05:05:21  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=   5.73
+source name = 1150+497 
+lookup time: 3 7 2007 5:5
+1150+497 is at 13.0 degrees elevation
+LST [hr]=   5.73
+source name = 0954+658 
+lookup time: 3 7 2007 5:5
+0954+658 is at 28.4 degrees elevation
+LST [hr]=   5.73
+source name = 1044+719 
+lookup time: 3 7 2007 5:5
+1044+719 is at 22.9 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 1) ----
+
+LST [hr]=   5.73
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 18.4 degrees elevation
+	03/07/2007 05:05:21 --> 03/07/2007 05:05:31  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 05:05:31 --> 03/07/2007 05:05:42  ---- tsys
+	03/07/2007 05:05:42 --> 03/07/2007 05:10:42  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 1) ----
+
+LST [hr]=   5.82
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 19.0 degrees elevation
+	03/07/2007 05:10:42 --> 03/07/2007 05:10:52  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 05:10:52 --> 03/07/2007 05:11:03  ---- tsys
+	03/07/2007 05:11:03 --> 03/07/2007 05:16:03  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 1) ----
+
+LST [hr]=   5.91
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 19.8 degrees elevation
+	03/07/2007 05:16:03 --> 03/07/2007 05:16:13  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 05:16:13 --> 03/07/2007 05:16:24  ---- tsys
+	03/07/2007 05:16:24 --> 03/07/2007 05:21:24  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 1) ----
+
+LST [hr]=   5.99
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 20.5 degrees elevation
+	03/07/2007 05:21:24 --> 03/07/2007 05:21:34  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 05:21:34 --> 03/07/2007 05:21:45  ---- tsys
+	03/07/2007 05:21:45 --> 03/07/2007 05:26:45  ---- integrate -s 10 -w
+LST [hr]=   6.08
+Loop No.= 2
+
+---- Observing Gain Calibrator (Loop = 2) ----
+
+LST [hr]=   6.08
+source name = 0954+658 
+lookup time: 3 7 2007 5:26
+0954+658 is at 30.5 degrees elevation
+	03/07/2007 05:26:45 --> 03/07/2007 05:26:55  ---- observe -s 0954+658
+	03/07/2007 05:26:55 --> 03/07/2007 05:27:06  ---- tsys
+	03/07/2007 05:27:06 --> 03/07/2007 05:32:06  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=   6.17
+source name = 1150+497 
+lookup time: 3 7 2007 5:32
+1150+497 is at 17.2 degrees elevation
+LST [hr]=   6.17
+source name = 0954+658 
+lookup time: 3 7 2007 5:32
+0954+658 is at 31.1 degrees elevation
+LST [hr]=   6.17
+source name = 1044+719 
+lookup time: 3 7 2007 5:32
+1044+719 is at 25.0 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 2) ----
+
+LST [hr]=   6.17
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 21.9 degrees elevation
+	03/07/2007 05:32:06 --> 03/07/2007 05:32:16  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 05:32:16 --> 03/07/2007 05:32:27  ---- tsys
+	03/07/2007 05:32:27 --> 03/07/2007 05:37:27  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 2) ----
+
+LST [hr]=   6.26
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 22.6 degrees elevation
+	03/07/2007 05:37:27 --> 03/07/2007 05:37:37  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 05:37:37 --> 03/07/2007 05:37:48  ---- tsys
+	03/07/2007 05:37:48 --> 03/07/2007 05:42:48  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 2) ----
+
+LST [hr]=   6.35
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 23.2 degrees elevation
+	03/07/2007 05:42:48 --> 03/07/2007 05:42:58  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 05:42:58 --> 03/07/2007 05:43:09  ---- tsys
+	03/07/2007 05:43:09 --> 03/07/2007 05:48:09  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 2) ----
+
+LST [hr]=   6.44
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 24.0 degrees elevation
+	03/07/2007 05:48:09 --> 03/07/2007 05:48:19  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 05:48:19 --> 03/07/2007 05:48:30  ---- tsys
+	03/07/2007 05:48:30 --> 03/07/2007 05:53:30  ---- integrate -s 10 -w
+LST [hr]=   6.53
+Loop No.= 3
+
+---- Observing Gain Calibrator (Loop = 3) ----
+
+LST [hr]=   6.53
+source name = 0954+658 
+lookup time: 3 7 2007 5:53
+0954+658 is at 33.1 degrees elevation
+	03/07/2007 05:53:30 --> 03/07/2007 05:53:40  ---- observe -s 0954+658
+	03/07/2007 05:53:40 --> 03/07/2007 05:53:51  ---- tsys
+	03/07/2007 05:53:51 --> 03/07/2007 05:58:51  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=   6.62
+source name = 1150+497 
+lookup time: 3 7 2007 5:58
+1150+497 is at 21.4 degrees elevation
+LST [hr]=   6.62
+source name = 0954+658 
+lookup time: 3 7 2007 5:58
+0954+658 is at 33.5 degrees elevation
+LST [hr]=   6.62
+source name = 1044+719 
+lookup time: 3 7 2007 5:58
+1044+719 is at 26.9 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 3) ----
+
+LST [hr]=   6.62
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 25.3 degrees elevation
+	03/07/2007 05:58:51 --> 03/07/2007 05:59:01  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 05:59:01 --> 03/07/2007 05:59:12  ---- tsys
+	03/07/2007 05:59:12 --> 03/07/2007 06:04:12  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 3) ----
+
+LST [hr]=   6.71
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 26.1 degrees elevation
+	03/07/2007 06:04:12 --> 03/07/2007 06:04:22  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 06:04:22 --> 03/07/2007 06:04:33  ---- tsys
+	03/07/2007 06:04:33 --> 03/07/2007 06:09:33  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 3) ----
+
+LST [hr]=   6.80
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 26.7 degrees elevation
+	03/07/2007 06:09:33 --> 03/07/2007 06:09:43  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 06:09:43 --> 03/07/2007 06:09:54  ---- tsys
+	03/07/2007 06:09:54 --> 03/07/2007 06:14:54  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 3) ----
+
+LST [hr]=   6.89
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 27.4 degrees elevation
+	03/07/2007 06:14:54 --> 03/07/2007 06:15:04  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 06:15:04 --> 03/07/2007 06:15:15  ---- tsys
+	03/07/2007 06:15:15 --> 03/07/2007 06:20:15  ---- integrate -s 10 -w
+LST [hr]=   6.98
+Loop No.= 4
+
+---- Observing Gain Calibrator (Loop = 4) ----
+
+LST [hr]=   6.98
+source name = 0954+658 
+lookup time: 3 7 2007 6:20
+0954+658 is at 35.5 degrees elevation
+	03/07/2007 06:20:15 --> 03/07/2007 06:20:25  ---- observe -s 0954+658
+	03/07/2007 06:20:25 --> 03/07/2007 06:20:36  ---- tsys
+	03/07/2007 06:20:36 --> 03/07/2007 06:25:36  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=   7.07
+source name = 1150+497 
+lookup time: 3 7 2007 6:25
+1150+497 is at 25.8 degrees elevation
+LST [hr]=   7.07
+source name = 0954+658 
+lookup time: 3 7 2007 6:25
+0954+658 is at 35.9 degrees elevation
+LST [hr]=   7.07
+source name = 1044+719 
+lookup time: 3 7 2007 6:25
+1044+719 is at 28.9 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 4) ----
+
+LST [hr]=   7.07
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 28.8 degrees elevation
+	03/07/2007 06:25:36 --> 03/07/2007 06:25:46  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 06:25:46 --> 03/07/2007 06:25:57  ---- tsys
+	03/07/2007 06:25:57 --> 03/07/2007 06:30:57  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 4) ----
+
+LST [hr]=   7.16
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 29.5 degrees elevation
+	03/07/2007 06:30:57 --> 03/07/2007 06:31:07  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 06:31:07 --> 03/07/2007 06:31:18  ---- tsys
+	03/07/2007 06:31:18 --> 03/07/2007 06:36:18  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 4) ----
+
+LST [hr]=   7.25
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 30.2 degrees elevation
+	03/07/2007 06:36:18 --> 03/07/2007 06:36:28  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 06:36:28 --> 03/07/2007 06:36:39  ---- tsys
+	03/07/2007 06:36:39 --> 03/07/2007 06:41:39  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 4) ----
+
+LST [hr]=   7.34
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 30.9 degrees elevation
+	03/07/2007 06:41:39 --> 03/07/2007 06:41:49  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 06:41:49 --> 03/07/2007 06:42:00  ---- tsys
+	03/07/2007 06:42:00 --> 03/07/2007 06:47:00  ---- integrate -s 10 -w
+LST [hr]=   7.43
+Loop No.= 5
+
+---- Observing Gain Calibrator (Loop = 5) ----
+
+LST [hr]=   7.43
+source name = 0954+658 
+lookup time: 3 7 2007 6:47
+0954+658 is at 37.7 degrees elevation
+	03/07/2007 06:47:00 --> 03/07/2007 06:47:10  ---- observe -s 0954+658
+	03/07/2007 06:47:10 --> 03/07/2007 06:47:21  ---- tsys
+	03/07/2007 06:47:21 --> 03/07/2007 06:52:21  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=   7.51
+source name = 1150+497 
+lookup time: 3 7 2007 6:52
+1150+497 is at 30.2 degrees elevation
+LST [hr]=   7.51
+source name = 0954+658 
+lookup time: 3 7 2007 6:52
+0954+658 is at 38.1 degrees elevation
+LST [hr]=   7.51
+source name = 1044+719 
+lookup time: 3 7 2007 6:52
+1044+719 is at 30.8 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 5) ----
+
+LST [hr]=   7.51
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 32.3 degrees elevation
+	03/07/2007 06:52:21 --> 03/07/2007 06:52:31  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 06:52:31 --> 03/07/2007 06:52:42  ---- tsys
+	03/07/2007 06:52:42 --> 03/07/2007 06:57:42  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 5) ----
+
+LST [hr]=   7.60
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 32.9 degrees elevation
+	03/07/2007 06:57:42 --> 03/07/2007 06:57:52  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 06:57:52 --> 03/07/2007 06:58:03  ---- tsys
+	03/07/2007 06:58:03 --> 03/07/2007 07:03:03  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 5) ----
+
+LST [hr]=   7.69
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 33.7 degrees elevation
+	03/07/2007 07:03:03 --> 03/07/2007 07:03:13  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 07:03:13 --> 03/07/2007 07:03:24  ---- tsys
+	03/07/2007 07:03:24 --> 03/07/2007 07:08:24  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 5) ----
+
+LST [hr]=   7.78
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 34.3 degrees elevation
+	03/07/2007 07:08:24 --> 03/07/2007 07:08:34  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 07:08:34 --> 03/07/2007 07:08:45  ---- tsys
+	03/07/2007 07:08:45 --> 03/07/2007 07:13:45  ---- integrate -s 10 -w
+LST [hr]=   7.87
+Loop No.= 6
+
+---- Observing Gain Calibrator (Loop = 6) ----
+
+LST [hr]=   7.87
+source name = 0954+658 
+lookup time: 3 7 2007 7:13
+0954+658 is at 39.6 degrees elevation
+	03/07/2007 07:13:45 --> 03/07/2007 07:13:55  ---- observe -s 0954+658
+	03/07/2007 07:13:55 --> 03/07/2007 07:14:06  ---- tsys
+	03/07/2007 07:14:06 --> 03/07/2007 07:19:06  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=   7.96
+source name = 1150+497 
+lookup time: 3 7 2007 7:19
+1150+497 is at 34.6 degrees elevation
+LST [hr]=   7.96
+source name = 0954+658 
+lookup time: 3 7 2007 7:19
+0954+658 is at 40.0 degrees elevation
+LST [hr]=   7.96
+source name = 1044+719 
+lookup time: 3 7 2007 7:19
+1044+719 is at 32.5 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 6) ----
+
+LST [hr]=   7.96
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 35.6 degrees elevation
+	03/07/2007 07:19:06 --> 03/07/2007 07:19:16  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 07:19:16 --> 03/07/2007 07:19:27  ---- tsys
+	03/07/2007 07:19:27 --> 03/07/2007 07:24:27  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 6) ----
+
+LST [hr]=   8.05
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 36.2 degrees elevation
+	03/07/2007 07:24:27 --> 03/07/2007 07:24:37  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 07:24:37 --> 03/07/2007 07:24:48  ---- tsys
+	03/07/2007 07:24:48 --> 03/07/2007 07:29:48  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 6) ----
+
+LST [hr]=   8.14
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 36.8 degrees elevation
+	03/07/2007 07:29:48 --> 03/07/2007 07:29:58  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 07:29:58 --> 03/07/2007 07:30:09  ---- tsys
+	03/07/2007 07:30:09 --> 03/07/2007 07:35:09  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 6) ----
+
+LST [hr]=   8.23
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 37.5 degrees elevation
+	03/07/2007 07:35:09 --> 03/07/2007 07:35:19  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 07:35:19 --> 03/07/2007 07:35:30  ---- tsys
+	03/07/2007 07:35:30 --> 03/07/2007 07:40:30  ---- integrate -s 10 -w
+LST [hr]=   8.32
+Loop No.= 7
+
+---- Observing Gain Calibrator (Loop = 7) ----
+
+LST [hr]=   8.32
+source name = 0954+658 
+lookup time: 3 7 2007 7:40
+0954+658 is at 41.3 degrees elevation
+	03/07/2007 07:40:30 --> 03/07/2007 07:40:40  ---- observe -s 0954+658
+	03/07/2007 07:40:40 --> 03/07/2007 07:40:51  ---- tsys
+	03/07/2007 07:40:51 --> 03/07/2007 07:45:51  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=   8.41
+source name = 1150+497 
+lookup time: 3 7 2007 7:45
+1150+497 is at 38.7 degrees elevation
+LST [hr]=   8.41
+source name = 0954+658 
+lookup time: 3 7 2007 7:45
+0954+658 is at 41.6 degrees elevation
+LST [hr]=   8.41
+source name = 1044+719 
+lookup time: 3 7 2007 7:45
+1044+719 is at 34.0 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 7) ----
+
+LST [hr]=   8.41
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 38.7 degrees elevation
+	03/07/2007 07:45:51 --> 03/07/2007 07:46:01  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 07:46:01 --> 03/07/2007 07:46:12  ---- tsys
+	03/07/2007 07:46:12 --> 03/07/2007 07:51:12  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 7) ----
+
+LST [hr]=   8.50
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 39.4 degrees elevation
+	03/07/2007 07:51:12 --> 03/07/2007 07:51:22  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 07:51:22 --> 03/07/2007 07:51:33  ---- tsys
+	03/07/2007 07:51:33 --> 03/07/2007 07:56:33  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 7) ----
+
+LST [hr]=   8.59
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 40.0 degrees elevation
+	03/07/2007 07:56:33 --> 03/07/2007 07:56:43  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 07:56:43 --> 03/07/2007 07:56:54  ---- tsys
+	03/07/2007 07:56:54 --> 03/07/2007 08:01:54  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 7) ----
+
+LST [hr]=   8.68
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 40.5 degrees elevation
+	03/07/2007 08:01:54 --> 03/07/2007 08:02:04  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 08:02:04 --> 03/07/2007 08:02:15  ---- tsys
+	03/07/2007 08:02:15 --> 03/07/2007 08:07:15  ---- integrate -s 10 -w
+LST [hr]=   8.77
+Loop No.= 8
+
+---- Observing Gain Calibrator (Loop = 8) ----
+
+LST [hr]=   8.77
+source name = 0954+658 
+lookup time: 3 7 2007 8:7
+0954+658 is at 42.6 degrees elevation
+	03/07/2007 08:07:15 --> 03/07/2007 08:07:25  ---- observe -s 0954+658
+	03/07/2007 08:07:25 --> 03/07/2007 08:07:36  ---- tsys
+	03/07/2007 08:07:36 --> 03/07/2007 08:12:36  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=   8.86
+source name = 1150+497 
+lookup time: 3 7 2007 8:12
+1150+497 is at 42.9 degrees elevation
+LST [hr]=   8.86
+source name = 0954+658 
+lookup time: 3 7 2007 8:12
+0954+658 is at 42.8 degrees elevation
+LST [hr]=   8.86
+source name = 1044+719 
+lookup time: 3 7 2007 8:12
+1044+719 is at 35.3 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 8) ----
+
+LST [hr]=   8.86
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 41.7 degrees elevation
+	03/07/2007 08:12:36 --> 03/07/2007 08:12:46  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 08:12:46 --> 03/07/2007 08:12:57  ---- tsys
+	03/07/2007 08:12:57 --> 03/07/2007 08:17:57  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 8) ----
+
+LST [hr]=   8.95
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 42.2 degrees elevation
+	03/07/2007 08:17:57 --> 03/07/2007 08:18:07  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 08:18:07 --> 03/07/2007 08:18:18  ---- tsys
+	03/07/2007 08:18:18 --> 03/07/2007 08:23:18  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 8) ----
+
+LST [hr]=   9.03
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 42.8 degrees elevation
+	03/07/2007 08:23:18 --> 03/07/2007 08:23:28  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 08:23:28 --> 03/07/2007 08:23:39  ---- tsys
+	03/07/2007 08:23:39 --> 03/07/2007 08:28:39  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 8) ----
+
+LST [hr]=   9.12
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 43.3 degrees elevation
+	03/07/2007 08:28:39 --> 03/07/2007 08:28:49  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 08:28:49 --> 03/07/2007 08:29:00  ---- tsys
+	03/07/2007 08:29:00 --> 03/07/2007 08:34:00  ---- integrate -s 10 -w
+LST [hr]=   9.21
+Loop No.= 9
+
+---- Observing Gain Calibrator (Loop = 9) ----
+
+LST [hr]=   9.21
+source name = 0954+658 
+lookup time: 3 7 2007 8:34
+0954+658 is at 43.6 degrees elevation
+	03/07/2007 08:34:00 --> 03/07/2007 08:34:10  ---- observe -s 0954+658
+	03/07/2007 08:34:10 --> 03/07/2007 08:34:21  ---- tsys
+	03/07/2007 08:34:21 --> 03/07/2007 08:39:21  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=   9.30
+source name = 1150+497 
+lookup time: 3 7 2007 8:39
+1150+497 is at 46.8 degrees elevation
+LST [hr]=   9.30
+source name = 0954+658 
+lookup time: 3 7 2007 8:39
+0954+658 is at 43.7 degrees elevation
+LST [hr]=   9.30
+source name = 1044+719 
+lookup time: 3 7 2007 8:39
+1044+719 is at 36.4 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 9) ----
+
+LST [hr]=   9.30
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 44.4 degrees elevation
+	03/07/2007 08:39:21 --> 03/07/2007 08:39:31  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 08:39:31 --> 03/07/2007 08:39:42  ---- tsys
+	03/07/2007 08:39:42 --> 03/07/2007 08:44:42  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 9) ----
+
+LST [hr]=   9.39
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 44.9 degrees elevation
+	03/07/2007 08:44:42 --> 03/07/2007 08:44:52  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 08:44:52 --> 03/07/2007 08:45:03  ---- tsys
+	03/07/2007 08:45:03 --> 03/07/2007 08:50:03  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 9) ----
+
+LST [hr]=   9.48
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 45.4 degrees elevation
+	03/07/2007 08:50:03 --> 03/07/2007 08:50:13  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 08:50:13 --> 03/07/2007 08:50:24  ---- tsys
+	03/07/2007 08:50:24 --> 03/07/2007 08:55:24  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 9) ----
+
+LST [hr]=   9.57
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 45.9 degrees elevation
+	03/07/2007 08:55:24 --> 03/07/2007 08:55:34  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 08:55:34 --> 03/07/2007 08:55:45  ---- tsys
+	03/07/2007 08:55:45 --> 03/07/2007 09:00:45  ---- integrate -s 10 -w
+LST [hr]=   9.66
+Loop No.= 10
+
+---- Observing Gain Calibrator (Loop = 10) ----
+
+LST [hr]=   9.66
+source name = 0954+658 
+lookup time: 3 7 2007 9:0
+0954+658 is at 44.1 degrees elevation
+	03/07/2007 09:00:45 --> 03/07/2007 09:00:55  ---- observe -s 0954+658
+	03/07/2007 09:00:55 --> 03/07/2007 09:01:06  ---- tsys
+	03/07/2007 09:01:06 --> 03/07/2007 09:06:06  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=   9.75
+source name = 1150+497 
+lookup time: 3 7 2007 9:6
+1150+497 is at 50.5 degrees elevation
+LST [hr]=   9.75
+source name = 0954+658 
+lookup time: 3 7 2007 9:6
+0954+658 is at 44.2 degrees elevation
+LST [hr]=   9.75
+source name = 1044+719 
+lookup time: 3 7 2007 9:6
+1044+719 is at 37.3 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 10) ----
+
+LST [hr]=   9.75
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 46.8 degrees elevation
+	03/07/2007 09:06:06 --> 03/07/2007 09:06:16  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 09:06:16 --> 03/07/2007 09:06:27  ---- tsys
+	03/07/2007 09:06:27 --> 03/07/2007 09:11:27  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 10) ----
+
+LST [hr]=   9.84
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 47.2 degrees elevation
+	03/07/2007 09:11:27 --> 03/07/2007 09:11:37  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 09:11:37 --> 03/07/2007 09:11:48  ---- tsys
+	03/07/2007 09:11:48 --> 03/07/2007 09:16:48  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 10) ----
+
+LST [hr]=   9.93
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 47.6 degrees elevation
+	03/07/2007 09:16:48 --> 03/07/2007 09:16:58  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 09:16:58 --> 03/07/2007 09:17:09  ---- tsys
+	03/07/2007 09:17:09 --> 03/07/2007 09:22:09  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 10) ----
+
+LST [hr]=  10.02
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 48.0 degrees elevation
+	03/07/2007 09:22:09 --> 03/07/2007 09:22:19  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 09:22:19 --> 03/07/2007 09:22:30  ---- tsys
+	03/07/2007 09:22:30 --> 03/07/2007 09:27:30  ---- integrate -s 10 -w
+LST [hr]=  10.11
+Loop No.= 11
+
+---- Observing Gain Calibrator (Loop = 11) ----
+
+LST [hr]=  10.11
+source name = 0954+658 
+lookup time: 3 7 2007 9:27
+0954+658 is at 44.3 degrees elevation
+	03/07/2007 09:27:30 --> 03/07/2007 09:27:40  ---- observe -s 0954+658
+	03/07/2007 09:27:40 --> 03/07/2007 09:27:51  ---- tsys
+	03/07/2007 09:27:51 --> 03/07/2007 09:32:51  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  10.20
+source name = 1150+497 
+lookup time: 3 7 2007 9:32
+1150+497 is at 53.7 degrees elevation
+LST [hr]=  10.20
+source name = 0954+658 
+lookup time: 3 7 2007 9:32
+0954+658 is at 44.3 degrees elevation
+LST [hr]=  10.20
+source name = 1044+719 
+lookup time: 3 7 2007 9:32
+1044+719 is at 37.8 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 11) ----
+
+LST [hr]=  10.20
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 48.7 degrees elevation
+	03/07/2007 09:32:51 --> 03/07/2007 09:33:01  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 09:33:01 --> 03/07/2007 09:33:12  ---- tsys
+	03/07/2007 09:33:12 --> 03/07/2007 09:38:12  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 11) ----
+
+LST [hr]=  10.29
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 49.0 degrees elevation
+	03/07/2007 09:38:12 --> 03/07/2007 09:38:22  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 09:38:22 --> 03/07/2007 09:38:33  ---- tsys
+	03/07/2007 09:38:33 --> 03/07/2007 09:43:33  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 11) ----
+
+LST [hr]=  10.38
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 49.3 degrees elevation
+	03/07/2007 09:43:33 --> 03/07/2007 09:43:43  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 09:43:43 --> 03/07/2007 09:43:54  ---- tsys
+	03/07/2007 09:43:54 --> 03/07/2007 09:48:54  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 11) ----
+
+LST [hr]=  10.47
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 49.6 degrees elevation
+	03/07/2007 09:48:54 --> 03/07/2007 09:49:04  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 09:49:04 --> 03/07/2007 09:49:15  ---- tsys
+	03/07/2007 09:49:15 --> 03/07/2007 09:54:15  ---- integrate -s 10 -w
+LST [hr]=  10.55
+Loop No.= 12
+
+---- Observing Gain Calibrator (Loop = 12) ----
+
+LST [hr]=  10.55
+source name = 0954+658 
+lookup time: 3 7 2007 9:54
+0954+658 is at 44.0 degrees elevation
+	03/07/2007 09:54:15 --> 03/07/2007 09:54:25  ---- observe -s 0954+658
+	03/07/2007 09:54:25 --> 03/07/2007 09:54:36  ---- tsys
+	03/07/2007 09:54:36 --> 03/07/2007 09:59:36  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  10.64
+source name = 1150+497 
+lookup time: 3 7 2007 9:59
+1150+497 is at 56.5 degrees elevation
+LST [hr]=  10.64
+source name = 0954+658 
+lookup time: 3 7 2007 9:59
+0954+658 is at 43.9 degrees elevation
+LST [hr]=  10.64
+source name = 1044+719 
+lookup time: 3 7 2007 9:59
+1044+719 is at 38.1 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 12) ----
+
+LST [hr]=  10.64
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 50.1 degrees elevation
+	03/07/2007 09:59:36 --> 03/07/2007 09:59:46  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 09:59:46 --> 03/07/2007 09:59:57  ---- tsys
+	03/07/2007 09:59:57 --> 03/07/2007 10:04:57  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 12) ----
+
+LST [hr]=  10.73
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 50.3 degrees elevation
+	03/07/2007 10:04:57 --> 03/07/2007 10:05:07  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 10:05:07 --> 03/07/2007 10:05:18  ---- tsys
+	03/07/2007 10:05:18 --> 03/07/2007 10:10:18  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 12) ----
+
+LST [hr]=  10.82
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 50.6 degrees elevation
+	03/07/2007 10:10:18 --> 03/07/2007 10:10:28  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 10:10:28 --> 03/07/2007 10:10:39  ---- tsys
+	03/07/2007 10:10:39 --> 03/07/2007 10:15:39  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 12) ----
+
+LST [hr]=  10.91
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 50.7 degrees elevation
+	03/07/2007 10:15:39 --> 03/07/2007 10:15:49  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 10:15:49 --> 03/07/2007 10:16:00  ---- tsys
+	03/07/2007 10:16:00 --> 03/07/2007 10:21:00  ---- integrate -s 10 -w
+LST [hr]=  11.00
+Loop No.= 13
+
+---- Observing Gain Calibrator (Loop = 13) ----
+
+LST [hr]=  11.00
+source name = 0954+658 
+lookup time: 3 7 2007 10:21
+0954+658 is at 43.3 degrees elevation
+	03/07/2007 10:21:00 --> 03/07/2007 10:21:10  ---- observe -s 0954+658
+	03/07/2007 10:21:10 --> 03/07/2007 10:21:21  ---- tsys
+	03/07/2007 10:21:21 --> 03/07/2007 10:26:21  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  11.09
+source name = 1150+497 
+lookup time: 3 7 2007 10:26
+1150+497 is at 58.7 degrees elevation
+LST [hr]=  11.09
+source name = 0954+658 
+lookup time: 3 7 2007 10:26
+0954+658 is at 43.1 degrees elevation
+LST [hr]=  11.09
+source name = 1044+719 
+lookup time: 3 7 2007 10:26
+1044+719 is at 38.1 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 13) ----
+
+LST [hr]=  11.09
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 51.0 degrees elevation
+	03/07/2007 10:26:21 --> 03/07/2007 10:26:31  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 10:26:31 --> 03/07/2007 10:26:42  ---- tsys
+	03/07/2007 10:26:42 --> 03/07/2007 10:31:42  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 13) ----
+
+LST [hr]=  11.18
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 51.1 degrees elevation
+	03/07/2007 10:31:42 --> 03/07/2007 10:31:52  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 10:31:52 --> 03/07/2007 10:32:03  ---- tsys
+	03/07/2007 10:32:03 --> 03/07/2007 10:37:03  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 13) ----
+
+LST [hr]=  11.27
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 51.2 degrees elevation
+	03/07/2007 10:37:03 --> 03/07/2007 10:37:13  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 10:37:13 --> 03/07/2007 10:37:24  ---- tsys
+	03/07/2007 10:37:24 --> 03/07/2007 10:42:24  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 13) ----
+
+LST [hr]=  11.36
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 51.3 degrees elevation
+	03/07/2007 10:42:24 --> 03/07/2007 10:42:34  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 10:42:34 --> 03/07/2007 10:42:45  ---- tsys
+	03/07/2007 10:42:45 --> 03/07/2007 10:47:45  ---- integrate -s 10 -w
+LST [hr]=  11.45
+Loop No.= 14
+
+---- Observing Gain Calibrator (Loop = 14) ----
+
+LST [hr]=  11.45
+source name = 0954+658 
+lookup time: 3 7 2007 10:47
+0954+658 is at 42.2 degrees elevation
+	03/07/2007 10:47:45 --> 03/07/2007 10:47:55  ---- observe -s 0954+658
+	03/07/2007 10:47:55 --> 03/07/2007 10:48:06  ---- tsys
+	03/07/2007 10:48:06 --> 03/07/2007 10:53:06  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  11.54
+source name = 1150+497 
+lookup time: 3 7 2007 10:53
+1150+497 is at 60.0 degrees elevation
+LST [hr]=  11.54
+source name = 0954+658 
+lookup time: 3 7 2007 10:53
+0954+658 is at 41.9 degrees elevation
+LST [hr]=  11.54
+source name = 1044+719 
+lookup time: 3 7 2007 10:53
+1044+719 is at 37.8 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 14) ----
+
+LST [hr]=  11.54
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 51.3 degrees elevation
+	03/07/2007 10:53:06 --> 03/07/2007 10:53:16  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 10:53:16 --> 03/07/2007 10:53:27  ---- tsys
+	03/07/2007 10:53:27 --> 03/07/2007 10:58:27  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 14) ----
+
+LST [hr]=  11.63
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 51.3 degrees elevation
+	03/07/2007 10:58:27 --> 03/07/2007 10:58:37  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 10:58:37 --> 03/07/2007 10:58:48  ---- tsys
+	03/07/2007 10:58:48 --> 03/07/2007 11:03:48  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 14) ----
+
+LST [hr]=  11.72
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 51.2 degrees elevation
+	03/07/2007 11:03:48 --> 03/07/2007 11:03:58  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 11:03:58 --> 03/07/2007 11:04:09  ---- tsys
+	03/07/2007 11:04:09 --> 03/07/2007 11:09:09  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 14) ----
+
+LST [hr]=  11.81
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 51.2 degrees elevation
+	03/07/2007 11:09:09 --> 03/07/2007 11:09:19  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 11:09:19 --> 03/07/2007 11:09:30  ---- tsys
+	03/07/2007 11:09:30 --> 03/07/2007 11:14:30  ---- integrate -s 10 -w
+LST [hr]=  11.90
+Loop No.= 15
+
+---- Observing Gain Calibrator (Loop = 15) ----
+
+LST [hr]=  11.90
+source name = 0954+658 
+lookup time: 3 7 2007 11:14
+0954+658 is at 40.8 degrees elevation
+	03/07/2007 11:14:30 --> 03/07/2007 11:14:40  ---- observe -s 0954+658
+	03/07/2007 11:14:40 --> 03/07/2007 11:14:51  ---- tsys
+	03/07/2007 11:14:51 --> 03/07/2007 11:19:51  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  11.99
+source name = 1150+497 
+lookup time: 3 7 2007 11:19
+1150+497 is at 60.3 degrees elevation
+LST [hr]=  11.99
+source name = 0954+658 
+lookup time: 3 7 2007 11:19
+0954+658 is at 40.4 degrees elevation
+LST [hr]=  11.99
+source name = 1044+719 
+lookup time: 3 7 2007 11:19
+1044+719 is at 37.2 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 15) ----
+
+LST [hr]=  11.99
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 51.0 degrees elevation
+	03/07/2007 11:19:51 --> 03/07/2007 11:20:01  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 11:20:01 --> 03/07/2007 11:20:12  ---- tsys
+	03/07/2007 11:20:12 --> 03/07/2007 11:25:12  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 15) ----
+
+LST [hr]=  12.07
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 50.8 degrees elevation
+	03/07/2007 11:25:12 --> 03/07/2007 11:25:22  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 11:25:22 --> 03/07/2007 11:25:33  ---- tsys
+	03/07/2007 11:25:33 --> 03/07/2007 11:30:33  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 15) ----
+
+LST [hr]=  12.16
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 50.7 degrees elevation
+	03/07/2007 11:30:33 --> 03/07/2007 11:30:43  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 11:30:43 --> 03/07/2007 11:30:54  ---- tsys
+	03/07/2007 11:30:54 --> 03/07/2007 11:35:54  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 15) ----
+
+LST [hr]=  12.25
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 50.5 degrees elevation
+	03/07/2007 11:35:54 --> 03/07/2007 11:36:04  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 11:36:04 --> 03/07/2007 11:36:15  ---- tsys
+	03/07/2007 11:36:15 --> 03/07/2007 11:41:15  ---- integrate -s 10 -w
+LST [hr]=  12.34
+Loop No.= 16
+
+---- Observing Gain Calibrator (Loop = 16) ----
+
+LST [hr]=  12.34
+source name = 0954+658 
+lookup time: 3 7 2007 11:41
+0954+658 is at 39.0 degrees elevation
+	03/07/2007 11:41:15 --> 03/07/2007 11:41:25  ---- observe -s 0954+658
+	03/07/2007 11:41:25 --> 03/07/2007 11:41:36  ---- tsys
+	03/07/2007 11:41:36 --> 03/07/2007 11:46:36  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  12.43
+source name = 1150+497 
+lookup time: 3 7 2007 11:46
+1150+497 is at 59.8 degrees elevation
+LST [hr]=  12.43
+source name = 0954+658 
+lookup time: 3 7 2007 11:46
+0954+658 is at 38.6 degrees elevation
+LST [hr]=  12.43
+source name = 1044+719 
+lookup time: 3 7 2007 11:46
+1044+719 is at 36.4 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 16) ----
+
+LST [hr]=  12.43
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 50.1 degrees elevation
+	03/07/2007 11:46:36 --> 03/07/2007 11:46:46  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 11:46:46 --> 03/07/2007 11:46:57  ---- tsys
+	03/07/2007 11:46:57 --> 03/07/2007 11:51:57  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 16) ----
+
+LST [hr]=  12.52
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 49.8 degrees elevation
+	03/07/2007 11:51:57 --> 03/07/2007 11:52:07  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 11:52:07 --> 03/07/2007 11:52:18  ---- tsys
+	03/07/2007 11:52:18 --> 03/07/2007 11:57:18  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 16) ----
+
+LST [hr]=  12.61
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 49.5 degrees elevation
+	03/07/2007 11:57:18 --> 03/07/2007 11:57:28  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 11:57:28 --> 03/07/2007 11:57:39  ---- tsys
+	03/07/2007 11:57:39 --> 03/07/2007 12:02:39  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 16) ----
+
+LST [hr]=  12.70
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 49.2 degrees elevation
+	03/07/2007 12:02:39 --> 03/07/2007 12:02:49  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 12:02:49 --> 03/07/2007 12:03:00  ---- tsys
+	03/07/2007 12:03:00 --> 03/07/2007 12:08:00  ---- integrate -s 10 -w
+LST [hr]=  12.79
+Loop No.= 17
+
+---- Observing Gain Calibrator (Loop = 17) ----
+
+LST [hr]=  12.79
+source name = 0954+658 
+lookup time: 3 7 2007 12:8
+0954+658 is at 36.9 degrees elevation
+	03/07/2007 12:08:00 --> 03/07/2007 12:08:10  ---- observe -s 0954+658
+	03/07/2007 12:08:10 --> 03/07/2007 12:08:21  ---- tsys
+	03/07/2007 12:08:21 --> 03/07/2007 12:13:21  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  12.88
+source name = 1150+497 
+lookup time: 3 7 2007 12:13
+1150+497 is at 58.3 degrees elevation
+LST [hr]=  12.88
+source name = 0954+658 
+lookup time: 3 7 2007 12:13
+0954+658 is at 36.5 degrees elevation
+LST [hr]=  12.88
+source name = 1044+719 
+lookup time: 3 7 2007 12:13
+1044+719 is at 35.2 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 17) ----
+
+LST [hr]=  12.88
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 48.6 degrees elevation
+	03/07/2007 12:13:21 --> 03/07/2007 12:13:31  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 12:13:31 --> 03/07/2007 12:13:42  ---- tsys
+	03/07/2007 12:13:42 --> 03/07/2007 12:18:42  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 17) ----
+
+LST [hr]=  12.97
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 48.2 degrees elevation
+	03/07/2007 12:18:42 --> 03/07/2007 12:18:52  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 12:18:52 --> 03/07/2007 12:19:03  ---- tsys
+	03/07/2007 12:19:03 --> 03/07/2007 12:24:03  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 17) ----
+
+LST [hr]=  13.06
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 47.8 degrees elevation
+	03/07/2007 12:24:03 --> 03/07/2007 12:24:13  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 12:24:13 --> 03/07/2007 12:24:24  ---- tsys
+	03/07/2007 12:24:24 --> 03/07/2007 12:29:24  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 17) ----
+
+LST [hr]=  13.15
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 47.5 degrees elevation
+	03/07/2007 12:29:24 --> 03/07/2007 12:29:34  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 12:29:34 --> 03/07/2007 12:29:45  ---- tsys
+	03/07/2007 12:29:45 --> 03/07/2007 12:34:45  ---- integrate -s 10 -w
+LST [hr]=  13.24
+Loop No.= 18
+
+---- Observing Gain Calibrator (Loop = 18) ----
+
+LST [hr]=  13.24
+source name = 0954+658 
+lookup time: 3 7 2007 12:34
+0954+658 is at 34.7 degrees elevation
+	03/07/2007 12:34:45 --> 03/07/2007 12:34:55  ---- observe -s 0954+658
+	03/07/2007 12:34:55 --> 03/07/2007 12:35:06  ---- tsys
+	03/07/2007 12:35:06 --> 03/07/2007 12:40:06  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  13.33
+source name = 1150+497 
+lookup time: 3 7 2007 12:40
+1150+497 is at 56.0 degrees elevation
+LST [hr]=  13.33
+source name = 0954+658 
+lookup time: 3 7 2007 12:40
+0954+658 is at 34.2 degrees elevation
+LST [hr]=  13.33
+source name = 1044+719 
+lookup time: 3 7 2007 12:40
+1044+719 is at 33.9 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 18) ----
+
+LST [hr]=  13.33
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 46.6 degrees elevation
+	03/07/2007 12:40:06 --> 03/07/2007 12:40:16  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 12:40:16 --> 03/07/2007 12:40:27  ---- tsys
+	03/07/2007 12:40:27 --> 03/07/2007 12:45:27  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 18) ----
+
+LST [hr]=  13.42
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 46.2 degrees elevation
+	03/07/2007 12:45:27 --> 03/07/2007 12:45:37  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 12:45:37 --> 03/07/2007 12:45:48  ---- tsys
+	03/07/2007 12:45:48 --> 03/07/2007 12:50:48  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 18) ----
+
+LST [hr]=  13.51
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 45.7 degrees elevation
+	03/07/2007 12:50:48 --> 03/07/2007 12:50:58  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 12:50:58 --> 03/07/2007 12:51:09  ---- tsys
+	03/07/2007 12:51:09 --> 03/07/2007 12:56:09  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 18) ----
+
+LST [hr]=  13.59
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 45.2 degrees elevation
+	03/07/2007 12:56:09 --> 03/07/2007 12:56:19  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 12:56:19 --> 03/07/2007 12:56:30  ---- tsys
+	03/07/2007 12:56:30 --> 03/07/2007 13:01:30  ---- integrate -s 10 -w
+LST [hr]=  13.68
+Loop No.= 19
+
+---- Observing Gain Calibrator (Loop = 19) ----
+
+LST [hr]=  13.68
+source name = 0954+658 
+lookup time: 3 7 2007 13:1
+0954+658 is at 32.2 degrees elevation
+	03/07/2007 13:01:30 --> 03/07/2007 13:01:40  ---- observe -s 0954+658
+	03/07/2007 13:01:40 --> 03/07/2007 13:01:51  ---- tsys
+	03/07/2007 13:01:51 --> 03/07/2007 13:06:51  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  13.77
+source name = 1150+497 
+lookup time: 3 7 2007 13:6
+1150+497 is at 53.2 degrees elevation
+LST [hr]=  13.77
+source name = 0954+658 
+lookup time: 3 7 2007 13:6
+0954+658 is at 31.8 degrees elevation
+LST [hr]=  13.77
+source name = 1044+719 
+lookup time: 3 7 2007 13:6
+1044+719 is at 32.4 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 19) ----
+
+LST [hr]=  13.77
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 44.3 degrees elevation
+	03/07/2007 13:06:51 --> 03/07/2007 13:07:01  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 13:07:01 --> 03/07/2007 13:07:12  ---- tsys
+	03/07/2007 13:07:12 --> 03/07/2007 13:12:12  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 19) ----
+
+LST [hr]=  13.86
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 43.7 degrees elevation
+	03/07/2007 13:12:12 --> 03/07/2007 13:12:22  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 13:12:22 --> 03/07/2007 13:12:33  ---- tsys
+	03/07/2007 13:12:33 --> 03/07/2007 13:17:33  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 19) ----
+
+LST [hr]=  13.95
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 43.2 degrees elevation
+	03/07/2007 13:17:33 --> 03/07/2007 13:17:43  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 13:17:43 --> 03/07/2007 13:17:54  ---- tsys
+	03/07/2007 13:17:54 --> 03/07/2007 13:22:54  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 19) ----
+
+LST [hr]=  14.04
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 42.7 degrees elevation
+	03/07/2007 13:22:54 --> 03/07/2007 13:23:04  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 13:23:04 --> 03/07/2007 13:23:15  ---- tsys
+	03/07/2007 13:23:15 --> 03/07/2007 13:28:15  ---- integrate -s 10 -w
+LST [hr]=  14.13
+Loop No.= 20
+
+---- Observing Gain Calibrator (Loop = 20) ----
+
+LST [hr]=  14.13
+source name = 0954+658 
+lookup time: 3 7 2007 13:28
+0954+658 is at 29.6 degrees elevation
+	03/07/2007 13:28:15 --> 03/07/2007 13:28:25  ---- observe -s 0954+658
+	03/07/2007 13:28:25 --> 03/07/2007 13:28:36  ---- tsys
+	03/07/2007 13:28:36 --> 03/07/2007 13:33:36  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  14.22
+source name = 1150+497 
+lookup time: 3 7 2007 13:33
+1150+497 is at 49.8 degrees elevation
+LST [hr]=  14.22
+source name = 0954+658 
+lookup time: 3 7 2007 13:33
+0954+658 is at 29.1 degrees elevation
+LST [hr]=  14.22
+source name = 1044+719 
+lookup time: 3 7 2007 13:33
+1044+719 is at 30.7 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 20) ----
+
+LST [hr]=  14.22
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 41.5 degrees elevation
+	03/07/2007 13:33:36 --> 03/07/2007 13:33:46  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 13:33:46 --> 03/07/2007 13:33:57  ---- tsys
+	03/07/2007 13:33:57 --> 03/07/2007 13:38:57  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 20) ----
+
+LST [hr]=  14.31
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 41.0 degrees elevation
+	03/07/2007 13:38:57 --> 03/07/2007 13:39:07  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 13:39:07 --> 03/07/2007 13:39:18  ---- tsys
+	03/07/2007 13:39:18 --> 03/07/2007 13:44:18  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 20) ----
+
+LST [hr]=  14.40
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 40.4 degrees elevation
+	03/07/2007 13:44:18 --> 03/07/2007 13:44:28  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 13:44:28 --> 03/07/2007 13:44:39  ---- tsys
+	03/07/2007 13:44:39 --> 03/07/2007 13:49:39  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 20) ----
+
+LST [hr]=  14.49
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 39.8 degrees elevation
+	03/07/2007 13:49:39 --> 03/07/2007 13:49:49  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 13:49:49 --> 03/07/2007 13:50:00  ---- tsys
+	03/07/2007 13:50:00 --> 03/07/2007 13:55:00  ---- integrate -s 10 -w
+LST [hr]=  14.58
+Loop No.= 21
+
+---- Observing Gain Calibrator (Loop = 21) ----
+
+LST [hr]=  14.58
+source name = 0954+658 
+lookup time: 3 7 2007 13:55
+0954+658 is at 26.9 degrees elevation
+	03/07/2007 13:55:00 --> 03/07/2007 13:55:10  ---- observe -s 0954+658
+	03/07/2007 13:55:10 --> 03/07/2007 13:55:21  ---- tsys
+	03/07/2007 13:55:21 --> 03/07/2007 14:00:21  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  14.67
+source name = 1150+497 
+lookup time: 3 7 2007 14:0
+1150+497 is at 46.0 degrees elevation
+LST [hr]=  14.67
+source name = 0954+658 
+lookup time: 3 7 2007 14:0
+0954+658 is at 26.4 degrees elevation
+LST [hr]=  14.67
+source name = 1044+719 
+lookup time: 3 7 2007 14:0
+1044+719 is at 28.8 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 21) ----
+
+LST [hr]=  14.67
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 38.5 degrees elevation
+	03/07/2007 14:00:21 --> 03/07/2007 14:00:31  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 14:00:31 --> 03/07/2007 14:00:42  ---- tsys
+	03/07/2007 14:00:42 --> 03/07/2007 14:05:42  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 21) ----
+
+LST [hr]=  14.76
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 38.0 degrees elevation
+	03/07/2007 14:05:42 --> 03/07/2007 14:05:52  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 14:05:52 --> 03/07/2007 14:06:03  ---- tsys
+	03/07/2007 14:06:03 --> 03/07/2007 14:11:03  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 21) ----
+
+LST [hr]=  14.85
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 37.3 degrees elevation
+	03/07/2007 14:11:03 --> 03/07/2007 14:11:13  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 14:11:13 --> 03/07/2007 14:11:24  ---- tsys
+	03/07/2007 14:11:24 --> 03/07/2007 14:16:24  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 21) ----
+
+LST [hr]=  14.94
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 36.7 degrees elevation
+	03/07/2007 14:16:24 --> 03/07/2007 14:16:34  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 14:16:34 --> 03/07/2007 14:16:45  ---- tsys
+	03/07/2007 14:16:45 --> 03/07/2007 14:21:45  ---- integrate -s 10 -w
+LST [hr]=  15.03
+Loop No.= 22
+
+---- Observing Gain Calibrator (Loop = 22) ----
+
+LST [hr]=  15.03
+source name = 0954+658 
+lookup time: 3 7 2007 14:21
+0954+658 is at 24.2 degrees elevation
+	03/07/2007 14:21:45 --> 03/07/2007 14:21:55  ---- observe -s 0954+658
+	03/07/2007 14:21:55 --> 03/07/2007 14:22:06  ---- tsys
+	03/07/2007 14:22:06 --> 03/07/2007 14:27:06  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  15.11
+source name = 1150+497 
+lookup time: 3 7 2007 14:27
+1150+497 is at 42.0 degrees elevation
+LST [hr]=  15.11
+source name = 0954+658 
+lookup time: 3 7 2007 14:27
+0954+658 is at 23.6 degrees elevation
+LST [hr]=  15.11
+source name = 1044+719 
+lookup time: 3 7 2007 14:27
+1044+719 is at 26.9 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 22) ----
+
+LST [hr]=  15.11
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 35.3 degrees elevation
+	03/07/2007 14:27:06 --> 03/07/2007 14:27:16  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 14:27:16 --> 03/07/2007 14:27:27  ---- tsys
+	03/07/2007 14:27:27 --> 03/07/2007 14:32:27  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 22) ----
+
+LST [hr]=  15.20
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 34.7 degrees elevation
+	03/07/2007 14:32:27 --> 03/07/2007 14:32:37  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 14:32:37 --> 03/07/2007 14:32:48  ---- tsys
+	03/07/2007 14:32:48 --> 03/07/2007 14:37:48  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 22) ----
+
+LST [hr]=  15.29
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 34.1 degrees elevation
+	03/07/2007 14:37:48 --> 03/07/2007 14:37:58  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 14:37:58 --> 03/07/2007 14:38:09  ---- tsys
+	03/07/2007 14:38:09 --> 03/07/2007 14:43:09  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 22) ----
+
+LST [hr]=  15.38
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 33.4 degrees elevation
+	03/07/2007 14:43:09 --> 03/07/2007 14:43:19  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 14:43:19 --> 03/07/2007 14:43:30  ---- tsys
+	03/07/2007 14:43:30 --> 03/07/2007 14:48:30  ---- integrate -s 10 -w
+LST [hr]=  15.47
+Loop No.= 23
+
+---- Observing Gain Calibrator (Loop = 23) ----
+
+LST [hr]=  15.47
+source name = 0954+658 
+lookup time: 3 7 2007 14:48
+0954+658 is at 21.4 degrees elevation
+	03/07/2007 14:48:30 --> 03/07/2007 14:48:40  ---- observe -s 0954+658
+	03/07/2007 14:48:40 --> 03/07/2007 14:48:51  ---- tsys
+	03/07/2007 14:48:51 --> 03/07/2007 14:53:51  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  15.56
+source name = 1150+497 
+lookup time: 3 7 2007 14:53
+1150+497 is at 37.9 degrees elevation
+LST [hr]=  15.56
+source name = 0954+658 
+lookup time: 3 7 2007 14:53
+0954+658 is at 20.9 degrees elevation
+LST [hr]=  15.56
+source name = 1044+719 
+lookup time: 3 7 2007 14:53
+1044+719 is at 24.9 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 23) ----
+
+LST [hr]=  15.56
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 32.1 degrees elevation
+	03/07/2007 14:53:51 --> 03/07/2007 14:54:01  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 14:54:01 --> 03/07/2007 14:54:12  ---- tsys
+	03/07/2007 14:54:12 --> 03/07/2007 14:59:12  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 23) ----
+
+LST [hr]=  15.65
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 31.3 degrees elevation
+	03/07/2007 14:59:12 --> 03/07/2007 14:59:22  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 14:59:22 --> 03/07/2007 14:59:33  ---- tsys
+	03/07/2007 14:59:33 --> 03/07/2007 15:04:33  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 23) ----
+
+LST [hr]=  15.74
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 30.7 degrees elevation
+	03/07/2007 15:04:33 --> 03/07/2007 15:04:43  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 15:04:43 --> 03/07/2007 15:04:54  ---- tsys
+	03/07/2007 15:04:54 --> 03/07/2007 15:09:54  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 23) ----
+
+LST [hr]=  15.83
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 30.1 degrees elevation
+	03/07/2007 15:09:54 --> 03/07/2007 15:10:04  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 15:10:04 --> 03/07/2007 15:10:15  ---- tsys
+	03/07/2007 15:10:15 --> 03/07/2007 15:15:15  ---- integrate -s 10 -w
+LST [hr]=  15.92
+Loop No.= 24
+
+---- Observing Gain Calibrator (Loop = 24) ----
+
+LST [hr]=  15.92
+source name = 0954+658 
+lookup time: 3 7 2007 15:15
+0954+658 is at 18.6 degrees elevation
+	03/07/2007 15:15:15 --> 03/07/2007 15:15:25  ---- observe -s 0954+658
+	03/07/2007 15:15:25 --> 03/07/2007 15:15:36  ---- tsys
+	03/07/2007 15:15:36 --> 03/07/2007 15:20:36  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  16.01
+source name = 1150+497 
+lookup time: 3 7 2007 15:20
+1150+497 is at 33.6 degrees elevation
+LST [hr]=  16.01
+source name = 0954+658 
+lookup time: 3 7 2007 15:20
+0954+658 is at 18.1 degrees elevation
+LST [hr]=  16.01
+source name = 1044+719 
+lookup time: 3 7 2007 15:20
+1044+719 is at 22.8 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 24) ----
+
+LST [hr]=  16.01
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 28.6 degrees elevation
+	03/07/2007 15:20:36 --> 03/07/2007 15:20:46  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 15:20:46 --> 03/07/2007 15:20:57  ---- tsys
+	03/07/2007 15:20:57 --> 03/07/2007 15:25:57  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 24) ----
+
+LST [hr]=  16.10
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 28.0 degrees elevation
+	03/07/2007 15:25:57 --> 03/07/2007 15:26:07  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 15:26:07 --> 03/07/2007 15:26:18  ---- tsys
+	03/07/2007 15:26:18 --> 03/07/2007 15:31:18  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 24) ----
+
+LST [hr]=  16.19
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 27.2 degrees elevation
+	03/07/2007 15:31:18 --> 03/07/2007 15:31:28  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 15:31:28 --> 03/07/2007 15:31:39  ---- tsys
+	03/07/2007 15:31:39 --> 03/07/2007 15:36:39  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 24) ----
+
+LST [hr]=  16.28
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 26.6 degrees elevation
+	03/07/2007 15:36:39 --> 03/07/2007 15:36:49  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 15:36:49 --> 03/07/2007 15:37:00  ---- tsys
+	03/07/2007 15:37:00 --> 03/07/2007 15:42:00  ---- integrate -s 10 -w
+LST [hr]=  16.37
+Loop No.= 25
+
+---- Observing Gain Calibrator (Loop = 25) ----
+
+LST [hr]=  16.37
+source name = 0954+658 
+lookup time: 3 7 2007 15:42
+0954+658 is at 15.9 degrees elevation
+---- Source elevation limit. ----
+---- Searching for an available calibrator.. ----
+LST [hr]=  16.37
+source name = 1150+497 
+lookup time: 3 7 2007 15:42
+1150+497 is at 30.1 degrees elevation
+	03/07/2007 15:42:00 --> 03/07/2007 15:42:10  ---- observe -s 1150+497
+	03/07/2007 15:42:10 --> 03/07/2007 15:42:21  ---- tsys
+	03/07/2007 15:42:21 --> 03/07/2007 15:47:21  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  16.46
+source name = 1150+497 
+lookup time: 3 7 2007 15:47
+1150+497 is at 29.3 degrees elevation
+LST [hr]=  16.46
+source name = 0954+658 
+lookup time: 3 7 2007 15:47
+0954+658 is at 15.4 degrees elevation
+LST [hr]=  16.46
+source name = 1044+719 
+lookup time: 3 7 2007 15:47
+1044+719 is at 20.7 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 25) ----
+
+LST [hr]=  16.46
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 25.1 degrees elevation
+	03/07/2007 15:47:21 --> 03/07/2007 15:47:31  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 15:47:31 --> 03/07/2007 15:47:42  ---- tsys
+	03/07/2007 15:47:42 --> 03/07/2007 15:52:42  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 25) ----
+
+LST [hr]=  16.55
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 24.5 degrees elevation
+	03/07/2007 15:52:42 --> 03/07/2007 15:52:52  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 15:52:52 --> 03/07/2007 15:53:03  ---- tsys
+	03/07/2007 15:53:03 --> 03/07/2007 15:58:03  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 25) ----
+
+LST [hr]=  16.63
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 23.7 degrees elevation
+	03/07/2007 15:58:03 --> 03/07/2007 15:58:13  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 15:58:13 --> 03/07/2007 15:58:24  ---- tsys
+	03/07/2007 15:58:24 --> 03/07/2007 16:03:24  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 25) ----
+
+LST [hr]=  16.72
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 23.0 degrees elevation
+	03/07/2007 16:03:24 --> 03/07/2007 16:03:34  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 16:03:34 --> 03/07/2007 16:03:45  ---- tsys
+	03/07/2007 16:03:45 --> 03/07/2007 16:08:45  ---- integrate -s 10 -w
+LST [hr]=  16.81
+Loop No.= 26
+
+---- Observing Gain Calibrator (Loop = 26) ----
+
+LST [hr]=  16.81
+source name = 0954+658 
+lookup time: 3 7 2007 16:8
+0954+658 is at 13.3 degrees elevation
+---- Source elevation limit. ----
+---- Searching for an available calibrator.. ----
+LST [hr]=  16.81
+source name = 1150+497 
+lookup time: 3 7 2007 16:8
+1150+497 is at 25.8 degrees elevation
+	03/07/2007 16:08:45 --> 03/07/2007 16:08:55  ---- observe -s 1150+497
+	03/07/2007 16:08:55 --> 03/07/2007 16:09:06  ---- tsys
+	03/07/2007 16:09:06 --> 03/07/2007 16:14:06  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  16.90
+source name = 1150+497 
+lookup time: 3 7 2007 16:14
+1150+497 is at 24.9 degrees elevation
+LST [hr]=  16.90
+source name = 0954+658 
+lookup time: 3 7 2007 16:14
+0954+658 is at 12.7 degrees elevation
+LST [hr]=  16.90
+source name = 1044+719 
+lookup time: 3 7 2007 16:14
+1044+719 is at 18.5 degrees elevation
+---- At least one calibrator is above 23 degrees ----
+
+---- Observing Target Source (Loop = 26) ----
+
+LST [hr]=  16.90
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 21.6 degrees elevation
+	03/07/2007 16:14:06 --> 03/07/2007 16:14:16  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 16:14:16 --> 03/07/2007 16:14:27  ---- tsys
+	03/07/2007 16:14:27 --> 03/07/2007 16:19:27  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 26) ----
+
+LST [hr]=  16.99
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 20.9 degrees elevation
+	03/07/2007 16:19:27 --> 03/07/2007 16:19:37  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 16:19:37 --> 03/07/2007 16:19:48  ---- tsys
+	03/07/2007 16:19:48 --> 03/07/2007 16:24:48  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 26) ----
+
+LST [hr]=  17.08
+source name = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F1 
+Arp299F1 is at 20.3 degrees elevation
+	03/07/2007 16:24:48 --> 03/07/2007 16:24:58  ---- observe -s Arp299F1 -r 11:28:31.00 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 16:24:58 --> 03/07/2007 16:25:09  ---- tsys
+	03/07/2007 16:25:09 --> 03/07/2007 16:30:09  ---- integrate -s 10 -w
+
+---- Observing Target Source (Loop = 26) ----
+
+LST [hr]=  17.17
+source name = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+sourcename -r = Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0 
+got ra/dec arguments...parsing them...
+sourceNameString = Arp299F2 
+Arp299F2 is at 19.5 degrees elevation
+	03/07/2007 16:30:09 --> 03/07/2007 16:30:19  ---- observe -s Arp299F2 -r 11:28:33.40 -d +58:33:45.00 -e 2000 -v 0
+	03/07/2007 16:30:19 --> 03/07/2007 16:30:30  ---- tsys
+	03/07/2007 16:30:30 --> 03/07/2007 16:35:30  ---- integrate -s 10 -w
+LST [hr]=  17.26
+Loop No.= 27
+
+---- Observing Gain Calibrator (Loop = 27) ----
+
+LST [hr]=  17.26
+source name = 0954+658 
+lookup time: 3 7 2007 16:35
+0954+658 is at 10.7 degrees elevation
+---- Source elevation limit. ----
+---- Searching for an available calibrator.. ----
+LST [hr]=  17.26
+source name = 1150+497 
+lookup time: 3 7 2007 16:35
+1150+497 is at 21.5 degrees elevation
+	03/07/2007 16:35:30 --> 03/07/2007 16:35:40  ---- observe -s 1150+497
+	03/07/2007 16:35:40 --> 03/07/2007 16:35:51  ---- tsys
+	03/07/2007 16:35:51 --> 03/07/2007 16:40:51  ---- integrate -s 10 -w
+---- Check the elevations of the gain calibrators ----
+LST [hr]=  17.35
+source name = 1150+497 
+lookup time: 3 7 2007 16:40
+1150+497 is at 20.6 degrees elevation
+LST [hr]=  17.35
+source name = 0954+658 
+lookup time: 3 7 2007 16:40
+0954+658 is at 10.2 degrees elevation
+LST [hr]=  17.35
+source name = 1044+719 
+lookup time: 3 7 2007 16:40
+1044+719 is at 16.5 degrees elevation
+---- None of the gain calibrators are above 23.  Finishing up... ----
+
+##########################
+# Final Gain Calibration #
+##########################
+
+LST [hr]=  17.35
+source name = 1150+497 
+lookup time: 3 7 2007 16:40
+1150+497 is at 20.6 degrees elevation
+	03/07/2007 16:40:51 --> 03/07/2007 16:41:01  ---- observe -s 1150+497
+	03/07/2007 16:41:01 --> 03/07/2007 16:41:12  ---- tsys
+	03/07/2007 16:41:12 --> 03/07/2007 16:46:12  ---- integrate -s 10 -w
+LST [hr]=  17.44
+source name = 0954+658 
+lookup time: 3 7 2007 16:46
+0954+658 is at  9.7 degrees elevation
+LST [hr]=  17.44
+source name = 1044+719 
+lookup time: 3 7 2007 16:46
+1044+719 is at 16.1 degrees elevation
+
+#################################
+# Flux and Bandpass Calibration #
+#################################
+
+LST [hr]=  17.44
+source name = callisto 
+lookup time: 3 7 2007 16:46
+callisto is at 47.8 degrees elevation
+
+---- Observing callisto. ----
+
+LST [hr]=  17.44
+source name = callisto 
+lookup time: 3 7 2007 16:46
+callisto is at 47.8 degrees elevation
+	03/07/2007 16:46:12 --> 03/07/2007 16:46:22  ---- observe -s callisto
+	03/07/2007 16:46:22 --> 03/07/2007 16:46:33  ---- tsys
+	03/07/2007 16:46:33 --> 03/07/2007 16:51:33  ---- integrate -s 10 -w
+Finished 10/90 on callisto.
+LST [hr]=  17.53
+source name = callisto 
+lookup time: 3 7 2007 16:51
+callisto is at 47.7 degrees elevation
+	03/07/2007 16:51:33 --> 03/07/2007 16:51:43  ---- observe -s callisto
+	03/07/2007 16:51:43 --> 03/07/2007 16:56:43  ---- integrate -s 10 -w
+Finished 20/90 on callisto.
+LST [hr]=  17.62
+source name = callisto 
+lookup time: 3 7 2007 16:56
+callisto is at 47.5 degrees elevation
+	03/07/2007 16:56:43 --> 03/07/2007 16:56:53  ---- observe -s callisto
+	03/07/2007 16:56:53 --> 03/07/2007 17:01:53  ---- integrate -s 10 -w
+Finished 30/90 on callisto.
+LST [hr]=  17.70
+source name = callisto 
+lookup time: 3 7 2007 17:1
+callisto is at 47.3 degrees elevation
+	03/07/2007 17:01:53 --> 03/07/2007 17:02:03  ---- observe -s callisto
+	03/07/2007 17:02:03 --> 03/07/2007 17:07:03  ---- integrate -s 10 -w
+Finished 40/90 on callisto.
+LST [hr]=  17.79
+source name = callisto 
+lookup time: 3 7 2007 17:7
+callisto is at 47.1 degrees elevation
+	03/07/2007 17:07:03 --> 03/07/2007 17:07:13  ---- observe -s callisto
+	03/07/2007 17:07:13 --> 03/07/2007 17:12:13  ---- integrate -s 10 -w
+Finished 50/90 on callisto.
+LST [hr]=  17.87
+source name = callisto 
+lookup time: 3 7 2007 17:12
+callisto is at 46.8 degrees elevation
+	03/07/2007 17:12:13 --> 03/07/2007 17:12:23  ---- observe -s callisto
+	03/07/2007 17:12:23 --> 03/07/2007 17:17:23  ---- integrate -s 10 -w
+Finished 60/90 on callisto.
+LST [hr]=  17.96
+source name = callisto 
+lookup time: 3 7 2007 17:17
+callisto is at 46.5 degrees elevation
+	03/07/2007 17:17:23 --> 03/07/2007 17:17:33  ---- observe -s callisto
+	03/07/2007 17:17:33 --> 03/07/2007 17:22:33  ---- integrate -s 10 -w
+Finished 70/90 on callisto.
+LST [hr]=  18.05
+source name = callisto 
+lookup time: 3 7 2007 17:22
+callisto is at 46.2 degrees elevation
+	03/07/2007 17:22:33 --> 03/07/2007 17:22:43  ---- observe -s callisto
+	03/07/2007 17:22:43 --> 03/07/2007 17:27:43  ---- integrate -s 10 -w
+Finished 80/90 on callisto.
+LST [hr]=  18.13
+source name = callisto 
+lookup time: 3 7 2007 17:27
+callisto is at 45.8 degrees elevation
+	03/07/2007 17:27:43 --> 03/07/2007 17:27:53  ---- observe -s callisto
+	03/07/2007 17:27:53 --> 03/07/2007 17:32:53  ---- integrate -s 10 -w
+Finished 90/90 on callisto.
+LST [hr]=  18.22
+source name = 3c273 
+lookup time: 3 7 2007 17:32
+3c273 is at  5.2 degrees elevation
+LST [hr]=  18.22
+source name = 1924-292 
+lookup time: 3 7 2007 17:32
+1924-292 is at 37.7 degrees elevation
+
+----  Observing 1924-292. ----
+
+LST [hr]=  18.22
+source name = 1924-292 
+lookup time: 3 7 2007 17:32
+1924-292 is at 37.7 degrees elevation
+	03/07/2007 17:32:53 --> 03/07/2007 17:33:03  ---- observe -s 1924-292
+	03/07/2007 17:33:03 --> 03/07/2007 17:33:14  ---- tsys
+	03/07/2007 17:33:14 --> 03/07/2007 17:38:14  ---- integrate -s 10 -w
+Finished 10/120 on 1924-292.
+LST [hr]=  18.31
+source name = 1924-292 
+lookup time: 3 7 2007 17:38
+1924-292 is at 38.2 degrees elevation
+	03/07/2007 17:38:14 --> 03/07/2007 17:38:24  ---- observe -s 1924-292
+	03/07/2007 17:38:24 --> 03/07/2007 17:43:24  ---- integrate -s 10 -w
+Finished 20/120 on 1924-292.
+LST [hr]=  18.40
+source name = 1924-292 
+lookup time: 3 7 2007 17:43
+1924-292 is at 38.6 degrees elevation
+	03/07/2007 17:43:24 --> 03/07/2007 17:43:34  ---- observe -s 1924-292
+	03/07/2007 17:43:34 --> 03/07/2007 17:48:34  ---- integrate -s 10 -w
+Finished 30/120 on 1924-292.
+LST [hr]=  18.48
+source name = 1924-292 
+lookup time: 3 7 2007 17:48
+1924-292 is at 38.9 degrees elevation
+	03/07/2007 17:48:34 --> 03/07/2007 17:48:44  ---- observe -s 1924-292
+	03/07/2007 17:48:44 --> 03/07/2007 17:53:44  ---- integrate -s 10 -w
+Finished 40/120 on 1924-292.
+LST [hr]=  18.57
+source name = 1924-292 
+lookup time: 3 7 2007 17:53
+1924-292 is at 39.3 degrees elevation
+	03/07/2007 17:53:44 --> 03/07/2007 17:53:54  ---- observe -s 1924-292
+	03/07/2007 17:53:54 --> 03/07/2007 17:58:54  ---- integrate -s 10 -w
+Finished 50/120 on 1924-292.
+LST [hr]=  18.65
+source name = 1924-292 
+lookup time: 3 7 2007 17:58
+1924-292 is at 39.5 degrees elevation
+	03/07/2007 17:58:54 --> 03/07/2007 17:59:04  ---- observe -s 1924-292
+	03/07/2007 17:59:04 --> 03/07/2007 18:04:04  ---- integrate -s 10 -w
+Finished 60/120 on 1924-292.
+LST [hr]=  18.74
+source name = 1924-292 
+lookup time: 3 7 2007 18:4
+1924-292 is at 39.9 degrees elevation
+	03/07/2007 18:04:04 --> 03/07/2007 18:04:14  ---- observe -s 1924-292
+	03/07/2007 18:04:14 --> 03/07/2007 18:09:14  ---- integrate -s 10 -w
+Finished 70/120 on 1924-292.
+LST [hr]=  18.83
+source name = 1924-292 
+lookup time: 3 7 2007 18:9
+1924-292 is at 40.1 degrees elevation
+	03/07/2007 18:09:14 --> 03/07/2007 18:09:24  ---- observe -s 1924-292
+	03/07/2007 18:09:24 --> 03/07/2007 18:14:24  ---- integrate -s 10 -w
+Finished 80/120 on 1924-292.
+LST [hr]=  18.91
+source name = 1924-292 
+lookup time: 3 7 2007 18:14
+1924-292 is at 40.3 degrees elevation
+	03/07/2007 18:14:24 --> 03/07/2007 18:14:34  ---- observe -s 1924-292
+	03/07/2007 18:14:34 --> 03/07/2007 18:19:34  ---- integrate -s 10 -w
+Finished 90/120 on 1924-292.
+LST [hr]=  19.00
+source name = 1924-292 
+lookup time: 3 7 2007 18:19
+1924-292 is at 40.5 degrees elevation
+	03/07/2007 18:19:34 --> 03/07/2007 18:19:44  ---- observe -s 1924-292
+	03/07/2007 18:19:44 --> 03/07/2007 18:24:44  ---- integrate -s 10 -w
+Finished 100/120 on 1924-292.
+LST [hr]=  19.09
+source name = 1924-292 
+lookup time: 3 7 2007 18:24
+1924-292 is at 40.6 degrees elevation
+	03/07/2007 18:24:44 --> 03/07/2007 18:24:54  ---- observe -s 1924-292
+	03/07/2007 18:24:54 --> 03/07/2007 18:29:54  ---- integrate -s 10 -w
+Finished 110/120 on 1924-292.
+LST [hr]=  19.17
+source name = 1924-292 
+lookup time: 3 7 2007 18:29
+1924-292 is at 40.8 degrees elevation
+	03/07/2007 18:29:54 --> 03/07/2007 18:30:04  ---- observe -s 1924-292
+	03/07/2007 18:30:04 --> 03/07/2007 18:35:04  ---- integrate -s 10 -w
+Finished 120/120 on 1924-292.
+----- Congratulations!  This is the end of the script.  -----

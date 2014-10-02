@@ -1,0 +1,15 @@
+#!/bin/tcsh -vf
+while (1)
+  /application/bin/observe -s 2013+370
+  sleep 5
+  tsys
+  /application/bin/integrate -s 10 -w
+  /application/bin/observe -s Chi-Cyg -r 19:50:33.92 -d 51:23:19.7 -v 9.7
+  sleep 5
+  /application/bin/integrate -s 60 -w
+  /application/bin/observe -s 2013+370
+  sleep 5
+  tsys
+  /application/bin/integrate -s 10 -w -b
+end
+

@@ -1,0 +1,45 @@
+#!/bin/csh
+# script written by Todd to collect all numeric tilt data into a single file
+#
+setenv LD_LIBRARY_PATH /usr/local/pgplot:/usr/local/lib:/common/user1/SUNWspro/lib:/sybase/lib:/sybase/bin
+getTilts -a 1 -p 8  -t 1 -n > ant1.1
+getTilts -a 1 -p 8  -t 2 -n > ant1.2
+getTilts -a 1 -p 8  -t 3 -n > ant1.3
+getTilts -a 1 -p 8  -t 4 -n > ant1.4
+getTilts -a 2 -p 23 -t 1 -n > ant2.1
+getTilts -a 2 -p 23 -t 2 -n > ant2.2
+getTilts -a 2 -p 23 -t 3 -n > ant2.3
+getTilts -a 2 -p 23 -t 4 -n > ant2.4
+getTilts -a 3 -p 5  -t 1 -n > ant3.1
+getTilts -a 3 -p 5  -t 2 -n > ant3.2
+getTilts -a 3 -p 5  -t 3 -n > ant3.3
+getTilts -a 3 -p 5  -t 4 -n > ant3.4
+getTilts -a 4 -p 7  -t 1 -n > ant4.1
+getTilts -a 4 -p 7  -t 2 -n > ant4.2
+getTilts -a 4 -p 7  -t 3 -n > ant4.3
+getTilts -a 4 -p 7  -t 4 -n > ant4.4
+getTilts -a 5 -p 16 -t 1 -n > ant5.1
+getTilts -a 5 -p 16 -t 2 -n > ant5.2
+getTilts -a 5 -p 16 -t 3 -n > ant5.3
+getTilts -a 5 -p 16 -t 4 -n > ant5.4
+getTilts -a 6 -p 1  -t 1 -n > ant6.1
+getTilts -a 6 -p 1  -t 2 -n > ant6.2
+getTilts -a 6 -p 1  -t 3 -n > ant6.3
+getTilts -a 6 -p 1  -t 4 -n > ant6.4
+getTilts -a 7 -p 11 -t 1 -n > ant7.1
+getTilts -a 7 -p 11 -t 2 -n > ant7.2
+getTilts -a 7 -p 11 -t 3 -n > ant7.3
+getTilts -a 7 -p 11 -t 4 -n > ant7.4
+getTilts -a 8 -p 9  -t 1 -n > ant8.1
+getTilts -a 8 -p 9  -t 2 -n > ant8.2
+getTilts -a 8 -p 9  -t 3 -n > ant8.3
+getTilts -a 8 -p 9  -t 4 -n > ant8.4
+sort ant1.1 ant1.2 ant1.3 ant1.4 \
+     ant2.1 ant2.2 ant2.3 ant2.4 \
+     ant3.1 ant3.2 ant3.3 ant3.4 \
+     ant4.1 ant4.2 ant4.3 ant4.4 \
+     ant5.1 ant5.2 ant5.3 ant5.4 \
+     ant6.1 ant6.2 ant6.3 ant6.4 \
+     ant7.1 ant7.2 ant7.3 ant7.4 \
+     ant8.1 ant8.2 ant8.3 ant8.4 > tilt.data
+echo results left in file = tilt.data

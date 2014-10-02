@@ -1,0 +1,14 @@
+#!/usr/bin/perl -W
+$ENV{'PATH'} = '/usr/bin:/usr/ucb:/usr/local/bin:/application/bin';
+$path = $ENV{'PATH'};
+$ps = `ps -a | grep gnuplot_`;
+$pid = 0;
+($pid,$junk)=split(' ',$ps);	
+while ($pid != 0) {
+  print "Killing process id = $pid";
+  `kill -9 $pid`;
+  sleep 1;
+  $ps = `ps -a | grep gnuplot_`;
+  ($pid,$junk)=split(' ',$ps);	
+}
+#

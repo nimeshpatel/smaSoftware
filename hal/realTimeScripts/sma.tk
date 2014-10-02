@@ -1,0 +1,607 @@
+#!/usr/bin/wish -f
+# A GUI for the project initialization and SMAsh command dispatching
+# NaP 11 Jun 2003
+# 
+
+set file [open "/dev/excl_project_tcl_tk" r]
+if {$file == -1} {
+  exit(0)
+}
+
+# toggle switch for standby/resume (global  variable)
+set bstate 0
+set transition ""
+set frequency ""
+set sideband ""
+
+# Main GUI frame.
+frame .mbar -bd 2  -relief raised
+pack .mbar -fill x -side top
+
+# Menu bar
+menubutton .mbar.antenna -text "Antenna" -menu .mbar.antenna.m
+pack .mbar.antenna -side left
+menu .mbar.antenna.m
+.mbar.antenna.m add command -label "observe" -command observe
+.mbar.antenna.m add command -label "az" -command az
+.mbar.antenna.m add command -label "el" -command el
+.mbar.antenna.m add command -label "azel" -command azel
+.mbar.antenna.m add command -label "azoff" -command azoff
+.mbar.antenna.m add command -label "eloff" -command eloff
+.mbar.antenna.m add command -label "raoff" -command raoff
+.mbar.antenna.m add command -label "decoff" -command decoff
+#.mbar.antenna.m add command -label "elscan" -command elscan
+#.mbar.antenna.m add command -label "integrationTime" -command integrationTime
+.mbar.antenna.m add command -label "observe" -command observe
+#.mbar.antenna.m add command -label "offsetUnit" -command offsetUnit
+.mbar.antenna.m add command -label "openM3" -command {exec openM3}
+.mbar.antenna.m add command -label "closeM3" -command { exec closeM3}
+.mbar.antenna.m add command -label "optical" -command  {exec optical}
+.mbar.antenna.m add command -label "radio" -command  {exec radio}
+#.mbar.antenna.m add command -label "snapshot" -command  {exec snapshot}
+.mbar.antenna.m add command -label "standby" -command  {exec standby}
+.mbar.antenna.m add command -label "resume" -command  {exec resume}
+#.mbar.antenna.m add command -label "stopScan" -command  {stopScan}
+.mbar.antenna.m add command -label "stow" -command  {exec stow}
+
+menubutton .mbar.chopper -text "Chopper" -menu .mbar.chopper.m
+pack .mbar.chopper -side left
+menu .mbar.chopper.m
+#.mbar.chopper.m add command -label "chopperCommand" -command chopperCommand
+#.mbar.chopper.m add command -label "chopperTilt" -command chopperTilt
+#.mbar.chopper.m add command -label "chopperX" -command chopperX
+#.mbar.chopper.m add command -label "chopperY" -command chopperY
+#.mbar.chopper.m add command -label "chopperZ" -command chopperZ
+#.mbar.chopper.m add command -label "focus" -command focus
+.mbar.chopper.m add command -label "homeChopper" -command {exec homeChopper}
+.mbar.chopper.m add command -label "nearChopper" -command {exec nearChopper}
+.mbar.chopper.m add command -label "farChopper" -command {exec farChopper}
+#.mbar.chopper.m add command -label "startChopping" -command startChopping
+#.mbar.chopper.m add command -label "stopChopping" -command stopChopping
+.mbar.chopper.m add command -label "stowChopper" -command {exec stowChopper}
+
+menubutton .mbar.receiver -text "Receiver" -menu .mbar.receiver.m
+pack .mbar.receiver -side left
+menu .mbar.receiver.m
+.mbar.receiver.m add command -label "tune" -command tune
+
+menubutton .mbar.iflo -text "IF/LO" -menu .mbar.iflo.m
+pack .mbar.iflo -side left
+menu .mbar.iflo.m
+#.mbar.iflo.m add command -label "setFreq" -command setFreq
+.mbar.iflo.m add command -label "setIFLevels" \
+	-command  {exec setIFLevels -v}
+#.mbar.iflo.m add command -label "setLO" -command setLO
+#.mbar.iflo.m add command -label "setMRG" -command setMRG
+#.mbar.iflo.m add command -label "setYIG" -command setYIG
+
+menubutton .mbar.corr -text "Correlator" -menu .mbar.corr.m
+pack .mbar.corr -side left
+menu .mbar.corr.m
+.mbar.corr.m add command -label "configureCorrelator" -command configureCorrelator
+.mbar.corr.m add command -label "dopplerTrack" -command dopplerTrack
+.mbar.corr.m add command -label "integrate" -command integrate
+.mbar.corr.m add command -label "setC2DCAttenuators" \
+	-command {exec setC2DCAttenuators -o}
+.mbar.corr.m add command -label "newFile" \
+	-command {exec newFile}
+#.mbar.corr.m add command -label "restartCorrelator" -command restartCorrelator
+
+menubutton .mbar.general -text "General" -menu .mbar.general.m
+pack .mbar.general -side left
+menu .mbar.general.m
+.mbar.general.m add command -label "2op" -command 2op
+.mbar.general.m add command -label "azelstar" -command azelstar
+#.mbar.general.m add command -label "beamPattern" -command beamPattern
+.mbar.general.m add command -label "deice" -command deice
+.mbar.general.m add command -label "dip" -command dip
+.mbar.general.m add command -label "endProject" -command endProject
+.mbar.general.m add command -label "point" -command point
+#.mbar.general.m add command -label "recordContinuum" -command recordContinuum
+.mbar.general.m add command -label "rscan" -command rscan
+.mbar.general.m add command -label "tilt" -command tilt
+.mbar.general.m add command -label "tol" -command tol
+.mbar.general.m add command -label "tsys" -command tsys
+
+# Just a descriptive title
+frame .title1
+label .title1.label0 -text "SMA Project Initializer and Command Dispatcher"
+pack .title1.label0 -side left
+pack .title1 -side top -fill x
+
+# Separator for better organizing of widgets
+frame .sep0 -height 2 -borderwidth 1 -relief sunken
+pack .sep0 -fill x -pady 4
+
+frame .row1
+label .row1.label1 -text "Antennas:"
+foreach ant {1 2 3 4 5 6 7 8} {
+	checkbutton .row1.ants$ant -text "$ant" -relief flat \
+		-variable antenna$ant 
+}
+radiobutton .row1.antin -text in -variable antennaStatus -value 1
+radiobutton .row1.antout -text out -variable antennaStatus -value 0
+pack .row1.label1 .row1.ants1 .row1.ants2 .row1.ants3 .row1.ants4 \
+		.row1.ants5 .row1.ants6 .row1.ants7 .row1.ants8 -side left 
+pack .row1.antin .row1.antout -side right 
+pack .row1 -side top -fill x
+#--------------------------------------------------------------------------
+
+frame .sep1 -height 2 -borderwidth 1 -relief sunken
+pack .sep1 -fill x -pady 4
+#--------------------------------------------------------------------------
+
+frame .row2
+label .row2.label2 -text "P.I.:"
+label .row2.label3 -text "Observer:"
+entry .row2.entry2 -width 30 -relief sunken -bd 2 -textvariable piname
+entry .row2.entry3 -width 30 -relief sunken -bd 2 -textvariable observer
+pack .row2.label2 .row2.entry2 -side left
+pack .row2.label3 .row2.entry3 -side left
+pack .row2 -side top -fill x
+#--------------------------------------------------------------------------
+
+
+frame .row3
+label .row3.label4 -text "Description:"
+entry .row3.entry4 -width 64 -relief sunken -bd 2 -textvariable description
+pack .row3.label4 .row3.entry4 -side left
+pack .row3 -side top -fill x
+#--------------------------------------------------------------------------
+
+frame .row4
+label .row4.label5 -text "Operating location:"
+entry .row4.entry5 -width 58 -relief sunken -bd 2 -textvariable location
+pack .row4.label5 .row4.entry5 -side left
+pack .row4 -side top -fill x
+#--------------------------------------------------------------------------
+
+frame .sep2 -height 2 -borderwidth 1 -relief sunken
+pack .sep2 -fill x -pady 4
+#--------------------------------------------------------------------------
+
+frame .row5
+label .row5.label6 -text "Data-type:"
+radiobutton .row5.datatype1 -text science -variable datatype -value 1
+radiobutton .row5.datatype2 -text engineering -variable datatype -value 2
+radiobutton .row5.datatype3 -text holography -variable datatype -value 3
+radiobutton .row5.datatype4 -text pointing -variable datatype -value 4
+radiobutton .row5.datatype0 -text no-storage -variable datatype -value 0
+pack .row5.label6 .row5.datatype1 .row5.datatype2 .row5.datatype3 \
+	.row5.datatype4 .row5.datatype0 -side left
+pack .row5 -side top -fill x
+#--------------------------------------------------------------------------
+
+frame .row6
+label .row6.label7 -text "Script file: (optional)"
+entry .row6.entry7 -width 30 -relief sunken -bd 2 -textvariable scriptfile
+label .row6.label8 -text "Script PID: (optional)"
+entry .row6.entry8 -width 10 -relief sunken -bd 2 -textvariable scriptpid
+pack .row6.label7 .row6.entry7 .row6.label8 .row6.entry8 -side left
+pack .row6 -side top -fill x
+#--------------------------------------------------------------------------
+
+frame .sep3 -height 2 -borderwidth 1 -relief sunken
+pack .sep3 -fill x -pady 4
+#--------------------------------------------------------------------------
+
+frame .row7
+button .row7.b1 -text "STANDBY" -background red -command buttonState \
+	-width 6  -height 2 -activebackground red -borderwidth 2 
+button .row7.b2 -text "New" -command newProject 
+button .row7.b3 -text "Revise" -command reviseProject 
+button .row7.b4 -text "EndProject" -command {
+	exec endProject
+	}
+button .row7.b5 -text "Help" -command Help 
+button .row7.b6 -text "Quit" -command exit 
+pack .row7.b2 .row7.b3 .row7.b4 .row7.b5 .row7.b1 .row7.b6 -side left 
+pack .row7 -side top -fill x
+#--------------------------------------------------------------------------
+
+proc newProject {} {
+}
+proc reviseProject {} {
+}
+
+
+proc Help {} {
+set helpText ""
+set file [open "project.hlp" r]
+set i 0
+while {[gets $file line]>=0} {
+set helpText "$helpText $line \n"
+incr i
+}
+close $file
+tk_dialog .d {Project command help}  ${helpText} {} -1 {OK}
+}
+
+proc buttonState {} {
+
+global bstate	
+
+# Toggle function for standby and resume
+if {$bstate == 0}  {
+	set standby_response [exec "standby"]
+	.row7.b1 config -background green -activebackground green 
+		set bstate 1
+		.row7.b1 config -text "RESUME"} else  {
+	set resume_response [exec "resume"]
+		.row7.b1 config -background red -activebackground red  
+		set bstate 0
+		.row7.b1 config -text "STANDBY"}
+}
+
+#---Antenna Commands---
+#--------------------observe--------------------------------------------
+proc observe {} {
+toplevel .observe 
+frame .observe.inputs
+label .observe.inputs.source -text "Source:"
+entry .observe.inputs.sourceentry -width 20 -relief sunken \
+		-bd 2 -textvariable sourcename
+pack .observe.inputs.source .observe.inputs.sourceentry -side top
+frame .observe.inputs.sep -height 2 -borderwidth 1 -relief sunken
+pack .observe.inputs.sep -fill x -padx 4 -side top
+
+button .observe.inputs.cancel -text "Cancel" \
+	-command {destroy .observe} 
+button .observe.inputs.execute -text "Execute" \
+	-command {exec observe -s $sourcename}
+button .observe.inputs.ok -text "OK" \
+		-command {
+	exec observe -s $sourcename 
+	destroy .observe
+	}
+pack .observe.inputs.cancel .observe.inputs.execute .observe.inputs.ok -side left
+pack .observe.inputs -expand yes -fill both -padx 2 -pady 2
+}
+
+
+#--------------------az------------------------------------------------
+proc az {} {
+toplevel .az 
+frame .az.inputs
+label .az.inputs.degrees -text "az degrees:"
+entry .az.inputs.degreesentry -width 20 -relief sunken \
+		-bd 2 -textvariable azdeg
+pack .az.inputs.degrees .az.inputs.degreesentry -side top
+frame .az.inputs.sep -height 2 -borderwidth 1 -relief sunken
+pack .az.inputs.sep -fill x -padx 4 -side top
+
+button .az.inputs.cancel -text "Cancel" \
+	-command {destroy .az} 
+button .az.inputs.execute -text "Execute" \
+	-command {exec az -d $azdeg}
+button .az.inputs.ok -text "OK" -command {
+	exec az -d $azdeg
+	destroy .az
+	}
+pack .az.inputs.cancel .az.inputs.execute .az.inputs.ok -side left
+pack .az.inputs -expand yes -fill both -padx 2 -pady 2
+}
+
+proc executeAz {} {
+# First check the input for errors
+}
+
+#--------------------el------------------------------------------------
+proc el {} {
+toplevel .el 
+frame .el.inputs
+label .el.inputs.degrees -text "el degrees:"
+entry .el.inputs.degreesentry -width 20 -relief sunken \
+		-bd 2 -textvariable eldeg
+pack .el.inputs.degrees .el.inputs.degreesentry -side top
+frame .el.inputs.sep -height 2 -borderwidth 1 -relief sunken
+pack .el.inputs.sep -fill x -padx 4 -side top
+
+button .el.inputs.cancel -text "Cancel" \
+	-command {destroy .el} 
+button .el.inputs.execute -text "Execute" \
+	-command {exec el -d $eldeg}
+button .el.inputs.ok -text "OK" -command {
+	exec el -d $eldeg
+	destroy .el
+	}
+pack .el.inputs.cancel .el.inputs.execute .el.inputs.ok -side left
+pack .el.inputs -expand yes -fill both -padx 2 -pady 2
+}
+
+#--------------------azel----------------------------------------------
+proc azel {} {
+toplevel .azel 
+frame .azel.inputs
+label .azel.inputs.azdegrees -text "az degrees:"
+entry .azel.inputs.azdegreesentry -width 20 -relief sunken \
+		-bd 2 -textvariable azdeg
+label .azel.inputs.eldegrees -text "el degrees:"
+entry .azel.inputs.eldegreesentry -width 20 -relief sunken \
+		-bd 2 -textvariable eldeg
+pack .azel.inputs.azdegrees .azel.inputs.azdegreesentry \
+	.azel.inputs.eldegrees .azel.inputs.eldegreesentry -side top
+frame .azel.inputs.sep -height 2 -borderwidth 1 -relief sunken
+pack .azel.inputs.sep -fill x -padx 4 -side top
+
+button .azel.inputs.cancel -text "Cancel" \
+	-command {destroy .azel} 
+button .azel.inputs.execute -text "Execute" \
+	-command {exec azel -z $azdeg -e $eldeg}
+button .azel.inputs.ok -text "OK" -command {
+	exec azel -z $azdeg -e $eldeg
+	destroy .azel
+	}
+pack .azel.inputs.cancel .azel.inputs.execute .azel.inputs.ok -side left
+pack .azel.inputs -expand yes -fill both -padx 2 -pady 2
+}
+
+#--------------------azoff----------------------------------------------
+proc azoff {} {
+toplevel .azoff 
+frame .azoff.inputs
+label .azoff.inputs.degrees -text "azoff arcseconds:"
+entry .azoff.inputs.degreesentry -width 20 -relief sunken \
+		-bd 2 -textvariable azoffarcseconds
+pack .azoff.inputs.degrees .azoff.inputs.degreesentry -side top
+frame .azoff.inputs.sep -height 2 -borderwidth 1 -relief sunken
+pack .azoff.inputs.sep -fill x -padx 4 -side top
+
+button .azoff.inputs.cancel -text "Cancel" \
+	-command {destroy .azoff} 
+button .azoff.inputs.execute -text "Execute" \
+	-command {exec azoff -s $azoffarcseconds}
+button .azoff.inputs.ok -text "OK" -command {
+	exec azoff -s $azoffarcseconds
+	destroy .azoff
+	}
+pack .azoff.inputs.cancel .azoff.inputs.execute .azoff.inputs.ok -side left
+pack .azoff.inputs -expand yes -fill both -padx 2 -pady 2
+}
+
+#--------------------eloff----------------------------------------------
+proc eloff {} {
+toplevel .eloff 
+frame .eloff.inputs
+label .eloff.inputs.degrees -text "eloff arcseconds:"
+entry .eloff.inputs.degreesentry -width 20 -relief sunken \
+		-bd 2 -textvariable eloffarcseconds
+pack .eloff.inputs.degrees .eloff.inputs.degreesentry -side top
+frame .eloff.inputs.sep -height 2 -borderwidth 1 -relief sunken
+pack .eloff.inputs.sep -fill x -padx 4 -side top
+
+button .eloff.inputs.cancel -text "Cancel" \
+	-command {destroy .eloff} 
+button .eloff.inputs.execute -text "Execute" \
+	-command {exec eloff -s $eloffarcseconds}
+button .eloff.inputs.ok -text "OK" -command {
+	exec eloff -s $eloffarcseconds
+	destroy .eloff
+	}
+pack .eloff.inputs.cancel .eloff.inputs.execute .eloff.inputs.ok -side left
+pack .eloff.inputs -expand yes -fill both -padx 2 -pady 2
+}
+
+#--------------------raoff----------------------------------------------
+proc raoff {} {
+toplevel .raoff 
+frame .raoff.inputs
+label .raoff.inputs.degrees -text "raoff arcseconds:"
+entry .raoff.inputs.degreesentry -width 20 -relief sunken \
+		-bd 2 -textvariable raoffarcseconds
+pack .raoff.inputs.degrees .raoff.inputs.degreesentry -side top
+frame .raoff.inputs.sep -height 2 -borderwidth 1 -relief sunken
+pack .raoff.inputs.sep -fill x -padx 4 -side top
+
+button .raoff.inputs.cancel -text "Cancel" \
+	-command {destroy .raoff} 
+button .raoff.inputs.execute -text "Execute" \
+	-command {exec raoff  -s $raoffarcseconds}
+button .raoff.inputs.ok -text "OK" -command {
+	exec raoff -s $raoffarcseconds
+	destroy .raoff
+	}
+pack .raoff.inputs.cancel .raoff.inputs.execute .raoff.inputs.ok -side left
+pack .raoff.inputs -expand yes -fill both -padx 2 -pady 2
+}
+
+#--------------------decoff----------------------------------------------
+proc decoff {} {
+toplevel .decoff 
+frame .decoff.inputs
+label .decoff.inputs.degrees -text "decoff arcseconds:"
+entry .decoff.inputs.degreesentry -width 20 -relief sunken \
+		-bd 2 -textvariable decoffarcseconds
+pack .decoff.inputs.degrees .decoff.inputs.degreesentry -side top
+frame .decoff.inputs.sep -height 2 -borderwidth 1 -relief sunken
+pack .decoff.inputs.sep -fill x -padx 4 -side top
+
+button .decoff.inputs.cancel -text "Cancel" \
+	-command {destroy .decoff} 
+button .decoff.inputs.execute -text "Execute" \
+	-command {exec decoff -s $decoffarcseconds}
+button .decoff.inputs.ok -text "OK" -command {
+	exec decoff -s $decoffarcseconds
+	}
+pack .decoff.inputs.cancel .decoff.inputs.execute .decoff.inputs.ok -side left
+pack .decoff.inputs -expand yes -fill both -padx 2 -pady 2
+}
+
+#--------------------integrate----------------------------------------------
+proc integrate {} {
+toplevel .integrate 
+frame .integrate.inputs
+label .integrate.inputs.scans -text "number of scans:"
+entry .integrate.inputs.scansentry -width 20 -relief sunken \
+		-bd 2 -textvariable scans
+label .integrate.inputs.inttime -text "integration time (seconds):"
+entry .integrate.inputs.inttimeentry -width 20 -relief sunken \
+		-bd 2 -textvariable integrationtime
+pack .integrate.inputs.scans .integrate.inputs.scansentry \
+	.integrate.inputs.inttime .integrate.inputs.inttimeentry -side top
+frame .integrate.inputs.sep -height 2 -borderwidth 1 -relief sunken
+pack .integrate.inputs.sep -fill x -padx 4 -side top
+
+button .integrate.inputs.cancel -text "Cancel" \
+	-command {destroy .integrate} 
+button .integrate.inputs.execute -text "Execute" \
+	-command {integrate -s $scans -t $integrationtime}
+button .integrate.inputs.ok -text "OK" -command {
+	exec integrate -s $scans -t $integrationtime
+	destroy .integrate
+	}
+pack .integrate.inputs.cancel .integrate.inputs.execute .integrate.inputs.ok -side left
+pack .integrate.inputs -expand yes -fill both -padx 2 -pady 2
+}
+
+#--------------------dopplerTrack------------------------------------------
+proc dopplerTrack {} {
+global transition
+global frequency
+global sideband
+set $transition ""
+set $frequency 0.0
+set $sideband ""
+toplevel .dopplertrack 
+frame .dopplertrack.inputs
+label .dopplertrack.inputs.block -text "Block:"
+entry .dopplertrack.inputs.blockentry -width 4 -relief sunken \
+		-bd 2 -textvariable block
+label .dopplertrack.inputs.chunk -text "Chunk:"
+entry .dopplertrack.inputs.chunkentry -width 4 -relief sunken \
+		-bd 2 -textvariable chunk
+
+label .dopplertrack.inputs.gunn -text "Gunn multiplier:"
+entry .dopplertrack.inputs.gunnentry -width 4 -relief sunken \
+		-bd 2 -textvariable gunnmultiplier
+
+label .dopplertrack.inputs.harmonic -text "Harmonic:"
+entry .dopplertrack.inputs.harmonicentry -width 4 -relief sunken \
+		-bd 2 -textvariable harmonicentry
+
+pack .dopplertrack.inputs.block \
+	.dopplertrack.inputs.blockentry \
+	.dopplertrack.inputs.chunk \
+	.dopplertrack.inputs.chunkentry \
+	.dopplertrack.inputs.gunn \
+	.dopplertrack.inputs.gunnentry \
+	.dopplertrack.inputs.harmonic \
+	.dopplertrack.inputs.harmonicentry 
+
+frame .dopplertrack.inputs.sep1 -height 2 -borderwidth 1 -relief sunken
+pack .dopplertrack.inputs.sep1 -fill x -padx 4 -side top
+
+label .dopplertrack.inputs.transition -text "Transition:"
+entry .dopplertrack.inputs.transitionentry -width 20 -relief sunken \
+		-bd 2 -textvariable transition
+
+label .dopplertrack.inputs.frequency  -text "Rest-frequency (GHz):"
+entry .dopplertrack.inputs.frequencyentry  -width 20 -relief sunken \
+		-bd 2 -textvariable frequency
+
+label .dopplertrack.inputs.sideband  -text "Sideband (U/L):"
+entry .dopplertrack.inputs.sidebandentry  -width 4 -relief sunken \
+		-bd 2 -textvariable sideband
+
+pack .dopplertrack.inputs.transition \
+	.dopplertrack.inputs.transitionentry \
+	.dopplertrack.inputs.frequency \
+	.dopplertrack.inputs.frequencyentry \
+	.dopplertrack.inputs.sideband  \
+	.dopplertrack.inputs.sidebandentry 
+
+frame .dopplertrack.inputs.sep2 -height 2 -borderwidth 1 -relief sunken
+pack .dopplertrack.inputs.sep2 -fill x -padx 4 -side top
+
+toplevel .linecat 
+wm resizable .linecat 0 0 
+listbox .linecat.lines -height 20 -width 40 -relief raised -borderwidth 2 \
+	-yscrollcommand ".linecat.scroll set"
+pack .linecat.lines -side left
+scrollbar .linecat.scroll -command ".linecat.lines yview"
+pack .linecat.scroll -side right -fill y
+set f [open /common/catalogs/sma_line_catalog]
+while {[gets $f line] >=0} {
+if ![string match \#* $line] {
+	regsub -all (\t) $line "        " newline
+	.linecat.lines insert end $newline
+	}
+}
+close $f
+bind .linecat <Double-ButtonPress-1> {
+set linename [selection get ]
+parseSetLineName $linename
+}
+
+button .dopplertrack.inputs.cancel -text "Cancel" \
+	-command {destroy .dopplertrack} 
+button .dopplertrack.inputs.execute -text "Execute" \
+	-command {exec dopplertrack -s $sourcename}
+button .dopplertrack.inputs.ok -text "OK" \
+		-command {
+	exec dopplertrack -s $sourcename 
+	destroy .dopplertrack
+	}
+pack .dopplertrack.inputs.cancel .dopplertrack.inputs.execute \
+.dopplertrack.inputs.ok -side left
+pack .dopplertrack.inputs -expand yes -fill both -padx 2 -pady 2
+}
+
+proc parseSetLineName {linename} {
+global transition
+global frequency
+global sideband
+set scanreturn [scan $linename "%s %e %s" t g s]
+#puts $t
+#puts $g
+#puts $s
+.dopplertrack.inputs.transitionentry insert 0 $t
+set $transition $t
+.dopplertrack.inputs.frequencyentry insert 0 $g
+set $frequency $g
+.dopplertrack.inputs.sidebandentry insert 0 $s
+set $sideband $s
+#puts "transition:"
+#puts $transition
+#puts "frequency:"
+#puts "$frequency"
+#puts "sideband:"
+#puts $sideband
+}
+
+proc tune {} {
+toplevel .tune 
+frame .tune.inputs
+label .tune.antlabel -text "Select antenna:"
+foreach ant {1 2 3 4 5 6 7 8} {
+	radiobutton .tune.ant$ant -text "$ant" \
+		-variable antenna -value $ant 
+}
+pack .tune.antlabel .tune.ant1 .tune.ant2 .tune.ant3 .tune.ant4\
+	.tune.ant5 .tune.ant6 .tune.ant7 .tune.ant8 -side left
+
+frame .tune.inputs.sep -height 2 -borderwidth 1 -relief sunken
+pack .tune.inputs.sep -fill x -padx 4 -side top
+
+label .tune.inputs.command -text "Command:"
+entry .tune.inputs.commandentry -width 20 -relief sunken \
+	-bd 2 -textvariable tunecommand
+pack .tune.inputs.command .tune.inputs.commandentry -side top
+
+frame .tune.inputs.sep1 -height 2 -borderwidth 1 -relief sunken
+pack .tune.inputs.sep1 -fill x -padx 4 -side top
+
+button .tune.inputs.cancel -text "Cancel" \
+        -command {destroy .tune}
+button .tune.inputs.execute -text "Execute" \
+        -command {exec tune -a $antenna -c $tunecommand}
+button .tune.inputs.ok -text "OK" \
+                -command {
+        exec tune -a $antenna -c $tunecommand 
+        destroy .tune 
+	}
+
+pack .tune.inputs.cancel .tune.inputs.execute \
+	.tune.inputs.ok -side left
+pack .tune.inputs -expand yes -fill both -padx 2 -pady 2
+}

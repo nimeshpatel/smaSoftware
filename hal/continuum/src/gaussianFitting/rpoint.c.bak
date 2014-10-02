@@ -1,0 +1,252 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <time.h>
+#include <termio.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include "cpgplot.h"
+#include "nr.h"
+
+#define THROW_NUM 15
+
+/* NAP 4 October 2003, modified for the additional channel */
+/* NAP 31 March 2003, modified for the new format of input data file */
+
+int spikeFilter3(char *infile, char *outfile, int throw_num); 
+
+void nrpoint(float x[],float y[],float azy[],float ely[],float azmod[],float elmod[],
+		float sig[],int ndata,int num_gauss,int flag,int ant_num,int plotflag,
+char *header);
+void nrpoint2(float x[],float y[],float azy[],float ely[],float azmod[],float elmod[],
+		float sig[],int ndata,int num_gauss,int flag,int ant_num,int plotflag,
+char *header);
+
+void usage(){
+	printf("Usage: rpoint -a<n> -p (optional)\n"
+		"  -h  this help\n"
+		"  -p  plot\n"
+		"  -a<n> (n is the antenna number)\n");
+	exit(1);
+}
+
+	int lowfreqflag=0;
+
+int main(int argc, char *argv[])
+{
+	FILE *fp;
+	extern char *optarg; 	/* for command arguments */
+	char rmCommand[130];
+	float *x,*y,*sig,*azy,*ely,*azpmd,*elpmd,**covar,**alpha,*a;
+	float utc,az,el,azoff,eloff,output,output2,az_err,el_err,az_mod,el_mod;
+	float chop_angle,chop_x,chop_y,chop_z;
+	int throw_num=THROW_NUM;
+	int i,j,k,l,numplot,num_of_data,num_gauss, MA, NPT,*ia,flag,ant_num=0,plotflag=0;
+	char c,f_line[2000],header[2000],source[40],*t  ;
+	char hashsymbol[2];
+	char fname[30],file_name[80],despike_name[120],data_name[120],a1[30],a2[30],a3[30];
+	long pretime=2.0e9,curtime=-1;
+	time_t new_time;
+	struct stat sbuf;
+	struct tm ts;
+
+	while ((c = getopt(argc,argv,"hpla:")) != -1) {
+	switch(c) {
+		case 'h':
+			usage();
+			break;
+		case 'a':
+			ant_num=atoi(optarg);
+			printf("ant=%d\n",ant_num);
+			break;
+		case 'p':
+			plotflag=1;
+			break;
+		case 'l':
+			lowfreqflag=1;
+			break;
+		default:
+			usage();
+                        break;
+	}
+	}
+
+	if((ant_num < 1) || (ant_num > 8)){
+		printf("ant %d? ant 1-8\n",ant_num);
+		usage();
+		exit(1);
+	}
+
+	new_time=time(NULL);
+	sprintf(fname,"ant%1d",ant_num);
+	sprintf(data_name,"/usr/PowerPC/common/data/rpoint/ant%1d/tmp.dat",ant_num);
+	sprintf(despike_name,"/usr/PowerPC/common/data/rpoint/ant%1d/despike.dat",ant_num);
+	ts = *localtime(&new_time);
+	sprintf(file_name, "/usr/PowerPC/common/data/rpoint/ant%1d/%02d%02d%02d.%s",ant_num,ts.tm_mon+1,ts.tm_mday,ts.tm_year-100,fname);
+	printf("filename %s\n",file_name);
+
+while(1){ /* infinity loop */
+	while(curtime <= pretime){
+		if(curtime>0) pretime=curtime;
+		stat(data_name,&sbuf);
+		curtime=sbuf.st_mtime;
+/*
+		if(plotflag) printf("ant%1d pre=%ld cur=%ld:plot mode\n",ant_num,pretime,curtime);
+		else printf("ant%1d pre=%ld cur=%ld:no plot mode\n",ant_num,pretime,curtime);
+*/
+	
+		sleep(1);
+	}
+	pretime=curtime;
+
+/* spikefilter test */
+ printf("throw_num given to spikeFilter3= %d\n",throw_num);	
+	spikeFilter3(data_name,despike_name,throw_num);
+
+
+	if ((fp=fopen(despike_name,"r"))==NULL)
+	{
+		printf("cannot open data file\n");
+		exit(1);
+	}
+
+	num_of_data=0;
+
+	while(feof(fp)==0){
+		fgets(f_line,2000,fp);
+		if(num_of_data==0) sscanf(f_line,"%s %d %d\n",hashsymbol,&flag,&l);
+if(num_of_data==1) {
+strcpy(header,f_line);
+printf("header=%s fline=%s\n",header,f_line);
+}
+		num_of_data++;
+	}
+
+	if(flag&&l) num_gauss=2;
+	else num_gauss=1;
+
+printf("numgauss=%d\n",num_gauss);
+
+	MA=5*num_gauss;
+	NPT=num_of_data-4;
+printf("number of data = %d num of fitting components = %d\n", NPT,num_gauss);
+
+/* vector business */
+	x=vector(1,NPT);
+	y=vector(1,NPT);
+	azy=vector(1,NPT);
+	ely=vector(1,NPT);
+	azpmd=vector(1,NPT);
+	elpmd=vector(1,NPT);
+	sig=vector(1,NPT);
+	rewind(fp);
+
+/* read data */
+/*
+printf("fitting data...\n");
+*/
+for (i=1;i<=(num_of_data-2);i++)
+	{
+	fgets(f_line,2000,fp);
+		if(i>2) {
+		j=i-2;	
+		sscanf(f_line,"%f %f %f %f %f %f %f %f %f %f %f\n",
+		&utc,&az,&el,&azoff,&eloff,&output,&output2,&az_err,&el_err,&az_mod,&el_mod);
+		if(flag==1) x[j]=azoff-az_err; else x[j]=eloff-el_err;
+		if(lowfreqflag==1) y[j]=output;
+		if(lowfreqflag==0) y[j]=output2;
+printf("lowfreqflag=%d output=%f output2 = %f y[j]=%f\n",
+lowfreqflag,output,output2,y[j]);
+		azy[j]=az;
+		ely[j]=el;
+		azpmd[j]=az_mod;
+		elpmd[j]=el_mod;
+		sig[j]=1.0;
+/*
+		printf("%d %f %f\n",j,x[j],y[j]);
+*/
+	        }
+	}
+/*
+printf("end of fitting data.\n");
+*/
+
+	new_time=time(NULL);
+	ts = *localtime(&new_time);
+	t=ctime(&new_time);
+	if(num_gauss==1) nrpoint(x,y,azy,ely,azpmd,elpmd,sig,NPT,MA,flag,ant_num,plotflag,header);
+	else nrpoint2(x,y,azy,ely,azpmd,elpmd,sig,NPT,MA,flag,ant_num,plotflag,header);
+	free_vector(sig,1,NPT);
+	free_vector(y,1,NPT);
+	free_vector(x,1,NPT);
+	free_vector(azy,1,NPT);
+	free_vector(ely,1,NPT);
+	free_vector(azpmd,1,NPT);
+	free_vector(elpmd,1,NPT);
+
+sprintf(rmCommand,"\rm %s",despike_name);
+system(rmCommand);
+printf("done\n");
+}
+}
+
+
+int spikeFilter3(char *infile, char *outfile, int throw_num) {
+FILE *fpi,*fpo;
+int iline=1, nlines=0;
+char headCommand[130];
+char grepCommand[130];
+char nawkCommand[130];
+char nawk1Command[130];
+char wcCommand[130];
+char head2Command[130];
+char tailCommand[130];
+char inputline[500];
+
+sprintf(headCommand,"head -2 %s > %s",infile,outfile);
+printf("headCommand=%s\n",headCommand);
+system(headCommand);
+sprintf(grepCommand,"grep -v \"#\" %s > %s",infile,"temp_file");
+printf("grepCommand=%s\n",grepCommand);
+system(grepCommand);
+printf("lowfreqflag from within spikeFilter3 = %d\n",lowfreqflag);
+if(lowfreqflag==1) {
+sprintf(nawkCommand,
+       "nawk \'(NR == 1) {old=$6} (NR!=1) {printf \"%%s %%f %%f \\n\", $0,NR, ($6-old)\; old=$6}\' temp_file | sort -n -k 13 > diffs_srt");
+} else {
+sprintf(nawkCommand,
+       "nawk \'(NR == 1) {old=$7} (NR!=1) {printf \"%%s %%f %%f \\n\", $0,NR, ($7-old)\; old=$7}\' temp_file | sort -n -k 13 > diffs_srt");
+}
+printf("nawkCommand=%s\n",nawkCommand);
+system(nawkCommand);
+
+	fpi=fopen("diffs_srt","r");
+	if(fpi==NULL) {printf("Could not read diffs_srt.\n"); exit(-1);}
+	while (fscanf(fpi,"%s",inputline)!=EOF) {iline++;}
+	close(fpi);
+
+	nlines=iline-1;
+
+	fpi=fopen("diffs_srt","r");
+	if(fpi==NULL) {printf("Could not read diffs_srt.\n"); exit(-1);}
+	iline=1;
+	fpo=fopen("temp_file2","w");
+	if(fpo==NULL) {printf("Could not create temp_file2.\n"); exit(-1);}
+
+	while (fgets(inputline,100000,fpi)!=0) {
+	if((iline>=throw_num)&&(iline<(nlines-throw_num))) 
+		fprintf(fpo,"%s",inputline);
+		printf("---%s",inputline);
+		iline++;
+	}
+	fclose(fpo);
+	fclose(fpi);
+system("sort -n -k 12 temp_file2 > temp_file3");
+sprintf(nawk1Command,
+"nawk '{print $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11}' temp_file3 >> %s`",outfile);
+printf("nawk1Command=%s\n",nawk1Command);
+system(nawk1Command);
+sprintf(tailCommand,"tail -1 %s >> %s",infile,outfile);
+printf("tailCommand=%s\n",tailCommand);
+system(tailCommand);
+}

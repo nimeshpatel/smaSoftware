@@ -1,0 +1,101 @@
+#!/usr/local/bin/perl
+# perl script for making az and el scans
+# modified on 7 june 2000 by NAP
+# following syntax change in chart
+# and other commands in powerpc version
+ 
+if($#ARGV!=5)
+{
+die "Usage: chopScan <antenna_number> <source_name> <az/el> <min_offset> 
+	<max_offset> <offsetUnit> \n";
+}
+else
+{
+#initializations
+#Initializations
+$antenna_number=$ARGV[0];
+$source=$ARGV[1];
+$azel=$ARGV[2];
+$minoffset=$ARGV[3];
+$maxoffset=$ARGV[4];
+$offsetUnit=$ARGV[5];
+`chartCommand smadata CHOP 1`;
+} 
+
+if($source ne "same") { `observe -a $antenna_number -s $source -w -n`; }
+
+#first stop the chopper, then start it.
+#`stopChopping $antenna_number`;
+#sleep 3 ;
+#`startChopping $antenna_number`;
+#sleep 3 ;
+
+$elevation=`value -a $antenna_number -v actual_el_deg`;
+#$cosel=cos($elevation*0.01745329);
+
+$azoff_0=`value -a $antenna_number -v azoff`;
+$eloff_0=`value -a $antenna_number -v eloff`;
+
+#$azoff_0 *= $cosel;
+
+if($azel eq "az")
+{
+$offset="azoff";
+$scantype="azscan";
+$minoffset+=$azoff_0; 
+$maxoffset+=$azoff_0;
+#$maxoffset /= $cosel; 
+`eloff -a $antenna_number -s $eloff_0`;
+sleep 1;
+`chartCommand smadata SCAN 1`;
+}
+
+if($azel eq "el")
+{
+#give an offset it az to get the positive lobe of chopping
+$poslobe=$azoff_0-51.;
+
+$offset="eloff";
+$scantype="elscan";
+$minoffset+=$eloff_0; 
+$maxoffset+=$eloff_0; 
+sleep 1;
+`azoff -a $antenna_number -s $poslobe`;
+sleep 1;
+`chartCommand smadata SCAN 0`;
+}
+
+#if($source ne "same") { `observe -a $antenna_number -s $source -w -n`; }
+
+`$offset -a $antenna_number -s $minoffset`;
+sleep 5;
+`offsetUnit -a $antenna_number -s $offsetUnit`;
+sleep 5;
+`$scantype -a $antenna_number`;
+
+if($scantype eq "elscan")
+{
+`chartCommand smadata SCAN 0`;
+}
+
+if($scantype eq "azscan")
+{
+`chartCommand smadata SCAN 1`;
+}
+
+`chartCommand smadata SAVE 1`;
+
+$offset_check = `value -a $antenna_number -v $offset`;
+while ($offset_check<$maxoffset)
+{
+$offset_check = `value -a $antenna_number -v $offset`;
+#print "$offset_check\n";
+sleep 1;
+}
+`chartCommand smadata SAVE 0`;
+sleep 1;
+`stopScan -a $antenna_number`;
+sleep 1;
+`eloff -a $antenna_number -s $eloff_0`;
+sleep 1;
+`azoff -a $antenna_number -s $azoff_0`;

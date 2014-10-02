@@ -1,0 +1,15 @@
+#!/bin/tcsh -vf
+while (1)
+/application/bin/observe -s 0136+478
+sleep 5
+tsys
+/application/bin/integrate -s 10 -w
+/application/bin/observe -s 0102+584
+sleep 5
+/application/bin/integrate -s 10 -w
+/application/bin/observe -s blankField -r 01:17:00 -d 53:00:00
+sleep 5
+tsys
+/application/bin/integrate -s 10 -w
+end
+

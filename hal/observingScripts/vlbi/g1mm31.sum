@@ -1,0 +1,466 @@
+                    SUMMARY FILE FOR PROJECT: g1mm31  
+
+COVER INFORMATION: 
+
+  Experiment: 1mm Mar 31 2011, 22h30-16h30 UT
+  Exp. Code:  g1mm31  
+  Start Day  91 is Fri  1 Apr 2011   MJD  55651          
+
+  Schedule Version:       3.00
+  Processed by SCHED version:   9.40  Release Jan. 13, 2011.
+
+  PI:       Global Experiment
+
+  Address:  MPIfR (Europe)  Haystack (US)
+            Auf dem Huegel 69 (Europe)  Groton Road (US)
+            53121 Bonn (Europe)  Off Route 40 (US)
+            Germany and US
+
+  Phone:    0049-228-525-295, +1(781)981-5400
+  EMAIL:    tkrichbaum@mpifr-bonn.mpg.de, dole@haystack.mit.edu
+  Fax:
+  Phone during observation:
+
+  Observing mode: 2048-32-2
+
+  Notes:    Bonn c/o W. Alef, Haystack c/o M. Titus
+            modules before 05 UT and Europe 05-08 UT to Bonn
+            modules after 08 UT and US 05-08 to Haystack
+   
+
+
+No cover letter provided.
+
+CORRELATION REQUESTS (Defaults in parentheses):
+
+  Correlator (Required if recording):          BONN
+  Correlator average time (2 sec):               1.000 sec.
+    Alternate average time (for spacecraft).     0.000 sec.
+  Output spectral channels per baseband (16):          64
+     Correlator FFT size (128):                       128
+  Number of antennas to be correlated:                 14
+  Polarization (ON):                           ON
+  Correlator weighting function (UNIFORM):     UNIFORM
+  Distribution tape (DAT):                     DAT
+
+  Source positions from:             STANDARD
+
+  Shipping address for correlator output:
+      Walter Alef
+      Max-Planck-Institut fuer Radioastronomie
+
+      Auf dem Huegel 69
+      D-53121 Bonn, Germany
+  Correlator Notes: 1mm Global Run w. PV+APEX
+
+
+
+
+
+
+
+DERIVED INFORMATION FOR CORRELATION: 
+
+  Elapsed time for project:         17.83 hours.
+  Total time in scheduled scans:    10.90 hours.
+  Total time in recording scans:    10.90 hours.
+  Total number of baseline hours:   94.40    (Recording scans only)
+  Projected maximum data output rate from the correlator:     344.1 kbytes/sec of observe time.
+  Projected correlator output data set size:        5567.9 Mbytes
+  NOTE:  Above numbers assume the same correlator parameters are used for all data.
+    NOTE:  Output data set size large.  Consider requesting high density tapes.
+
+
+
+
+
+STATIONS USED IN SCHEDULE:
+
+   Station  Code   Latitude Longitude Elevation       X            Y            Z       Axis
+                                                                                       Offset
+
+   PICOVEL   Pv   37.06616   3.39261    2922.    5088967.900  -301681.600  3825015.800  0.000
+   APEX      Ap  -23.00578  67.75917    5105.    2225037.185 -5441199.162 -2479303.463  0.000
+   SMTO      Az   32.70161 109.89124    3159.   -1828796.200 -5054406.800  3427865.200  0.000
+   CARMA     Cm   37.23341 118.28338    1188.   -2409585.790 -4478197.550  3838767.460  0.000
+   CSO       Cs   19.80138 155.45550    3763.   -5464074.960 -2495249.116  2148296.845  0.000
+   SMAP      Sm   19.82423 155.47755    4115.   -5464555.493 -2492927.989  2150797.176  0.000
+
+
+   Plate tectonic motion adjustments for MJD  55651
+   Station  Code      Station motions (m/yr)             Adjusted positions 
+                     X       Y       Z     MJD0        X            Y            Z 
+   PICOVEL   Pv   0.0000  0.0000  0.0000  50449   5088967.900  -301681.600  3825015.800
+   APEX      Ap   0.0000  0.0000  0.0000      0   2225037.185 -5441199.162 -2479303.463
+   SMTO      Az   0.0000  0.0000  0.0000  50449  -1828796.200 -5054406.800  3427865.200
+   CARMA     Cm  -0.0162  0.0062 -0.0084  50449  -2409586.021 -4478197.462  3838767.341
+   CSO       Cs   0.0000  0.0000  0.0000  50449  -5464074.960 -2495249.116  2148296.845
+   SMAP      Sm   0.0000  0.0000  0.0000  50449  -5464555.493 -2492927.989  2150797.176
+
+
+
+BASELINE LENGTHS (km)
+
+          Pv    Ap    Az    Cm    Cs    Sm
+
+   Pv      0  8623  8402  8583 10908 10907
+   Ap   8623     0  7174  7894  9445  9447
+   Az   8402  7174     0   915  4626  4627
+   Cm   8583  7894   915     0  4014  4015
+   Cs  10908  9445  4626  4014     0     3
+   Sm  10907  9447  4627  4015     3     0
+
+
+RECORDING SYSTEM AND CALIBRATION INFORMATION:
+
+  DISKS - Stations potentially recording on disks.
+   Station    Drive type   DAR     NBBC    Tsys
+   PICOVEL      MARK5C     RDBE     16     CONT
+   APEX         MARK5C     RDBE     16     CONT
+   SMTO         MARK5C     RDBE     16     CONT
+   CARMA        MARK5C     RDBE     16     CONT
+   CSO          MARK5C     RDBE     16     CONT
+   SMAP         MARK5C     RDBE     16     CONT
+
+
+
+
+EXPERIMENT SUMMARY:
+  Number of input scans:         97
+  Number of scans scheduled:     97
+  Number of stations:             6
+  Number of sources input:       13
+  Number of setup files used:     1
+
+
+ Station summaries (disk stations): 
+  Station  Control   Scans   Scan   Record  Record   Gbytes     Formatter       Sync 
+                            Hours   Hours   Scans              Reconfigures    Hours  
+  PICOVEL    VEX       54    6.02    6.02      54     5589.            0        0.01
+  APEX       VEX       83    9.18    9.18      82     8531.            0        0.02
+  SMTO       VEX       62    7.11    7.11      62     6601.            0        0.02
+  CARMA      VEX       47    5.55    5.55      47     5156.            0        0.01
+  CSO        VEX       44    5.23    5.23      44     4862.            0        0.01
+  SMAP       VEX       40    4.78    4.78      40     4444.            0        0.01
+
+Notes on the station summaries: 
+
+    "Record Scans" are periods of recording with no gap.  The Mark5A disk systems 
+    have a limit of 1024 such scans.  There are often multiple projects on a disk pack.
+    Try to keep above about 6 GB per record scan by using MINPAUSE and PRESTART 
+    to prevent short gaps.  However, also try to prevent record scans of more than
+    an hour to minimize risk to data from playback problems.
+
+    "Sync Hours" is on-source, in-scan time lost during correlation to resyncing
+    recordings.  Resyncs follow tape stoppages and formatter reconfigures.
+
+    For VLBA DAR stations, total reconfigures and reconfigures during recording are shown.
+    Reconfigures during recording can cause slow correlator sync.
+    Any reconfigure can slow sync at JIVE.
+
+    Recording started before scan start time     5 times.  See PRESTART and MINPAUSE.
+    They may have been kept running through short scan gaps.
+    The number can be large because each station/scan combination counts.
+
+
+
+
+
+The following setup groups are the same as group   1 below.
+   3:SMTO   4:CARMA   6:SMAP
+
+
+ Setup file: 1mmRDBE.set
+   Matching groups in 1mm-freq.dat:
+     1mm_pico_mk5    for RDBE
+    ****** Only  480.00 of  512.00 MHz total bandwidth is within the IFs
+           in the setup file before any FREQ or DOPPLER shifts.
+
+   Setup group:    1         Station: PICOVEL           Total bit rate: 2048
+   Format: MARK5B            Bits per sample: 2         Sample rate: 64.000
+   Number of channels: 16    DBE type: RDBE_PFB         Speedup factor:   1.00
+
+   Disk used to record data.
+
+   1st LO= 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00
+           228321.00 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00
+   Net SB=         L         L         L         L         L         L         L         L
+                   L         L         L         L         L         L         L         L
+   Pol.  =      LCP       LCP       LCP       LCP       LCP       LCP       LCP       LCP 
+                LCP       LCP       LCP       LCP       LCP       LCP       LCP       RCP 
+   BBC   =         1         2         3         4         5         6         7         8
+                   9        10        11        12        13        14        15        16
+   BBC SB=         L         L         L         L         L         L         L         L
+                   L         L         L         L         L         L         L         L
+   IF    =        A         A         A         A         A         A         A         A 
+                  A         A         A         A         A         A         A         A 
+
+  The following frequency sets based on this setup were used.
+
+   Frequency Set:   1  Setup file default.
+   LO sum=  229329.00 229297.00 229265.00 229233.00 229201.00 229169.00 229137.00 229105.00
+            229073.00 229041.00 229009.00 228977.00 228945.00 228913.00 228881.00 228881.00
+   BBC fr=    1008.00    976.00    944.00    912.00    880.00    848.00    816.00    784.00
+               752.00    720.00    688.00    656.00    624.00    592.00    560.00    560.00
+   Bandwd=     32.000    32.000    32.000    32.000    32.000    32.000    32.000    32.000
+               32.000    32.000    32.000    32.000    32.000    32.000    32.000    32.000
+
+   Track assignments are: 
+    track1=   2,  4,  6,  8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32
+    barrel=roll_off 
+
+
+ Setup file: 1mmRDBE.set
+   Matching groups in 1mm-freq.dat:
+     1mm_apex_mk5    for RDBE
+    ****** Only  480.00 of  512.00 MHz total bandwidth is within the IFs
+           in the setup file before any FREQ or DOPPLER shifts.
+
+   Setup group:    2         Station: APEX              Total bit rate: 2048
+   Format: MARK5B            Bits per sample: 2         Sample rate: 64.000
+   Number of channels: 16    DBE type: RDBE_PFB         Speedup factor:   1.00
+
+   Disk used to record data.
+
+   1st LO= 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00
+           228321.00 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00
+   Net SB=         L         L         L         L         L         L         L         L
+                   L         L         L         L         L         L         L         L
+   Pol.  =      LCP       LCP       LCP       LCP       LCP       LCP       LCP       LCP 
+                LCP       LCP       LCP       LCP       LCP       LCP       LCP       RCP 
+   BBC   =         1         2         3         4         5         6         7         8
+                   9        10        11        12        13        14        15        16
+   BBC SB=         L         L         L         L         L         L         L         L
+                   L         L         L         L         L         L         L         L
+   IF    =        A         A         A         A         A         A         A         A 
+                  A         A         A         A         A         A         A         A 
+
+  The following frequency sets based on this setup were used.
+
+   Frequency Set:   2  Setup file default.
+   LO sum=  229329.00 229297.00 229265.00 229233.00 229201.00 229169.00 229137.00 229105.00
+            229073.00 229041.00 229009.00 228977.00 228945.00 228913.00 228881.00 228881.00
+   BBC fr=    1008.00    976.00    944.00    912.00    880.00    848.00    816.00    784.00
+               752.00    720.00    688.00    656.00    624.00    592.00    560.00    560.00
+   Bandwd=     32.000    32.000    32.000    32.000    32.000    32.000    32.000    32.000
+               32.000    32.000    32.000    32.000    32.000    32.000    32.000    32.000
+
+   Track assignments are: 
+    track1=   2,  4,  6,  8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32
+    barrel=roll_off 
+
+
+ Setup file: 1mmRDBE.set
+ --- WARNING ---  This group does not match an entry in the frequency catalog.
+                  This might be ok because the catalog is not complete.
+                  But be very careful to be sure that the setup is correct.
+
+   Setup group:    5         Station: CSO               Total bit rate: 2048
+   Format: MARK5B            Bits per sample: 2         Sample rate: 64.000
+   Number of channels: 16    DBE type: RDBE_PFB         Speedup factor:   1.00
+
+   Disk used to record data.
+
+   1st LO= 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00
+           228321.00 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00
+   Net SB=         L         L         L         L         L         L         L         L
+                   L         L         L         L         L         L         L         L
+   Pol.  =      LCP       LCP       LCP       LCP       LCP       LCP       LCP       LCP 
+                LCP       LCP       LCP       LCP       LCP       LCP       LCP       RCP 
+   BBC   =         1         2         3         4         5         6         7         8
+                   9        10        11        12        13        14        15        16
+   BBC SB=         L         L         L         L         L         L         L         L
+                   L         L         L         L         L         L         L         L
+   IF    =        A         A         A         A         A         A         A         A 
+                  A         A         A         A         A         A         A         A 
+
+  The following frequency sets based on this setup were used.
+
+   Frequency Set:   5  Setup file default.
+   LO sum=  229329.00 229297.00 229265.00 229233.00 229201.00 229169.00 229137.00 229105.00
+            229073.00 229041.00 229009.00 228977.00 228945.00 228913.00 228881.00 228881.00
+   BBC fr=    1008.00    976.00    944.00    912.00    880.00    848.00    816.00    784.00
+               752.00    720.00    688.00    656.00    624.00    592.00    560.00    560.00
+   Bandwd=     32.000    32.000    32.000    32.000    32.000    32.000    32.000    32.000
+               32.000    32.000    32.000    32.000    32.000    32.000    32.000    32.000
+
+   Track assignments are: 
+    track1=   2,  4,  6,  8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32
+    barrel=roll_off 
+
+
+ SUMMARY for experiment g1mm31  1mm Mar 31 2011, 22h30-16h30 UT                                         
+     Flags: D=>Down, H=>Below Horizon, R=>Rises, S=>Sets, W=>Slew too long, t=>Tape Chg.
+     Top item is:    Start elevation.
+     Bottom item is: End elevation.
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  91 is Fri  1 Apr 2011   MJD  55651          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    Pv    Ap    Az    Cm    Cs    Sm
+
+  50   91 05:00:00 3C273         -   ---   ---    46    38    11   ---
+       91 05:07:00 -             -   ---   ---    47    39    13   ---
+
+  51   91 05:15:00 M87           -   ---   ---    56    48    18    18
+       91 05:23:00 -             -   ---   ---    57    49    20    20
+
+  52   91 05:30:00 3C273         -   ---   ---    51    43    18    18
+       91 05:37:00 -             -   ---   ---    52    44    20    20
+
+  53   91 05:45:00 M87           -   ---   ---    61    53    25    25
+       91 05:53:00 -             -   ---   ---    62    54    27    27
+
+  54   91 06:00:00 3C273         -   ---   ---    55    47    25    25
+       91 06:04:00 -             -   ---   ---    55    48    26    26
+
+  55   91 06:12:00 M87           -   ---   ---    65    57    31    31
+       91 06:22:00 -             -   ---   ---    66    59    34    33
+
+  56   91 06:26:00 3C273         -   ---   ---    57    50    31    31
+       91 06:30:00 -             -   ---   ---    58    51    32    32
+
+  57   91 06:38:00 M87           -   ---   ---    68    61    37    37
+       91 06:48:00 -             -   ---   ---    69    62    40    40
+
+  58   91 06:52:00 3C273         -   ---   ---    59    53    37    37
+       91 06:56:00 -             -   ---   ---    59    53    38    38
+
+  59   91 07:04:00 M87           -   ---   ---    70    63    43    43
+       91 07:14:00 -             -   ---   ---    70    64    46    46
+
+  60   91 07:18:00 3C273         -   ---   ---    59    54    43    43
+       91 07:22:00 -             -   ---   ---    59    54    44    44
+
+  61   91 07:30:00 M87           -   ---   ---    69    65    50    50
+20m    91 07:40:00 -             -   ---   ---    69    65    52    52
+
+  62   91 08:00:00 3C279         -   ---    41    51    47    43    43
+       91 08:05:00 -             -   ---    40    51    47    44    44
+
+  63   91 08:13:00 M87           -   ---    24    66    64    60    60
+       91 08:23:00 -             -   ---    22    64    64    62    62
+
+  64   91 08:27:00 3C279         -   ---    35    50    47    48    48
+       91 08:32:00 -             -   ---    34    49    47    49    49
+
+
+
+ SUMMARY for experiment g1mm31  1mm Mar 31 2011, 22h30-16h30 UT                                         
+     Flags: D=>Down, H=>Below Horizon, R=>Rises, S=>Sets, W=>Slew too long, t=>Tape Chg.
+     Top item is:    Start elevation.
+     Bottom item is: End elevation.
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  90 is Thu  31 Mar 2011   MJD  55651          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    Pv    Ap    Az    Cm    Cs    Sm
+
+  65   91 08:40:00 1633+382      -    38    29    58    53    16    16
+       91 08:50:00 1mmRDBE.set   -    36    29    60    54    18    18
+
+  66   91 09:00:00 3C345         -    36    27    60    55    19    19
+       91 09:10:00 -             -    35    27    62    57    20    20
+
+  67   91 09:20:00 3C279         -   ---    23    45    44    58    57
+       91 09:25:00 -             -   ---    22    44    44    58    58
+
+  68   91 09:29:00 M87           -   ---   ---    53    56    77    77
+       91 09:36:00 -             -   ---   ---    52    55    78    78
+
+  69   91 09:40:00 M87           -   ---   ---    51    55    79    79
+       91 09:50:00 -             -   ---   ---    49    53    80    80
+
+  70   91 09:40:00 3C345         -    29    26   ---   ---   ---   ---
+       91 09:50:00 -             -    28    25   ---   ---   ---   ---
+
+  71   91 10:00:00 3C345         -    26    24    71    67    30    30
+       91 10:10:00 -             -    24    24    73    69    32    32
+
+  72   91 10:20:00 1633+382      -    20    24    77    72    35    35
+       91 10:30:00 -             -    19    23    79    74    37    37
+
+  73   91 10:40:00 1749+096      -   ---    55    55    47   ---   ---
+SM30   91 10:45:00 -             -   ---    54    56    48   ---   ---
+
+  74   91 10:49:00 SGRA          -   ---    73    24    17   ---   ---
+       91 10:56:00 -             -   ---    72    25    17   ---   ---
+
+  75   91 11:00:00 1749+096      -   ---    53    58    50    23    23
+       91 11:05:00 -             -   ---    52    59    51    24    24
+
+  76   91 11:09:00 SGRA          -   ---    69    25    19   ---   ---
+       91 11:16:00 -             -   ---    68    26    19   ---   ---
+
+  77   91 11:20:00 1749+096      -   ---    50    61    53    28    28
+       91 11:25:00 -             -   ---    49    62    54    29    29
+
+  78   91 11:29:00 SGRA          -   ---    65    27    20    14   ---
+       91 11:36:00 -             -   ---    63    27    21    15   ---
+
+  79   91 11:43:00 NRAO530       -   ---    56    44    37    28    28
+       91 11:48:00 -             -   ---    55    44    38    29    29
+
+  80   91 11:52:00 SGRA          -   ---    60    28    22    18    18
+       91 12:00:00 -             -   ---    58    28    22    20    20
+
+
+
+ SUMMARY for experiment g1mm31  1mm Mar 31 2011, 22h30-16h30 UT                                         
+     Flags: D=>Down, H=>Below Horizon, R=>Rises, S=>Sets, W=>Slew too long, t=>Tape Chg.
+     Top item is:    Start elevation.
+     Bottom item is: End elevation.
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  90 is Thu  31 Mar 2011   MJD  55651          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    Pv    Ap    Az    Cm    Cs    Sm
+
+  81   91 12:07:00 NRAO530       -   ---    51    44    39    33    33
+       91 12:12:00 1mmRDBE.set   -   ---    50    44    39    34    34
+
+  82   91 12:16:00 SGRA          -   ---    54    28    23    22    22
+       91 12:24:00 -             -   ---    53    28    23    24    24
+
+  83   91 12:31:00 NRAO530       -   ---    45    44    40    37    37
+       91 12:36:00 -             -   ---    44    44    40    38    38
+
+  84   91 12:40:00 SGRA          -   ---    49    28    24    26    26
+       91 12:48:00 -             -   ---    47    28    24    27    27
+
+  85   91 12:55:00 NRAO530       -   ---    40    43    40    42    42
+       91 13:00:00 -             -   ---    39    43    40    43    43
+
+  86   91 13:04:00 SGRA          -   ---    44    28    24    30    30
+       91 13:12:00 -             -   ---    42    27    24    31    31
+
+  87   91 13:19:00 NRAO530       -   ---    34    42    39    46    46
+       91 13:24:00 -             -   ---    33    41    39    47    47
+
+  88   91 13:28:00 SGRA          -   ---    39    27    23    33    33
+gap    91 13:36:00 -             -   ---    37    26    23    34    34
+
+  89   91 13:56:00 NRAO530       -   ---    26    38    37    52   ---
+       91 14:01:00 -             -   ---    25    38    37    52   ---
+
+  90   91 14:05:00 SGRA          -   ---    31    24    22    37   ---
+       91 14:13:00 -             -   ---    29    23    22    38   ---
+
+  91   91 14:20:00 NRAO530       -   ---    20    35    35    54    54
+       91 14:25:00 -             -   ---    19    35    35    55    55
+
+  92   91 14:29:00 SGRA          -   ---    26    22    21    39    39
+       91 14:37:00 -             -   ---    24    21    20    40    40
+
+  93   91 14:44:00 1921-293      -   ---    44    27    24    30    30
+       91 14:49:00 -             -   ---    43    27    24    30    30
+
+  94   91 14:53:00 SGRA          -   ---    20    19    19    40    40
+       91 15:01:00 -             -   ---    19    18    18    41    41
+
+  95   91 15:05:00 1921-293      -   ---    39    27    23    33    33
+       91 15:10:00 -             -   ---    38    26    23    33    33
+
+  96   91 15:25:00 BLLAC         -   ---    21    72    68    31    31
+       91 15:35:00 -             -   ---    21    73    70    33    33
+

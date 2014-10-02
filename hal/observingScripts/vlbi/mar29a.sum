@@ -1,0 +1,590 @@
+                    SUMMARY FILE FOR PROJECT: mar29a  
+
+COVER INFORMATION: 
+
+  Experiment: 230GHz VLBI 2011 March 29 UT
+  Exp. Code:  mar29a  
+  Start Day  88 is Tue  29 Mar 2011   MJD  55649          
+
+  Schedule Version:       5.00
+  Processed by SCHED version:   9.40  Release Jan. 13, 2011.
+
+  PI:       Shep Doeleman
+
+  Address:  Haystack Observatory
+            Off Route 40
+            Westford, MA 01886
+            USA
+
+  Phone:    781-981-5407
+  EMAIL:    sdoeleman@haystack.mit.edu
+  Fax:      781-981-0590
+  Phone during observation:
+
+  Observing mode: 230GHz (4 Gb/s)
+
+  Notes:
+   
+   
+   
+
+
+No cover letter provided.
+
+CORRELATION REQUESTS (Defaults in parentheses):
+
+  Correlator (Required if recording):          HAYSTACK
+  Correlator average time (2 sec):               2.000 sec.
+    Alternate average time (for spacecraft).     0.000 sec.
+  Output spectral channels per baseband (16):          16
+     Correlator FFT size (128):                       128
+  Number of antennas to be correlated:                  3
+  Polarization (ON):                           OFF
+  Correlator weighting function (UNIFORM):     UNIFORM
+  Distribution tape (DAT):                     DAT
+
+  Source positions from:
+  FROM SCHEDULE
+  Shipping address for correlator output:
+      down the hall
+
+
+
+
+  Correlator Notes: Oh, there will be special requirements
+
+
+
+
+
+
+
+DERIVED INFORMATION FOR CORRELATION: 
+
+  Elapsed time for project:         11.40 hours.
+  Total time in scheduled scans:     5.58 hours.
+  Total time in recording scans:     5.58 hours.
+  Total number of baseline hours:   52.53    (Recording scans only)
+  Projected maximum data output rate from the correlator:      10.2 kbytes/sec of observe time.
+  Projected correlator output data set size:         193.7 Mbytes
+  NOTE:  Above numbers assume the same correlator parameters are used for all data.
+
+
+
+STATIONS USED IN SCHEDULE:
+
+   Station  Code   Latitude Longitude Elevation       X            Y            Z       Axis
+                                                                                       Offset
+
+   SMTO      Hh   32.70161 109.89124    3159.   -1828796.200 -5054406.800  3427865.200  0.000
+   CARMA     Cm   37.23341 118.28338    1188.   -2409585.790 -4478197.550  3838767.460  0.000
+   SMAP      Mm   19.82423 155.47755    4115.   -5464555.493 -2492927.989  2150797.176  0.000
+   SMAC      Mm   19.82423 155.47755    4115.   -5464555.493 -2492927.989  2150797.176  0.000
+
+
+   Plate tectonic motion adjustments for MJD  55649
+   Station  Code      Station motions (m/yr)             Adjusted positions 
+                     X       Y       Z     MJD0        X            Y            Z 
+   SMTO      Hh   0.0000  0.0000  0.0000  50449  -1828796.200 -5054406.800  3427865.200
+   CARMA     Cm  -0.0162  0.0062 -0.0084  50449  -2409586.020 -4478197.462  3838767.341
+   SMAP      Mm   0.0000  0.0000  0.0000  50449  -5464555.493 -2492927.989  2150797.176
+   SMAC      Mm   0.0000  0.0000  0.0000  50449  -5464555.493 -2492927.989  2150797.176
+
+
+
+BASELINE LENGTHS (km)
+
+          Hh    Cm    Mm    Mm
+
+   Hh      0   915  4627  4627
+   Cm    915     0  4015  4015
+   Mm   4627  4015     0     0
+   Mm   4627  4015     0     0
+
+
+RECORDING SYSTEM AND CALIBRATION INFORMATION:
+
+  DISKS - Stations potentially recording on disks.
+   Station    Drive type   DAR     NBBC    Tsys
+   SMTO         MARK5C     RDBE     16     CONT
+   CARMA        MARK5C     RDBE     16     CONT
+   SMAP         MARK5C     RDBE     16     CONT
+   SMAC         MARK5C     RDBE     16     CONT
+
+
+
+
+EXPERIMENT SUMMARY:
+  Number of input scans:         50
+  Number of scans scheduled:     50
+  Number of stations:             4
+  Number of sources input:        8
+  Number of setup files used:     1
+
+
+ Station summaries (disk stations): 
+  Station  Control   Scans   Scan   Record  Record   Gbytes     Formatter       Sync 
+                            Hours   Hours   Scans              Reconfigures    Hours  
+  SMTO       VEX       48    5.40    5.47      48     5078.            0        0.00
+  CARMA      VEX       50    5.58    5.65      50     5251.            0        0.00
+  SMAP       VEX       47    5.22    5.28      47     4907.            0        0.00
+  SMAC       VEX       47    5.22    5.28      47     4907.            0        0.00
+
+Notes on the station summaries: 
+
+    "Record Scans" are periods of recording with no gap.  The Mark5A disk systems 
+    have a limit of 1024 such scans.  There are often multiple projects on a disk pack.
+    Try to keep above about 6 GB per record scan by using MINPAUSE and PRESTART 
+    to prevent short gaps.  However, also try to prevent record scans of more than
+    an hour to minimize risk to data from playback problems.
+
+    "Sync Hours" is on-source, in-scan time lost during correlation to resyncing
+    recordings.  Resyncs follow tape stoppages and formatter reconfigures.
+
+    For VLBA DAR stations, total reconfigures and reconfigures during recording are shown.
+    Reconfigures during recording can cause slow correlator sync.
+    Any reconfigure can slow sync at JIVE.
+
+    Recording started before scan start time   192 times.  See PRESTART and MINPAUSE.
+    They may have been kept running through short scan gaps.
+    The number can be large because each station/scan combination counts.
+
+
+
+
+
+The following setup groups are the same as group   1 below.
+   2:CARMA   3:SMAP
+
+
+ Setup file: 1mmRDBE.set
+   Matching groups in 1mm-freq.dat:
+     1mm_hht_mk5c    RDBE not real
+    ****** Only  480.00 of  512.00 MHz total bandwidth is within the IFs
+           in the setup file before any FREQ or DOPPLER shifts.
+
+   Setup group:    1         Station: SMTO              Total bit rate: 2048
+   Format: MARK5B            Bits per sample: 2         Sample rate: 64.000
+   Number of channels: 16    DBE type: RDBE_PFB         Speedup factor:   1.00
+
+   Disk used to record data.
+
+   1st LO= 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00
+           228321.00 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00
+   Net SB=         L         L         L         L         L         L         L         L
+                   L         L         L         L         L         L         L         L
+   Pol.  =      LCP       LCP       LCP       LCP       LCP       LCP       LCP       LCP 
+                LCP       LCP       LCP       LCP       LCP       LCP       LCP       RCP 
+   BBC   =         1         2         3         4         5         6         7         8
+                   9        10        11        12        13        14        15        16
+   BBC SB=         L         L         L         L         L         L         L         L
+                   L         L         L         L         L         L         L         L
+   IF    =        A         A         A         A         A         A         A         A 
+                  A         A         A         A         A         A         A         A 
+
+  The following frequency sets based on this setup were used.
+
+   Frequency Set:   1  Setup file default.
+   LO sum=  229329.00 229297.00 229265.00 229233.00 229201.00 229169.00 229137.00 229105.00
+            229073.00 229041.00 229009.00 228977.00 228945.00 228913.00 228881.00 228881.00
+   BBC fr=    1008.00    976.00    944.00    912.00    880.00    848.00    816.00    784.00
+               752.00    720.00    688.00    656.00    624.00    592.00    560.00    560.00
+   Bandwd=     32.000    32.000    32.000    32.000    32.000    32.000    32.000    32.000
+               32.000    32.000    32.000    32.000    32.000    32.000    32.000    32.000
+
+   Track assignments are: 
+    track1=   2,  4,  6,  8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32
+    barrel=roll_off 
+
+
+ Setup file: 1mmRDBE.set
+ --- WARNING ---  This group does not match an entry in the frequency catalog.
+                  This might be ok because the catalog is not complete.
+                  But be very careful to be sure that the setup is correct.
+
+   Setup group:    4         Station: SMAC              Total bit rate: 2048
+   Format: MARK5B            Bits per sample: 2         Sample rate: 64.000
+   Number of channels: 16    DBE type: RDBE_PFB         Speedup factor:   1.00
+
+   Disk used to record data.
+
+   1st LO= 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00
+           228321.00 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00 228321.00
+   Net SB=         L         L         L         L         L         L         L         L
+                   L         L         L         L         L         L         L         L
+   Pol.  =      LCP       LCP       LCP       LCP       LCP       LCP       LCP       LCP 
+                LCP       LCP       LCP       LCP       LCP       LCP       LCP       RCP 
+   BBC   =         1         2         3         4         5         6         7         8
+                   9        10        11        12        13        14        15        16
+   BBC SB=         L         L         L         L         L         L         L         L
+                   L         L         L         L         L         L         L         L
+   IF    =        A         A         A         A         A         A         A         A 
+                  A         A         A         A         A         A         A         A 
+
+  The following frequency sets based on this setup were used.
+
+   Frequency Set:   4  Setup file default.
+   LO sum=  229329.00 229297.00 229265.00 229233.00 229201.00 229169.00 229137.00 229105.00
+            229073.00 229041.00 229009.00 228977.00 228945.00 228913.00 228881.00 228881.00
+   BBC fr=    1008.00    976.00    944.00    912.00    880.00    848.00    816.00    784.00
+               752.00    720.00    688.00    656.00    624.00    592.00    560.00    560.00
+   Bandwd=     32.000    32.000    32.000    32.000    32.000    32.000    32.000    32.000
+               32.000    32.000    32.000    32.000    32.000    32.000    32.000    32.000
+
+   Track assignments are: 
+    track1=   2,  4,  6,  8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32
+    barrel=roll_off 
+
+
+ SUMMARY for experiment mar29a  230GHz VLBI 2011 March 29 UT                                            
+     Flags: D=>Down, H=>Below Horizon, R=>Rises, S=>Sets, W=>Slew too long, t=>Tape Chg.
+     Top item is:    Start elevation.
+     Bottom item is: End elevation.
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  88 is Tue  31 Mar 2011   MJD  55649          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    Hh    Cm    Mm    Mm
+
+   1   88 01:00:00 0854+201      -    70    71    64    64
+       88 01:06:00 1mmRDBE.set   -    69    70    65    65
+
+   2   88 01:07:00 M87           -    54    46    15    15
+       88 01:08:00 -             -    55    47    17    17
+
+   3   88 01:10:00 3C273         -    49    41    15    15
+       88 01:11:00 -             -    50    42    17    17
+
+   4   88 01:12:00 M87           -    59    51    22    22
+       88 01:13:00 -             -    60    52    24    24
+
+   5   88 01:14:00 3C273         -    53    46    23    23
+       88 01:15:00 -             -    54    47    24    24
+
+   6   88 01:17:00 M87           -    64    56    30    30
+       88 01:25:00 -             -    65    57    31    31
+
+   7   88 01:30:00 3C279         -    47    39    20    20
+       88 01:37:00 -             -    48    40    22    22
+
+   8   88 01:47:00 M87           -    68    60    37    37
+       88 01:50:00 -             -    68    61    38    38
+
+   9   88 01:51:00 3C273         -    59    52    37    37
+       88 01:52:00 -             -    59    53    38    38
+
+  10   88 01:53:00 M87           -    70    63    44    44
+       88 01:54:00 -             -    70    64    46    46
+
+  11   88 01:55:00 3C279         -    51    45    34    34
+       88 01:56:00 -             -    51    46    35    35
+
+  12   88 01:57:00 M87           -    69    65    51    51
+       88 01:58:00 -             -    69    65    53    53
+
+  13   88 01:59:00 3C273         -    58    55    50    50
+       88 02:01:00 -             -    58    55    52    52
+
+  14   88 02:02:00 M87           -    65    64    60    60
+       88 02:03:00 -             -    64    64    62    62
+
+  15   88 02:04:00 3C279         -    50    47    48    48
+       88 02:05:00 -             -    49    47    50    50
+
+  16   88 02:06:00 M87           -    61    62    67    67
+       88 02:07:00 -             -    59    61    69    69
+
+
+
+ SUMMARY for experiment mar29a  230GHz VLBI 2011 March 29 UT                                            
+     Flags: D=>Down, H=>Below Horizon, R=>Rises, S=>Sets, W=>Slew too long, t=>Tape Chg.
+     Top item is:    Start elevation.
+     Bottom item is: End elevation.
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  88 is Tue  29 Mar 2011   MJD  55649          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    Hh    Cm    Mm    Mm
+
+  17   88 02:08:00 3C273         -    50    51    64    64
+       88 02:09:00 1mmRDBE.set   -    49    50    65    65
+
+  18   88 02:23:00 M87           -    55    58    74    74
+       88 02:24:00 -             -    54    57    75    75
+
+  19   88 02:25:00 3C279         -    44    43    59    59
+       88 02:26:00 -             -    43    43    60    60
+
+  20   88 02:27:00 M87           -    50    54    80    80
+       88 02:28:00 -             -    48    52    81    81
+
+  21   88 02:29:00 3C279         -    39    40    62    62
+       88 02:30:00 -             -    38    39    63    63
+
+  22   88 02:31:00 M87           -    44    49    83    83
+       88 02:32:00 -             -    42    47    82    82
+
+  23   88 02:33:00 SGRA          -    23    16   ---   ---
+       88 02:34:00 -             -    24    17   ---   ---
+
+  24   88 02:35:00 1749+096      -    57    49    21    21
+       88 02:36:00 -             -    58    50    22    22
+
+  25   88 02:37:00 SGRA          -    25    18   ---   ---
+       88 02:38:00 -             -    25    19   ---   ---
+
+  26   88 11:23:00 1749+096      -    60    52    26    26
+       88 11:28:00 -             -    61    53    27    27
+
+  27   88 11:33:00 SGRA          -    26    20    13    13
+       88 11:40:00 -             -    27    20    14    14
+
+  28   88 11:45:00 1749+096      -    63    55    31    31
+       88 11:50:00 -             -    64    56    32    32
+
+  29   88 11:55:00 SGRA          -    27    21    17    17
+       88 12:03:00 -             -    28    22    18    18
+
+  30   88 12:08:00 NRAO530       -    44    38    31    31
+       88 12:13:00 -             -    44    38    32    32
+
+  31   88 12:18:00 SGRA          -    28    22    21    21
+       88 12:26:00 -             -    28    23    22    22
+
+  32   88 12:31:00 NRAO530       -    44    39    35    35
+       88 12:36:00 -             -    44    39    36    36
+
+
+
+ SUMMARY for experiment mar29a  230GHz VLBI 2011 March 29 UT                                            
+     Flags: D=>Down, H=>Below Horizon, R=>Rises, S=>Sets, W=>Slew too long, t=>Tape Chg.
+     Top item is:    Start elevation.
+     Bottom item is: End elevation.
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  88 is Tue  29 Mar 2011   MJD  55649          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    Hh    Cm    Mm    Mm
+
+  33   88 12:41:00 SGRA          -    28    23    24    24
+       88 12:49:00 1mmRDBE.set   -    28    24    26    26
+
+  34   88 12:54:00 NRAO530       -    44    40    40    40
+       88 12:59:00 -             -    44    40    41    41
+
+  35   88 13:04:00 SGRA          -    28    24    28    28
+       88 13:12:00 -             -    28    24    29    29
+
+  36   88 13:17:00 NRAO530       -    43    40    44    44
+       88 13:22:00 -             -    42    39    45    45
+
+  37   88 13:27:00 SGRA          -    27    24    31    31
+       88 13:35:00 -             -    27    24    32    32
+
+  38   88 13:40:00 NRAO530       -    41    39    48    48
+       88 13:45:00 -             -    41    39    48    48
+
+  39   88 14:20:00 SGRA          -    24    22   ---   ---
+       88 14:28:00 -             -    23    21   ---   ---
+
+  40   88 14:30:00 1921-293      -    28    23    26    26
+       88 14:35:00 -             -    28    23    27    27
+
+  41   88 14:40:00 SGRA          -    22    21    39    39
+       88 14:47:00 -             -    21    20    39    39
+
+  42   88 14:52:00 1921-293      -    28    24    29    29
+       88 14:57:00 -             -    27    24    30    30
+
+  43   88 15:02:00 SGRA          -    20    19    40    40
+       88 15:09:00 -             -    19    18    41    41
+
+  44   88 15:14:00 1921-293      -    27    23    32    32
+       88 15:19:00 -             -    26    23    33    33
+
+  45   88 15:24:00 SGRA          -    17    17    41    41
+       88 15:31:00 -             -    16    16    41    41
+
+  46   88 15:36:00 1921-293      -    25    23    35    35
+       88 15:41:00 -             -    25    23    35    35
+
+  47   88 15:46:00 SGRA          -    14    15    41    41
+       88 15:53:00 -             -    13    14    41    41
+
+  48   88 15:58:00 1921-293      -    24    22    37    37
+       88 16:03:00 -             -    23    21    38    38
+
+
+
+ SUMMARY for experiment mar29a  230GHz VLBI 2011 March 29 UT                                            
+     Flags: D=>Down, H=>Below Horizon, R=>Rises, S=>Sets, W=>Slew too long, t=>Tape Chg.
+     Top item is:    Start elevation.
+     Bottom item is: End elevation.
+     TYPE top: -=> normal scan, P=>Pointing or Ta;  bottom: -=>recording, N=>not recording.
+     Day  88 is Tue  29 Mar 2011   MJD  55649          
+
+SCAN  DAY START UT  SOURCE     TYPE  STATIONS    t => tape change
+           STOP UT                    Hh    Cm    Mm    Mm
+
+  49   88 16:08:00 SGRA          -   ---    12    41    41
+       88 16:14:00 1mmRDBE.set   -   ---    11    41    41
+
+  50   88 16:19:00 1921-293      -   ---    20    39    39
+       88 16:24:00 -             -   ---    20    39    39
+
+
+
+ TIME RANGE OF RECORDINGS and TOTAL BYTES:
+
+                Obs. start time.     Obs. end time.      Total 
+ Station          Day    Time         Day    Time        GBytes
+                     (UT)                 (UT)
+  SMTO            88  05:00:00        88  16:03:00       5078.4
+  CARMA           88  05:00:00        88  16:24:00       5251.3
+  SMAP            88  05:00:00        88  16:24:00       4906.8
+  SMAC            88  05:00:00        88  16:24:00       4906.8
+
+ SOURCES USED IN RECORDING SCANS --                         230GHz VLBI 2011 March 29 UT
+     Catalog positions marked with *. 
+     Precession of date coordinates is based on stop time of first scan.
+     Names used in schedule marked with *. 
+     Short names used in VLA and SNAP files marked with +. 
+     Observation date used in B1950/J2000 coordinate conversion (PRECDATE):  1979.900
+     No adjustments are made for rates (DRA, DDEC).
+     Scan hours are for recording scans only. 
+     Baseline hours are only counted for scans above horizon at both ends.
+
+   Source                         Source position (RA/Dec)                        Error
+                        (B1950)             (J2000)             (Date)            (mas)
+
+ * SGRA              17 42 29.310026   * 17 45 40.041000     17 46 24.501818       0.00
+                    -28 59 18.53533    *-29 00 28.12000     -29 00 40.63232        0.00
+                     From catalog imbedded in main SCHED input file.
+                        1.717 scan and      8.167 baseline hours in setup: 1mmRDBE.set
+
+ * M87               12 28 17.569198   * 12 30 49.423300     12 31 25.871881       0.00
+                     12 40 01.74818    * 12 23 28.04300      12 19 30.10172        0.00
+                     From catalog imbedded in main SCHED input file.
+                        1.417 scan and      8.500 baseline hours in setup: 1mmRDBE.set
+
+ * 0854+201          08 51 57.250589   * 08 54 48.874900     08 55 29.368316       0.00
+                     20 17 58.41655    * 20 06 30.64000      20 03 47.83314        0.00
+                     From catalog imbedded in main SCHED input file.
+                        0.117 scan and      0.700 baseline hours in setup: 1mmRDBE.set
+
+ * 3C279             12 53 35.831233   * 12 56 11.166500     12 56 48.422422       0.00
+                    -05 31 07.99514    *-05 47 21.52400     -05 51 14.54624        0.00
+                     From catalog imbedded in main SCHED input file.
+                        0.583 scan and      3.500 baseline hours in setup: 1mmRDBE.set
+
+   J1229+0203        12 26 33.245835   * 12 29 06.699731     12 29 43.505215       1.04
+ * 3C273             02 19 43.30577    * 02 03 08.59827      01 59 10.25486        1.33
+   3C273B            /home/vfish/sched_9.4/catalogs/sources.vlba
+   1226+023          GSFC 2010a astro solution     32199 Observations
+   J1229+02             0.583 scan and      3.500 baseline hours in setup: 1mmRDBE.set
+
+   J1733-1304        17 30 13.535186   * 17 33 02.705784     17 33 42.214928       0.01
+   1730-130         -13 02 45.83971    *-13 04 49.54819     -13 05 20.47841        0.02
+   J1733-13          /home/vfish/sched_9.4/catalogs/sources.vlba
+ * NRAO530           GSFC 2010a astro solution     16041 Observations
+                        0.417 scan and      2.500 baseline hours in setup: 1mmRDBE.set
+
+   J1751+0939        17 49 10.387930   * 17 51 32.818573     17 52 06.022645       0.00
+ * 1749+096          09 39 42.82591    * 09 39 00.72846      09 38 41.07282        0.01
+   J1751+09          /home/vfish/sched_9.4/catalogs/sources.vlba
+                     GSFC 2010a astro solution    121343 Observations
+                        0.250 scan and      1.500 baseline hours in setup: 1mmRDBE.set
+
+   J1924-2914        19 21 42.234127   * 19 24 51.055954     19 25 34.404762       0.01
+ * 1921-293         -29 20 26.35396    *-29 14 30.12106     -29 13 04.15646        0.01
+   J1924-29          /home/vfish/sched_9.4/catalogs/sources.vlba
+                     GSFC 2010a astro solution     40568 Observations
+                        0.500 scan and      2.750 baseline hours in setup: 1mmRDBE.set
+
+
+
+  The solar corona can cause unstable phases for sources too close to the Sun.
+  SCHED provides warnings at individual scans for distances less than 10 degrees.
+  The distance from the Sun to each source in this schedule is:
+    Source         Sun distance (deg) 
+   SGRA               101.3
+   M87                164.3
+   0854+201           122.2
+   3C279              173.1
+   3C273              174.7
+   NRAO530            104.7
+   1749+096            99.0
+   1921-293            79.8
+
+  Barry Clark estimates from predictions by Ketan Desai of IPM scattering sizes 
+  that the Sun will cause amplitude reductions on the  longest VLBA baselines 
+  at a solar distance of 60deg F^(-0.6) where F is in GHz. 
+  For common VLBI bands, this is: 
+       327 MHz        117. deg 
+       610 MHz         81. deg 
+       1.6 GHz         45. deg 
+       2.3 GHz         36. deg 
+       5.0 GHz         23. deg 
+       8.4 GHz         17. deg 
+      15.0 GHz         12. deg 
+      22.0 GHz          9. deg 
+      43.0 GHz          6. deg 
+
+
+ Source separations in degrees for pairs closer than  30.00 degrees.
+
+     SGRA          NRAO530        16.1933
+     SGRA          1921-293       21.6193
+     M87           3C279          19.2420
+     M87           3C273          10.3475
+     3C279         3C273          10.3530
+     NRAO530       1749+096       23.1879
+
+
+
+
+
+ J2000 coordinates formatted for possible transfer to the correlator data base:
+name = 'SGRA'  ra = 17h45m40.041000s  dec = -29d00'28.12000"
+name = 'M87'  ra = 12h30m49.423300s  dec = 12d23'28.04300"
+name = '0854+201'  ra = 08h54m48.874900s  dec = 20d06'30.64000"
+name = '3C279'  ra = 12h56m11.166500s  dec = -05d47'21.52400"
+name = '3C273'  ra = 12h29m06.699731s  dec = 02d03'08.59827"
+name = 'NRAO530'  ra = 17h33m02.705784s  dec = -13d04'49.54819"
+name = '1749+096'  ra = 17h51m32.818573s  dec = 09d39'00.72846"
+name = '1921-293'  ra = 19h24m51.055954s  dec = -29d14'30.12106"
+
+
+ Correlation blocks required by setup changes. 
+
+UTTIMERANGE 2011MAR29 at 05:00:00 to 2011MAR29 at 16:24:00
+
+
+Catalogs: 
+  Station:   1mm-stations.dat
+                 Version:  
+  Location:  1mm-locations.dat
+                 Version:  Not known
+  Frequency: 1mm-freq.dat
+                 Version:  
+  Source:   /home/vfish/sched_9.4/catalogs/sources.vlba
+                 Version:  Not given
+  Source2:  NONE
+                 Version:   ---
+
+
+Other external files: 
+  Ephemeris: NONE
+  PEAKFILE:  /home/vfish/sched_9.4/catalogs/peak.cmd
+  MSGFILE:   /home/vfish/sched_9.4/catalogs/messages.txt
+
+
+Code versions: 
+  Release version:            9.40  Release Jan. 13, 2011.
+  Version of VEX standard:   1.50
+  Version of VEX code:       0.87
+  Version of plot code:      1.06
+  Version of ephemeris code: 1.01
+  Version of PGPLOT:        v5.2.2
+
+This schedule produced on: Mon Mar 28 21:28:44 2011

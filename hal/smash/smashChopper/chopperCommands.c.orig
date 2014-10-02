@@ -1,0 +1,172 @@
+/***************************************************************
+*
+* chopperCommands.c
+* 
+* SMAsh commands for controlling antenna choppers through reflective
+* memory using the chopperControl daemon.
+* RWW 
+* 9 September 2003
+*
+****************************************************************/
+static char rcsid[] = "$Id:$";
+
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "smapopt.h"
+#include "rm.h"
+#include "commonLib.h"
+#include "chopperControl.h"
+
+#define VERBOSE 1
+
+/* Chopper system control and status RM variables */
+static char commandv[] = "RM_CHOPPER_SMASH_COMMAND_C30";
+static char commandFlagv[] = "RM_CHOPPER_SMASH_COMMAND_FLAG_S";
+char statusBitsv[] = "RM_CHOPPER_STATUS_BITS_C16";
+static char unixTimev[] = "RM_UNIX_TIME_L";
+
+#if 0
+char timestampv[] = "RM_CHOPPER_MONITOR_TIMESTAMP_L";
+static char pmacResponse[] = "RM_CHOPPER_PMAC_RESPONSE_C128";
+RM_CHOPPER_X_COUNTS_D       # Chopper X position in counts.
+RM_CHOPPER_Y_COUNTS_D       # Chopper Y position in counts.
+RM_CHOPPER_Z_COUNTS_D       # Chopper Z position in counts.
+RM_CHOPPER_TILT_COUNTS_D      # Chopper tilt in counts.
+RM_CHOPPER_PMAC_COMMAND_C30	# Last command sent to PMAC
+#endif
+
+
+#define ANT_LIST_SZ (SMAPOPT_MAX_ANTENNAS + 1)
+static int requestedAntennas[ANT_LIST_SZ];
+#define ANT_ARRAY_SZ (sizeof(requestedAntennas)/sizeof(requestedAntennas[0]))
+int antennasInArray[ANT_LIST_SZ];
+int antennasGiven = 0;
+int rm_antlist[RM_ARRAY_SIZE];
+int unixTime;
+
+static struct	smapoptOption optionsTable[] = {
+	{"antenna",'a',SMAPOPT_ARG_ANTENNAS, requestedAntennas,'a',
+		"Antennas (Comma and ellipsis separated list)."},
+	{"help",'h',SMAPOPT_ARG_NONE,0,'h',""},
+/*	SMAPOPT_AUTOHELP */
+	{NULL,0,0,NULL,0,0}
+};	  
+smapoptContext optCon;
+
+/* chopperCommands.c */
+void GetUnixTime(void);
+
+void errorOut(char *error, char *addl) {
+	if (error) fprintf(stderr, "\n%s: %s.  For help use -h.\n",
+		error, addl);
+	exit(1);
+}
+
+void usage(void) {
+
+	smapoptPrintHelp(optCon, stderr, 0);
+	fprintf(stderr, "\nAntenna list defaults to antennas in array\n");
+}
+
+int main(int argc, char *argv[]) {
+	int i, ant, j, rm_status;
+	char c, *cp, ts[64];
+
+	optCon = smapoptGetContext("deice", argc, argv, optionsTable,0);
+
+	while ((c = smapoptGetNextOpt(optCon)) >= 0) {
+	    switch(c) {
+	    case 'a':
+		antennasGiven = 1;
+		break;
+#if 0
+	    case 's':
+		powerGiven++;
+		break;
+#endif
+	    case 'h':
+		usage();
+		exit(0);
+	    }
+
+	}
+#if 0
+	if((cp = smapoptGetArg(optCon)) != 0) {
+	    powerGiven++;
+	    generalPower = atoi(cp);
+	}
+#endif
+	smapoptFreeContext(optCon);
+
+	/* initializing ref. mem. */
+	rm_status=rm_open(rm_antlist);
+	if(rm_status != RM_SUCCESS) {
+	    rm_error_message(rm_status,"rm_open()");
+	    exit(1);
+	}
+	if(! antennasGiven) {
+	    getAntennaList(antennasInArray);
+	}
+
+
+#if VERBOSE
+	printf("Antennas with RM:");
+	for(i = 0; (ant = rm_antlist[i]) != RM_ANT_LIST_END; i++) {
+	    printf(" %d", ant);
+	}
+	if(antennasGiven) {
+	printf("\nRequested Antennas:");
+	for(i = 1; i < ANT_LIST_SZ; i++) {
+	    printf(" %d", requestedAntennas[i]);
+	}
+	} else {
+	printf("\nAntennas in array:");
+	for(i = 1; i < ANT_LIST_SZ; i++) {
+	    printf(" %d", antennasInArray[i]);
+	}
+	}
+	putchar('\n');
+#endif VERBOSE
+
+#if 0
+	GetUnixTime();
+	/* Limit list to requested antennas with active deiced */
+	for(i = j = 0; (ant = rm_antlist[i]) != RM_ANT_LIST_END; i++) {
+	    int deicedTime;
+	    if( requestedAntennas[ant]) {
+		rm_status = rm_read(ant, statusTimestampv, &deicedTime);
+		if(rm_status != RM_SUCCESS) {
+		    sprintf(ts, "Reading deiced time from antenna %d", ant);
+		    rm_error_message(rm_status, ts);
+		}
+#if VERBOSE
+		printf("Antenna %d unixtime %d, deicedTime %d\n", ant,
+			unixTime, deicedTime);
+#endif VERBOSE
+		rm_antlist[j++] = ant;
+	    }
+	}
+#endif
+	rm_antlist[j] = RM_ANT_LIST_END;
+	printf("Antennas to be controlled:");
+	for(i = 0; (ant = rm_antlist[i]) != RM_ANT_LIST_END; i++) {
+	    printf(" %d", ant);
+	}
+	putchar('\n');
+
+	return(0);
+}
+
+void GetUnixTime(void) {
+	int i;
+
+	for(i = 0; rm_antlist[i] != RM_ANT_LIST_END; i++) {
+	    if(rm_read(rm_antlist[i], unixTimev, &unixTime) == RM_SUCCESS) {
+		return;
+	    }
+	}
+}

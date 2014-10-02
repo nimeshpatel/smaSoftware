@@ -1,0 +1,16 @@
+._mail
+.cprintf
+.disable_intr
+.enable_intr
+.iointclr
+.iointset
+.pseterr
+.scount
+.sreset
+.ssignal
+.swait
+.sysbrk
+.sysfree
+.tswait
+ast2
+slevel

@@ -1,0 +1,10 @@
+opening GPIB device at address = 8....
+Address 8: found device = HEWLETT-PACKARD,8508A-050,0,2944
+Succeeded.  Descriptor = 8
+vectorVoltmeter> ib string = 8 FREQ:BAND 12
+Device chosen = 8 = 0x008, command =  FREQ:BAND 12
+vectorVoltmeter> ib string = 8 FREQ:BAND?
+Device chosen = 8 = 0x008, command =  FREQ:BAND?
+vectorVoltmeter> String read from device =  12
+
+vectorVoltmeter> 

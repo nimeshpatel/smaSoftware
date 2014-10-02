@@ -1,0 +1,14 @@
+CC = gcc 
+BIN = recordContinuum
+LIBSMAPOPT=../../smapopt/libsmapopt.a
+COMMONLIB=/common/lib
+COMMONINC=/common/include
+
+all: $(BIN)
+
+recordContinuum.o: recordContinuum.c 
+	$(CC) -g -Wall recordContinuum.c -c -I$(COMMONINC)
+
+recordContinuum: recordContinuum.o $(COMMONLIB)/rm.o $(COMMONLIB)/libdsm.a $(COMMONLIB)/ph.o
+	$(CC) -g -o $@  recordContinuum.o $(COMMONLIB)/rm.o $(COMMONLIB)/ph.o \
+	$(COMMONLIB)/libdsm.a -I$(COMMONINC) $(LIBSMAPOPT) -lrpc -lnetinet -mthreads

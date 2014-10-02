@@ -1,0 +1,549 @@
+#!/usr/local/bin/perl
+# Programmed on 16 Jan. 2003 by Satoki Matsushita
+#   based on "rscan" program by Nimesh A. Patel.
+#   No "chartu" command used in this program.
+# Major re-writing on 29 Feb. 2004 by Satoki Matsushita
+#   Use new recording program "recordContinuum" by Nimesh A. Patel.
+# Modified for taking both low & high frequency receivers
+#   on 25 April 2005 by Satoki Matsushita
+# Modified for debugging on 19 July 2005 by Satoki Matsushita
+# Added option to specify the new 400 GHz receiver.  by Todd (Sep2005)
+# Added -o option for specifying offsetInterval.  by Todd (04Oct2005)
+# Added -t argument to recordContinuum to invoke the 1-hour timeout. by Todd (13Jan2006)
+
+foreach $i ( @ARGV ) {
+    $args = $args . $i . " ";
+}
+
+###
+### Sub-Program for Usage
+###
+
+sub Usage(){
+  print "\n
+Usage:
+  beamPattern -a 4 -s jupiter -d az -r 1 -f 235 -hr 3 -hf 685 -p -v 7,8\n
+    -a  <antenna_number>
+    -s  <source_name>
+    -o  <offsetInterval(arcsec)>  defaultForJupiter=10.4arcsec at all frequencies, 
+          forOtherSources = 10.4arcsec * (230/frequency)
+    -d  <az or el (for AZ scan or EL scan)>
+    -r  <receiver_name (1 for Rx230, 2 for Rx345, 3 for Rx690, 4 for Rx400)>
+    -f  <LO frequency (GHz)> 
+    -hr <high freq. receiver_name2 (1 for Rx230, 2 for Rx345, 3 for Rx690, 4 for Rx400) :optional>
+    -hf <high freq. LO frequency (GHz) :optional> 
+    -<p or c> or <--position or --chop (for position switch mode or subref chopping mode)>
+    -v <port1,port2 :optional (default: 7,8)>\n\n";
+    print "  Port numbers can have following values (default=$defaultPorts):\n";
+    print "       1: total_power_volts (floor system to patch panel ADC4)\n";
+    print "       2: total_power_volts2 (floor system to patch panel ADC5)\n";
+    print "       3: cont1_det1 (low-freq rx, prior to IF/LO attenuator)\n";
+    print "       4: cont1_det2 (low-freq rx, after the IF/LO attenuator)\n";
+    print "       5: cont2_det1 (high-freq rx, prior to IF/LO attenuator)\n";
+    print "       6: cont2_det2 (high-freq rx, after the IF/LO attenuator)\n";
+    print "       7: syncdet2_channels_v2_f[0]\n";
+    print "       8: syncdet2_channels_v2_f[1]\n";
+}
+
+###
+### Main Program Start
+###
+
+use IPC::Open2;
+
+
+#
+# Default Setting
+#
+
+$beamthrow = 45.;
+$defaultPorts = "7,8";
+
+#
+# Process ID
+#
+
+$pid=$$;
+#use POSIX;
+#$pid=POSIX::getpid();
+print "Beam Pattern Measurement Process ID = $pid\n";
+
+
+#
+# Interruption
+#
+
+$SIG{INT}=\&Pause;
+
+
+#
+# Usage
+#
+
+use Getopt::Long;
+#$Getopt::Long::autoabbrev=1;
+$offsetSpecified = -1;
+
+GetOptions('a=i'  => \$antennaNumber,
+           's=s'  => \$source,
+           'd=s'  => \$direction,
+           'r=i'  => \$rx,
+           'f=f'  => \$freq,
+           'o=f'  => \$offsetSpecified,
+           'hr=i' => \$hrx,
+           'hf=f' => \$hfreq,
+           'p',
+           'c',
+           'v=s'  => \$ports,
+           'help');
+
+if ($opt_help) {
+    &Usage; die "\n";
+}
+
+if (($antennaNumber<1) or ($antennaNumber>8))
+  {&Usage; die "\n Antenna number should be 1-8.\n";}
+
+if (!$source){&Usage;die "Please specify source name with -s.\n";}
+
+if (!$direction)
+  {&Usage; die "\n Please specify 'az' (azimuth) scan or 'el' (elevation) scan with -d.\n";}
+
+if (($rx<1) or ($rx>4))
+  {&Usage; die "\n Please specify receiver name (1 for Rx230, 2 for Rx345, 3 for Rx690, or 4 for Rx400).\n";}
+
+if (!$freq)
+  {&Usage; die "\n Please specify observing (LO) frequency with -lf.\n";}
+
+$highflg = 0;
+if ($hrx or $hfreq){
+  $highflg = 1;
+  print "Using both low & high frequency receivers.\n";
+  if (($hrx<1) or ($hrx>4))
+    {&Usage; die "\n Please specify high frequency receiver name (1 for Rx230, 2 for Rx345, 3 for Rx690, or 4 for Rx400) with -hr.\n";}
+  if (!$hfreq)
+    {&Usage; die "\n Please specify high frequency observing (LO) frequency with -hf.\n";}
+}
+
+#determine scan type
+if ($opt_p){
+  $chopflg = 0;
+}
+elsif ($opt_c){
+  $chopflg = 1;
+}
+else {
+  {&Usage;die "Please specify scan type (-p or -c)\n";}
+}
+
+open(logfile,">>/rootfs/logs/SMAshLog");
+$line = `date -u +"%a %b %d %X %Y"`;
+chop($line);
+$user = $ENV{"USER"};
+printf logfile "%s ($user): $0 %s\n", $line, $args;
+close(logfile);
+
+if (!$ports){
+  $ports = $defaultPorts;
+  print "Port is set to $ports\n";
+} 
+
+if(!($ports=~/,/)){die "Please check the ports argument. Expecting comma delimited pair of numbers.\n";}
+
+# determine Rx type
+if ($rx==1){$rxn=230;}
+if ($rx==2){$rxn=345;}
+if ($rx==3){$rxn=690;}
+if ($rx==4){$rxn=400;}
+if ($highflg==1){
+  if ($hrx==1){$hrxn=230;}
+  if ($hrx==2){$hrxn=345;}
+  if ($hrx==3){$hrxn=690;}
+  if ($hrx==4){$hrxn=400;}
+}
+
+
+#
+# If no antenna is specified, get the antennas from project command
+#
+
+#@antennalist = ();
+#if ($antennaNumber!=0){push(@antennalist,$antennaNumber);}
+#  else {
+#    for($i=1;$i<8;$i++){
+#      $antenna_status=`value -a $i -v antenna_status`;
+#      if ($antenna_status==1){push(@antennalist,$i);}
+#  }
+#}
+#
+#print "Antennas to be measured : ";
+#foreach $antenna (@antennalist){
+#  print "$antenna ";
+#}  ### forloop for all antennas
+#print "\n";
+
+
+#
+# Remember pre-measurement AZ & EL offsets,
+#
+
+$azoff_0 = `prio 50 value -a $antennaNumber -v azoff`;
+chomp($azoff_0);
+sleep 1;
+$eloff_0 = `prio 50 value -a $antennaNumber -v eloff`;
+chomp($eloff_0);
+print "Ant$antennaNumber: azoff_0 = $azoff_0, eloff_0 = $eloff_0\n";
+
+
+#
+# Define scan speed
+#
+
+if ($source eq "jupiter"){
+  $offsetUnit = 0.3*26.;  ### To avoid too long scan time at high freq.
+}
+else {
+  $offsetUnit = 0.3*26.*230./$freq;  ### 0.3 times Nyquist Sampling
+}
+if ($chopflg==1){
+  if ($source eq "jupiter"){
+    $offsetUnit = 0.4*26.;  ### To avoid too long scan time at high freq.
+  }
+  else {
+    $offsetUnit = 0.4*26.*230./$freq;  ### 0.4 times Nyquist Sampling
+  }
+}
+if ($offsetSpecified > 0) {
+    $offsetUnit = $offsetSpecified;
+}
+
+print "Giving the offsetUnit command (spacing = $offsetUnit arcseconds).\n";
+`offsetUnit -a $antennaNumber -s $offsetUnit`;
+sleep 1;
+
+
+#
+# Determine scan type and AZ&EL scan ranges
+#
+
+if ($chopflg==0){
+  if ($direction eq "az"){
+    if ($source eq "jupiter"){
+      $azminoffset=-160.;
+      $azmaxoffset= 160.;
+#      $elminoffset=-120.;
+#      $elmaxoffset= 120.;
+      $elminoffset=-10.;
+      $elmaxoffset= 10.;
+    }  ### Since Jupiter is larger than the beam size
+       ### in almost all the frequency, scan ranges are constant.
+    else {
+      $azminoffset=-160.*230./$freq;
+      $azmaxoffset= 160.*230./$freq;
+      $elminoffset=-120.*230./$freq;
+      $elmaxoffset= 120.*230./$freq;
+    }
+  }
+  elsif ($direction eq "el"){
+    if ($source eq "jupiter"){
+      $azminoffset=-120.;
+      $azmaxoffset= 120.;
+      $elminoffset=-160.;
+      $elmaxoffset= 160.;
+    }
+    else {
+      $azminoffset=-120.*230./$freq;
+      $azmaxoffset= 120.*230./$freq;
+      $elminoffset=-160.*230./$freq;
+      $elmaxoffset= 160.*230./$freq;
+    }
+  }
+  else {
+    {&Usage; die "\n Please specify AZimuth or ELevation scan.\n";}
+  }
+}
+elsif ($chopflg==1){
+#  this will take 30 minutes for 230/345 beam maps
+  $azminoffset=-180.;
+  $azmaxoffset= 180.;
+  $elminoffset=-120.;
+  $elmaxoffset= 120.;
+  if ($freq > 400) {
+#  this will take 14 minutes for 690 beam maps
+      $azminoffset=-120.;
+      $azmaxoffset= 120.;
+      $elminoffset=-80.;
+      $elmaxoffset= 80.;
+  }
+}
+else {
+  {&Usage;die "Please specify POSITION switch or subref CHOPping mode.\n";}
+}
+
+
+#
+# Beam Pattern Measurement Start
+#
+
+print "Start Beam Pattern Measurement with $source\n";
+
+
+#
+# Define initial AZ & EL offsets
+#
+
+$azoffset = $azminoffset+$azoff_0; 
+$eloffset = $elmaxoffset+$eloff_0;
+
+
+#
+# Define Output Data Name & Open Data File & Write Data Header
+#
+
+$utcTimeStamp = `prio 50 date +%Y%m%d`;
+#$utcTimeStamp=`prio 50 value -a $antennaNumber -v utc_hours`;
+chomp($utcTimeStamp);
+
+$eldeg = `prio 50 value -a $antennaNumber -v actual_el_deg`;
+chomp($eldeg);
+$azdeg = `prio 50 value -a $antennaNumber -v actual_az_deg`;
+chomp($azdeg);
+
+$eldegint = int($eldeg);
+$azdegint = int($azdeg);
+$freqint  = int($freq);
+
+$filename_tmp
+ = "bp$utcTimeStamp.a$antennaNumber.$source.az$azdegint.el$eldegint.$direction.r$rxn.f$freqint.dat";
+$filename = "/data/engineering/beamPattern/ant$antennaNumber/$filename_tmp";
+print "\n";
+print "Start writing data into:\n";
+print "  $filename\n";
+
+if ($highflg==1){
+  $hfreqint = int($hfreq);
+  $hfilename_tmp
+   = "bp$utcTimeStamp.a$antennaNumber.$source.az$azdegint.el$eldegint.$direction.r$hrxn.f$hfreqint.dat";
+  $hfilename = "/data/engineering/beamPattern/ant$antennaNumber/$hfilename_tmp";
+  print "  $hfilename\n";
+}
+
+print "\n";
+
+
+#
+# AZ Scan
+#
+
+if ($direction eq "az")
+{
+  $offset_scan="azoff";
+  $offset_step="eloff";
+  $scantype="azscan";
+  $minoffset = $azminoffset+$azoff_0; 
+  $maxoffset = $azmaxoffset+$azoff_0;
+
+# Start writing data
+  writeData();
+
+# Loop starts for a beam map
+  while ($eloffset > ($elminoffset+$eloff_0)*1.05)
+  {
+
+# Move to start position
+    print "Ant$antennaNumber, $source: AZ Offset = $azoffset, EL Offset = $eloffset arcsec\n";
+#    sleep 1;
+    `$offset_step -a $antennaNumber -s $eloffset`;
+    sleep 1;
+    `$offset_scan -a $antennaNumber -s $minoffset`;
+    sleep 1;
+
+    offCheck();
+
+#   sleep 3;
+
+# Start scan
+    print "Start $direction scan.\n";
+    `$scantype -a $antennaNumber`;
+    sleep 1;
+
+    $offset_check = `prio 50 value -a $antennaNumber -v $offset_scan`;
+    while ($offset_check < $maxoffset)
+    {
+      $offset_check = `prio 50 value -a $antennaNumber -v $offset_scan`;
+      sleep 1;
+    }
+
+# Stop scan
+    system("stopScan -a $antennaNumber");
+    sleep 1;
+    $eloffset = $eloffset - $offsetUnit;
+  }
+
+# Stop recording data
+kill USR1 => $rcpid;
+
+# Data file close
+#  $filehandle="DATAFILE".$antennaNumber;
+#  close($filehandle);
+#  `cp /data/engineering/beamPattern/ant$antennaNumber/$filename /data/engineering/beamPattern/ant$antennaNumber/tmp.dat`;
+}
+
+
+#
+# EL Scan
+#
+
+if ($direction eq "el")
+{
+  $offset_scan="eloff";
+  $offset_step="azoff";
+  $scantype="elscan";
+  $minoffset = $elminoffset+$eloff_0; 
+  $maxoffset = $elmaxoffset+$eloff_0;
+
+# Start writing data
+  writeData();
+
+# Loop starts for a beam map
+  while ($azoffset < ($azmaxoffset+$azoff_0)*1.05)
+  {
+
+# Move to start position
+    print "Ant$antennaNumber, $source: AZ Offset = $azoffset\n";
+    if ($opt_chop){
+      $poslobe = $azoffset - $beamthrow;
+        ### Give an offset it AZ to get the positive lobe of chopping
+    }
+    else {
+      $poslobe = $azoffset;
+    }
+#    sleep 1;
+    `$offset_step -a $antenna_number -s $poslobe`;
+    sleep 1;
+    `$offset_scan -a $antenna_number -s $minoffset`;
+    sleep 1;
+
+    offCheck();
+
+# Start scan
+    print "Start $direction scan.\n";
+    `$scantype -a $antenna_number`;
+    sleep 1;
+
+    $offset_check = `prio 50 value -a $antennaNumber -v $offset_scan`;
+    while ($offset_check < $maxoffset)
+    {
+      $offset_check = `prio 50 value -a $antennaNumber -v $offset_scan`;
+      sleep 1;
+    }
+
+# Stop scan
+    system("stopScan -a $antennaNumber");
+    sleep 1;
+    $azoffset = $azoffset - $offsetUnit;
+  }
+
+# Stop recording data
+kill USR1 => $rcpid;
+
+# Data file close
+#  $filehandle="DATAFILE".$antennaNumber;
+#  close($filehandle);
+#  `cp /data/engineering/beamPattern/ant$antennaNumber/$filename /data/engineering/beamPattern/ant$antennaNumber/tmp.dat`;
+}
+
+
+#
+# END
+#
+
+`eloff -a $antennaNumber -s $eloff_0`;
+sleep 1;
+`azoff -a $antennaNumber -s $azoff_0`;
+sleep 1;
+
+if ($highflg==1){
+  `cp $filename $hfilename`;
+}
+
+print "Beam Pattern Measurement Finished\n";
+
+#print "";
+## `playSound -f /homes/smauser/sounds/StarTrek/Boatswain_Whistle.WAV`;
+
+
+
+###
+### Sub-Program for Pause (Interruption)
+###
+
+sub Pause()
+{
+  print "\n";
+  print "beamPattern Interrupted!!\n";
+  print "Start Interruption Process.\n";
+  sleep 1;
+  system("stopScan -a $antennaNumber");
+  sleep 3;
+  `azoff -a $antennaNumber -s $azoff_0`;
+  sleep 3;
+  `eloff -a $antennaNumber -s $eloff_0`;
+  print "Interruption Process End.\n";
+  kill USR1 => $rcpid;
+
+  exit(0);
+}
+
+
+
+###
+### Sub-Program for writeData
+###
+
+sub writeData()
+{
+  $unixtime=`prio 50 value -a $antennaNumber -v unix_time`;
+  $command="/application/bin/recordContinuum -a $antennaNumber -c $chopflg -s $scantype -p $ports -f $filename -t -u $unixtime";
+  $rcpid=open2(*RH,*WH,"$command");
+  print "$command pid=$rcpid\n";
+}
+
+#sub writeHData()
+#{
+#  $unixtime=`prio 50 value -a $antennaNumber -v unix_time`;
+#  $command="/application/bin/recordContinuum -a $antennaNumber -c $chopflg -s $scantype -p $ports -f $hfilename -u $unixtime -t";
+#  $rcpid=open2(*RH,*WH,"$command");
+#  print "$command pid=$rcpid\n";
+#}
+
+
+
+###
+### Sub-Program for Offset Check
+###
+
+sub offCheck()
+{
+
+# Offset check
+#  print "Entering loop for offset check...\n";
+#  print "Ant$antennaNumber: CMD AZ&EL Positions = $azoffset, $eloffset arcsec\n";
+  $offError = 2.0;
+  for ($i=0;$i<10 && $offError>1.0;$i++){
+    $azoffCurrent = `prio 50 value -a $antennaNumber -v azoff`;
+    chomp($azoffCurrent);
+    sleep 1;
+    $eloffCurrent = `prio 50 value -a $antennaNumber -v eloff`;
+    chomp($eloffCurrent);
+    sleep 1;
+#    $offCurrent = sqrt(($azoffCurrent)^2 + ($eloffCurrent)^2)
+    $azoffError = $azoffCurrent - $azoffset;
+    $eloffError = $eloffCurrent - $eloffset;
+    $offError = sqrt(($azoffError)^2 + ($eloffError)^2);
+#    sleep 1;
+#    print "Position Error = $offError arcsec\n";
+  }
+#  print "\n";
+  print "Ant$antennaNumber has arrived.\n";
+}

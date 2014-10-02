@@ -1,0 +1,31 @@
+all: sti sti_server
+
+sti: sti.c sti.o sti_clnt.o sti_xdr.o
+	gcc -o sti sti.o sti_clnt.o sti_xdr.o -lnsl
+
+sti.o: sti.c sti.h
+	gcc -g -c sti.c
+sti.h: sti.x
+	rpcgen sti.x
+sti_clnt.o: sti_clnt.c sti.h sti.x
+	gcc -g -c sti_clnt.c
+sti_clnt.c: sti.x 
+	rpcgen sti.x
+sti_xdr.o: sti.h sti_xdr.c sti.x
+	gcc -g -c sti_xdr.c
+sti_xdr.c: sti.h sti.x
+	rpcgen sti.x
+
+snapshot.o:
+	g++ -g -O2 -c snapshot.cpp -I ./
+
+sti_server: sti_svc_proc.c snapshot.cpp sti_svc_proc.o sti_svc.o sti_xdr.o
+	g++ -o sti_server sti_svc_proc.o sti_svc.o sti_xdr.o csbigcam.o csbigimg.o snapshot.o -lnsl -lsbigudrv -lcfitsio -lpthread -lm -lz -L/usr/local/lib
+
+sti_svc_proc.o: sti_svc_proc.c snapshot.o sti.h sti.x
+	g++ -g -c sti_svc_proc.c
+sti_svc.o: sti.x
+	gcc -g -c sti_svc.c
+sti_svc.c:
+	rpcgen sti.x
+

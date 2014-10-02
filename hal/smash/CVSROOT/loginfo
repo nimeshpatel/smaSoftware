@@ -1,0 +1,57 @@
+# The "loginfo" file is used to control where "cvs commit" log information is
+# sent.  The first entry on a line is a regular expression which is tested
+# against the directory that the change is being made to, relative to the
+# $CVSROOT.  For the first match that is found, the remainder of the line is a
+# filter program that should expect log information on its standard input
+#
+# If the repository name does not match any of the regular expressions in the
+# first field of this file, the "DEFAULT" line is used, if it is specified.
+#
+# If the name "ALL" appears as a regular expression it is always used
+# in addition to the first matching regex or "DEFAULT".
+#
+# The filter program may use one and only one "%s" modifier (ala printf).  If
+# such a "%s" is specified in the filter program, a brief title is included
+# (as one argument, enclosed in single quotes) showing the relative directory
+# name and listing the modified file names.
+#
+# For example:
+#DEFAULT		(echo ""; who am i; echo %s; date; cat) >> $CVSROOT/CVSROOT/commitlog
+CVSROOT mail kyoung@cfa.harvard.edu ckatz@cfa.harvard.edu
+online/blocks mail kyoung@cfa.harvard.edu
+online/dDS mail kyoung@cfa.harvard.edu
+online/drivers mail kyoung@cfa.harvard.edu
+# online/correlator/dSPCode mail kyoung@cfa.harvard.edu ckatz@cfa.harvard.edu
+online/correlator/SMASH mail kyoung@cfa.harvard.edu
+# online/correlator/lynxOS mail kyoung@cfa.harvard.edu; (date; (sleep 2; rsh -l smasoftware esperanza "cd crate; cvs -q update -d") &) >> $CVSROOT/CVSROOT/updatelog 2>&1
+online/correlator/lynxOS mail kyoung@cfa.harvard.edu ckatz@cfa.harvard.edu
+online/loReference mail kyoung@cfa.harvard.edu
+online/cursesmonitor mail npatel@cfa.harvard.edu rwilson@cfa.harvard.edu thunter@cfa.harvard.edu kyoung@cfa.harvard.edu
+online/sharedFiles/configurationFiles mail kyoung@cfa.harvard.edu
+online/sharedFiles/headers mail kyoung@cfa.harvard.edu
+online/sharedFiles/reflectiveMemory mail kyoung@cfa.harvard.edu ckatz@cfa thunter@cfa nimesh@cfa qzhang@cfa eketo@cfa tksridharan@cfa jtest@cfa
+online/yIGTune mail kyoung@cfa.harvard.edu
+online/lynxOS/common/reflmem mail ckatz@cfa.harvard.edu
+online/lynxOS/common/dsm mail ckatz@cfa.harvard.edu
+online/lynxOS/common/mailsend mail ckatz@cfa.harvard.edu
+online/lynxOS/common/ppcTemp mail ckatz@cfa.harvard.edu
+online/lynxOS/common/vme_sg_simple mail ckatz@cfa.harvard.edu
+online/lynxOS/etc mail ckatz@cfa.harvard.edu kyoung@cfa.harvard.edu
+online/lynxOS/common/lsof mail ckatz@cfa.harvard.edu
+
+# 1999aug31 MRD
+# the way CVS does the grep is NOT versus the path the files get stored into-
+# instead it uses whatever the user has typed on the commit command line
+# which is very very different.
+misc      mail  kyoung@cfa.harvard.edu ckatz@cfa.harvard.edu
+dSPCode   mail  kyoung@cfa.harvard.edu ckatz@cfa.harvard.edu
+crate     mail  kyoung@cfa.harvard.edu ckatz@cfa.harvard.edu
+corr      mail  kyoung@cfa.harvard.edu ckatz@cfa.harvard.edu
+manual    mail  npatel@cfa.harvard.edu kyoung@cfa.harvard.edu
+
+#      C O R C O N   L Y N X O S   C O D E
+
+# 2000jul15 MRD added to monitor what is happening to corcon related code.
+corcon       mail kyoung@cfa.harvard.edu ckatz@cfa.harvard.edu
+corr_monitor mail kyoung@cfa.harvard.edu ckatz@cfa.harvard.edu
+checkCrateTemperatures mail kyoung@cfa.harvard.edu ckatz@cfa.harvard.edu

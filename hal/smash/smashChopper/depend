@@ -1,0 +1,16 @@
+chopperCommands.o: chopperCommands.c \
+ /usr/PowerPC/common/include/smapopt.h \
+ /usr/PowerPC/common/include/rm.h \
+ /usr/PowerPC/common/include/commonLib.h \
+ /usr/PowerPC/common/include/chopperControl.h
+iChopper.o: iChopper.c /usr/PowerPC/common/include/smapopt.h \
+ /usr/PowerPC/common/include/rm.h \
+ /usr/PowerPC/common/include/chopperControl.h
+positionChopper.o: positionChopper.c \
+ /usr/PowerPC/common/include/smapopt.h \
+ /usr/PowerPC/common/include/rm.h \
+ /usr/PowerPC/common/include/commonLib.h \
+ /usr/PowerPC/common/include/chopperControl.h
+focusCurveOn.o: focusCurveOn.c /usr/PowerPC/common/include/smapopt.h \
+ /usr/PowerPC/common/include/rm.h \
+ /usr/PowerPC/common/include/commonLib.h

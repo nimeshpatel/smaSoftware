@@ -1,0 +1,124 @@
+#!/bin/tcsh -vf
+#  Now accepts -a with an antennaList. - Todd (26 Feb 2004)
+#
+# 040429 - changed startazim to 0 from 0.0 - Ram
+# 040429 - added azelstar -e 20 -w 5 -n 3 -d cw - Ram (suggested by Nimesh)
+#          is currently commented out
+#
+set list = ""  # list of antennas
+set alist = "" # list of antennas prepended with -a, or blank if using project
+set args = $#argv
+set ctr = 1
+set nstars = 3  # to be used in the low-el circle
+set startazim = 0
+set clean = "-c"
+set loop = 0
+#set clean = ""
+foreach i ( $argv )
+# 'loop' always holds the iteration of the foreach loop
+# 'ctr' always holds the index of the argument last parsed
+ set loop = `expr $loop + 1`
+ if (`expr $loop == $ctr`) then
+  if (`expr $i == '-a'` || `expr $i == '--antenna'`) then
+    if (`expr $ctr != $args`) then
+      set ctr = `expr $ctr + 1`
+      set list = $argv[$ctr]
+      set alist = "-a $list"
+      echo will use antenna argument = $alist
+    else
+      echo You must supply a list of antennas after -a
+      goto usage
+    endif
+  endif
+#  if (`expr $i == '-c'`) then
+#    set clean = "-c"
+#    continue
+#  endif
+  if (`expr $i == '-s'`) then
+    if (`expr $ctr != $args`) then
+      set ctr = `expr $ctr + 1`
+      set startazim = $argv[$ctr]
+# pick the value divisible by 15 that is closest to the specified value
+      set startazim = `expr $startazim + 7`
+      set startazim = `expr $startazim / 15`
+      set startazim = `expr $startazim \* 15`
+      echo will start at azimuth = $startazim
+    else
+      echo You must supply an azimuth after -s
+      goto usage
+    endif
+  endif
+  if (`expr $i == '-n'`) then
+    if (`expr $ctr != $args`) then
+      set ctr = `expr $ctr + 1`
+      set nstars = $argv[$ctr]
+      echo will use $nstars stars per setting during the low-el circle
+    else
+      echo You must supply an integer after -n for the number of stars per setting in the low-el circle
+      goto usage
+    endif
+  endif
+  if (`expr $i == '-h'` || `expr $i == '--help'`) then
+    goto usage
+  endif
+  set ctr = `expr $ctr + 1`
+ endif
+end
+
+echo `date -u +"%a %b %d %X %Y"` '('$USER'):' $0 $argv >> /rootfs/logs/SMAshLog
+
+if (`expr "$list" == ""`) then
+  set checklist = `getAntList -l`
+  echo Will use all antennas in the current project = $checklist
+  set alist = ""
+  set project = 1
+else
+  echo Will use antennas: $list
+#  set checklist = `parseAntennaList $list`
+  set checklist = `getAntList $alist -l`
+  set project = 0
+endif
+
+# first do the low-elevation circle as this is important
+if (`expr $startazim == 0`) then
+  azelstar $alist -e 20 -w 5 -n $nstars -d cw $clean
+  azelstar $alist -e 70 -w 5 -n $nstars -d ccw $clean
+endif
+
+set direction = "up"
+set keepgoing = 0
+foreach az ( 0 30 60 90 120 150 180 210 240 270 300 330 )
+  if (`expr $startazim == $az` || `expr $keepgoing == 1`) then
+    azelstar -z $az -d $direction -w 5 -n 1 $alist $clean
+    wait
+    if (`expr $direction == 'up'`) then
+	set direction = "down"
+    else
+	set direction = "up"
+    endif
+    set keepgoing = 1
+  endif
+end
+foreach az ( 345 315 285 255 225 195 165 135 105 75 45 15 )
+  if (`expr $startazim == $az` || `expr $keepgoing == 1`) then
+    azelstar -z $az -d $direction -w 5 -n 1 -r 20-50 $alist $clean
+    wait
+    if (`expr $direction == 'up'`) then
+	set direction = "down"
+    else
+	set direction = "up"
+    endif
+    set keepgoing = 1
+  endif
+end
+echo Completed all scans. 
+exit 0
+
+usage:
+  echo "Usage: $0 [-a <antennaList: comma-delimited>] -h [-s <startingAzimuth>] [-c]"
+  echo         -n <numberOfStarsPerSetting_in_the_low_elev_circle: default=3>"
+  echo "  Cleaning of the images will be done automatically (-c is no longer needed)"
+  echo "  The low-elevation circle will be done in the beginning, but only if -s is "
+  echo "  not given."
+  echo "  Use -n 1 to finish the low-elevation circle faster"  
+  exit 0

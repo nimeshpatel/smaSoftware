@@ -1,0 +1,42 @@
+time constant: 30 ms
+the ADC with the OTF data taking is sampled at ~ 15 ms.
+slope: 12 dB/Oct.
+
+Choose FMOD 0 for external reference
+Choose RV  for CH1
+Choose theta for CH2 
+choose AUTO for sensitivity
+choose Low Noise for Wide Reserve.
+Choose Low Noise for Close Reserve.
+
+FMOD\ 0
+OFLT\ 5 !filter to 30ms 4: 10ms 3: 3ms 2: 1ms 1:0.3ms 0: 0.1ms; AT 400"/s, 33.3 is 82ms. 30ms is 12"; try 30ms first; or 10ms.
+OFSL\ 2 !roll-off 12dB/Oct.
+
+
+
+DDEF\ 1,1 ! set CH1 to R 
+DDEF\ 2,1 ! set CH2 to theta
+
+DDEF\ 1,0 ! set CH1 to X
+DDEF\ 2,0 ! set CH1 to Y
+
+
+FPOP\ 1,0 !set OUT1 to display
+FPOP\ 2,0 !set OUT2 to display
+
+! following to be done antenna and Rx set-up.
+
+LIAS\?0 ! check for lock; 1 - locked.
+
+! the following parts to be done after acquiring lock
+
+AGAN ! Automatic gain setting.
+(check Serial Poll Status bit 1 for completion)
+WRSV\ 2 ! wide dynamic reserve to low noise
+CRSV\ 2 ! close dynamic reserve to low noise
+
+To set these to auto:
+
+AWRS
+ACRS

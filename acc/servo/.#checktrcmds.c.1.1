@@ -1,0 +1,255 @@
+#include <math.h>
+#include <sys/types.h>
+#include <sys/utsname.h>
+#include <resource.h>
+#include <errno.h>
+/* If this is put ahead of math.h and sys/types.h, it hides some definitions */
+#define _POSIX_SOURCE 1
+#include <stdarg.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include "rm.h"
+#include "tsshm.h"
+#include "servo.h"
+#include "stderrUtilities.h"
+
+#define DO_DEL_HA 0
+
+/* Sun Avoidance stuff */
+#define LATITUDE_DEGREES (19.824205263889)
+static double clat = 0.940737581, slat = 0.339135376;
+#define SUNLIMIT 25
+#define COSSUNLIMIT 0.906307787
+static float sunAzDeg, sunElDeg;
+
+/* CheckTrCmds.c */
+void Transform(int az, int el, int *ha, int *dec);
+
+#ifndef USE_MAIN
+void CheckTrCmds(void) {
+    double azStopPosn, elStopPosn;
+    int tmpEl, tmpElVel, tmpAz, tmpAzVel;
+
+    if(tsshm->msecCmd != tsshm->msecAccept) {
+	trAzRaw = tsshm->az;
+	trElRaw = tsshm->el;
+	if(tsshm->az != tsshm->az || tsshm->azVel != tsshm->azVel ||
+		tsshm->el != tsshm->el || tsshm->elVel != tsshm->elVel) {
+	    if(azState > STOPPING) {
+		azState = STOPPING;
+		beepCnt = 2;
+	    }
+	    if(elState > STOPPING) {
+		elState = STOPPING;
+		beepCnt = 2;
+	    }
+	    if(beepCnt == 2) {
+		sendOpMessage(OPMSG_SEVERE, 19, 60, "Received NaN from Track");
+		ErrPrintf("Track sent NaN az %.4f azVel %.4f el %.4f elVel "
+		    "%.4f\n", tsshm->az/(double)MAS, tsshm->azVel/(double)MAS,
+		    tsshm->el/(double)MAS, tsshm->elVel/(double)MAS);
+	    }
+	    trAzVelRaw = tsshm->azVel;
+	    trElVelRaw = tsshm->elVel;
+	    tsshm->msecAccept = tsshm->msecCmd;
+	    return;
+	}
+	tmpAz = tsshm->az;
+	trAzVelRaw = tsshm->azVel;
+	if(fabs(tsshm->azVel) > trAzVmax) {
+	    if(trAzVelBad == 0 ) {
+		trAzVelBad = 1;
+	    } else {
+		tmpAzVel = 0;
+	    }
+	} else {
+	    tmpAzVel = tsshm->azVel;
+	    trAzVelBad = 0;
+	}
+	if(abs(tmpAzVel) < AZ_VCRIT) {
+	    azStopPosn =  tmpAz + tmpAzVel * (AZ_MIN_HTIME/1000.);
+	} else {
+	    azStopPosn =  tmpAz + tmpAzVel * ((double)abs(tmpAzVel)) *
+		    ((AZ_MIN_HTIME/1000.) / AZ_VCRIT);
+	}
+	if(azStopPosn > tsshm->cwLimit || tmpAz > tsshm->cwLimit) {
+	    tmpAz = tsshm->cwLimit;
+	    tmpAzVel = 0;
+	} else if(azStopPosn < tsshm->ccwLimit || tmpAz < tsshm->ccwLimit) {
+	    tmpAz = tsshm->ccwLimit;
+	    tmpAzVel = 0;
+	}
+
+	tmpEl = tsshm->el;
+	trElVelRaw = tsshm->elVel;
+	if(fabs(tsshm->elVel) > trElVmax) {
+	    if(trElVelBad == 0 ) {
+		trElVelBad = 1;
+	    } else {
+		tmpElVel = 0;
+	    }
+	} else {
+	    tmpElVel = tsshm->elVel;
+	    trElVelBad = 0;
+	}
+
+	/* Make sure that we can stop before hitting an upper or lower limit */
+	if(abs(tmpElVel) < EL_VCRIT) {
+	    elStopPosn =  tmpEl + tmpElVel * (EL_MIN_HTIME/1000.);
+	} else {
+	    elStopPosn =  tmpEl + tmpElVel * ((double)abs(tmpElVel)) *
+		    ((EL_MIN_HTIME/1000.) / EL_VCRIT);
+	}
+	if(elStopPosn > tsshm->upperLimit || tmpEl > tsshm->upperLimit) {
+	    tmpEl = tsshm->upperLimit;
+	    tmpElVel = 0;
+	} else if(elStopPosn < tsshm->lowerLimit || tmpEl < tsshm->lowerLimit) {
+	    tmpEl = tsshm->lowerLimit;
+	    tmpElVel = 0;
+	}
+	trMsecCmd = tsshm->msecCmd;
+	trAz = tmpAz;
+	trAzVel = tmpAzVel;
+	trEl = tmpEl;
+	trElVel = tmpElVel;
+	tsshm->msecAccept = tsshm->msecCmd;
+    }
+    /* Now check for sun avoidance */
+    presentSunSafeMinutes = sunSafeTime(tsshm->encAz, tsshm->encEl);
+    if(presentSunSafeMinutes != -1) presentSunSafeMinutes /= 60;
+}
+#endif
+
+void Transform(int az, int el, int *ha, int *dec) {
+    double sel, cel, caz, x, y, z;
+
+    cel = cos((double)el * RAD_PER_MAS);
+    sel = sin((double)el * RAD_PER_MAS);
+    caz = cos((double)az * RAD_PER_MAS);
+    y = -cel * sin((double)az * RAD_PER_MAS);
+    x = sel * clat - cel * caz * slat;
+    z = sel * slat + cel * caz * clat;
+    *dec = (int)(atan2(z, sqrt(x*x + y*y)) * MAS_PER_RAD);
+    *ha = (int)(atan2(y, x) * MAS_PER_RAD);
+/*  if(*ha < 0) *ha += (360 * MAS); */
+}
+
+#if DO_DEL_HA
+int minRelHa(int sunDec, int trDec) {
+    return(acos((COSSUNLIMIT -
+	cos((90*MAS - trDec)*RAD_PER_MAS) *
+	cos((90*MAS - sunDec)*RAD_PER_MAS)) /
+	(sin((90*MAS - trDec)*RAD_PER_MAS) *
+	sin((90*MAS - sunDec)*RAD_PER_MAS)))
+	/ RAD_PER_MAS);
+}
+#endif
+
+/* Get the position of the sun from RM and calculate the time (sec)  before the
+ * sun will be within SUNLIMIT degrees of the given az and el.  If the position
+ * is already unsafe, return 0.  If the position is always safe (declination
+ * of the position more than SUNLIMIT degrees from sunDec) return -1.
+ *
+ * I use the cosine formula for a spherical triangle with vertices ABC and
+ * opposite sides abc: cos(a) = cos(b)*cos(c) + sin(b)*sin(c)*cos(A) where
+ * A is the North Celestial Pole, B is the sun and C is the point on the
+ * circle of radius SUNLIMIT around the sun at the given declination and larger
+ * ha than the sun.  The length of a is SUNLIMIT, b is the co-dec of the
+ * given position and c is the co-dec of the sun.  The angle A gives the unsafe
+ * time ahead of the ha of the sun.
+ */
+int sunSafeTime(int az, int el) {
+    int sunHa, sunDec, ha, dec, unsafeDHa, safeDHa;
+
+#ifndef USE_MAIN
+    static int oldMsec = -100000;
+
+    if(abs(tsshm->msec - oldMsec) > 30000) {
+	rm_read(RM_ANT_0,"RM_SUN_AZ_DEG_F", &sunAzDeg);
+	rm_read(RM_ANT_0,"RM_SUN_EL_DEG_F", &sunElDeg);
+	rm_read(RM_ANT_0,"RM_REQUIERD_SUN_SAFE_MINUTES_S",
+		&requierdSunSafeMinutes);
+	Transform(sunAzDeg * MAS, sunElDeg * MAS, &sunHa, &sunDec);
+	oldMsec = tsshm->msec;
+    }
+#else
+    Transform((int)(sunAzDeg * MAS), (int)(sunElDeg * MAS), &sunHa, &sunDec);
+#endif
+    Transform(az, el, &ha, &dec);
+    if(abs(sunDec - dec) > (SUNLIMIT*MAS)) return(-1);
+    unsafeDHa = acos((COSSUNLIMIT -
+	cos((90*MAS - dec)*RAD_PER_MAS) *
+	cos((90*MAS - sunDec)*RAD_PER_MAS)) /
+	(sin((90*MAS - dec)*RAD_PER_MAS) *
+	sin((90*MAS - sunDec)*RAD_PER_MAS))) * MAS_PER_RAD;
+    if(ha < sunHa) {
+	if(sunHa - ha < unsafeDHa) return(0);
+	safeDHa = (MAS * 360) + ha - (sunHa - unsafeDHa);
+    } else {
+	if(ha - sunHa < unsafeDHa) return(0);
+	safeDHa = ha - (sunHa + unsafeDHa);
+    }
+    return(safeDHa / 15000);		/* 15000 mas per sec of time */
+}
+
+#ifdef USE_MAIN
+TrackServoSHM sharedMem;		/* Local pointer to shared memory */
+TrackServoSHM *tsshm = &sharedMem;	/* Local pointer to shared memory */
+int trAzRaw, trAzVelRaw, trElRaw, trElVelRaw;
+int trAz, trAzVel, trEl, trElVel;
+int trMsecCmd;			/* Time of last command in msec */
+double trAzVmax = 3*MAS, trElVmax = 1.5*MAS;	/* Max command velocities */
+double az_amax = 5*MAS, el_amax = 8.7*MAS;
+short requierdSunSafeMinutes;	/* # min ahead of sun zone to avoid */
+int presentSunSafeMinutes;	/* # min ahead of sun zone now */
+int posInSunAvoid;		/* Current posn from Track in avoid */
+
+int main(int argc, char *argv[]) {
+    int sunHa, sunDec, azSun, elSun, trHa, trDec, srcAz, srcEl;
+    int msecEnd;
+
+    if(argc < 5) {
+	fprintf(stderr,
+	    "Usage: testsun targetHa, targetDec, sunHa, sunDec (All in Deg)\n");
+	exit(1);
+    }
+    trHa = MAS * atof(argv[1]);
+    trDec = MAS * atof(argv[2]);
+    sunHa = MAS * atof(argv[3]);
+    sunDec = MAS * atof(argv[4]);
+    msecEnd = (argc > 5)? atol(argv[5]) * 1000: 3000;
+    for(tsshm->msecCmd = 0; tsshm->msecCmd < msecEnd; tsshm->msecCmd += 1000) {
+	Transform(sunHa, sunDec, &azSun, &elSun);
+	if(azSun < 0) azSun += 360.*MAS;
+	Transform(trHa, trDec, &srcAz, &srcEl);
+	if(srcAz < 0) srcAz += (360*MAS);
+	tsshm->az = srcAz;
+	tsshm->el = srcEl;
+	sunAzDeg = (float)azSun / MAS;
+	sunElDeg = (float)elSun / MAS;
+	printf("Sun: ha %.4f dec %.4f az %.4f el %.4f\n", (double)sunHa/MAS,
+	    (double)sunDec/MAS, sunAzDeg, sunElDeg);
+	printf("Tgt: ha %.4f dec %.4f az %.4f el %.4f\n", (double)trHa/MAS,
+	    (double)trDec/MAS, (double)tsshm->az/MAS, (double)tsshm->el/MAS);
+#if DO_DEL_HA
+	if(abs(sunDec - trDec) < (SUNLIMIT*MAS)) {
+	    printf("DelHa %.4f\n",  minRelHa(sunDec, trDec)/(double)MAS);
+	}
+#endif
+	printf("Safe time (sec) %d\n", sunSafeTime(srcAz, srcEl));
+	trHa += 15000;
+	sunHa += 15000;
+    }
+    return(0);
+}
+#endif
+#if 0
+    /* the following statements give the sun distance using the original
+     * form of Transform in which the 3rd arg is Latitude */
+    int ssDist, ssAz;
+
+    Transform(trHa - sunHa, trDec, sunDec, &ssAz, &ssDist);
+    ssDist = 90*MAS - ssDist;
+    printf("Az to src %.4f, dist %.4f\n", ssAz/(double)MAS, ssDist/(double)MAS);
+#endif

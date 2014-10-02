@@ -1,0 +1,14 @@
+#!/bin/tcsh -vf
+#
+while (1)
+  observe -s Mars 
+  sleep 45 
+  observe -s 1928+738
+  sleep 45
+  
+ 
+
+
+#
+end
+

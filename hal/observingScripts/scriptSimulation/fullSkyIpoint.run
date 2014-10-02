@@ -1,0 +1,26 @@
+
+
+Fetching calibrator list...
+Collecting appropriate sources from calibrator list...
+
+
+0 sources found: 
+
+
+The process ID of this ../fullSkyIpoint.pl script is 
+initializing.....
+Not running on hal9000, entering simulation mode.
+Script: ../fullSkyIpoint.pl.
+	12/31/2007 04:00:00 --> 12/31/2007 04:00:00  ---- radio
+	12/31/2007 04:00:00 --> 12/31/2007 04:00:00  ---- integrate -t 30
+----- initialization done, starting the main loop -----
+--- Loop No.= 1 ---
+LST [hr]=   0.28
+source name = 2253+161 
+lookup time: 12 31 2007 4:0
+2253+161 is at 70.5 degrees elevation
+	12/31/2007 04:00:00 --> 12/31/2007 04:00:10  ---- observe -s 2253+161
+	12/31/2007 04:00:10 --> 12/31/2007 04:00:10  ---- antennaWait
+	12/31/2007 04:00:10 --> 12/31/2007 04:10:10  ---- ipoint -i 30 -r 1 -Q -s
+LST [hr]=   0.45
+Please remember to stow the antennas safely if you are leaving.

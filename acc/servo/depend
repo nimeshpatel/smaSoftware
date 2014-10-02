@@ -1,0 +1,54 @@
+servo.o: servo.c include/tsshm.h include/servo.h \
+ /usr/PowerPC/common/vme_sg_simple/vme_sg_simple.h \
+ /usr/PowerPC/common/include/syncclock32.h \
+ /usr/PowerPC/common/include/encoders.h \
+ /usr/PowerPC/applications/acc/newServo/src/include/s_cmd2.h \
+ /usr/PowerPC/applications/acc/newServo/src/include/s_constants.h \
+ /usr/PowerPC/applications/acc/newServo/src/include/s_anti96com.h \
+ include/rmsubs.h /usr/PowerPC/common/include/smadaemon.h \
+ /usr/PowerPC/common/include/commonLib.h \
+ /usr/PowerPC/applications/acc/newServo/src/include/palmpilot.h \
+ include/checkencoders.h /usr/PowerPC/common/include/stderrUtilities.h \
+ /usr/PowerPC/common/include/rm.h
+svdata.o: svdata.c include/tsshm.h
+dmytrack.o: dmytrack.c include/tsshm.h \
+ /usr/PowerPC/common/include/commonLib.h
+tsshmdump.o: tsshmdump.c include/tsshm.h \
+ /usr/PowerPC/applications/acc/newServo/src/include/s_cmd2.h
+rmtsshm.o: rmtsshm.c include/tsshm.h
+tracking_err.o: tracking_err.c include/tsshm.h \
+ /usr/PowerPC/common/include/rm.h
+readtt.o: readtt.c /usr/PowerPC/common/vme_sg_simple/vme_sg_simple.h
+rmvalue.o: rmvalue.c /usr/PowerPC/common/include/rm.h
+drivemon.o: drivemon.c include/tsshm.h \
+ /usr/PowerPC/applications/acc/newServo/src/include/s_cmd2.h
+rmdrivemon.o: rmdrivemon.c \
+ /usr/PowerPC/applications/acc/newServo/src/include/s_cmd2.h \
+ include/tsshm.h /usr/PowerPC/common/include/rm.h \
+ /usr/PowerPC/applications/hal/cursesmonitor/monitor.h \
+ /global/include/dsm.h
+rmsubs.o: rmsubs.c /usr/PowerPC/common/include/smadaemon.h \
+ include/rmsubs.h /usr/PowerPC/common/include/rm.h include/tsshm.h \
+ include/servo.h
+checkencoders.o: checkencoders.c include/tsshm.h \
+ include/checkencoders.h include/servo.h
+readencoders.o: readencoders.c /usr/PowerPC/common/include/smadaemon.h \
+ include/tsshm.h /usr/PowerPC/common/include/encoders.h \
+ include/servo.h
+monitortt.o: monitortt.c \
+ /usr/PowerPC/common/vme_sg_simple/vme_sg_simple.h
+ttalarmcheck.o: ttalarmcheck.c \
+ /usr/PowerPC/common/vme_sg_simple/vme_sg_simple.h
+recordencoders.o: recordencoders.c include/tsshm.h \
+ /usr/PowerPC/common/include/rm.h
+checktrcmds.o: checktrcmds.c /usr/PowerPC/common/include/rm.h \
+ include/tsshm.h include/servo.h \
+ /usr/PowerPC/common/include/stderrUtilities.h
+readsc32.o: readsc32.c /usr/PowerPC/common/include/syncclock32.h
+s_anti96com.o: \
+ /usr/PowerPC/applications/acc/newServo/src/s_anti96com.c \
+ /usr/PowerPC/applications/acc/iPOctalPlus422/includeFiles/iPOctalPlus422.h \
+ /usr/PowerPC/applications/acc/newServo/src/include/s_constants.h \
+ /usr/PowerPC/applications/acc/newServo/src/include/s_anti96com.h \
+ /usr/PowerPC/applications/acc/newServo/src/include/s_cmd2.h
+createtsshm.o: createtsshm.c include/tsshm.h

@@ -1,0 +1,164 @@
+#!/usr/bin/perl -w
+#
+# iBeam1d - taking scan for interferometer mode
+#
+# by Masao,   Last modified on 2001 Mar 02
+#
+################################################################################
+use Getopt::Long;
+$Getopt::Long::autoabbrev=1;
+use  POSIX;
+$pid=POSIX::getpid();
+
+# a flag to get status reports for debugging purposes
+$testflag = 1;
+$fileflag = 0;
+$azoff_0=0;
+$eloff_0=0;
+
+# Interrupt handler
+$SIG{'TERM'} = 'finish';
+$SIG{'INT'}  = 'finish';
+
+	GetOptions('reference=i'=>\$refantenna,'antenna=i'=>\$antennaNumber,
+	'source=s'=>\$source,'number_of_points=i'=>\$scan_size,
+	'frequency=f'=>\$obsFrequency, 'int_time=i'=>\$int_time,
+	'zaz','el','grid_size=i'=>\$grid);
+	
+# check parameters
+	if($refantenna<2 or $refantenna>7){
+		&Usage;die "Reference Antenna number should be 2-7.\n";
+	}
+	if($antennaNumber<2 or $antennaNumber>7){
+		&Usage;die "Antenna number should be 2-7.\n";
+	}
+	if(!$source){
+		Usage();die "Please specify source name.\n";
+	}
+
+	if($scan_size%2==0){
+		Usage();die "number of points should be 2n+1 (n>0).\n";
+	}
+	if($obsFrequency<200 or $obsFrequency>400){
+		Usage();die "Frequency must be 200 -400 GHz.\n";
+	}
+	if($int_time<1){
+		Usage();die "integration time should be > 3.\n";
+	}
+
+	unless($grid){$grid=int(25.*230./$obsFrequency);} #Nyquist Sampling
+
+# Open log file
+	($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst)=localtime(time);
+	$date_name=sprintf "%02d%02d%02d_%02d%02d",$year-100,$mon+1,$mday,$hour,$min;
+	$filename=">>/common/data/holo/ant$antennaNumber/$date_name.ibeam$antennaNumber";
+	print "filename: $filename\n";
+	open (OUT, $filename)||die("cannot open the output file\n") if $fileflag;
+
+# append obs info to log file
+$log = "#source = $source \n"
+      ."#refantenna = $refantenna\n"
+      ."#antenna = $antennaNumber\n"
+      ."#freq = $obsFrequency\n"
+      ."#integ  = $int_time sec \n"
+      ."#scan_size = $scan_size\n"
+      ."#grid = $grid\n";
+
+	if($opt_zaz){$log=$log."#az scan\n";}
+	elsif($opt_el){$log=$log."#el scan\n";}
+
+	print $log;
+	print OUT $log if $fileflag;
+
+# ---------------------------------------------------------------------------- #
+# Get to the source 
+	&docommand("observe -a $antennaNumber -s $source", $testflag);
+	&docommand("observe -a $refantenna -s $source -w ", $testflag);
+	$az=`value -a $antennaNumber -v actual_az_deg`;
+	msleep(1.0);
+	$el=`value -a $antennaNumber -v actual_el_deg`;
+
+# append obs info to log file
+$log = "#az = $az"
+	."#el = $el\n";
+
+	print $log;
+	print OUT $log if $fileflag;
+	
+	msleep(1.0);
+	$azoff_0=`value -a $antennaNumber -v azoff`;
+	msleep(1.0);
+	$eloff_0=`value -a $antennaNumber -v eloff`;
+
+# Start scan
+	&docommand("integrate -t$int_time",$testflag);
+	if($opt_zaz){
+	for($n_az=0;$n_az<$scan_size;$n_az++){
+		msleep(1.0);
+		$azofftot=$azoff_0+($n_az-($scan_size-1)/2)*$grid;
+		&docommand("azoff -a $antennaNumber -s $azofftot", $testflag);
+		printf("pid=%d azoff=%d eloff=%d\n",$pid,$azofftot,$eloff_0);
+		print OUT "$azofftot $eloff_0\n" if $fileflag; 
+		&docommand("integrate -s1 -t$int_time -w",$testflag);
+	}
+	}
+
+	elsif($opt_el){
+	for($n_el=0;$n_el<$scan_size;$n_el++){
+		$elofftot=$eloff_0+($n_el-($scan_size-1)/2)*$grid;
+		&docommand("eloff -a $antennaNumber -s $elofftot", $testflag);
+		printf("azoff=%d eloff=%d\n",$azoff_0,$elofftot);
+		print OUT "$elofftot $azoff_0\n" if $fileflag;
+		&docommand("integrate -s1 -t$int_time -w",$testflag);
+	}
+	}
+	
+	else{die "no such scan type\n";}
+
+#back to the start position
+	&docommand("azoff -a $antennaNumber -s $azoff_0", $testflag);
+	&docommand("eloff -a $antennaNumber -s $eloff_0", $testflag);
+
+print "Done. Bye.\n";
+		
+# ---------------------------------------------------------------------------- #
+# ---------------------------    Subroutines    ------------------------------ #
+
+# --- print usage of this script, and then exit.---
+sub Usage {
+    print "Usage: iBeam1d -r reference -a antenna -s source -n number_of_points -f frequency -i -z (or -e) int -g grid<optional>\n";
+    print "	  reference = reference antenna\n";
+    print "	  antenna = target antenna\n";
+    print "	  source   = source name\n";
+    print "	  number_of_points = (2n+1)\n";
+    print "	  frequency = observing frequency\n";
+    print "	  int   = integration time (second)\n";
+    print "	  z(e) = az(el) scan\n";
+    print "	  grid = grid size (arcsecond) <optional>\n";
+    print "ex.:  iBeam1d -r 2 -a 4 -s mars -n 19 -f 235.6 -i 15 -z\n";
+}
+
+# --- interrupt handler for CTRL-C ---
+sub finish {
+   print "interruptted and quit the program.\n";
+   exit(1);
+}
+
+# --- perform a shell task with delay, with optional printing. ---
+sub docommand {
+   my $flag = pop(@_);
+   
+   if ($flag) {		     # if $testflag is true then print command
+      print "@_\n";
+   }
+   select undef, undef, undef, 1.0;	     # short pause
+   system("@_") unless $flag;		# execute command if testflag=0
+   select undef, undef, undef, 1.0;	     # short pause
+}
+
+# --- short pause ---
+sub msleep{
+	my $tlength = shift(@_);
+	select undef, undef, undef, $tlength;
+}
+# ---------------------------------------------------------------------------- #

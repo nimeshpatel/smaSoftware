@@ -1,0 +1,45 @@
+pen /wei 2
+set char .75
+set plot land
+cle p
+define real startaz startel endaz endel startut endut
+define int shour sminute ehour eminute
+define char filename*100
+!let filename = bpraw.dat.bp
+let filename = &1
+column x 1 y 2 /file 'filename' /lines 1 1
+let startaz = x[1]
+let startel = y[1]
+column x 3 y 4 /file 'filename' /lines 1 1
+let endaz = x[1]
+let endel = y[1]
+column x 5 y 6 /file 'filename' /lines 1 1
+let startut = x[1]
+let endut = y[1]
+let shour = int(startut)
+let sminute = int(60*(startut-shour))
+let ehour = int(endut)
+let eminute = int(60*(endut-ehour))
+column x 4 y 5 z 6 /file bpraw.dat.bp /lines 2
+random_map 256 256 /blank 0
+lim
+set box match
+box
+lev -90 to -10 by 10 -5 -2 2 5 10 to 90 by 10
+rgm /per 1
+label "Azimuth offset (arcsec)" /x
+label "Elevation offset (arcsec)" /y
+define char emstring*2 smstring*2
+if (sminute.lt.10) then
+  let smstring = "0"'sminute'
+else
+  let smstring = 'sminute'
+endif
+if (eminute.lt.10) then
+  let emstring = "0"'eminute'
+else
+  let emstring = 'eminute'
+endif
+draw text 0 .2 "Start (Az,El,UT) = ("'nint(10*startaz)|10'","'nint(10*startel)|10'","'shour'":"'smstring'")    End (Az,El,UT) = ("'nint(10*endaz)|10'","'nint(10*endel)|10'","'ehour'":"'emstring'")" /box 8
+!
+

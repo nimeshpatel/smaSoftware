@@ -1,0 +1,13 @@
+#!/bin/tcsh -vf
+while (1) 
+observe -s vycma
+sleep 2
+tsys
+integrate -t 60 -s 8 -w
+observe -s 0739+016
+sleep 2
+integrate -t 60 -s 8 -w
+observe -s titan
+sleep 2
+integrate -t 60 -s 8 -w
+end

@@ -1,0 +1,67 @@
+writeTilts.o: writeTilts.c /usr/PowerPC/common/include/rm.h \
+ /usr/PowerPC/common/include/commonLib.h
+tol.o: tol.c /usr/PowerPC/common/include/rm.h \
+ /usr/PowerPC/common/include/commonLib.h
+az.o: az.c /usr/PowerPC/common/include/rm.h \
+ /usr/PowerPC/common/include/commonLib.h
+el.o: el.c /usr/PowerPC/common/include/rm.h \
+ /usr/PowerPC/common/include/commonLib.h
+azel.o: azel.c /usr/PowerPC/common/include/smapopt.h \
+ /usr/PowerPC/common/include/rm.h \
+ /usr/PowerPC/common/include/commonLib.h
+stow.o: stow.c /usr/PowerPC/common/include/rm.h \
+ /usr/PowerPC/common/include/commonLib.h
+azscan.o: azscan.c /usr/PowerPC/common/include/rm.h \
+ /usr/PowerPC/common/include/commonLib.h
+elscan.o: elscan.c /usr/PowerPC/common/include/rm.h \
+ /usr/PowerPC/common/include/commonLib.h
+raoff.o: raoff.c /usr/PowerPC/common/include/rm.h \
+ /usr/PowerPC/common/include/commonLib.h
+decoff.o: decoff.c /usr/PowerPC/common/include/rm.h \
+ /usr/PowerPC/common/include/commonLib.h
+azoff.o: azoff.c /usr/PowerPC/common/include/rm.h \
+ /usr/PowerPC/common/include/commonLib.h
+eloff.o: eloff.c /usr/PowerPC/common/include/rm.h \
+ /usr/PowerPC/common/include/commonLib.h
+openM3.o: openM3.c /usr/PowerPC/common/include/rm.h \
+ /usr/PowerPC/common/include/commonLib.h
+closeM3.o: closeM3.c /usr/PowerPC/common/include/rm.h \
+ /usr/PowerPC/common/include/commonLib.h
+observe.o: observe.c /usr/PowerPC/common/include/rm.h \
+ /global/include/dsm.h /usr/PowerPC/common/include/commonLib.h
+offsetUnit.o: offsetUnit.c /usr/PowerPC/common/include/rm.h \
+ /usr/PowerPC/common/include/commonLib.h
+project.o: project.c /usr/PowerPC/common/include/rm.h \
+ /global/include/dsm.h /usr/PowerPC/common/include/commonLib.h
+endProject.o: endProject.c /usr/PowerPC/common/include/rm.h \
+ /global/include/dsm.h /usr/PowerPC/common/include/commonLib.h
+integrationTime.o: integrationTime.c /usr/PowerPC/common/include/rm.h \
+ /usr/PowerPC/common/include/commonLib.h
+standby.o: standby.c /usr/PowerPC/common/include/rm.h \
+ /usr/PowerPC/common/include/commonLib.h
+resume.o: resume.c /usr/PowerPC/common/include/rm.h \
+ /usr/PowerPC/common/include/commonLib.h
+stopScan.o: stopScan.c /usr/PowerPC/common/include/rm.h \
+ /usr/PowerPC/common/include/commonLib.h
+value.o: value.c /usr/PowerPC/common/include/rm.h
+tsys.o: tsys.c /usr/PowerPC/common/include/rm.h \
+ /usr/PowerPC/common/include/commonLib.h
+disableDrivesTimeout.o: disableDrivesTimeout.c \
+ /usr/PowerPC/common/include/rm.h \
+ /usr/PowerPC/common/include/commonLib.h
+setFeedOffset.o: setFeedOffset.c \
+ /usr/PowerPC/common/include/commonLib.h \
+ /usr/PowerPC/common/include/rm.h
+enableDrivesTimeout.o: enableDrivesTimeout.c \
+ /usr/PowerPC/common/include/rm.h \
+ /usr/PowerPC/common/include/commonLib.h
+limbOffset.o: limbOffset.c /usr/PowerPC/common/include/rm.h \
+ /usr/PowerPC/common/include/commonLib.h
+optical.o: optical.c /usr/PowerPC/common/include/rm.h \
+ /usr/PowerPC/common/include/commonLib.h
+radio.o: radio.c /usr/PowerPC/common/include/rm.h \
+ /usr/PowerPC/common/include/commonLib.h
+setSunSafeMinutes.o: setSunSafeMinutes.c \
+ /usr/PowerPC/common/include/smapopt.h \
+ /usr/PowerPC/common/include/rm.h \
+ /usr/PowerPC/common/include/commonLib.h
